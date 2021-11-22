@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Niols's Collection of (Mostly Unpublished) Scottish Country Dances</title>
+    <title>Niols’s Collection of (Mostly Unpublished) Scottish Country Dances</title>
 
     <meta charset="utf-8" />
 
@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <h1>Niols's Collection of (Mostly Unpublished) Scottish Country Dances</h1>
+        <h1>Niols’s Collection of (Mostly Unpublished) Scottish Country Dances</h1>
     </header>
 
     <table>
