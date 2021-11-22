@@ -52,16 +52,16 @@
             if (isset($meta->hidden) && $meta->hidden) continue;
 
             printf("<tr>\n");
-            printf("  <td>%s</td>\n", $meta->name);
-            printf("  <td>%s</td>\n", $meta->kind);
-            printf("  <td>%s</td>\n", $meta->author);
+            printf("  <td class=\"name\">%s</td>\n", $meta->name);
+            printf("  <td class=\"kind\">%s</td>\n", $meta->kind);
+            printf("  <td class=\"author\">%s</td>\n", $meta->author);
 
-            printf("  <td><a href=\"%s\"><i class=\"fas fa-file-pdf\"></i></a></td>", $link);
+            printf("  <td class=\"action\"><a href=\"%s\"><i class=\"fas fa-file-pdf\"></i></a></td>", $link);
 
             if (isset($meta->{"scddb-id"}) && $meta->{"scddb-id"}) {
-                printf("  <td><a href=\"%s\"><i class=\"fas fa-database\"></i></a></td>", $meta->{"scddb-id"});
+                printf("  <td class=\"action\"><a href=\"https://my.strathspey.org/dd/dance/%d/\"><i class=\"fas fa-database\"></i></a></td>", $meta->{"scddb-id"});
             } else {
-                printf("  <td></td>");
+                printf("  <td class=\"action\"></td>");
             }
             printf("</tr>\n");
         }
