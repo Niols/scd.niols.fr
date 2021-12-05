@@ -47,3 +47,9 @@ ls -1 "$DB"/dance | while read dance; do
       mustache "$dance".json "$dance".mustache \
         > "$dance".html )
     done
+
+## Cleanup build directory
+echo 'cleanup'
+find "$BUILD" -type f -not -regex '.*.\(pdf\|html\|css\)' -delete
+
+echo 'done'
