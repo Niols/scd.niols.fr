@@ -8,5 +8,5 @@ clean:
 
 publish: build
 	@printf 'publishing... '
-	@rsync -a build scd@sechs.niols.fr:~/public_html
+	@rsync -a build/ scd@sechs.niols.fr:~/public_html/
 	@printf 'done\n'
