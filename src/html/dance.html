@@ -1,2 +1,12 @@
-<h1>{{name}}</h1>
-<h2>{{kind}}</h2>
+<section>
+    <h1>{{name}}</h1>
+    <h2>{{kind}}, by {{author}}</h2>
+
+    <p>See the <a href="{{slug}}.pdf">description of the dance</a>.</p>
+
+    {{#scddb-id}}
+    <p>See this dance
+        <a href="https://my.strathspey.org/dd/dance/{{scddb-id}}/">
+            on the Scottish Country Dance Database</a>.</p>
+    {{/scddb-id}}
+</section>
