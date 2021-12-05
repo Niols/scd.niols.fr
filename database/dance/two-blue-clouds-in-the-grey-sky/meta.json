@@ -1,10 +1,8 @@
 {
     "name": "Two Blue Clouds in the Grey Sky",
     "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
-    "kind": "5 x 40 Reel",
+    "kind": "A 40-bar Reel for five couples in a five-couple longwise set",
+    "short-kind": "R40 5/5L",
     "scddb-id": 19197,
-    "published": {
-        "name": "Gone Dancing Bk 2",
-        "scddb-id": 1532
-    }
+    "book": [ "gone-dancing-2" ]
 }
