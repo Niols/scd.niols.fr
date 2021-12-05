@@ -1,7 +1,8 @@
 {
     "name": "The Reel of the 51st Confusion",
     "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
-    "kind": "A 32-bar Reel for three couples in a three-couple longwise set",
+    "short-author": "Anne Lanvin et al.",
+    "kind": "32-bar reel for three couples in a three-couple longwise set",
     "short-kind": "R32 3/3L",
     "tunes": [
         { "name": "The Drunken Piper",
