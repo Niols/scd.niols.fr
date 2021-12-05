@@ -5,10 +5,6 @@ readonly BUILD=build
 readonly DB=db
 readonly SRC=src
 
-
-
-
-
 mkdir -p "$BUILD"/dance
 echo "dances:"
 
@@ -17,7 +13,7 @@ ls -1 "$DB"/dance | while read dance; do
     echo "- $dance"
 
     echo "  - generate TeX file"
-    { cat "$SRC"/preamble.tex
+    { cat "$SRC"/tex/preamble.tex
       echo '\usepackage{silence}'
       echo '\WarningsOff*'
       echo '\begin{document}'
@@ -29,4 +25,14 @@ ls -1 "$DB"/dance | while read dance; do
     ( cd "$BUILD"/dance
       xelatex "$dance".tex
     ) > "$BUILD"/dance/"$dance"
+
+    echo "  - generate Mustache file"
+    { cat "$SRC"/html/dance.html
+    } > "$BUILD"/dance/"$dance".mustache
+
+    echo "  - compile Mustache to HTML"
+    mustache \
+      "$DB"/dance/"$dance"/meta.json \
+      "$BUILD"/dance/"$dance".mustache \
+      > "$BUILD"/dance/"$dance".html
 done
