@@ -10,7 +10,7 @@ mkdir -p "$BUILD"
 cp "$SRC"/css/* "$BUILD"
 
 mkdir -p "$BUILD"/dance
-echo "dances:"
+echo "building dances:"
 
 ## For each dance in the database
 ls -1 "$DB"/dance | while read dance; do
@@ -49,7 +49,6 @@ ls -1 "$DB"/dance | while read dance; do
     done
 
 ## Cleanup build directory
-echo 'cleanup'
+printf 'cleaning up... '
 find "$BUILD" -type f -not -regex '.*.\(pdf\|html\|css\)' -delete
-
-echo 'done'
+printf 'done\n'
