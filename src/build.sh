@@ -62,6 +62,21 @@ echo '- compile Mustache to HTML'
   mustache dances.json dances.mustache \
     > dances.html )
 
+echo 'building index:'
+
+echo '{"root":"."}' > "$BUILD"/index.json
+
+echo '- generate Mustache file'
+{ cat "$SRC"/html/header.html
+  cat "$SRC"/html/index.html
+  cat "$SRC"/html/footer.html
+} > "$BUILD"/index.mustache
+
+echo '- compile Mustache to HTML'
+( cd "$BUILD"
+  mustache index.json index.mustache \
+    > index.html )
+
 ## Cleanup build directory
 printf 'cleaning up... '
 find "$BUILD" -type f -not -regex '.*.\(pdf\|html\|css\)' -delete
