@@ -5,6 +5,10 @@ readonly BUILD=build
 readonly DB=db
 readonly SRC=src
 
+## Copy CSS files
+mkdir -p "$BUILD"
+cp "$SRC"/css/* "$BUILD"
+
 mkdir -p "$BUILD"/dance
 echo "dances:"
 
@@ -28,7 +32,8 @@ ls -1 "$DB"/dance | while read dance; do
 
     echo "  - generate JSON file"
     { cat "$DB"/dance/"$dance"/meta.json \
-      | jq "setpath([\"slug\"]; \"$dance\")"
+      | jq "setpath([\"slug\"]; \"$dance\")" \
+      | jq "setpath([\"root\"]; \"..\")"
     } > "$BUILD"/dance/"$dance".json
 
     echo "  - generate Mustache file"
