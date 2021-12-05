@@ -2,13 +2,15 @@
     <h1>{{name}}</h1>
     <h2>{{kind}}</h2>
 
-    <p>Devised by {{author}}.</p>
+    <div class="details">
+        <p>Devised by {{author}}.</p>
 
-    <p>See the <a href="{{slug}}.pdf">description of the dance</a>.</p>
+        <p>See the <a href="{{slug}}.pdf">description of the dance</a>.</p>
 
-    {{#scddb-id}}
-    <p>See this dance
-        <a href="https://my.strathspey.org/dd/dance/{{scddb-id}}/">
-            on the Scottish Country Dance Database</a>.</p>
-    {{/scddb-id}}
+        {{#scddb-id}}
+        <p>See this dance
+            <a href="https://my.strathspey.org/dd/dance/{{scddb-id}}/">
+                on the Scottish Country Dance Database</a>.</p>
+        {{/scddb-id}}
+    </div>
 </section>
