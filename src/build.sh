@@ -18,8 +18,6 @@ ls -1 "$DB"/dance | while read dance; do
 
     echo "  - generate TeX file"
     { cat "$SRC"/tex/preamble.tex
-      echo '\usepackage{silence}'
-      echo '\WarningsOff*'
       echo '\begin{document}'
       cat "$DB"/dance/"$dance"/descr.tex
       echo '\end{document}'
@@ -47,6 +45,22 @@ ls -1 "$DB"/dance | while read dance; do
       mustache "$dance".json "$dance".mustache \
         > "$dance".html )
     done
+
+echo 'building dances index:'
+echo '- generate JSON file'
+( jq -s '{dances:., root:"."}' $(find "$BUILD"/dance -name '*.json')
+) > "$BUILD"/dances.json
+
+echo '- generate Mustache file'
+{ cat "$SRC"/html/header.html
+  cat "$SRC"/html/dances.html
+  cat "$SRC"/html/footer.html
+} > "$BUILD"/dances.mustache
+
+echo '- compile Mustache to HTML'
+( cd "$BUILD"
+  mustache dances.json dances.mustache \
+    > dances.html )
 
 ## Cleanup build directory
 printf 'cleaning up... '
