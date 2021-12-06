@@ -1,15 +1,24 @@
 body {
-    margin: auto;
-    max-width: 1000px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
 }
 
-header {
+header, footer {
+    background: lightgray;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
+article, section {
+    margin: auto;
+    width: 1000px;
+}
+
+header { margin-bottom: 2rem; }
+article { margin-top: 3rem; }
+section { margin-top: 2rem; }
+footer { margin-top: 2rem; }
 
 h1 { font-size: 2rem; }
 h2 { font-size: 1.4rem; }
@@ -17,8 +26,5 @@ h1,h2 {
     text-align: center;
     margin-bottom: 0.5rem;
 }
-
-article { margin-top: 3rem; }
-section { margin-top: 2rem; }
 
 a, a:visited { color: black; }
