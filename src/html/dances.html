@@ -1,14 +1,23 @@
 <section>
     <h1>All Dances</h1>
 
-    <table>
-        {{#dances}}
-        <tr>
-            <td><a href="dance/{{slug}}.html">{{name}}</a></td>
-            <td>{{short-kind}}</td>
-            <td>{{#short-author}}{{short-author}}{{/short-author}}
-                {{^short-author}}{{author}}{{/short-author}}</td>
-        </tr>
-        {{/dances}}
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Kind</th>
+                <th>Deviser</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#dances}}
+            <tr>
+                <td><a href="dance/{{slug}}.html">{{name}}</a></td>
+                <td>{{short-kind}}</td>
+                <td>{{#short-author}}{{short-author}}{{/short-author}}
+                    {{^short-author}}{{author}}{{/short-author}}</td>
+            </tr>
+            {{/dances}}
+        </tbody>
     </table>
 </section>
