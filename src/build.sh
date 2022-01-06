@@ -3,6 +3,7 @@ set -euC
 
 readonly BUILD=build
 readonly DB=db
+readonly OTHER=other
 readonly SRC=src
 
 ## Copy CSS files
@@ -80,4 +81,8 @@ echo '- compile Mustache to HTML'
 ## Cleanup build directory
 printf 'cleaning up... '
 find "$BUILD" -type f -not -regex '.*.\(pdf\|html\|css\)' -delete
+printf 'done\n'
+
+printf 'copying `other` directory... '
+cp -R "$OTHER" "$BUILD"/other
 printf 'done\n'
