@@ -1,0 +1,61 @@
+name: Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2.0.0
+
+      - name: Build Docker Builder Image
+        uses: docker/build-push-action@v3.0.0
+        with:
+          context: .
+          load: true
+          tags: builder
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build Website
+        run: make build-in-docker DOCKER_BUILDER_TAG=builder
+
+      - name: Publish to GitHub Pages
+        uses: s0/git-publish-subdir-action@v2.5.1
+        if: ${{ github.ref == 'refs/heads/main' }}
+        env:
+          REPO: self
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FOLDER: build
+          BRANCH: pages
+          SKIP_EMPTY_COMMITS: true
+          MESSAGE: "Bump to {sha}: {msg}"
+
+      - name: Authenticate to the GitHub Package Registry
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: docker/login-action@v2.0.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish Docker Builder Image
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: docker/build-push-action@v3.0.0
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/niols/scd.niols.fr-builder
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
