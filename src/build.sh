@@ -1,6 +1,13 @@
 #!/bin/sh
 set -euC
 
+################################################################################
+##   ___                             _   _
+##  | _ \_ _ ___ _ __  __ _ _ _ __ _| |_(_)___ _ _
+##  |  _/ '_/ -_) '_ \/ _` | '_/ _` |  _| / _ \ ' \
+##  |_| |_| \___| .__/\__,_|_| \__,_|\__|_\___/_||_|
+##              |_|
+
 readonly BUILD=build
 readonly DB=db
 readonly OTHER=other
@@ -9,6 +16,13 @@ readonly SRC=src
 ## Copy CSS files
 mkdir -p "$BUILD"
 cp "$SRC"/css/* "$BUILD"
+
+################################################################################
+##   ___
+##  |   \ __ _ _ _  __ ___ ___
+##  | |) / _` | ' \/ _/ -_|_-<
+##  |___/\__,_|_||_\__\___/__/
+##
 
 mkdir -p "$BUILD"/dance
 printf -- 'building dances:\n'
@@ -63,6 +77,61 @@ printf -- '- compile Mustache to HTML\n'
   mustache dances.json dances.mustache \
     > dances.html )
 
+################################################################################
+##   _____
+##  |_   _|  _ _ _  ___ ___
+##    | || || | ' \/ -_|_-<
+##    |_| \_,_|_||_\___/__/
+##
+
+mkdir -p "$BUILD"/tune
+printf -- 'building tunes:\n'
+
+## For each tune in the database
+ls -1 "$DB"/tune | while read tune; do
+    printf -- '- %s\n' "$tune"
+
+    printf -- '  - generate JSON file\n'
+    { cat "$DB"/tune/"$tune"/meta.json \
+      | jq "setpath([\"slug\"]; \"$tune\")" \
+      | jq "setpath([\"root\"]; \"..\")"
+    } > "$BUILD"/tune/"$tune".json
+
+    printf -- '  - generate Mustache file\n'
+    { cat "$SRC"/html/header.html
+      cat "$SRC"/html/tune.html
+      cat "$SRC"/html/footer.html
+    } > "$BUILD"/tune/"$tune".mustache
+
+    printf -- '  - compile Mustache to HTML\n'
+    ( cd "$BUILD"/tune
+      mustache "$tune".json "$tune".mustache \
+        > "$tune".html )
+    done
+
+printf -- 'building tunes index:\n'
+printf -- '- generate JSON file\n'
+( jq -s '{tunes:., root:"."}' $(find "$BUILD"/tune -name '*.json')
+) > "$BUILD"/tunes.json
+
+printf -- '- generate Mustache file\n'
+{ cat "$SRC"/html/header.html
+  cat "$SRC"/html/tunes.html
+  cat "$SRC"/html/footer.html
+} > "$BUILD"/tunes.mustache
+
+printf -- '- compile Mustache to HTML\n'
+( cd "$BUILD"
+  mustache tunes.json tunes.mustache \
+    > tunes.html )
+
+################################################################################
+##   ___         _
+##  |_ _|_ _  __| |_____ __
+##   | || ' \/ _` / -_) \ /
+##  |___|_||_\__,_\___/_\_\
+##
+
 printf 'building index:\n'
 
 printf -- '{"root":"."}' > "$BUILD"/index.json
@@ -77,6 +146,13 @@ printf -- '- compile Mustache to HTML\n'
 ( cd "$BUILD"
   mustache index.json index.mustache \
     > index.html )
+
+################################################################################
+##  __      __
+##  \ \    / / _ __ _ _ __ ___ _  _ _ __
+##   \ \/\/ / '_/ _` | '_ \___| || | '_ \
+##    \_/\_/|_| \__,_| .__/    \_,_| .__/
+##                   |_|           |_|
 
 ## Cleanup build directory
 printf 'cleaning up... '
