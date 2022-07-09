@@ -11,69 +11,69 @@ mkdir -p "$BUILD"
 cp "$SRC"/css/* "$BUILD"
 
 mkdir -p "$BUILD"/dance
-echo "building dances:"
+printf -- 'building dances:\n'
 
 ## For each dance in the database
 ls -1 "$DB"/dance | while read dance; do
-    echo "- $dance"
+    printf -- '- %s\n' "$dance"
 
-    echo "  - generate TeX file"
+    printf -- '  - generate TeX file\n'
     { cat "$SRC"/tex/preamble.tex
-      echo '\begin{document}'
+      printf -- '\\begin{document}\n'
       cat "$DB"/dance/"$dance"/descr.tex
-      echo '\end{document}'
+      printf -- '\\end{document}\n'
     } > "$BUILD"/dance/"$dance".tex
 
-    echo "  - compile TeX to PDF"
+    printf -- '  - compile TeX to PDF\n'
     ( cd "$BUILD"/dance
       xelatex "$dance".tex \
         > "$dance".xelatex-log )
 
-    echo "  - generate JSON file"
+    printf -- '  - generate JSON file\n'
     { cat "$DB"/dance/"$dance"/meta.json \
       | jq "setpath([\"slug\"]; \"$dance\")" \
       | jq "setpath([\"root\"]; \"..\")"
     } > "$BUILD"/dance/"$dance".json
 
-    echo "  - generate Mustache file"
+    printf -- '  - generate Mustache file\n'
     { cat "$SRC"/html/header.html
       cat "$SRC"/html/dance.html
       cat "$SRC"/html/footer.html
     } > "$BUILD"/dance/"$dance".mustache
 
-    echo "  - compile Mustache to HTML"
+    printf -- '  - compile Mustache to HTML\n'
     ( cd "$BUILD"/dance
       mustache "$dance".json "$dance".mustache \
         > "$dance".html )
     done
 
-echo 'building dances index:'
-echo '- generate JSON file'
+printf -- 'building dances index:\n'
+printf -- '- generate JSON file\n'
 ( jq -s '{dances:., root:"."}' $(find "$BUILD"/dance -name '*.json')
 ) > "$BUILD"/dances.json
 
-echo '- generate Mustache file'
+printf -- '- generate Mustache file\n'
 { cat "$SRC"/html/header.html
   cat "$SRC"/html/dances.html
   cat "$SRC"/html/footer.html
 } > "$BUILD"/dances.mustache
 
-echo '- compile Mustache to HTML'
+printf -- '- compile Mustache to HTML\n'
 ( cd "$BUILD"
   mustache dances.json dances.mustache \
     > dances.html )
 
-echo 'building index:'
+printf 'building index:\n'
 
-echo '{"root":"."}' > "$BUILD"/index.json
+printf -- '{"root":"."}' > "$BUILD"/index.json
 
-echo '- generate Mustache file'
+printf -- '- generate Mustache file\n'
 { cat "$SRC"/html/header.html
   cat "$SRC"/html/index.html
   cat "$SRC"/html/footer.html
 } > "$BUILD"/index.mustache
 
-echo '- compile Mustache to HTML'
+printf -- '- compile Mustache to HTML\n'
 ( cd "$BUILD"
   mustache index.json index.mustache \
     > index.html )
