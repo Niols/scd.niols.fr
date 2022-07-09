@@ -1,4 +1,9 @@
-.PHONY: build clean publish
+.PHONY: build clean docker-builder build-in-docker
+
+help:
+	@printf 'Just try `make docker-builder build-in-docker`.\n'
+
+################################################################################
 
 build: clean
 	@sh src/build.sh
@@ -6,7 +11,17 @@ build: clean
 clean:
 	@rm -rf build
 
-publish: build
-	@printf 'publishing... '
-	@rsync -a build/ scd@sechs.niols.fr:~/public_html/
-	@printf 'done\n'
+################################################################################
+
+DOCKER_BUILDER_TAG := ghcr.io/niols/scd.niols.fr-builder:latest
+
+docker-builder:
+	@docker build --tag $(DOCKER_BUILDER_TAG) .
+
+build-in-docker: clean
+	@cid=$$(docker create $(DOCKER_BUILDER_TAG) make build) \
+	  && docker cp . "$$cid":/wd \
+	  && docker start --attach "$$cid" \
+	  && docker cp "$$cid":/wd/build/. build
+
+################################################################################
