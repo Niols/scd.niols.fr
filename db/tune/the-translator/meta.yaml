@@ -1,8 +1,7 @@
-{
-    "name": "The Translator",
-    "author": "Nicolas “Niols” Jeannerod",
-    "kind": "32-bar Strathspey",
-    "short-kind": "S32",
-    "scddb-id": 14452,
-    "book": [ "paris-companion-book-2" ]
-}
+name: The Translator
+author: Nicolas “Niols” Jeannerod
+kind: 32-bar Strathspey
+short-kind: S32
+scddb-id: 14452
+book:
+  - paris-companion-book-2
