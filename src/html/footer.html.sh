@@ -1,4 +1,4 @@
 #!bin/sh
 
-printf -- '  </body>'
-printf -- '</html>'
+printf   '</body>'
+printf '</html>'
