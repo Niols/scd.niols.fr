@@ -50,11 +50,11 @@ ls -1 "$DB"/dance | while read dance; do
     } > "$BUILD"/dance/"$dance".json
 
     printf -- '  - generate HTML file\n'
-    "$SRC"/shhtml \
+    "$SRC"/shtpen \
       --json "$BUILD"/dance/"$dance".json \
-      --shhtml "$SRC"/html/header.html.sh \
-      --shhtml "$SRC"/html/dance.html.sh \
-      --shhtml "$SRC"/html/footer.html.sh \
+      --shtp "$SRC"/html/header.html.sh \
+      --shtp "$SRC"/html/dance.html.sh \
+      --shtp "$SRC"/html/footer.html.sh \
       > "$BUILD"/dance/"$dance".html
     done
 
@@ -64,11 +64,11 @@ printf -- '- generate JSON file\n'
 ) > "$BUILD"/dances.json
 
 printf -- '- generate HTML file\n'
-"$SRC"/shhtml \
+"$SRC"/shtpen \
   --json "$BUILD"/dances.json \
-  --shhtml "$SRC"/html/header.html.sh \
-  --shhtml "$SRC"/html/dances.html.sh \
-  --shhtml "$SRC"/html/footer.html.sh \
+  --shtp "$SRC"/html/header.html.sh \
+  --shtp "$SRC"/html/dances.html.sh \
+  --shtp "$SRC"/html/footer.html.sh \
   > "$BUILD"/dances.html
 
 ################################################################################
@@ -92,11 +92,11 @@ ls -1 "$DB"/tune | while read tune; do
     } > "$BUILD"/tune/"$tune".json
 
     printf -- '  - generate HTML file\n'
-    "$SRC"/shhtml \
+    "$SRC"/shtpen \
       --json "$BUILD"/tune/"$tune".json \
-      --shhtml "$SRC"/html/header.html.sh \
-      --shhtml "$SRC"/html/tune.html.sh \
-      --shhtml "$SRC"/html/footer.html.sh \
+      --shtp "$SRC"/html/header.html.sh \
+      --shtp "$SRC"/html/tune.html.sh \
+      --shtp "$SRC"/html/footer.html.sh \
       > "$BUILD"/tune/"$tune".html
     done
 
@@ -106,11 +106,11 @@ printf -- '- generate JSON file\n'
 ) > "$BUILD"/tunes.json
 
 printf -- '- generate HTML file\n'
-"$SRC"/shhtml \
+"$SRC"/shtpen \
   --json "$BUILD"/tunes.json \
-  --shhtml "$SRC"/html/header.html.sh \
-  --shhtml "$SRC"/html/tunes.html.sh \
-  --shhtml "$SRC"/html/footer.html.sh \
+  --shtp "$SRC"/html/header.html.sh \
+  --shtp "$SRC"/html/tunes.html.sh \
+  --shtp "$SRC"/html/footer.html.sh \
   > "$BUILD"/tunes.html
 
 ################################################################################
@@ -126,11 +126,11 @@ printf -- '- generate JSON file\n'
 printf -- '{"root":"."}' > "$BUILD"/index.json
 
 printf -- '- generate HTML file\n'
-"$SRC"/shhtml \
+"$SRC"/shtpen \
   --json "$BUILD"/index.json \
-  --shhtml "$SRC"/html/header.html.sh \
-  --shhtml "$SRC"/html/index.html.sh \
-  --shhtml "$SRC"/html/footer.html.sh \
+  --shtp "$SRC"/html/header.html.sh \
+  --shtp "$SRC"/html/index.html.sh \
+  --shtp "$SRC"/html/footer.html.sh \
   > "$BUILD"/index.html
 
 ################################################################################
