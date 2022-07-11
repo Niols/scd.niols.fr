@@ -49,17 +49,13 @@ ls -1 "$DB"/dance | while read dance; do
       | jq "setpath([\"root\"]; \"..\")"
     } > "$BUILD"/dance/"$dance".json
 
-    printf -- '  - generate HTML+SH file\n'
-    { cat "$SRC"/getters.sh
-      cat "$SRC"/html/header.html.sh
-      cat "$SRC"/html/dance.html.sh
-      cat "$SRC"/html/footer.html.sh
-    } > "$BUILD"/dance/"$dance".html.sh
-
-    printf -- '  - compile HTML+SH to HTML\n'
-    ( cd "$BUILD"/dance
-      sh "$dance".html.sh "$dance".json \
-        > "$dance".html )
+    printf -- '  - generate HTML file\n'
+    "$SRC"/shhtml \
+      --json "$BUILD"/dance/"$dance".json \
+      --shhtml "$SRC"/html/header.html.sh \
+      --shhtml "$SRC"/html/dance.html.sh \
+      --shhtml "$SRC"/html/footer.html.sh \
+      > "$BUILD"/dance/"$dance".html
     done
 
 printf -- 'building dances index:\n'
@@ -67,17 +63,13 @@ printf -- '- generate JSON file\n'
 ( jq -s '{dances:., root:"."}' $(find "$BUILD"/dance -name '*.json')
 ) > "$BUILD"/dances.json
 
-printf -- '- generate HTML+SH file\n'
-{ cat "$SRC"/getters.sh
-  cat "$SRC"/html/header.html.sh
-  cat "$SRC"/html/dances.html.sh
-  cat "$SRC"/html/footer.html.sh
-} > "$BUILD"/dances.html.sh
-
-printf -- '- compile HTML+SH to HTML\n'
-( cd "$BUILD"
-  sh dances.html.sh dances.json \
-    > dances.html )
+printf -- '- generate HTML file\n'
+"$SRC"/shhtml \
+  --json "$BUILD"/dances.json \
+  --shhtml "$SRC"/html/header.html.sh \
+  --shhtml "$SRC"/html/dances.html.sh \
+  --shhtml "$SRC"/html/footer.html.sh \
+  > "$BUILD"/dances.html
 
 ################################################################################
 ##   _____
@@ -99,17 +91,13 @@ ls -1 "$DB"/tune | while read tune; do
       | jq "setpath([\"root\"]; \"..\")"
     } > "$BUILD"/tune/"$tune".json
 
-    printf -- '  - generate HTML+SH file\n'
-    { cat "$SRC"/getters.sh
-      cat "$SRC"/html/header.html.sh
-      cat "$SRC"/html/tune.html.sh
-      cat "$SRC"/html/footer.html.sh
-    } > "$BUILD"/tune/"$tune".html.sh
-
-    printf -- '  - compile HTML+SH to HTML\n'
-    ( cd "$BUILD"/tune
-      sh "$tune".html.sh "$tune".json \
-        > "$tune".html )
+    printf -- '  - generate HTML file\n'
+    "$SRC"/shhtml \
+      --json "$BUILD"/tune/"$tune".json \
+      --shhtml "$SRC"/html/header.html.sh \
+      --shhtml "$SRC"/html/tune.html.sh \
+      --shhtml "$SRC"/html/footer.html.sh \
+      > "$BUILD"/tune/"$tune".html
     done
 
 printf -- 'building tunes index:\n'
@@ -117,17 +105,13 @@ printf -- '- generate JSON file\n'
 ( jq -s '{tunes:., root:"."}' $(find "$BUILD"/tune -name '*.json')
 ) > "$BUILD"/tunes.json
 
-printf -- '- generate HTML+SH file\n'
-{ cat "$SRC"/getters.sh
-  cat "$SRC"/html/header.html.sh
-  cat "$SRC"/html/tunes.html.sh
-  cat "$SRC"/html/footer.html.sh
-} > "$BUILD"/tunes.html.sh
-
-printf -- '- compile HTML+SH to HTML\n'
-( cd "$BUILD"
-  sh tunes.html.sh tunes.json \
-    > tunes.html )
+printf -- '- generate HTML file\n'
+"$SRC"/shhtml \
+  --json "$BUILD"/tunes.json \
+  --shhtml "$SRC"/html/header.html.sh \
+  --shhtml "$SRC"/html/tunes.html.sh \
+  --shhtml "$SRC"/html/footer.html.sh \
+  > "$BUILD"/tunes.html
 
 ################################################################################
 ##   ___         _
@@ -138,19 +122,16 @@ printf -- '- compile HTML+SH to HTML\n'
 
 printf 'building index:\n'
 
+printf -- '- generate JSON file\n'
 printf -- '{"root":"."}' > "$BUILD"/index.json
 
-printf -- '- generate HTML+SH file\n'
-{ cat "$SRC"/getters.sh
-  cat "$SRC"/html/header.html.sh
-  cat "$SRC"/html/index.html.sh
-  cat "$SRC"/html/footer.html.sh
-} > "$BUILD"/index.html.sh
-
-printf -- '- compile Mustache to HTML\n'
-( cd "$BUILD"
-  sh index.html.sh index.json \
-    > index.html )
+printf -- '- generate HTML file\n'
+"$SRC"/shhtml \
+  --json "$BUILD"/index.json \
+  --shhtml "$SRC"/html/header.html.sh \
+  --shhtml "$SRC"/html/index.html.sh \
+  --shhtml "$SRC"/html/footer.html.sh \
+  > "$BUILD"/index.html
 
 ################################################################################
 ##  __      __
