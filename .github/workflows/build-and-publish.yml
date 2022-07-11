@@ -29,7 +29,9 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build Website
-        run: make website@docker DOCKER_BUILDER_TAG=builder
+        run: |
+          make website@docker DOCKER_BUILDER_TAG=builder
+          printf 'scd.niols.fr' > build/CNAME
 
       - name: Publish to GitHub Pages
         uses: s0/git-publish-subdir-action@v2.5.1
