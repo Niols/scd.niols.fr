@@ -6,4 +6,4 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "main"
-    labels: ["comp:ci-cd"]
+    labels: ["ci"]
