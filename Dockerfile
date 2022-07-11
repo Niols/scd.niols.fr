@@ -3,7 +3,7 @@ FROM debian:11
 ## Install dependencies
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq \
-        make pdftk jq ruby-mustache \
+        make jq \
         texlive-xetex texlive-extra-utils latexmk
 
 ## Add group and user `builder`
