@@ -178,9 +178,11 @@ $(BUILD)/tunes.html: $(BUILD)/tunes.json build-dir
 ############################################################
 ## Index &
 
-$(BUILD)/index.json: build-dir
+$(BUILD)/index.json: $(BUILD)/dances.json $(BUILD)/tunes.json build-dir
 	printf 'Making `index.json`... '
-	printf -- '{"root":"."}' > $@
+	jq -s '{tunes:.[0].tunes, dances:.[1].dances, root:"."}' \
+	  $(BUILD)/tunes.json $(BUILD)/dances.json \
+	  > $@
 	printf 'done.\n'
 
 $(BUILD)/index.html: $(BUILD)/index.json build-dir
