@@ -98,9 +98,9 @@ $(BUILD)/dance/%.html: $(BUILD)/dance/%.json dance-build-dir
 	printf 'Making `dance/%s.html`... ' $*
 	$(SRC)/shtpen \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.sh \
-	  --shtp $(SRC)/html/dance.html.sh \
-	  --shtp $(SRC)/html/footer.html.sh \
+	  --shtp $(SRC)/html/header.html.shtp \
+	  --shtp $(SRC)/html/dance.html.shtp \
+	  --shtp $(SRC)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
@@ -119,9 +119,9 @@ $(BUILD)/dances.html: $(BUILD)/dances.json build-dir
 	printf 'Making `dances.html`... '
 	$(SRC)/shtpen \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.sh \
-	  --shtp $(SRC)/html/dances.html.sh \
-	  --shtp $(SRC)/html/footer.html.sh \
+	  --shtp $(SRC)/html/header.html.shtp \
+	  --shtp $(SRC)/html/dances.html.shtp \
+	  --shtp $(SRC)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
@@ -148,9 +148,9 @@ $(BUILD)/tune/%.html: $(BUILD)/tune/%.json tune-build-dir
 	printf 'Making `tune/%s.html`... ' $*
 	$(SRC)/shtpen \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.sh \
-	  --shtp $(SRC)/html/tune.html.sh \
-	  --shtp $(SRC)/html/footer.html.sh \
+	  --shtp $(SRC)/html/header.html.shtp \
+	  --shtp $(SRC)/html/tune.html.shtp \
+	  --shtp $(SRC)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
@@ -169,9 +169,9 @@ $(BUILD)/tunes.html: $(BUILD)/tunes.json build-dir
 	printf 'Making `tunes.html`... '
 	$(SRC)/shtpen \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.sh \
-	  --shtp $(SRC)/html/tunes.html.sh \
-	  --shtp $(SRC)/html/footer.html.sh \
+	  --shtp $(SRC)/html/header.html.shtp \
+	  --shtp $(SRC)/html/tunes.html.shtp \
+	  --shtp $(SRC)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
@@ -189,9 +189,9 @@ $(BUILD)/index.html: $(BUILD)/index.json build-dir
 	printf 'Making `index.html`... '
 	$(SRC)/shtpen \
 	  --json $(BUILD)/index.json \
-	  --shtp $(SRC)/html/header.html.sh \
-	  --shtp $(SRC)/html/index.html.sh \
-	  --shtp $(SRC)/html/footer.html.sh \
+	  --shtp $(SRC)/html/header.html.shtp \
+	  --shtp $(SRC)/html/index.html.shtp \
+	  --shtp $(SRC)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
