@@ -1,0 +1,33 @@
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+* { max-width: 100%; }
+
+header, footer {
+    background: whitesmoke;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+article, section {
+    margin: auto;
+    width: 1000px;
+}
+
+header { margin-bottom: 2rem; }
+article { margin-top: 3rem; }
+section { margin-top: 2rem; }
+footer { margin-top: 2rem; }
+
+h1,h2 { text-align: center; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
+
+h1 { margin-bottom: 0.5rem; }
+header h1 { margin: 0; }
+
+a, a:visited { color: black; }
+header a { text-decoration: none; }

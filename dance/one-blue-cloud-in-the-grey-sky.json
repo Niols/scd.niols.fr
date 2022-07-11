@@ -1,0 +1,15 @@
+{
+  "name": "One Blue Cloud in the Grey Sky",
+  "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+  "kind": "40-bar reel for three couples in a three-couple longwise set",
+  "short-kind": "R40 3/3L",
+  "scddb-id": 19198,
+  "books": [
+    "gone-dancing-2"
+  ],
+  "tunes": [
+    "forty-bars-of-clouds"
+  ],
+  "slug": "one-blue-cloud-in-the-grey-sky",
+  "root": ".."
+}
