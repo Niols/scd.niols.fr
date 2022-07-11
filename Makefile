@@ -86,9 +86,9 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 ##
 $(BUILD)/dance/%.json: $(DB)/dance/%/meta.json dance-build-dir
 	printf 'Making `dance/%s.json`... ' $*
-	cat $< \
-	  | jq "setpath([\"slug\"]; \"$*\")" \
-	  | jq "setpath([\"root\"]; \"..\")" \
+	yq --output-format json \
+	  '. * { "slug": "$*", "root": ".." }' \
+	  $< \
 	  > $@
 	printf 'done.\n'
 
@@ -136,9 +136,9 @@ tune-build-dir: build-dir
 ##
 $(BUILD)/tune/%.json: $(DB)/tune/%/meta.json tune-build-dir
 	printf 'Making `tune/%s.json`... ' $*
-	cat $< \
-	  | jq "setpath([\"slug\"]; \"$*\")" \
-	  | jq "setpath([\"root\"]; \"..\")" \
+	yq --output-format json \
+	  '. * { "slug": "$*", "root": ".." }' \
+	  $< \
 	  > $@
 	printf 'done.\n'
 

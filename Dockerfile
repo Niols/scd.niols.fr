@@ -1,10 +1,16 @@
 FROM debian:11
 
-## Install dependencies
+## Install most dependencies. `wget` is only needed for `yq`.
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq \
-        make jq \
+        make jq wget \
         texlive-xetex texlive-extra-utils latexmk
+
+## Install `yq`. We use the i386 version because that's what Debian 11 in Docker
+## seems to be.
+RUN wget https://github.com/mikefarah/yq/releases/download/v4.25.3/yq_linux_386 \
+        -qO /usr/local/bin/yq
+RUN chmod +x /usr/local/bin/yq
 
 ## Add group and user `builder`
 RUN addgroup builder \
