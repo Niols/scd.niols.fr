@@ -84,7 +84,7 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 
 ## Generate a JSON file out of a database dance entry.
 ##
-$(BUILD)/dance/%.json: $(DB)/dance/%/meta.json dance-build-dir
+$(BUILD)/dance/%.json: $(DB)/dance/%/meta.yaml dance-build-dir
 	printf 'Making `dance/%s.json`... ' $*
 	yq --output-format json \
 	  '. * { "slug": "$*", "root": ".." }' \
@@ -134,7 +134,7 @@ tune-build-dir: build-dir
 
 ## Generate a JSON file out of a database tune entry.
 ##
-$(BUILD)/tune/%.json: $(DB)/tune/%/meta.json tune-build-dir
+$(BUILD)/tune/%.json: $(DB)/tune/%/meta.yaml tune-build-dir
 	printf 'Making `tune/%s.json`... ' $*
 	yq --output-format json \
 	  '. * { "slug": "$*", "root": ".." }' \
