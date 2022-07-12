@@ -50,10 +50,10 @@ DB := db
 OTHER := other
 SRC := src
 
-DB_DANCES := $(notdir $(wildcard $(DB)/dance/*))
+DB_DANCES := $(notdir $(basename $(wildcard $(DB)/dance/*.yaml)))
 BUILT_DANCES := $(addprefix $(BUILD)/dance/, $(DB_DANCES))
 
-DB_TUNES := $(notdir $(wildcard $(DB)/tune/*))
+DB_TUNES := $(notdir $(basename $(wildcard $(DB)/tune/*.yaml)))
 BUILT_TUNES := $(addprefix $(BUILD)/tune/, $(DB_TUNES))
 
 shtpen := shtpen/shtpen
@@ -72,7 +72,7 @@ dance-build-dir: build-dir
 
 ## Generate a TeX file out of a database dance entry.
 ##
-$(BUILD)/dance/%.tex: $(DB)/dance/%/descr.tex dance-build-dir
+$(BUILD)/dance/%.tex: $(DB)/dance/%.tex dance-build-dir
 	printf 'Making `dance/%s.tex`... ' $*
 	{ cat $(SRC)/tex/preamble.tex
 	  printf -- '\\begin{document}\n'
@@ -91,7 +91,7 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 
 ## Generate a JSON file out of a database dance entry.
 ##
-$(BUILD)/dance/%.json: $(DB)/dance/%/meta.yaml dance-build-dir
+$(BUILD)/dance/%.json: $(DB)/dance/%.yaml dance-build-dir
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -144,7 +144,7 @@ tune-build-dir: build-dir
 
 ## Generate a JSON file out of a database tune entry.
 ##
-$(BUILD)/tune/%.json: $(DB)/tune/%/meta.yaml tune-build-dir
+$(BUILD)/tune/%.json: $(DB)/tune/%.yaml tune-build-dir
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
