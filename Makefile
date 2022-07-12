@@ -70,25 +70,6 @@ build-dir:
 dance-build-dir: build-dir
 	mkdir -p $(BUILD)/dance
 
-## Generate a TeX file out of a database dance entry.
-##
-$(BUILD)/dance/%.tex: $(DB)/dance/%.tex dance-build-dir
-	printf 'Making `dance/%s.tex`... ' $*
-	{ cat $(SRC)/tex/preamble.tex
-	  printf -- '\\begin{document}\n'
-	  cat $<
-	  printf -- '\\end{document}\n'
-	} > $@
-	printf 'done.\n'
-
-## Generate a PDF file out of a dance TeX file.
-##
-$(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
-	printf 'Making `dance/%s.pdf`... ' $*
-	cd $(dir $<)
-	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
-	printf 'done.\n'
-
 ## Generate a JSON file out of a database dance entry.
 ##
 $(BUILD)/dance/%.json: $(DB)/dance/%.yaml dance-build-dir
@@ -98,6 +79,26 @@ $(BUILD)/dance/%.json: $(DB)/dance/%.yaml dance-build-dir
 	  | jq 'setpath(["slug"]; "$*")' \
 	  | jq 'setpath(["root"]; "..")' \
 	  > $@
+	printf 'done.\n'
+
+## Generate a TeX file out of a dance JSON file.
+##
+$(BUILD)/dance/%.tex: $(BUILD)/dance/%.json dance-build-dir
+	printf 'Making `dance/%s.tex`... ' $*
+	$(shtpen) \
+	  --escape tex \
+	  --json $< \
+	  --raw  $(SRC)/tex/preamble.tex \
+	  --shtp $(SRC)/tex/dance.tex.shtp \
+	  > $@
+	printf 'done.\n'
+
+## Generate a PDF file out of a dance TeX file.
+##
+$(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
+	printf 'Making `dance/%s.pdf`... ' $*
+	cd $(dir $<)
+	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
 	printf 'done.\n'
 
 ## Generate a HTML file out of a dance JSON file.
