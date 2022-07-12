@@ -125,14 +125,46 @@ raw () {
     fi
 }
 
+################################################################################
+##   ___            _ _   _            _    ___     _   _
+##  / __| __ _ _ _ (_) |_(_)___ ___ __| |  / __|___| |_| |_ ___ _ _ ___
+##  \__ \/ _` | ' \| |  _| (_-</ -_) _` | | (_ / -_)  _|  _/ -_) '_(_-<
+##  |___/\__,_|_||_|_|\__|_/__/\___\__,_|  \___\___|\__|\__\___|_| /__/
+
+## The escape mode. Currently, only supports `html`, `tex` and `none`.
+##
+ESCAPE=none
+
+## Escape HTML characters in a text setting. This only gets rid of `<`, `>`,
+## `&`, `"` and `'`.
+##
+escape_html_text () {
+    sed -e 's|&|\&amp;|g' \
+        -e 's|<|\&lt;|g' \
+        -e 's|>|\&gt;|g' \
+        -e 's|"|\&quot;|g' \
+        -e "s|'|\&#39;|g'"
+}
+
+## Escape TeX characters in a text setting.
+##
+## FIXME: For now, this only gets rid of `&`. There are many other things that
+## could go wrong.
+##
+escape_tex_text () {
+    sed -e 's|&|\\&|g'
+}
+
 ## `text` returns the field, sanitized for use as text. In HTML, for instance,
 ## we would escape things such as `<` and `>`. This should basically be the
 ## default everywhere.
 ##
-## FIXME: currently, this does nothing.
-##
 text () {
-    raw "$@"
+    case $ESCAPE in
+        html) raw "$@" | escape_html_text ;;
+        tex) raw "$@" | escape_tex_text ;;
+        *) raw "$@" ;;
+    esac
 }
 
 ## `url` returns the field, sanitized for use in a URL. This should basically be
@@ -173,6 +205,18 @@ do
         --json)
             shift
             CONTEXT=$(jq -n '{current:$current, next:[], parent:null}' --argjson current "$(cat "$1")")
+            ;;
+
+        --escape)
+            shift
+            case $1 in
+                html|tex|none)
+                    ESCAPE=$1
+                    ;;
+                *)
+                    printf >&2 'I do not know what to do with mode `%s`.\n' "$1"
+                    exit 2
+            esac
             ;;
 
         --raw)
