@@ -16,21 +16,6 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v3
 
-      - name: Comment About it in the Corresponding Pull Request
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6.1.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '🚀🚀🚀 The website has been pushed to http://dev.scd.niols.fr/refs/pulls/'
-                    + context.issue.number
-                    + '/merge!'
-            })
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2.0.0
 
@@ -61,6 +46,22 @@ jobs:
           ## serving `dev.scd.niols.fr`, with specific PAT.
           cname: dev.scd.niols.fr
           personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
+
+      - name: Comment About it in the Corresponding Pull Request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 The website has been pushed to '
+                    + 'http://dev.scd.niols.fr/refs/pull/'
+                    + context.issue.number
+                    + '/merge!'
+            })
 
       - name: Publish Main Website to GitHub Pages
         if: ${{ github.ref == 'refs/heads/main' }}
