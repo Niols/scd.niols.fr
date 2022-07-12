@@ -1,0 +1,49 @@
+- type: phrase
+  starts: 1
+  ends: 8
+  contents:
+    - type: text
+      content: |
+        1st couple set, cast off one place and dance a half figure of eight
+        around 2nd couple. 2nd couple step up on bars 3-4.
+
+- type: phrase
+  starts: 9
+  ends: 16
+  contents:
+    - type: text
+      content: |
+        1st couple set, dance a half figure of eight around 3rd couple and set
+        advancing to finish facing first corners.
+
+- type: phrase
+  starts: 17
+  ends: 32
+  contents:
+    - type: text
+      content: |
+        1st couple dance corner pass and turn with their first corners and
+        repeat with their second, third and fourth corners, finishing on their
+        own sides in second position.
+
+- type: phrase
+  starts: 33
+  ends: 40
+  contents:
+    - type: text
+      content: |
+        1st couple set, cast off one place. 3rd couple step up on bars 35-36.
+        1st couple turn right hand in four bars.
+
+- type: repeat
+  kind: from new positions
+
+- type: devised by
+  deviser: Claire Cunin & Nicolas “Niols” Jeannerod
+  more: |
+    in May 2018. This dance is a three-couple version of “Two Blue Clouds in the
+    Grey Sky”.
+
+- type: music by
+  composer: Nicolas “Niols” Jeannerod
+  tune: Forty Bars of Clouds
