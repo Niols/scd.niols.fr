@@ -3,18 +3,18 @@
     {
       "name": "Forty Bars of Clouds",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14008,
       "kind": "40-bar Reel",
       "short-kind": "R40",
-      "scddb-id": 14008,
       "slug": "forty-bars-of-cloud",
       "root": ".."
     },
     {
       "name": "La Ville Lumière",
       "author": "Pascaline Latour",
+      "scddb-id": 14533,
       "kind": "32-bar Reel",
       "short-kind": "R32",
-      "scddb-id": 14533,
       "book": [
         "paris-companion-book-2"
       ],
@@ -40,9 +40,9 @@
     {
       "name": "The Translator",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14452,
       "kind": "32-bar Strathspey",
       "short-kind": "S32",
-      "scddb-id": 14452,
       "book": [
         "paris-companion-book-2"
       ],

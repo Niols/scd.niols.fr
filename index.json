@@ -3,18 +3,18 @@
     {
       "name": "Forty Bars of Clouds",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14008,
       "kind": "40-bar Reel",
       "short-kind": "R40",
-      "scddb-id": 14008,
       "slug": "forty-bars-of-cloud",
       "root": ".."
     },
     {
       "name": "La Ville Lumière",
       "author": "Pascaline Latour",
+      "scddb-id": 14533,
       "kind": "32-bar Reel",
       "short-kind": "R32",
-      "scddb-id": 14533,
       "book": [
         "paris-companion-book-2"
       ],
@@ -40,9 +40,9 @@
     {
       "name": "The Translator",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14452,
       "kind": "32-bar Strathspey",
       "short-kind": "S32",
-      "scddb-id": 14452,
       "book": [
         "paris-companion-book-2"
       ],
@@ -54,14 +54,85 @@
     {
       "name": "Drawn in",
       "author": "Shannon Kiernan",
+      "scddb-id": 20314,
       "kind": "32-bar strathspey for three couples in a four-couple longwise set",
       "short-kind": "S32 3/4L",
-      "scddb-id": 20314,
       "books": [
         "paris-book-2"
       ],
       "tunes": [
         "the-translator"
+      ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple, giving right hands, dance a half figure of eight around 2nd\ncouple. 1st man giving left hand to 2nd woman, and 1st woman giving\nright hand to 2nd man, turn once round.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 12,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple dance in and cast off to second place.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 13,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple, giving both hands, turn once and a half, while 2nd and 3rd\ncouples chase clockwise halfway.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple, giving right shoulder to third corner positions, dance reels\nof three on the sides with 3rd and 2nd couples, finishing with 1st\ncouple passing left shoulder to finish facing first corner positions.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple dance corner pass and turn with first corner positions,\ncorners turning with both hands halfway and, pulling back right\nshoulders, dance out to the opposite corner position. 1st couple,\npassing right shoulders, repeat with second corner positions.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Shannon Kiernan",
+          "more": "in March 2019."
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "The Translator"
+        }
       ],
       "slug": "drawn-in",
       "root": ".."
@@ -74,20 +145,150 @@
       "tunes": [
         "la-ville-lumiere"
       ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set and cast off one place as 4th couple set and cast up\none place. 2nd couple step up and 3rd couple step down on bars 3-4.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 4th couples dance right hands across to finish facing third\ncorners, that is, 1st man facing 2nd man with 4th man behind him and\n4th woman facing 3rd woman with 1st woman behind her.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "“Dolphin corners pass & turn”: 1st man followed by 4th man and 4th\nwoman followed by 1st woman pass third corners by the right and change\nlead; corners dance in and turn right hand back to place as 4th man\nfollowed by 1st man and 1st woman followed by 4th woman dance in and\npass right shoulders to face fourth corners. Repeat with fourth\ncorners to finish 1st and 4th couples in the middle of the set with\nboth hands joined with partner.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 4th couple dance a poussette to finish in the order 2, 4, 1, 3.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "All 4 couples dance eight hands round and back.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Nicolas “Niols” Jeannerod",
+          "more": "in April 2019."
+        },
+        {
+          "type": "music by",
+          "composer": "Pascaline Latour"
+        }
+      ],
       "slug": "la-ville-lumiere",
       "root": ".."
     },
     {
       "name": "One Blue Cloud in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "scddb-id": 19198,
       "kind": "40-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R40 3/3L",
-      "scddb-id": 19198,
       "books": [
         "gone-dancing-2"
       ],
       "tunes": [
         "forty-bars-of-clouds"
+      ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set, cast off one place and dance a half figure of eight\naround 2nd couple. 2nd couple step up on bars 3-4.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set, dance a half figure of eight around 3rd couple and set\nadvancing to finish facing first corners.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple dance corner pass and turn with their first corners and\nrepeat with their second, third and fourth corners, finishing on their\nown sides in second position.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set, cast off one place. 3rd couple step up on bars 35-36.\n1st couple turn right hand in four bars.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+          "more": "in May 2018. This dance is a three-couple version of “Two Blue Clouds in\nthe Grey Sky”.\n"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "Forty Bars of Clouds"
+        }
       ],
       "slug": "one-blue-cloud-in-the-grey-sky",
       "root": ".."
@@ -97,6 +298,77 @@
       "author": "Nicolas “Niols” Jeannerod",
       "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
       "short-kind": "M32 3/3L",
+      "description": [
+        {
+          "type": "text",
+          "content": "On second chord, 2nd and 3rd couples cross."
+        },
+        {
+          "type": "text",
+          "content": "Strathspey"
+        },
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set advancing and turn both hands, dance down the middle\nand turn halfway with both hands to face down in Promenade hold. 2nd\ncouple step up on bars 5-6. 2nd and 3rd couples join in on bar 8.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "2nd, 1st and 3rd couples dance an Allemande down the dance. On bars\n15-16, 1st couple stays in the middle and set advancing to face first\ncorners in third corner position.\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Reel"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple dance corners pass and turn and cast away: Same as corners\npass and turn, except that corners turn halfway right hand and cast\naway to opposite positions. On bars 23-24, 1st couple slows down to\nfinish in the middle on own sides in Poussette hold; 3rd man curves to\nstay in the middle on own side; 3rd woman joins in in Poussette hold.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 3rd couples dance Poussette and petronella: Same five first\nbars as the Poussette. On bar 6, 3rd and 1st couples dance a quarter.\nOn bars 7-8, 3rd and 1st couples dance a petronella turn to opposite\nlines, finishing with 2nd couple in first position, and 3rd and 1st\ncouples improper in second and third position.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Nicolas “Niols” Jeannerod",
+          "more": "in April 2019."
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod"
+        }
+      ],
       "slug": "praha-matka-mest",
       "root": ".."
     },
@@ -107,6 +379,65 @@
       "short-kind": "S32 3/3L",
       "tunes": [
         "the-mall-in-st-james-s-park"
+      ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step\nup on bars 3-4.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple turns first corners both hands, pass each other right\nshoulder, turn second corners both hands and pass each other right\nshoulder to finish on own sides.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "2nd, 1st and 3rd couples dance parallel reels of three in six bars on\nthe lines, 1st man giving left shoulder to 3rd man and 1st woman\ngiving right shoulder to 3rd woman. On bars 23-24, 1st and 3rd men\nexchange place left shoulder while 1st and 3rd women exchange place\nright shoulder.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "3rd and 1st couples dance the Poussette.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Nicolas “Niols” Jeannerod",
+          "more": "in 2018. The name was suggested by Christophe Schuwey in reference to the\npainting of the same name by Thomas Gainsborough.\n"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod"
+        }
       ],
       "slug": "the-mall-in-st-james-s-park",
       "root": ".."
@@ -124,17 +455,142 @@
         },
         "the-sober-piper"
       ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set, cast off two places and lead up, finishing back to\nback facing first corners. 2nd couple step up on bars 3-4.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st couple set to first corners and turn with right hand halfway with\nthem. first corners give left hands in the middle and 1st couple and\nfirst corners balance in line; first corners turn with left hand one\nand a quarter times to end up back to back facing second corners.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "Repeat with first and second corners. At the last left-hand turn,\nfinish on the lines with 1st, 2nd and 3rd women improper in 1st, 2nd\nand 3rd position and 2nd, 3rd and 1st men improper in 1st, 2nd and 3rd\nposition.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "All dance six hands round and back.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas\n“Niols” Jeannerod and Victor Lanvin\n",
+          "more": "on August 8th, 2021. This dance is a variation on one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
+        },
+        {
+          "type": "text",
+          "content": "Note: Remember the person that is at the left of your partner from your\npoint of view: First, third and fifth times, you will start dancing with\nyour partner on your original lines; Second, fourth and sixth times, you\nwill start dancing with that other person on the opposite lines.\n"
+        },
+        {
+          "type": "music by",
+          "composer": "Anne Lanvin",
+          "tune": "The Sober Piper",
+          "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
+        }
+      ],
       "slug": "the-reel-of-the-51st-confusion",
       "root": ".."
     },
     {
       "name": "Two Blue Clouds in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "scddb-id": 19197,
       "kind": "40-bar reel for five couples in a five-couple longwise set",
       "short-kind": "R40 5/5L",
-      "scddb-id": 19197,
       "book": [
         "gone-dancing-2"
+      ],
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 3rd couples set, cast off one place and dance a half figure of\neight around 2nd and 4th couples. 2nd and 4th couples step up on bars\n3-4.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 3rd couples set, dance a half figure of eight around 4th and\n5th couples and set advancing to finish facing first corners, 4th\nwoman and 2nd man for 1st couple, 5th woman and 4th man for 3rd\ncouple.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 3rd couples dance corner pass and turn with their first\ncorners and repeat with their second, third and fourth corners,\nfinishing on their own sides in second and fourth positions.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st and 3rd couples set, cast off one place. 4th and 5th couples step\nup on bars 35-36. 1st and 3rd couples turn right hand in four bars.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+          "more": "in May 2018. There exists a three-couple version of this dance, named “One\nBlue Cloud in the Grey Sky”.\n"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "Forty Bars of Clouds"
+        }
       ],
       "slug": "two-blue-clouds-in-the-grey-sky",
       "root": ".."
