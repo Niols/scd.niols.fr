@@ -31,18 +31,36 @@ jobs:
       - name: Build Website
         run: |
           make website@docker DOCKER_BUILDER_TAG=builder
-          printf 'scd.niols.fr' > build/CNAME
 
-      - name: Publish to GitHub Pages
-        uses: s0/git-publish-subdir-action@v2.5.1
+      - name: Publish Dev Website to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          ## Publish `./build` with following commit message...
+          publish_dir: ./build
+          commit_message: |
+            Bump to ${{ GITHUB_SHA }}: ${{ github.event.head_commit.message }}
+          ## to https://github.com/Niols/dev.scd.niols.fr on branch `pages` in
+          ## sub-directory $GITHUB_REF while keeping the rest intact...
+          external_repository: niols/dev.scd.niols.fr
+          publish_branch: pages
+          destination_dir: ${{ github.ref }}
+          keep_files: true
+          ## serving `dev.scd.niols.fr`, with specific PAT.
+          cname: dev.scd.niols.fr
+          personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
+
+      - name: Publish Main Website to GitHub Pages
         if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          REPO: self
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FOLDER: build
-          BRANCH: pages
-          SKIP_EMPTY_COMMITS: true
-          MESSAGE: "Bump to {sha}: {msg}"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          ## Publish `./build` with following commit message...
+          publish_dir: ./build
+          commit_message: |
+            Bump to ${{ GITHUB_SHA }}: ${{ github.event.head_commit.message }}
+          ## to branch `pages`, serving `scd.niols.fr`, with standard token.
+          publish_branch: pages
+          cname: scd.niols.fr
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Authenticate to the GitHub Package Registry
         if: ${{ github.ref == 'refs/heads/main' }}
