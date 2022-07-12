@@ -47,8 +47,8 @@ die () {
 ## `get` selects the current object, if there is one, or dies otherwise.
 ##
 get () {
-    _get=$(echo "$CONTEXT" | jq '.current')
-    [ "$_get" != null ] && echo "$_get" || die 'There is no current object.'
+    _get=$(printf '%s' "$CONTEXT" | jq '.current')
+    [ "$_get" != null ] && printf '%s' "$_get" || die 'There is no current object.'
 }
 
 ## `next` replaces the current object by the first object in the `next` array.
@@ -56,15 +56,15 @@ get () {
 ## returns `1`. If there is no parent context to restore, `next` dies.
 ##
 next () {
-    if [ "$(echo "$CONTEXT" | jq '.next != []')" = true ]; then
+    if [ "$(printf '%s' "$CONTEXT" | jq '.next != []')" = true ]; then
         ## If the `next` array is not empty, then we take its first element as
         ## the new current object.
-        CONTEXT=$(echo "$CONTEXT" | jq '{current:.next[0], next:.next[1:], parent:.parent}')
+        CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:.next[0], next:.next[1:], parent:.parent}')
         return 0
-    elif [ "$(echo "$CONTEXT" | jq '.parent != null')" = true ]; then
+    elif [ "$(printf '%s' "$CONTEXT" | jq '.parent != null')" = true ]; then
         ## Otherwise, if there is a parent context, then we restore it and
         ## return `1`.
-        CONTEXT=$(echo "$CONTEXT" | jq '.parent')
+        CONTEXT=$(printf '%s' "$CONTEXT" | jq '.parent')
         return 1
     else
         ## Otherwise, we die.
@@ -79,7 +79,7 @@ next () {
 iter () {
     _get=$(get | jq ".[\"$1\"]")
     [ "$_get" = null ] && die 'Cannot iter through non-existing field `%s`.' "$1"
-    CONTEXT=$(echo "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
+    CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
 }
 
 ################################################################################
@@ -103,8 +103,8 @@ exists_field () {
 ## Fancy fields are simply functions. They allow to write helpers like “if this
 ## field exists, then take it; otherwise take that other one”.
 ##
-exists_fancy_field () { command -v "$1" >/dev/null; }
-get_fancy_field () { "$1"; }
+exists_fancy_field () { command -v "shtp_fancy_$1" >/dev/null; }
+get_fancy_field () { "shtp_fancy_$1"; }
 
 ## `exists` tests whether the field exists, fancy or not.
 ##
@@ -125,14 +125,46 @@ raw () {
     fi
 }
 
-## `html` returns the field, sanitized for use in HTML. This should basically be
-## the default. `raw` should only be used when one knows exactly what they are
-## doing.
+################################################################################
+##   ___            _ _   _            _    ___     _   _
+##  / __| __ _ _ _ (_) |_(_)___ ___ __| |  / __|___| |_| |_ ___ _ _ ___
+##  \__ \/ _` | ' \| |  _| (_-</ -_) _` | | (_ / -_)  _|  _/ -_) '_(_-<
+##  |___/\__,_|_||_|_|\__|_/__/\___\__,_|  \___\___|\__|\__\___|_| /__/
+
+## The escape mode. Currently, only supports `html`, `tex` and `none`.
 ##
-## FIXME: currently, this does nothing.
+ESCAPE=none
+
+## Escape HTML characters in a text setting. This only gets rid of `<`, `>`,
+## `&`, `"` and `'`.
 ##
-html () {
-    raw "$@"
+escape_html_text () {
+    sed -e 's|&|\&amp;|g' \
+        -e 's|<|\&lt;|g' \
+        -e 's|>|\&gt;|g' \
+        -e 's|"|\&quot;|g' \
+        -e "s|'|\&#39;|g"
+}
+
+## Escape TeX characters in a text setting.
+##
+## FIXME: For now, this only gets rid of `&`. There are many other things that
+## could go wrong.
+##
+escape_tex_text () {
+    sed -e 's|&|\\&|g'
+}
+
+## `text` returns the field, sanitized for use as text. In HTML, for instance,
+## we would escape things such as `<` and `>`. This should basically be the
+## default everywhere.
+##
+text () {
+    case $ESCAPE in
+        html) raw "$@" | escape_html_text ;;
+        tex) raw "$@" | escape_tex_text ;;
+        *) raw "$@" ;;
+    esac
 }
 
 ## `url` returns the field, sanitized for use in a URL. This should basically be
@@ -153,7 +185,7 @@ url () {
 ##                   |__/
 ##  Some pre-defined fancy fields that we use everywhere.
 
-short_author_or_author () {
+shtp_fancy_short_author_or_author () {
     exists short-author && raw short-author || raw author;
 }
 
@@ -173,6 +205,23 @@ do
         --json)
             shift
             CONTEXT=$(jq -n '{current:$current, next:[], parent:null}' --argjson current "$(cat "$1")")
+            ;;
+
+        --escape)
+            shift
+            case $1 in
+                html|tex|none)
+                    ESCAPE=$1
+                    ;;
+                *)
+                    printf >&2 'I do not know what to do with mode `%s`.\n' "$1"
+                    exit 2
+            esac
+            ;;
+
+        --raw)
+            shift
+            cat "$1"
             ;;
 
         --shtp)

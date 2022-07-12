@@ -1,11 +1,11 @@
 #!/bin/sh
 
 printf '<article>'
-printf   '<h1>%s</h1>' "$(html name)"
-printf   '<h2>%s</h2>' "$(html kind)"
+printf   '<h1>%s</h1>' "$(text name)"
+printf   '<h2>%s</h2>' "$(text kind)"
 
 printf   '<section>'
-printf     '<p>Composed by %s.</p>' "$(html author)"
+printf     '<p>Composed by %s.</p>' "$(text author)"
 
 if exists scddb-id; then
     printf '<p>See this tune'

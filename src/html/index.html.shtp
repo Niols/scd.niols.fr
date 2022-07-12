@@ -52,20 +52,20 @@ printf -- '      <tbody>'
 iter dances
 while next; do
     printf -- '    <tr>'
-    printf -- '      <td><a href="dance/%s.html">%s</a></td>' "$(url slug)" "$(html name)"
+    printf -- '      <td><a href="dance/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
     printf -- '      <td>Dance</td>'
-    printf -- '      <td>%s</td>' "$(html short-kind)"
-    printf -- '      <td>%s</td>' "$(html short_author_or_author)"
+    printf -- '      <td>%s</td>' "$(text short-kind)"
+    printf -- '      <td>%s</td>' "$(text short_author_or_author)"
     printf -- '    </tr>'
 done
 
 iter tunes
 while next; do
     printf -- '    <tr>'
-    printf -- '      <td><a href="tune/%s.html">%s</a></td>' "$(url slug)" "$(html name)"
+    printf -- '      <td><a href="tune/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
     printf -- '      <td>Tune</td>'
-    printf -- '      <td>%s</td>' "$(html short-kind)"
-    printf -- '      <td>%s</td>' "$(html short_author_or_author)"
+    printf -- '      <td>%s</td>' "$(text short-kind)"
+    printf -- '      <td>%s</td>' "$(text short_author_or_author)"
     printf -- '    </tr>'
 done
 
