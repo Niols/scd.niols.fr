@@ -143,7 +143,7 @@ escape_html_text () {
         -e 's|<|\&lt;|g' \
         -e 's|>|\&gt;|g' \
         -e 's|"|\&quot;|g' \
-        -e "s|'|\&#39;|g'"
+        -e "s|'|\&#39;|g"
 }
 
 ## Escape TeX characters in a text setting.
