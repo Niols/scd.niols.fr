@@ -47,8 +47,8 @@ die () {
 ## `get` selects the current object, if there is one, or dies otherwise.
 ##
 get () {
-    _get=$(echo "$CONTEXT" | jq '.current')
-    [ "$_get" != null ] && echo "$_get" || die 'There is no current object.'
+    _get=$(printf '%s' "$CONTEXT" | jq '.current')
+    [ "$_get" != null ] && printf '%s' "$_get" || die 'There is no current object.'
 }
 
 ## `next` replaces the current object by the first object in the `next` array.
@@ -56,15 +56,15 @@ get () {
 ## returns `1`. If there is no parent context to restore, `next` dies.
 ##
 next () {
-    if [ "$(echo "$CONTEXT" | jq '.next != []')" = true ]; then
+    if [ "$(printf '%s' "$CONTEXT" | jq '.next != []')" = true ]; then
         ## If the `next` array is not empty, then we take its first element as
         ## the new current object.
-        CONTEXT=$(echo "$CONTEXT" | jq '{current:.next[0], next:.next[1:], parent:.parent}')
+        CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:.next[0], next:.next[1:], parent:.parent}')
         return 0
-    elif [ "$(echo "$CONTEXT" | jq '.parent != null')" = true ]; then
+    elif [ "$(printf '%s' "$CONTEXT" | jq '.parent != null')" = true ]; then
         ## Otherwise, if there is a parent context, then we restore it and
         ## return `1`.
-        CONTEXT=$(echo "$CONTEXT" | jq '.parent')
+        CONTEXT=$(printf '%s' "$CONTEXT" | jq '.parent')
         return 1
     else
         ## Otherwise, we die.
@@ -79,7 +79,7 @@ next () {
 iter () {
     _get=$(get | jq ".[\"$1\"]")
     [ "$_get" = null ] && die 'Cannot iter through non-existing field `%s`.' "$1"
-    CONTEXT=$(echo "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
+    CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
 }
 
 ################################################################################
