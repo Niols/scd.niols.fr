@@ -1,4 +1,72 @@
+---
+
 name: Praha Matka Měst
 author: Nicolas “Niols” Jeannerod
+
 kind: Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set
 short-kind: M32 3/3L
+
+description:
+
+  - type: text
+    content: On second chord, 2nd and 3rd couples cross.
+
+  - type: text
+    content: Strathspey
+
+  - type: phrase
+    starts: 1
+    ends: 8
+    contents:
+      - type: text
+        content: |
+          1st couple set advancing and turn both hands, dance down the middle
+          and turn halfway with both hands to face down in Promenade hold. 2nd
+          couple step up on bars 5-6. 2nd and 3rd couples join in on bar 8.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    contents:
+      - type: text
+        content: |
+          2nd, 1st and 3rd couples dance an Allemande down the dance. On bars
+          15-16, 1st couple stays in the middle and set advancing to face first
+          corners in third corner position.
+
+  - type: text
+    content: Reel
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    contents:
+      - type: text
+        content: |
+          1st couple dance corners pass and turn and cast away: Same as corners
+          pass and turn, except that corners turn halfway right hand and cast
+          away to opposite positions. On bars 23-24, 1st couple slows down to
+          finish in the middle on own sides in Poussette hold; 3rd man curves to
+          stay in the middle on own side; 3rd woman joins in in Poussette hold.
+
+  - type: phrase
+    starts: 25
+    ends: 32
+    contents:
+      - type: text
+        content: |
+          1st and 3rd couples dance Poussette and petronella: Same five first
+          bars as the Poussette. On bar 6, 3rd and 1st couples dance a quarter.
+          On bars 7-8, 3rd and 1st couples dance a petronella turn to opposite
+          lines, finishing with 2nd couple in first position, and 3rd and 1st
+          couples improper in second and third position.
+
+  - type: repeat
+    kind: from new positions
+
+  - type: devised by
+    deviser: Nicolas “Niols” Jeannerod
+    more: in April 2019.
+
+  - type: music by
+    composer: Nicolas “Niols” Jeannerod
