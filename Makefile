@@ -13,9 +13,13 @@
 ##
 .SILENT:
 
-## Recipes are sent to Shell in one go, instead of line-by-line.
+## Recipes are sent to Shell in one go, instead of line-by-line. We make sure to
+## add the `-e` flag to compensate (as well as the useful `-u` and `-C`). We
+## also have to add `-c` explicitly when we play with `.SHELLFLAGS`.
 ##
 .ONESHELL:
+SHELL = sh
+.SHELLFLAGS = -euC -c
 
 ################################################################################
 ##   _  _     _        __        ___ _
@@ -33,7 +37,7 @@ help:
 
 clean:
 	printf 'Cleaning up.\n'
-	rm -rf $(BUILD)
+	rm -Rf $(BUILD)
 
 ################################################################################
 ##   ___      _ _    _
@@ -89,7 +93,7 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 $(BUILD)/dance/%.json: $(DB)/dance/%/meta.yaml dance-build-dir
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
-	  | $(yaml2json)
+	  | $(yaml2json) \
 	  | jq 'setpath(["slug"]; "$*")' \
 	  | jq 'setpath(["root"]; "..")' \
 	  > $@
@@ -140,7 +144,7 @@ tune-build-dir: build-dir
 $(BUILD)/tune/%.json: $(DB)/tune/%/meta.yaml tune-build-dir
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
-	  | $(yaml2json)
+	  | $(yaml2json) \
 	  | jq 'setpath(["slug"]; "$*")' \
 	  | jq 'setpath(["root"]; "..")' \
 	  > $@
