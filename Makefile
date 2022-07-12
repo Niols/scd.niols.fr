@@ -52,6 +52,8 @@ BUILT_DANCES := $(addprefix $(BUILD)/dance/, $(DB_DANCES))
 DB_TUNES := $(notdir $(wildcard $(DB)/tune/*))
 BUILT_TUNES := $(addprefix $(BUILD)/tune/, $(DB_TUNES))
 
+yaml2json := yq --output-format json
+
 .PHONY: build-dir
 build-dir:
 	mkdir -p $(BUILD)
@@ -86,9 +88,10 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 ##
 $(BUILD)/dance/%.json: $(DB)/dance/%/meta.yaml dance-build-dir
 	printf 'Making `dance/%s.json`... ' $*
-	yq --output-format json \
-	  '. * { "slug": "$*", "root": ".." }' \
-	  $< \
+	cat $< \
+	  | $(yaml2json)
+	  | jq 'setpath(["slug"]; "$*")' \
+	  | jq 'setpath(["root"]; "..")' \
 	  > $@
 	printf 'done.\n'
 
@@ -136,9 +139,10 @@ tune-build-dir: build-dir
 ##
 $(BUILD)/tune/%.json: $(DB)/tune/%/meta.yaml tune-build-dir
 	printf 'Making `tune/%s.json`... ' $*
-	yq --output-format json \
-	  '. * { "slug": "$*", "root": ".." }' \
-	  $< \
+	cat $< \
+	  | $(yaml2json)
+	  | jq 'setpath(["slug"]; "$*")' \
+	  | jq 'setpath(["root"]; "..")' \
 	  > $@
 	printf 'done.\n'
 
