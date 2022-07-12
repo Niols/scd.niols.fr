@@ -1,0 +1,62 @@
+- type: phrase
+  starts: 1
+  ends: 8
+  contents:
+    - type: text
+      content: |
+        1st couple set, cast off two places and lead up, finishing back to back
+        facing first corners. 2nd couple step up on bars 3-4.
+
+- type: phrase
+  starts: 9
+  ends: 16
+  contents:
+    - type: text
+      content: |
+        1st couple set to first corners and turn with right hand halfway with
+        them. first corners give left hands in the middle and 1st couple and
+        first corners balance in line; first corners turn with left hand one and
+        a quarter times to end up back to back facing second corners.
+
+- type: phrase
+  starts: 17
+  ends: 24
+  contents:
+    - type: text
+      content: |
+        Repeat with first and second corners. At the last left-hand turn, finish
+        on the lines with 1st, 2nd and 3rd women improper in 1st, 2nd and 3rd
+        position and 2nd, 3rd and 1st men improper in 1st, 2nd and 3rd position.
+
+- type: phrase
+  starts: 25
+  ends: 32
+  contents:
+    - type: text
+      content: |
+        All dance six hands round and back.
+
+- type: repeat
+  kind: from new positions
+
+- type: devised by
+  deviser: |
+    Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas
+    “Niols” Jeannerod and Victor Lanvin
+  more: |
+    on August 8th, 2021. This dance is a variation on one of the most popular
+    Scottish country dances, “The Reel of the 51st Division”.
+
+- type: text
+  content: |
+    Note: Remember the person that is at the left of your partner from your
+    point of view: First, third and fifth times, you will start dancing with
+    your partner on your original lines; Second, fourth and sixth times, you
+    will start dancing with that other person on the opposite lines.
+
+- type: music by
+  composer: Anne Lanvin
+  tune: The Sober Piper
+  more: |
+    Alternatively, one can use one of the tunes for “The Reel of the 51st
+    Division”: “The Drunken Piper”, by Alex McLeod.
