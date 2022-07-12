@@ -60,9 +60,13 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: '🚀 The website has been pushed to '
-                    + 'http://dev.scd.niols.fr/refs/pull/'
-                    + context.issue.number
-                    + '/merge!'
+                    + '[Niols/dev.scd.niols.fr](https://github.com/Niols/dev.scd.niols.fr)'
+                    + '. It will be made available '
+                    + '[here](http://dev.scd.niols.fr/refs/pull/'+ context.issue.number +'/merge)'
+                    + '! *Please note that the deployment might still need '
+                    + 'some time*; you can check its status '
+                    + '[here](https://github.com/Niols/dev.scd.niols.fr/deployments/activity_log?environment=github-pages)'
+                    + '.'
             })
 
       - name: Publish Main Website to GitHub Pages
