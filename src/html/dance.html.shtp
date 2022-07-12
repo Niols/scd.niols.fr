@@ -1,11 +1,11 @@
 #!/bin/sh
 
 printf '<article>'
-printf   '<h1>%s</h1>' "$(html name)"
-printf   '<h2>%s</h2>' "$(html kind)"
+printf   '<h1>%s</h1>' "$(text name)"
+printf   '<h2>%s</h2>' "$(text kind)"
 
 printf   '<section>'
-printf     '<p>Devised by %s.</p>' "$(html author)"
+printf     '<p>Devised by %s.</p>' "$(text author)"
 printf     '<p>See the <a href="%s.pdf">description of the dance</a>.</p>' "$(url slug)"
 
 if exists scddb-id; then

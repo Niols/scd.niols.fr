@@ -125,13 +125,13 @@ raw () {
     fi
 }
 
-## `html` returns the field, sanitized for use in HTML. This should basically be
-## the default. `raw` should only be used when one knows exactly what they are
-## doing.
+## `text` returns the field, sanitized for use as text. In HTML, for instance,
+## we would escape things such as `<` and `>`. This should basically be the
+## default everywhere.
 ##
 ## FIXME: currently, this does nothing.
 ##
-html () {
+text () {
     raw "$@"
 }
 
