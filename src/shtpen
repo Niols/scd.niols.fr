@@ -175,6 +175,11 @@ do
             CONTEXT=$(jq -n '{current:$current, next:[], parent:null}' --argjson current "$(cat "$1")")
             ;;
 
+        --raw)
+            shift
+            cat "$1"
+            ;;
+
         --shtp)
             shift
             . "$1"
