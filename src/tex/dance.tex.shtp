@@ -1,0 +1,70 @@
+#!/bin/sh
+
+printf '\\begin{document}\n'
+printf '\\begin{dance}\n'
+printf '  {%s}\n' "$(text name)"
+printf '  {%s}\n' "$(text short-kind)"
+printf '  {%s}\n' "$(text kind)"
+
+render_description_item () {
+	printf '\n'
+
+	case $(raw type) in
+
+		'text')
+			text content
+			;;
+
+		'phrase')
+			printf '\\phrase{%d}{%d}{\n' "$(raw starts)" "$(raw ends)"
+			render_description_items_in contents
+			printf '}\n'
+			;;
+
+		'repeat')
+			case $(raw kind) in
+				'from new positions')
+					printf '\\repeatfromnewpos'
+					;;
+				'having passed a couple')
+					printf '\\repeathavingpassed'
+					;;
+				'custom')
+					printf '%s' "$(text text)"
+					;;
+				*)
+					die 'Unknown dance description repeat kind: `%s`' "$(raw kind)"
+			esac
+			;;
+
+		'devised by')
+			printf 'Devised by \\deviser{%s}' "$(text deviser)"
+			exists more && printf ' %s' "$(text more)" || printf '.'
+			;;
+
+		'music by')
+			printf 'Music by \\composer{%s}' "$(text composer)"
+			exists tune && printf ': \\tune{%s}' "$(text tune)"
+			printf '.'
+			exists more && printf ' %s' "$(text more)"
+			;;
+
+		*)
+			die 'Unknown dance description item type: `%s`' "$(raw type)"
+			;;
+	esac
+
+	printf '\n'
+}
+
+render_description_items_in () {
+	iter "$1"
+	while next; do
+		render_description_item
+	done
+}
+
+render_description_items_in description
+
+printf '\\end{dance}\n'
+printf '\\end{document}\n'
