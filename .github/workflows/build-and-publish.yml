@@ -37,6 +37,8 @@ jobs:
         with:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
+          commit_message: |
+            Bump `${{ github.ref }}` to follow ${{ github.repository }}@${{ github.sha }}
           ## to https://github.com/Niols/dev.scd.niols.fr on branch `pages` in
           ## sub-directory $GITHUB_REF while keeping the rest intact...
           external_repository: niols/dev.scd.niols.fr
@@ -69,6 +71,8 @@ jobs:
         with:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
+          commit_message: |
+            Bump to follow ${{ github.sha }}
           ## to branch `pages`, serving `scd.niols.fr`, with standard token.
           publish_branch: pages
           cname: scd.niols.fr
