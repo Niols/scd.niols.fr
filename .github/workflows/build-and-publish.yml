@@ -60,8 +60,8 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: '🚀 The website has been pushed to '
-                    + '[Niols/dev.scd.niols.fr](https://github.com/Niols/dev.scd.niols.fr)'
-                    + '. It will be made available '
+                    + '[here](https://github.com/Niols/dev.scd.niols.fr)'
+                    + '. The rendering will be made available '
                     + '[here](http://dev.scd.niols.fr/refs/pull/'+ context.issue.number +'/merge)'
                     + '! *Please note that the deployment might still need '
                     + 'some time*; you can check its status '
