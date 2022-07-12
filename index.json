@@ -1,0 +1,144 @@
+{
+  "tunes": [
+    {
+      "name": "Forty Bars of Clouds",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "40-bar Reel",
+      "short-kind": "R40",
+      "scddb-id": 14008,
+      "slug": "forty-bars-of-cloud",
+      "root": ".."
+    },
+    {
+      "name": "La Ville Lumière",
+      "author": "Pascaline Latour",
+      "kind": "32-bar Reel",
+      "short-kind": "R32",
+      "scddb-id": 14533,
+      "book": [
+        "paris-companion-book-2"
+      ],
+      "slug": "la-ville-lumiere",
+      "root": ".."
+    },
+    {
+      "name": "The Mall in St. James's Park",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar Strathspey",
+      "short-kind": "S32",
+      "slug": "the-mall-in-st-james-s-park",
+      "root": ".."
+    },
+    {
+      "name": "The Sober Piper",
+      "author": "Anne Lanvin",
+      "kind": "32-bar Reel",
+      "short-kind": "R32",
+      "slug": "the-sober-piper",
+      "root": ".."
+    },
+    {
+      "name": "The Translator",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar Strathspey",
+      "short-kind": "S32",
+      "scddb-id": 14452,
+      "book": [
+        "paris-companion-book-2"
+      ],
+      "slug": "the-translator",
+      "root": ".."
+    }
+  ],
+  "dances": [
+    {
+      "name": "Drawn in",
+      "author": "Shannon Kiernan",
+      "kind": "32-bar strathspey for three couples in a four-couple longwise set",
+      "short-kind": "S32 3/4L",
+      "scddb-id": 20314,
+      "books": [
+        "paris-book-2"
+      ],
+      "tunes": [
+        "the-translator"
+      ],
+      "slug": "drawn-in",
+      "root": ".."
+    },
+    {
+      "name": "La Ville Lumière",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar reel for four couples in a four-couple longwise set",
+      "short-kind": "R32 4/4L",
+      "tunes": [
+        "la-ville-lumiere"
+      ],
+      "slug": "la-ville-lumiere",
+      "root": ".."
+    },
+    {
+      "name": "One Blue Cloud in the Grey Sky",
+      "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "kind": "40-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "R40 3/3L",
+      "scddb-id": 19198,
+      "books": [
+        "gone-dancing-2"
+      ],
+      "tunes": [
+        "forty-bars-of-clouds"
+      ],
+      "slug": "one-blue-cloud-in-the-grey-sky",
+      "root": ".."
+    },
+    {
+      "name": "Praha Matka Měst",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "M32 3/3L",
+      "slug": "praha-matka-mest",
+      "root": ".."
+    },
+    {
+      "name": "The Mall in St. James’s Park",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar strathspey for three couples in a three-couple longwise set",
+      "short-kind": "S32 3/3L",
+      "tunes": [
+        "the-mall-in-st-james-s-park"
+      ],
+      "slug": "the-mall-in-st-james-s-park",
+      "root": ".."
+    },
+    {
+      "name": "The Reel of the 51st Confusion",
+      "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
+      "short-author": "Anne Lanvin et al.",
+      "kind": "32-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "R32 3/3L",
+      "tunes": [
+        {
+          "name": "The Drunken Piper",
+          "author": "Alexander McLeod"
+        },
+        "the-sober-piper"
+      ],
+      "slug": "the-reel-of-the-51st-confusion",
+      "root": ".."
+    },
+    {
+      "name": "Two Blue Clouds in the Grey Sky",
+      "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "kind": "40-bar reel for five couples in a five-couple longwise set",
+      "short-kind": "R40 5/5L",
+      "scddb-id": 19197,
+      "book": [
+        "gone-dancing-2"
+      ],
+      "slug": "two-blue-clouds-in-the-grey-sky",
+      "root": ".."
+    }
+  ],
+  "root": "."
+}
