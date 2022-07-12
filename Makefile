@@ -105,6 +105,7 @@ $(BUILD)/dance/%.json: $(DB)/dance/%/meta.yaml dance-build-dir
 $(BUILD)/dance/%.html: $(BUILD)/dance/%.json dance-build-dir
 	printf 'Making `dance/%s.html`... ' $*
 	$(shtpen) \
+	  --escape html \
 	  --json $< \
 	  --shtp $(SRC)/html/header.html.shtp \
 	  --shtp $(SRC)/html/dance.html.shtp \
@@ -126,6 +127,7 @@ $(BUILD)/dances.json: $(addsuffix .json, $(BUILT_DANCES))
 $(BUILD)/dances.html: $(BUILD)/dances.json build-dir
 	printf 'Making `dances.html`... '
 	$(shtpen) \
+	  --escape html \
 	  --json $< \
 	  --shtp $(SRC)/html/header.html.shtp \
 	  --shtp $(SRC)/html/dances.html.shtp \
@@ -156,6 +158,7 @@ $(BUILD)/tune/%.json: $(DB)/tune/%/meta.yaml tune-build-dir
 $(BUILD)/tune/%.html: $(BUILD)/tune/%.json tune-build-dir
 	printf 'Making `tune/%s.html`... ' $*
 	$(shtpen) \
+	  --escape html \
 	  --json $< \
 	  --shtp $(SRC)/html/header.html.shtp \
 	  --shtp $(SRC)/html/tune.html.shtp \
@@ -177,6 +180,7 @@ $(BUILD)/tunes.json: $(addsuffix .json, $(BUILT_TUNES))
 $(BUILD)/tunes.html: $(BUILD)/tunes.json build-dir
 	printf 'Making `tunes.html`... '
 	$(shtpen) \
+	  --escape html \
 	  --json $< \
 	  --shtp $(SRC)/html/header.html.shtp \
 	  --shtp $(SRC)/html/tunes.html.shtp \
@@ -197,6 +201,7 @@ $(BUILD)/index.json: $(BUILD)/dances.json $(BUILD)/tunes.json build-dir
 $(BUILD)/index.html: $(BUILD)/index.json build-dir
 	printf 'Making `index.html`... '
 	$(shtpen) \
+	  --escape html \
 	  --json $(BUILD)/index.json \
 	  --shtp $(SRC)/html/header.html.shtp \
 	  --shtp $(SRC)/html/index.html.shtp \
