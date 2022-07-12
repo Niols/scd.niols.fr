@@ -38,7 +38,7 @@ jobs:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
           commit_message: |
-            Bump to ${{ GITHUB_SHA }}: ${{ github.event.head_commit.message }}
+            Bump to ${{ github.event.head_commit.id }}: ${{ github.event.head_commit.message }}
           ## to https://github.com/Niols/dev.scd.niols.fr on branch `pages` in
           ## sub-directory $GITHUB_REF while keeping the rest intact...
           external_repository: niols/dev.scd.niols.fr
@@ -56,7 +56,7 @@ jobs:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
           commit_message: |
-            Bump to ${{ GITHUB_SHA }}: ${{ github.event.head_commit.message }}
+            Bump to ${{ github.event.head_commit.id }}: ${{ github.event.head_commit.message }}
           ## to branch `pages`, serving `scd.niols.fr`, with standard token.
           publish_branch: pages
           cname: scd.niols.fr
