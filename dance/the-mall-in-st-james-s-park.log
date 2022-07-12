@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.7.11)  11 JUL 2022 21:46
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.7.12)  12 JUL 2022 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1310,7 +1310,7 @@ Package rerunfilecheck Info: Checksums for `the-mall-in-st-james-s-park.out':
 Here is how much of TeX's memory you used:
  32750 strings out of 479212
  646847 string characters out of 5875086
- 1021511 words of memory out of 5000000
+ 1021509 words of memory out of 5000000
  51833 multiletter control sequences out of 15000+600000
  403942 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
