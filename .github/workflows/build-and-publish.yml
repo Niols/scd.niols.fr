@@ -38,7 +38,7 @@ jobs:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
           commit_message: |
-            Bump `${{ github.ref }}` to follow ${{ github.repository }}@${{ github.sha }}
+            Bump `${{ github.ref }}` to follow ${{ github.event.head_commit.message }}
           ## to https://github.com/Niols/dev.scd.niols.fr on branch `pages` in
           ## sub-directory $GITHUB_REF while keeping the rest intact...
           external_repository: niols/dev.scd.niols.fr
