@@ -1,0 +1,64 @@
+---
+
+name: The Mall in St. James’s Park
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey for three couples in a three-couple longwise set
+short-kind: S32 3/3L
+
+tunes:
+  - the-mall-in-st-james-s-park
+
+description:
+
+  - type: phrase
+    starts: 1
+    ends: 8
+    contents:
+      - type: text
+        content: |
+          1st couple set, cross right hand, cast off one place, advance in the
+          middle and pull right shoulder to face first corners. 2nd couple step
+          up on bars 3-4.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    contents:
+      - type: text
+        content: |
+          1st couple turns first corners both hands, pass each other right
+          shoulder, turn second corners both hands and pass each other right
+          shoulder to finish on own sides.
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    contents:
+      - type: text
+        content: |
+          2nd, 1st and 3rd couples dance parallel reels of three in six bars on
+          the lines, 1st man giving left shoulder to 3rd man and 1st woman
+          giving right shoulder to 3rd woman. On bars 23-24, 1st and 3rd men
+          exchange place left shoulder while 1st and 3rd women exchange place
+          right shoulder.
+
+  - type: phrase
+    starts: 25
+    ends: 32
+    contents:
+      - type: text
+        content: |
+          3rd and 1st couples dance the Poussette.
+
+  - type: repeat
+    kind: from new positions
+
+  - type: devised by
+    deviser: Nicolas “Niols” Jeannerod
+    more: |
+      in 2018. The name was suggested by Christophe Schuwey in reference to the
+      painting of the same name by Thomas Gainsborough.
+
+  - type: music by
+    composer: Nicolas “Niols” Jeannerod
