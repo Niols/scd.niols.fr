@@ -22,7 +22,11 @@ printf   '<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/
 printf   '<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>'
 printf   '<script type="text/javascript">'
 printf     '$(document).ready(function() {'
-printf     "\$('.datatable').DataTable();" ## /!\
+printf       '$(".datatable").DataTable({'
+printf         'info: false,'
+printf         'paging: false,'
+printf         'lengthChange: false'
+printf       '});'
 printf     '});'
 printf   '</script>'
 printf '</head>'
