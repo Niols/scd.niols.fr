@@ -12,7 +12,15 @@ render_description_item () {
 	case $(raw type) in
 
 		'text')
-			text content
+			printf '%s' "$(text content)"
+			;;
+
+		'note')
+			printf 'Note: %s' "$(text content)"
+			;;
+
+		'instruction')
+			printf '%s' "$(text content)"
 			;;
 
 		'phrase')

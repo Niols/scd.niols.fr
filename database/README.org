@@ -9,6 +9,9 @@ carry a =type= field. They can be either of the following.
 
 *** Text
 
+A raw text element. This item should never be used at toplevel for a dance.
+Prefer [[Note]], or [[Instruction]].
+
 - type :: =text=
 - content :: a string to be included as-is in the output, modulo some escaping
   for HTML entities or TeX special characters.
@@ -18,6 +21,38 @@ type: text
 content: |
   1st couple set and cast off one place as 4th couple set and cast up one
   place. 2nd couple step up and 3rd couple step down on bars 3-4.
+#+end_src
+
+*** Note
+
+- type :: =note=
+- content :: a string to be included as a note in the output, modulo some
+  escaping for HTML entities or TeX special characters.
+
+#+begin_src yaml
+type: note
+content: |
+  Remember the person that is at the left of your partner from your point of
+  view: First, third and fifth times, you will start dancing with your
+  partner on your original lines; Second, fourth and sixth times, you will
+  start dancing with that other person on the opposite lines.
+#+end_src
+
+*** Instruction
+
+- type :: =instruction=
+- content :: a string to be included as an instruction in the output, modulo
+  some escaping for HTML entities or TeX special characters.
+
+#+begin_src yaml
+type: instruction
+content: |
+  On second chord, 2nd and 3rd couples cross.
+#+end_src
+
+#+begin_src yaml
+type: instruction
+content: Strathspey
 #+end_src
 
 *** Phrase

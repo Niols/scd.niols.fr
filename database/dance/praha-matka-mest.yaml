@@ -8,10 +8,11 @@ short-kind: M32 3/3L
 
 description:
 
-  - type: text
-    content: On second chord, 2nd and 3rd couples cross.
+  - type: instruction
+    content: |
+      On second chord, 2nd and 3rd couples cross.
 
-  - type: text
+  - type: instruction
     content: Strathspey
 
   - type: phrase
@@ -34,7 +35,7 @@ description:
           15-16, 1st couple stays in the middle and set advancing to face first
           corners in third corner position.
 
-  - type: text
+  - type: instruction
     content: Reel
 
   - type: phrase
