@@ -5,11 +5,11 @@
   "short-kind": "M32 3/3L",
   "description": [
     {
-      "type": "text",
-      "content": "On second chord, 2nd and 3rd couples cross."
+      "type": "instruction",
+      "content": "On second chord, 2nd and 3rd couples cross.\n"
     },
     {
-      "type": "text",
+      "type": "instruction",
       "content": "Strathspey"
     },
     {
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "type": "text",
+      "type": "instruction",
       "content": "Reel"
     },
     {
