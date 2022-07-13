@@ -73,21 +73,26 @@ clean:
 ##  | _ )_  _(_) |__| |
 ##  | _ \ || | | / _` |
 ##  |___/\_,_|_|_\__,_|
+##
+##  How to build the shape of the $(build) directory. The rules later on will
+##  depend on this shape, unless they clearly depend on something that implies
+##  that the shape already exists.
 
-.PHONY: build-dir
-build-dir:
-	mkdir -p $(build)
+$(build):
+	mkdir $(build)
+
+$(build)/dance: $(build)
+	mkdir $(build)/dance
+
+$(build)/tune: $(build)
+	mkdir $(build)/tune
 
 ############################################################
 ## Individual dances
 
-.PHONY: dance-build-dir
-dance-build-dir: build-dir
-	mkdir -p $(build)/dance
-
 ## Generate a JSON file out of a database dance entry.
 ##
-$(build)/dance/%.json: $(database)/dance/%.yaml dance-build-dir
+$(build)/dance/%.json: $(database)/dance/%.yaml $(build)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -98,7 +103,7 @@ $(build)/dance/%.json: $(database)/dance/%.yaml dance-build-dir
 
 ## Generate a TeX file out of a dance JSON file.
 ##
-$(build)/dance/%.tex: $(build)/dance/%.json dance-build-dir
+$(build)/dance/%.tex: $(build)/dance/%.json
 	printf 'Making `dance/%s.tex`... ' $*
 	$(shtpen) \
 	  --escape tex \
@@ -118,7 +123,7 @@ $(build)/dance/%.pdf: $(build)/dance/%.tex
 
 ## Generate a HTML file out of a dance JSON file.
 ##
-$(build)/dance/%.html: $(build)/dance/%.json dance-build-dir
+$(build)/dance/%.html: $(build)/dance/%.json
 	printf 'Making `dance/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
@@ -132,15 +137,12 @@ $(build)/dance/%.html: $(build)/dance/%.json dance-build-dir
 ############################################################
 ## Index of dances
 
-## NOTE: There is a missing `build-dir` dependency here, but
-## it should be fine, considering this will only be called
-## from other places.
 $(build)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`... '
 	jq -s '{dances:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(build)/dances.html: $(build)/dances.json build-dir
+$(build)/dances.html: $(build)/dances.json
 	printf 'Making `dances.html`... '
 	$(shtpen) \
 	  --escape html \
@@ -154,13 +156,9 @@ $(build)/dances.html: $(build)/dances.json build-dir
 ############################################################
 ## Individual tunes
 
-.PHONY: tune-build-dir
-tune-build-dir: build-dir
-	mkdir -p $(build)/tune
-
 ## Generate a JSON file out of a database tune entry.
 ##
-$(build)/tune/%.json: $(database)/tune/%.yaml tune-build-dir
+$(build)/tune/%.json: $(database)/tune/%.yaml $(build)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -171,7 +169,7 @@ $(build)/tune/%.json: $(database)/tune/%.yaml tune-build-dir
 
 ## Generate a HTML file out of a tune JSON file.
 ##
-$(build)/tune/%.html: $(build)/tune/%.json tune-build-dir
+$(build)/tune/%.html: $(build)/tune/%.json
 	printf 'Making `tune/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
@@ -185,15 +183,12 @@ $(build)/tune/%.html: $(build)/tune/%.json tune-build-dir
 ############################################################
 ## Index of tunes
 
-## NOTE: There is a missing `build-dir` dependency here, but
-## it should be fine, considering this will only be called
-## from other places.
 $(build)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`... '
 	jq -s '{tunes:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(build)/tunes.html: $(build)/tunes.json build-dir
+$(build)/tunes.html: $(build)/tunes.json
 	printf 'Making `tunes.html`... '
 	$(shtpen) \
 	  --escape html \
@@ -207,14 +202,14 @@ $(build)/tunes.html: $(build)/tunes.json build-dir
 ############################################################
 ## Index &
 
-$(build)/index.json: $(build)/dances.json $(build)/tunes.json build-dir
+$(build)/index.json: $(build)/dances.json $(build)/tunes.json
 	printf 'Making `index.json`... '
-	jq -s '{tunes:.[0].tunes, dances:.[1].dances, root:"."}' \
-	  $(build)/tunes.json $(build)/dances.json \
+	jq -s '{dances:.[0].dances, tunes:.[1].tunes, root:"."}' \
+	  $^ \
 	  > $@
 	printf 'done.\n'
 
-$(build)/index.html: $(build)/index.json build-dir
+$(build)/index.html: $(build)/index.json
 	printf 'Making `index.html`... '
 	$(shtpen) \
 	  --escape html \
@@ -234,7 +229,7 @@ dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $
 tunes: $(addsuffix .html, $(built_tunes)) $(build)/tunes.html
 index: $(build)/index.html
 
-static: build-dir
+static: $(build)
 	printf 'Copying static files`... '
 	cp -R $(views)/static/* $(build)
 	printf 'done.\n'
