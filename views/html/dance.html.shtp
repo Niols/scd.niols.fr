@@ -5,14 +5,93 @@ printf   '<h1>%s</h1>' "$(text name)"
 printf   '<h2>%s</h2>' "$(text kind)"
 
 printf   '<section>'
-printf     '<p>Devised by %s.</p>' "$(text author)"
-printf     '<p>See the <a href="%s.pdf">description of the dance</a>.</p>' "$(url slug)"
+printf     '<p><a href="%s.pdf">Get the description of the dance as PDF</a>.</p>' "$(url slug)"
 
 if exists scddb-id; then
-    printf '<p>See this dance'
-    printf  ' <a href="https://my.strathspey.org/dd/dance/%s/">' "$(url scddb-id)"
-    printf     'in the Scottish Country Dance Database</a>.</p>'
+    printf '<p><a href="https://my.strathspey.org/dd/dance/%s/">' "$(url scddb-id)"
+    printf   'See this dance in the Scottish Country Dance Database</a>.</p>'
 fi
+
+printf   '</section>'
+printf   '<section class="dance-description">'
+
+render_description_item () {
+    printf '\n'
+
+    case $(raw type) in
+
+        'text')
+            printf '%s' "$(text content)"
+            ;;
+
+        'note')
+            printf '<div class="note">'
+            printf '%s' "$(text content)"
+            printf '</div>'
+            ;;
+
+        'instruction')
+            printf '<div class="instruction">'
+            printf '%s' "$(text content)"
+            printf '</div>'
+            ;;
+
+        'phrase')
+            printf '<div class="phrase">'
+            printf '<div class="bars">%d&ndash;%d</div>' "$(raw starts)" "$(raw ends)"
+            printf '<div class="contents">'
+            render_description_items_in contents
+            printf '</div></div>'
+            ;;
+
+        'repeat')
+            case $(raw kind) in
+                'from new positions')
+                    printf 'Repeat from new positions.'
+                    ;;
+                'having passed a couple')
+                    printf 'Repeat, having passed a couple.'
+                    ;;
+                'custom')
+                    printf '%s' "$(text text)"
+                    ;;
+                *)
+                    die 'Unknown dance description repeat kind: `%s`' "$(raw kind)"
+            esac
+            ;;
+
+        'devised by')
+            printf '<div class="devised-by">'
+            printf 'Devised by <span class="deviser">%s</span>' "$(text deviser)"
+            exists more && printf ' %s' "$(text more)" || printf '.'
+            printf '</div>'
+            ;;
+
+        'music by')
+            printf '<div class="music-by">'
+            printf 'Music by <span class="composer">%s</span>' "$(text composer)"
+            exists tune && printf ': <span class="tune">%s</span>' "$(text tune)"
+            printf '.'
+            exists more && printf ' %s' "$(text more)"
+            printf '</div>'
+            ;;
+
+        *)
+            die 'Unknown dance description item type: `%s`' "$(raw type)"
+            ;;
+    esac
+
+    printf '\n'
+}
+
+render_description_items_in () {
+    iter "$1"
+    while next; do
+        render_description_item
+    done
+}
+
+render_description_items_in description
 
 printf   '</section>'
 printf '</article>'
