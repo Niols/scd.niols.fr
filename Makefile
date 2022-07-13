@@ -45,10 +45,9 @@ clean:
 ##  | _ \ || | | / _` |
 ##  |___/\_,_|_|_\__,_|
 
-BUILD := build
-DB := db
-OTHER := other
-SRC := src
+BUILD := ./build
+DB := ./database
+SRC := ./views
 
 DB_DANCES := $(notdir $(basename $(wildcard $(DB)/dance/*.yaml)))
 BUILT_DANCES := $(addprefix $(BUILD)/dance/, $(DB_DANCES))
@@ -213,23 +212,18 @@ $(BUILD)/index.html: $(BUILD)/index.json build-dir
 ############################################################
 ## All
 
-.PHONY: dances tunes index css other website
+.PHONY: dances tunes index static website
 
 dances: $(addsuffix .html, $(BUILT_DANCES)) $(addsuffix .pdf, $(BUILT_DANCES)) $(BUILD)/dances.html
 tunes: $(addsuffix .html, $(BUILT_TUNES)) $(BUILD)/tunes.html
 index: $(BUILD)/index.html
 
-css: build-dir
-	printf 'Copying CSS files`... '
-	cp $(SRC)/css/* $(BUILD)
+static: build-dir
+	printf 'Copying static files`... '
+	cp -R $(SRC)/static/* $(BUILD)
 	printf 'done.\n'
 
-other: build-dir
-	printf 'Copying other files`... '
-	cp -R $(OTHER) $(BUILD)/other
-	printf 'done.\n'
-
-website: dances tunes index css other
+website: dances tunes index static
 
 ################################################################################
 ##   ___          _
