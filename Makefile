@@ -22,6 +22,35 @@ SHELL = sh
 .SHELLFLAGS = -euC -c
 
 ################################################################################
+##    ___             _            _
+##   / __|___ _ _  __| |_ __ _ _ _| |_ ___
+##  | (__/ _ \ ' \(_-<  _/ _` | ' \  _(_-<
+##   \___\___/_||_/__/\__\__,_|_||_\__/__/
+##
+##  This section defines constants used everywhere else in this Makefile. They
+##  describe where to find files, where to put them, what utilities to use, and
+##  some lists of objects gotten from the database.
+
+## The target build directory.
+build := ./build
+
+## Where to find the database and the views.
+database := ./database
+views := ./views
+
+## Where to find some utilities.
+shtpen := ./shtpen/shtpen
+yaml2json := yq --output-format json
+
+## The list of dances in the database and their target names in $(build).
+dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
+built_dances := $(addprefix $(build)/dance/, $(dances))
+
+## The list of tunes in the database and their target names in $(build).
+tunes := $(notdir $(basename $(wildcard $(database)/tune/*.yaml)))
+built_tunes := $(addprefix $(build)/tune/, $(tunes))
+
+################################################################################
 ##   _  _     _        __        ___ _
 ##  | || |___| |_ __  / _|___   / __| |___ __ _ _ _
 ##  | __ / -_) | '_ \ > _|_ _| | (__| / -_) _` | ' \
@@ -37,42 +66,33 @@ help:
 
 clean:
 	printf 'Cleaning up.\n'
-	rm -Rf $(BUILD)
+	rm -Rf $(build)
 
 ################################################################################
 ##   ___      _ _    _
 ##  | _ )_  _(_) |__| |
 ##  | _ \ || | | / _` |
 ##  |___/\_,_|_|_\__,_|
+##
+##  How to build the shape of the $(build) directory. The rules later on will
+##  depend on this shape, unless they clearly depend on something that implies
+##  that the shape already exists.
 
-BUILD := build
-DB := db
-OTHER := other
-SRC := src
+$(build):
+	mkdir $(build)
 
-DB_DANCES := $(notdir $(basename $(wildcard $(DB)/dance/*.yaml)))
-BUILT_DANCES := $(addprefix $(BUILD)/dance/, $(DB_DANCES))
+$(build)/dance: $(build)
+	mkdir $(build)/dance
 
-DB_TUNES := $(notdir $(basename $(wildcard $(DB)/tune/*.yaml)))
-BUILT_TUNES := $(addprefix $(BUILD)/tune/, $(DB_TUNES))
-
-shtpen := shtpen/shtpen
-yaml2json := yq --output-format json
-
-.PHONY: build-dir
-build-dir:
-	mkdir -p $(BUILD)
+$(build)/tune: $(build)
+	mkdir $(build)/tune
 
 ############################################################
 ## Individual dances
 
-.PHONY: dance-build-dir
-dance-build-dir: build-dir
-	mkdir -p $(BUILD)/dance
-
 ## Generate a JSON file out of a database dance entry.
 ##
-$(BUILD)/dance/%.json: $(DB)/dance/%.yaml dance-build-dir
+$(build)/dance/%.json: $(database)/dance/%.yaml $(build)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -83,19 +103,19 @@ $(BUILD)/dance/%.json: $(DB)/dance/%.yaml dance-build-dir
 
 ## Generate a TeX file out of a dance JSON file.
 ##
-$(BUILD)/dance/%.tex: $(BUILD)/dance/%.json dance-build-dir
+$(build)/dance/%.tex: $(build)/dance/%.json
 	printf 'Making `dance/%s.tex`... ' $*
 	$(shtpen) \
 	  --escape tex \
 	  --json $< \
-	  --raw  $(SRC)/tex/preamble.tex \
-	  --shtp $(SRC)/tex/dance.tex.shtp \
+	  --raw  $(views)/tex/preamble.tex \
+	  --shtp $(views)/tex/dance.tex.shtp \
 	  > $@
 	printf 'done.\n'
 
 ## Generate a PDF file out of a dance TeX file.
 ##
-$(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
+$(build)/dance/%.pdf: $(build)/dance/%.tex
 	printf 'Making `dance/%s.pdf`... ' $*
 	cd $(dir $<)
 	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
@@ -103,49 +123,42 @@ $(BUILD)/dance/%.pdf: $(BUILD)/dance/%.tex
 
 ## Generate a HTML file out of a dance JSON file.
 ##
-$(BUILD)/dance/%.html: $(BUILD)/dance/%.json dance-build-dir
+$(build)/dance/%.html: $(build)/dance/%.json
 	printf 'Making `dance/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.shtp \
-	  --shtp $(SRC)/html/dance.html.shtp \
-	  --shtp $(SRC)/html/footer.html.shtp \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/dance.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
 ############################################################
 ## Index of dances
 
-## NOTE: There is a missing `build-dir` dependency here, but
-## it should be fine, considering this will only be called
-## from other places.
-$(BUILD)/dances.json: $(addsuffix .json, $(BUILT_DANCES))
+$(build)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`... '
 	jq -s '{dances:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(BUILD)/dances.html: $(BUILD)/dances.json build-dir
+$(build)/dances.html: $(build)/dances.json
 	printf 'Making `dances.html`... '
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.shtp \
-	  --shtp $(SRC)/html/dances.html.shtp \
-	  --shtp $(SRC)/html/footer.html.shtp \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/dances.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
 ############################################################
 ## Individual tunes
 
-.PHONY: tune-build-dir
-tune-build-dir: build-dir
-	mkdir -p $(BUILD)/tune
-
 ## Generate a JSON file out of a database tune entry.
 ##
-$(BUILD)/tune/%.json: $(DB)/tune/%.yaml tune-build-dir
+$(build)/tune/%.json: $(database)/tune/%.yaml $(build)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -156,80 +169,72 @@ $(BUILD)/tune/%.json: $(DB)/tune/%.yaml tune-build-dir
 
 ## Generate a HTML file out of a tune JSON file.
 ##
-$(BUILD)/tune/%.html: $(BUILD)/tune/%.json tune-build-dir
+$(build)/tune/%.html: $(build)/tune/%.json
 	printf 'Making `tune/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.shtp \
-	  --shtp $(SRC)/html/tune.html.shtp \
-	  --shtp $(SRC)/html/footer.html.shtp \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/tune.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
 ############################################################
 ## Index of tunes
 
-## NOTE: There is a missing `build-dir` dependency here, but
-## it should be fine, considering this will only be called
-## from other places.
-$(BUILD)/tunes.json: $(addsuffix .json, $(BUILT_TUNES))
+$(build)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`... '
 	jq -s '{tunes:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(BUILD)/tunes.html: $(BUILD)/tunes.json build-dir
+$(build)/tunes.html: $(build)/tunes.json
 	printf 'Making `tunes.html`... '
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(SRC)/html/header.html.shtp \
-	  --shtp $(SRC)/html/tunes.html.shtp \
-	  --shtp $(SRC)/html/footer.html.shtp \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/tunes.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
 ############################################################
 ## Index &
 
-$(BUILD)/index.json: $(BUILD)/dances.json $(BUILD)/tunes.json build-dir
+$(build)/index.json: $(build)/dances.json $(build)/tunes.json
 	printf 'Making `index.json`... '
-	jq -s '{tunes:.[0].tunes, dances:.[1].dances, root:"."}' \
-	  $(BUILD)/tunes.json $(BUILD)/dances.json \
+	jq -s '{dances:.[0].dances, tunes:.[1].tunes, root:"."}' \
+	  $^ \
 	  > $@
 	printf 'done.\n'
 
-$(BUILD)/index.html: $(BUILD)/index.json build-dir
+$(build)/index.html: $(build)/index.json
 	printf 'Making `index.html`... '
 	$(shtpen) \
 	  --escape html \
-	  --json $(BUILD)/index.json \
-	  --shtp $(SRC)/html/header.html.shtp \
-	  --shtp $(SRC)/html/index.html.shtp \
-	  --shtp $(SRC)/html/footer.html.shtp \
+	  --json $(build)/index.json \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/index.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 	printf 'done.\n'
 
 ############################################################
 ## All
 
-.PHONY: dances tunes index css other website
+.PHONY: dances tunes index static website
 
-dances: $(addsuffix .html, $(BUILT_DANCES)) $(addsuffix .pdf, $(BUILT_DANCES)) $(BUILD)/dances.html
-tunes: $(addsuffix .html, $(BUILT_TUNES)) $(BUILD)/tunes.html
-index: $(BUILD)/index.html
+dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(build)/dances.html
+tunes: $(addsuffix .html, $(built_tunes)) $(build)/tunes.html
+index: $(build)/index.html
 
-css: build-dir
-	printf 'Copying CSS files`... '
-	cp $(SRC)/css/* $(BUILD)
+static: $(build)
+	printf 'Copying static files`... '
+	cp -R $(views)/static/* $(build)
 	printf 'done.\n'
 
-other: build-dir
-	printf 'Copying other files`... '
-	cp -R $(OTHER) $(BUILD)/other
-	printf 'done.\n'
-
-website: dances tunes index css other
+website: dances tunes index static
 
 ################################################################################
 ##   ___          _
@@ -257,6 +262,6 @@ docker-builder:
 	cid=$$(docker create $(DOCKER_BUILDER_TAG) make $* MAKEFLAGS=$(MAKEFLAGS))
 	docker cp . "$$cid":/wd
 	docker start --attach "$$cid"
-	docker cp "$$cid":/wd/$(BUILD)/. $(BUILD)
+	docker cp "$$cid":/wd/$(build)/. $(build)
 
 ################################################################################

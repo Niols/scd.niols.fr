@@ -21,5 +21,5 @@ USER builder
 WORKDIR /wd
 
 ## Copy assets and setup Trebuchet MS
-COPY --chown=builder:builder src/assets/fonts \
+COPY --chown=builder:builder ./assets/fonts \
                              /wd/.local/share/fonts/
