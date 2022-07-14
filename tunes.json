@@ -15,9 +15,6 @@
       "scddb-id": 14533,
       "kind": "32-bar Reel",
       "short-kind": "R32",
-      "book": [
-        "paris-companion-book-2"
-      ],
       "slug": "la-ville-lumiere",
       "root": ".."
     },
@@ -43,9 +40,6 @@
       "scddb-id": 14452,
       "kind": "32-bar Strathspey",
       "short-kind": "S32",
-      "book": [
-        "paris-companion-book-2"
-      ],
       "slug": "the-translator",
       "root": ".."
     }

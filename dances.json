@@ -6,9 +6,6 @@
       "scddb-id": 20314,
       "kind": "32-bar strathspey for three couples in a four-couple longwise set",
       "short-kind": "S32 3/4L",
-      "books": [
-        "paris-book-2"
-      ],
       "tunes": [
         "the-translator"
       ],
@@ -174,9 +171,6 @@
       "scddb-id": 19198,
       "kind": "40-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R40 3/3L",
-      "books": [
-        "gone-dancing-2"
-      ],
       "tunes": [
         "forty-bars-of-clouds"
       ],
@@ -479,9 +473,6 @@
       "scddb-id": 19197,
       "kind": "40-bar reel for five couples in a five-couple longwise set",
       "short-kind": "R40 5/5L",
-      "book": [
-        "gone-dancing-2"
-      ],
       "description": [
         {
           "type": "phrase",
