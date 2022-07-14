@@ -1,0 +1,58 @@
+---
+
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$id: tune
+title: Tune
+
+description: |
+  A tune.
+
+type: object
+
+required:
+  - name
+  - author
+  - kind
+  - short-kind
+
+properties:
+
+  name:
+    type: string
+    description: |
+      The name of the tune. For example: “La Ville Lumière”.
+
+  author:
+    type: string
+    description: |
+      The composer of the tune, as a string. For example: “Pascaline Latour”.
+
+  short-author:
+    type: string
+    description: |
+      A short version of the composer of the tune, as a string. For instance,
+      for a tune whose author is “Anne Lanvin, Corentin Lefèvre, Isabelle
+      Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin”, the
+      short author would be “Anne Lanvin et al.”
+
+  scddb-id:
+    type: integer
+    description: |
+      The ID of the tune in the SCDDB, if it exists. This is the last integer
+      in the SCDDB URL. For example, if the URL is
+      https://my.strathspey.org/dd/tune/14533/, then the ID is 14533.
+
+  kind:
+    type: string
+    description: |
+      The kind of the tune as a full English sentence. For example: “32-bar
+      Reel”.
+
+  short-kind:
+    type: string
+    description: |
+      The kind of the tune as a compact representation. For example, the compact
+      representation of “32-bar Reel” is “R32”.
+
+additionalProperties: false
