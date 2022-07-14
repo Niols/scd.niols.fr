@@ -223,18 +223,22 @@ $(build)/index.html: $(build)/index.json
 ############################################################
 ## All
 
-.PHONY: dances tunes index static website
+.PHONY: dances tunes index css static website
 
 dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(build)/dances.html
 tunes: $(addsuffix .html, $(built_tunes)) $(build)/tunes.html
 index: $(build)/index.html
+
+css: $(build)
+	cp $(views)/css/reset.css $(build)
+	sassc $(views)/css/style.scss $(build)/style.css
 
 static: $(build)
 	printf 'Copying static files`... '
 	cp -R $(views)/static/* $(build)
 	printf 'done.\n'
 
-website: dances tunes index static
+website: dances tunes index css static
 
 ################################################################################
 ##   ___          _
