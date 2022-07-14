@@ -29,6 +29,14 @@ properties:
     description: |
       The deviser of the dance, as a string. For example: “Aymeric Fromherz”.
 
+  short-author:
+    type: string
+    description: |
+      A short version of the deviser of the dance, as a string. For instance,
+      for a dance whose author is “Anne Lanvin, Corentin Lefèvre, Isabelle
+      Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin”, the
+      short author would be “Anne Lanvin et al.”
+
   scddb-id:
     type: integer
     description: |
