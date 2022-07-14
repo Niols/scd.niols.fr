@@ -33,6 +33,8 @@ jobs:
 
       - name: Run JSON Validator for all Schemas on the Database
         run: |
-          for file in database/dance/*.json; do
-            jsonschema --output pretty --instance "$file" database/_schema/dance.schema.json
+          for type in dance tune; do
+            for file in database/$type/*.json; do
+              jsonschema --output pretty --instance "$file" database/_schema/$type.schema.json
+            done
           done
