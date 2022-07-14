@@ -1,0 +1,236 @@
+---
+
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$id: dance
+title: Dance
+
+description: |
+  A dance with its metadata and its full description.
+
+type: object
+
+required:
+  - name
+  - author
+  - kind
+  - short-kind
+  - description
+
+properties:
+
+  name:
+    type: string
+    description: |
+      The name of the dance. For example: “La Ville Lumière”.
+
+  author:
+    type: string
+    description: |
+      The deviser of the dance, as a string. For example: “Aymeric Fromherz”.
+
+  scddb-id:
+    type: integer
+    description: |
+      The ID of the dance in the SCDDB, if it exists. This is the last integer
+      in the SCDDB URL. For example, if the URL is
+      https://my.strathspey.org/dd/dance/20315/, then the ID is 20315.
+
+  kind:
+    type: string
+    description: |
+      The kind of the dance as a full English sentence. For example: “32-bar
+      reel for four couples in a four-couple longwise set”
+
+  short-kind:
+    type: string
+    description: |
+      The kind of the dance as a compact representation. For example, the
+      compact representation of “32-bar reel for four couples in a four-couple
+      longwise set” is “R32 4/4L”.
+
+  tunes:
+    type: array
+    description: |
+      A list of tunes. This propertie is currently unused. <-- FIXME
+
+  description:
+    $ref: "#/$defs/description"
+
+additionalProperties: false
+
+$defs:
+
+  description:
+    title: Toplevel Dance Description
+    description: |
+      A dance description, that is a non-empty array of dance description items
+      of various types.
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/description-item-not-text"
+
+  description-inner:
+    title: Inner Dance Description
+    description: |
+      Same as a dance description, but also allows for `text` items.
+    type: array
+    minItems: 1
+    items:
+      oneOf:
+        - $ref: "#/$defs/description-item-not-text"
+        - $ref: "#/$defs/description-item-text"
+
+  description-item-text:
+    title: "Dance Description Item: Text"
+    description: A dance description text item.
+    type: object
+    required:
+      - type
+      - content
+    properties:
+      type:
+        enum: [text]
+      content:
+        type: string
+        description: |
+          A string to be included as-is in the output, modulo some escaping for
+          HTML entities or TeX special characters.
+    additionalProperties: false
+
+  description-item-not-text:
+    oneOf:
+      - $ref: "#/$defs/description-item-note"
+      - $ref: "#/$defs/description-item-instruction"
+      - $ref: "#/$defs/description-item-phrase"
+      - $ref: "#/$defs/description-item-repeat"
+      - $ref: "#/$defs/description-item-devised-by"
+      - $ref: "#/$defs/description-item-music-by"
+
+  description-item-note:
+    title: "Dance Description Item: Note"
+    description: A dance description note item.
+    type: object
+    required:
+      - type
+      - content
+    properties:
+      type:
+        enum: [note]
+      content:
+        type: string
+        description: |
+          A string to be included as a note in the output, modulo some escaping
+          for HTML entities or TeX special characters.
+    additionalProperties: false
+
+  description-item-instruction:
+    title: "Dance Description Item: Instruction"
+    description: A dance description instruction item.
+    type: object
+    required:
+      - type
+      - content
+    properties:
+      type:
+        enum: [instruction]
+      content:
+        type: string
+        description: |
+          A string to be included as an instruction in the output, modulo some
+          escaping for HTML entities or TeX special characters.
+    additionalProperties: false
+
+  description-item-phrase:
+    title: "Dance Description Item: Phrase"
+    description: A dance description phrase item.
+    type: object
+    required:
+      - type
+      - starts
+      - ends
+      - contents
+    properties:
+      type:
+        enum: [phrase]
+      starts:
+        type: integer
+        description: |
+          An integer representing the starting bar of the phrase.
+      ends:
+        type: integer
+        description: |
+          An integer representing the ending bar of the phrase.
+      contents:
+        $ref: "#/$defs/description-inner"
+    additionalProperties: false
+
+  description-item-repeat:
+    title: "Dance Description Item: Repeat"
+    description: A dance description repeat item.
+    type: object
+    required:
+      - type
+      - kind
+    properties:
+      type:
+        enum: [repeat]
+      kind:
+        enum:
+          - from new positions
+          - having passed a couple
+          - custom
+        description: |
+          The kind of repeat for this dance.
+      text:
+        type: string
+        description: |
+          The custom text for the repeat. FIXME: Only if kind=custom, but then
+          it is required.
+    additionalProperties: false
+
+  description-item-devised-by:
+    title: "Dance Description Item: Devised By"
+    description: A dance description devised by item.
+    type: object
+    required:
+      - type
+      - deviser
+    properties:
+      type:
+        enum: ["devised by"]
+      deviser:
+        type: string
+        description: |
+          The deviser of the dance.
+      more:
+        type: string
+        description: |
+          A string to be added after the name of the deviser.
+    additionalProperties: false
+
+  description-item-music-by:
+    title: "Dance Description Item: Music By"
+    description: A dance description music by item.
+    type: object
+    required:
+      - type
+      - composer
+    properties:
+      type:
+        enum: ["music by"]
+      composer:
+        type: string
+        description: |
+          The composer of the tune.
+      tune:
+        type: string
+        description: |
+          The name of the tune.
+      more:
+        type: string
+        description: |
+          A string to be added after the name of the composer or the name of the
+          tune. It should start with a capital letter.
+    additionalProperties: false
