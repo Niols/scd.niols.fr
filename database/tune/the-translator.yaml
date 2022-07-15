@@ -6,3 +6,41 @@ scddb-id: 14452
 
 kind: 32-bar Strathspey
 short-kind: S32
+
+content: |
+  \relative f <<
+    \new Voice {
+      \clef treble
+      \key b \minor
+      \time 4/4
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          b16 fis'8. fis g16 fis8. e16 d8. cis16 |
+          a16 e'8. e fis16 e8. d16 cis8. ais16 |
+          b16 fis'8. fis g16 fis8. e16 d8. cis16 |
+          \tuplet 3/2 { a8 cis e } fis8 ais, b4 b4 |
+        } \break
+
+        fis'16 b8. b cis16 d8. cis16 b8. a16 |
+        g16 b8. b cis16 d8. cis16 b8. a16 |
+        a16 e'8. e fis16 g8. fis16 e8. d16 |
+        \tuplet 3/2 { cis8 fis, d } \tuplet 3/2 { b'8 fis d } \tuplet 3/2 { a'8 fis d } \tuplet 3/2 { b'8 fis d } |
+        \break
+
+        fis16 b8. b cis16 d8. cis16 b8. a16 |
+        g16 b8. b cis16 d8. cis16 b8. a16 |
+        a16 e'8. e fis16 g8. fis16 e8. d16 |
+        cis16 b a g fis8 ais b4 b |
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        b1:m | a2 fis | b1:m | a4 fis b2:m |
+
+        b1:m | g | a | b:m7 |
+        b1:m | g | a | a4 fis b2:m |
+      }
+    }
+  >>

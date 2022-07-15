@@ -5,3 +5,47 @@ author: Nicolas “Niols” Jeannerod
 
 kind: 32-bar Strathspey
 short-kind: S32
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key d \major
+      \time 4/4
+
+      \repeat volta 2 {
+        a16 a8. a'8 a, fis'16 d8. d4 |
+        cis8. cis16 cis8 d cis4 cis |
+        b8. b16 b8 cis d e fis g |
+        a,8. a16 a8 b a4 a |
+        \break
+
+        a16 a8. a'8 a, fis'16 d8. d4 |
+        cis8. cis16 cis8 d cis4 cis |
+        \tuplet 3/2 { b4 d g } \tuplet 3/2 { a,4 cis e } |
+        d2 d4 d |
+        \bar "||" \break
+
+        fis,16 fis8. fis'8 fis, ais cis fis fis, |
+        fis16 fis8. fis'8 fis, b d fis fis, |
+        e'16 e8. g8 e \tuplet 3/2 { e b g } e d |
+        cis d e fis g a b cis |
+        \break
+
+        fis,16 fis8. fis'8 fis, ais cis fis fis, |
+        fis16 fis8. fis'8 fis, b d fis fis, |
+        e'16 e8. g8 e \tuplet 3/2 { e b g } e d |
+        cis8. a16 b8 cis d4 d |
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        d1 | fis:m/cis | g | a |
+        d1 | fis:m/cis | g2 a | d1 |
+
+        fis1 | b:m | e:m | a |
+        fis1 | b:m | e:m | a2 d |
+      }
+    }
+  >>

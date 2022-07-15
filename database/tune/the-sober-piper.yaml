@@ -5,3 +5,61 @@ author: Anne Lanvin
 
 kind: 32-bar Reel
 short-kind: R32
+
+content: |
+  \relative a <<
+    {
+      \clef treble
+      \key a' \major
+      \time 4/4
+
+      \repeat volta 2 {
+        \partial 4 e''4 |
+        a,4 a8 cis e4 e8 fis |
+        e8 fis a fis fis4 d |
+        d, d8 fis a4 a8 b |
+        a cis e cis d4 fis |
+        \break
+
+        a, a8 cis e4 e8 fis
+        e8 fis a fis e4 cis |
+        d e8 fis e fis e d |
+        cis4 a a
+      } \break
+
+      e' |
+      a4. cis,8 e4 a, |
+      d8 cis b cis a4 cis4 |
+      d,4 d8 fis a4 b |
+      a8 cis e cis d4 fis |
+      \break
+
+      a4. cis,8 e4 a, |
+      d8 cis b cis a4 cis4 |
+      d e8 fis e fis e d |
+      cis4 a a  e' |
+      \bar "||" \break
+
+      a4. cis,8 e4 a, |
+      d8 cis b cis a4 cis4 |
+      d,4 d8 fis a4 b |
+      a8 cis e cis d4 fis |
+      \break
+
+      a,4 a8 cis e4 e8 fis |
+      e fis a fis e4 cis |
+      d e8 fis e fis e d |
+      cis4 a a
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a1 | a | d | d | a | a | d | a |
+
+        a1 | a | d | d | a | a | d | a |
+        a1 | a | d | d | fis:m | fis:m | b:m | a2.
+      }
+    }
+  >>

@@ -6,3 +6,55 @@ scddb-id: 14533
 
 kind: 32-bar Reel
 short-kind: R32
+
+content: |
+  \relative a' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \major
+
+      \repeat volta 2 {
+        \partial 4 a4 |
+        d8 a a a e' a, fis' a, |
+        g' b, b b a' b, g' b, |
+        fis' a, a a d a fis' a, |
+        e' a, a a cis d e cis |
+        \break
+
+        d8 a a a e' a, fis' a, |
+        g' b, b b a' b, g' b, |
+        fis' a, d a e' b cis a |
+      } \alternative { {
+        \set Timing.measureLength = #(ly:make-moment 3/4)
+        d a fis' a, d4 |
+      } {
+        \set Timing.measureLength = #(ly:make-moment 4/4)
+        d8 a b cis d e fis g |
+      } } \break
+
+      \repeat volta 2 {
+        fis d d d a d d d |
+        fis d d d b d d d |
+        g d d d b d g b |
+        a a, b cis d e fis g |
+        \break
+
+        fis d d d a d d d |
+        fis d d d b d d d |
+        g e fis d e cis d b |
+      } \alternative { {
+        cis a b cis d e fis g |
+      } {
+        cis, a b cis d4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        d1 | g | d | a | d | g | d2 e4:m a | d2. | d1 |
+        d1 | b:m | g | a:7 | d | b:m | e4:m d a/cis g/b | a1:7 | a2:7 d4
+      }
+    }
+  >>
