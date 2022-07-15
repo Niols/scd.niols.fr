@@ -67,6 +67,33 @@ jobs:
           path: build
 
   ############################################################################
+  ## Build Documentation
+
+  build-documentation:
+    runs-on: ubuntu-latest
+    needs: build-website
+    ## ^^^ not true but makes for better graphs
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Install JSON Schema Documentation Generator
+        run: |
+          pip install json-schema-for-humans==0.41.3
+
+      - name: Generate Documentation for Schemas
+        run: |
+          mkdir -p doc/schema
+          generate-schema-doc 'database/_schema/*.yaml' doc/schema
+
+      - name: Upload Documentation as Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: documentation
+          path: doc
+
+  ############################################################################
   ## Publish Website
 
   publish-website:
@@ -100,7 +127,9 @@ jobs:
 
   publish-dev-website:
     runs-on: ubuntu-latest
-    needs: build-website
+    needs:
+      - build-website
+      - build-documentation
 
     steps:
 
@@ -109,6 +138,12 @@ jobs:
         with:
           name: website
           path: build/
+
+      - name: Download Documentation from Artifacts
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: documentation
+          path: build/_doc/
 
       - name: Prepare Metadata for Publishing the Dev Website
         run: |
@@ -203,6 +238,7 @@ jobs:
     needs:
       - build-docker-builder
       - build-website
+      - build-documentation
       - publish-docker-builder
       - publish-website
       - publish-dev-website
