@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.7.14)  15 JUL 2022 01:07
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.7.14)  15 JUL 2022 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,7 +1321,7 @@ Package rerunfilecheck Info: Checksums for `drawn-in.out':
 Here is how much of TeX's memory you used:
  32752 strings out of 479212
  646758 string characters out of 5875086
- 1022453 words of memory out of 5000000
+ 1022454 words of memory out of 5000000
  51834 multiletter control sequences out of 15000+600000
  403950 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
