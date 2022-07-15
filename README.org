@@ -1,0 +1,6 @@
+#+title:  Niols's Repository of (Mostly Unpublished) Scottish Country Dances
+
+** Contributing
+
+The database format is described by means of [[https://json-schema.org/][JSON schemas]]. See the latest
+version for [[http://dev.scd.niols.fr/branch/main/_doc/schema/dance.html][dances]] and [[http://dev.scd.niols.fr/branch/main/_doc/schema/tune.html][tunes]].

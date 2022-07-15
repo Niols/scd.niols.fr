@@ -35,6 +35,6 @@ jobs:
         run: |
           for type in dance tune; do
             for file in database/$type/*.json; do
-              jsonschema --output pretty --instance "$file" database/_schema/$type.schema.json
+              jsonschema --output pretty --instance "$file" database/_schema/$type.json
             done
           done
