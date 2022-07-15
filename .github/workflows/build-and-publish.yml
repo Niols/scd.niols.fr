@@ -11,7 +11,11 @@ on:
   pull_request:
 
 jobs:
-  build-and-publish:
+
+  ############################################################################
+  ## Build Docker Builder Image
+
+  build-docker-builder:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +29,28 @@ jobs:
         uses: docker/build-push-action@v3.0.0
         with:
           context: .
+          tags: builder
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  ############################################################################
+  ## Build Website
+
+  build-website:
+    runs-on: ubuntu-latest
+    needs: build-docker-builder
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2.0.0
+
+      - name: Load Docker Builder Image
+        uses: docker/build-push-action@v3.0.0
+        with:
+          context: .
           load: true
           tags: builder
           cache-from: type=gha
@@ -33,6 +59,56 @@ jobs:
       - name: Build Website
         run: |
           make website@docker DOCKER_BUILDER_TAG=builder
+
+      - name: Upload Website as Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: website
+          path: build
+
+  ############################################################################
+  ## Publish Website
+
+  publish-website:
+    runs-on: ubuntu-latest
+    needs: build-website
+
+    if: ${{ github.ref == 'refs/heads/main' }}
+
+    steps:
+
+      - name: Download Website from Artifacts
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: website
+          path: build/
+
+      - name: Publish Website to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          ## Publish `./build` with following commit message...
+          publish_dir: ./build
+          full_commit_message: |
+            Bump to ${{ github.sha }}: ${{ github.event.head.message }}
+          ## to branch `pages`, serving `scd.niols.fr`, with standard token.
+          publish_branch: pages
+          cname: scd.niols.fr
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  ############################################################################
+  ## Publish Dev Website
+
+  publish-dev-website:
+    runs-on: ubuntu-latest
+    needs: build-website
+
+    steps:
+
+      - name: Download Website from Artifacts
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: website
+          path: build/
 
       - name: Prepare Metadata for Publishing the Dev Website
         run: |
@@ -87,21 +163,23 @@ jobs:
                     + '.'
             })
 
-      - name: Publish Main Website to GitHub Pages
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: peaceiris/actions-gh-pages@v3.8.0
-        with:
-          ## Publish `./build` with following commit message...
-          publish_dir: ./build
-          full_commit_message: |
-            Bump to ${{ github.sha }}: ${{ github.event.head.message }}
-          ## to branch `pages`, serving `scd.niols.fr`, with standard token.
-          publish_branch: pages
-          cname: scd.niols.fr
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+  ############################################################################
+  ## Publish Docker Builder
+
+  publish-docker-builder:
+    runs-on: ubuntu-latest
+    needs: build-docker-builder
+
+    if: ${{ github.ref == 'refs/heads/main' }}
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2.0.0
 
       - name: Authenticate to the GitHub Package Registry
-        if: ${{ github.ref == 'refs/heads/main' }}
         uses: docker/login-action@v2.0.0
         with:
           registry: ghcr.io
@@ -109,7 +187,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish Docker Builder Image
-        if: ${{ github.ref == 'refs/heads/main' }}
         uses: docker/build-push-action@v3.0.0
         with:
           context: .
@@ -117,3 +194,22 @@ jobs:
           tags: ghcr.io/niols/scd.niols.fr-builder
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  ############################################################################
+  ## Check all
+
+  check-build-and-publish:
+    runs-on: ubuntu-latest
+    needs:
+      - build-docker-builder
+      - build-website
+      - publish-docker-builder
+      - publish-website
+      - publish-dev-website
+
+    ## Run only if no dependency failed. We allow them to have been skipped.
+    if: ${{ failure() != true }}
+
+    steps:
+      - name: Everything was Successful!
+        run: true
