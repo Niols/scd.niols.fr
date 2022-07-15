@@ -55,4 +55,9 @@ properties:
       The kind of the tune as a compact representation. For example, the compact
       representation of “32-bar Reel” is “R32”.
 
+  content:
+    type: string
+    description: |
+      The content of the tune as a LilyPond musical expression.
+
 additionalProperties: false
