@@ -55,8 +55,11 @@ content: |
     \new ChordNames {
       \chordmode {
         s4 |
-        d1 | g | d | a | d | g | d2 e4:m a | d2. | d1 |
-        d1 | b:m | g | a:7 | d | b:m | e4:m d a/cis g/b | a1:7 | a2:7 d4
+        d1 | g | d | a |
+        d1 | g | d2 e4:m a | d2. | d1 |
+
+        d1 | b:m | g | a:7 |
+        d1 | b:m | e4:m d \move-left 1 a/cis g/b | a1:7 | a2:7 d4
       }
     }
   >>
