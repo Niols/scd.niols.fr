@@ -69,3 +69,6 @@ p {
     text-align: center; }
   .dance-description > .phrase > .contents {
     flex: none; }
+
+.tune-preview > img {
+  width: 100%; }
