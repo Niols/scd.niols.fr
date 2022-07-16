@@ -167,6 +167,30 @@ $(build)/tune/%.json: $(database)/tune/%.yaml $(build)/tune
 	  > $@
 	printf 'done.\n'
 
+## Generate a LilyPond file out of a tune JSON file.
+##
+$(build)/tune/%.ly: $(build)/tune/%.json
+	printf 'Making `tune/%s.ly`... ' $*
+	$(shtpen) \
+	  --json $< \
+	  --raw  $(views)/ly/version.ly \
+	  --raw  $(views)/ly/repeat-aware.ly \
+	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
+	  --raw  $(views)/ly/beginning-of-line.ly \
+	  --raw  $(views)/ly/repeat-volta-fancy.ly \
+	  --raw  $(views)/ly/preamble.ly \
+	  --shtp $(views)/ly/tune.ly.shtp \
+	  > $@
+	printf 'done.\n'
+
+## Generate a PDF file out of a tune LilyPond file.
+##
+$(build)/tune/%.pdf: $(build)/tune/%.ly
+	printf 'Making `tune/%s.pdf`... ' $*
+	cd $(dir $<)
+	lilypond --loglevel=warning $(notdir $<)
+	printf 'done.\n'
+
 ## Generate a HTML file out of a tune JSON file.
 ##
 $(build)/tune/%.html: $(build)/tune/%.json
@@ -226,7 +250,7 @@ $(build)/index.html: $(build)/index.json
 .PHONY: dances tunes index css static website
 
 dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(build)/dances.html
-tunes: $(addsuffix .html, $(built_tunes)) $(build)/tunes.html
+tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(build)/tunes.html
 index: $(build)/index.html
 
 css: $(build)

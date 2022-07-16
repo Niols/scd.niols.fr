@@ -1,0 +1,10 @@
+#!/bin/sh
+
+printf '\\score {\n'
+printf '  \\header {\n'
+printf '    title = "%s"\n' "$(raw name)" ##FIXME: escape
+printf '    composer = "%s"\n' "$(raw author)" ##FIXME: escape
+printf '    kind = "%s"\n' "$(raw kind)" ##FIXME: escape
+printf '  }\n\n'
+printf '%s\n' "$(raw content)" ##NOTE: not escaped
+printf '}\n'
