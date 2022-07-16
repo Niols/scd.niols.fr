@@ -7,6 +7,8 @@ scddb-id: 14533
 kind: 32-bar Reel
 short-kind: R32
 
+date: "2020"
+
 content: |
   \relative a' <<
     \new Voice {

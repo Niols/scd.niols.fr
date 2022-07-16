@@ -6,6 +6,8 @@ author: Nicolas “Niols” Jeannerod
 kind: 32-bar Strathspey
 short-kind: S32
 
+date: 2018-10-19
+
 content: |
   \relative f' <<
     {
