@@ -109,40 +109,6 @@
   %% is no system between the two.
                                 %top-markup-spacing
 
-  %% ======================= [ Table of Contents ] ======================== %%
-
-  tocTitleMarkup = \markup {
-    \column {
-      \vspace #2.7
-      \concat {
-        \hspace #5
-        \abs-fontsize #34.1 "Table of contents"
-      }
-      \vspace #2.7
-    }
-  }
-
-  tocTuneMarkup = \markup {
-    \column {
-      \vspace #0.7
-      \abs-fontsize #12.6 \fill-line {
-        \fromproperty #'toc:text
-        \fromproperty #'toc:page
-      }
-    }
-  }
-
-  tocDanceMarkup = \markup {
-    \column {
-      \vspace #0.25
-      \italic
-      \abs-fontsize #10.7 \concat {
-        "Dance: "
-        \fromproperty #'toc:text
-      }
-    }
-  }
-
 
 
 
@@ -178,20 +144,9 @@
     ;;
     (let* ((title      (chain-assoc-get 'header:title      props ""))
            (composer   (chain-assoc-get 'header:composer   props ""))
-           (dance      (chain-assoc-get 'header:dance      props ""))
            (kind       (chain-assoc-get 'header:kind       props ""))
-           (two-chords (chain-assoc-get 'header:two-chords props #f))
-           (part       (chain-assoc-get 'header:part       props ""))
-           (no-title   (chain-assoc-get 'header:no-title   props #f))
-           (ptspace    (chain-assoc-get 'header:post-title-space props 0))
 
            (null       (markup #:vspace 0))
-
-           (two-chords (if two-chords (markup " — Two Chords") null))
-           (dance      (if (eq? dance "") title dance))
-           (dance      (if (eq? kind "")
-                        (markup #:simple " ")
-                        (markup #:concat ("Dance: " #:simple dance " — " #:simple kind two-chords))))
 
            ;; Add placeholder to all values. The placeholder is an invisible
            ;; unit that will align on the baseline of other texts and that goas
@@ -199,22 +154,18 @@
            ;; later, LilyPond forgets about text and aligns things randomly.
            (placeholder (markup #:with-color (rgb-color 1 1 1) #:simple "Aj"))
            (title    (markup #:abs-fontsize 25.5 #:combine placeholder title))
-           (dance    (markup #:abs-fontsize 12.6 #:combine placeholder dance))
-           (part     (markup #:abs-fontsize 12.6 #:combine placeholder part))
+           (kind     (markup #:abs-fontsize 12.6 #:combine placeholder kind))
            (composer (markup #:abs-fontsize 12.6 #:combine placeholder composer))
 
-           (title    (markup #:center-column (title #:vspace 1 dance)))
+           (title    (markup #:center-column (title #:vspace 1 kind)))
          )
 
      (interpret-markup layout props
       (markup
        #:column (
-         (if no-title null (markup #:fill-line (title)))
-         (if no-title (markup #:vspace ptspace) (markup #:vspace 5))
-         #:fill-line (
-           part
-           composer
-         )
+         (markup #:fill-line (title))
+         (markup #:vspace 5)
+         #:fill-line ( "" composer )
          #:vspace 1
        )
      ))))
@@ -238,26 +189,7 @@
 #(define (markup-or-false? x)
   (or (markup? x) (eq? x #f)))
 
-
-tocPart = #(define-music-function (parser location text) (markup?)
-            (add-toc-item! 'tocPartMarkup text))
-
-tocTune = #(define-music-function (parser location title composer kind) (markup? markup? markup?)
-            (add-toc-item! 'tocTuneMarkup (markup #:fill-line (title #:concat (composer #:hspace 5 kind #:hspace 7)))))
-
-tocDance = #(define-music-function (parser location text) (markup?)
-             (add-toc-item! 'tocDanceMarkup text))
-
 #(define-markup-command (copyright layout props year composer) (number? string?)
-  (interpret-markup layout props
-   (markup #:small #:concat (
-     #:simple "Copyright © "
-     #:simple (number->string year)
-     #:simple " "
-     #:simple composer
-     #:simple "; reproduced with permission; all rights retained by the composer."
-   ))))
-#(define-markup-command (copyright-noreproduced layout props year composer) (number? string?)
   (interpret-markup layout props
    (markup #:small #:concat (
      #:simple "Copyright © "
