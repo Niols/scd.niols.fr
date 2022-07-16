@@ -8,3 +8,6 @@ printf '    kind = "%s"\n' "$(raw kind)" ##FIXME: escape
 printf '  }\n\n'
 printf '%s\n' "$(raw content)" ##NOTE: not escaped
 printf '}\n'
+
+printf '\\noPageBreak\n'
+printf '\\markup { \\copyright #%d "%s" }' "$(raw date_year)" "$(raw author)" ##FIXME: escape
