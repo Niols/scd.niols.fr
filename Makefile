@@ -41,6 +41,7 @@ views := ./views
 ## Where to find some utilities.
 shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
+lilypond := lilypond --loglevel=warning -dno-point-and-click
 
 ## The list of dances in the database and their target names in $(build).
 dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
@@ -188,7 +189,34 @@ $(build)/tune/%.ly: $(build)/tune/%.json
 $(build)/tune/%.pdf: $(build)/tune/%.ly
 	printf 'Making `tune/%s.pdf`... ' $*
 	cd $(dir $<)
-	lilypond --loglevel=warning $(notdir $<)
+	$(lilypond) $*
+	printf 'done.\n'
+
+## Generate a short LilyPond file out of a tune JSON file.
+##
+$(build)/tune/%.short.ly: $(build)/tune/%.json
+	printf 'Making `tune/%s.short.ly`... ' $*
+	$(shtpen) \
+	  --json $< \
+	  --raw  $(views)/ly/version.ly \
+	  --raw  $(views)/ly/repeat-aware.ly \
+	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
+	  --raw  $(views)/ly/beginning-of-line.ly \
+	  --raw  $(views)/ly/repeat-volta-fancy.ly \
+	  --raw  $(views)/ly/preamble.ly \
+	  --raw  $(views)/ly/preamble.short.ly \
+	  --shtp $(views)/ly/tune.ly.shtp \
+	  > $@
+	printf 'done.\n'
+
+## Generate a SVG file out of a tune short LilyPond file.
+$(build)/tune/%.svg: $(build)/tune/%.short.ly
+	printf 'Making `tune/%s.svg`... ' $*
+	cd $(dir $<)
+	$(lilypond) -dbackend=svg $*.short.ly
+	inkscape --batch-process --export-area-drawing --export-plain-svg \
+	  --export-filename=$*.svg $*.short.svg
+	rm $*.short.svg
 	printf 'done.\n'
 
 ## Generate a HTML file out of a tune JSON file.
@@ -250,7 +278,7 @@ $(build)/index.html: $(build)/index.json
 .PHONY: dances tunes index css static website
 
 dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(build)/dances.html
-tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(build)/tunes.html
+tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .svg, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(build)/tunes.html
 index: $(build)/index.html
 
 css: $(build)

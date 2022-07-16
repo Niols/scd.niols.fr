@@ -3,7 +3,7 @@ FROM debian:11
 ## Install most dependencies. `wget` is only needed for `yq`.
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq \
-        make jq sassc wget lilypond \
+        make jq sassc wget lilypond inkscape \
         texlive-xetex texlive-extra-utils latexmk
 
 ## Install `yq`. We use the i386 version because that's what Debian 11 in Docker

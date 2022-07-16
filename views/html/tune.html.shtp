@@ -5,8 +5,6 @@ printf   '<h1>%s</h1>' "$(text name)"
 printf   '<h2>%s</h2>' "$(text kind)"
 
 printf   '<section>'
-printf     '<p>Composed by %s.</p>' "$(text author)"
-
 printf     '<p><a href="%s.pdf">Get the score of the tune as PDF</a>.</p>' "$(url slug)"
 
 if exists scddb-id; then
@@ -14,5 +12,9 @@ if exists scddb-id; then
     printf   'See this tune in the Scottish Country Dance Database</a>.</p>'
 fi
 
+printf   '</section>'
+printf   '<section class="tune-preview">'
+printf     '<img src="%s.svg" />' "$(url slug)"
+printf     '<p>Composed by %s.</p>' "$(text author)"
 printf   '</section>'
 printf '</article>'
