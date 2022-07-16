@@ -215,7 +215,7 @@ $(build)/tune/%.svg: $(build)/tune/%.short.ly
 	cd $(dir $<)
 	$(lilypond) -dbackend=svg $*.short.ly
 	inkscape --batch-process --export-area-drawing --export-plain-svg \
-	  --export-filename=$*.svg $*.short.svg
+	  --export-filename=$*.svg $*.short.svg 2>/dev/null
 	rm $*.short.svg
 	printf 'done.\n'
 
