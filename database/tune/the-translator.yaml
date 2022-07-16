@@ -7,6 +7,8 @@ scddb-id: 14452
 kind: 32-bar Strathspey
 short-kind: S32
 
+date: 2019-03-02
+
 content: |
   \relative f <<
     \new Voice {
