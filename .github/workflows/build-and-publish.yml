@@ -26,7 +26,7 @@ jobs:
         uses: docker/setup-buildx-action@v2.0.0
 
       - name: Build Docker Builder Image
-        uses: docker/build-push-action@v3.0.0
+        uses: docker/build-push-action@v3.1.0
         with:
           context: .
           tags: builder
@@ -48,7 +48,7 @@ jobs:
         uses: docker/setup-buildx-action@v2.0.0
 
       - name: Load Docker Builder Image
-        uses: docker/build-push-action@v3.0.0
+        uses: docker/build-push-action@v3.1.0
         with:
           context: .
           load: true
@@ -222,7 +222,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish Docker Builder Image
-        uses: docker/build-push-action@v3.0.0
+        uses: docker/build-push-action@v3.1.0
         with:
           context: .
           push: true
