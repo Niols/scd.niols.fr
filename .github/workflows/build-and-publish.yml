@@ -117,10 +117,14 @@ jobs:
           publish_dir: ./build
           full_commit_message: |
             Bump to ${{ github.sha }}: ${{ github.event.head.message }}
-          ## to branch `pages`, serving `scd.niols.fr`, with standard token.
+          ## ...to branch `pages` with the right access token...
           publish_branch: pages
-          cname: scd.niols.fr
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          ## ...as the GitHub Actions bot...
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          ## ...serving `scd.niols.fr`.
+          cname: scd.niols.fr
 
   ############################################################################
   ## Publish Dev Website
@@ -168,35 +172,19 @@ jobs:
           ## Publish `./build` with following commit message...
           publish_dir: ./build
           full_commit_message: ${{ env.commit_message }}
-          ## to https://github.com/Niols/dev.scd.niols.fr on branch `pages` in
-          ## sub-directory $GITHUB_REF while keeping the rest intact...
+          ## ...to https://github.com/Niols/dev.scd.niols.fr on branch `pages`
+          ## with the right access token...
           external_repository: niols/dev.scd.niols.fr
           publish_branch: pages
+          personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
+          ## ...as the GitHub Actions bot...
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          ## ...in its own sub-directory while keeping the rest intact...
           destination_dir: ${{ env.destination_dir }}
           keep_files: true
-          ## serving `dev.scd.niols.fr`, with specific PAT.
+          ## ...serving `dev.scd.niols.fr`.
           cname: dev.scd.niols.fr
-          personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
-
-      - name: Comment About it in the Corresponding Pull Request
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6.1.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '🚀 The website has been pushed to '
-                    + '[here](https://github.com/Niols/dev.scd.niols.fr)'
-                    + '. The rendering will be made available '
-                    + '[here](http://dev.scd.niols.fr/pr/'+ context.issue.number + ')'
-                    + '! *Please note that the deployment might still need '
-                    + 'some time*; you can check its status '
-                    + '[here](https://github.com/Niols/dev.scd.niols.fr/deployments/activity_log?environment=github-pages)'
-                    + '.'
-            })
 
   ############################################################################
   ## Publish Docker Builder
