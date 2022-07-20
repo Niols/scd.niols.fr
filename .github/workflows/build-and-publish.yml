@@ -178,26 +178,6 @@ jobs:
           cname: dev.scd.niols.fr
           personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
 
-      - name: Comment About it in the Corresponding Pull Request
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6.1.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '🚀 The website has been pushed to '
-                    + '[here](https://github.com/Niols/dev.scd.niols.fr)'
-                    + '. The rendering will be made available '
-                    + '[here](http://dev.scd.niols.fr/pr/'+ context.issue.number + ')'
-                    + '! *Please note that the deployment might still need '
-                    + 'some time*; you can check its status '
-                    + '[here](https://github.com/Niols/dev.scd.niols.fr/deployments/activity_log?environment=github-pages)'
-                    + '.'
-            })
-
   ############################################################################
   ## Publish Docker Builder
 

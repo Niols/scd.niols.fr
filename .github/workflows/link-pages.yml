@@ -1,0 +1,33 @@
+---
+
+name: Link Pages
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Give Link to GitHub Pages for this Pull Request
+        uses: actions/github-script@v6.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Hey! I will publish the pages for this pull request here:\n'
+                  + '\n'
+                  + '- Repository: https://github.com/Niols/dev.scd.niols.fr/\n'
+                  + '- Rendering: http://dev.scd.niols.fr/pr/'+ context.issue.number + '/\n'
+                  + '\n'
+                  + 'For each push, you will see something like:\n'
+                  + '\n'
+                  + '![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)\n'
+                  + '\n'
+                  + 'Just wait for the deployment indicated by the green check mark and you are good to go!'
+            })
