@@ -303,7 +303,7 @@ DOCKER_BUILDER_TAG := ghcr.io/niols/scd.niols.fr-builder:latest
 .PHONY: docker-builder
 docker-builder:
 	printf 'Making Docker builder with tag:\n\n    %s\n\n' $(DOCKER_BUILDER_TAG)
-	docker build --tag $(DOCKER_BUILDER_TAG) .
+	docker build --tag $(DOCKER_BUILDER_TAG) -f docker/builder.dockerfile .
 
 ## NOTE: The dependency in `clean` is mandatory so as to avoid permissions
 ## errors. It has to do with the use of `docker cp` not giving the right
@@ -314,7 +314,7 @@ docker-builder:
 ## Docker.
 ##
 %@docker: clean
-	printf 'Running `make %s` inside Docker.\n' "$*"
+	printf 'Running `make %s` inside Docker builder.\n' "$*"
 	cid=$$(docker create $(DOCKER_BUILDER_TAG) make $* MAKEFLAGS=$(MAKEFLAGS))
 	docker cp . "$$cid":/wd
 	docker start --attach "$$cid"

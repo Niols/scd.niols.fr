@@ -28,8 +28,8 @@ jobs:
       - name: Build Docker Builder Image
         uses: docker/build-push-action@v3.1.0
         with:
+          file: docker/builder.dockerfile
           context: .
-          tags: builder
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -50,6 +50,7 @@ jobs:
       - name: Load Docker Builder Image
         uses: docker/build-push-action@v3.1.0
         with:
+          file: docker/builder.dockerfile
           context: .
           load: true
           tags: builder
@@ -212,6 +213,7 @@ jobs:
       - name: Publish Docker Builder Image
         uses: docker/build-push-action@v3.1.0
         with:
+          file: docker/builder.dockerfile
           context: .
           push: true
           tags: ghcr.io/niols/scd.niols.fr-builder
