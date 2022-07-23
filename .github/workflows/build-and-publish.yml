@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
           name: website
-          path: build
+          path: _build/website
 
   ############################################################################
   ## Build Documentation
@@ -85,14 +85,14 @@ jobs:
 
       - name: Generate Documentation for Schemas
         run: |
-          mkdir -p doc/schema
-          generate-schema-doc 'database/_schema/*.yaml' doc/schema
+          mkdir -p _build/doc/schema
+          generate-schema-doc 'database/_schema/*.yaml' _build/doc/schema
 
       - name: Upload Documentation as Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
           name: documentation
-          path: doc
+          path: _build/doc
 
   ############################################################################
   ## Publish Website
@@ -109,13 +109,13 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           name: website
-          path: build/
+          path: ./website
 
       - name: Publish Website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
-          ## Publish `./build` with following commit message...
-          publish_dir: ./build
+          ## Publish `./website` with following commit message...
+          publish_dir: ./website
           full_commit_message: |
             Bump to ${{ github.sha }}: ${{ github.event.head.message }}
           ## ...to branch `pages` with the right access token...
@@ -142,13 +142,13 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           name: website
-          path: build/
+          path: ./website
 
       - name: Download Documentation from Artifacts
         uses: actions/download-artifact@v3.0.0
         with:
           name: documentation
-          path: build/_doc/
+          path: ./website/_doc/
 
       - name: Prepare Metadata for Publishing the Dev Website
         run: |
@@ -170,8 +170,8 @@ jobs:
       - name: Publish Dev Website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
-          ## Publish `./build` with following commit message...
-          publish_dir: ./build
+          ## Publish `./website` with following commit message...
+          publish_dir: ./website
           full_commit_message: ${{ env.commit_message }}
           ## ...to https://github.com/Niols/dev.scd.niols.fr on branch `pages`
           ## with the right access token...

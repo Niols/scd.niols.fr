@@ -32,7 +32,8 @@ SHELL = sh
 ##  some lists of objects gotten from the database.
 
 ## The target build directory.
-build := ./build
+output := ./_build
+website-output := $(output)/website
 
 ## Where to find the database and the views.
 database := ./database
@@ -43,13 +44,13 @@ shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
 
-## The list of dances in the database and their target names in $(build).
+## The list of dances in the database and their target names in $(website-output).
 dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
-built_dances := $(addprefix $(build)/dance/, $(dances))
+built_dances := $(addprefix $(website-output)/dance/, $(dances))
 
-## The list of tunes in the database and their target names in $(build).
+## The list of tunes in the database and their target names in $(website-output).
 tunes := $(notdir $(basename $(wildcard $(database)/tune/*.yaml)))
-built_tunes := $(addprefix $(build)/tune/, $(tunes))
+built_tunes := $(addprefix $(website-output)/tune/, $(tunes))
 
 ################################################################################
 ##   _  _     _        __        ___ _
@@ -67,7 +68,7 @@ help:
 
 clean:
 	printf 'Cleaning up.\n'
-	rm -Rf $(build)
+	rm -Rf $(output)
 
 ################################################################################
 ##   ___      _ _    _
@@ -75,25 +76,28 @@ clean:
 ##  | _ \ || | | / _` |
 ##  |___/\_,_|_|_\__,_|
 ##
-##  How to build the shape of the $(build) directory. The rules later on will
+##  How to build the shape of the $(website-output) directory. The rules later on will
 ##  depend on this shape, unless they clearly depend on something that implies
 ##  that the shape already exists.
 
-$(build):
-	mkdir $(build)
+$(output):
+	mkdir $(output)
 
-$(build)/dance: $(build)
-	mkdir $(build)/dance
+$(website-output): $(output)
+	mkdir $(website-output)
 
-$(build)/tune: $(build)
-	mkdir $(build)/tune
+$(website-output)/dance: $(website-output)
+	mkdir $(website-output)/dance
+
+$(website-output)/tune: $(website-output)
+	mkdir $(website-output)/tune
 
 ############################################################
 ## Individual dances
 
 ## Generate a JSON file out of a database dance entry.
 ##
-$(build)/dance/%.json: $(database)/dance/%.yaml $(build)/dance
+$(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -104,7 +108,7 @@ $(build)/dance/%.json: $(database)/dance/%.yaml $(build)/dance
 
 ## Generate a TeX file out of a dance JSON file.
 ##
-$(build)/dance/%.tex: $(build)/dance/%.json
+$(website-output)/dance/%.tex: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.tex`... ' $*
 	$(shtpen) \
 	  --escape tex \
@@ -116,7 +120,7 @@ $(build)/dance/%.tex: $(build)/dance/%.json
 
 ## Generate a PDF file out of a dance TeX file.
 ##
-$(build)/dance/%.pdf: $(build)/dance/%.tex
+$(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 	printf 'Making `dance/%s.pdf`... ' $*
 	cd $(dir $<)
 	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
@@ -124,7 +128,7 @@ $(build)/dance/%.pdf: $(build)/dance/%.tex
 
 ## Generate a HTML file out of a dance JSON file.
 ##
-$(build)/dance/%.html: $(build)/dance/%.json
+$(website-output)/dance/%.html: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
@@ -138,12 +142,12 @@ $(build)/dance/%.html: $(build)/dance/%.json
 ############################################################
 ## Index of dances
 
-$(build)/dances.json: $(addsuffix .json, $(built_dances))
+$(website-output)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`... '
 	jq -s '{dances:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(build)/dances.html: $(build)/dances.json
+$(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`... '
 	$(shtpen) \
 	  --escape html \
@@ -159,7 +163,7 @@ $(build)/dances.html: $(build)/dances.json
 
 ## Generate a JSON file out of a database tune entry.
 ##
-$(build)/tune/%.json: $(database)/tune/%.yaml $(build)/tune
+$(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
@@ -170,7 +174,7 @@ $(build)/tune/%.json: $(database)/tune/%.yaml $(build)/tune
 
 ## Generate a LilyPond file out of a tune JSON file.
 ##
-$(build)/tune/%.ly: $(build)/tune/%.json
+$(website-output)/tune/%.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.ly`... ' $*
 	$(shtpen) \
 	  --json $< \
@@ -186,7 +190,7 @@ $(build)/tune/%.ly: $(build)/tune/%.json
 
 ## Generate a PDF file out of a tune LilyPond file.
 ##
-$(build)/tune/%.pdf: $(build)/tune/%.ly
+$(website-output)/tune/%.pdf: $(website-output)/tune/%.ly
 	printf 'Making `tune/%s.pdf`... ' $*
 	cd $(dir $<)
 	$(lilypond) $*
@@ -194,7 +198,7 @@ $(build)/tune/%.pdf: $(build)/tune/%.ly
 
 ## Generate a short LilyPond file out of a tune JSON file.
 ##
-$(build)/tune/%.short.ly: $(build)/tune/%.json
+$(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.short.ly`... ' $*
 	$(shtpen) \
 	  --json $< \
@@ -210,7 +214,7 @@ $(build)/tune/%.short.ly: $(build)/tune/%.json
 	printf 'done.\n'
 
 ## Generate a SVG file out of a tune short LilyPond file.
-$(build)/tune/%.svg: $(build)/tune/%.short.ly
+$(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 	printf 'Making `tune/%s.svg`... ' $*
 	cd $(dir $<)
 	$(lilypond) -dbackend=svg $*.short.ly
@@ -221,7 +225,7 @@ $(build)/tune/%.svg: $(build)/tune/%.short.ly
 
 ## Generate a HTML file out of a tune JSON file.
 ##
-$(build)/tune/%.html: $(build)/tune/%.json
+$(website-output)/tune/%.html: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.html`... ' $*
 	$(shtpen) \
 	  --escape html \
@@ -235,12 +239,12 @@ $(build)/tune/%.html: $(build)/tune/%.json
 ############################################################
 ## Index of tunes
 
-$(build)/tunes.json: $(addsuffix .json, $(built_tunes))
+$(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`... '
 	jq -s '{tunes:., root:"."}' $^ > $@
 	printf 'done.\n'
 
-$(build)/tunes.html: $(build)/tunes.json
+$(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`... '
 	$(shtpen) \
 	  --escape html \
@@ -254,18 +258,18 @@ $(build)/tunes.html: $(build)/tunes.json
 ############################################################
 ## Index &
 
-$(build)/index.json: $(build)/dances.json $(build)/tunes.json
+$(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json
 	printf 'Making `index.json`... '
 	jq -s '{dances:.[0].dances, tunes:.[1].tunes, root:"."}' \
 	  $^ \
 	  > $@
 	printf 'done.\n'
 
-$(build)/index.html: $(build)/index.json
+$(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`... '
 	$(shtpen) \
 	  --escape html \
-	  --json $(build)/index.json \
+	  --json $(website-output)/index.json \
 	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/index.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
@@ -277,17 +281,17 @@ $(build)/index.html: $(build)/index.json
 
 .PHONY: dances tunes index css static website
 
-dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(build)/dances.html
-tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .svg, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(build)/tunes.html
-index: $(build)/index.html
+dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(website-output)/dances.html
+tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .svg, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(website-output)/tunes.html
+index: $(website-output)/index.html
 
-css: $(build)
-	cp $(views)/css/reset.css $(build)
-	sassc $(views)/css/style.scss $(build)/style.css
+css: $(website-output)
+	cp $(views)/css/reset.css $(website-output)
+	sassc $(views)/css/style.scss $(website-output)/style.css
 
-static: $(build)
+static: $(website-output)
 	printf 'Copying static files`... '
-	cp -R $(views)/static/* $(build)
+	cp -R $(views)/static/* $(website-output)
 	printf 'done.\n'
 
 website: dances tunes index css static
@@ -314,12 +318,12 @@ docker-builder:
 ## usually passed implicitly, but we need to pass it explicitly here because of
 ## Docker.
 ##
-%@docker:
+%@docker: $(website-output)
 	printf 'Running `make %s` inside Docker builder.\n' "$*"
 	cid=$$(docker create $(DOCKER_BUILDER_TAG) \
 	           sh -c 'cp -R /src/* . && make $* MAKEFLAGS=$(MAKEFLAGS)')
 	docker cp . "$$cid":/src
 	docker start --attach "$$cid"
-	docker cp "$$cid":/wd/$(build)/. $(build)
+	docker cp "$$cid":/wd/$(website-output)/. $(website-output)
 
 ################################################################################
