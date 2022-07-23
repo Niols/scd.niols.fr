@@ -34,10 +34,12 @@ SHELL = sh
 ## The target build directory.
 output := ./_build
 website-output := $(output)/website
+tests-output := $(output)/tests
 
 ## Where to find the database and the views.
 database := ./database
 views := ./views
+tests := ./tests
 
 ## Where to find some utilities.
 shtpen := ./shtpen/shtpen
@@ -91,6 +93,9 @@ $(website-output)/dance: $(website-output)
 
 $(website-output)/tune: $(website-output)
 	mkdir $(website-output)/tune
+
+$(tests-output): $(output)
+	mkdir $(tests-output)
 
 ############################################################
 ## Individual dances
@@ -297,17 +302,87 @@ static: $(website-output)
 website: dances tunes index css static
 
 ################################################################################
+##   _____       _
+##  |_   _|__ __| |_ ___
+##    | |/ -_|_-<  _(_-<
+##    |_|\___/__/\__/__/
+
+.PHONY: tests
+tests: $(tests-output)
+	if ! [ -d $(website-output) ]; then
+	  printf 'The website need to be built first for tests to run.\n'
+	  exit 7
+	fi
+
+	dissimilarities=0
+	unexpected_failures=0
+
+	paths=$$(yq '.paths | length' $(tests)/meta.yaml)
+	for ii in $$(seq 1 $$paths); do
+	  i=$$((ii - 1))
+	  path=$$(yq ".paths[$$i]" $(tests)/meta.yaml)
+	  printf 'Path #%d of %d. `%s`:\n' "$$ii" "$$paths" "$$path"
+	  mkdir -p "$$(dirname $(tests-output)/"$$path")"
+
+	  viewports=$$(yq '.viewports | length' $(tests)/meta.yaml)
+	  for jj in $$(seq 1 $$viewports); do
+	    j=$$((jj - 1))
+	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
+	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
+	    height=$$(yq ".viewports[$$j].height" $(tests)/meta.yaml)
+	    printf '  Viewport #%d of %d: `%s` (%dx%d).\n' "$$jj" "$$viewports" "$$name" "$$width" "$$height"
+
+	    output_path="$$path"."$$width"x"$$height".png
+
+	    firefox --headless --window-size "$$width,$$height" \
+	        --screenshot $(tests-output)/"$$output_path" \
+	        file://$$PWD/$(website-output)/"$$path" \
+	        >/dev/null 2>/dev/null
+	    chmod 644 $(tests-output)/"$$output_path"
+
+	    diff_path="$$path"."$$width"x"$$height".diff.png
+
+	    compare -compose src -metric AE -format '' \
+	        $(tests)/outputs/"$$output_path" $(tests-output)/"$$output_path" \
+	        $(tests-output)/"$$diff_path" \
+	        >/dev/null 2>/dev/null && true
+	    return_code=$$?
+
+	    if [ $$return_code -eq 1 ]; then
+	      dissimilarities=$$((dissimilarities + 1))
+	      printf '    => \e[31mdissimilarity\e[0m.\n'
+	    elif [ $$return_code -ge 2 ]; then
+	      unexpected_failures=$$((unexpected_failures + 1))
+	      printf '    => \e[1;31munexpected failure\e[0m.\n'
+	    fi
+	  done
+	done
+
+	if [ $$unexpected_failures -gt 0 ]; then
+	  printf 'There were \e[1;31m%d unexpected failures\e[0m.\n' "$$unexpected_failures"
+	  exit 2
+	fi
+	if [ $$dissimilarities -gt 0 ]; then
+	  printf 'There were \e[31m%d dissimilarities\e[0m.\n' "$$dissimilarities"
+	  exit 1
+	fi
+
+################################################################################
 ##   ___          _
 ##  |   \ ___  __| |_____ _ _
 ##  | |) / _ \/ _| / / -_) '_|
 ##  |___/\___/\__|_\_\___|_|
 
 DOCKER_BUILDER_TAG := ghcr.io/niols/scd.niols.fr-builder:latest
+DOCKER_TESTER_TAG := ghcr.io/niols/scd.niols.fr-tester:latest
 
-.PHONY: docker-builder
+.PHONY: docker-builder docker-tester
 docker-builder:
 	printf 'Making Docker builder with tag:\n\n    %s\n\n' $(DOCKER_BUILDER_TAG)
 	docker build --tag $(DOCKER_BUILDER_TAG) -f docker/builder.dockerfile .
+docker-tester:
+	printf 'Making Docker tester with tag:\n\n    %s\n\n' $(DOCKER_TESTER_TAG)
+	docker build --tag $(DOCKER_TESTER_TAG) -f docker/tester.dockerfile .
 
 ## NOTE: We `docker cp` to `/src` and not `/wd`. Then, in the Docker container,
 ## we run `cp -R /src/* /wd`. This has the upside to set the permissions of
@@ -323,7 +398,19 @@ docker-builder:
 	cid=$$(docker create $(DOCKER_BUILDER_TAG) \
 	           sh -c 'cp -R /src/* . && make $* MAKEFLAGS=$(MAKEFLAGS)')
 	docker cp . "$$cid":/src
-	docker start --attach "$$cid"
+	docker start --attach "$$cid" && true
+	return_code=$$?
 	docker cp "$$cid":/wd/$(website-output)/. $(website-output)
+	exit $$return_code
+
+tests@docker:
+	printf 'Running `make tests` inside Docker tester.\n' "$*"
+	cid=$$(docker create $(DOCKER_TESTER_TAG) \
+	           sh -c 'cp -R /src/* . && make tests MAKEFLAGS=$(MAKEFLAGS)')
+	docker cp . "$$cid":/src
+	docker start --attach "$$cid" && true
+	return_code=$$?
+	docker cp "$$cid":/wd/$(tests-output)/. $(tests-output)
+	exit $$return_code
 
 ################################################################################
