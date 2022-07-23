@@ -305,18 +305,20 @@ docker-builder:
 	printf 'Making Docker builder with tag:\n\n    %s\n\n' $(DOCKER_BUILDER_TAG)
 	docker build --tag $(DOCKER_BUILDER_TAG) -f docker/builder.dockerfile .
 
-## NOTE: The dependency in `clean` is mandatory so as to avoid permissions
-## errors. It has to do with the use of `docker cp` not giving the right
-## permissions to what has been copied.
+## NOTE: We `docker cp` to `/src` and not `/wd`. Then, in the Docker container,
+## we run `cp -R /src/* /wd`. This has the upside to set the permissions of
+## everything in `/wd` to the user inside the Docker container, which `docker
+## cp` does not do by itself.
 ##
 ## NOTE: `$(MAKEFLAGS)` contains the command-line flags given to `make`. It is
 ## usually passed implicitly, but we need to pass it explicitly here because of
 ## Docker.
 ##
-%@docker: clean
+%@docker:
 	printf 'Running `make %s` inside Docker builder.\n' "$*"
-	cid=$$(docker create $(DOCKER_BUILDER_TAG) make $* MAKEFLAGS=$(MAKEFLAGS))
-	docker cp . "$$cid":/wd
+	cid=$$(docker create $(DOCKER_BUILDER_TAG) \
+	           sh -c 'cp -R /src/* . && make $* MAKEFLAGS=$(MAKEFLAGS)')
+	docker cp . "$$cid":/src
 	docker start --attach "$$cid"
 	docker cp "$$cid":/wd/$(build)/. $(build)
 
