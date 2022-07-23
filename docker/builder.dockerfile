@@ -12,6 +12,9 @@ RUN wget https://github.com/mikefarah/yq/releases/download/v4.25.3/yq_linux_386 
         -qO /usr/local/bin/yq
 RUN chmod +x /usr/local/bin/yq
 
+## Ready a directory to get files from the outside.
+RUN mkdir /src
+
 ## Add group and user `builder`
 RUN addgroup builder \
     && adduser --system --shell /bin/false --disabled-password \
@@ -21,5 +24,4 @@ USER builder
 WORKDIR /wd
 
 ## Copy assets and setup Trebuchet MS
-COPY --chown=builder:builder ./assets/fonts \
-                             /wd/.local/share/fonts/
+COPY --chown=builder:builder ./assets/fonts /wd/.local/share/fonts/

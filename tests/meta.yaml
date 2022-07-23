@@ -1,0 +1,16 @@
+---
+
+viewports:
+  - name: Standard Desktop
+    width: 1920
+    height: 1080
+  - name: Standard Smartphone
+    width: 480
+    height: 853
+
+paths:
+  - index.html
+  - dances.html
+  - tunes.html
+  - dance/la-ville-lumiere.html
+  - tune/la-ville-lumiere.html
