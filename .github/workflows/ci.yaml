@@ -1,6 +1,6 @@
 ---
 
-name: Build and Publish
+name: CI
 
 on:
   push:
@@ -13,9 +13,39 @@ on:
 jobs:
 
   ############################################################################
-  ## Build Docker Builder Image
+  ## Comment on Pull Request
 
-  build-docker-builder:
+  comment-on-pull-request:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request'
+            && github.event.action == 'opened' }}
+
+    steps:
+      - name: Give Link to GitHub Pages for this Pull Request
+        uses: actions/github-script@v6.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Hey! I will publish the pages for this pull request here:\n'
+                  + '\n'
+                  + '- Repository: https://github.com/Niols/dev.scd.niols.fr/\n'
+                  + '- Rendering: http://dev.scd.niols.fr/pr/'+ context.issue.number + '/\n'
+                  + '\n'
+                  + 'For each push, you will see something like:\n'
+                  + '\n'
+                  + '![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)\n'
+                  + '\n'
+                  + 'Just wait for the deployment indicated by the green check mark and you are good to go!'
+            })
+
+  ############################################################################
+  ## Build Website
+
+  build-website:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,61 +56,12 @@ jobs:
         uses: docker/setup-buildx-action@v2.0.0
 
       - name: Build Docker Builder Image
-        uses: docker/build-push-action@v3.1.0
-        with:
-          file: docker/builder.dockerfile
-          context: .
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-  ############################################################################
-  ## Build Docker Tester Image
-
-  build-docker-tester:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Clone Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2.0.0
-
-      - name: Build Docker Tester Image
-        uses: docker/build-push-action@v3.1.0
-        with:
-          file: docker/tester.dockerfile
-          context: .
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-  ############################################################################
-  ## Build Website
-
-  build-website:
-    runs-on: ubuntu-latest
-    needs: build-docker-builder
-
-    steps:
-      - name: Clone Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2.0.0
-
-      - name: Load Docker Builder Image
-        uses: docker/build-push-action@v3.1.0
-        with:
-          file: docker/builder.dockerfile
-          context: .
-          load: true
-          tags: builder
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+        run: |
+          make docker-builder
 
       - name: Build Website
         run: |
-          make website@docker DOCKER_BUILDER_TAG=builder
+          make website@docker
 
       - name: Upload Website as Artifact
         uses: actions/upload-artifact@v3.1.0
@@ -114,13 +95,43 @@ jobs:
           path: _build/doc
 
   ############################################################################
-  ## Run Tests
+  ## Test Schemas
+
+  test-schemas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Install YAML to JSON Converter and JSON Schema Validator
+        run: |
+          wget https://github.com/mikefarah/yq/releases/download/v4.25.3/yq_linux_386 -qO yq
+          chmod +x yq
+          pip install jsonschema==4.7.2
+
+      - name: Convert All Schemas and Database to JSON
+        run: |
+          find database -name '*.yaml' | while read file; do
+            printf 'Converting `%s`.\n' "$file"
+            ./yq --output-format json "$file" > "${file%.yaml}".json
+          done
+
+      - name: Run JSON Validator for all Schemas on the Database
+        run: |
+          for type in dance tune; do
+            for file in database/$type/*.json; do
+              jsonschema --output pretty --instance "$file" database/_schema/$type.json
+            done
+          done
+
+  ############################################################################
+  ## Test Website
 
   test-website:
     runs-on: ubuntu-latest
     needs:
       - build-website
-      - build-docker-tester
 
     steps:
       - name: Clone Repository
@@ -135,19 +146,13 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2.0.0
 
-      - name: Load Docker Tester Image
-        uses: docker/build-push-action@v3.1.0
-        with:
-          file: docker/tester.dockerfile
-          context: .
-          load: true
-          tags: tester
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+      - name: Build Docker Tester Image
+        run: |
+          make docker-tester
 
       - name: Run Tests
         run: |
-          make tests@docker DOCKER_TESTER_TAG=tester
+          make tests@docker
 
       - name: Upload Tests as Artifact
         if: ${{ always() }}
@@ -275,11 +280,10 @@ jobs:
           cname: dev.scd.niols.fr
 
   ############################################################################
-  ## Publish Docker Builder
+  ## Build & Publish Docker Builder Image
 
-  publish-docker-builder:
+  build-publish-docker-builder:
     runs-on: ubuntu-latest
-    needs: build-docker-builder
 
     if: ${{ github.ref == 'refs/heads/main' }}
 
@@ -290,14 +294,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2.0.0
 
-      - name: Authenticate to the GitHub Package Registry
-        uses: docker/login-action@v2.0.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish Docker Builder Image
+      - name: Build & Publish Docker Builder Image
         uses: docker/build-push-action@v3.1.0
         with:
           file: docker/builder.dockerfile
@@ -308,11 +305,10 @@ jobs:
           cache-to: type=gha,mode=max
 
   ############################################################################
-  ## Publish Docker Tester
+  ## Build & Publish Docker Tester Image
 
-  publish-docker-tester:
+  build-publish-docker-tester:
     runs-on: ubuntu-latest
-    needs: build-docker-tester
 
     if: ${{ github.ref == 'refs/heads/main' }}
 
@@ -323,14 +319,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2.0.0
 
-      - name: Authenticate to the GitHub Package Registry
-        uses: docker/login-action@v2.0.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish Docker Tester Image
+      - name: Build & Publish Docker Tester Image
         uses: docker/build-push-action@v3.1.0
         with:
           file: docker/tester.dockerfile
@@ -343,18 +332,18 @@ jobs:
   ############################################################################
   ## Check all
 
-  check-build-and-publish:
+  check-ci:
     runs-on: ubuntu-latest
     needs:
-      - build-docker-builder
-      - build-docker-tester
+      - comment-on-pull-request
       - build-website
       - build-documentation
+      - test-schemas
       - test-website
-      - publish-docker-builder
-      - publish-docker-tester
       - publish-website
       - publish-dev-website
+      - build-publish-docker-builder
+      - build-publish-docker-tester
 
     ## Run only if no dependency failed. We allow them to have been skipped.
     if: ${{ failure() != true }}
