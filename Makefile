@@ -367,6 +367,37 @@ tests: $(tests-output)
 	  exit 1
 	fi
 
+.PHONY: promote-test-outputs
+promote-test-outputs:
+	if ! [ -d $(tests-output) ]; then
+	  printf 'The tests need to have been run before being promoted.\n'
+	  exit 7
+	fi
+
+	printf 'Promoting all the tests outputs.\n'
+
+	paths=$$(yq '.paths | length' $(tests)/meta.yaml)
+	for ii in $$(seq 1 $$paths); do
+	  i=$$((ii - 1))
+	  path=$$(yq ".paths[$$i]" $(tests)/meta.yaml)
+	  printf '  Path #%d of %d. `%s`:\n' "$$ii" "$$paths" "$$path"
+	  mkdir -p "$$(dirname $(tests)/outputs/"$$path")"
+
+	  viewports=$$(yq '.viewports | length' $(tests)/meta.yaml)
+	  for jj in $$(seq 1 $$viewports); do
+	    j=$$((jj - 1))
+	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
+	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
+	    height=$$(yq ".viewports[$$j].height" $(tests)/meta.yaml)
+	    printf '    Viewport #%d of %d: `%s` (%dx%d).\n' "$$jj" "$$viewports" "$$name" "$$width" "$$height"
+
+	    output_path="$$path"."$$width"x"$$height".png
+
+	    cp $(tests-output)/"$$output_path" $(tests)/outputs/"$$output_path"
+	  done
+	done
+
+
 ################################################################################
 ##   ___          _
 ##  |   \ ___  __| |_____ _ _
