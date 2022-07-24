@@ -1,0 +1,58 @@
+---
+
+name: Emmy's Wedding
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar Reel
+short-kind: R32
+
+date: 2022-05-23
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key f \major
+
+      \partial 2 f8 g a bes |
+      \repeat volta 2 {
+        c4 a8 f bes4 g8 e |
+        f8 e f a c,4 c |
+        bes'8 a bes d g, a bes d |
+        c8 b c e g,4 a8 bes |
+        \break
+
+        c4 a8 f bes4 g8 e |
+        f8 e f a c,4 c |
+        bes'8 a bes d c b c e |
+        f,4 f f8 c' d e |
+        \break \bar "||"
+
+        f8 c a' c, g' c, e c |
+        d8 a f' a, e' a, c a |
+        bes8 d c bes a g f e |
+        e8 f g e bes'4 a8 g |
+        \break
+
+        f'8 c a' c, g' c, e c |
+        d8 a f' a, e' a, c a |
+        bes8 d c bes a g f e |
+      } \alternative { {
+        f4 f f8 g a bes |
+      } {
+        f4 f f
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s2 |
+        f2 c:7 | f1 | bes2 g:m | c c:7 |
+        f2 c:7 | f1 | bes2 c:7 | f c:7 |
+
+        f2 c:7 | d:m a:m | g:m f | e:dim c:7 |
+        f2 c:7 | d:m a:m | bes c:7 | f c:7 | f f4
+      }
+    }
+  >>
