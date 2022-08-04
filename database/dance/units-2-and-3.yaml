@@ -1,0 +1,128 @@
+---
+
+name: Units 2 and 3
+author: David Osgarby
+
+kind: 32-bar jig for three couples in a four-couple longwise set
+short-kind: J32 3/4L
+
+description:
+
+  - type: phrase
+    starts: 1
+    ends: 2
+    contents:
+      - type: text
+        content: |
+          1st couple turn halfway with right hands while 2nd and 3rd couples
+          set.
+
+  - type: phrase
+    starts: 3
+    ends: 4
+    contents:
+      - type: text
+        content: |
+          1st man and 2nd woman cast down one place while 3rd woman dances in
+          and up to first place, and 1st woman and 2nd man dance in and down
+          one place while 3rd man casts up to 1st place.
+
+  - type: phrase
+    starts: 5
+    ends: 6
+    contents:
+      - type: text
+        content: |
+          3rd couple turn halfway with right hands, while 2nd and 3rd couples
+          set.
+
+  - type: phrase
+    starts: 7
+    ends: 8
+    contents:
+      - type: text
+        content: |
+          3rd and 1st men cast down one place while 2nd woman dances in and up
+          to first place, and 3rd and 1st women dance in and down one place
+          while 2nd man casts up to first place.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    contents:
+      - type: text
+        content: |
+          2nd and 3rd couple turn partner halfway with right hands, and chase
+          around clockwise two places. Repeat four bars from these positions
+          returning to position at beginning of bar 9.
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    contents:
+      - type: text
+        content: |
+          3rd couple, followed by 2nd couple dance a figure of eight around 1st
+          couple and up the sides, finishing 3rd couple in first place and 2nd
+          couple in second place.
+
+  - type: phrase
+    starts: 25
+    ends: 26
+    contents:
+      - type: text
+        content: |
+          3rd couple turn halfway with the right hand while 2nd and 1st couples
+          set.
+
+  - type: phrase
+    starts: 27
+    ends: 28
+    contents:
+      - type: text
+        content: |
+          3rd and 2nd women cast down one place while 1st man dances in and up
+          to first place, and 3rd and 2nd men dance in and down one place while
+          1st woman casts up to first place.
+
+  - type: phrase
+    starts: 29
+    ends: 30
+    contents:
+      - type: text
+        content: |
+          1st couple turn halfway with right hands while 3rd and 2nd couples
+          set.
+
+  - type: phrase
+    starts: 31
+    ends: 32
+    contents:
+      - type: text
+        content: |
+          1st and 3rd women cast down one place while 2nd woman dances in and up
+          to first place, and 1st and 3rd men dance in and down one place while
+          2nd man casts up to first place.
+
+  - type: repeat
+    kind: having passed a couple
+
+  - type: note
+    content: |
+      During bars 3-4, 7-8, 27-28 and 31-32, dancers who change place by dancing
+      in and up/down curve into place.
+
+  - type: devised by
+    deviser: David Osgarby, RSCDS Canberra and District Branch
+    more: |
+      in St Andrews in July 2022. “I devised this dance at the 2022 St Andrews
+      Summer School while doing Units 2 and 3 of the RSCDS teaching certificate.
+      The dance was devised such that the 2s and 3s are showcased representing
+      Units 2 and 3. The vigour of the dance represents the high level of effort
+      put in by students during the course. Each dancer dances from several
+      positions, similar to how we have been taking the position of different
+      dancers to demonstrate formations. That the ones are still during bars
+      9-24 represents spending time observing other dancers and teachers during
+      the course. The plentiful curving and casting to change positions on the
+      side lines was included to demonstrate good kilt control (or lack
+      thereof)!”
