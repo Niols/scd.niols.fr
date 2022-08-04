@@ -57,6 +57,13 @@ render_description_item () {
 			exists more && printf ' %s' "$(text more)"
 			;;
 
+		'recommended tune')
+			printf 'Recommended tune: \\tune{%s}' "$(text tune)"
+			exists composer && printf ', by \\composer{%s}' "$(text composer)"
+			printf '.'
+			exists more && printf ' %s' "$(text more)"
+			;;
+
 		*)
 			die 'Unknown dance description item type: `%s`' "$(raw type)"
 			;;

@@ -119,6 +119,7 @@ $defs:
       - $ref: "#/$defs/repeat"
       - $ref: "#/$defs/devised-by"
       - $ref: "#/$defs/music-by"
+      - $ref: "#/$defs/recommended-tune"
 
   note:
     title: "Dance Description Item: Note"
@@ -290,6 +291,40 @@ $defs:
         composer: Pascaline Latour
       - type: music by
         composer: Anne Lanvin
+        tune: The Sober Piper
+        more: |
+          Alternatively, one can use one of the tunes for “The Reel of the 51st
+          Division”: “The Drunken Piper”, by Alex McLeod.
+
+  recommended-tune:
+    title: "Dance Description Item: Recommended Tune"
+    description: A dance description recommended tune item.
+    type: object
+    required:
+      - type
+      - tune
+    properties:
+      type:
+        enum: ["recommended tune"]
+      composer:
+        type: string
+        description: |
+          The composer of the tune.
+      tune:
+        type: string
+        description: |
+          The name of the tune.
+      more:
+        type: string
+        description: |
+          A string to be added after the name of the composer or the name of the
+          tune. It should start with a capital letter.
+    additionalProperties: false
+    examples:
+      - type: recommended tune
+        tune: La Ville Lumière
+        composer: Pascaline Latour
+      - type: recommended tune
         tune: The Sober Piper
         more: |
           Alternatively, one can use one of the tunes for “The Reel of the 51st

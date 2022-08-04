@@ -76,6 +76,15 @@ render_description_item () {
             printf '</div>'
             ;;
 
+        'recommended tune')
+            printf '<div class="music-by">'
+            printf 'Recommended tune: <span class="tune">%s</span>' "$(text tune)"
+            exists composer && printf ', by <span class="composer">%s</span>' "$(text composer)"
+            printf '.'
+            exists more && printf ' %s' "$(text more)"
+            printf '</div>'
+            ;;
+
         *)
             die 'Unknown dance description item type: `%s`' "$(raw type)"
             ;;
