@@ -1,0 +1,75 @@
+{
+  "name": "Et voilà !",
+  "author": "Violaine Eysseric",
+  "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
+  "short-kind": "M40 12S",
+  "description": [
+    {
+      "type": "phrase",
+      "starts": 1,
+      "ends": 8,
+      "contents": [
+        {
+          "type": "text",
+          "content": "The persons in the middle of all trios dance left hands accross in the\nmiddle of the square and right hands accross back to original place\nwhile the other persons dance eight hands round to the left and back.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 9,
+      "ends": 16,
+      "contents": [
+        {
+          "type": "text",
+          "content": "1st and 3rd trios dance a reel of four accross the set. In each trio,\nthe person in the middle dances in tandem with the person on their\nright; the person in the middle has the lead to start, and the lead\nchanges halfway in the reel. The tandems pass left shoulder to begin.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 17,
+      "ends": 20,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All trios dance anti-clockwise one place, finishing facing inside the\nsquare.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 21,
+      "ends": 24,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All trios dance »modified set and link for three«: in each trio, the\nthree persons set; the person on the left dances in to finish facing\nout in the person on the right's position; the person in the middle\nand the person on the right cast off one place to finish in promenade\nhold in the person on the left and the person in the middle's\npositions.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 25,
+      "ends": 40,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All dance “Schiehallion reels” all round; the persons in promenade\nhold sticking together as one unit.\n"
+        }
+      ]
+    },
+    {
+      "type": "repeat",
+      "kind": "custom",
+      "text": "Repeat as strathspey and then as reel, twice. All trios progress by one\nside of the square each time through as persons in trio get reordered: the\npersons on the left, in the middle and on the right becoming the persons\non the right, on the left and in the middle respectively.\n"
+    },
+    {
+      "type": "devised by",
+      "deviser": "Violaine Eysseric",
+      "more": "during the teaching certificate class in weeks 1 and 2 of Summer School\n2022 as a gift for Rachel Shankland and George Meikle: “The candidates\ndevised dances and created ‘The Doonhamers' Book’. This dance is for\ntwelve dancers as there were twelve of us; it also uses a lot of\nformations included in the dances of Unit 2 – even if not always in the\nusual way!”\n"
+    }
+  ],
+  "slug": "et-voila",
+  "root": ".."
+}
