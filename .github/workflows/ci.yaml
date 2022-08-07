@@ -302,7 +302,7 @@ jobs:
         uses: docker/setup-buildx-action@v2.0.0
 
       - name: Build & Publish Docker Builder Image
-        uses: docker/build-push-action@v3.1.0
+        uses: docker/build-push-action@v3.1.1
         with:
           file: docker/builder.dockerfile
           context: .
@@ -334,7 +334,7 @@ jobs:
         uses: docker/setup-buildx-action@v2.0.0
 
       - name: Build & Publish Docker Tester Image
-        uses: docker/build-push-action@v3.1.0
+        uses: docker/build-push-action@v3.1.1
         with:
           file: docker/tester.dockerfile
           context: .
