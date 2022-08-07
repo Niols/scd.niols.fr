@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.8.7)  7 AUG 2022 19:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.8.7)  7 AUG 2022 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**two-blue-clouds-in-the-grey-sky.tex
-(./two-blue-clouds-in-the-grey-sky.tex
+**a-wee-journey.tex
+(./a-wee-journey.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03> (/usr/share/texlive/texmf
 -dist/tex/latex/memoir/memoir.cls
@@ -1097,8 +1097,8 @@ File: ppxetex.def 2021/01/09 v0.5r Pdfpages driver for XeTeX (AM)
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
 )
-No file two-blue-clouds-in-the-grey-sky.aux.
-\openout1 = `two-blue-clouds-in-the-grey-sky.aux'.
+No file a-wee-journey.aux.
+\openout1 = `a-wee-journey.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 237.
 LaTeX Font Info:    ... okay on input line 237.
@@ -1248,7 +1248,7 @@ LaTeX Info: Redefining \ref on input line 237.
 LaTeX Info: Redefining \pageref on input line 237.
 LaTeX Info: Redefining \nameref on input line 237.
 \@outlinefile=\write5
-\openout5 = `two-blue-clouds-in-the-grey-sky.out'.
+\openout5 = `a-wee-journey.out'.
 
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
@@ -1267,56 +1267,62 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 LaTeX Font Info:    Font shape `TU/TrebuchetMS(0)/m/n' will be
 (Font)              scaled to size 18.1318pt on input line 241.
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 257--257
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 264--264
+[]\TU/TrebuchetMS(0)/m/n/10.95 14  
+ []
+
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 271--271
+ []\TU/TrebuchetMS(0)/m/n/10.95 15
+ []
+
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 271--271
 []\TU/TrebuchetMS(0)/m/n/10.95 16  
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 265--265
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 279--279
  []\TU/TrebuchetMS(0)/m/n/10.95 17
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 265--265
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 279--279
+[]\TU/TrebuchetMS(0)/m/n/10.95 24  
+ []
+
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 288--288
+ []\TU/TrebuchetMS(0)/m/n/10.95 25
+ []
+
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 288--288
 []\TU/TrebuchetMS(0)/m/n/10.95 32  
  []
 
-
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 272--272
- []\TU/TrebuchetMS(0)/m/n/10.95 33
- []
-
-
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 272--272
-[]\TU/TrebuchetMS(0)/m/n/10.95 40  
- []
-
-LaTeX Font Info:    Font shape `TU/TrebuchetMS(0)/m/it' will be
-(Font)              scaled to size 9.02469pt on input line 280.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ) [1
 
-] (./two-blue-clouds-in-the-grey-sky.aux)
+] (./a-wee-journey.aux)
 
-Package rerunfilecheck Warning: File `two-blue-clouds-in-the-grey-sky.out' has 
-changed.
+Package rerunfilecheck Warning: File `a-wee-journey.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `two-blue-clouds-in-the-grey-sky.out
-':
+Package rerunfilecheck Info: Checksums for `a-wee-journey.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32751 strings out of 479212
- 646948 string characters out of 5875087
- 1021463 words of memory out of 5000000
- 51833 multiletter control sequences out of 15000+600000
- 403950 words of font info for 48 fonts, out of 8000000 for 9000
+ 32749 strings out of 479212
+ 646704 string characters out of 5875087
+ 1024409 words of memory out of 5000000
+ 51832 multiletter control sequences out of 15000+600000
+ 403942 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,11n,120p,498b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,11n,120p,480b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on two-blue-clouds-in-the-grey-sky.pdf (1 page).
+Output written on a-wee-journey.pdf (1 page).
