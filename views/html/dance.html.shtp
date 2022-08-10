@@ -50,6 +50,7 @@ if exists description; then
                 ;;
 
             'repeat')
+                printf '<div class="repeat">'
                 case $(raw kind) in
                     'from new positions')
                         printf 'Repeat from new positions.'
@@ -63,6 +64,7 @@ if exists description; then
                     *)
                         die 'Unknown dance description repeat kind: `%s`' "$(raw kind)"
                 esac
+                printf '</div>'
                 ;;
 
             'devised by')
