@@ -70,5 +70,8 @@ p {
   .dance-description > .phrase > .contents {
     flex: none; }
 
+.dance-description > blockquote {
+  font-style: italic; }
+
 .tune-preview > img {
   width: 100%; }

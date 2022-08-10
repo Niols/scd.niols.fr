@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.8.7)  7 AUG 2022 19:39
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.8.10)  10 AUG 2022 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1301,6 +1301,8 @@ Overfull \hbox (0.66443pt too wide) in paragraph at lines 288--288
 []\TU/TrebuchetMS(0)/m/n/10.95 32  
  []
 
+LaTeX Font Info:    Font shape `TU/TrebuchetMS(0)/m/it' will be
+(Font)              scaled to size 9.02469pt on input line 295.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
@@ -1317,11 +1319,11 @@ Package rerunfilecheck Info: Checksums for `a-wee-journey.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32749 strings out of 479212
- 646704 string characters out of 5875087
+ 32751 strings out of 479212
+ 646786 string characters out of 5875086
  1024409 words of memory out of 5000000
- 51832 multiletter control sequences out of 15000+600000
- 403942 words of font info for 47 fonts, out of 8000000 for 9000
+ 51833 multiletter control sequences out of 15000+600000
+ 403950 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  98i,11n,120p,480b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 
