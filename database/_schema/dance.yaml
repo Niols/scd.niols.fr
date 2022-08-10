@@ -119,6 +119,7 @@ $defs:
       - $ref: "#/$defs/devised-by"
       - $ref: "#/$defs/music-by"
       - $ref: "#/$defs/recommended-tune"
+      - $ref: "#/$defs/quote"
 
   note:
     title: "Dance Description Item: Note"
@@ -328,3 +329,27 @@ $defs:
         more: |
           Alternatively, one can use one of the tunes for “The Reel of the 51st
           Division”: “The Drunken Piper”, by Alex McLeod.
+
+  quote:
+    title: "Dance Description Item: Quote"
+    description: A dance description quote item.
+    type: object
+    required:
+      - type
+      - content
+    properties:
+      type:
+        enum: [quote]
+      content:
+        type: string
+        description: |
+          A string to be included as a quote in the output, modulo some escaping
+          for HTML entities or TeX special characters.
+    additionalProperties: false
+    examples:
+      - type: note
+        content: |
+          This dance is written as a gift for Rachel Shankland and George Meikle
+          that took such good care of us during our Units 2 and 3. The changes
+          of direction give many opportunities for the men to flash their
+          underwear as the RSCDS demands for Unit 2.
