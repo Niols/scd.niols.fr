@@ -10,41 +10,41 @@ description:
 
   - type: phrase
     starts: 1
-    ends: 2
-    contents:
-      - type: text
-        content: |
-          1st couple turn halfway with right hands while 2nd and 3rd couples
-          set.
-
-  - type: phrase
-    starts: 3
     ends: 4
     contents:
       - type: text
         content: |
-          1st man and 2nd woman cast down one place while 3rd woman dances in
-          and up to first place, and 1st woman and 2nd man dance in and down
-          one place while 3rd man casts up to 1st place.
+          1st, 2nd and 3rd couples dance ”a unit 3 lesson“ from original
+          positions, finishing in order 3, 1, 2 with 1st couple on opposite
+          lines.
+      - type: phrase
+        starts: 1
+        ends: 2
+        contents:
+          - type: text
+            content: |
+              1st couple position turn halfway by the right while 2nd and 3rd
+              couple positions set.
+      - type: phrase
+        starts: 3
+        ends: 4
+        contents:
+          - type: text
+            content: |
+              On the womens' line, 1st and 2nd positions cast down one place
+              while 3rd position dances in and up to first place. On the mens'
+              line, 1st and 2nd positions dance in and down one place while 3rd
+              position casts up to first place.
 
   - type: phrase
     starts: 5
-    ends: 6
-    contents:
-      - type: text
-        content: |
-          3rd couple turn halfway with right hands, while 2nd and 3rd couples
-          set.
-
-  - type: phrase
-    starts: 7
     ends: 8
     contents:
       - type: text
         content: |
-          3rd and 1st men cast down one place while 2nd woman dances in and up
-          to first place, and 3rd and 1st women dance in and down one place
-          while 2nd man casts up to first place.
+          2nd, 3rd and 1st couples dance a “unit 3 lesson” again from new
+          places, finishing in order 2, 3, 1 with 3rd and 1st couples on
+          opposite lines.
 
   - type: phrase
     starts: 9
@@ -53,8 +53,9 @@ description:
       - type: text
         content: |
           2nd and 3rd couple turn partner halfway with right hands, and chase
-          around clockwise two places. Repeat four bars from these positions
-          returning to position at beginning of bar 9.
+          around clockwise two places. Repeat four bars from these positions,
+          finishing again in order 2, 3, 1 with 3rd and 1st couples on opposite
+          lines.
 
   - type: phrase
     starts: 17
@@ -62,55 +63,33 @@ description:
     contents:
       - type: text
         content: |
-          3rd couple, followed by 2nd couple dance a figure of eight around 1st
-          couple and up the sides, finishing 3rd couple in first place and 2nd
-          couple in second place.
+          3rd couple, followed by 2nd couple dance a figure of eight down around
+          1st couple and up the sides, finishing in order 3, 2, 1 with 3rd and
+          1st couples on opposite lines.
 
   - type: phrase
     starts: 25
-    ends: 26
-    contents:
-      - type: text
-        content: |
-          3rd couple turn halfway with the right hand while 2nd and 1st couples
-          set.
-
-  - type: phrase
-    starts: 27
     ends: 28
-    contents:
-      - type: text
-        content: |
-          3rd and 2nd women cast down one place while 1st man dances in and up
-          to first place, and 3rd and 2nd men dance in and down one place while
-          1st woman casts up to first place.
+    contents: |
+      3rd, 2nd and 1st couples dance a “unit 3 lesson” again from new places,
+      finishing in order 1, 3, 2 with 1st couple on opposite line.
 
   - type: phrase
     starts: 29
-    ends: 30
-    contents:
-      - type: text
-        content: |
-          1st couple turn halfway with right hands while 3rd and 2nd couples
-          set.
-
-  - type: phrase
-    starts: 31
     ends: 32
     contents:
       - type: text
         content: |
-          1st and 3rd women cast down one place while 2nd woman dances in and up
-          to first place, and 1st and 3rd men dance in and down one place while
-          2nd man casts up to first place.
+          1st, 3rd and 2nd couples dance a “unit 3 lesson” again from new
+          places, finishing in order 2, 1, 3 with all couples on own line.
 
   - type: repeat
     kind: having passed a couple
 
   - type: note
     content: |
-      During bars 3-4, 7-8, 27-28 and 31-32, dancers who change place by dancing
-      in and up/down curve into place.
+      During “unit 3 lessons” on bars 3-4, 7-8, 27-28 and 31-32, dancers who
+      change place by dancing in and up/down curve into place.
 
   - type: devised by
     deviser: David Osgarby, RSCDS Canberra and District Branch
