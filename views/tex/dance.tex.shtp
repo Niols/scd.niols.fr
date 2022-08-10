@@ -65,6 +65,10 @@ if exists description; then
 				exists more && printf ' %s' "$(text more)"
 				;;
 
+			'quote')
+				printf '{\\em %s}' "$(text content)"
+				;;
+
 			*)
 				die 'Unknown dance description item type: `%s`' "$(raw type)"
 				;;

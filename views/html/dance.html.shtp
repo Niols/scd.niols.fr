@@ -90,6 +90,12 @@ if exists description; then
                 printf '</div>'
                 ;;
 
+            'quote')
+                printf '<blockquote>'
+                printf '%s' "$(text content)"
+                printf '</blockquote>'
+                ;;
+
             *)
                 die 'Unknown dance description item type: `%s`' "$(raw type)"
                 ;;

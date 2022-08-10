@@ -59,6 +59,10 @@ p { margin-top: 1rem; }
             flex: none;
         }
     }
+
+    > blockquote {
+        font-style: italic;
+    }
 }
 
 .tune-preview {
