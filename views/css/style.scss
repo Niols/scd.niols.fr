@@ -1,6 +1,7 @@
 body {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    line-height: 130%;
 }
 
 * { max-width: 100%; }
@@ -26,18 +27,36 @@ h1,h2 { text-align: center; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.4rem; }
 
-h1 { margin-bottom: 0.5rem; }
-header h1 { margin: 0; }
+h1 { margin-bottom: 1rem; }
+
+header h1 {
+    margin: 0;
+    line-height: 120%;
+}
 
 a, a:visited { color: black; }
 header a { text-decoration: none; }
 
-p { margin-top: 1rem; }
+p {
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    p, h1, h2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
 
 .dance-description {
     > * {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: 767px) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     }
 
     > .phrase {
@@ -50,13 +69,14 @@ p { margin-top: 1rem; }
         gap: 0 1rem;
 
         > .bars {
-            flex: none;
-            width: 4rem;
+            flex: 0 0 4rem;
             text-align: center;
         }
 
-        > .contents {
-            flex: none;
+        @media only screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            > .bars { text-align: left; }
+            > .contents { margin-left: 1rem; }
         }
     }
 
