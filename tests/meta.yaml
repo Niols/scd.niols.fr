@@ -1,5 +1,13 @@
 ---
 
+build-arguments:
+  dances:
+    - a-wee-journey
+    - la-ville-lumiere
+  tunes:
+    - la-ville-lumiere
+    - the-translator
+
 viewports:
   - name: Standard Desktop
     width: 1920
@@ -12,5 +20,7 @@ paths:
   - index.html
   - dances.html
   - tunes.html
+  - dance/a-wee-journey.html
   - dance/la-ville-lumiere.html
   - tune/la-ville-lumiere.html
+  - tune/the-translator.html

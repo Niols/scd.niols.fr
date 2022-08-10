@@ -307,6 +307,12 @@ website: dances tunes index css static
 ##    | |/ -_|_-<  _(_-<
 ##    |_|\___/__/\__/__/
 
+.PHONY: test-website
+test-website:
+	dances=$$(yq -r '.build-arguments.dances.[]' $(tests)/meta.yaml)
+	tunes=$$(yq -r '.build-arguments.tunes.[]' $(tests)/meta.yaml)
+	make website dances="$$dances" tunes="$$tunes"
+
 .PHONY: tests
 tests: $(tests-output)
 	if ! [ -d $(website-output) ]; then
@@ -396,7 +402,6 @@ promote-test-outputs:
 	    cp $(tests-output)/"$$output_path" $(tests)/outputs/"$$output_path"
 	  done
 	done
-
 
 ################################################################################
 ##   ___          _
