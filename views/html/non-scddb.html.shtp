@@ -21,7 +21,7 @@ printf       '<tbody>'
 
 iter dances
 while next; do
-    if exists scddb-id; then
+    if ! exists scddb-id; then
         printf '<tr>'
         printf   '<td><a href="dance/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
         printf   '<td>Dance</td>'
@@ -33,7 +33,7 @@ done
 
 iter tunes
 while next; do
-    if exists scddb-id; then
+    if ! exists scddb-id; then
         printf '<tr>'
         printf   '<td><a href="tune/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
         printf   '<td>Tune</td>'
