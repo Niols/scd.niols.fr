@@ -1,5 +1,12 @@
 ---
 
+build-arguments:
+  dances:
+    - la-ville-lumiere
+  tunes:
+    - la-ville-lumiere
+    - the-translator
+
 viewports:
   - name: Standard Desktop
     width: 1920
