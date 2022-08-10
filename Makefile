@@ -281,6 +281,17 @@ $(website-output)/index.html: $(website-output)/index.json
 	  > $@
 	printf 'done.\n'
 
+$(website-output)/non-scddb.html: $(website-output)/index.json
+	printf 'Making `non-scddb.html`... '
+	$(shtpen) \
+	  --escape html \
+	  --json $(website-output)/index.json \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/non-scddb.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
+	  > $@
+	printf 'done.\n'
+
 ############################################################
 ## All
 
@@ -288,7 +299,7 @@ $(website-output)/index.html: $(website-output)/index.json
 
 dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(website-output)/dances.html
 tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .svg, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(website-output)/tunes.html
-index: $(website-output)/index.html
+index: $(website-output)/index.html $(website-output)/non-scddb.html
 
 css: $(website-output)
 	cp $(views)/css/reset.css $(website-output)
