@@ -26,7 +26,7 @@
           FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
             self.packages.x86_64-linux.trebuchetms ]; };
 
-          buildPhase = "make website";
+          buildPhase = "make -j website";
           installPhase = "mkdir -p $out/var/www && cp -R _build/website $out/var/www";
         };
 
