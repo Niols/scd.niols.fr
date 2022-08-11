@@ -1,0 +1,95 @@
+---
+
+name: Spot on
+author: Shona Holmes
+
+kind: "32-bar reel for any number of couples in a circle around the room: women with their partner on their left."
+short-kind: R32
+
+description:
+
+  - type: phrase
+    starts: 1
+    ends: 4
+    contents:
+      - type: text
+        content: |
+          All advance and retire.
+
+  - type: phrase
+    starts: 5
+    ends: 8
+    contents:
+      - type: text
+        content: |
+          All advance and men retire while women stay in the middle, pulling
+          back right shoulder to face out.
+
+  - type: phrase
+    starts: 9
+    ends: 12
+    contents:
+      - type: text
+        content: |
+          Women circle round to the left in the centre while men circle round to
+          the left from places, giving hands if possible. All finish facing new
+          partners.
+
+  - type: phrase
+    starts: 13
+    ends: 16
+    contents:
+      - type: text
+        content: |
+          All turn partners by the left one and a half times to finish with men
+          in the centre facing out and women on the outside facing in.
+
+  - type: phrase
+    starts: 17
+    ends: 20
+    contents:
+      - type: text
+        content: |
+          Women circle round to the right from places, giving hands if possible,
+          while men circle round to the right in the centre. All finish facing
+          original partners.
+
+  - type: phrase
+    starts: 21
+    ends: 24
+    contents:
+      - type: text
+        content: |
+          All dance dosido with their partners.
+
+  - type: phrase
+    starts: 25
+    ends: 28
+    contents:
+      - type: text
+        content: |
+          All dance dosido with the person diagonally to the left.
+
+  - type: phrase
+    starts: 29
+    ends: 32
+    contents:
+      - type: text
+        content: |
+          All take promenade hold with partners and dance round the circle
+          anti-clockwise.
+
+  - type: repeat
+    kind: from new positions
+
+  - type: devised by
+    deviser: Shona Holmes
+    more: |
+      in July 2022.
+
+  - type: quote
+    content: |
+      Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun
+      warm up dance and often described our better moments in dancing and
+      teaching as “Spot on”. Thus, this easy warm up dance was born; the circles
+      in bars 9-12 and 17-20 create perfect spots. Thank you Rachel!
