@@ -1,0 +1,111 @@
+{
+  "name": "Spot on",
+  "author": "Shona Holmes",
+  "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
+  "short-kind": "R32",
+  "description": [
+    {
+      "type": "phrase",
+      "starts": 1,
+      "ends": 4,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All advance and retire.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 5,
+      "ends": 8,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All advance and men retire while women stay in the middle, pulling\nback right shoulder to face out.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 9,
+      "ends": 12,
+      "contents": [
+        {
+          "type": "text",
+          "content": "Women circle round to the left in the centre while men circle round to\nthe left from places, giving hands if possible. All finish facing new\npartners.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 13,
+      "ends": 16,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All turn partners by the left one and a half times to finish with men\nin the centre facing out and women on the outside facing in.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 17,
+      "ends": 20,
+      "contents": [
+        {
+          "type": "text",
+          "content": "Women circle round to the right from places, giving hands if possible,\nwhile men circle round to the right in the centre. All finish facing\noriginal partners.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 21,
+      "ends": 24,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All dance dosido with their partners.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 25,
+      "ends": 28,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All dance dosido with the person diagonally to the left.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 29,
+      "ends": 32,
+      "contents": [
+        {
+          "type": "text",
+          "content": "All take promenade hold with partners and dance round the circle\nanti-clockwise.\n"
+        }
+      ]
+    },
+    {
+      "type": "repeat",
+      "kind": "from new positions"
+    },
+    {
+      "type": "devised by",
+      "deviser": "Shona Holmes",
+      "more": "in July 2022.\n"
+    },
+    {
+      "type": "quote",
+      "content": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun\nwarm up dance and often described our better moments in dancing and\nteaching as “Spot on”. Thus, this easy warm up dance was born; the circles\nin bars 9-12 and 17-20 create perfect spots. Thank you Rachel!\n"
+    }
+  ],
+  "slug": "spot-on",
+  "root": ".."
+}
