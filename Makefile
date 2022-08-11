@@ -110,37 +110,34 @@ $(tests-output): $(output)
 ## Generate a JSON file out of a database dance entry.
 ##
 $(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
-	printf 'Making `dance/%s.json`... ' $*
+	printf 'Making `dance/%s.json`...\n' $*
 	cat $< \
 	  | $(yaml2json) \
 	  | jq '{dance:., slug:"$*", title:(.name + " | Dance"), root:".."}' \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a TeX file out of a dance JSON file.
 ##
 $(website-output)/dance/%.tex: $(website-output)/dance/%.json
-	printf 'Making `dance/%s.tex`... ' $*
+	printf 'Making `dance/%s.tex`...\n' $*
 	$(shtpen) \
 	  --escape tex \
 	  --json $< \
 	  --raw  $(views)/tex/preamble.tex \
 	  --shtp $(views)/tex/dance.tex.shtp \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a PDF file out of a dance TeX file.
 ##
 $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
-	printf 'Making `dance/%s.pdf`... ' $*
+	printf 'Making `dance/%s.pdf`...\n' $*
 	cd $(dir $<)
 	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
-	printf 'done.\n'
 
 ## Generate a HTML file out of a dance JSON file.
 ##
 $(website-output)/dance/%.html: $(website-output)/dance/%.json
-	printf 'Making `dance/%s.html`... ' $*
+	printf 'Making `dance/%s.html`...\n' $*
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
@@ -148,18 +145,16 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	  --shtp $(views)/html/dance.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 ############################################################
 ## Index of dances
 
 $(website-output)/dances.json: $(addsuffix .json, $(built_dances))
-	printf 'Making `dances.json`... '
+	printf 'Making `dances.json`...\n'
 	jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
-	printf 'done.\n'
 
 $(website-output)/dances.html: $(website-output)/dances.json
-	printf 'Making `dances.html`... '
+	printf 'Making `dances.html`...\n'
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
@@ -167,7 +162,6 @@ $(website-output)/dances.html: $(website-output)/dances.json
 	  --shtp $(views)/html/dances.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 ############################################################
 ## Individual tunes
@@ -175,17 +169,16 @@ $(website-output)/dances.html: $(website-output)/dances.json
 ## Generate a JSON file out of a database tune entry.
 ##
 $(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
-	printf 'Making `tune/%s.json`... ' $*
+	printf 'Making `tune/%s.json`...\n' $*
 	cat $< \
 	  | $(yaml2json) \
 	  | jq '{tune:., slug:"$*", title:(.name + " | Tune"), root:".."}' \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a LilyPond file out of a tune JSON file.
 ##
 $(website-output)/tune/%.ly: $(website-output)/tune/%.json
-	printf 'Making `tune/%s.ly`... ' $*
+	printf 'Making `tune/%s.ly`...\n' $*
 	$(shtpen) \
 	  --json $< \
 	  --raw  $(views)/ly/version.ly \
@@ -196,20 +189,18 @@ $(website-output)/tune/%.ly: $(website-output)/tune/%.json
 	  --raw  $(views)/ly/preamble.ly \
 	  --shtp $(views)/ly/tune.ly.shtp \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a PDF file out of a tune LilyPond file.
 ##
 $(website-output)/tune/%.pdf: $(website-output)/tune/%.ly
-	printf 'Making `tune/%s.pdf`... ' $*
+	printf 'Making `tune/%s.pdf`...\n' $*
 	cd $(dir $<)
 	$(lilypond) $*
-	printf 'done.\n'
 
 ## Generate a short LilyPond file out of a tune JSON file.
 ##
 $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
-	printf 'Making `tune/%s.short.ly`... ' $*
+	printf 'Making `tune/%s.short.ly`...\n' $*
 	$(shtpen) \
 	  --json $< \
 	  --raw  $(views)/ly/version.ly \
@@ -221,22 +212,20 @@ $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	  --raw  $(views)/ly/preamble.short.ly \
 	  --shtp $(views)/ly/tune.ly.shtp \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a SVG file out of a tune short LilyPond file.
 $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
-	printf 'Making `tune/%s.svg`... ' $*
+	printf 'Making `tune/%s.svg`...\n' $*
 	cd $(dir $<)
 	$(lilypond) -dbackend=svg $*.short.ly
 	inkscape --batch-process --export-area-drawing --export-plain-svg \
 	  --export-filename=$*.svg $*.short.svg 2>/dev/null
 	rm $*.short.svg
-	printf 'done.\n'
 
 ## Generate a HTML file out of a tune JSON file.
 ##
 $(website-output)/tune/%.html: $(website-output)/tune/%.json
-	printf 'Making `tune/%s.html`... ' $*
+	printf 'Making `tune/%s.html`...\n' $*
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
@@ -244,18 +233,16 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	  --shtp $(views)/html/tune.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 ############################################################
 ## Index of tunes
 
 $(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
-	printf 'Making `tunes.json`... '
+	printf 'Making `tunes.json`...\n'
 	jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
-	printf 'done.\n'
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
-	printf 'Making `tunes.html`... '
+	printf 'Making `tunes.html`...\n'
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
@@ -263,7 +250,6 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 	  --shtp $(views)/html/tunes.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 ############################################################
 ## Individual books
@@ -316,14 +302,13 @@ $(website-output)/books.html: $(website-output)/books.json
 ## Index &
 
 $(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/books.json
-	printf 'Making `index.json`... '
+	printf 'Making `index.json`...\n'
 	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books, root:"."}' \
 	  $^ \
 	  > $@
-	printf 'done.\n'
 
 $(website-output)/index.html: $(website-output)/index.json
-	printf 'Making `index.html`... '
+	printf 'Making `index.html`...\n'
 	$(shtpen) \
 	  --escape html \
 	  --json $(website-output)/index.json \
@@ -331,10 +316,9 @@ $(website-output)/index.html: $(website-output)/index.json
 	  --shtp $(views)/html/index.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 $(website-output)/non-scddb.html: $(website-output)/index.json
-	printf 'Making `non-scddb.html`... '
+	printf 'Making `non-scddb.html`...\n'
 	$(shtpen) \
 	  --escape html \
 	  --json $(website-output)/index.json \
@@ -342,7 +326,6 @@ $(website-output)/non-scddb.html: $(website-output)/index.json
 	  --shtp $(views)/html/non-scddb.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
-	printf 'done.\n'
 
 ############################################################
 ## All
@@ -359,9 +342,8 @@ css: $(website-output)
 	sassc $(views)/css/style.scss $(website-output)/style.css
 
 static: $(website-output)
-	printf 'Copying static files`... '
+	printf 'Copying static files`...\n'
 	cp -R $(views)/static/* $(website-output)
-	printf 'done.\n'
 
 website: dances tunes books index css static
 
