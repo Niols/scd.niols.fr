@@ -1,0 +1,71 @@
+{
+  "name": "In Strathspey Time, George, Please!",
+  "author": "Shona Holmes",
+  "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
+  "short-kind": "?32 2/4L",
+  "description": [
+    {
+      "type": "phrase",
+      "starts": 1,
+      "ends": 8,
+      "contents": [
+        {
+          "type": "text",
+          "content": "1st and 2nd couples advance, retire and turn one and a half times.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 9,
+      "ends": 16,
+      "contents": [
+        {
+          "type": "text",
+          "content": "1st couple, followed by 2nd couple, lead down the middle for three\nsteps. 2nd couple divide to allow 1st couple through and both couples\nlead up. On bars 15-16, retaining right hands, 1st and 2nd couple turn\nby the right to finish on own sides [see note below].\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 17,
+      "ends": 24,
+      "contents": [
+        {
+          "type": "text",
+          "content": "1st and 2nd couples dance the poussette.\n"
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "starts": 25,
+      "ends": 32,
+      "contents": [
+        {
+          "type": "text",
+          "content": "1st and 2nd couples dance right hands across; 1st couple turn by the\nright to finish in second place on own side while 2nd couple moves up\n[see note below].\n"
+        }
+      ]
+    },
+    {
+      "type": "repeat",
+      "kind": "having passed a couple"
+    },
+    {
+      "type": "note",
+      "content": "If danced in jig or reel time, the 1st and 2nd couples need to finish bar\n16 in the middle of the set facing partner. After the poussette, 1st\ncouple is already in second position and they therefore do not need to\nmove down as they turn. 2nd couple do not need to move up.\n"
+    },
+    {
+      "type": "devised by",
+      "deviser": "Shona Holmes",
+      "more": "in August 2022.\n"
+    },
+    {
+      "type": "quote",
+      "content": "George Meikle played wonderfully for our Units 2 and 3, even if not always\nin the tempo we wanted. This dance can be danced in your choice of tempo\nto reflect this.\n"
+    }
+  ],
+  "slug": "in-strathspey-time-george-please",
+  "root": ".."
+}
