@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
-        uses: actions/github-script@v6.1.0
+        uses: actions/github-script@v6.1.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
