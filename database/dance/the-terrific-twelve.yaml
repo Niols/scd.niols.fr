@@ -24,7 +24,7 @@ description:
     contents:
       - type: text
         content: |
-          All turn their partner with the right hand ending in Allemande hold
+          All turn their partner with the right hand ending in allemande hold
           facing up.
 
   - type: phrase
@@ -34,7 +34,7 @@ description:
       - type: text
         content: |
           1st, 2nd and 3rd couples, and at the same time 4th, 5th and 6th
-          couples dance a three-couple Allemande.
+          couples dance a three-couple allemande.
 
   - type: phrase
     starts: 17
@@ -44,7 +44,7 @@ description:
         content: |
           3rd couple with 2nd couple, and at the same time 1st couple with 6th
           couple and 5th couple with 4th couple, dance right hands across and
-          left hands back.
+          left hands back, finishing in the middle of the set facing partner.
 
   - type: phrase
     starts: 25
@@ -54,7 +54,7 @@ description:
         content: |
           3rd couple with 2nd couple, and at the same time 1st couple with 6th
           couple and 5th couple with 4th couple, change places with a two-couple
-          Poussette.
+          poussette.
 
   - type: phrase
     starts: 33
@@ -68,7 +68,7 @@ description:
     kind: from new positions
 
   - type: devised by
-    deviser: Kristian Vestli, Oslo Scottish Country Dance Group
+    deviser: Kristian Vestli
     more: in St Andrews, July 2022.
 
   - type: quote
