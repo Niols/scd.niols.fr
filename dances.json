@@ -3,6 +3,7 @@
     {
       "name": "A Wee Journey",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20990,
       "kind": "32-bar reel for six couples in a six-couple longwise set",
       "short-kind": "R32 6/6L",
       "description": [
@@ -483,6 +484,7 @@
     {
       "name": "Praha Matka Měst",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20992,
       "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
       "short-kind": "M32 3/3L",
       "description": [
@@ -501,7 +503,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st couple set advancing and turn both hands, dance down the middle\nand turn halfway with both hands to face down in Promenade hold. 2nd\ncouple step up on bars 5-6. 2nd and 3rd couples join in on bar 8.\n"
+              "content": "1st couple set advancing and turn both hands, dance down the middle\nand turn halfway with both hands to face down in promenade hold. 2nd\ncouple step up on bars 5-6. 2nd and 3rd couples join in on bar 8.\n"
             }
           ]
         },
@@ -512,7 +514,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "2nd, 1st and 3rd couples dance an Allemande down the dance. On bars\n15-16, 1st couple stays in the middle and set advancing to face first\ncorners in third corner position.\n"
+              "content": "2nd, 1st and 3rd couples dance an allemande down the dance. On bars\n15-16, 1st couple stays in the middle and set advancing to face first\ncorners in third corner position.\n"
             }
           ]
         },
@@ -527,7 +529,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st couple dance corners pass and turn and cast away: Same as corners\npass and turn, except that corners turn halfway right hand and cast\naway to opposite positions. On bars 23-24, 1st couple slows down to\nfinish in the middle on own sides in Poussette hold; 3rd man curves to\nstay in the middle on own side; 3rd woman joins in in Poussette hold.\n"
+              "content": "1st couple dance corners pass and turn and cast away: Same as corners\npass and turn, except that corners turn halfway right hand and cast\naway to opposite positions. On bars 23-24, 1st couple slow down to\nfinish in the middle on own sides in poussette hold; 3rd man curves to\nstay in the middle on own side; 3rd woman joins in in poussette hold.\n"
             }
           ]
         },
@@ -538,7 +540,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st and 3rd couples dance Poussette and petronella: Same five first\nbars as the Poussette. On bar 6, 3rd and 1st couples dance a quarter.\nOn bars 7-8, 3rd and 1st couples dance a petronella turn to opposite\nlines, finishing with 2nd couple in first position, and 3rd and 1st\ncouples improper in second and third position.\n"
+              "content": "1st and 3rd couples dance poussette and petronella: Same five first\nbars as the Poussette. On bar 6, 3rd and 1st couples dance a quarter.\nOn bars 7-8, 3rd and 1st couples dance a petronella turn to opposite\nlines, finishing with 2nd couple in first position and 3rd and 1st\ncouples on opposite line in second and third position.\n"
             }
           ]
         },
@@ -549,11 +551,7 @@
         {
           "type": "devised by",
           "deviser": "Nicolas “Niols” Jeannerod",
-          "more": "in April 2019."
-        },
-        {
-          "type": "music by",
-          "composer": "Nicolas “Niols” Jeannerod"
+          "more": "in Prague in April 2019. The title translates to “Prague, Mother of\nCities” and refers to Prague's motto during the twentieth century. It was\na symbol of the mission of Prague to protect the independence and\nprosperity of the Czecho-Slovakian state.\n"
         }
       ],
       "slug": "praha-matka-mest",
@@ -817,6 +815,7 @@
     {
       "name": "The Mall in St. James’s Park",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20991,
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
       "short-kind": "S32 3/3L",
       "tunes": [
@@ -830,7 +829,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step\nup on bars 3-4.\n"
+              "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step\nup on bars 5-6.\n"
             }
           ]
         },
@@ -841,7 +840,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st couple turns first corners both hands, pass each other right\nshoulder, turn second corners both hands and pass each other right\nshoulder to finish on own sides.\n"
+              "content": "1st couple turn first corners both hands, pass each other right\nshoulder, turn second corners both hands and pass each other right\nshoulder to finish on own sides facing out.\n"
             }
           ]
         },
@@ -888,6 +887,7 @@
       "name": "The Reel of the 51st Confusion",
       "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
       "short-author": "Anne Lanvin et al.",
+      "scddb-id": 20993,
       "kind": "32-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R32 3/3L",
       "tunes": [
@@ -949,7 +949,7 @@
         {
           "type": "devised by",
           "deviser": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas\n“Niols” Jeannerod and Victor Lanvin\n",
-          "more": "on August 8th, 2021. This dance is a variation on one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
+          "more": "on August 8th, 2021. This dance is a variation of one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
         },
         {
           "type": "note",
@@ -968,6 +968,7 @@
     {
       "name": "The Waves",
       "author": "Saskia Frisby",
+      "scddb-id": 20994,
       "kind": "32-bar strathspey for three couples in a four-couple longwise set",
       "short-kind": "S32 3/4L",
       "description": [
