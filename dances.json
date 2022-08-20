@@ -1124,6 +1124,117 @@
       ],
       "slug": "two-blue-clouds-in-the-grey-sky",
       "root": ".."
+    },
+    {
+      "name": "Units 2 and 3",
+      "author": "David Osgarby",
+      "kind": "32-bar jig for three couples in a four-couple longwise set",
+      "short-kind": "J32 3/4L",
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st, 2nd and 3rd couples dance ”a unit 3 lesson“ from original\npositions, finishing in order 3, 1, 2 with 1st couple on opposite\nlines.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 1,
+              "ends": 2,
+              "contents": [
+                {
+                  "type": "text",
+                  "content": "1st couple position turn halfway by the right while 2nd and 3rd\ncouple positions set.\n"
+                }
+              ]
+            },
+            {
+              "type": "phrase",
+              "starts": 3,
+              "ends": 4,
+              "contents": [
+                {
+                  "type": "text",
+                  "content": "1st and 2nd woman positions cast down one place while 3rd woman\nposition dances in and up, curving into first place. In the\nmeantime, 1st and 2nd man positions dance in and down one place,\ncurving into place, while 3rd man position casts up to first\nplace.\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "2nd, 3rd and 1st couples dance a “unit 3 lesson” again from new\nplaces, finishing in order 2, 3, 1 with 3rd and 1st couples on\nopposite lines.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "2nd and 3rd couple turn partner halfway with right hands, and chase\naround clockwise two places. Repeat four bars from these positions,\nfinishing again in order 2, 3, 1 with 3rd and 1st couples on opposite\nlines.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "3rd couple, followed by 2nd couple dance a figure of eight down around\n1st couple and up the sides, finishing in order 3, 2, 1 with 3rd and\n1st couples on opposite lines.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 28,
+          "contents": [
+            {
+              "type": "text",
+              "content": "3rd, 2nd and 1st couples dance a “unit 3 lesson” again from new\nplaces, finishing in order 1, 3, 2 with 1st couple on opposite line.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 29,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st, 3rd and 2nd couples dance a “unit 3 lesson” again from new\nplaces, finishing in order 2, 1, 3 with all couples on own line.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by",
+          "deviser": "David Osgarby",
+          "more": "in St Andrews in July 2022.\n"
+        },
+        {
+          "type": "quote",
+          "content": "I devised this dance at the 2022 St Andrews Summer School while doing\nUnits 2 and 3 of the RSCDS teaching certificate. The dance was devised\nsuch that the 2s and 3s are showcased representing Units 2 and 3. The\nvigour of the dance represents the high level of effort put in by students\nduring the course. Each dancer dances from several positions, similar to\nhow we have been taking the position of different dancers to demonstrate\nformations. That the ones are still during bars 9-24 represents spending\ntime observing other dancers and teachers during the course. The plentiful\ncurving and casting to change positions on the side lines was included to\ndemonstrate good kilt control (or lack thereof)!\n"
+        }
+      ],
+      "slug": "units-2-and-3",
+      "root": ".."
     }
   ],
   "root": "."
