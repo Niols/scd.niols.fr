@@ -31,10 +31,11 @@ description:
         contents:
           - type: text
             content: |
-              On the womens' line, 1st and 2nd positions cast down one place
-              while 3rd position dances in and up to first place. On the mens'
-              line, 1st and 2nd positions dance in and down one place while 3rd
-              position casts up to first place.
+              1st and 2nd woman positions cast down one place while 3rd woman
+              position dances in and up, curving into first place. In the
+              meantime, 1st and 2nd man positions dance in and down one place,
+              curving into place, while 3rd man position casts up to first
+              place.
 
   - type: phrase
     starts: 5
@@ -88,13 +89,8 @@ description:
   - type: repeat
     kind: having passed a couple
 
-  - type: note
-    content: |
-      During “unit 3 lessons” on bars 3-4, 7-8, 27-28 and 31-32, dancers who
-      change place by dancing in and up/down curve into place.
-
   - type: devised by
-    deviser: David Osgarby, RSCDS Canberra and District Branch
+    deviser: David Osgarby
     more: |
       in St Andrews in July 2022.
 
