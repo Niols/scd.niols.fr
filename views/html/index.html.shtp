@@ -72,6 +72,16 @@ while next; do
     printf     '</tr>'
 done
 
+iter books
+while next; do
+    printf     '<tr>'
+    printf       '<td><a href="book/%s.html">%s</a></td>' "$(url slug)" "$(text title)"
+    printf       '<td>Book</td>'
+    printf       '<td></td>'
+    printf       '<td></td>'
+    printf     '</tr>'
+done
+
 printf       '</tbody>'
 printf     '</table>'
 printf   '</section>'
