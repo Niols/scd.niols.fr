@@ -82,6 +82,16 @@ iter () {
     CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
 }
 
+## `enter` gets into a field of the current object and uses as new current
+## object. The previous current object is pushed as parent object and there is
+## no next objects.
+##
+enter () {
+    _get=$(get | jq ".[\"$1\"]")
+    [ "$_get" = null ] && die 'Cannot enter non-existing field `%s`.' "$1"
+    CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:$current, next:[], parent:.}' --argjson current "$_get")
+}
+
 ################################################################################
 ##    ___     _   _
 ##   / __|___| |_| |_ ___ _ _ ___
