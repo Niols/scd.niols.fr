@@ -3,4 +3,4 @@
 ** Contributing
 
 The database format is described by means of [[https://json-schema.org/][JSON schemas]]. See the latest
-version for [[http://dev.scd.niols.fr/branch/main/_doc/schema/dance.html][dances]] and [[http://dev.scd.niols.fr/branch/main/_doc/schema/tune.html][tunes]].
+version for [[http://dev.scd.niols.fr/branch/main/_doc/schema/dance.html][dances]], [[http://dev.scd.niols.fr/branch/main/_doc/schema/tune.html][tunes]] and [[http://dev.scd.niols.fr/branch/main/_doc/schema/book.html][books]].
