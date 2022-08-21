@@ -92,6 +92,14 @@ enter () {
     CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:$current, next:[], parent:.}' --argjson current "$_get")
 }
 
+## `leave` replaces the current context by the parent one.
+##
+leave () {
+    _get=$(printf '%s' "$CONTEXT" | jq '.parent')
+    [ "$_get" = null ] && die 'Cannot leave when there is no parent.'
+    CONTEXT=$_get
+}
+
 ################################################################################
 ##    ___     _   _
 ##   / __|___| |_| |_ ___ _ _ ___
