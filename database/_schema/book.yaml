@@ -1,0 +1,97 @@
+---
+
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$id: book
+title: Book
+
+description: |
+  A book with its metadata and its contents.
+
+type: object
+
+required:
+  - title
+  - summary
+
+properties:
+
+  title:
+    type: string
+    description: |
+      The title of the book.
+    examples:
+      - "The Doonhamers' Book"
+
+  summary:
+    type: string
+    description: |
+      The summary of the book, as a short string.
+    examples:
+      - "8 Scottish Country Dances written for Rachel Shankland and George Meikle"
+
+  scddb-id:
+    type: integer
+    description: |
+      The ID of the book in the SCDDB, if it exists. This is the last integer
+      in the SCDDB URL. For example, if the URL is
+      https://my.strathspey.org/dd/dance/20315/, then the ID is 20315.
+    examples:
+      - 20315
+
+  contents:
+    $ref: "#/$defs/contents"
+
+additionalProperties: false
+
+$defs:
+
+  contents:
+    title: Toplevel Book Contents
+    description: |
+      The contents of a book, that is a non-empty array of book content items
+      of various types.
+    type: array
+    minItems: 1
+    items:
+      oneOf:
+        - $ref: "#/$defs/dance"
+        - $ref: "#/$defs/tune"
+
+  dance:
+    title: "Book Content Item: Dance"
+    description: A book content dance item.
+    type: object
+    required:
+      - type
+      - slug
+    properties:
+      type:
+        enum: [dance]
+      slug:
+        type: string
+        description: |
+          The slug of the dance.
+    additionalProperties: false
+    examples:
+      - type: dance
+        slug: la-ville-lumiere
+
+  tune:
+    title: "Book Content Item: Tune"
+    description: A book content tune item.
+    type: object
+    required:
+      - type
+      - slug
+    properties:
+      type:
+        enum: [tune]
+      slug:
+        type: string
+        description: |
+          The slug of the tune.
+    additionalProperties: false
+    examples:
+      - type: tune
+        slug: la-ville-lumiere
