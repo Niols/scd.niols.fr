@@ -100,6 +100,15 @@ leave () {
     CONTEXT=$_get
 }
 
+## `root` finds the root context.
+##
+root () {
+    _get=$(printf '%s' "$CONTEXT" | jq '.parent')
+    [ "$_get" = null ] && return
+    CONTEXT=$_get
+    root
+}
+
 ################################################################################
 ##    ___     _   _
 ##   / __|___| |_| |_ ___ _ _ ___
