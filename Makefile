@@ -274,8 +274,7 @@ $(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/book
 	printf 'Making `book/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{book:., "slug": "$*", "root":".."}' \
 	  > $@
 	printf 'done.\n'
 
@@ -301,7 +300,7 @@ $(website-output)/books.json: $(addsuffix .json, $(built_books))
 	printf 'done.\n'
 
 $(website-output)/books.html: $(website-output)/books.json
-	printf 'Making `dances.html`... '
+	printf 'Making `books.html`... '
 	$(shtpen) \
 	  --escape html \
 	  --json $< \

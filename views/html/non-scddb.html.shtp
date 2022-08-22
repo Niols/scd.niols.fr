@@ -56,14 +56,17 @@ done
 
 iter books
 while next; do
+    enter book
     if ! exists scddb-id; then
         printf '<tr>'
-        printf   '<td><a href="book/%s.html">%s</a></td>' "$(url slug)" "$(text title)"
+        printf   '<td><a href="book/%s.html">%s</a></td>' \
+            "$(parent url slug)" "$(text title)"
         printf   '<td>Book</td>'
         printf   '<td></td>'
         printf   '<td></td>'
         printf '</tr>'
     fi
+    leave
 done
 
 printf       '</tbody>'
