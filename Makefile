@@ -113,8 +113,7 @@ $(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{dance:., slug:"$*", root:".."}' \
 	  > $@
 	printf 'done.\n'
 

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+enter dance
+
 printf '\\begin{document}\n'
 printf '\\begin{dance}\n'
 printf '  {%s}\n' "$(text name)"
