@@ -178,8 +178,7 @@ $(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{tune:., slug:"$*", root:".."}' \
 	  > $@
 	printf 'done.\n'
 

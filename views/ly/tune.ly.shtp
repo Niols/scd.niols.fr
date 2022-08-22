@@ -1,5 +1,7 @@
 #!/bin/sh
 
+enter tune
+
 printf '\\score {\n'
 printf '  \\header {\n'
 printf '    title = "%s"\n' "$(raw name)" ##FIXME: escape
