@@ -270,11 +270,13 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 
 ## Generate a JSON file out of a database book entry.
 ##
-$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/book
+$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/book
 	printf 'Making `book/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq '{book:., "slug": "$*", "root":".."}' \
+	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", root:".."}' \
+	      --argjson dances "$$(cat $(website-output)/dances.json)" \
+	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
 	  > $@
 	printf 'done.\n'
 
