@@ -355,9 +355,9 @@ website: dances tunes books index css static
 
 .PHONY: test-website
 test-website:
-	dances=$$(yq -r '.build-arguments.dances.[]' $(tests)/meta.yaml)
-	tunes=$$(yq -r '.build-arguments.tunes.[]' $(tests)/meta.yaml)
-	books=$$(yq -r '.build-arguments.books.[]' $(tests)/meta.yaml)
+	dances=$$(yq --unwrapScalar '.build-arguments.dances.[]' $(tests)/meta.yaml)
+	tunes=$$(yq --unwrapScalar '.build-arguments.tunes.[]' $(tests)/meta.yaml)
+	books=$$(yq --unwrapScalar '.build-arguments.books.[]' $(tests)/meta.yaml)
 	make website dances="$$dances" tunes="$$tunes" books="$$books"
 
 .PHONY: tests
