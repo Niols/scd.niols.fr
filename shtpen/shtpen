@@ -92,22 +92,26 @@ enter () {
     CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:$current, next:[], parent:.}' --argjson current "$_get")
 }
 
-## `leave` replaces the current context by the parent one.
+## `leave` replaces the current context by the parent one. `parent` is a prefix
+## that interprets the rest in the parent context.
 ##
 leave () {
     _get=$(printf '%s' "$CONTEXT" | jq '.parent')
     [ "$_get" = null ] && die 'Cannot leave when there is no parent.'
     CONTEXT=$_get
 }
+parent () ( leave; "$@"; )
 
-## `root` finds the root context.
+## `leave_all` leaves until the root has been reached. `root` is a prefix that
+## interprets the rest in the root context.
 ##
-root () {
+leave_all () {
     _get=$(printf '%s' "$CONTEXT" | jq '.parent')
     [ "$_get" = null ] && return
     CONTEXT=$_get
-    root
+    leave_all
 }
+root () ( leave_all; "$@"; )
 
 ################################################################################
 ##    ___     _   _
