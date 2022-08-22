@@ -113,7 +113,7 @@ $(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq '{dance:., slug:"$*", root:".."}' \
+	  | jq '{dance:., slug:"$*", title:(.name + " | Dance"), root:".."}' \
 	  > $@
 	printf 'done.\n'
 
@@ -178,7 +178,7 @@ $(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq '{tune:., slug:"$*", root:".."}' \
+	  | jq '{tune:., slug:"$*", title:(.name + " | Tune"), root:".."}' \
 	  > $@
 	printf 'done.\n'
 
@@ -274,7 +274,7 @@ $(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/dances.
 	printf 'Making `book/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", root:".."}' \
+	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", title:(.title + " | Book"), root:".."}' \
 	      --argjson dances "$$(cat $(website-output)/dances.json)" \
 	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
 	  > $@

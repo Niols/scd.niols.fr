@@ -3,7 +3,14 @@
 printf '<!DOCTYPE html>'
 printf '<html lang="en">'
 printf '<head>'
-printf   '<title>Niols’s Collection of (Mostly Unpublished) Scottish Country Dances</title>'
+
+if exists title; then
+    printf '<title>%s | Niols’s Collection of (Mostly Unpublished) Scottish Country Dances</title>' \
+        "$(text title)"
+else
+    printf '<title>Niols’s Collection of (Mostly Unpublished) Scottish Country Dances</title>'
+fi
+
 printf   '<meta charset="utf-8" />'
 
 ## Basic style
