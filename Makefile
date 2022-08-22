@@ -155,7 +155,7 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 
 $(website-output)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`... '
-	jq -s '{dances:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.dance)}) | add | {dances:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/dances.html: $(website-output)/dances.json
