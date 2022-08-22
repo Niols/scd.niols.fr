@@ -251,7 +251,7 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 
 $(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`... '
-	jq -s '{tunes:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.tune)}) | add | {tunes:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
