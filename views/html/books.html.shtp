@@ -13,12 +13,9 @@ printf       '<tbody>'
 
 iter books
 while next; do
-    enter book
     printf     '<tr>'
-    printf       '<td><a href="book/%s.html">%s</a></td>' \
-        "$(parent url slug)" "$(text title)"
+    printf       '<td><a href="book/%s.html">%s</a></td>' "$(url key)" "$(text title)"
     printf     '</tr>'
-    leave
 done
 
 printf       '</tbody>'

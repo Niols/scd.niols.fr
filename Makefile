@@ -296,7 +296,7 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 
 $(website-output)/books.json: $(addsuffix .json, $(built_books))
 	printf 'Making `books.json`... '
-	jq -s '{books:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.book)}) | add | {books:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/books.html: $(website-output)/books.json
