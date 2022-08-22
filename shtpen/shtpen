@@ -35,7 +35,7 @@ fi
 ##    back after an iteration, for instance. If there is no parent, `parent` is
 ##    `null.`
 
-CONTEXT=$(jq -n '{current:null, next:[], parents:null}')
+CONTEXT=$(jq -n '{key:null, current:null, next:[], parents:null}')
 
 ## Tiny helper to die while printing the context.
 ##
@@ -48,7 +48,17 @@ die () {
 ##
 get () {
     _get=$(printf '%s' "$CONTEXT" | jq '.current')
-    [ "$_get" != null ] && printf '%s' "$_get" || die 'There is no current object.'
+    [ "$_get" = null ] && die 'There is no current object.'
+    printf '%s' "$_get"
+}
+
+## `key` returns the key of the current object, if there is one, or dies
+## otherwise.
+##
+key () {
+    _get=$(printf '%s' "$CONTEXT" | jq -r '.key')
+    [ "$_get" = null ] && die 'There is no current key.'
+    printf '%s' "$_get"
 }
 
 ## `next` replaces the current object by the first object in the `next` array.
@@ -59,7 +69,8 @@ next () {
     if [ "$(printf '%s' "$CONTEXT" | jq '.next != []')" = true ]; then
         ## If the `next` array is not empty, then we take its first element as
         ## the new current object.
-        CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:.next[0], next:.next[1:], parent:.parent}')
+        CONTEXT=$(printf '%s' "$CONTEXT" \
+            | jq '{key:.next[0].key, current:.next[0].value, next:.next[1:], parent:.parent}')
         return 0
     elif [ "$(printf '%s' "$CONTEXT" | jq '.parent != null')" = true ]; then
         ## Otherwise, if there is a parent context, then we restore it and
@@ -79,7 +90,9 @@ next () {
 iter () {
     _get=$(get | jq ".[\"$1\"]")
     [ "$_get" = null ] && die 'Cannot iter through non-existing field `%s`.' "$1"
-    CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:null, next:$next, parent:.}' --argjson next "$_get")
+    CONTEXT=$(printf '%s' "$CONTEXT" \
+        | jq '{key:null, current:null, next:($next | to_entries), parent:.}' \
+        --argjson next "$_get")
 }
 
 ## `enter` gets into a field of the current object and uses as new current
@@ -89,7 +102,9 @@ iter () {
 enter () {
     _get=$(get | jq ".[\"$1\"]")
     [ "$_get" = null ] && die 'Cannot enter non-existing field `%s`.' "$1"
-    CONTEXT=$(printf '%s' "$CONTEXT" | jq '{current:$current, next:[], parent:.}' --argjson current "$_get")
+    CONTEXT=$(printf '%s' "$CONTEXT" \
+        | jq '{key:null, current:$current, next:[], parent:.}' \
+        --argjson current "$_get")
 }
 
 ## `leave` replaces the current context by the parent one. `parent` is a prefix
@@ -214,7 +229,10 @@ url () {
 ##  | _/ _` | ' \/ _| || |
 ##  |_|\__,_|_||_\__|\_, |
 ##                   |__/
-##  Some pre-defined fancy fields that we use everywhere.
+##  Some pre-defined fancy fields that we use everywhere. In particular, we make
+##  `key` a fancy field so that it can be used anywhere.
+
+shtp_fancy_key () { key; }
 
 shtp_fancy_short_author_or_author () {
     exists short-author && raw short-author || raw author;
