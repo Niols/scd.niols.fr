@@ -20,14 +20,15 @@
             pkgs.lilypond
             pkgs.sassc
             pkgs.texlive.combined.scheme-full
+            pkgs.xvfb-run
             pkgs.yq-go
           ];
 
           FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
             self.packages.x86_64-linux.trebuchetms ]; };
 
-          buildPhase = "make -j website";
-          installPhase = "mkdir -p $out/var/www && cp -R _build/website $out/var/www";
+          buildPhase = "make website";
+          installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
         };
 
       packages.x86_64-linux.trebuchetms =

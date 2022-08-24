@@ -45,6 +45,7 @@ tests := ./tests
 shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
+inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
 
 ## The list of dances in the database and their target names in $(website-output).
 dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
@@ -218,7 +219,7 @@ $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 	printf 'Making `tune/%s.svg`...\n' $*
 	cd $(dir $<)
 	$(lilypond) -dbackend=svg $*.short.ly
-	inkscape --batch-process --export-area-drawing --export-plain-svg \
+	$(inkscape) --batch-process --export-area-drawing --export-plain-svg \
 	  --export-filename=$*.svg $*.short.svg 2>/dev/null
 	rm $*.short.svg
 
