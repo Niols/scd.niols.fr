@@ -4,23 +4,29 @@
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-22.05;
 
   outputs = { self, nixpkgs }:
-    let pkgs = nixpkgs.legacyPackages.x86_64-linux; in
+    let pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+        websiteBuildInputs = [
+          pkgs.inkscape
+          pkgs.jq
+          pkgs.lilypond
+          pkgs.sassc
+          pkgs.texlive.combined.scheme-full
+          pkgs.xvfb-run
+          pkgs.yq-go
+        ];
+    in
+
     {
-      packages.x86_64-linux.default =
+      packages.x86_64-linux.default = self.packages.x86_64-linux.website;
+
+      packages.x86_64-linux.website =
         with import nixpkgs { system = "x86_64-linux"; };
         stdenv.mkDerivation {
-          name = "scd.niols.fr";
+          name = "website";
           src = self;
 
-          buildInputs = [
-            pkgs.inkscape
-            pkgs.jq
-            pkgs.lilypond
-            pkgs.sassc
-            pkgs.texlive.combined.scheme-full
-            pkgs.xvfb-run
-            pkgs.yq-go
-          ];
+          buildInputs = websiteBuildInputs;
 
           FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
             self.packages.x86_64-linux.trebuchetms ]; };
@@ -35,17 +41,7 @@
           name = "test-website";
           src = self;
 
-          buildInputs = [
-            pkgs.firefox      ## for tests
-            pkgs.imagemagick  ## for tests
-            pkgs.inkscape
-            pkgs.jq
-            pkgs.lilypond
-            pkgs.sassc
-            pkgs.texlive.combined.scheme-full
-            pkgs.xvfb-run
-            pkgs.yq-go
-          ];
+          buildInputs = websiteBuildInputs;
 
           FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
             self.packages.x86_64-linux.trebuchetms ]; };
