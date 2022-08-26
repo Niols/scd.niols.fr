@@ -1,0 +1,50 @@
+---
+
+name: The Fighter of Bears
+author: Saskia Frisby
+
+date: 0
+
+kind: 32-bar Reel
+short-kind: R32
+
+content: |
+  <<
+    \relative c'' {
+      \clef treble
+      \key b \minor
+      \time 4/4
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          \partial 8 g'8 |
+          fis8 b, b4 d8 b fis' b, |
+          d8 b fis' b, a cis e g |
+          fis8 b, b4 d8 b fis' b, |
+          a8 b cis d cis d e g |
+        } \break
+
+        fis8 d b fis b fis d' fis, |
+        e'8 a, cis a e' a, g' a, |
+        fis'8 d b a fis g a b |
+        a8 b cis d cis d e g |
+        \break
+
+        fis8 d b fis b fis d' fis, |
+        e'8 a, cis a e' a, g' a, |
+        fis'8 b, b4 d8 b fis' b, |
+      } \alternative { {
+        a8 b cis d cis d e g |
+      } {
+        g8 e cis fis, b4.
+      } } \bar "|."
+    }
+
+    \chords {
+      s8 |
+      b1:m | b2:m a:7 | b1:m | a2 a:7 |
+
+      b1:m | a2 a:7 | b1:m | a2 a:7 |
+      b1:m | a2 a:7 | b1:m | a2 a:7 | a2:7 b4.:m
+    }
+  >>
