@@ -75,6 +75,13 @@ description:
   - type: repeat
     kind: from new positions
 
+  - type: note
+    content: |
+      A reel of six is similar to a reel of four in that all dancers pass one
+      other dancer at each bar and take one additional bar to turn around at the
+      end. It takes twelve bars to dance a full reel of six, and six bars to
+      dance one halfway.
+
   - type: devised by
     deviser: Nicolas “Niols” Jeannerod
     more: |
