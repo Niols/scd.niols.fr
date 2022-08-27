@@ -54,6 +54,10 @@ built_dances := $(addprefix $(website-output)/dance/, $(dances))
 tunes := $(notdir $(basename $(wildcard $(database)/tune/*.yaml)))
 built_tunes := $(addprefix $(website-output)/tune/, $(tunes))
 
+## The list of books in the database and their target names in $(website-output).
+books := $(notdir $(basename $(wildcard $(database)/book/*.yaml)))
+built_books := $(addprefix $(website-output)/book/, $(books))
+
 ################################################################################
 ##   _  _     _        __        ___ _
 ##  | || |___| |_ __  / _|___   / __| |___ __ _ _ _
@@ -93,6 +97,9 @@ $(website-output)/dance: $(website-output)
 
 $(website-output)/tune: $(website-output)
 	mkdir $(website-output)/tune
+
+$(website-output)/book: $(website-output)
+	mkdir $(website-output)/book
 
 $(tests-output): $(output)
 	mkdir $(tests-output)
@@ -261,11 +268,57 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'done.\n'
 
 ############################################################
+## Individual books
+
+## Generate a JSON file out of a database book entry.
+##
+$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/book
+	printf 'Making `book/%s.json`... ' $*
+	cat $< \
+	  | $(yaml2json) \
+	  | jq 'setpath(["slug"]; "$*")' \
+	  | jq 'setpath(["root"]; "..")' \
+	  > $@
+	printf 'done.\n'
+
+## Generate a HTML file out of a book JSON file.
+##
+$(website-output)/book/%.html: $(website-output)/book/%.json
+	printf 'Making `book/%s.html`... ' $*
+	$(shtpen) \
+	  --escape html \
+	  --json $< \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/book.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
+	  > $@
+	printf 'done.\n'
+
+############################################################
+## Index of books
+
+$(website-output)/books.json: $(addsuffix .json, $(built_books))
+	printf 'Making `books.json`... '
+	jq -s '{books:., root:"."}' $^ > $@
+	printf 'done.\n'
+
+$(website-output)/books.html: $(website-output)/books.json
+	printf 'Making `dances.html`... '
+	$(shtpen) \
+	  --escape html \
+	  --json $< \
+	  --shtp $(views)/html/header.html.shtp \
+	  --shtp $(views)/html/books.html.shtp \
+	  --shtp $(views)/html/footer.html.shtp \
+	  > $@
+	printf 'done.\n'
+
+############################################################
 ## Index &
 
-$(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json
+$(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/books.json
 	printf 'Making `index.json`... '
-	jq -s '{dances:.[0].dances, tunes:.[1].tunes, root:"."}' \
+	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books, root:"."}' \
 	  $^ \
 	  > $@
 	printf 'done.\n'
@@ -295,10 +348,11 @@ $(website-output)/non-scddb.html: $(website-output)/index.json
 ############################################################
 ## All
 
-.PHONY: dances tunes index css static website
+.PHONY: dances tunes books index css static website
 
 dances: $(addsuffix .html, $(built_dances)) $(addsuffix .pdf, $(built_dances)) $(website-output)/dances.html
 tunes: $(addsuffix .html, $(built_tunes)) $(addsuffix .svg, $(built_tunes)) $(addsuffix .pdf, $(built_tunes)) $(website-output)/tunes.html
+books: $(addsuffix .html, $(built_books)) $(website-output)/books.html
 index: $(website-output)/index.html $(website-output)/non-scddb.html
 
 css: $(website-output)
@@ -310,7 +364,7 @@ static: $(website-output)
 	cp -R $(views)/static/* $(website-output)
 	printf 'done.\n'
 
-website: dances tunes index css static
+website: dances tunes books index css static
 
 ################################################################################
 ##   _____       _
@@ -322,7 +376,8 @@ website: dances tunes index css static
 test-website:
 	dances=$$(yq -r '.build-arguments.dances.[]' $(tests)/meta.yaml)
 	tunes=$$(yq -r '.build-arguments.tunes.[]' $(tests)/meta.yaml)
-	make website dances="$$dances" tunes="$$tunes"
+	books=$$(yq -r '.build-arguments.books.[]' $(tests)/meta.yaml)
+	make website dances="$$dances" tunes="$$tunes" books="$$books"
 
 .PHONY: tests
 tests: $(tests-output)

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+printf '<article>'
+printf   '<h1>%s</h1>' "$(text title)"
+printf   '<h2>%s</h2>' "$(text summary)"
+
+printf   '<section>'
+
+if exists scddb-id; then
+    printf '<p><a href="https://my.strathspey.org/dd/dance/%s/">' "$(url scddb-id)"
+    printf   'See this book in the Scottish Country Dance Database</a>.</p>'
+fi
+
+printf   '</section>'
+
+if exists contents; then
+    printf '<section>'
+    printf   '<table class="datatable responsive nowrap">'
+    printf     '<thead>'
+    printf       '<tr>'
+    printf         '<th>Name</th>'
+    printf         '<th>Type</th>'
+    printf         '<th>Kind</th>'
+    printf         '<th>Deviser</th>'
+    printf       '</tr>'
+    printf     '</thead>'
+    printf     '<tbody>'
+
+    iter contents
+    while next; do
+        case $(raw type) in
+
+            'dance')
+                printf '<tr>'
+                printf   '<td><a href="../dance/%s.html">%s</a></td>' \
+                    "$(url slug)" "$(text slug)"
+                printf   '<td>Dance</td>'
+                printf   '<td></td>'
+                printf   '<td></td>'
+                printf '</tr>'
+                ;;
+
+            'tune')
+                printf '<tr>'
+                printf   '<td><a href="../tune/%s.html">%s</a></td>' \
+                    "$(url slug)" "$(text slug)"
+                printf   '<td>Tune</td>'
+                printf   '<td></td>'
+                printf   '<td></td>'
+                printf '</tr>'
+                ;;
+        esac
+    done
+
+    printf     '</tbody>'
+    printf   '</table>'
+    printf '</section>'
+fi
+
+printf '</article>'
