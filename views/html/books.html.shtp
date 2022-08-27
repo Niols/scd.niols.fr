@@ -14,7 +14,7 @@ printf       '<tbody>'
 iter books
 while next; do
     printf     '<tr>'
-    printf       '<td><a href="book/%s.html">%s</a></td>' "$(url slug)" "$(text title)"
+    printf       '<td><a href="book/%s.html">%s</a></td>' "$(url key)" "$(text title)"
     printf     '</tr>'
 done
 

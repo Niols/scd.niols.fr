@@ -113,8 +113,7 @@ $(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
 	printf 'Making `dance/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{dance:., slug:"$*", title:(.name + " | Dance"), root:".."}' \
 	  > $@
 	printf 'done.\n'
 
@@ -156,7 +155,7 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 
 $(website-output)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`... '
-	jq -s '{dances:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/dances.html: $(website-output)/dances.json
@@ -179,8 +178,7 @@ $(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
 	printf 'Making `tune/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{tune:., slug:"$*", title:(.name + " | Tune"), root:".."}' \
 	  > $@
 	printf 'done.\n'
 
@@ -253,7 +251,7 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 
 $(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`... '
-	jq -s '{tunes:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
@@ -272,12 +270,13 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 
 ## Generate a JSON file out of a database book entry.
 ##
-$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/book
+$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/book
 	printf 'Making `book/%s.json`... ' $*
 	cat $< \
 	  | $(yaml2json) \
-	  | jq 'setpath(["slug"]; "$*")' \
-	  | jq 'setpath(["root"]; "..")' \
+	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", title:(.title + " | Book"), root:".."}' \
+	      --argjson dances "$$(cat $(website-output)/dances.json)" \
+	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
 	  > $@
 	printf 'done.\n'
 
@@ -299,11 +298,11 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 
 $(website-output)/books.json: $(addsuffix .json, $(built_books))
 	printf 'Making `books.json`... '
-	jq -s '{books:., root:"."}' $^ > $@
+	jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
 	printf 'done.\n'
 
 $(website-output)/books.html: $(website-output)/books.json
-	printf 'Making `dances.html`... '
+	printf 'Making `books.html`... '
 	$(shtpen) \
 	  --escape html \
 	  --json $< \

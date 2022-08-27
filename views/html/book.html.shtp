@@ -1,5 +1,7 @@
 #!/bin/sh
 
+enter book
+
 printf '<article>'
 printf   '<h1>%s</h1>' "$(text title)"
 printf   '<h2>%s</h2>' "$(text summary)"
@@ -31,23 +33,39 @@ if exists contents; then
         case $(raw type) in
 
             'dance')
-                printf '<tr>'
-                printf   '<td><a href="../dance/%s.html">%s</a></td>' \
-                    "$(url slug)" "$(text slug)"
-                printf   '<td>Dance</td>'
-                printf   '<td></td>'
-                printf   '<td></td>'
-                printf '</tr>'
+                (
+                    slug=$(raw slug)
+                    url_slug=$(url slug)
+                    leave_all
+                    enter dances
+                    enter "$slug"
+
+                    printf '<tr>'
+                    printf   '<td><a href="../dance/%s.html">%s</a></td>' \
+                        "$url_slug" "$(text name)"
+                    printf   '<td>Dance</td>'
+                    printf   '<td>%s</td>' "$(text short-kind)"
+                    printf   '<td>%s</td>' "$(text short_author_or_author)"
+                    printf '</tr>'
+                )
                 ;;
 
             'tune')
-                printf '<tr>'
-                printf   '<td><a href="../tune/%s.html">%s</a></td>' \
-                    "$(url slug)" "$(text slug)"
-                printf   '<td>Tune</td>'
-                printf   '<td></td>'
-                printf   '<td></td>'
-                printf '</tr>'
+                (
+                    slug=$(raw slug)
+                    url_slug=$(url slug)
+                    leave_all
+                    enter tunes
+                    enter "$slug"
+
+                    printf '<tr>'
+                    printf   '<td><a href="../tune/%s.html">%s</a></td>' \
+                        "$url_slug" "$(text name)"
+                    printf   '<td>Tune</td>'
+                    printf   '<td>%s</td>' "$(text short-kind)"
+                    printf   '<td>%s</td>' "$(text short_author_or_author)"
+                    printf '</tr>'
+                )
                 ;;
         esac
     done

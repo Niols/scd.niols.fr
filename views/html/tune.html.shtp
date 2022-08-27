@@ -1,11 +1,14 @@
 #!/bin/sh
 
+enter tune
+
 printf '<article>'
 printf   '<h1>%s</h1>' "$(text name)"
 printf   '<h2>%s</h2>' "$(text kind)"
 
 printf   '<section>'
-printf     '<p><a href="%s.pdf">Get the score of the tune as PDF</a>.</p>' "$(url slug)"
+printf     '<p><a href="%s.pdf">Get the score of the tune as PDF</a>.</p>' \
+    "$(parent url slug)"
 
 if exists scddb-id; then
     printf '<p><a href="https://my.strathspey.org/dd/tune/%s/">' "$(url scddb-id)"
@@ -14,7 +17,7 @@ fi
 
 printf   '</section>'
 printf   '<section class="tune-preview">'
-printf     '<img src="%s.svg" />' "$(url slug)"
+printf     '<img src="%s.svg" />' "$(parent url slug)"
 printf     '<p>Composed by %s.</p>' "$(text author)"
 printf   '</section>'
 printf '</article>'

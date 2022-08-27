@@ -16,7 +16,7 @@ printf       '<tbody>'
 iter tunes
 while next; do
     printf     '<tr>'
-    printf       '<td><a href="tune/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
+    printf       '<td><a href="tune/%s.html">%s</a></td>' "$(url key)" "$(text name)"
     printf       '<td>%s</td>' "$(text short-kind)"
     printf       '<td>%s</td>' "$(text short_author_or_author)"
     printf     '</tr>'

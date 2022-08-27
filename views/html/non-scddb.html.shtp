@@ -28,7 +28,7 @@ iter dances
 while next; do
     if ! exists scddb-id; then
         printf '<tr>'
-        printf   '<td><a href="dance/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
+        printf   '<td><a href="dance/%s.html">%s</a></td>' "$(url key)" "$(text name)"
         printf   '<td>Dance</td>'
         printf   '<td>%s</td>' "$(text short-kind)"
         printf   '<td>%s</td>' "$(text short_author_or_author)"
@@ -40,7 +40,7 @@ iter tunes
 while next; do
     if ! exists scddb-id; then
         printf '<tr>'
-        printf   '<td><a href="tune/%s.html">%s</a></td>' "$(url slug)" "$(text name)"
+        printf   '<td><a href="tune/%s.html">%s</a></td>' "$(url key)" "$(text name)"
         printf   '<td>Tune</td>'
         printf   '<td>%s</td>' "$(text short-kind)"
         printf   '<td>%s</td>' "$(text short_author_or_author)"
@@ -52,7 +52,7 @@ iter books
 while next; do
     if ! exists scddb-id; then
         printf '<tr>'
-        printf   '<td><a href="book/%s.html">%s</a></td>' "$(url slug)" "$(text title)"
+        printf   '<td><a href="book/%s.html">%s</a></td>' "$(url key)" "$(text title)"
         printf   '<td>Book</td>'
         printf   '<td></td>'
         printf   '<td></td>'
