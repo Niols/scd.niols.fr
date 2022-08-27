@@ -966,6 +966,95 @@
       "root": ".."
     },
     {
+      "name": "The Terrific Twelve",
+      "author": "Kristian Vestli",
+      "kind": "40-bar reel for six couples in a six-couple longwise set",
+      "short-kind": "R40 6/6L",
+      "description": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st man with 2nd woman, and at the same time 2nd man with 3rd woman,\n3rd man with 4th woman, 4th man with 5th woman and 5th man with 6th\nwoman turn with the right hand.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "contents": [
+            {
+              "type": "text",
+              "content": "All turn their partner with the right hand ending in allemande hold\nfacing up.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "contents": [
+            {
+              "type": "text",
+              "content": "1st, 2nd and 3rd couples, and at the same time 4th, 5th and 6th\ncouples dance a three-couple allemande.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "contents": [
+            {
+              "type": "text",
+              "content": "3rd couple with 2nd couple, and at the same time 1st couple with 6th\ncouple and 5th couple with 4th couple, dance right hands across and\nleft hands back, finishing in the middle of the set both hands joined.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "contents": [
+            {
+              "type": "text",
+              "content": "3rd couple with 2nd couple, and at the same time 1st couple with 6th\ncouple and 5th couple with 4th couple, change places with a two-couple\npoussette.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "contents": [
+            {
+              "type": "text",
+              "content": "All circle twelve hands round and back.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by",
+          "deviser": "Kristian Vestli",
+          "more": "in St Andrews, July 2022."
+        },
+        {
+          "type": "quote",
+          "content": "The team of twelve candidates for our units 2 & 3 were terrific. In this\ndance you hardly get a rest, to remind us of all the hard work we put in,\nbut also all the fun we had with our tutor, Rachel Shankland and our\nmusician, George Meikle.\n"
+        }
+      ],
+      "slug": "the-terrific-twelve",
+      "root": ".."
+    },
+    {
       "name": "The Waves",
       "author": "Saskia Frisby",
       "scddb-id": 20994,

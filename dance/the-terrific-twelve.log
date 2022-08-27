@@ -2,8 +2,8 @@ This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**the-mall-in-st-james-s-park.tex
-(./the-mall-in-st-james-s-park.tex
+**the-terrific-twelve.tex
+(./the-terrific-twelve.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03> (/usr/share/texlive/texmf
 -dist/tex/latex/memoir/memoir.cls
@@ -1097,8 +1097,8 @@ File: ppxetex.def 2021/01/09 v0.5r Pdfpages driver for XeTeX (AM)
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
 )
-No file the-mall-in-st-james-s-park.aux.
-\openout1 = `the-mall-in-st-james-s-park.aux'.
+No file the-terrific-twelve.aux.
+\openout1 = `the-terrific-twelve.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 237.
 LaTeX Font Info:    ... okay on input line 237.
@@ -1248,7 +1248,7 @@ LaTeX Info: Redefining \ref on input line 237.
 LaTeX Info: Redefining \pageref on input line 237.
 LaTeX Info: Redefining \nameref on input line 237.
 \@outlinefile=\write5
-\openout5 = `the-mall-in-st-james-s-park.out'.
+\openout5 = `the-terrific-twelve.out'.
 
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
@@ -1267,53 +1267,64 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 LaTeX Font Info:    Font shape `TU/TrebuchetMS(0)/m/n' will be
 (Font)              scaled to size 18.1318pt on input line 241.
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 256--256
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 262--262
 []\TU/TrebuchetMS(0)/m/n/10.95 16  
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 266--266
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 270--270
  []\TU/TrebuchetMS(0)/m/n/10.95 17
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 266--266
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 270--270
 []\TU/TrebuchetMS(0)/m/n/10.95 24  
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 272--272
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 278--278
  []\TU/TrebuchetMS(0)/m/n/10.95 25
  []
 
 
-Overfull \hbox (0.66443pt too wide) in paragraph at lines 272--272
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 278--278
 []\TU/TrebuchetMS(0)/m/n/10.95 32  
  []
 
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 284--284
+ []\TU/TrebuchetMS(0)/m/n/10.95 33
+ []
+
+
+Overfull \hbox (0.66443pt too wide) in paragraph at lines 284--284
+[]\TU/TrebuchetMS(0)/m/n/10.95 40  
+ []
+
+LaTeX Font Info:    Font shape `TU/TrebuchetMS(0)/m/it' will be
+(Font)              scaled to size 9.02469pt on input line 291.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ) [1
 
-] (./the-mall-in-st-james-s-park.aux)
+] (./the-terrific-twelve.aux)
 
-Package rerunfilecheck Warning: File `the-mall-in-st-james-s-park.out' has chan
-ged.
+Package rerunfilecheck Warning: File `the-terrific-twelve.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `the-mall-in-st-james-s-park.out':
+Package rerunfilecheck Info: Checksums for `the-terrific-twelve.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32749 strings out of 479212
- 646830 string characters out of 5875086
- 1021451 words of memory out of 5000000
- 51832 multiletter control sequences out of 15000+600000
- 403942 words of font info for 47 fonts, out of 8000000 for 9000
+ 32751 strings out of 479212
+ 646840 string characters out of 5875086
+ 1023427 words of memory out of 5000000
+ 51833 multiletter control sequences out of 15000+600000
+ 403950 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,11n,120p,494b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,11n,120p,486b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on the-mall-in-st-james-s-park.pdf (1 page).
+Output written on the-terrific-twelve.pdf (1 page).
