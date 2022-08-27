@@ -1,82 +1,85 @@
 {
-  "name": "The Reel of the 51st Confusion",
-  "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
-  "short-author": "Anne Lanvin et al.",
-  "scddb-id": 20993,
-  "kind": "32-bar reel for three couples in a three-couple longwise set",
-  "short-kind": "R32 3/3L",
-  "tunes": [
-    {
-      "name": "The Drunken Piper",
-      "author": "Alexander McLeod"
-    },
-    "the-sober-piper"
-  ],
-  "description": [
-    {
-      "type": "phrase",
-      "starts": 1,
-      "ends": 8,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set, cast off two places and lead up, finishing back to\nback facing first corners. 2nd couple step up on bars 3-4.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 9,
-      "ends": 16,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set to first corners and turn with right hand halfway with\nthem. first corners give left hands in the middle and 1st couple and\nfirst corners balance in line; first corners turn with left hand one\nand a quarter times to end up back to back facing second corners.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 17,
-      "ends": 24,
-      "contents": [
-        {
-          "type": "text",
-          "content": "Repeat with first and second corners. At the last left-hand turn,\nfinish on the lines with 1st, 2nd and 3rd women improper in 1st, 2nd\nand 3rd position and 2nd, 3rd and 1st men improper in 1st, 2nd and 3rd\nposition.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 25,
-      "ends": 32,
-      "contents": [
-        {
-          "type": "text",
-          "content": "All dance six hands round and back.\n"
-        }
-      ]
-    },
-    {
-      "type": "repeat",
-      "kind": "from new positions"
-    },
-    {
-      "type": "devised by",
-      "deviser": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas\n“Niols” Jeannerod and Victor Lanvin\n",
-      "more": "on August 8th, 2021. This dance is a variation of one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
-    },
-    {
-      "type": "note",
-      "content": "Remember the person that is at the left of your partner from your point of\nview: First, third and fifth times, you will start dancing with your\npartner on your original lines; Second, fourth and sixth times, you will\nstart dancing with that other person on the opposite lines.\n"
-    },
-    {
-      "type": "music by",
-      "composer": "Anne Lanvin",
-      "tune": "The Sober Piper",
-      "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
-    }
-  ],
+  "dance": {
+    "name": "The Reel of the 51st Confusion",
+    "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
+    "short-author": "Anne Lanvin et al.",
+    "scddb-id": 20993,
+    "kind": "32-bar reel for three couples in a three-couple longwise set",
+    "short-kind": "R32 3/3L",
+    "tunes": [
+      {
+        "name": "The Drunken Piper",
+        "author": "Alexander McLeod"
+      },
+      "the-sober-piper"
+    ],
+    "description": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 8,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set, cast off two places and lead up, finishing back to\nback facing first corners. 2nd couple step up on bars 3-4.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set to first corners and turn with right hand halfway with\nthem. first corners give left hands in the middle and 1st couple and\nfirst corners balance in line; first corners turn with left hand one\nand a quarter times to end up back to back facing second corners.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 24,
+        "contents": [
+          {
+            "type": "text",
+            "content": "Repeat with first and second corners. At the last left-hand turn,\nfinish on the lines with 1st, 2nd and 3rd women improper in 1st, 2nd\nand 3rd position and 2nd, 3rd and 1st men improper in 1st, 2nd and 3rd\nposition.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "contents": [
+          {
+            "type": "text",
+            "content": "All dance six hands round and back.\n"
+          }
+        ]
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by",
+        "deviser": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas\n“Niols” Jeannerod and Victor Lanvin\n",
+        "more": "on August 8th, 2021. This dance is a variation of one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
+      },
+      {
+        "type": "note",
+        "content": "Remember the person that is at the left of your partner from your point of\nview: First, third and fifth times, you will start dancing with your\npartner on your original lines; Second, fourth and sixth times, you will\nstart dancing with that other person on the opposite lines.\n"
+      },
+      {
+        "type": "music by",
+        "composer": "Anne Lanvin",
+        "tune": "The Sober Piper",
+        "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
+      }
+    ]
+  },
   "slug": "the-reel-of-the-51st-confusion",
+  "title": "The Reel of the 51st Confusion | Dance",
   "root": ".."
 }

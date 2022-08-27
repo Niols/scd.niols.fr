@@ -1,6 +1,6 @@
 {
-  "dances": [
-    {
+  "dances": {
+    "a-wee-journey": {
       "name": "A Wee Journey",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20990,
@@ -90,11 +90,9 @@
           "type": "quote",
           "content": "This dance is written as a gift for Rachel Shankland and George Meikle\nthat took such good care of us during our Units 2 and 3. The changes of\ndirection give many opportunities for the men to flash their underwear as\nthe RSCDS demands for Unit 2.\n"
         }
-      ],
-      "slug": "a-wee-journey",
-      "root": ".."
+      ]
     },
-    {
+    "drawn-in": {
       "name": "Drawn in",
       "author": "Shannon Kiernan",
       "scddb-id": 20314,
@@ -173,11 +171,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "The Translator"
         }
-      ],
-      "slug": "drawn-in",
-      "root": ".."
+      ]
     },
-    {
+    "et-voila": {
       "name": "Et voilà !",
       "author": "Violaine Eysseric",
       "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
@@ -252,11 +248,9 @@
           "type": "quote",
           "content": "The candidates devised dances and created “The Doonhamers' Book”. This\ndance is for twelve dancers as there were twelve of us; it also uses a lot\nof formations included in the dances of Unit 2 – even if not always in the\nusual way!\n"
         }
-      ],
-      "slug": "et-voila",
-      "root": ".."
+      ]
     },
-    {
+    "in-strathspey-time-george-please": {
       "name": "In Strathspey Time, George, Please!",
       "author": "Shona Holmes",
       "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
@@ -323,11 +317,9 @@
           "type": "quote",
           "content": "George Meikle played wonderfully for our Units 2 and 3, even if not always\nin the tempo we wanted. This dance can be danced in your choice of tempo\nto reflect this.\n"
         }
-      ],
-      "slug": "in-strathspey-time-george-please",
-      "root": ".."
+      ]
     },
-    {
+    "la-ville-lumiere": {
       "name": "La Ville Lumière",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20315,
@@ -405,11 +397,9 @@
           "type": "music by",
           "composer": "Pascaline Latour"
         }
-      ],
-      "slug": "la-ville-lumiere",
-      "root": ".."
+      ]
     },
-    {
+    "one-blue-cloud-in-the-grey-sky": {
       "name": "One Blue Cloud in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
       "scddb-id": 19198,
@@ -477,11 +467,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "Forty Bars of Clouds"
         }
-      ],
-      "slug": "one-blue-cloud-in-the-grey-sky",
-      "root": ".."
+      ]
     },
-    {
+    "praha-matka-mest": {
       "name": "Praha Matka Měst",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20992,
@@ -553,11 +541,9 @@
           "deviser": "Nicolas “Niols” Jeannerod",
           "more": "in Prague in April 2019. The title translates to “Prague, Mother of\nCities” and refers to Prague's motto during the twentieth century. It was\na symbol of the mission of Prague to protect the independence and\nprosperity of the Czecho-Slovakian state.\n"
         }
-      ],
-      "slug": "praha-matka-mest",
-      "root": ".."
+      ]
     },
-    {
+    "spot-on": {
       "name": "Spot on",
       "author": "Shona Holmes",
       "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
@@ -664,11 +650,9 @@
           "type": "quote",
           "content": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun\nwarm up dance and often described our better moments in dancing and\nteaching as “Spot on”. Thus, this easy warm up dance was born; the circles\nin bars 9-12 and 17-20 create perfect spots. Thank you Rachel!\n"
         }
-      ],
-      "slug": "spot-on",
-      "root": ".."
+      ]
     },
-    {
+    "sunday-early-in-the-morning": {
       "name": "Sunday, Early in the Morning",
       "author": "Marie-Laure Barret",
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
@@ -808,11 +792,9 @@
           "type": "quote",
           "content": "During the Saturday ball at the end of the first week of Summer School in\nSt. Andrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following\nmorning, at 6.30am, I started devising this dance.\n"
         }
-      ],
-      "slug": "sunday-early-in-the-morning",
-      "root": ".."
+      ]
     },
-    {
+    "the-mall-in-st-james-s-park": {
       "name": "The Mall in St. James’s Park",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20991,
@@ -879,11 +861,9 @@
           "type": "music by",
           "composer": "Nicolas “Niols” Jeannerod"
         }
-      ],
-      "slug": "the-mall-in-st-james-s-park",
-      "root": ".."
+      ]
     },
-    {
+    "the-reel-of-the-51st-confusion": {
       "name": "The Reel of the 51st Confusion",
       "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
       "short-author": "Anne Lanvin et al.",
@@ -961,11 +941,9 @@
           "tune": "The Sober Piper",
           "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
         }
-      ],
-      "slug": "the-reel-of-the-51st-confusion",
-      "root": ".."
+      ]
     },
-    {
+    "the-terrific-twelve": {
       "name": "The Terrific Twelve",
       "author": "Kristian Vestli",
       "kind": "40-bar reel for six couples in a six-couple longwise set",
@@ -1050,11 +1028,9 @@
           "type": "quote",
           "content": "The team of twelve candidates for our units 2 & 3 were terrific. In this\ndance you hardly get a rest, to remind us of all the hard work we put in,\nbut also all the fun we had with our tutor, Rachel Shankland and our\nmusician, George Meikle.\n"
         }
-      ],
-      "slug": "the-terrific-twelve",
-      "root": ".."
+      ]
     },
-    {
+    "the-waves": {
       "name": "The Waves",
       "author": "Saskia Frisby",
       "scddb-id": 20994,
@@ -1141,11 +1117,9 @@
           "tune": "Highland Whisky",
           "composer": "Niel Gow"
         }
-      ],
-      "slug": "the-waves",
-      "root": ".."
+      ]
     },
-    {
+    "two-blue-clouds-in-the-grey-sky": {
       "name": "Two Blue Clouds in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
       "scddb-id": 19197,
@@ -1210,11 +1184,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "Forty Bars of Clouds"
         }
-      ],
-      "slug": "two-blue-clouds-in-the-grey-sky",
-      "root": ".."
+      ]
     },
-    {
+    "units-2-and-3": {
       "name": "Units 2 and 3",
       "author": "David Osgarby",
       "kind": "32-bar jig for three couples in a four-couple longwise set",
@@ -1321,70 +1293,58 @@
           "type": "quote",
           "content": "I devised this dance at the 2022 St Andrews Summer School while doing\nUnits 2 and 3 of the RSCDS teaching certificate. The dance was devised\nsuch that the 2s and 3s are showcased representing Units 2 and 3. The\nvigour of the dance represents the high level of effort put in by students\nduring the course. Each dancer dances from several positions, similar to\nhow we have been taking the position of different dancers to demonstrate\nformations. That the ones are still during bars 9-24 represents spending\ntime observing other dancers and teachers during the course. The plentiful\ncurving and casting to change positions on the side lines was included to\ndemonstrate good kilt control (or lack thereof)!\n"
         }
-      ],
-      "slug": "units-2-and-3",
-      "root": ".."
+      ]
     }
-  ],
-  "tunes": [
-    {
+  },
+  "tunes": {
+    "forty-bars-of-cloud": {
       "name": "Forty Bars of Clouds",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 14008,
       "kind": "40-bar Reel",
       "short-kind": "R40",
       "date": "2018-04-25T00:00:00Z",
-      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key c \\major\n    \\time 4/4\n\n    c'4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d4 d8 e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    f'4 d8 f e4 c8 e |\n    d4 b8 d c4 c |\n    \\bar \"||\" \\break\n\n    c8 b c d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f'8 d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"||\" \\break\n\n    a'8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    gis e gis a b e,4 e8 |\n    gis e gis a b a gis e |\n    \\bar \"||\" \\break\n\n    a8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    \\tuplet 3/4 { b4 c8 } \\tuplet 3/4 { d4 c8 } |\n    \\tuplet 3/4 { b4 c8 } b2 |\n    \\bar \"||\" \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f' d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      a1:m | s | g | s | f | s | e | s |\n      a1:m | s | g | s | f | s | e | s |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n    }\n  }\n>>\n",
-      "slug": "forty-bars-of-cloud",
-      "root": ".."
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key c \\major\n    \\time 4/4\n\n    c'4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d4 d8 e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    f'4 d8 f e4 c8 e |\n    d4 b8 d c4 c |\n    \\bar \"||\" \\break\n\n    c8 b c d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f'8 d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"||\" \\break\n\n    a'8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    gis e gis a b e,4 e8 |\n    gis e gis a b a gis e |\n    \\bar \"||\" \\break\n\n    a8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    \\tuplet 3/4 { b4 c8 } \\tuplet 3/4 { d4 c8 } |\n    \\tuplet 3/4 { b4 c8 } b2 |\n    \\bar \"||\" \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f' d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      a1:m | s | g | s | f | s | e | s |\n      a1:m | s | g | s | f | s | e | s |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n    }\n  }\n>>\n"
     },
-    {
+    "la-ville-lumiere": {
       "name": "La Ville Lumière",
       "author": "Pascaline Latour",
       "scddb-id": 14533,
       "kind": "32-bar Reel",
       "short-kind": "R32",
       "date": "2020",
-      "content": "\\relative a' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, a a d a fis' a, |\n      e' a, a a cis d e cis |\n      \\break\n\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, d a e' b cis a |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 3/4)\n      d a fis' a, d4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 4/4)\n      d8 a b cis d e fis g |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g d d d b d g b |\n      a a, b cis d e fis g |\n      \\break\n\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g e fis d e cis d b |\n    } \\alternative { {\n      cis a b cis d e fis g |\n    } {\n      cis, a b cis d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1 | g | d | a |\n      d1 | g | d2 e4:m a | d2. | d1 |\n\n      d1 | b:m | g | a:7 |\n      d1 | b:m | e4:m d \\move-left 1 a/cis g/b | a1:7 | a2:7 d4\n    }\n  }\n>>\n",
-      "slug": "la-ville-lumiere",
-      "root": ".."
+      "content": "\\relative a' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, a a d a fis' a, |\n      e' a, a a cis d e cis |\n      \\break\n\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, d a e' b cis a |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 3/4)\n      d a fis' a, d4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 4/4)\n      d8 a b cis d e fis g |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g d d d b d g b |\n      a a, b cis d e fis g |\n      \\break\n\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g e fis d e cis d b |\n    } \\alternative { {\n      cis a b cis d e fis g |\n    } {\n      cis, a b cis d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1 | g | d | a |\n      d1 | g | d2 e4:m a | d2. | d1 |\n\n      d1 | b:m | g | a:7 |\n      d1 | b:m | e4:m d \\move-left 1 a/cis g/b | a1:7 | a2:7 d4\n    }\n  }\n>>\n"
     },
-    {
+    "the-mall-in-st-james-s-park": {
       "name": "The Mall in St. James's Park",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 14826,
       "kind": "32-bar Strathspey",
       "short-kind": "S32",
       "date": "2018-10-19T00:00:00Z",
-      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      b8. b16 b8 cis d e fis g |\n      a,8. a16 a8 b a4 a |\n      \\break\n\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      \\tuplet 3/2 { b4 d g } \\tuplet 3/2 { a,4 cis e } |\n      d2 d4 d |\n      \\bar \"||\" \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis d e fis g a b cis |\n      \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis8. a16 b8 cis d4 d |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d1 | fis:m/cis | g | a |\n      d1 | fis:m/cis | g2 a | d1 |\n\n      fis1 | b:m | e:m | a |\n      fis1 | b:m | e:m | a2 d |\n    }\n  }\n>>\n",
-      "slug": "the-mall-in-st-james-s-park",
-      "root": ".."
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      b8. b16 b8 cis d e fis g |\n      a,8. a16 a8 b a4 a |\n      \\break\n\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      \\tuplet 3/2 { b4 d g } \\tuplet 3/2 { a,4 cis e } |\n      d2 d4 d |\n      \\bar \"||\" \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis d e fis g a b cis |\n      \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis8. a16 b8 cis d4 d |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d1 | fis:m/cis | g | a |\n      d1 | fis:m/cis | g2 a | d1 |\n\n      fis1 | b:m | e:m | a |\n      fis1 | b:m | e:m | a2 d |\n    }\n  }\n>>\n"
     },
-    {
+    "the-sober-piper": {
       "name": "The Sober Piper",
       "author": "Anne Lanvin",
       "scddb-id": 14827,
       "kind": "32-bar Reel",
       "short-kind": "R32",
       "date": "2021",
-      "content": "\\relative a <<\n  {\n    \\clef treble\n    \\key a' \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e''4 |\n      a,4 a8 cis e4 e8 fis |\n      e8 fis a fis fis4 d |\n      d, d8 fis a4 a8 b |\n      a cis e cis d4 fis |\n      \\break\n\n      a, a8 cis e4 e8 fis\n      e8 fis a fis e4 cis |\n      d e8 fis e fis e d |\n      cis4 a a\n    } \\break\n\n    e' |\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d e8 fis e fis e d |\n    cis4 a a  e' |\n    \\bar \"||\" \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a,4 a8 cis e4 e8 fis |\n    e fis a fis e4 cis |\n    d e8 fis e fis e d |\n    cis4 a a\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | a | d | d | a | a | d | a |\n\n      a1 | a | d | d | a | a | d | a |\n      a1 | a | d | d | fis:m | fis:m | b:m | a2.\n    }\n  }\n>>\n",
-      "slug": "the-sober-piper",
-      "root": ".."
+      "content": "\\relative a <<\n  {\n    \\clef treble\n    \\key a' \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e''4 |\n      a,4 a8 cis e4 e8 fis |\n      e8 fis a fis fis4 d |\n      d, d8 fis a4 a8 b |\n      a cis e cis d4 fis |\n      \\break\n\n      a, a8 cis e4 e8 fis\n      e8 fis a fis e4 cis |\n      d e8 fis e fis e d |\n      cis4 a a\n    } \\break\n\n    e' |\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d e8 fis e fis e d |\n    cis4 a a  e' |\n    \\bar \"||\" \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a,4 a8 cis e4 e8 fis |\n    e fis a fis e4 cis |\n    d e8 fis e fis e d |\n    cis4 a a\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | a | d | d | a | a | d | a |\n\n      a1 | a | d | d | a | a | d | a |\n      a1 | a | d | d | fis:m | fis:m | b:m | a2.\n    }\n  }\n>>\n"
     },
-    {
+    "the-translator": {
       "name": "The Translator",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 14452,
       "kind": "32-bar Strathspey",
       "short-kind": "S32",
       "date": "2019-03-02T00:00:00Z",
-      "content": "\\relative f <<\n  \\new Voice {\n    \\clef treble\n    \\key b \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        a16 e'8. e fis16 e8. d16 cis8. ais16 |\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        \\tuplet 3/2 { a8 cis e } fis8 ais, b4 b4 |\n      } \\break\n\n      fis'16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      \\tuplet 3/2 { cis8 fis, d } \\tuplet 3/2 { b'8 fis d } \\tuplet 3/2 { a'8 fis d } \\tuplet 3/2 { b'8 fis d } |\n      \\break\n\n      fis16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      cis16 b a g fis8 ais b4 b |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      b1:m | a2 fis | b1:m | a4 fis b2:m |\n\n      b1:m | g | a | b:m7 |\n      b1:m | g | a | a4 fis b2:m |\n    }\n  }\n>>\n",
-      "slug": "the-translator",
-      "root": ".."
+      "content": "\\relative f <<\n  \\new Voice {\n    \\clef treble\n    \\key b \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        a16 e'8. e fis16 e8. d16 cis8. ais16 |\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        \\tuplet 3/2 { a8 cis e } fis8 ais, b4 b4 |\n      } \\break\n\n      fis'16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      \\tuplet 3/2 { cis8 fis, d } \\tuplet 3/2 { b'8 fis d } \\tuplet 3/2 { a'8 fis d } \\tuplet 3/2 { b'8 fis d } |\n      \\break\n\n      fis16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      cis16 b a g fis8 ais b4 b |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      b1:m | a2 fis | b1:m | a4 fis b2:m |\n\n      b1:m | g | a | b:m7 |\n      b1:m | g | a | a4 fis b2:m |\n    }\n  }\n>>\n"
     }
-  ],
-  "books": [
-    {
+  },
+  "books": {
+    "the-doonhamers-book": {
       "title": "The Doonhamers' Book",
       "summary": "8 Scottish Country Dances written for Rachel Shankland and George Meikle",
       "contents": [
@@ -1420,10 +1380,8 @@
           "type": "dance",
           "slug": "the-terrific-twelve"
         }
-      ],
-      "slug": "the-doonhamers-book",
-      "root": ".."
+      ]
     }
-  ],
+  },
   "root": "."
 }

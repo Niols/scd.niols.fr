@@ -1,6 +1,6 @@
 {
-  "books": [
-    {
+  "books": {
+    "the-doonhamers-book": {
       "title": "The Doonhamers' Book",
       "summary": "8 Scottish Country Dances written for Rachel Shankland and George Meikle",
       "contents": [
@@ -36,10 +36,8 @@
           "type": "dance",
           "slug": "the-terrific-twelve"
         }
-      ],
-      "slug": "the-doonhamers-book",
-      "root": ".."
+      ]
     }
-  ],
+  },
   "root": "."
 }

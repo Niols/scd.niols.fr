@@ -1,6 +1,6 @@
 {
-  "dances": [
-    {
+  "dances": {
+    "a-wee-journey": {
       "name": "A Wee Journey",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20990,
@@ -90,11 +90,9 @@
           "type": "quote",
           "content": "This dance is written as a gift for Rachel Shankland and George Meikle\nthat took such good care of us during our Units 2 and 3. The changes of\ndirection give many opportunities for the men to flash their underwear as\nthe RSCDS demands for Unit 2.\n"
         }
-      ],
-      "slug": "a-wee-journey",
-      "root": ".."
+      ]
     },
-    {
+    "drawn-in": {
       "name": "Drawn in",
       "author": "Shannon Kiernan",
       "scddb-id": 20314,
@@ -173,11 +171,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "The Translator"
         }
-      ],
-      "slug": "drawn-in",
-      "root": ".."
+      ]
     },
-    {
+    "et-voila": {
       "name": "Et voilà !",
       "author": "Violaine Eysseric",
       "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
@@ -252,11 +248,9 @@
           "type": "quote",
           "content": "The candidates devised dances and created “The Doonhamers' Book”. This\ndance is for twelve dancers as there were twelve of us; it also uses a lot\nof formations included in the dances of Unit 2 – even if not always in the\nusual way!\n"
         }
-      ],
-      "slug": "et-voila",
-      "root": ".."
+      ]
     },
-    {
+    "in-strathspey-time-george-please": {
       "name": "In Strathspey Time, George, Please!",
       "author": "Shona Holmes",
       "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
@@ -323,11 +317,9 @@
           "type": "quote",
           "content": "George Meikle played wonderfully for our Units 2 and 3, even if not always\nin the tempo we wanted. This dance can be danced in your choice of tempo\nto reflect this.\n"
         }
-      ],
-      "slug": "in-strathspey-time-george-please",
-      "root": ".."
+      ]
     },
-    {
+    "la-ville-lumiere": {
       "name": "La Ville Lumière",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20315,
@@ -405,11 +397,9 @@
           "type": "music by",
           "composer": "Pascaline Latour"
         }
-      ],
-      "slug": "la-ville-lumiere",
-      "root": ".."
+      ]
     },
-    {
+    "one-blue-cloud-in-the-grey-sky": {
       "name": "One Blue Cloud in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
       "scddb-id": 19198,
@@ -477,11 +467,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "Forty Bars of Clouds"
         }
-      ],
-      "slug": "one-blue-cloud-in-the-grey-sky",
-      "root": ".."
+      ]
     },
-    {
+    "praha-matka-mest": {
       "name": "Praha Matka Měst",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20992,
@@ -553,11 +541,9 @@
           "deviser": "Nicolas “Niols” Jeannerod",
           "more": "in Prague in April 2019. The title translates to “Prague, Mother of\nCities” and refers to Prague's motto during the twentieth century. It was\na symbol of the mission of Prague to protect the independence and\nprosperity of the Czecho-Slovakian state.\n"
         }
-      ],
-      "slug": "praha-matka-mest",
-      "root": ".."
+      ]
     },
-    {
+    "spot-on": {
       "name": "Spot on",
       "author": "Shona Holmes",
       "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
@@ -664,11 +650,9 @@
           "type": "quote",
           "content": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun\nwarm up dance and often described our better moments in dancing and\nteaching as “Spot on”. Thus, this easy warm up dance was born; the circles\nin bars 9-12 and 17-20 create perfect spots. Thank you Rachel!\n"
         }
-      ],
-      "slug": "spot-on",
-      "root": ".."
+      ]
     },
-    {
+    "sunday-early-in-the-morning": {
       "name": "Sunday, Early in the Morning",
       "author": "Marie-Laure Barret",
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
@@ -808,11 +792,9 @@
           "type": "quote",
           "content": "During the Saturday ball at the end of the first week of Summer School in\nSt. Andrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following\nmorning, at 6.30am, I started devising this dance.\n"
         }
-      ],
-      "slug": "sunday-early-in-the-morning",
-      "root": ".."
+      ]
     },
-    {
+    "the-mall-in-st-james-s-park": {
       "name": "The Mall in St. James’s Park",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20991,
@@ -879,11 +861,9 @@
           "type": "music by",
           "composer": "Nicolas “Niols” Jeannerod"
         }
-      ],
-      "slug": "the-mall-in-st-james-s-park",
-      "root": ".."
+      ]
     },
-    {
+    "the-reel-of-the-51st-confusion": {
       "name": "The Reel of the 51st Confusion",
       "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
       "short-author": "Anne Lanvin et al.",
@@ -961,11 +941,9 @@
           "tune": "The Sober Piper",
           "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
         }
-      ],
-      "slug": "the-reel-of-the-51st-confusion",
-      "root": ".."
+      ]
     },
-    {
+    "the-terrific-twelve": {
       "name": "The Terrific Twelve",
       "author": "Kristian Vestli",
       "kind": "40-bar reel for six couples in a six-couple longwise set",
@@ -1050,11 +1028,9 @@
           "type": "quote",
           "content": "The team of twelve candidates for our units 2 & 3 were terrific. In this\ndance you hardly get a rest, to remind us of all the hard work we put in,\nbut also all the fun we had with our tutor, Rachel Shankland and our\nmusician, George Meikle.\n"
         }
-      ],
-      "slug": "the-terrific-twelve",
-      "root": ".."
+      ]
     },
-    {
+    "the-waves": {
       "name": "The Waves",
       "author": "Saskia Frisby",
       "scddb-id": 20994,
@@ -1141,11 +1117,9 @@
           "tune": "Highland Whisky",
           "composer": "Niel Gow"
         }
-      ],
-      "slug": "the-waves",
-      "root": ".."
+      ]
     },
-    {
+    "two-blue-clouds-in-the-grey-sky": {
       "name": "Two Blue Clouds in the Grey Sky",
       "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
       "scddb-id": 19197,
@@ -1210,11 +1184,9 @@
           "composer": "Nicolas “Niols” Jeannerod",
           "tune": "Forty Bars of Clouds"
         }
-      ],
-      "slug": "two-blue-clouds-in-the-grey-sky",
-      "root": ".."
+      ]
     },
-    {
+    "units-2-and-3": {
       "name": "Units 2 and 3",
       "author": "David Osgarby",
       "kind": "32-bar jig for three couples in a four-couple longwise set",
@@ -1321,10 +1293,8 @@
           "type": "quote",
           "content": "I devised this dance at the 2022 St Andrews Summer School while doing\nUnits 2 and 3 of the RSCDS teaching certificate. The dance was devised\nsuch that the 2s and 3s are showcased representing Units 2 and 3. The\nvigour of the dance represents the high level of effort put in by students\nduring the course. Each dancer dances from several positions, similar to\nhow we have been taking the position of different dancers to demonstrate\nformations. That the ones are still during bars 9-24 represents spending\ntime observing other dancers and teachers during the course. The plentiful\ncurving and casting to change positions on the side lines was included to\ndemonstrate good kilt control (or lack thereof)!\n"
         }
-      ],
-      "slug": "units-2-and-3",
-      "root": ".."
+      ]
     }
-  ],
+  },
   "root": "."
 }

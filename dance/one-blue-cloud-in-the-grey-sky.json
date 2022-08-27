@@ -1,72 +1,75 @@
 {
-  "name": "One Blue Cloud in the Grey Sky",
-  "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
-  "scddb-id": 19198,
-  "kind": "40-bar reel for three couples in a three-couple longwise set",
-  "short-kind": "R40 3/3L",
-  "tunes": [
-    "forty-bars-of-clouds"
-  ],
-  "description": [
-    {
-      "type": "phrase",
-      "starts": 1,
-      "ends": 8,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set, cast off one place and dance a half figure of eight\naround 2nd couple. 2nd couple step up on bars 3-4.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 9,
-      "ends": 16,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set, dance a half figure of eight around 3rd couple and set\nadvancing to finish facing first corners.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 17,
-      "ends": 32,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple dance corner pass and turn with their first corners and\nrepeat with their second, third and fourth corners, finishing on their\nown sides in second position.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 33,
-      "ends": 40,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set, cast off one place. 3rd couple step up on bars 35-36.\n1st couple turn right hand in four bars.\n"
-        }
-      ]
-    },
-    {
-      "type": "repeat",
-      "kind": "from new positions"
-    },
-    {
-      "type": "devised by",
-      "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
-      "more": "in May 2018. This dance is a three-couple version of “Two Blue Clouds in\nthe Grey Sky”.\n"
-    },
-    {
-      "type": "music by",
-      "composer": "Nicolas “Niols” Jeannerod",
-      "tune": "Forty Bars of Clouds"
-    }
-  ],
+  "dance": {
+    "name": "One Blue Cloud in the Grey Sky",
+    "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+    "scddb-id": 19198,
+    "kind": "40-bar reel for three couples in a three-couple longwise set",
+    "short-kind": "R40 3/3L",
+    "tunes": [
+      "forty-bars-of-clouds"
+    ],
+    "description": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 8,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set, cast off one place and dance a half figure of eight\naround 2nd couple. 2nd couple step up on bars 3-4.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set, dance a half figure of eight around 3rd couple and set\nadvancing to finish facing first corners.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 32,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple dance corner pass and turn with their first corners and\nrepeat with their second, third and fourth corners, finishing on their\nown sides in second position.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 33,
+        "ends": 40,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set, cast off one place. 3rd couple step up on bars 35-36.\n1st couple turn right hand in four bars.\n"
+          }
+        ]
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by",
+        "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+        "more": "in May 2018. This dance is a three-couple version of “Two Blue Clouds in\nthe Grey Sky”.\n"
+      },
+      {
+        "type": "music by",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "tune": "Forty Bars of Clouds"
+      }
+    ]
+  },
   "slug": "one-blue-cloud-in-the-grey-sky",
+  "title": "One Blue Cloud in the Grey Sky | Dance",
   "root": ".."
 }

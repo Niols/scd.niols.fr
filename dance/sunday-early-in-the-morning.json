@@ -1,144 +1,147 @@
 {
-  "name": "Sunday, Early in the Morning",
-  "author": "Marie-Laure Barret",
-  "kind": "32-bar strathspey for three couples in a three-couple longwise set",
-  "short-kind": "S32 3/3L",
-  "description": [
-    {
-      "type": "phrase",
-      "starts": 1,
-      "ends": 4,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st, 2nd and 3rd couples set and link.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 5,
-      "ends": 8,
-      "contents": [
-        {
-          "type": "text",
-          "content": "All chase clockwise halfway round the set.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 9,
-      "ends": 16,
-      "contents": [
-        {
-          "type": "text",
-          "content": "Repeat bars 1-8 from new positions.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 17,
-      "ends": 18,
-      "contents": [
-        {
-          "type": "text",
-          "content": "3rd, 2nd and 1st couples set.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 19,
-      "ends": 22,
-      "contents": [
-        {
-          "type": "text",
-          "content": "3rd, 2nd and 1st couples, giving right hand to partner, turn halfway,\nrelease hands and, pulling right shoulder back, dance on a curve to\nown sides of the set.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 23,
-      "ends": 24,
-      "contents": [
-        {
-          "type": "text",
-          "content": "3rd, 2nd and 1st couples set.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 25,
-      "ends": 32,
-      "contents": [
-        {
-          "type": "text",
-          "content": "3rd and 2nd couples dance the “rose progression”:\n"
-        },
-        {
-          "type": "phrase",
-          "starts": 25,
-          "ends": 26,
-          "contents": [
-            {
-              "type": "text",
-              "content": "3rd man and 2nd woman set as 3rd woman and 2nd man change places\nright hand.\n"
-            }
-          ]
-        },
-        {
-          "type": "phrase",
-          "starts": 27,
-          "ends": 28,
-          "contents": [
-            {
-              "type": "text",
-              "content": "3rd man and 2nd woman turn with both hands halfway as 3rd woman\nand 2nd man dance into their partner's place.\n"
-            }
-          ]
-        },
-        {
-          "type": "phrase",
-          "starts": 29,
-          "ends": 30,
-          "contents": [
-            {
-              "type": "text",
-              "content": "3rd man and 2nd woman cast into each other's original places as\n3rd woman and 2nd man turn with both hands halfway.\n"
-            }
-          ]
-        },
-        {
-          "type": "phrase",
-          "starts": 31,
-          "ends": 32,
-          "contents": [
-            {
-              "type": "text",
-              "content": "3rd man and 2nd woman dance across the set as 3rd woman and 2nd\nman, pulling right shoulder back, cast out to the sidelines.\n"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "repeat",
-      "kind": "from new positions"
-    },
-    {
-      "type": "devised by",
-      "deviser": "Marie-Laure Barret",
-      "more": "on July 31st, 2022.\n"
-    },
-    {
-      "type": "quote",
-      "content": "During the Saturday ball at the end of the first week of Summer School in\nSt. Andrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following\nmorning, at 6.30am, I started devising this dance.\n"
-    }
-  ],
+  "dance": {
+    "name": "Sunday, Early in the Morning",
+    "author": "Marie-Laure Barret",
+    "kind": "32-bar strathspey for three couples in a three-couple longwise set",
+    "short-kind": "S32 3/3L",
+    "description": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 4,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st, 2nd and 3rd couples set and link.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 5,
+        "ends": 8,
+        "contents": [
+          {
+            "type": "text",
+            "content": "All chase clockwise halfway round the set.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "contents": [
+          {
+            "type": "text",
+            "content": "Repeat bars 1-8 from new positions.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 18,
+        "contents": [
+          {
+            "type": "text",
+            "content": "3rd, 2nd and 1st couples set.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 19,
+        "ends": 22,
+        "contents": [
+          {
+            "type": "text",
+            "content": "3rd, 2nd and 1st couples, giving right hand to partner, turn halfway,\nrelease hands and, pulling right shoulder back, dance on a curve to\nown sides of the set.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 23,
+        "ends": 24,
+        "contents": [
+          {
+            "type": "text",
+            "content": "3rd, 2nd and 1st couples set.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "contents": [
+          {
+            "type": "text",
+            "content": "3rd and 2nd couples dance the “rose progression”:\n"
+          },
+          {
+            "type": "phrase",
+            "starts": 25,
+            "ends": 26,
+            "contents": [
+              {
+                "type": "text",
+                "content": "3rd man and 2nd woman set as 3rd woman and 2nd man change places\nright hand.\n"
+              }
+            ]
+          },
+          {
+            "type": "phrase",
+            "starts": 27,
+            "ends": 28,
+            "contents": [
+              {
+                "type": "text",
+                "content": "3rd man and 2nd woman turn with both hands halfway as 3rd woman\nand 2nd man dance into their partner's place.\n"
+              }
+            ]
+          },
+          {
+            "type": "phrase",
+            "starts": 29,
+            "ends": 30,
+            "contents": [
+              {
+                "type": "text",
+                "content": "3rd man and 2nd woman cast into each other's original places as\n3rd woman and 2nd man turn with both hands halfway.\n"
+              }
+            ]
+          },
+          {
+            "type": "phrase",
+            "starts": 31,
+            "ends": 32,
+            "contents": [
+              {
+                "type": "text",
+                "content": "3rd man and 2nd woman dance across the set as 3rd woman and 2nd\nman, pulling right shoulder back, cast out to the sidelines.\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by",
+        "deviser": "Marie-Laure Barret",
+        "more": "on July 31st, 2022.\n"
+      },
+      {
+        "type": "quote",
+        "content": "During the Saturday ball at the end of the first week of Summer School in\nSt. Andrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following\nmorning, at 6.30am, I started devising this dance.\n"
+      }
+    ]
+  },
   "slug": "sunday-early-in-the-morning",
+  "title": "Sunday, Early in the Morning | Dance",
   "root": ".."
 }

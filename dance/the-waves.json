@@ -1,91 +1,94 @@
 {
-  "name": "The Waves",
-  "author": "Saskia Frisby",
-  "scddb-id": 20994,
-  "kind": "32-bar strathspey for three couples in a four-couple longwise set",
-  "short-kind": "S32 3/4L",
-  "description": [
-    {
-      "type": "phrase",
-      "starts": 1,
-      "ends": 2,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 3,
-      "ends": 8,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple dance a figure of eight around 2nd and 3rd couples on the\nsidelines in six bars, dancing in and down to begin and touching\nnearer hands when possible.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 9,
-      "ends": 16,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st and 2nd couples dance the knot, retaining left hands.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 17,
-      "ends": 20,
-      "contents": [
-        {
-          "type": "text",
-          "content": "2nd and 1st couples, giving left hands, dance four hands across once\nround.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 21,
-      "ends": 24,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st and 3rd couples dance four hands round to the left. At the very\nend of this phrase, 1st and 3rd women as well as 1st and 3rd men\nrelease hands while retaining hands with their partner.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 25,
-      "ends": 32,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st and 3rd couples dance a poussette right round. On the first bar,\n1st and 3rd couples join both hands and turn into a diagonal line with\n1st couple above 3rd couple. The rest of the poussette proceeds as\nnormal.\n"
-        }
-      ]
-    },
-    {
-      "type": "repeat",
-      "kind": "having passed a couple"
-    },
-    {
-      "type": "devised by",
-      "deviser": "Saskia Frisby",
-      "more": "and inspired by the waves in the sea around St. Andrews. For Rachel\nShankland and George Meikle, with heartfelt thanks for their kindness\ntowards and patience with the Units 2/3 class of 2022.\n"
-    },
-    {
-      "type": "recommended tune",
-      "tune": "Highland Whisky",
-      "composer": "Niel Gow"
-    }
-  ],
+  "dance": {
+    "name": "The Waves",
+    "author": "Saskia Frisby",
+    "scddb-id": 20994,
+    "kind": "32-bar strathspey for three couples in a four-couple longwise set",
+    "short-kind": "S32 3/4L",
+    "description": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 2,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 3,
+        "ends": 8,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple dance a figure of eight around 2nd and 3rd couples on the\nsidelines in six bars, dancing in and down to begin and touching\nnearer hands when possible.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st and 2nd couples dance the knot, retaining left hands.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 20,
+        "contents": [
+          {
+            "type": "text",
+            "content": "2nd and 1st couples, giving left hands, dance four hands across once\nround.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 21,
+        "ends": 24,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st and 3rd couples dance four hands round to the left. At the very\nend of this phrase, 1st and 3rd women as well as 1st and 3rd men\nrelease hands while retaining hands with their partner.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st and 3rd couples dance a poussette right round. On the first bar,\n1st and 3rd couples join both hands and turn into a diagonal line with\n1st couple above 3rd couple. The rest of the poussette proceeds as\nnormal.\n"
+          }
+        ]
+      },
+      {
+        "type": "repeat",
+        "kind": "having passed a couple"
+      },
+      {
+        "type": "devised by",
+        "deviser": "Saskia Frisby",
+        "more": "and inspired by the waves in the sea around St. Andrews. For Rachel\nShankland and George Meikle, with heartfelt thanks for their kindness\ntowards and patience with the Units 2/3 class of 2022.\n"
+      },
+      {
+        "type": "recommended tune",
+        "tune": "Highland Whisky",
+        "composer": "Niel Gow"
+      }
+    ]
+  },
   "slug": "the-waves",
+  "title": "The Waves | Dance",
   "root": ".."
 }

@@ -1,82 +1,85 @@
 {
-  "name": "La Ville Lumière",
-  "author": "Nicolas “Niols” Jeannerod",
-  "scddb-id": 20315,
-  "kind": "32-bar reel for four couples in a four-couple longwise set",
-  "short-kind": "R32 4/4L",
-  "tunes": [
-    "la-ville-lumiere"
-  ],
-  "description": [
-    {
-      "type": "phrase",
-      "starts": 1,
-      "ends": 4,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st couple set and cast off one place as 4th couple set and cast up\none place. 2nd couple step up and 3rd couple step down on bars 3-4.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 5,
-      "ends": 8,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st and 4th couples dance right hands across to finish facing third\ncorners, that is, 1st man facing 2nd man with 4th man behind him and\n4th woman facing 3rd woman with 1st woman behind her.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 9,
-      "ends": 16,
-      "contents": [
-        {
-          "type": "text",
-          "content": "“Dolphin corners pass & turn”: 1st man followed by 4th man and 4th\nwoman followed by 1st woman pass third corners by the right and change\nlead; corners dance in and turn right hand back to place as 4th man\nfollowed by 1st man and 1st woman followed by 4th woman dance in and\npass right shoulders to face fourth corners. Repeat with fourth\ncorners to finish 1st and 4th couples in the middle of the set with\nboth hands joined with partner.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 17,
-      "ends": 24,
-      "contents": [
-        {
-          "type": "text",
-          "content": "1st and 4th couple dance a poussette to finish in the order 2, 4, 1, 3.\n"
-        }
-      ]
-    },
-    {
-      "type": "phrase",
-      "starts": 25,
-      "ends": 32,
-      "contents": [
-        {
-          "type": "text",
-          "content": "All 4 couples dance eight hands round and back.\n"
-        }
-      ]
-    },
-    {
-      "type": "repeat",
-      "kind": "from new positions"
-    },
-    {
-      "type": "devised by",
-      "deviser": "Nicolas “Niols” Jeannerod",
-      "more": "in April 2019."
-    },
-    {
-      "type": "music by",
-      "composer": "Pascaline Latour"
-    }
-  ],
+  "dance": {
+    "name": "La Ville Lumière",
+    "author": "Nicolas “Niols” Jeannerod",
+    "scddb-id": 20315,
+    "kind": "32-bar reel for four couples in a four-couple longwise set",
+    "short-kind": "R32 4/4L",
+    "tunes": [
+      "la-ville-lumiere"
+    ],
+    "description": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 4,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st couple set and cast off one place as 4th couple set and cast up\none place. 2nd couple step up and 3rd couple step down on bars 3-4.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 5,
+        "ends": 8,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st and 4th couples dance right hands across to finish facing third\ncorners, that is, 1st man facing 2nd man with 4th man behind him and\n4th woman facing 3rd woman with 1st woman behind her.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "contents": [
+          {
+            "type": "text",
+            "content": "“Dolphin corners pass & turn”: 1st man followed by 4th man and 4th\nwoman followed by 1st woman pass third corners by the right and change\nlead; corners dance in and turn right hand back to place as 4th man\nfollowed by 1st man and 1st woman followed by 4th woman dance in and\npass right shoulders to face fourth corners. Repeat with fourth\ncorners to finish 1st and 4th couples in the middle of the set with\nboth hands joined with partner.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 24,
+        "contents": [
+          {
+            "type": "text",
+            "content": "1st and 4th couple dance a poussette to finish in the order 2, 4, 1, 3.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "contents": [
+          {
+            "type": "text",
+            "content": "All 4 couples dance eight hands round and back.\n"
+          }
+        ]
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by",
+        "deviser": "Nicolas “Niols” Jeannerod",
+        "more": "in April 2019."
+      },
+      {
+        "type": "music by",
+        "composer": "Pascaline Latour"
+      }
+    ]
+  },
   "slug": "la-ville-lumiere",
+  "title": "La Ville Lumière | Dance",
   "root": ".."
 }
