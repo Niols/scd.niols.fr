@@ -284,9 +284,13 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 ## Index of books
 
 $(website-output)/books.json: $(addsuffix .json, $(built_books))
-	printf 'Making `books.json`... '
-	jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
-	printf 'done.\n'
+	printf 'Making `books.json`...\n'
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built books.)\n'
+	  jq -n '{books:[], root:"."}' > $@
+	fi
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`... '
