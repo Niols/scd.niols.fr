@@ -152,7 +152,12 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 
 $(website-output)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`...\n'
-	jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built dances.)\n'
+	  jq -n '{dances:[], root:"."}' > $@
+	fi
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
@@ -240,7 +245,12 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 
 $(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`...\n'
-	jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built tunes.)\n'
+	  jq -n '{tunes:[], root:"."}' > $@
+	fi
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
