@@ -71,9 +71,12 @@ description:
   - type: devised by
     deviser: Saskia Frisby
     more: |
-      and inspired by the waves in the sea around St. Andrews. For Rachel
-      Shankland and George Meikle, with heartfelt thanks for their kindness
-      towards and patience with the Units 2/3 class of 2022.
+      and inspired by the waves in the sea around St. Andrews.
+
+  - type: quote
+    content: |
+      For Rachel Shankland and George Meikle, with heartfelt thanks for their
+      kindness towards and patience with the Units 2/3 class of 2022.
 
   - type: recommended tune
     tune: Highland Whisky
