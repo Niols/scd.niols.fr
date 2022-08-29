@@ -25,7 +25,7 @@ description:
           1st couple, followed by 2nd couple, lead down the middle for three
           steps. 2nd couple divide to allow 1st couple through and both couples
           lead up. On bars 15-16, retaining right hands, 1st and 2nd couple turn
-          by the right to finish on own sides [see note below].
+          by the right to finish on own sides. [see note below]
 
   - type: phrase
     starts: 17
@@ -37,13 +37,20 @@ description:
 
   - type: phrase
     starts: 25
+    ends: 28
+    contents:
+      - type: text
+        content: |
+          1st and 2nd couples dance right hands across.
+
+  - type: phrase
+    starts: 29
     ends: 32
     contents:
       - type: text
         content: |
-          1st and 2nd couples dance right hands across; 1st couple turn by the
-          right to finish in second place on own side while 2nd couple moves up
-          [see note below].
+          1st couple turn by the right to finish in second place on own side.
+          2nd couple step up on bars 31-32. [see note below]
 
   - type: repeat
     kind: having passed a couple
