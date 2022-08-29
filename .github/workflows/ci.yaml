@@ -140,9 +140,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2.0.0
 
-      - name: Build Docker Tester Image
+      - name: Build Docker Builder & Tester Images
         run: |
-          make docker-tester
+          make -j 2 docker-builder docker-tester
 
       - name: Build Test Website
         run: |
