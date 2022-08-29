@@ -152,7 +152,12 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 
 $(website-output)/dances.json: $(addsuffix .json, $(built_dances))
 	printf 'Making `dances.json`...\n'
-	jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built dances.)\n'
+	  jq -n '{dances:[], root:"."}' > $@
+	fi
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
@@ -240,7 +245,12 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 
 $(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
 	printf 'Making `tunes.json`...\n'
-	jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built tunes.)\n'
+	  jq -n '{tunes:[], root:"."}' > $@
+	fi
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
@@ -284,9 +294,13 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 ## Index of books
 
 $(website-output)/books.json: $(addsuffix .json, $(built_books))
-	printf 'Making `books.json`... '
-	jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
-	printf 'done.\n'
+	printf 'Making `books.json`...\n'
+	if [ -n '$^' ]; then
+	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
+	else
+	  printf '(Generating trivial file because there are no built books.)\n'
+	  jq -n '{books:[], root:"."}' > $@
+	fi
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`... '
@@ -388,18 +402,32 @@ tests: $(tests-output)
 
 	    output_path="$$path"."$$width"x"$$height".png
 
-	    firefox --headless --window-size "$$width,$$height" \
+	    firefox_output=$$(
+	      firefox --headless --no-remote \
+	        --window-size "$$width,$$height" \
 	        --screenshot $(tests-output)/"$$output_path" \
 	        file://$$PWD/$(website-output)/"$$path" \
-	        >/dev/null 2>/dev/null
-	    chmod 644 $(tests-output)/"$$output_path"
+	        2>&1
+	    )
+
+	    if [ -e $(tests-output)/"$$output_path" ]; then
+	      chmod 644 $(tests-output)/"$$output_path"
+	    else
+	      unexpected_failures=$$((unexpected_failures + 1))
+	      printf '    => \e[1;31munexpected failure while taking screenshot\e[0m.\n'
+	      printf '       Here is the output from Firefox:\n'
+	      printf '\n\e[37m%s\e[0m\n\n' "$$firefox_output" | sed 's|^\(.*\)|         \1|'
+	      continue
+	    fi
 
 	    diff_path="$$path"."$$width"x"$$height".diff.png
 
-	    compare -compose src -metric AE -format '' \
+	    compare_output=$$(
+	      compare -compose src -metric AE -format '' \
 	        $(tests)/outputs/"$$output_path" $(tests-output)/"$$output_path" \
 	        $(tests-output)/"$$diff_path" \
-	        >/dev/null 2>/dev/null && true
+	        2>&1
+	    ) && true
 	    return_code=$$?
 
 	    if [ $$return_code -eq 1 ]; then
@@ -407,7 +435,9 @@ tests: $(tests-output)
 	      printf '    => \e[31mdissimilarity\e[0m.\n'
 	    elif [ $$return_code -ge 2 ]; then
 	      unexpected_failures=$$((unexpected_failures + 1))
-	      printf '    => \e[1;31munexpected failure\e[0m.\n'
+	      printf '    => \e[1;31munexpected failure while comparing\e[0m.\n'
+	      printf '       Here is the output from ImageMagick:\n'
+	      printf '\n\e[37m%s\e[0m\n\n' "$$compare_output" | sed 's|^\(.*\)|         \1|'
 	    fi
 	  done
 	done
