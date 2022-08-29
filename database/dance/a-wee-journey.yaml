@@ -19,7 +19,7 @@ description:
     contents:
       - type: text
         content: |
-          All couples dance twelve hands round to the left for 6 bars.
+          All couples dance twelve hands round halfway to the left for six bars.
 
   - type: phrase
     starts: 7
@@ -27,10 +27,10 @@ description:
     contents:
       - type: text
         content: |
-          5th couple in second place and 2nd couple in fifth place cross,
-          finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd couples on
-          own sides facing down and 5th, 3rd and 1st couples on opposite sides
-          facing up.
+          5th couple in second place and 2nd couple in fifth place cross by the
+          right hand, finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd
+          couples on own sides facing down and 5th, 3rd and 1st couples on
+          opposite sides facing up.
 
   - type: phrase
     starts: 9
@@ -38,8 +38,8 @@ description:
     contents:
       - type: text
         content: |
-          All dance reels of six on the sidelines for 6 bars, giving right
-          shoulder to being, finishing in order 1, 2, 3, 4, 5, 6, facing in.
+          All dance reels of six on the sidelines for six bars, giving right
+          shoulder to begin, finishing in order 1, 2, 3, 4, 5, 6, facing in.
 
   - type: phrase
     starts: 15
@@ -70,7 +70,7 @@ description:
           All set. 2nd couple cross up while 3rd couple steps down; 5th couple
           cross down while 4th couple steps up; 1st and 6th couples dance half
           right hands across. All turn by the right and finish in order 2, 3, 6,
-          1, 4, 5.
+          1, 4, 5 with 1st, 4th and 5th couples on opposite sides.
 
   - type: repeat
     kind: from new positions
