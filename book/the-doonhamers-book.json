@@ -42,8 +42,8 @@
       "name": "A Wee Journey",
       "author": "Nicolas “Niols” Jeannerod",
       "scddb-id": 20990,
-      "kind": "32-bar reel for six couples in a six-couple longwise set",
-      "short-kind": "R32 6/6L",
+      "kind": "32-bar jig for six couples in a six-couple longwise set",
+      "short-kind": "J32 6/6L",
       "description": [
         {
           "type": "instruction",
@@ -56,7 +56,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "All couples dance twelve hands round to the left for 6 bars.\n"
+              "content": "All couples dance twelve hands round halfway to the left for six bars.\n"
             }
           ]
         },
@@ -67,7 +67,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "5th couple in second place and 2nd couple in fifth place cross,\nfinishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd couples on\nown sides facing down and 5th, 3rd and 1st couples on opposite sides\nfacing up.\n"
+              "content": "5th couple in second place and 2nd couple in fifth place cross by the\nright hand, finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd\ncouples on own sides facing down and 5th, 3rd and 1st couples on\nopposite sides facing up.\n"
             }
           ]
         },
@@ -78,7 +78,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "All dance reels of six on the sidelines for 6 bars, giving right\nshoulder to being, finishing in order 1, 2, 3, 4, 5, 6, facing in.\n"
+              "content": "All dance reels of six on the sidelines for six bars, giving right\nshoulder to begin, finishing in order 1, 2, 3, 4, 5, 6, facing in.\n"
             }
           ]
         },
@@ -100,7 +100,7 @@
           "contents": [
             {
               "type": "text",
-              "content": "1st, 2nd and 3rd couples at the top and 6th, 5th and 4th couples at\nthe bottom dance circulating allemandes, finishing in order 3, 2, 1,\n6, 5, 4 with 3rd, 1st and 5th couples on own sides.\n"
+              "content": "1st, 2nd and 3rd couples at the top and 6th, 5th and 4th couples at\nthe bottom dance circulating allemandes towards the top and the bottom\nrespectively, finishing in order 3, 2, 1, 6, 5, 4 with 3rd, 1st and\n5th couples on own sides.\n"
             }
           ]
         },
@@ -111,13 +111,17 @@
           "contents": [
             {
               "type": "text",
-              "content": "All set. 2nd couple cross up while 3rd couple steps down; 5th couple\ncross down while 4th couple steps up; 1st and 6th couples dance half\nright hands across. All turn by the right and finish in order 2, 3, 6,\n1, 4, 5.\n"
+              "content": "All set. 2nd couple cross up while 3rd couple steps down; 5th couple\ncross down while 4th couple steps up; 1st and 6th couples dance half\nright hands across. All turn by the right and finish in order 2, 3, 6,\n1, 4, 5 with 1st, 4th and 5th couples on opposite sides.\n"
             }
           ]
         },
         {
           "type": "repeat",
           "kind": "from new positions"
+        },
+        {
+          "type": "note",
+          "content": "A reel of six is similar to a reel of four in that all dancers pass one\nother dancer at each bar and take one additional bar to turn around at the\nend. It takes twelve bars to dance a full reel of six, and six bars to\ndance one halfway.\n"
         },
         {
           "type": "devised by",
