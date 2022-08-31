@@ -9,6 +9,10 @@ short-kind: R32
 
 date: "2021"
 
+dances:
+  - type: internal
+    slug: the-reel-of-the-51st-confusion
+
 content: |
   \relative a <<
     {

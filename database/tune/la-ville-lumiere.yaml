@@ -9,6 +9,10 @@ short-kind: R32
 
 date: "2020"
 
+dances:
+  - type: internal
+    slug: la-ville-lumiere
+
 content: |
   \relative a' <<
     \new Voice {

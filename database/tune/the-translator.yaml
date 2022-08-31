@@ -9,6 +9,11 @@ short-kind: S32
 
 date: 2019-03-02
 
+dances:
+  - type: external
+    name: Drawn in
+    deviser: Shannon Kiernan
+
 content: |
   \relative f <<
     \new Voice {

@@ -9,6 +9,16 @@ short-kind: R40
 
 date: 2018-04-25
 
+dances:
+  - type: external
+    name: Two Blue Clouds in the Grey Sky
+    deviser: Claire Cunin & Nicolas “Niols” Jeannerod
+    scddb-id: 19197
+  - type: external
+    name: One Blue Cloud in the Grey Sky
+    deviser: Claire Cunin & Nicolas “Niols” Jeannerod
+    scddb-id: 19198
+
 content: |
   \relative f' <<
     {

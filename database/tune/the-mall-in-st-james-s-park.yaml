@@ -9,6 +9,10 @@ short-kind: S32
 
 date: 2018-10-19
 
+dances:
+  - type: internal
+    slug: the-mall-in-st-james-s-park
+
 content: |
   \relative f' <<
     {
