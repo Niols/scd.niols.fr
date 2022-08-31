@@ -76,9 +76,72 @@ properties:
       - "2021-08"
       - "2019-03-02"
 
+  dances:
+    $ref: "#/$defs/dances"
+
   content:
     type: string
     description: |
       The content of the tune as a LilyPond musical expression.
 
 additionalProperties: false
+
+$defs:
+
+  dances:
+    title: Dances
+    description: |
+      The dances to which this tune is associated.
+    type: array
+    minItems: 1
+    items:
+      oneOf:
+        - $ref: "#/$defs/internal"
+        - $ref: "#/$defs/external"
+
+  internal:
+    description: An internal dance
+    type: object
+    required:
+      - type
+      - slug
+    properties:
+      type:
+        enum: [internal]
+      slug:
+        type: string
+        description: |
+          The slug of the dance.
+    examples:
+      - type: internal
+        slug: la-ville-lumiere
+
+  external:
+    description: An external dance
+    type: object
+    required:
+      - type
+      - name
+    properties:
+      type:
+        enum: [external]
+      name:
+        type: string
+        description: |
+          The name of the dance.
+      deviser:
+        type: string
+        description: |
+          The deviser of the dance (short).
+      scddb-id:
+        type: integer
+        description: |
+          The ID in the SCDDB.
+    examples:
+      - type: external
+        name: The Gruffalo
+        deviser: Luisa Hulsroj
+        scddb-id: 19124
+      - type: external
+        name: The Good-Natured Gentleman
+        deviser: Luisa Hulsroj
