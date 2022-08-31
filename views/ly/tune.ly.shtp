@@ -12,4 +12,8 @@ printf '%s\n' "$(raw content)" ##NOTE: not escaped
 printf '}\n'
 
 printf '\\noPageBreak\n'
-printf '\\markup { \\copyright #%d "%s" }' "$(raw date_year)" "$(raw author)" ##FIXME: escape
+if exists date; then
+    printf '\\markup { \\copyright #%d "%s" }' "$(raw date_year)" "$(raw author)" ##FIXME: escape
+else
+    printf '\\markup { \\copyrightNoYear "%s" }' "$(raw author)" ##FIXME: escape
+fi
