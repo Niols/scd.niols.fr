@@ -23,7 +23,7 @@ printf   '</section>'
 printf   '<section class="tune-description">'
 printf     '<p>Composed by %s' "$(text author)"
 if exists date; then
-    printf ' in %d' "$(text date_year)"
+    printf ' %s' "$(text at_date)"
 fi
 printf     '.</p>'
 
