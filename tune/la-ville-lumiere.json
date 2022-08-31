@@ -6,6 +6,12 @@
     "kind": "32-bar Reel",
     "short-kind": "R32",
     "date": "2020",
+    "dances": [
+      {
+        "type": "internal",
+        "slug": "la-ville-lumiere"
+      }
+    ],
     "content": "\\relative a' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, a a d a fis' a, |\n      e' a, a a cis d e cis |\n      \\break\n\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, d a e' b cis a |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 3/4)\n      d a fis' a, d4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 4/4)\n      d8 a b cis d e fis g |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g d d d b d g b |\n      a a, b cis d e fis g |\n      \\break\n\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g e fis d e cis d b |\n    } \\alternative { {\n      cis a b cis d e fis g |\n    } {\n      cis, a b cis d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1 | g | d | a |\n      d1 | g | d2 e4:m a | d2. | d1 |\n\n      d1 | b:m | g | a:7 |\n      d1 | b:m | e4:m d \\move-left 1 a/cis g/b | a1:7 | a2:7 d4\n    }\n  }\n>>\n"
   },
   "slug": "la-ville-lumiere",

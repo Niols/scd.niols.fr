@@ -6,6 +6,20 @@
     "kind": "40-bar Reel",
     "short-kind": "R40",
     "date": "2018-04-25T00:00:00Z",
+    "dances": [
+      {
+        "type": "external",
+        "name": "Two Blue Clouds in the Grey Sky",
+        "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+        "scddb-id": 19197
+      },
+      {
+        "type": "external",
+        "name": "One Blue Cloud in the Grey Sky",
+        "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+        "scddb-id": 19198
+      }
+    ],
     "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key c \\major\n    \\time 4/4\n\n    c'4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d4 d8 e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    f'4 d8 f e4 c8 e |\n    d4 b8 d c4 c |\n    \\bar \"||\" \\break\n\n    c8 b c d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f'8 d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"||\" \\break\n\n    a'8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    gis e gis a b e,4 e8 |\n    gis e gis a b a gis e |\n    \\bar \"||\" \\break\n\n    a8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    \\tuplet 3/4 { b4 c8 } \\tuplet 3/4 { d4 c8 } |\n    \\tuplet 3/4 { b4 c8 } b2 |\n    \\bar \"||\" \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f' d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      a1:m | s | g | s | f | s | e | s |\n      a1:m | s | g | s | f | s | e | s |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n    }\n  }\n>>\n"
   },
   "slug": "forty-bars-of-cloud",
