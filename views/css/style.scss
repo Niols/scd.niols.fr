@@ -94,3 +94,17 @@ p {
         width: 100%;
     }
 }
+
+.tune-description {
+    ul {
+        margin-left: 2rem;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+    .dance {
+        font-style: italic;
+    }
+}

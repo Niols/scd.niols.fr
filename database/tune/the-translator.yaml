@@ -10,9 +10,8 @@ short-kind: S32
 date: 2019-03-02
 
 dances:
-  - type: external
-    name: Drawn in
-    deviser: Shannon Kiernan
+  - type: internal
+    slug: drawn-in
 
 content: |
   \relative f <<

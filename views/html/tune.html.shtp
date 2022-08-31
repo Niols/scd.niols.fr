@@ -18,10 +18,51 @@ fi
 printf   '</section>'
 printf   '<section class="tune-preview">'
 printf     '<img src="%s.svg" />' "$(parent url slug)"
+printf   '</section>'
+
+printf   '<section class="tune-description">'
 printf     '<p>Composed by %s' "$(text author)"
 if exists date; then
     printf ' in %d' "$(text date_year)"
 fi
 printf     '.</p>'
+
+if exists dances; then
+    printf '<p>Recommended for:</p><ul>'
+
+    iter dances
+    while next; do
+        case $(raw type) in
+
+            'internal')
+                printf '<li>'
+                printf '<a href="../dance/%s.html">%s</a>' \
+                    "$(url slug)" "$(text slug)" ## FIXME
+                printf '</li>'
+                ;;
+
+            'external')
+                printf '<li>'
+                printf '<span class="dance">%s</span>' "$(text name)"
+                if exists deviser; then
+                    printf ' by <span class="deviser">%s</span>' "$(text deviser)"
+                fi
+                if exists scddb-id; then
+                    printf ' [<a href="https://my.strathspey.org/dd/dance/%s/">' \
+                        "$(url scddb-id)"
+                    printf 'SCDDB</a>]'
+                fi
+                printf '</li>'
+                ;;
+
+            *)
+                die 'Unknown dance type: `%s`' "$(raw type)"
+                ;;
+        esac
+    done
+
+    printf '</ul>'
+fi
+
 printf   '</section>'
 printf '</article>'
