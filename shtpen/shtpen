@@ -243,6 +243,17 @@ shtp_fancy_date_year () {
     printf '%s' "${_tmp%%-*}"
 }
 
+shtp_fancy_at_date () {
+    _date=$(raw date)
+    ## Attempt to read the date as 1. full, 2. without day and 3. only year. If
+    ## none of these succeed, fail miserably. We output the date in British
+    ## English, eg. 31 August 2022.
+    date --date="$_date" +'on %-d %B %Y' 2>/dev/null \
+        || date --date="$_date"-01 +'in %B %Y' 2>/dev/null \
+        || date --date="$_date"-01-01 +'in %Y' 2>/dev/null \
+        || die 'Could not interpret `%s` as date or partial date' "$_date"
+}
+
 ################################################################################
 ##   ___           _
 ##  | __|_ _  __ _(_)_ _  ___
