@@ -20,7 +20,7 @@ printf   '<section class="tune-preview">'
 printf     '<img src="%s.svg" />' "$(parent url slug)"
 printf   '</section>'
 
-printf   '<section>'
+printf   '<section class="tune-description">'
 printf     '<p>Composed by %s' "$(text author)"
 if exists date; then
     printf ' in %d' "$(text date_year)"
@@ -28,7 +28,7 @@ fi
 printf     '.</p>'
 
 if exists dances; then
-    printf '<p>Associated to dances:</p><ul>'
+    printf '<p>Recommended for:</p><ul>'
 
     iter dances
     while next; do
@@ -42,9 +42,9 @@ if exists dances; then
 
             'external')
                 printf '<li>'
-                printf '%s' "$(text name)"
+                printf '<span class="dance">%s</span>' "$(text name)"
                 if exists deviser; then
-                    printf ' by %s' "$(text deviser)"
+                    printf ' by <span class="deviser">%s</span>' "$(text deviser)"
                 fi
                 if exists scddb-id; then
                     printf ' [<a href="https://my.strathspey.org/dd/dance/%s/">' \
