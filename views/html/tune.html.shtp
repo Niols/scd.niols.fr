@@ -18,6 +18,10 @@ fi
 printf   '</section>'
 printf   '<section class="tune-preview">'
 printf     '<img src="%s.svg" />' "$(parent url slug)"
-printf     '<p>Composed by %s.</p>' "$(text author)"
+printf     '<p>Composed by %s' "$(text author)"
+if exists date; then
+    printf ' in %d' "$(text date_year)"
+fi
+printf     '.</p>'
 printf   '</section>'
 printf '</article>'

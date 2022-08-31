@@ -199,6 +199,14 @@
      #:simple "; all rights retained by the composer."
    ))))
 
+#(define-markup-command (copyrightNoYear layout props composer) (string?)
+  (interpret-markup layout props
+   (markup #:small #:concat (
+     #:simple "Copyright © "
+     #:simple composer
+     #:simple "; all rights retained by the composer."
+   ))))
+
 move-left =
 #(define-music-function (parser location n) (number?)
    #{\once \override ChordName.extra-offset = #`(,(- 0 n) . 0) #})
