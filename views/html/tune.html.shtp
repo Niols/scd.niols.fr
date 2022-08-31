@@ -36,7 +36,8 @@ if exists dances; then
 
             'internal')
                 printf '<li>'
-                printf '%s' "$(text slug)" ## FIXME
+                printf '<a href="../dance/%s.html">%s</a>' \
+                    "$(url slug)" "$(text slug)" ## FIXME
                 printf '</li>'
                 ;;
 
