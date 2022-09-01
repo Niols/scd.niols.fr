@@ -12,7 +12,7 @@ date: "2019-04"
 tunes:
   - la-ville-lumiere
 
-description:
+instructions:
 
   - type: phrase
     starts: 1

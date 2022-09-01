@@ -12,7 +12,7 @@ date: "2019-03"
 tunes:
   - the-translator
 
-description:
+instructions:
 
   - type: phrase
     starts: 1
