@@ -17,12 +17,11 @@ editor-details: |
 
 description:
 
-  - type: instruction
-    content: |
-      On second chord, 2nd and 3rd couples cross.
+  - type: two chords
+    couples: [2nd, 3rd]
 
-  - type: instruction
-    content: Strathspey
+  - type: kind
+    kind: Strathspey
 
   - type: phrase
     starts: 1
@@ -44,8 +43,8 @@ description:
           15-16, 1st couple stays in the middle and set advancing to face first
           corners in third corner position.
 
-  - type: instruction
-    content: Reel
+  - type: kind
+    kind: Reel
 
   - type: phrase
     starts: 17

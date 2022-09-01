@@ -16,9 +16,8 @@ deviser-details: |
 
 description:
 
-  - type: instruction
-    content: |
-      On second chord, 4th, 5th and 6th couples cross.
+  - type: two chords
+    couples: [4th, 5th, 6th]
 
   - type: phrase
     starts: 1
