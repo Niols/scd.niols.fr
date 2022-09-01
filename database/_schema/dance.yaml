@@ -153,7 +153,8 @@ $defs:
     all-but-text:
       oneOf:
         - $ref: "#/$defs/description/note"
-        - $ref: "#/$defs/description/instruction"
+        - $ref: "#/$defs/description/two-chords"
+        - $ref: "#/$defs/description/kind"
         - $ref: "#/$defs/description/phrase"
         - $ref: "#/$defs/description/repeat"
         - $ref: "#/$defs/description/devised-by"
@@ -186,28 +187,49 @@ $defs:
             times, you will start dancing with that other person on the opposite
             lines.
 
-    instruction:
+    two-chords:
       type: object
       description: |
-        FIXME: We should split this into changing kind or stating two-chords.
+        The presence of this input specifies that there will be a second chord.
+        The object describes what happens then.
       required:
         - type
-        - content
       properties:
         type:
-          enum: [instruction]
-        content:
+          enum: ["two chords"]
+        couples:
+          type: array
+          description: |
+            An array of couples that cross on the second chord.
+        custom:
           type: string
           description: |
-            A string to be included as an instruction in the output, modulo some
-            escaping for HTML entities or TeX special characters.
+            A string describing what happens on the second chord.
       additionalProperties: false
       examples:
-        - type: instruction
-          content: Strathspey
-        - type: instruction
-          content: |
-            On second chord, 2nd and 3rd couples cross.
+        - type: two chords
+          couples: [2nd, 3rd]
+        - type: two chords
+          custom: |
+            On second chord, everybody claps twice.
+
+    kind:
+      type: object
+      description: |
+        Specifies the kind that applies to the rest of the description. This is
+        useful in medleys in particular.
+      required:
+        - type
+        - kind
+      properties:
+        type:
+          enum: [kind]
+        kind:
+          type: string
+      additionalProperties: false
+      examples:
+        - type: kind
+          kind: Strathspey
 
     phrase:
       type: object
