@@ -6,7 +6,7 @@ $id: dance
 title: Dance
 
 description: |
-  A dance with its metadata and its full description.
+  A dance with its metadata and (potentially) all its instructions.
 
 type: object
 
@@ -111,20 +111,20 @@ properties:
     description: |
       A list of tunes. This propertie is currently unused. <-- FIXME
 
-  description:
+  instructions:
     description: |
       A dance description, that is a non-empty array of dance description items
       of various types.
     type: array
     minItems: 1
     items:
-      $ref: "#/$defs/description/all-but-text"
+      $ref: "#/$defs/instructions/all-but-text"
 
 additionalProperties: false
 
 $defs:
 
-  description:
+  instructions:
 
     text:
       type: object
@@ -152,13 +152,14 @@ $defs:
 
     all-but-text:
       oneOf:
-        - $ref: "#/$defs/description/note"
-        - $ref: "#/$defs/description/instruction"
-        - $ref: "#/$defs/description/phrase"
-        - $ref: "#/$defs/description/repeat"
-        - $ref: "#/$defs/description/devised-by"
-        - $ref: "#/$defs/description/music-by"
-        - $ref: "#/$defs/description/recommended-tune"
+        - $ref: "#/$defs/instructions/note"
+        - $ref: "#/$defs/instructions/two-chords"
+        - $ref: "#/$defs/instructions/kind"
+        - $ref: "#/$defs/instructions/phrase"
+        - $ref: "#/$defs/instructions/repeat"
+        - $ref: "#/$defs/instructions/devised-by"
+        - $ref: "#/$defs/instructions/music-by"
+        - $ref: "#/$defs/instructions/recommended-tune"
 
     note:
       type: object
@@ -186,28 +187,49 @@ $defs:
             times, you will start dancing with that other person on the opposite
             lines.
 
-    instruction:
+    two-chords:
       type: object
       description: |
-        FIXME: We should split this into changing kind or stating two-chords.
+        The presence of this input specifies that there will be a second chord.
+        The object describes what happens then.
       required:
         - type
-        - content
       properties:
         type:
-          enum: [instruction]
-        content:
+          enum: ["two chords"]
+        couples-cross:
           type: string
           description: |
-            A string to be included as an instruction in the output, modulo some
-            escaping for HTML entities or TeX special characters.
+            The couples that cross on the second chord.
+        custom:
+          type: string
+          description: |
+            A string describing what happens on the second chord.
       additionalProperties: false
       examples:
-        - type: instruction
-          content: Strathspey
-        - type: instruction
-          content: |
-            On second chord, 2nd and 3rd couples cross.
+        - type: two chords
+          couples: [2nd, 3rd]
+        - type: two chords
+          custom: |
+            On second chord, everybody claps twice.
+
+    kind:
+      type: object
+      description: |
+        Specifies the kind that applies to the rest of the description. This is
+        useful in medleys in particular.
+      required:
+        - type
+        - kind
+      properties:
+        type:
+          enum: [kind]
+        kind:
+          type: string
+      additionalProperties: false
+      examples:
+        - type: kind
+          kind: Strathspey
 
     phrase:
       type: object
@@ -236,8 +258,8 @@ $defs:
           minItems: 1
           items:
             oneOf:
-              - $ref: "#/$defs/description/all-but-text"
-              - $ref: "#/$defs/description/text"
+              - $ref: "#/$defs/instructions/all-but-text"
+              - $ref: "#/$defs/instructions/text"
       additionalProperties: false
       examples:
         - type: phrase

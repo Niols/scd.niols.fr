@@ -15,14 +15,13 @@ editor-details: |
   motto during the twentieth century. It was a symbol of the mission of Prague
   to protect the independence and prosperity of the Czecho-Slovakian state.
 
-description:
+instructions:
 
-  - type: instruction
-    content: |
-      On second chord, 2nd and 3rd couples cross.
+  - type: two chords
+    couples-cross: "2nd and 3rd"
 
-  - type: instruction
-    content: Strathspey
+  - type: kind
+    kind: Strathspey
 
   - type: phrase
     starts: 1
@@ -44,8 +43,8 @@ description:
           15-16, 1st couple stays in the middle and set advancing to face first
           corners in third corner position.
 
-  - type: instruction
-    content: Reel
+  - type: kind
+    kind: Reel
 
   - type: phrase
     starts: 17

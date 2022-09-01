@@ -8,45 +8,55 @@ printf '  {%s}\n' "$(text name)"
 printf '  {%s}\n' "$(text short-kind)"
 printf '  {%s}\n' "$(text kind)"
 
-if exists description; then
-	render_description_item () {
-		printf '\n'
+if exists instructions; then
+    render_instruction_item () {
+        printf '\n'
 
-		case $(raw type) in
+        case $(raw type) in
 
-			'text')
-				printf '%s' "$(text content)"
-				;;
+            'text')
+                printf '%s' "$(text content)"
+                ;;
 
-			'note')
-				printf 'Note: %s' "$(text content)"
-				;;
+            'note')
+                printf 'Note: %s' "$(text content)"
+                ;;
 
-			'instruction')
-				printf '%s' "$(text content)"
-				;;
+            'kind')
+                printf '%s' "$(text kind)"
+                ;;
 
-			'phrase')
-				printf '\\phrase{%d}{%d}{\n' "$(raw starts)" "$(raw ends)"
-				render_description_items_in contents
-				printf '}\n'
-				;;
+            'two chords')
+                printf 'Two chords.'
+                if exists couples-cross; then
+                    printf ' On second chord, %s couples cross.' "$(text couples-cross)"
+                fi
+                if exists custom; then
+                    printf ' %s' "$(text custom)"
+                fi
+                ;;
 
-			'repeat')
-				case $(raw kind) in
-					'from new positions')
-						printf '\\repeatfromnewpos'
-						;;
-					'having passed a couple')
-						printf '\\repeathavingpassed'
-						;;
-					'custom')
-						printf '%s' "$(text text)"
-						;;
-					*)
-						die 'Unknown dance description repeat kind: `%s`' "$(raw kind)"
-				esac
-				;;
+            'phrase')
+                printf '\\phrase{%d}{%d}{\n' "$(raw starts)" "$(raw ends)"
+                render_instruction_items_in contents
+                printf '}\n'
+                ;;
+
+            'repeat')
+                case $(raw kind) in
+                    'from new positions')
+                        printf '\\repeatfromnewpos'
+                        ;;
+                    'having passed a couple')
+                        printf '\\repeathavingpassed'
+                        ;;
+                    'custom')
+                        printf '%s' "$(text text)"
+                        ;;
+                    *)
+                        die 'Unknown dance instruction repeat kind: `%s`' "$(raw kind)"
+                esac
+                ;;
 
             'devised by')
                 (
@@ -65,41 +75,41 @@ if exists description; then
                     fi
                     if exists deviser-details; then
                         printf '\n\n'
-						printf '{\\em %s}' "$(text deviser-details)"
+                        printf '{\\em %s}' "$(text deviser-details)"
                     fi
                 )
                 ;;
 
-			'music by')
-				printf 'Music by \\composer{%s}' "$(text composer)"
-				exists tune && printf ': \\tune{%s}' "$(text tune)"
-				printf '.'
-				exists more && printf ' %s' "$(text more)"
-				;;
+            'music by')
+                printf 'Music by \\composer{%s}' "$(text composer)"
+                exists tune && printf ': \\tune{%s}' "$(text tune)"
+                printf '.'
+                exists more && printf ' %s' "$(text more)"
+                ;;
 
-			'recommended tune')
-				printf 'Recommended tune: \\tune{%s}' "$(text tune)"
-				exists composer && printf ', by \\composer{%s}' "$(text composer)"
-				printf '.'
-				exists more && printf ' %s' "$(text more)"
-				;;
+            'recommended tune')
+                printf 'Recommended tune: \\tune{%s}' "$(text tune)"
+                exists composer && printf ', by \\composer{%s}' "$(text composer)"
+                printf '.'
+                exists more && printf ' %s' "$(text more)"
+                ;;
 
-			*)
-				die 'Unknown dance description item type: `%s`' "$(raw type)"
-				;;
-		esac
+            *)
+                die 'Unknown dance instruction item type: `%s`' "$(raw type)"
+                ;;
+        esac
 
-		printf '\n'
-	}
+        printf '\n'
+    }
 
-	render_description_items_in () {
-		iter "$1"
-		while next; do
-			render_description_item
-		done
-	}
+    render_instruction_items_in () {
+        iter "$1"
+        while next; do
+            render_instruction_item
+        done
+    }
 
-	render_description_items_in description
+    render_instruction_items_in instructions
 fi
 
 printf '\\end{dance}\n'

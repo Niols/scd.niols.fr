@@ -14,7 +14,7 @@ editor-details: |
 tunes:
   - forty-bars-of-clouds
 
-description:
+instructions:
 
   - type: phrase
     starts: 1

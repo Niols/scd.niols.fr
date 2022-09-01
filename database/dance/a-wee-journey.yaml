@@ -14,11 +14,10 @@ deviser-details: |
   give many opportunities for the men to flash their underwear as the RSCDS
   demands for Unit 2.
 
-description:
+instructions:
 
-  - type: instruction
-    content: |
-      On second chord, 4th, 5th and 6th couples cross.
+  - type: two chords
+    couples-cross: "4th, 5th and 6th"
 
   - type: phrase
     starts: 1
