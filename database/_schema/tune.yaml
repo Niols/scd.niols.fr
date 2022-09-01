@@ -76,6 +76,36 @@ properties:
       - "2021-08"
       - "2019-03-02"
 
+  date-format:
+    type: string
+    description: |
+      A string describing when the tune was composed. The string may contain the
+      special sequences %year% or %at-date%. For instance, if the "date" field
+      is "2019-03-02", %year% will be "2019" and %at-date% will be "on 2 March
+      2019". If this field is not defined, then %at-date% is used.
+    examples:
+      - "%at-date%"
+      - "during Summer School %year%"
+      - "for X's anniversary %at-date%"
+
+  editor-details:
+    type: string
+    description: |
+      Additional details given by the editor. Those should be factual. For
+      first-person, personal details given by the composer, see field
+      "composer-details".
+    examples:
+      - "This tune celebrates [...]."
+      - "This tune was initially written [...]"
+
+  composer-details:
+    type: string
+    description: |
+      Additional details given by the composer. They will be presented as a
+      direct quote and should be written using first-person.
+    examples:
+      - "I wrote this tune for the [...]"
+
   dances:
     $ref: "#/$defs/dances"
 
