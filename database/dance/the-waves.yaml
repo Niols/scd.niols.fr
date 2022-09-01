@@ -7,6 +7,13 @@ scddb-id: 20994
 kind: 32-bar strathspey for three couples in a four-couple longwise set
 short-kind: S32 3/4L
 
+date: "2022"
+date-format: |
+  %at-date% and inspired by the waves in the sea around St. Andrews
+deviser-details: |
+  For Rachel Shankland and George Meikle, with heartfelt thanks for their
+  kindness towards and patience with the Units 2/3 class of 2022.
+
 description:
 
   - type: phrase
@@ -69,14 +76,6 @@ description:
     kind: having passed a couple
 
   - type: devised by
-    deviser: Saskia Frisby
-    more: |
-      and inspired by the waves in the sea around St. Andrews.
-
-  - type: quote
-    content: |
-      For Rachel Shankland and George Meikle, with heartfelt thanks for their
-      kindness towards and patience with the Units 2/3 class of 2022.
 
   - type: recommended tune
     tune: Highland Whisky

@@ -6,6 +6,12 @@ author: Shona Holmes
 kind: 32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set
 short-kind: X32 2/4L
 
+date: "2022-08"
+deviser-details: |
+  George Meikle played wonderfully for our Units 2 and 3, even if not always in
+  the tempo we wanted. This dance can be danced in your choice of tempo to
+  reflect this.
+
 description:
 
   - type: phrase
@@ -63,15 +69,6 @@ description:
       move down as they turn. 2nd couple do not need to step up.
 
   - type: devised by
-    deviser: Shona Holmes
-    more: |
-      in August 2022.
-
-  - type: quote
-    content: |
-      George Meikle played wonderfully for our Units 2 and 3, even if not always
-      in the tempo we wanted. This dance can be danced in your choice of tempo
-      to reflect this.
 
   - type: music by
     tune: A Strathspey for George

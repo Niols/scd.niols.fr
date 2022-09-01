@@ -6,6 +6,15 @@ author: Kristian Vestli
 kind: 40-bar reel for six couples in a six-couple longwise set
 short-kind: R40 6/6L
 
+date: "2022-07"
+date-format: |
+  in St Andrews %at-date%
+deviser-details: |
+  The team of twelve candidates for our units 2 & 3 were terrific. In this dance
+  you hardly get a rest, to remind us of all the hard work we put in, but also
+  all the fun we had with our tutor, Rachel Shankland and our musician, George
+  Meikle.
+
 description:
 
   - type: phrase
@@ -68,12 +77,3 @@ description:
     kind: from new positions
 
   - type: devised by
-    deviser: Kristian Vestli
-    more: in St Andrews, July 2022.
-
-  - type: quote
-    content: |
-      The team of twelve candidates for our units 2 & 3 were terrific. In this
-      dance you hardly get a rest, to remind us of all the hard work we put in,
-      but also all the fun we had with our tutor, Rachel Shankland and our
-      musician, George Meikle.
