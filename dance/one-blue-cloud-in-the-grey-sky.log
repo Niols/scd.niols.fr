@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.8.31)  31 AUG 2022 14:30
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2022.9.1)  1 SEP 2022 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1312,7 +1312,7 @@ Package rerunfilecheck Info: Checksums for `one-blue-cloud-in-the-grey-sky.out'
  ) 
 Here is how much of TeX's memory you used:
  32751 strings out of 479212
- 646939 string characters out of 5875086
+ 646939 string characters out of 5875087
  1020460 words of memory out of 5000000
  51833 multiletter control sequences out of 15000+600000
  403950 words of font info for 48 fonts, out of 8000000 for 9000
