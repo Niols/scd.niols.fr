@@ -1,11 +1,15 @@
 ---
 
 name: One Blue Cloud in the Grey Sky
-author: Claire Cunin & Nicolas “Niols” Jeannerod
+author: Claire Cunin and Nicolas “Niols” Jeannerod
 scddb-id: 19198
 
 kind: 40-bar reel for three couples in a three-couple longwise set
 short-kind: R40 3/3L
+
+date: "2018-05"
+editor-details: |
+  This dance is a three-couple version of “Two Blue Clouds in the Grey Sky”.
 
 tunes:
   - forty-bars-of-clouds
@@ -53,10 +57,6 @@ description:
     kind: from new positions
 
   - type: devised by
-    deviser: Claire Cunin & Nicolas “Niols” Jeannerod
-    more: |
-      in May 2018. This dance is a three-couple version of “Two Blue Clouds in
-      the Grey Sky”.
 
   - type: music by
     composer: Nicolas “Niols” Jeannerod

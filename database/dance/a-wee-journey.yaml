@@ -7,6 +7,13 @@ scddb-id: 20990
 kind: 32-bar jig for six couples in a six-couple longwise set
 short-kind: J32 6/6L
 
+date: "2022-07"
+deviser-details: |
+  This dance is written as a gift for Rachel Shankland and George Meikle that
+  took such good care of us during our Units 2 and 3. The changes of direction
+  give many opportunities for the men to flash their underwear as the RSCDS
+  demands for Unit 2.
+
 description:
 
   - type: instruction
@@ -83,13 +90,3 @@ description:
       dance one halfway.
 
   - type: devised by
-    deviser: Nicolas “Niols” Jeannerod
-    more: |
-      in July 2022.
-
-  - type: quote
-    content: |
-      This dance is written as a gift for Rachel Shankland and George Meikle
-      that took such good care of us during our Units 2 and 3. The changes of
-      direction give many opportunities for the men to flash their underwear as
-      the RSCDS demands for Unit 2.

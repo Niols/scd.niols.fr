@@ -71,10 +71,28 @@ if exists description; then
                 ;;
 
             'devised by')
-                printf '<div class="devised-by">'
-                printf 'Devised by <span class="deviser">%s</span>' "$(text deviser)"
-                exists more && printf ' %s' "$(text more)" || printf '.'
-                printf '</div>'
+                (
+                    ## NOTE: The information required to print the `devised by`
+                    ## field are at toplevel of the dance. Therefore, we need to
+                    ## leave the current context.
+                    leave
+
+                    printf '<div class="devised-by">'
+                    printf   'Devised by <span class="deviser">%s</span>' "$(text author)"
+                    if exists formatted_date; then
+                        printf ' %s' "$(text formatted_date)"
+                    fi
+                    printf     '.'
+                    if exists editor-details; then
+                        printf   ' %s' "$(text editor-details)"
+                    fi
+                    printf '</div>'
+                    if exists deviser-details; then
+                        printf '<blockquote>'
+                        printf '%s' "$(text deviser-details)"
+                        printf '</blockquote>'
+                    fi
+                )
                 ;;
 
             'music by')
@@ -93,12 +111,6 @@ if exists description; then
                 printf '.'
                 exists more && printf ' %s' "$(text more)"
                 printf '</div>'
-                ;;
-
-            'quote')
-                printf '<blockquote>'
-                printf '%s' "$(text content)"
-                printf '</blockquote>'
                 ;;
 
             *)

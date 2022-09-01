@@ -67,6 +67,45 @@ properties:
     examples:
       - "R32 4/4L"
 
+  date:
+    type: string
+    description: |
+      The date of composition of the tune, containing at least the year.
+    examples:
+      - "2020"
+      - "2021-08"
+      - "2019-03-02"
+
+  date-format:
+    type: string
+    description: |
+      A string describing when the tune was composed. The string may contain the
+      special sequences %year% or %at-date%. For instance, if the "date" field
+      is "2019-03-02", %year% will be "2019" and %at-date% will be "on 2 March
+      2019". If this field is not defined, then %at-date% is used.
+    examples:
+      - "%at-date%"
+      - "during Summer School %year%"
+      - "for X's anniversary %at-date%"
+
+  editor-details:
+    type: string
+    description: |
+      Additional details given by the editor. Those should be factual. For
+      first-person, personal details given by the deviser, see field
+      deviser-details".
+    examples:
+      - "This dance celebrates [...]."
+      - "This dance was initially written [...]"
+
+  deviser-details:
+    type: string
+    description: |
+      Additional details given by the deviser. They will be presented as a
+      direct quote and should be written using first-person.
+    examples:
+      - "I wrote this dance for the [...]"
+
   tunes:
     type: array
     description: |
@@ -119,7 +158,6 @@ $defs:
       - $ref: "#/$defs/devised-by"
       - $ref: "#/$defs/music-by"
       - $ref: "#/$defs/recommended-tune"
-      - $ref: "#/$defs/quote"
 
   note:
     title: "Dance Description Item: Note"
@@ -244,23 +282,12 @@ $defs:
     type: object
     required:
       - type
-      - deviser
     properties:
       type:
         enum: ["devised by"]
-      deviser:
-        type: string
-        description: |
-          The deviser of the dance.
-      more:
-        type: string
-        description: |
-          A string to be added after the name of the deviser.
     additionalProperties: false
     examples:
       - type: devised by
-        deviser: Nicolas “Niols” Jeannerod
-        more: in April 2019.
 
   music-by:
     title: "Dance Description Item: Music By"
@@ -329,27 +356,3 @@ $defs:
         more: |
           Alternatively, one can use one of the tunes for “The Reel of the 51st
           Division”: “The Drunken Piper”, by Alex McLeod.
-
-  quote:
-    title: "Dance Description Item: Quote"
-    description: A dance description quote item.
-    type: object
-    required:
-      - type
-      - content
-    properties:
-      type:
-        enum: [quote]
-      content:
-        type: string
-        description: |
-          A string to be included as a quote in the output, modulo some escaping
-          for HTML entities or TeX special characters.
-    additionalProperties: false
-    examples:
-      - type: note
-        content: |
-          This dance is written as a gift for Rachel Shankland and George Meikle
-          that took such good care of us during our Units 2 and 3. The changes
-          of direction give many opportunities for the men to flash their
-          underwear as the RSCDS demands for Unit 2.

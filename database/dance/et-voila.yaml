@@ -6,6 +6,16 @@ author: Violaine Eysseric
 kind: Medley of 40-bar strathspey and 40-bar reel for four trios in a square set
 short-kind: M40 12S
 
+date: "2022"
+date-format: |
+  during the teaching certificate class in weeks 1 and 2 of Summer School %year%
+  as a gift for Rachel Shankland and George Meikle
+deviser-details: |
+  The candidates devised dances and created “The Doonhamers' Book”. This dance
+  is for twelve dancers as there were twelve of us; it also uses a lot of
+  formations included in the dances of Unit 2 – even if not always in the usual
+  way!
+
 description:
 
   - type: phrase
@@ -68,14 +78,3 @@ description:
       on the right, on the left and in the middle respectively.
 
   - type: devised by
-    deviser: Violaine Eysseric
-    more: |
-      during the teaching certificate class in weeks 1 and 2 of Summer School
-      2022 as a gift for Rachel Shankland and George Meikle.
-
-  - type: quote
-    content: |
-      The candidates devised dances and created “The Doonhamers' Book”. This
-      dance is for twelve dancers as there were twelve of us; it also uses a lot
-      of formations included in the dances of Unit 2 – even if not always in the
-      usual way!

@@ -6,6 +6,13 @@ author: Marie-Laure Barret
 kind: 32-bar strathspey for three couples in a three-couple longwise set
 short-kind: S32 3/3L
 
+date: "2022-07-31"
+deviser-details: |
+  During the Saturday ball at the end of the first week of Summer School in St.
+  Andrews, I was asked if I wanted to write a dance for our tutor Rachel
+  Shankland and for our musician George Meikle. Thus, on the following morning,
+  at 6.30am, I started devising this dance.
+
 description:
 
   - type: phrase
@@ -102,13 +109,3 @@ description:
     kind: from new positions
 
   - type: devised by
-    deviser: Marie-Laure Barret
-    more: |
-      on July 31st, 2022.
-
-  - type: quote
-    content: |
-      During the Saturday ball at the end of the first week of Summer School in
-      St. Andrews, I was asked if I wanted to write a dance for our tutor Rachel
-      Shankland and for our musician George Meikle. Thus, on the following
-      morning, at 6.30am, I started devising this dance.

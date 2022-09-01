@@ -7,6 +7,8 @@ scddb-id: 20314
 kind: 32-bar strathspey for three couples in a four-couple longwise set
 short-kind: S32 3/4L
 
+date: "2019-03"
+
 tunes:
   - the-translator
 
@@ -64,8 +66,6 @@ description:
     kind: having passed a couple
 
   - type: devised by
-    deviser: Shannon Kiernan
-    more: in March 2019.
 
   - type: music by
     composer: Nicolas “Niols” Jeannerod
