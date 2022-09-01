@@ -54,23 +54,23 @@ properties:
   kind:
     type: string
     description: |
-      The kind of the tune as a full English sentence. For example: “32-bar
-      Reel”.
+      The kind of the tune as a full English sentence.
     examples:
-      - "32-bar Reel"
+      - "32-bar reel"
 
   short-kind:
     type: string
     description: |
       The kind of the tune as a compact representation. For example, the compact
-      representation of “32-bar Reel” is “R32”.
+      representation of “32-bar reel” is “R32”.
     examples:
       - "R32"
 
   date:
     type: string
     description: |
-      The date of composition of the tune, containing at least the year.
+      The date of composition of the tune, containing at least the year. This
+      field should always be quoted to avoid being interpreted in odd ways.
     examples:
       - "2020"
       - "2021-08"
@@ -107,7 +107,14 @@ properties:
       - "I wrote this tune for the [...]"
 
   dances:
-    $ref: "#/$defs/dances"
+    type: array
+    description: |
+      The dances to which this tune is associated.
+    minItems: 1
+    items:
+      oneOf:
+        - $ref: "#/$defs/dances/internal"
+        - $ref: "#/$defs/dances/external"
 
   content:
     type: string
@@ -119,59 +126,57 @@ additionalProperties: false
 $defs:
 
   dances:
-    title: Dances
-    description: |
-      The dances to which this tune is associated.
-    type: array
-    minItems: 1
-    items:
-      oneOf:
-        - $ref: "#/$defs/internal"
-        - $ref: "#/$defs/external"
 
-  internal:
-    description: An internal dance
-    type: object
-    required:
-      - type
-      - slug
-    properties:
-      type:
-        enum: [internal]
-      slug:
-        type: string
-        description: |
-          The slug of the dance.
-    examples:
-      - type: internal
-        slug: la-ville-lumiere
+    internal:
+      type: object
+      description: |
+        An internal dance, that is a dance whose description can be found in
+        this very database. For such dances, only the "slug" is required.
+      required:
+        - type
+        - slug
+      properties:
+        type:
+          enum: [internal]
+        slug:
+          type: string
+          description: |
+            The slug of the dance, that is the name of the database YAML file,
+            without extension.
+        examples:
+          - type: internal
+            slug: la-ville-lumiere
 
-  external:
-    description: An external dance
-    type: object
-    required:
-      - type
-      - name
-    properties:
-      type:
-        enum: [external]
-      name:
-        type: string
-        description: |
-          The name of the dance.
-      deviser:
-        type: string
-        description: |
-          The deviser of the dance (short).
-      scddb-id:
-        type: integer
-        description: |
-          The ID in the SCDDB.
-    examples:
-      - type: external
-        name: The Gruffalo
-        deviser: Luisa Hulsroj
-        scddb-id: 19124
-      - type: external
-        name: The Good-Natured Gentleman
-        deviser: Luisa Hulsroj
+    external:
+      type: object
+      description: |
+        An external dance, that is a dance whose description cannot be found in
+        this database. For such dances, one must give a name and can
+        additionally give a deviser and an SCDDB id.
+      required:
+        - type
+        - name
+      properties:
+        type:
+          enum: [external]
+        name:
+          type: string
+          description: |
+            The name of the dance.
+        deviser:
+          type: string
+          description: |
+            The deviser of the dance (short).
+        scddb-id:
+          type: integer
+          description: |
+            The identifier in the SCDDB. That is the number at the end of the
+            SCDDB URL of the dance.
+        examples:
+          - type: external
+            name: The Gruffalo
+            deviser: Luisa Hulsroj
+            scddb-id: 19124
+          - type: external
+            name: The Good-Natured Gentleman
+            deviser: Luisa Hulsroj
