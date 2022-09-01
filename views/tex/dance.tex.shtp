@@ -22,9 +22,19 @@ if exists description; then
 				printf 'Note: %s' "$(text content)"
 				;;
 
-			'instruction')
-				printf '%s' "$(text content)"
-				;;
+            'kind')
+                printf '%s' "$(text kind)"
+                ;;
+
+            'two chords')
+                printf 'Two chords.'
+                if exists couples-cross; then
+                    printf ' On second chord, %s couples cross.' "$(text couples-cross)"
+                fi
+                if exists custom; then
+                    printf ' %s' "$(text custom)"
+                fi
+                ;;
 
 			'phrase')
 				printf '\\phrase{%d}{%d}{\n' "$(raw starts)" "$(raw ends)"
