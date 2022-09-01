@@ -149,8 +149,8 @@ exists_field () {
 ## Fancy fields are simply functions. They allow to write helpers like “if this
 ## field exists, then take it; otherwise take that other one”.
 ##
-exists_fancy_field () { command -v "shtp_fancy_$1" >/dev/null; }
 get_fancy_field () { "shtp_fancy_$1"; }
+exists_fancy_field () { get_fancy_field "$@" >/dev/null 2>&1; }
 
 ## `exists` tests whether the field exists, fancy or not.
 ##
