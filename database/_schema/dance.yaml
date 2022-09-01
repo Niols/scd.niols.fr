@@ -197,10 +197,10 @@ $defs:
       properties:
         type:
           enum: ["two chords"]
-        couples:
-          type: array
+        couples-cross:
+          type: string
           description: |
-            An array of couples that cross on the second chord.
+            The couples that cross on the second chord.
         custom:
           type: string
           description: |
