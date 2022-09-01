@@ -50,11 +50,11 @@ a, a:visited {
 header a {
   text-decoration: none; }
 
-p {
+p, blockquote {
   margin-top: 1rem; }
 
 @media only screen and (max-width: 767px) {
-  p, h1, h2 {
+  p, ul, h1, h2 {
     margin-left: 1rem;
     margin-right: 1rem; } }
 
@@ -96,6 +96,9 @@ p {
 
 .tune-description li {
   list-style-type: disc; }
+
+.tune-description blockquote {
+  font-style: italic; }
 
 .tune-description .dance {
   font-style: italic; }
