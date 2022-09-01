@@ -4,6 +4,9 @@
     "author": "Violaine Eysseric",
     "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
     "short-kind": "M40 12S",
+    "date": "2022",
+    "date-format": "during the teaching certificate class in weeks 1 and 2 of Summer School %year%\nas a gift for Rachel Shankland and George Meikle\n",
+    "deviser-details": "The candidates devised dances and created “The Doonhamers' Book”. This dance\nis for twelve dancers as there were twelve of us; it also uses a lot of\nformations included in the dances of Unit 2 – even if not always in the usual\nway!\n",
     "description": [
       {
         "type": "phrase",
@@ -66,13 +69,7 @@
         "text": "Repeat as strathspey and then as reel, twice. All trios progress by one\nside of the square each time through as persons in trio get reordered: the\npersons on the left, in the middle and on the right becoming the persons\non the right, on the left and in the middle respectively.\n"
       },
       {
-        "type": "devised by",
-        "deviser": "Violaine Eysseric",
-        "more": "during the teaching certificate class in weeks 1 and 2 of Summer School\n2022 as a gift for Rachel Shankland and George Meikle.\n"
-      },
-      {
-        "type": "quote",
-        "content": "The candidates devised dances and created “The Doonhamers' Book”. This\ndance is for twelve dancers as there were twelve of us; it also uses a lot\nof formations included in the dances of Unit 2 – even if not always in the\nusual way!\n"
+        "type": "devised by"
       }
     ]
   },

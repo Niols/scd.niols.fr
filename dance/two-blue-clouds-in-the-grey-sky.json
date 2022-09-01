@@ -1,10 +1,12 @@
 {
   "dance": {
     "name": "Two Blue Clouds in the Grey Sky",
-    "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+    "author": "Claire Cunin and Nicolas “Niols” Jeannerod",
     "scddb-id": 19197,
     "kind": "40-bar reel for five couples in a five-couple longwise set",
     "short-kind": "R40 5/5L",
+    "date": "2018-05",
+    "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
     "description": [
       {
         "type": "phrase",
@@ -55,9 +57,7 @@
         "kind": "from new positions"
       },
       {
-        "type": "devised by",
-        "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
-        "more": "in May 2018. There exists a three-couple version of this dance, named “One\nBlue Cloud in the Grey Sky”.\n"
+        "type": "devised by"
       },
       {
         "type": "music by",

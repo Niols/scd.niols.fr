@@ -5,6 +5,8 @@
     "scddb-id": 20991,
     "kind": "32-bar strathspey for three couples in a three-couple longwise set",
     "short-kind": "S32 3/3L",
+    "date": "2018",
+    "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
     "tunes": [
       "the-mall-in-st-james-s-park"
     ],
@@ -58,9 +60,7 @@
         "kind": "from new positions"
       },
       {
-        "type": "devised by",
-        "deviser": "Nicolas “Niols” Jeannerod",
-        "more": "in 2018. The name was suggested by Christophe Schuwey in reference to the\npainting of the same name by Thomas Gainsborough.\n"
+        "type": "devised by"
       },
       {
         "type": "music by",

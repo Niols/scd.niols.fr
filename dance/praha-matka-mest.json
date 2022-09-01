@@ -5,6 +5,9 @@
     "scddb-id": 20992,
     "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
     "short-kind": "M32 3/3L",
+    "date": "2019-04",
+    "date-format": "in Prague %at-date%\n",
+    "editor-details": "The title translates to “Prague, Mother of Cities” and refers to Prague's\nmotto during the twentieth century. It was a symbol of the mission of Prague\nto protect the independence and prosperity of the Czecho-Slovakian state.\n",
     "description": [
       {
         "type": "instruction",
@@ -67,9 +70,7 @@
         "kind": "from new positions"
       },
       {
-        "type": "devised by",
-        "deviser": "Nicolas “Niols” Jeannerod",
-        "more": "in Prague in April 2019. The title translates to “Prague, Mother of\nCities” and refers to Prague's motto during the twentieth century. It was\na symbol of the mission of Prague to protect the independence and\nprosperity of the Czecho-Slovakian state.\n"
+        "type": "devised by"
       }
     ]
   },

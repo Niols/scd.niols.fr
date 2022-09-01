@@ -5,6 +5,8 @@
     "scddb-id": 20990,
     "kind": "32-bar jig for six couples in a six-couple longwise set",
     "short-kind": "J32 6/6L",
+    "date": "2022-07",
+    "deviser-details": "This dance is written as a gift for Rachel Shankland and George Meikle that\ntook such good care of us during our Units 2 and 3. The changes of direction\ngive many opportunities for the men to flash their underwear as the RSCDS\ndemands for Unit 2.\n",
     "description": [
       {
         "type": "instruction",
@@ -85,13 +87,7 @@
         "content": "A reel of six is similar to a reel of four in that all dancers pass one\nother dancer at each bar and take one additional bar to turn around at the\nend. It takes twelve bars to dance a full reel of six, and six bars to\ndance one halfway.\n"
       },
       {
-        "type": "devised by",
-        "deviser": "Nicolas “Niols” Jeannerod",
-        "more": "in July 2022.\n"
-      },
-      {
-        "type": "quote",
-        "content": "This dance is written as a gift for Rachel Shankland and George Meikle\nthat took such good care of us during our Units 2 and 3. The changes of\ndirection give many opportunities for the men to flash their underwear as\nthe RSCDS demands for Unit 2.\n"
+        "type": "devised by"
       }
     ]
   },

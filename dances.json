@@ -6,6 +6,8 @@
       "scddb-id": 20990,
       "kind": "32-bar jig for six couples in a six-couple longwise set",
       "short-kind": "J32 6/6L",
+      "date": "2022-07",
+      "deviser-details": "This dance is written as a gift for Rachel Shankland and George Meikle that\ntook such good care of us during our Units 2 and 3. The changes of direction\ngive many opportunities for the men to flash their underwear as the RSCDS\ndemands for Unit 2.\n",
       "description": [
         {
           "type": "instruction",
@@ -86,13 +88,7 @@
           "content": "A reel of six is similar to a reel of four in that all dancers pass one\nother dancer at each bar and take one additional bar to turn around at the\nend. It takes twelve bars to dance a full reel of six, and six bars to\ndance one halfway.\n"
         },
         {
-          "type": "devised by",
-          "deviser": "Nicolas “Niols” Jeannerod",
-          "more": "in July 2022.\n"
-        },
-        {
-          "type": "quote",
-          "content": "This dance is written as a gift for Rachel Shankland and George Meikle\nthat took such good care of us during our Units 2 and 3. The changes of\ndirection give many opportunities for the men to flash their underwear as\nthe RSCDS demands for Unit 2.\n"
+          "type": "devised by"
         }
       ]
     },
@@ -102,6 +98,7 @@
       "scddb-id": 20314,
       "kind": "32-bar strathspey for three couples in a four-couple longwise set",
       "short-kind": "S32 3/4L",
+      "date": "2019-03",
       "tunes": [
         "the-translator"
       ],
@@ -166,9 +163,7 @@
           "kind": "having passed a couple"
         },
         {
-          "type": "devised by",
-          "deviser": "Shannon Kiernan",
-          "more": "in March 2019."
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -182,6 +177,9 @@
       "author": "Violaine Eysseric",
       "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
       "short-kind": "M40 12S",
+      "date": "2022",
+      "date-format": "during the teaching certificate class in weeks 1 and 2 of Summer School %year%\nas a gift for Rachel Shankland and George Meikle\n",
+      "deviser-details": "The candidates devised dances and created “The Doonhamers' Book”. This dance\nis for twelve dancers as there were twelve of us; it also uses a lot of\nformations included in the dances of Unit 2 – even if not always in the usual\nway!\n",
       "description": [
         {
           "type": "phrase",
@@ -244,13 +242,7 @@
           "text": "Repeat as strathspey and then as reel, twice. All trios progress by one\nside of the square each time through as persons in trio get reordered: the\npersons on the left, in the middle and on the right becoming the persons\non the right, on the left and in the middle respectively.\n"
         },
         {
-          "type": "devised by",
-          "deviser": "Violaine Eysseric",
-          "more": "during the teaching certificate class in weeks 1 and 2 of Summer School\n2022 as a gift for Rachel Shankland and George Meikle.\n"
-        },
-        {
-          "type": "quote",
-          "content": "The candidates devised dances and created “The Doonhamers' Book”. This\ndance is for twelve dancers as there were twelve of us; it also uses a lot\nof formations included in the dances of Unit 2 – even if not always in the\nusual way!\n"
+          "type": "devised by"
         }
       ]
     },
@@ -259,6 +251,8 @@
       "author": "Shona Holmes",
       "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
       "short-kind": "X32 2/4L",
+      "date": "2022-08",
+      "deviser-details": "George Meikle played wonderfully for our Units 2 and 3, even if not always in\nthe tempo we wanted. This dance can be danced in your choice of tempo to\nreflect this.\n",
       "description": [
         {
           "type": "phrase",
@@ -324,13 +318,7 @@
           "content": "If danced in jig or reel time, the 1st and 2nd couples need to finish bar\n16 in the middle of the set facing partner. After the poussette, 1st\ncouple is already in second position and they therefore do not need to\nmove down as they turn. 2nd couple do not need to step up.\n"
         },
         {
-          "type": "devised by",
-          "deviser": "Shona Holmes",
-          "more": "in August 2022.\n"
-        },
-        {
-          "type": "quote",
-          "content": "George Meikle played wonderfully for our Units 2 and 3, even if not always\nin the tempo we wanted. This dance can be danced in your choice of tempo\nto reflect this.\n"
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -345,6 +333,7 @@
       "scddb-id": 20315,
       "kind": "32-bar reel for four couples in a four-couple longwise set",
       "short-kind": "R32 4/4L",
+      "date": "2019-04",
       "tunes": [
         "la-ville-lumiere"
       ],
@@ -409,9 +398,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Nicolas “Niols” Jeannerod",
-          "more": "in April 2019."
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -421,10 +408,12 @@
     },
     "one-blue-cloud-in-the-grey-sky": {
       "name": "One Blue Cloud in the Grey Sky",
-      "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "author": "Claire Cunin and Nicolas “Niols” Jeannerod",
       "scddb-id": 19198,
       "kind": "40-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R40 3/3L",
+      "date": "2018-05",
+      "editor-details": "This dance is a three-couple version of “Two Blue Clouds in the Grey Sky”.\n",
       "tunes": [
         "forty-bars-of-clouds"
       ],
@@ -478,9 +467,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
-          "more": "in May 2018. This dance is a three-couple version of “Two Blue Clouds in\nthe Grey Sky”.\n"
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -495,6 +482,9 @@
       "scddb-id": 20992,
       "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
       "short-kind": "M32 3/3L",
+      "date": "2019-04",
+      "date-format": "in Prague %at-date%\n",
+      "editor-details": "The title translates to “Prague, Mother of Cities” and refers to Prague's\nmotto during the twentieth century. It was a symbol of the mission of Prague\nto protect the independence and prosperity of the Czecho-Slovakian state.\n",
       "description": [
         {
           "type": "instruction",
@@ -557,9 +547,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Nicolas “Niols” Jeannerod",
-          "more": "in Prague in April 2019. The title translates to “Prague, Mother of\nCities” and refers to Prague's motto during the twentieth century. It was\na symbol of the mission of Prague to protect the independence and\nprosperity of the Czecho-Slovakian state.\n"
+          "type": "devised by"
         }
       ]
     },
@@ -568,6 +556,8 @@
       "author": "Shona Holmes",
       "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
       "short-kind": "R32",
+      "date": "2022-07",
+      "deviser-details": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun warm\nup dance and often described our better moments in dancing and teaching as\n“Spot on”. Thus, this easy warm up dance was born; the circles in bars 9-12\nand 17-20 create perfect spots. Thank you Rachel!\n",
       "description": [
         {
           "type": "phrase",
@@ -662,13 +652,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Shona Holmes",
-          "more": "in July 2022.\n"
-        },
-        {
-          "type": "quote",
-          "content": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun\nwarm up dance and often described our better moments in dancing and\nteaching as “Spot on”. Thus, this easy warm up dance was born; the circles\nin bars 9-12 and 17-20 create perfect spots. Thank you Rachel!\n"
+          "type": "devised by"
         }
       ]
     },
@@ -677,6 +661,8 @@
       "author": "Marie-Laure Barret",
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
       "short-kind": "S32 3/3L",
+      "date": "2022-07-31",
+      "deviser-details": "During the Saturday ball at the end of the first week of Summer School in St.\nAndrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following morning,\nat 6.30am, I started devising this dance.\n",
       "description": [
         {
           "type": "phrase",
@@ -804,13 +790,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Marie-Laure Barret",
-          "more": "on July 31st, 2022.\n"
-        },
-        {
-          "type": "quote",
-          "content": "During the Saturday ball at the end of the first week of Summer School in\nSt. Andrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following\nmorning, at 6.30am, I started devising this dance.\n"
+          "type": "devised by"
         }
       ]
     },
@@ -820,6 +800,8 @@
       "scddb-id": 20991,
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
       "short-kind": "S32 3/3L",
+      "date": "2018",
+      "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
       "tunes": [
         "the-mall-in-st-james-s-park"
       ],
@@ -873,9 +855,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Nicolas “Niols” Jeannerod",
-          "more": "in 2018. The name was suggested by Christophe Schuwey in reference to the\npainting of the same name by Thomas Gainsborough.\n"
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -885,11 +865,13 @@
     },
     "the-reel-of-the-51st-confusion": {
       "name": "The Reel of the 51st Confusion",
-      "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod & Victor Lanvin",
+      "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod and Victor Lanvin",
       "short-author": "Anne Lanvin et al.",
       "scddb-id": 20993,
       "kind": "32-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R32 3/3L",
+      "date": "2021-08-08",
+      "editor-details": "This dance is a variation of one of the most popular Scottish country dances,\n“The Reel of the 51st Division”.\n",
       "tunes": [
         {
           "name": "The Drunken Piper",
@@ -947,9 +929,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas\n“Niols” Jeannerod and Victor Lanvin\n",
-          "more": "on August 8th, 2021. This dance is a variation of one of the most popular\nScottish country dances, “The Reel of the 51st Division”.\n"
+          "type": "devised by"
         },
         {
           "type": "note",
@@ -968,6 +948,9 @@
       "author": "Kristian Vestli",
       "kind": "40-bar reel for six couples in a six-couple longwise set",
       "short-kind": "R40 6/6L",
+      "date": "2022-07",
+      "date-format": "in St Andrews %at-date%\n",
+      "deviser-details": "The team of twelve candidates for our units 2 & 3 were terrific. In this dance\nyou hardly get a rest, to remind us of all the hard work we put in, but also\nall the fun we had with our tutor, Rachel Shankland and our musician, George\nMeikle.\n",
       "description": [
         {
           "type": "phrase",
@@ -1040,13 +1023,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Kristian Vestli",
-          "more": "in St Andrews, July 2022."
-        },
-        {
-          "type": "quote",
-          "content": "The team of twelve candidates for our units 2 & 3 were terrific. In this\ndance you hardly get a rest, to remind us of all the hard work we put in,\nbut also all the fun we had with our tutor, Rachel Shankland and our\nmusician, George Meikle.\n"
+          "type": "devised by"
         }
       ]
     },
@@ -1056,6 +1033,9 @@
       "scddb-id": 20994,
       "kind": "32-bar strathspey for three couples in a four-couple longwise set",
       "short-kind": "S32 3/4L",
+      "date": "2022",
+      "date-format": "%at-date% and inspired by the waves in the sea around St. Andrews\n",
+      "deviser-details": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n",
       "description": [
         {
           "type": "phrase",
@@ -1128,13 +1108,7 @@
           "kind": "having passed a couple"
         },
         {
-          "type": "devised by",
-          "deviser": "Saskia Frisby",
-          "more": "and inspired by the waves in the sea around St. Andrews.\n"
-        },
-        {
-          "type": "quote",
-          "content": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n"
+          "type": "devised by"
         },
         {
           "type": "recommended tune",
@@ -1145,10 +1119,12 @@
     },
     "two-blue-clouds-in-the-grey-sky": {
       "name": "Two Blue Clouds in the Grey Sky",
-      "author": "Claire Cunin & Nicolas “Niols” Jeannerod",
+      "author": "Claire Cunin and Nicolas “Niols” Jeannerod",
       "scddb-id": 19197,
       "kind": "40-bar reel for five couples in a five-couple longwise set",
       "short-kind": "R40 5/5L",
+      "date": "2018-05",
+      "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
       "description": [
         {
           "type": "phrase",
@@ -1199,9 +1175,7 @@
           "kind": "from new positions"
         },
         {
-          "type": "devised by",
-          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
-          "more": "in May 2018. There exists a three-couple version of this dance, named “One\nBlue Cloud in the Grey Sky”.\n"
+          "type": "devised by"
         },
         {
           "type": "music by",
@@ -1215,6 +1189,9 @@
       "author": "David Osgarby",
       "kind": "32-bar jig for three couples in a four-couple longwise set",
       "short-kind": "J32 3/4L",
+      "date": "2022-07",
+      "date-format": "in St Andrews %at-date%\n",
+      "deviser-details": "I devised this dance at the 2022 St Andrews Summer School while doing Units 2\nand 3 of the RSCDS teaching certificate. The dance was devised such that the\n2s and 3s are showcased representing Units 2 and 3. The vigour of the dance\nrepresents the high level of effort put in by students during the course. Each\ndancer dances from several positions, similar to how we have been taking the\nposition of different dancers to demonstrate formations. That the ones are\nstill during bars 9-24 represents spending time observing other dancers and\nteachers during the course. The plentiful curving and casting to change\npositions on the side lines was included to demonstrate good kilt control (or\nlack thereof)!\n",
       "description": [
         {
           "type": "phrase",
@@ -1309,13 +1286,7 @@
           "kind": "having passed a couple"
         },
         {
-          "type": "devised by",
-          "deviser": "David Osgarby",
-          "more": "in St Andrews in July 2022.\n"
-        },
-        {
-          "type": "quote",
-          "content": "I devised this dance at the 2022 St Andrews Summer School while doing\nUnits 2 and 3 of the RSCDS teaching certificate. The dance was devised\nsuch that the 2s and 3s are showcased representing Units 2 and 3. The\nvigour of the dance represents the high level of effort put in by students\nduring the course. Each dancer dances from several positions, similar to\nhow we have been taking the position of different dancers to demonstrate\nformations. That the ones are still during bars 9-24 represents spending\ntime observing other dancers and teachers during the course. The plentiful\ncurving and casting to change positions on the side lines was included to\ndemonstrate good kilt control (or lack thereof)!\n"
+          "type": "devised by"
         }
       ]
     }

@@ -5,6 +5,9 @@
     "scddb-id": 20994,
     "kind": "32-bar strathspey for three couples in a four-couple longwise set",
     "short-kind": "S32 3/4L",
+    "date": "2022",
+    "date-format": "%at-date% and inspired by the waves in the sea around St. Andrews\n",
+    "deviser-details": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n",
     "description": [
       {
         "type": "phrase",
@@ -77,13 +80,7 @@
         "kind": "having passed a couple"
       },
       {
-        "type": "devised by",
-        "deviser": "Saskia Frisby",
-        "more": "and inspired by the waves in the sea around St. Andrews.\n"
-      },
-      {
-        "type": "quote",
-        "content": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n"
+        "type": "devised by"
       },
       {
         "type": "recommended tune",

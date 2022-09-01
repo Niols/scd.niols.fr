@@ -4,6 +4,9 @@
     "author": "David Osgarby",
     "kind": "32-bar jig for three couples in a four-couple longwise set",
     "short-kind": "J32 3/4L",
+    "date": "2022-07",
+    "date-format": "in St Andrews %at-date%\n",
+    "deviser-details": "I devised this dance at the 2022 St Andrews Summer School while doing Units 2\nand 3 of the RSCDS teaching certificate. The dance was devised such that the\n2s and 3s are showcased representing Units 2 and 3. The vigour of the dance\nrepresents the high level of effort put in by students during the course. Each\ndancer dances from several positions, similar to how we have been taking the\nposition of different dancers to demonstrate formations. That the ones are\nstill during bars 9-24 represents spending time observing other dancers and\nteachers during the course. The plentiful curving and casting to change\npositions on the side lines was included to demonstrate good kilt control (or\nlack thereof)!\n",
     "description": [
       {
         "type": "phrase",
@@ -98,13 +101,7 @@
         "kind": "having passed a couple"
       },
       {
-        "type": "devised by",
-        "deviser": "David Osgarby",
-        "more": "in St Andrews in July 2022.\n"
-      },
-      {
-        "type": "quote",
-        "content": "I devised this dance at the 2022 St Andrews Summer School while doing\nUnits 2 and 3 of the RSCDS teaching certificate. The dance was devised\nsuch that the 2s and 3s are showcased representing Units 2 and 3. The\nvigour of the dance represents the high level of effort put in by students\nduring the course. Each dancer dances from several positions, similar to\nhow we have been taking the position of different dancers to demonstrate\nformations. That the ones are still during bars 9-24 represents spending\ntime observing other dancers and teachers during the course. The plentiful\ncurving and casting to change positions on the side lines was included to\ndemonstrate good kilt control (or lack thereof)!\n"
+        "type": "devised by"
       }
     ]
   },

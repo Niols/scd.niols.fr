@@ -5,6 +5,7 @@
     "scddb-id": 20315,
     "kind": "32-bar reel for four couples in a four-couple longwise set",
     "short-kind": "R32 4/4L",
+    "date": "2019-04",
     "tunes": [
       "la-ville-lumiere"
     ],
@@ -69,9 +70,7 @@
         "kind": "from new positions"
       },
       {
-        "type": "devised by",
-        "deviser": "Nicolas “Niols” Jeannerod",
-        "more": "in April 2019."
+        "type": "devised by"
       },
       {
         "type": "music by",
