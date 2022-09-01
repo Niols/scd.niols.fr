@@ -22,8 +22,8 @@ printf   '</section>'
 
 printf   '<section class="tune-description">'
 printf     '<p>Composed by %s' "$(text author)"
-if exists date; then
-    printf ' %s' "$(text at_date)"
+if exists formatted_date; then
+    printf ' %s' "$(text formatted_date)"
 fi
 printf     '.</p>'
 
