@@ -23,9 +23,18 @@ printf   '</section>'
 printf   '<section class="tune-description">'
 printf     '<p>Composed by %s' "$(text author)"
 if exists formatted_date; then
-    printf ' %s' "$(text formatted_date)"
+    printf   ' %s' "$(text formatted_date)"
 fi
-printf     '.</p>'
+printf       '.'
+if exists editor-details; then
+    printf   ' %s' "$(text editor-details)"
+fi
+printf     '</p>'
+if exists composer-details; then
+    printf '<blockquote>'
+    printf '%s' "$(text composer-details)"
+    printf '</blockquote>'
+fi
 
 if exists dances; then
     printf '<p>Recommended for:</p><ul>'
