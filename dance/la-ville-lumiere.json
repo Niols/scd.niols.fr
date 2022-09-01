@@ -9,7 +9,7 @@
     "tunes": [
       "la-ville-lumiere"
     ],
-    "description": [
+    "instructions": [
       {
         "type": "phrase",
         "starts": 1,

@@ -58,14 +58,14 @@ p, blockquote {
     margin-left: 1rem;
     margin-right: 1rem; } }
 
-.dance-description > * {
+.dance-instructions > * {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
   @media only screen and (max-width: 767px) {
-    .dance-description > * {
+    .dance-instructions > * {
       margin-left: 1rem;
       margin-right: 1rem; } }
-.dance-description .phrase {
+.dance-instructions .phrase {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -73,19 +73,19 @@ p, blockquote {
   align-items: baseline;
   align-content: flex-start;
   gap: 0 1rem; }
-  .dance-description .phrase > .bars {
+  .dance-instructions .phrase > .bars {
     flex: 0 0 4rem;
     text-align: center; }
-  .dance-description .phrase > .contents {
+  .dance-instructions .phrase > .contents {
     flex: 1 1 auto; }
   @media only screen and (max-width: 767px) {
-    .dance-description .phrase {
+    .dance-instructions .phrase {
       flex-wrap: wrap; }
-      .dance-description .phrase > .bars {
+      .dance-instructions .phrase > .bars {
         text-align: left; }
-      .dance-description .phrase > .contents {
+      .dance-instructions .phrase > .contents {
         margin-left: 1rem; } }
-.dance-description blockquote {
+.dance-instructions blockquote {
   font-style: italic; }
 
 .tune-preview > img {

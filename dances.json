@@ -8,10 +8,10 @@
       "short-kind": "J32 6/6L",
       "date": "2022-07",
       "deviser-details": "This dance is written as a gift for Rachel Shankland and George Meikle that\ntook such good care of us during our Units 2 and 3. The changes of direction\ngive many opportunities for the men to flash their underwear as the RSCDS\ndemands for Unit 2.\n",
-      "description": [
+      "instructions": [
         {
-          "type": "instruction",
-          "content": "On second chord, 4th, 5th and 6th couples cross.\n"
+          "type": "two chords",
+          "couples-cross": "4th, 5th and 6th"
         },
         {
           "type": "phrase",
@@ -102,7 +102,7 @@
       "tunes": [
         "the-translator"
       ],
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -180,7 +180,7 @@
       "date": "2022",
       "date-format": "during the teaching certificate class in weeks 1 and 2 of Summer School %year%\nas a gift for Rachel Shankland and George Meikle\n",
       "deviser-details": "The candidates devised dances and created “The Doonhamers' Book”. This dance\nis for twelve dancers as there were twelve of us; it also uses a lot of\nformations included in the dances of Unit 2 – even if not always in the usual\nway!\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -253,7 +253,7 @@
       "short-kind": "X32 2/4L",
       "date": "2022-08",
       "deviser-details": "George Meikle played wonderfully for our Units 2 and 3, even if not always in\nthe tempo we wanted. This dance can be danced in your choice of tempo to\nreflect this.\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -337,7 +337,7 @@
       "tunes": [
         "la-ville-lumiere"
       ],
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -417,7 +417,7 @@
       "tunes": [
         "forty-bars-of-clouds"
       ],
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -485,14 +485,14 @@
       "date": "2019-04",
       "date-format": "in Prague %at-date%\n",
       "editor-details": "The title translates to “Prague, Mother of Cities” and refers to Prague's\nmotto during the twentieth century. It was a symbol of the mission of Prague\nto protect the independence and prosperity of the Czecho-Slovakian state.\n",
-      "description": [
+      "instructions": [
         {
-          "type": "instruction",
-          "content": "On second chord, 2nd and 3rd couples cross.\n"
+          "type": "two chords",
+          "couples-cross": "2nd and 3rd"
         },
         {
-          "type": "instruction",
-          "content": "Strathspey"
+          "type": "kind",
+          "kind": "Strathspey"
         },
         {
           "type": "phrase",
@@ -517,8 +517,8 @@
           ]
         },
         {
-          "type": "instruction",
-          "content": "Reel"
+          "type": "kind",
+          "kind": "Reel"
         },
         {
           "type": "phrase",
@@ -558,7 +558,7 @@
       "short-kind": "R32",
       "date": "2022-07",
       "deviser-details": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun warm\nup dance and often described our better moments in dancing and teaching as\n“Spot on”. Thus, this easy warm up dance was born; the circles in bars 9-12\nand 17-20 create perfect spots. Thank you Rachel!\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -663,7 +663,7 @@
       "short-kind": "S32 3/3L",
       "date": "2022-07-31",
       "deviser-details": "During the Saturday ball at the end of the first week of Summer School in St.\nAndrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following morning,\nat 6.30am, I started devising this dance.\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -805,7 +805,7 @@
       "tunes": [
         "the-mall-in-st-james-s-park"
       ],
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -879,7 +879,7 @@
         },
         "the-sober-piper"
       ],
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -951,7 +951,7 @@
       "date": "2022-07",
       "date-format": "in St Andrews %at-date%\n",
       "deviser-details": "The team of twelve candidates for our units 2 & 3 were terrific. In this dance\nyou hardly get a rest, to remind us of all the hard work we put in, but also\nall the fun we had with our tutor, Rachel Shankland and our musician, George\nMeikle.\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -1036,7 +1036,7 @@
       "date": "2022",
       "date-format": "%at-date% and inspired by the waves in the sea around St. Andrews\n",
       "deviser-details": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -1125,7 +1125,7 @@
       "short-kind": "R40 5/5L",
       "date": "2018-05",
       "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,
@@ -1192,7 +1192,7 @@
       "date": "2022-07",
       "date-format": "in St Andrews %at-date%\n",
       "deviser-details": "I devised this dance at the 2022 St Andrews Summer School while doing Units 2\nand 3 of the RSCDS teaching certificate. The dance was devised such that the\n2s and 3s are showcased representing Units 2 and 3. The vigour of the dance\nrepresents the high level of effort put in by students during the course. Each\ndancer dances from several positions, similar to how we have been taking the\nposition of different dancers to demonstrate formations. That the ones are\nstill during bars 9-24 represents spending time observing other dancers and\nteachers during the course. The plentiful curving and casting to change\npositions on the side lines was included to demonstrate good kilt control (or\nlack thereof)!\n",
-      "description": [
+      "instructions": [
         {
           "type": "phrase",
           "starts": 1,

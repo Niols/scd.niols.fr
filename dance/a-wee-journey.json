@@ -7,10 +7,10 @@
     "short-kind": "J32 6/6L",
     "date": "2022-07",
     "deviser-details": "This dance is written as a gift for Rachel Shankland and George Meikle that\ntook such good care of us during our Units 2 and 3. The changes of direction\ngive many opportunities for the men to flash their underwear as the RSCDS\ndemands for Unit 2.\n",
-    "description": [
+    "instructions": [
       {
-        "type": "instruction",
-        "content": "On second chord, 4th, 5th and 6th couples cross.\n"
+        "type": "two chords",
+        "couples-cross": "4th, 5th and 6th"
       },
       {
         "type": "phrase",

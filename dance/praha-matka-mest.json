@@ -8,14 +8,14 @@
     "date": "2019-04",
     "date-format": "in Prague %at-date%\n",
     "editor-details": "The title translates to “Prague, Mother of Cities” and refers to Prague's\nmotto during the twentieth century. It was a symbol of the mission of Prague\nto protect the independence and prosperity of the Czecho-Slovakian state.\n",
-    "description": [
+    "instructions": [
       {
-        "type": "instruction",
-        "content": "On second chord, 2nd and 3rd couples cross.\n"
+        "type": "two chords",
+        "couples-cross": "2nd and 3rd"
       },
       {
-        "type": "instruction",
-        "content": "Strathspey"
+        "type": "kind",
+        "kind": "Strathspey"
       },
       {
         "type": "phrase",
@@ -40,8 +40,8 @@
         ]
       },
       {
-        "type": "instruction",
-        "content": "Reel"
+        "type": "kind",
+        "kind": "Reel"
       },
       {
         "type": "phrase",

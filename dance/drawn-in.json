@@ -9,7 +9,7 @@
     "tunes": [
       "the-translator"
     ],
-    "description": [
+    "instructions": [
       {
         "type": "phrase",
         "starts": 1,
