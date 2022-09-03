@@ -15,45 +15,25 @@
         "type": "phrase",
         "starts": 1,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step\nup on bars 5-6.\n"
-          }
-        ]
+        "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step up\non bars 5-6.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple turn first corners both hands, pass each other right\nshoulder, turn second corners both hands and pass each other right\nshoulder to finish on own sides facing out.\n"
-          }
-        ]
+        "content": "1st couple turn first corners both hands, pass each other right shoulder,\nturn second corners both hands and pass each other right shoulder to\nfinish on own sides facing out.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 24,
-        "contents": [
-          {
-            "type": "text",
-            "content": "2nd, 1st and 3rd couples dance parallel reels of three in six bars on\nthe lines, 1st man giving left shoulder to 3rd man and 1st woman\ngiving right shoulder to 3rd woman. On bars 23-24, 1st and 3rd men\nexchange place left shoulder while 1st and 3rd women exchange place\nright shoulder.\n"
-          }
-        ]
+        "content": "2nd, 1st and 3rd couples dance parallel reels of three in six bars on the\nlines, 1st man giving left shoulder to 3rd man and 1st woman giving right\nshoulder to 3rd woman. On bars 23-24, 1st and 3rd men exchange place left\nshoulder while 1st and 3rd women exchange place right shoulder.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 32,
-        "contents": [
-          {
-            "type": "text",
-            "content": "3rd and 1st couples dance the Poussette.\n"
-          }
-        ]
+        "content": "3rd and 1st couples dance the Poussette.\n"
       },
       {
         "type": "repeat",

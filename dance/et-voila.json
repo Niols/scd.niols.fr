@@ -12,56 +12,31 @@
         "type": "phrase",
         "starts": 1,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "The persons in the middle of all trios dance left hands accross in the\nmiddle of the square and right hands accross back to original place\nwhile the other persons dance eight hands round to the left and back.\n"
-          }
-        ]
+        "content": "The persons in the middle of all trios dance left hands accross in the\nmiddle of the square and right hands accross back to original place while\nthe other persons dance eight hands round to the left and back.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 3rd trios dance a reel of four accross the set. In each trio,\nthe person in the middle dances in tandem with the person on their\nright; the person in the middle has the lead to start, and the lead\nchanges halfway in the reel. The tandems pass left shoulder to begin.\n"
-          }
-        ]
+        "content": "1st and 3rd trios dance a reel of four accross the set. In each trio, the\nperson in the middle dances in tandem with the person on their right; the\nperson in the middle has the lead to start, and the lead changes halfway\nin the reel. The tandems pass left shoulder to begin.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 20,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All trios dance anti-clockwise one place, finishing facing inside the\nsquare.\n"
-          }
-        ]
+        "content": "All trios dance anti-clockwise one place, finishing facing inside the\nsquare.\n"
       },
       {
         "type": "phrase",
         "starts": 21,
         "ends": 24,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All trios dance «modified set and link for three»: in each trio, the\nthree persons set; the person on the left dances in to finish facing\nout in the position at the right of the trio; the person in the middle\nand the person on the right cast off one place to finish in promenade\nhold in the positions at the left and in the middle of the trio.\n"
-          }
-        ]
+        "content": "All trios dance «modified set and link for three»: in each trio, the three\npersons set; the person on the left dances in to finish facing out in the\nposition at the right of the trio; the person in the middle and the person\non the right cast off one place to finish in promenade hold in the\npositions at the left and in the middle of the trio.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 40,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All dance «Schiehallion reels» all round; the dancers in promenade\nhold sticking together as one unit.\n"
-          }
-        ]
+        "content": "All dance «Schiehallion reels» all round; the dancers in promenade hold\nsticking together as one unit.\n"
       },
       {
         "type": "repeat",

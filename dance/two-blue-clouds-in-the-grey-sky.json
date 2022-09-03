@@ -12,45 +12,25 @@
         "type": "phrase",
         "starts": 1,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 3rd couples set, cast off one place and dance a half figure of\neight around 2nd and 4th couples. 2nd and 4th couples step up on bars\n3-4.\n"
-          }
-        ]
+        "content": "1st and 3rd couples set, cast off one place and dance a half figure of\neight around 2nd and 4th couples. 2nd and 4th couples step up on bars 3-4.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 3rd couples set, dance a half figure of eight around 4th and\n5th couples and set advancing to finish facing first corners, 4th\nwoman and 2nd man for 1st couple, 5th woman and 4th man for 3rd\ncouple.\n"
-          }
-        ]
+        "content": "1st and 3rd couples set, dance a half figure of eight around 4th and 5th\ncouples and set advancing to finish facing first corners, 4th woman and\n2nd man for 1st couple, 5th woman and 4th man for 3rd couple.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 32,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 3rd couples dance corner pass and turn with their first\ncorners and repeat with their second, third and fourth corners,\nfinishing on their own sides in second and fourth positions.\n"
-          }
-        ]
+        "content": "1st and 3rd couples dance corner pass and turn with their first corners\nand repeat with their second, third and fourth corners, finishing on their\nown sides in second and fourth positions.\n"
       },
       {
         "type": "phrase",
         "starts": 33,
         "ends": 40,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 3rd couples set, cast off one place. 4th and 5th couples step\nup on bars 35-36. 1st and 3rd couples turn right hand in four bars.\n"
-          }
-        ]
+        "content": "1st and 3rd couples set, cast off one place. 4th and 5th couples step up\non bars 35-36. 1st and 3rd couples turn right hand in four bars.\n"
       },
       {
         "type": "repeat",

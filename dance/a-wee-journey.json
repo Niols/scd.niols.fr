@@ -16,67 +16,37 @@
         "type": "phrase",
         "starts": 1,
         "ends": 6,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All couples dance twelve hands round halfway to the left for six bars.\n"
-          }
-        ]
+        "content": "All couples dance twelve hands round halfway to the left for six bars.\n"
       },
       {
         "type": "phrase",
         "starts": 7,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "5th couple in second place and 2nd couple in fifth place cross by the\nright hand, finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd\ncouples on own sides facing down and 5th, 3rd and 1st couples on\nopposite sides facing up.\n"
-          }
-        ]
+        "content": "5th couple in second place and 2nd couple in fifth place cross by the\nright hand, finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd\ncouples on own sides facing down and 5th, 3rd and 1st couples on opposite\nsides facing up.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 14,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All dance reels of six on the sidelines for six bars, giving right\nshoulder to begin, finishing in order 1, 2, 3, 4, 5, 6, facing in.\n"
-          }
-        ]
+        "content": "All dance reels of six on the sidelines for six bars, giving right\nshoulder to begin, finishing in order 1, 2, 3, 4, 5, 6, facing in.\n"
       },
       {
         "type": "phrase",
         "starts": 15,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All turn by the right halfway to finish into allemande hold, 1st, 3rd\nand 5th couples facing up and 2nd, 4th and 6th couples facing down.\n"
-          }
-        ]
+        "content": "All turn by the right halfway to finish into allemande hold, 1st, 3rd and\n5th couples facing up and 2nd, 4th and 6th couples facing down.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 24,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st, 2nd and 3rd couples at the top and 6th, 5th and 4th couples at\nthe bottom dance circulating allemandes towards the top and the bottom\nrespectively, finishing in order 3, 2, 1, 6, 5, 4 with 3rd, 1st and\n5th couples on own sides.\n"
-          }
-        ]
+        "content": "1st, 2nd and 3rd couples at the top and 6th, 5th and 4th couples at the\nbottom dance circulating allemandes towards the top and the bottom\nrespectively, finishing in order 3, 2, 1, 6, 5, 4 with 3rd, 1st and 5th\ncouples on own sides.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 32,
-        "contents": [
-          {
-            "type": "text",
-            "content": "All set. 2nd couple cross up while 3rd couple steps down; 5th couple\ncross down while 4th couple steps up; 1st and 6th couples dance half\nright hands across. All turn by the right and finish in order 2, 3, 6,\n1, 4, 5 with 1st, 4th and 5th couples on opposite sides.\n"
-          }
-        ]
+        "content": "All set. 2nd couple cross up while 3rd couple steps down; 5th couple cross\ndown while 4th couple steps up; 1st and 6th couples dance half right hands\nacross. All turn by the right and finish in order 2, 3, 6, 1, 4, 5 with\n1st, 4th and 5th couples on opposite sides.\n"
       },
       {
         "type": "repeat",

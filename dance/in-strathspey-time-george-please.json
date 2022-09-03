@@ -11,56 +11,31 @@
         "type": "phrase",
         "starts": 1,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 2nd couples advance, retire and turn one and a half times.\n"
-          }
-        ]
+        "content": "1st and 2nd couples advance, retire and turn one and a half times.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple, followed by 2nd couple, lead down the middle for three\nsteps. 2nd couple divide to allow 1st couple through and both couples\nlead up. On bars 15-16, retaining right hands, 1st and 2nd couple turn\nby the right to finish on own sides. [see note below]\n"
-          }
-        ]
+        "content": "1st couple, followed by 2nd couple, lead down the middle for three steps.\n2nd couple divide to allow 1st couple through and both couples lead up. On\nbars 15-16, retaining right hands, 1st and 2nd couple turn by the right to\nfinish on own sides. [see note below]\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 24,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 2nd couples dance the poussette.\n"
-          }
-        ]
+        "content": "1st and 2nd couples dance the poussette.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 28,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st and 2nd couples dance right hands across.\n"
-          }
-        ]
+        "content": "1st and 2nd couples dance right hands across.\n"
       },
       {
         "type": "phrase",
         "starts": 29,
         "ends": 32,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple turn by the right to finish in second place on own side.\n2nd couple step up on bars 31-32. [see note below]\n"
-          }
-        ]
+        "content": "1st couple turn by the right to finish in second place on own side. 2nd\ncouple step up on bars 31-32. [see note below]\n"
       },
       {
         "type": "repeat",

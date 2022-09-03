@@ -14,56 +14,31 @@
         "type": "phrase",
         "starts": 1,
         "ends": 8,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple, giving right hands, dance a half figure of eight around 2nd\ncouple. 1st man giving left hand to 2nd woman, and 1st woman giving\nright hand to 2nd man, turn once round.\n"
-          }
-        ]
+        "content": "1st couple, giving right hands, dance a half figure of eight around 2nd\ncouple. 1st man giving left hand to 2nd woman, and 1st woman giving right\nhand to 2nd man, turn once round.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 12,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple dance in and cast off to second place.\n"
-          }
-        ]
+        "content": "1st couple dance in and cast off to second place.\n"
       },
       {
         "type": "phrase",
         "starts": 13,
         "ends": 16,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple, giving both hands, turn once and a half, while 2nd and 3rd\ncouples chase clockwise halfway.\n"
-          }
-        ]
+        "content": "1st couple, giving both hands, turn once and a half, while 2nd and 3rd\ncouples chase clockwise halfway.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 24,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple, giving right shoulder to third corner positions, dance reels\nof three on the sides with 3rd and 2nd couples, finishing with 1st\ncouple passing left shoulder to finish facing first corner positions.\n"
-          }
-        ]
+        "content": "1st couple, giving right shoulder to third corner positions, dance reels\nof three on the sides with 3rd and 2nd couples, finishing with 1st couple\npassing left shoulder to finish facing first corner positions.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 32,
-        "contents": [
-          {
-            "type": "text",
-            "content": "1st couple dance corner pass and turn with first corner positions,\ncorners turning with both hands halfway and, pulling back right\nshoulders, dance out to the opposite corner position. 1st couple,\npassing right shoulders, repeat with second corner positions.\n"
-          }
-        ]
+        "content": "1st couple dance corner pass and turn with first corner positions, corners\nturning with both hands halfway and, pulling back right shoulders, dance\nout to the opposite corner position. 1st couple, passing right shoulders,\nrepeat with second corner positions.\n"
       },
       {
         "type": "repeat",
