@@ -14,10 +14,6 @@ if exists instructions; then
 
         case $(raw type) in
 
-            'text')
-                printf '%s' "$(text content)"
-                ;;
-
             'note')
                 printf 'Note: %s' "$(text content)"
                 ;;
@@ -38,7 +34,11 @@ if exists instructions; then
 
             'phrase')
                 printf '\\phrase{%d}{%d}{\n' "$(raw starts)" "$(raw ends)"
-                render_instruction_items_in contents
+                printf '%s' "$(text content)"
+                if exists instructions; then
+                    printf '\n\n'
+                    render_instruction_items_in instructions
+                fi
                 printf '}\n'
                 ;;
 
