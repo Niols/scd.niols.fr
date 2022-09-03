@@ -26,80 +26,62 @@ instructions:
   - type: phrase
     starts: 1
     ends: 4
-    contents:
-      - type: text
-        content: |
-          1st, 2nd and 3rd couples dance a «unit 3 lesson» from original
-          positions, finishing in order 3, 1, 2 with 1st couple on opposite
-          lines.
+    content: |
+      1st, 2nd and 3rd couples dance a «unit 3 lesson» from original positions,
+      finishing in order 3, 1, 2 with 1st couple on opposite lines.
+    instructions:
       - type: phrase
         starts: 1
         ends: 2
-        contents:
-          - type: text
-            content: |
-              1st couple position turn halfway by the right while 2nd and 3rd
-              couple positions set.
+        content: |
+          1st couple position turn halfway by the right while 2nd and 3rd couple
+          positions set.
       - type: phrase
         starts: 3
         ends: 4
-        contents:
-          - type: text
-            content: |
-              1st and 2nd woman positions cast down one place while 3rd woman
-              position dances in and up, curving into first place. In the
-              meantime, 1st and 2nd man positions dance in and down one place,
-              curving into place, while 3rd man position casts up to first
-              place.
+        content: |
+          1st and 2nd woman positions cast down one place while 3rd woman
+          position dances in and up, curving into first place. In the meantime,
+          1st and 2nd man positions dance in and down one place, curving into
+          place, while 3rd man position casts up to first place.
 
   - type: phrase
     starts: 5
     ends: 8
-    contents:
-      - type: text
-        content: |
-          2nd, 3rd and 1st couples dance a «unit 3 lesson» again from new
-          places, finishing in order 2, 3, 1 with 3rd and 1st couples on
-          opposite lines.
+    content: |
+      2nd, 3rd and 1st couples dance a «unit 3 lesson» again from new places,
+      finishing in order 2, 3, 1 with 3rd and 1st couples on opposite lines.
 
   - type: phrase
     starts: 9
     ends: 16
-    contents:
-      - type: text
-        content: |
-          2nd and 3rd couples turn partner halfway with right hands, and chase
-          around clockwise two places. 3rd and 2nd couples repeat four bars from
-          these positions, finishing in order 2, 3, 1 with 3rd and 1st couples
-          on opposite lines.
+    content: |
+      2nd and 3rd couples turn partner halfway with right hands, and chase
+      around clockwise two places. 3rd and 2nd couples repeat four bars from
+      these positions, finishing in order 2, 3, 1 with 3rd and 1st couples on
+      opposite lines.
 
   - type: phrase
     starts: 17
     ends: 24
-    contents:
-      - type: text
-        content: |
-          3rd couple, followed by 2nd couple dance a figure of eight down around
-          the 1st couple and up the sides, finishing in order 3, 2, 1 with 3rd
-          and 1st couples on opposite lines.
+    content: |
+      3rd couple, followed by 2nd couple dance a figure of eight down around the
+      1st couple and up the sides, finishing in order 3, 2, 1 with 3rd and 1st
+      couples on opposite lines.
 
   - type: phrase
     starts: 25
     ends: 28
-    contents:
-      - type: text
-        content: |
-          3rd, 2nd and 1st couples dance a «unit 3 lesson» from new places,
-          finishing in order 1, 3, 2 with 1st couple on opposite line.
+    content: |
+      3rd, 2nd and 1st couples dance a «unit 3 lesson» from new places,
+      finishing in order 1, 3, 2 with 1st couple on opposite line.
 
   - type: phrase
     starts: 29
     ends: 32
-    contents:
-      - type: text
-        content: |
-          1st, 3rd and 2nd couples dance a «unit 3 lesson» from new places,
-          finishing in order 2, 1, 3 with all couples on own line.
+    content: |
+      1st, 3rd and 2nd couples dance a «unit 3 lesson» from new places,
+      finishing in order 2, 1, 3 with all couples on own line.
 
   - type: repeat
     kind: having passed a couple

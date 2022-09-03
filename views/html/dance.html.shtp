@@ -28,10 +28,6 @@ if exists instructions; then
 
         case $(raw type) in
 
-            'text')
-                printf '%s' "$(text content)"
-                ;;
-
             'note')
                 printf '<div class="note">'
                 printf 'Note: %s' "$(text content)"
@@ -60,7 +56,11 @@ if exists instructions; then
                 printf '<div class="phrase">'
                 printf '<div class="bars">%d&ndash;%d</div>' "$(raw starts)" "$(raw ends)"
                 printf '<div class="contents">'
-                render_instruction_items_in contents
+                printf '%s' "$(text content)"
+                if exists instructions; then
+                    printf '\n'
+                    render_instruction_items_in instructions
+                fi
                 printf '</div></div>'
                 ;;
 
