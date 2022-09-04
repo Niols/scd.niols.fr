@@ -92,7 +92,7 @@ instructions:
     starts: 41
     ends: 48
     content: |
-      All circle round to the left and back.
+      All dance ten hands round to the left and back.
 
   - type: repeat
     kind: from new positions
