@@ -17,10 +17,11 @@ printf   '</section>'
 
 if exists contents; then
     printf '<section>'
-    printf   '<table class="datatable responsive nowrap">'
+    printf   "<table class='datatable responsive nowrap' data-order='[[1, \"asc\"]]'>"
     printf     '<thead>'
     printf       '<tr>'
     printf         '<th>Name</th>'
+    printf         '<th>#</th>'
     printf         '<th>Type</th>'
     printf         '<th>Kind</th>'
     printf         '<th>Deviser</th>'
@@ -36,6 +37,7 @@ if exists contents; then
                 (
                     slug=$(raw slug)
                     url_slug=$(url slug)
+                    index=$((1 + $(raw key)))
                     leave_all
                     enter dances
                     enter "$slug"
@@ -43,6 +45,7 @@ if exists contents; then
                     printf '<tr>'
                     printf   '<td><a href="../dance/%s.html">%s</a></td>' \
                         "$url_slug" "$(text name)"
+                    printf   '<td>%s</td>' "$index"
                     printf   '<td>Dance</td>'
                     printf   '<td>%s</td>' "$(text short-kind)"
                     printf   '<td>%s</td>' "$(text short_author_or_author)"
@@ -54,6 +57,7 @@ if exists contents; then
                 (
                     slug=$(raw slug)
                     url_slug=$(url slug)
+                    text_key=$(text key)
                     leave_all
                     enter tunes
                     enter "$slug"
@@ -61,6 +65,7 @@ if exists contents; then
                     printf '<tr>'
                     printf   '<td><a href="../tune/%s.html">%s</a></td>' \
                         "$url_slug" "$(text name)"
+                    printf   '<td>%s</td>' "$index"
                     printf   '<td>Tune</td>'
                     printf   '<td>%s</td>' "$(text short-kind)"
                     printf   '<td>%s</td>' "$(text short_author_or_author)"
