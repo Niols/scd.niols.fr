@@ -10,4 +10,5 @@
 
 ## Nix & direnv
 /result
+/.envrc
 /.direnv
