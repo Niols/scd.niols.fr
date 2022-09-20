@@ -1,6 +1,14 @@
+## .gitignore
+
+## Project-specific
+/_build
+
+## Emacs
 *~
 *#
-/_build
 .auctex-auto
+
+## Nix & direnv
 /result
+/.envrc
 /.direnv
