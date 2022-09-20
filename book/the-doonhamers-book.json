@@ -2,6 +2,7 @@
   "book": {
     "title": "The Doonhamers' Book",
     "summary": "8 Scottish Country Dances written for Rachel Shankland and George Meikle",
+    "scddb-id": 1660,
     "contents": [
       {
         "type": "dance",
@@ -158,6 +159,7 @@
     "et-voila": {
       "name": "Et voilà !",
       "author": "Violaine Eysseric",
+      "scddb-id": 21104,
       "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
       "short-kind": "M40 12S",
       "date": "2022",
@@ -207,6 +209,7 @@
     "in-strathspey-time-george-please": {
       "name": "In Strathspey Time, George, Please!",
       "author": "Shona Holmes",
+      "scddb-id": 21105,
       "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
       "short-kind": "X32 2/4L",
       "date": "2022-08",
@@ -422,6 +425,7 @@
     "spot-on": {
       "name": "Spot on",
       "author": "Shona Holmes",
+      "scddb-id": 21106,
       "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
       "short-kind": "R32",
       "date": "2022-07",
@@ -487,6 +491,7 @@
     "sunday-early-in-the-morning": {
       "name": "Sunday, Early in the Morning",
       "author": "Marie-Laure Barret",
+      "scddb-id": 20996,
       "kind": "32-bar strathspey for three couples in a three-couple longwise set",
       "short-kind": "S32 3/3L",
       "date": "2022-07-31",
@@ -681,6 +686,7 @@
     "the-terrific-twelve": {
       "name": "The Terrific Twelve",
       "author": "Kristian Vestli",
+      "scddb-id": 21107,
       "kind": "40-bar reel for six couples in a six-couple longwise set",
       "short-kind": "R40 6/6L",
       "date": "2022-07",
@@ -842,6 +848,7 @@
     "units-2-and-3": {
       "name": "Units 2 and 3",
       "author": "David Osgarby",
+      "scddb-id": 21108,
       "kind": "32-bar jig for three couples in a four-couple longwise set",
       "short-kind": "J32 3/4L",
       "date": "2022-07",
