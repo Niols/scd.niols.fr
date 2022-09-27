@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
-        uses: actions/github-script@v6.2.0
+        uses: actions/github-script@v6.3.0
         with:
           ## For the following, `secrets.GITHUB_TOKEN` would not be sufficient
           ## because it would not work for dependabot.
