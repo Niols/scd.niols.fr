@@ -24,6 +24,8 @@
 
     {
       packages.x86_64-linux.default = self.packages.default;
+      packages.x86_64-linux.website = self.packages.website;
+      packages.x86_64-linux.test-website = self.packages.test-website;
       devShells.x86_64-linux.default = self.devShell;
 
       packages.default = self.packages.website;
