@@ -25,51 +25,43 @@
     {
       packages.x86_64-linux.default = self.packages.x86_64-linux.website;
 
-      devShells.x86_64-linux.default =
-        with import nixpkgs { system = "x86_64-linux"; };
-        stdenv.mkDerivation {
-          name = "devshell";
-          src = self;
+      devShells.x86_64-linux.default = pkgs.stdenv.mkDerivation {
+        name = "devshell";
+        src = self;
 
-          buildInputs = websiteBuildInputs ++ websiteTestInputs;
+        buildInputs = websiteBuildInputs ++ websiteTestInputs;
 
-          FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
-            self.packages.x86_64-linux.trebuchetms ]; };
-        };
+        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
+          self.packages.x86_64-linux.trebuchetms ]; };
+      };
 
-      packages.x86_64-linux.website =
-        with import nixpkgs { system = "x86_64-linux"; };
-        stdenv.mkDerivation {
-          name = "website";
-          src = self;
+      packages.x86_64-linux.website = pkgs.stdenv.mkDerivation {
+        name = "website";
+        src = self;
 
-          buildInputs = websiteBuildInputs;
+        buildInputs = websiteBuildInputs;
 
-          FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
-            self.packages.x86_64-linux.trebuchetms ]; };
+        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
+          self.packages.x86_64-linux.trebuchetms ]; };
 
-          buildPhase = "make website";
-          installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
-        };
+        buildPhase = "make website";
+        installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
+      };
 
-      packages.x86_64-linux.test-website =
-        with import nixpkgs { system = "x86_64-linux"; };
-        stdenv.mkDerivation {
-          name = "test-website";
-          src = self;
+      packages.x86_64-linux.test-website = pkgs.stdenv.mkDerivation {
+        name = "test-website";
+        src = self;
 
-          buildInputs = websiteBuildInputs;
+        buildInputs = websiteBuildInputs;
 
-          FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
-            self.packages.x86_64-linux.trebuchetms ]; };
+        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
+          self.packages.x86_64-linux.trebuchetms ]; };
 
-          buildPhase = "make test-website";
-          installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
-        };
+        buildPhase = "make test-website";
+        installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
+      };
 
-      packages.x86_64-linux.trebuchetms =
-        with import nixpkgs { system = "x86_64-linux"; };
-        stdenv.mkDerivation {
+      packages.x86_64-linux.trebuchetms = pkgs.stdenv.mkDerivation {
           name = "trebuchetms";
           src = self;
 
