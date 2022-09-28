@@ -2,7 +2,7 @@ FROM debian:11
 
 ## Install dependencies.
 RUN apt-get update -y
-RUN apt-get install -yq make wget xvfb firefox-esr imagemagick
+RUN apt-get install -yq make wget firefox-esr imagemagick
 
 ## Install `yq`. We use the i386 version because that's what Debian 11 in Docker
 ## seems to be.
