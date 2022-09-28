@@ -23,45 +23,48 @@
     in
 
     {
-      packages.x86_64-linux.default = self.packages.x86_64-linux.website;
+      packages.x86_64-linux.default = self.packages.default;
+      devShells.x86_64-linux.default = self.devShell;
 
-      devShells.x86_64-linux.default = pkgs.stdenv.mkDerivation {
+      packages.default = self.packages.website;
+
+      devShell = pkgs.stdenv.mkDerivation {
         name = "devshell";
         src = self;
 
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
 
         FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.x86_64-linux.trebuchetms ]; };
+          self.packages.trebuchetms ]; };
       };
 
-      packages.x86_64-linux.website = pkgs.stdenv.mkDerivation {
+      packages.website = pkgs.stdenv.mkDerivation {
         name = "website";
         src = self;
 
         buildInputs = websiteBuildInputs;
 
         FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.x86_64-linux.trebuchetms ]; };
+          self.packages.trebuchetms ]; };
 
         buildPhase = "make website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.x86_64-linux.test-website = pkgs.stdenv.mkDerivation {
+      packages.test-website = pkgs.stdenv.mkDerivation {
         name = "test-website";
         src = self;
 
         buildInputs = websiteBuildInputs;
 
         FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.x86_64-linux.trebuchetms ]; };
+          self.packages.trebuchetms ]; };
 
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.x86_64-linux.trebuchetms = pkgs.stdenv.mkDerivation {
+      packages.trebuchetms = pkgs.stdenv.mkDerivation {
           name = "trebuchetms";
           src = self;
 
