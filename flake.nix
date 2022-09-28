@@ -15,10 +15,27 @@
           pkgs.xvfb-run
           pkgs.yq-go
         ];
+
+        websiteTestInputs = [
+          pkgs.chromium
+          pkgs.imagemagick
+        ];
     in
 
     {
       packages.x86_64-linux.default = self.packages.x86_64-linux.website;
+
+      devShells.x86_64-linux.default =
+        with import nixpkgs { system = "x86_64-linux"; };
+        stdenv.mkDerivation {
+          name = "devshell";
+          src = self;
+
+          buildInputs = websiteBuildInputs ++ websiteTestInputs;
+
+          FONTCONFIG_FILE = makeFontsConf { fontDirectories = [
+            self.packages.x86_64-linux.trebuchetms ]; };
+        };
 
       packages.x86_64-linux.website =
         with import nixpkgs { system = "x86_64-linux"; };
