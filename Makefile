@@ -402,10 +402,10 @@ tests: $(tests-output)
 
 	    output_path="$$path"."$$width"x"$$height".png
 
-	    firefox_output=$$(
-	      firefox --headless --no-remote \
-	        --window-size "$$width,$$height" \
-	        --screenshot $(tests-output)/"$$output_path" \
+	    chromium_output=$$(
+	      chromium --headless --hide-scrollbars \
+	        --window-size="$$width,$$height" \
+	        --screenshot=$(tests-output)/"$$output_path" \
 	        file://$$PWD/$(website-output)/"$$path" \
 	        2>&1
 	    )
@@ -415,8 +415,8 @@ tests: $(tests-output)
 	    else
 	      unexpected_failures=$$((unexpected_failures + 1))
 	      printf '    => \e[1;31munexpected failure while taking screenshot\e[0m.\n'
-	      printf '       Here is the output from Firefox:\n'
-	      printf '\n\e[37m%s\e[0m\n\n' "$$firefox_output" | sed 's|^\(.*\)|         \1|'
+	      printf '       Here is the output from Chromium:\n'
+	      printf '\n\e[37m%s\e[0m\n\n' "$$chromium_output" | sed 's|^\(.*\)|         \1|'
 	      continue
 	    fi
 
