@@ -71,7 +71,7 @@ built_books := $(addprefix $(website-output)/book/, $(books))
 .PHONY: help clean
 
 help:
-	printf 'Just try `make website@docker`.\n'
+	printf 'Just try `make website`.\n'
 
 clean:
 	printf 'Cleaning up.\n'
@@ -480,51 +480,3 @@ promote-test-outputs:
 	    cp $(tests-output)/"$$output_path" $(tests)/outputs/"$$output_path"
 	  done
 	done
-
-################################################################################
-##   ___          _
-##  |   \ ___  __| |_____ _ _
-##  | |) / _ \/ _| / / -_) '_|
-##  |___/\___/\__|_\_\___|_|
-
-DOCKER_BUILDER_TAG := ghcr.io/niols/scd.niols.fr-builder:latest
-DOCKER_TESTER_TAG := ghcr.io/niols/scd.niols.fr-tester:latest
-
-.PHONY: docker-builder docker-tester
-docker-builder:
-	printf 'Making Docker builder with tag:\n\n    %s\n\n' $(DOCKER_BUILDER_TAG)
-	docker build --tag $(DOCKER_BUILDER_TAG) -f docker/builder.dockerfile .
-docker-tester:
-	printf 'Making Docker tester with tag:\n\n    %s\n\n' $(DOCKER_TESTER_TAG)
-	docker build --tag $(DOCKER_TESTER_TAG) -f docker/tester.dockerfile .
-
-## NOTE: We `docker cp` to `/src` and not `/wd`. Then, in the Docker container,
-## we run `cp -R /src/* /wd`. This has the upside to set the permissions of
-## everything in `/wd` to the user inside the Docker container, which `docker
-## cp` does not do by itself.
-##
-## NOTE: `$(MAKEFLAGS)` contains the command-line flags given to `make`. It is
-## usually passed implicitly, but we need to pass it explicitly here because of
-## Docker.
-##
-%@docker: $(website-output)
-	printf 'Running `make %s` inside Docker builder.\n' "$*"
-	cid=$$(docker create $(DOCKER_BUILDER_TAG) \
-	           sh -c 'cp -R /src/* . && make $* MAKEFLAGS=$(MAKEFLAGS)')
-	docker cp . "$$cid":/src
-	docker start --attach "$$cid" && true
-	return_code=$$?
-	docker cp "$$cid":/wd/$(website-output)/. $(website-output)
-	exit $$return_code
-
-tests@docker:
-	printf 'Running `make tests` inside Docker tester.\n' "$*"
-	cid=$$(docker create $(DOCKER_TESTER_TAG) \
-	           sh -c 'cp -R /src/* . && make tests MAKEFLAGS=$(MAKEFLAGS)')
-	docker cp . "$$cid":/src
-	docker start --attach "$$cid" && true
-	return_code=$$?
-	docker cp "$$cid":/wd/$(tests-output)/. $(tests-output)
-	exit $$return_code
-
-################################################################################
