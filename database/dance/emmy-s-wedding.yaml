@@ -35,12 +35,12 @@ instructions:
       - type: phrase
         starts: 17
         ends: 20
-        contents: |
+        content: |
           1st couple turn both hands one and a half times in four bars.
       - type: phrase
         starts: 21
         ends: 24
-        contents: |
+        content: |
           4th couple cross down below 1st couple while 3rd couple cast up to
           second place.
 
