@@ -17,8 +17,12 @@
         ];
 
         websiteTestInputs = [
+          pkgs.chromedriver
           pkgs.firefox
           pkgs.imagemagick
+          pkgs.python310
+          pkgs.python310Packages.selenium
+          pkgs.python310Packages.pip
         ];
     in
 
