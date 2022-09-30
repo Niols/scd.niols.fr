@@ -19,6 +19,8 @@
         websiteTestInputs = [
           pkgs.firefox
           pkgs.imagemagick
+          #pkgs.python310 ## is implied by:
+          pkgs.python310Packages.selenium
         ];
     in
 

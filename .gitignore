@@ -12,3 +12,6 @@
 /result
 /.envrc
 /.direnv
+
+## Selenium
+/*.log
