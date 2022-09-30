@@ -397,16 +397,15 @@ tests: $(tests-output)
 	    j=$$((jj - 1))
 	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
 	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
-	    height=$$(yq ".viewports[$$j].height" $(tests)/meta.yaml)
-	    printf '  Viewport #%d of %d: `%s` (%dx%d).\n' "$$jj" "$$viewports" "$$name" "$$width" "$$height"
+	    printf '  Viewport #%d of %d: `%s` (%d).\n' "$$jj" "$$viewports" "$$name" "$$width"
 
-	    output_path="$$path"."$$width"x"$$height".png
+	    output_path="$$path"."$$width".png
 
 	    firefox_output=$$(
 	      tests/take-screenshot \
 	        file://$$PWD/$(website-output)/"$$path" \
 	        $(tests-output)/"$$output_path" \
-	        $$width $$height \
+	        $$width \
 	        2>&1
 	    ) && true
 
@@ -420,7 +419,7 @@ tests: $(tests-output)
 	      continue
 	    fi
 
-	    diff_path="$$path"."$$width"x"$$height".diff.png
+	    diff_path="$$path"."$$width".diff.png
 
 	    compare_output=$$(
 	      compare -compose src -metric AE -format '' \
@@ -472,10 +471,9 @@ promote-test-outputs:
 	    j=$$((jj - 1))
 	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
 	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
-	    height=$$(yq ".viewports[$$j].height" $(tests)/meta.yaml)
-	    printf '    Viewport #%d of %d: `%s` (%dx%d).\n' "$$jj" "$$viewports" "$$name" "$$width" "$$height"
+	    printf '    Viewport #%d of %d: `%s` (%d).\n' "$$jj" "$$viewports" "$$name" "$$width"
 
-	    output_path="$$path"."$$width"x"$$height".png
+	    output_path="$$path"."$$width".png
 
 	    cp $(tests-output)/"$$output_path" $(tests)/outputs/"$$output_path"
 	  done

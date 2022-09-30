@@ -11,10 +11,8 @@ build-arguments:
 viewports:
   - name: Standard Desktop
     width: 1920
-    height: 1080
   - name: Standard Smartphone
     width: 480
-    height: 853
 
 paths:
   - index.html
