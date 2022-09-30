@@ -17,7 +17,7 @@
         ];
 
         websiteTestInputs = [
-          pkgs.chromium
+          pkgs.firefox
           pkgs.imagemagick
         ];
     in
