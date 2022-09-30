@@ -46,6 +46,7 @@ shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
 inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
+firefox := firefox --profile $$(mktemp -d)
 
 ## The list of dances in the database and their target names in $(website-output).
 dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
@@ -403,7 +404,7 @@ tests: $(tests-output)
 	    output_path="$$path"."$$width"x"$$height".png
 
 	    firefox_output=$$(
-	      firefox --headless --no-remote \
+	      $(firefox) --headless --no-remote \
 	        --window-size "$$width,$$height" \
 	        --screenshot $(tests-output)/"$$output_path" \
 	        file://$$PWD/$(website-output)/"$$path" \
