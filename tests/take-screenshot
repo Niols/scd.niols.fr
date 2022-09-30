@@ -19,13 +19,13 @@ options = FirefoxOptions()
 options.headless = True
 driver = webdriver.Firefox(options=options)
 
-## Get the requested page and give it time to load.
+## Get the requested page.
 driver.get(source)
-time.sleep(1)
 
-## Maximize the window and set its size.
+## Maximize the window, set its size and give time for the page to stabilise.
 driver.maximize_window()
 driver.set_window_size(width, height)
+time.sleep(1)
 
 ## Save a screenshot and leave.
 driver.save_screenshot(target)
