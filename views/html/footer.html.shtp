@@ -1,4 +1,8 @@
 #!bin/sh
 
-printf   '</body>'
+printf   '<footer>'
+printf     '<a href="%s/index.html">Niols’s Collection of' "$(url root)"
+printf      ' (Mostly Unpublished) Scottish Country Dances</a>'
+printf   '</footer>'
+printf '</body>'
 printf '</html>'
