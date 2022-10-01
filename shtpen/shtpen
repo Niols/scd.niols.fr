@@ -287,7 +287,7 @@ do
 
         --json)
             shift
-            CONTEXT=$(jq -n '{current:$current, next:[], parent:null}' --argjson current "$(cat "$1")")
+            ORIGINAL_CONTEXT=$(jq -n '{current:$current, next:[], parent:null}' --argjson current "$(cat "$1")")
             ;;
 
         --escape)
@@ -309,6 +309,7 @@ do
 
         --shtp)
             shift
+            CONTEXT=$ORIGINAL_CONTEXT
             . "$1"
             ;;
 
