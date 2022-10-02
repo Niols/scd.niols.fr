@@ -1,0 +1,1048 @@
+{
+  "dances": {
+    "a-wee-journey": {
+      "name": "A Wee Journey",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20990,
+      "kind": "32-bar jig for six couples in a six-couple longwise set",
+      "short-kind": "J32 6/6L",
+      "date": "2022-07",
+      "deviser-details": "This dance is written as a gift for Rachel Shankland and George Meikle that\ntook such good care of us during our Units 2 and 3. The changes of direction\ngive many opportunities for the men to flash their underwear as the RSCDS\ndemands for Unit 2.\n",
+      "instructions": [
+        {
+          "type": "two chords",
+          "couples-cross": "4th, 5th and 6th"
+        },
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 6,
+          "content": "All couples dance twelve hands round halfway to the left for six bars.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 7,
+          "ends": 8,
+          "content": "5th couple in second place and 2nd couple in fifth place cross by the\nright hand, finishing in order 6, 5, 4, 3, 2, 1 with 6th, 4th and 2nd\ncouples on own sides facing down and 5th, 3rd and 1st couples on opposite\nsides facing up.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 14,
+          "content": "All dance reels of six on the sidelines for six bars, giving right\nshoulder to begin, finishing in order 1, 2, 3, 4, 5, 6, facing in.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 15,
+          "ends": 16,
+          "content": "All turn by the right halfway to finish into allemande hold, 1st, 3rd and\n5th couples facing up and 2nd, 4th and 6th couples facing down.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st, 2nd and 3rd couples at the top and 6th, 5th and 4th couples at the\nbottom dance circulating allemandes towards the top and the bottom\nrespectively, finishing in order 3, 2, 1, 6, 5, 4 with 2nd, 6th and 4th\ncouples on opposite sides.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "All set. 2nd couple cross up while 3rd couple steps down; 5th couple cross\ndown while 4th couple steps up; 1st and 6th couples dance half right hands\nacross. All turn by the right and finish in order 2, 3, 6, 1, 4, 5 with\n1st, 4th and 5th couples on opposite sides.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "note",
+          "content": "A reel of six is similar to a reel of four in that all dancers pass one\nother dancer at each bar and take one additional bar to turn around at the\nend. It takes twelve bars to dance a full reel of six, and six bars to\ndance one halfway.\n"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "drawn-in": {
+      "name": "Drawn in",
+      "author": "Shannon Kiernan",
+      "scddb-id": 20314,
+      "kind": "32-bar strathspey for three couples in a four-couple longwise set",
+      "short-kind": "S32 3/4L",
+      "date": "2019-03",
+      "tunes": [
+        "the-translator"
+      ],
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple, giving right hands, dance a half figure of eight around 2nd\ncouple. 1st man giving left hand to 2nd woman, and 1st woman giving right\nhand to 2nd man, turn once round.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 12,
+          "content": "1st couple dance in and cast off to second place.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 13,
+          "ends": 16,
+          "content": "1st couple, giving both hands, turn once and a half, while 2nd and 3rd\ncouples chase clockwise halfway.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st couple, giving right shoulder to third corner positions, dance reels\nof three on the sides with 3rd and 2nd couples, finishing with 1st couple\npassing left shoulder to finish facing first corner positions.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "1st couple dance corner pass and turn with first corner positions, corners\nturning with both hands halfway and, pulling back right shoulders, dance\nout to the opposite corner position. 1st couple, passing right shoulders,\nrepeat with second corner positions.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "The Translator"
+        }
+      ]
+    },
+    "et-voila": {
+      "name": "Et voilà !",
+      "author": "Violaine Eysseric",
+      "scddb-id": 21104,
+      "kind": "Medley of 40-bar strathspey and 40-bar reel for four trios in a square set",
+      "short-kind": "M40 12S",
+      "date": "2022",
+      "date-format": "during the teaching certificate class in weeks 1 and 2 of Summer School %year%\nas a gift for Rachel Shankland and George Meikle\n",
+      "deviser-details": "The candidates devised dances and created “The Doonhamers' Book”. This dance\nis for twelve dancers as there were twelve of us; it also uses a lot of\nformations included in the dances of Unit 2 – even if not always in the usual\nway!\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "The persons in the middle of all trios dance left hands accross in the\nmiddle of the square and right hands accross back to original place while\nthe other persons dance eight hands round to the left and back.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st and 3rd trios dance a reel of four accross the set. In each trio, the\nperson in the middle dances in tandem with the person on their right; the\nperson in the middle has the lead to start, and the lead changes halfway\nin the reel. The tandems pass left shoulder to begin.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 20,
+          "content": "All trios dance anti-clockwise one place, finishing facing inside the\nsquare.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 21,
+          "ends": 24,
+          "content": "All trios dance «modified set and link for three»: in each trio, the three\npersons set; the person on the left dances in to finish facing out in the\nposition at the right of the trio; the person in the middle and the person\non the right cast off one place to finish in promenade hold in the\npositions at the left and in the middle of the trio.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 40,
+          "content": "All dance «Schiehallion reels» all round; the dancers in promenade hold\nsticking together as one unit.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "custom",
+          "text": "Repeat as strathspey and then as reel, twice. All trios progress by one\nside of the square each time through as persons in trio get reordered: the\npersons on the left, in the middle and on the right becoming the persons\non the right, on the left and in the middle respectively.\n"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "in-strathspey-time-george-please": {
+      "name": "In Strathspey Time, George, Please!",
+      "author": "Shona Holmes",
+      "scddb-id": 21105,
+      "kind": "32-bar strathspey or 32-bar jig or 32-bar reel for two couples in a four-couple longwise set",
+      "short-kind": "X32 2/4L",
+      "date": "2022-08",
+      "deviser-details": "George Meikle played wonderfully for our Units 2 and 3, even if not always in\nthe tempo we wanted. This dance can be danced in your choice of tempo to\nreflect this.\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st and 2nd couples advance, retire and turn one and a half times.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st couple, followed by 2nd couple, lead down the middle for three steps.\n2nd couple divide to allow 1st couple through and both couples lead up. On\nbars 15-16, retaining right hands, 1st and 2nd couple turn by the right to\nfinish on own sides. [see note below]\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st and 2nd couples dance the poussette.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 28,
+          "content": "1st and 2nd couples dance right hands across.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 29,
+          "ends": 32,
+          "content": "1st couple turn by the right to finish in second place on own side. 2nd\ncouple step up on bars 31-32. [see note below]\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "note",
+          "content": "If danced in jig or reel time, the 1st and 2nd couples need to finish bar\n16 in the middle of the set facing partner. After the poussette, 1st\ncouple is already in second position and they therefore do not need to\nmove down as they turn. 2nd couple do not need to step up.\n"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "tune": "A Strathspey for George",
+          "composer": "Nicolas “Niols” Jeannerod"
+        }
+      ]
+    },
+    "la-ville-lumiere": {
+      "name": "La Ville Lumière",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20315,
+      "kind": "32-bar reel for four couples in a four-couple longwise set",
+      "short-kind": "R32 4/4L",
+      "date": "2019-04",
+      "tunes": [
+        "la-ville-lumiere"
+      ],
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "1st couple set and cast off one place as 4th couple set and cast up one\nplace. 2nd couple step up and 3rd couple step down on bars 3-4.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "1st and 4th couples dance right hands across to finish facing third\ncorners, that is, 1st man facing 2nd man with 4th man behind him and 4th\nwoman facing 3rd woman with 1st woman behind her.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "“Dolphin corners pass & turn”: 1st man followed by 4th man and 4th woman\nfollowed by 1st woman pass third corners by the right and change lead;\ncorners dance in and turn right hand back to place as 4th man followed by\n1st man and 1st woman followed by 4th woman dance in and pass right\nshoulders to face fourth corners. Repeat with fourth corners to finish 1st\nand 4th couples in the middle of the set with both hands joined with\npartner.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st and 4th couple dance a poussette to finish in the order 2, 4, 1, 3.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "All 4 couples dance eight hands round and back.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "composer": "Pascaline Latour"
+        }
+      ]
+    },
+    "one-blue-cloud-in-the-grey-sky": {
+      "name": "One Blue Cloud in the Grey Sky",
+      "author": "Claire Cunin and Nicolas “Niols” Jeannerod",
+      "scddb-id": 19198,
+      "kind": "40-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "R40 3/3L",
+      "date": "2018-05",
+      "editor-details": "This dance is a three-couple version of “Two Blue Clouds in the Grey Sky”.\n",
+      "tunes": [
+        "forty-bars-of-clouds"
+      ],
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple set, cast off one place and dance a half figure of eight around\n2nd couple. 2nd couple step up on bars 3-4.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st couple set, dance a half figure of eight around 3rd couple and set\nadvancing to finish facing first corners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 32,
+          "content": "1st couple dance corner pass and turn with their first corners and repeat\nwith their second, third and fourth corners, finishing on their own sides\nin second position.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "content": "1st couple set, cast off one place. 3rd couple step up on bars 35-36. 1st\ncouple turn right hand in four bars.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "Forty Bars of Clouds"
+        }
+      ]
+    },
+    "praha-matka-mest": {
+      "name": "Praha Matka Měst",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20992,
+      "kind": "Medley of 16-bar strathspey and 16-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "M32 3/3L",
+      "date": "2019-04",
+      "date-format": "in Prague %at-date%\n",
+      "editor-details": "The title translates to “Prague, Mother of Cities” and refers to Prague's\nmotto during the twentieth century. It was a symbol of the mission of Prague\nto protect the independence and prosperity of the Czecho-Slovakian state.\n",
+      "instructions": [
+        {
+          "type": "two chords",
+          "couples-cross": "2nd and 3rd"
+        },
+        {
+          "type": "kind",
+          "kind": "Strathspey"
+        },
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple set advancing and turn both hands, dance down the middle and\nturn halfway with both hands to face down in promenade hold. 2nd couple\nstep up on bars 5-6. 2nd and 3rd couples join in on bar 8.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "2nd, 1st and 3rd couples dance an allemande down the dance. On bars 15-16,\n1st couple stays in the middle and set advancing to face first corners in\nthird corner position.\n"
+        },
+        {
+          "type": "kind",
+          "kind": "Reel"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st couple dance corners pass and turn and cast away: Same as corners pass\nand turn, except that corners turn halfway right hand and cast away to\nopposite positions. On bars 23-24, 1st couple slow down to finish in the\nmiddle on own sides in poussette hold; 3rd man curves to stay in the\nmiddle on own side; 3rd woman joins in in poussette hold.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "1st and 3rd couples dance poussette and petronella: Same five first bars\nas the poussette. On bar 6, 3rd and 1st couples dance a quarter. On bars\n7-8, 3rd and 1st couples dance a petronella turn to opposite lines,\nfinishing with 2nd couple in first position and 3rd and 1st couples on\nopposite line in second and third position.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "spot-on": {
+      "name": "Spot on",
+      "author": "Shona Holmes",
+      "scddb-id": 21106,
+      "kind": "32-bar reel for any number of couples in a circle around the room: women with their partner on their left.",
+      "short-kind": "R32",
+      "date": "2022-07",
+      "deviser-details": "Our lovely Unit 2/3 teacher Rachel Shankland started every day with a fun warm\nup dance and often described our better moments in dancing and teaching as\n“Spot on”. Thus, this easy warm up dance was born; the circles in bars 9-12\nand 17-20 create perfect spots. Thank you Rachel!\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "All advance and retire.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "All advance and men retire while women stay in the middle, pulling back\nright shoulder to face out.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 12,
+          "content": "Women circle round to the left in the centre while men circle round to the\nleft from places, giving hands if possible. All finish facing new\npartners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 13,
+          "ends": 16,
+          "content": "All turn partners by the left one and a half times to finish with men in\nthe centre facing out and women on the outside facing in.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 20,
+          "content": "Women circle round to the right from places, giving hands if possible,\nwhile men circle round to the right in the centre. All finish facing\noriginal partners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 21,
+          "ends": 24,
+          "content": "All dance dosido with their partners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 28,
+          "content": "All dance dosido with the person diagonally to the left.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 29,
+          "ends": 32,
+          "content": "All take promenade hold with partners and dance round the circle\nanti-clockwise.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "sunday-early-in-the-morning": {
+      "name": "Sunday, Early in the Morning",
+      "author": "Marie-Laure Barret",
+      "scddb-id": 20996,
+      "kind": "32-bar strathspey for three couples in a three-couple longwise set",
+      "short-kind": "S32 3/3L",
+      "date": "2022-07-31",
+      "deviser-details": "During the Saturday ball at the end of the first week of Summer School in St.\nAndrews, I was asked if I wanted to write a dance for our tutor Rachel\nShankland and for our musician George Meikle. Thus, on the following morning,\nat 6.30am, I started devising this dance.\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "1st, 2nd and 3rd couples set and link.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "All chase clockwise halfway round the set.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "Repeat bars 1-8 from new positions.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 18,
+          "content": "3rd, 2nd and 1st couples set.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 19,
+          "ends": 22,
+          "content": "3rd, 2nd and 1st couples, giving right hand to partner, turn halfway,\nrelease hands and, pulling right shoulder back, dance on a curve to own\nsides of the set.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 23,
+          "ends": 24,
+          "content": "3rd, 2nd and 1st couples set.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "3rd and 2nd couples dance the «rose progression»:\n",
+          "instructions": [
+            {
+              "type": "phrase",
+              "starts": 25,
+              "ends": 26,
+              "content": "3rd man and 2nd woman set as 3rd woman and 2nd man change places right\nhand.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 27,
+              "ends": 28,
+              "content": "3rd man and 2nd woman turn with both hands halfway as 3rd woman and\n2nd man dance into their partner's place.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 29,
+              "ends": 30,
+              "content": "3rd man and 2nd woman cast into each other's original places as 3rd\nwoman and 2nd man turn with both hands halfway.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 31,
+              "ends": 32,
+              "content": "3rd man and 2nd woman dance across the set as 3rd woman and 2nd man,\npulling right shoulder back, cast out to the sidelines.\n"
+            }
+          ]
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "the-mall-in-st-james-s-park": {
+      "name": "The Mall in St. James’s Park",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 20991,
+      "kind": "32-bar strathspey for three couples in a three-couple longwise set",
+      "short-kind": "S32 3/3L",
+      "date": "2018",
+      "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
+      "tunes": [
+        "the-mall-in-st-james-s-park"
+      ],
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple set, cross right hand, cast off one place, advance in the\nmiddle and pull right shoulder to face first corners. 2nd couple step up\non bars 5-6.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st couple turn first corners both hands, pass each other right shoulder,\nturn second corners both hands and pass each other right shoulder to\nfinish on own sides facing out.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "2nd, 1st and 3rd couples dance parallel reels of three in six bars on the\nlines, 1st man giving left shoulder to 3rd man and 1st woman giving right\nshoulder to 3rd woman. On bars 23-24, 1st and 3rd men exchange place left\nshoulder while 1st and 3rd women exchange place right shoulder.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "3rd and 1st couples dance the Poussette.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod"
+        }
+      ]
+    },
+    "the-reel-of-the-51st-confusion": {
+      "name": "The Reel of the 51st Confusion",
+      "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod and Victor Lanvin",
+      "short-author": "Anne Lanvin et al.",
+      "scddb-id": 20993,
+      "kind": "32-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "R32 3/3L",
+      "date": "2021-08-08",
+      "editor-details": "This dance is a variation of one of the most popular Scottish country dances,\n“The Reel of the 51st Division”.\n",
+      "tunes": [
+        {
+          "name": "The Drunken Piper",
+          "author": "Alexander McLeod"
+        },
+        "the-sober-piper"
+      ],
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple set, cast off two places and lead up, finishing back to back\nfacing first corners. 2nd couple step up on bars 3-4.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st couple set to first corners and turn by the right halfway with them.\nFirst corners give left hands in the middle and 1st couple and first\ncorners balance in line; first corners turn by the left three quarters to\nend up back to back in the middle, facing second corners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "Repeat with first and second corners. On bars 23-24, second corners turn\nby the left one quarter to opposite sides, finishing with 1st, 2nd and 3rd\nwomen on opposite lines in 1st, 2nd and 3rd positions and 2nd, 3rd and 1st\nmen on opposite lines in 1st, 2nd and 3rd positions.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "All dance six hands round and back.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "note",
+          "content": "Remember the person that is at the left of your partner from your point of\nview: First, third and fifth times, you will start dancing with your\npartner on your original lines; Second, fourth and sixth times, you will\nstart dancing with that other person on the opposite lines.\n"
+        },
+        {
+          "type": "music by",
+          "composer": "Anne Lanvin",
+          "tune": "The Sober Piper",
+          "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
+        }
+      ]
+    },
+    "the-terrific-twelve": {
+      "name": "The Terrific Twelve",
+      "author": "Kristian Vestli",
+      "scddb-id": 21107,
+      "kind": "40-bar reel for six couples in a six-couple longwise set",
+      "short-kind": "R40 6/6L",
+      "date": "2022-07",
+      "date-format": "in St Andrews %at-date%\n",
+      "deviser-details": "The team of twelve candidates for our units 2 & 3 were terrific. In this dance\nyou hardly get a rest, to remind us of all the hard work we put in, but also\nall the fun we had with our tutor, Rachel Shankland and our musician, George\nMeikle.\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "1st man with 2nd woman, and at the same time 2nd man with 3rd woman, 3rd\nman with 4th woman, 4th man with 5th woman and 5th man with 6th woman turn\nwith the right hand.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "All turn their partner with the right hand ending in allemande hold facing\nup.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st, 2nd and 3rd couples, and at the same time 4th, 5th and 6th couples\ndance a three-couple allemande.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "3rd couple with 2nd couple, and at the same time 1st couple with 6th\ncouple and 5th couple with 4th couple, dance right hands across and left\nhands back, finishing in the middle of the set both hands joined.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "3rd couple with 2nd couple, and at the same time 1st couple with 6th\ncouple and 5th couple with 4th couple, change places with a two-couple\npoussette.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "content": "All circle twelve hands round and back.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
+    "the-waves": {
+      "name": "The Waves",
+      "author": "Saskia Frisby",
+      "scddb-id": 20994,
+      "kind": "32-bar strathspey for three couples in a four-couple longwise set",
+      "short-kind": "S32 3/4L",
+      "date": "2022",
+      "date-format": "%at-date% and inspired by the waves in the sea around St. Andrews\n",
+      "deviser-details": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 2,
+          "content": "1st couple set.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 3,
+          "ends": 8,
+          "content": "1st couple dance a figure of eight around 2nd and 3rd couples on the\nsidelines in six bars, dancing in and down to begin and touching nearer\nhands when possible.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st and 2nd couples dance the knot, retaining left hands.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 20,
+          "content": "2nd and 1st couples, giving left hands, dance four hands across once\nround.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 21,
+          "ends": 24,
+          "content": "1st and 3rd couples dance four hands round to the left. At the very end of\nthis phrase, 1st and 3rd women as well as 1st and 3rd men release hands\nwhile retaining hands with their partner.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "1st and 3rd couples dance a poussette right round. On the first bar, 1st\nand 3rd couples join both hands and turn into a diagonal line with 1st\ncouple above 3rd couple. The rest of the poussette proceeds as normal.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "recommended tune",
+          "tune": "Highland Whisky",
+          "composer": "Niel Gow"
+        }
+      ]
+    },
+    "two-blue-clouds-in-the-grey-sky": {
+      "name": "Two Blue Clouds in the Grey Sky",
+      "author": "Claire Cunin and Nicolas “Niols” Jeannerod",
+      "scddb-id": 19197,
+      "kind": "40-bar reel for five couples in a five-couple longwise set",
+      "short-kind": "R40 5/5L",
+      "date": "2018-05",
+      "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st and 3rd couples set, cast off one place and dance a half figure of\neight around 2nd and 4th couples. 2nd and 4th couples step up on bars 3-4.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st and 3rd couples set, dance a half figure of eight around 4th and 5th\ncouples and set advancing to finish facing first corners, 4th woman and\n2nd man for 1st couple, 5th woman and 4th man for 3rd couple.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 32,
+          "content": "1st and 3rd couples dance corner pass and turn with their first corners\nand repeat with their second, third and fourth corners, finishing on their\nown sides in second and fourth positions.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 33,
+          "ends": 40,
+          "content": "1st and 3rd couples set, cast off one place. 4th and 5th couples step up\non bars 35-36. 1st and 3rd couples turn right hand in four bars.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "from new positions"
+        },
+        {
+          "type": "devised by"
+        },
+        {
+          "type": "music by",
+          "composer": "Nicolas “Niols” Jeannerod",
+          "tune": "Forty Bars of Clouds"
+        }
+      ]
+    },
+    "units-2-and-3": {
+      "name": "Units 2 and 3",
+      "author": "David Osgarby",
+      "scddb-id": 21108,
+      "kind": "32-bar jig for three couples in a four-couple longwise set",
+      "short-kind": "J32 3/4L",
+      "date": "2022-07",
+      "date-format": "in St Andrews %at-date%\n",
+      "deviser-details": "I devised this dance at the 2022 St Andrews Summer School while doing Units 2\nand 3 of the RSCDS teaching certificate. The dance was devised such that the\n2s and 3s are showcased representing Units 2 and 3. The vigour of the dance\nrepresents the high level of effort put in by students during the course. Each\ndancer dances from several positions, similar to how we have been taking the\nposition of different dancers to demonstrate formations. That the ones are\nstill during bars 9-24 represents spending time observing other dancers and\nteachers during the course. The plentiful curving and casting to change\npositions on the side lines was included to demonstrate good kilt control (or\nlack thereof)!\n",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "1st, 2nd and 3rd couples dance a «unit 3 lesson» from original positions,\nfinishing in order 3, 1, 2 with 1st couple on opposite lines.\n",
+          "instructions": [
+            {
+              "type": "phrase",
+              "starts": 1,
+              "ends": 2,
+              "content": "1st couple position turn halfway by the right while 2nd and 3rd couple\npositions set.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 3,
+              "ends": 4,
+              "content": "1st and 2nd woman positions cast down one place while 3rd woman\nposition dances in and up, curving into first place. In the meantime,\n1st and 2nd man positions dance in and down one place, curving into\nplace, while 3rd man position casts up to first place.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "2nd, 3rd and 1st couples dance a «unit 3 lesson» again from new places,\nfinishing in order 2, 3, 1 with 3rd and 1st couples on opposite lines.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "2nd and 3rd couples turn partner halfway with right hands, and chase\naround clockwise two places. 3rd and 2nd couples repeat four bars from\nthese positions, finishing in order 2, 3, 1 with 3rd and 1st couples on\nopposite lines.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "3rd couple, followed by 2nd couple dance a figure of eight down around the\n1st couple and up the sides, finishing in order 3, 2, 1 with 3rd and 1st\ncouples on opposite lines.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 28,
+          "content": "3rd, 2nd and 1st couples dance a «unit 3 lesson» from new places,\nfinishing in order 1, 3, 2 with 1st couple on opposite line.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 29,
+          "ends": 32,
+          "content": "1st, 3rd and 2nd couples dance a «unit 3 lesson» from new places,\nfinishing in order 2, 1, 3 with all couples on own line.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    }
+  },
+  "tunes": {
+    "a-strath-jig-for-george": {
+      "name": "A Strath— Jig for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key d \\minor\n\n    \\partial 8 a8 |\n    \\repeat volta 2 {\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d4 a8 d4 c8 |\n      bes4. a8 bes c |\n      \\break\n\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d8 e f e f g |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      f4. f8 e d |\n    } } \\break\n\n    \\repeat volta 2 {\n      bes4 g8 bes4 d8 |\n      g8 f e d c bes |\n      a8 e e cis' e, e |\n      d'8 e, e e' e, e |\n      \\break\n\n      bes'4 g8 bes4 d8 |\n      g8 f e d c bes |\n      bes8 c d c d e |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      d4. d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2.:m | a:7 | d:m | g:m |\n      d2.:m | a:7 | bes4. c:7 | d2.:m | f |\n\n      g2.:m | s | a:7 | s |\n      g2.:m | s | bes4. c:7 | f2. | d2:m\n    }\n  }\n>>\n"
+    },
+    "a-strath-reel-for-george": {
+      "name": "A Strath— Reel for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\partial 4 a4 |\n    \\repeat volta 2 {\n      d4 a8 cis d4 a8 cis |\n      a'8 g f e g f e f |\n      d4 a8 cis d4 a8 c |\n      bes4 a8 bes c a bes c |\n      \\break\n\n      d4 a8 cis d4 a8 cis |\n      a'8 g f e g f e f |\n      d8 e f d e f g e |\n    } \\alternative { {\n      f2 f8 e d c |\n    } {\n      f2 f8 e d c |\n    } } \\break\n\n    \\repeat volta 2 {\n      bes8 g bes d g bes, d g |\n      g8 f e d c bes a g |\n      a8 e a cis e a, cis e |\n      g8 cis, e g a e a4 |\n      \\break\n\n      bes,8 g bes d g bes, d g |\n      g8 f e d c bes a bes |\n      bes8 c d bes c d e c |\n    } \\alternative { {\n      f2 f8 e d c |\n    } {\n      d2 d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1:m | a:7 | d:m | g:m |\n      d1:m | a:7 | bes2 c:7 | d1:m | f |\n\n      g1:m | s | a:7 | s |\n      g1:m | s | bes2 c:7 | f1 | d2.:m\n    }\n  }\n>>\n"
+    },
+    "a-strathspey-for-george": {
+      "name": "A Strathspey for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        a16 d8. d a16 a'8. g16 f e8. |\n        a,16 d8. d c16 bes4 a8 g |\n        a16 d8. d a16 a'8. g16 f e8. |\n      } \\alternative { {\n        \\tuplet 3/2 {d8 e f} \\tuplet 3/2 {e8 f g} f4 e8 d |\n      } {\n        \\tuplet 3/2 {d8 e f} \\tuplet 3/2 {e8 f g} f4 f16 e d c |\n      } } \\break\n\n      \\repeat volta 2 {\n        bes16 g8. g' f16 e8. d16 c bes8. |\n        a8. e16 cis'8 e, d' e, e' e, |\n        bes'16 g8. g' f16 e8. d16 c bes8. |\n      } \\alternative { {\n        \\tuplet 3/2 {bes8 c d} \\tuplet 3/2 {c8 d e} f4 f16 e d c |\n      } {\n        \\tuplet 3/2 {bes8 c d} \\tuplet 3/2 {c8 d e} d4 d |\n      } }\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2:m a:7 | d2:m g:m | d:m a:7 | bes4 c:7 d2:m | bes4 c:7 f2 |\n      g1:m | a:7 | g:m | bes4 c:7 f2 | bes4 c:7 d2:m |\n    }\n  }\n>>\n"
+    },
+    "forty-bars-of-cloud": {
+      "name": "Forty Bars of Clouds",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14008,
+      "kind": "40-bar reel",
+      "short-kind": "R40",
+      "date": "2018-04-25",
+      "dances": [
+        {
+          "type": "external",
+          "name": "Two Blue Clouds in the Grey Sky",
+          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+          "scddb-id": 19197
+        },
+        {
+          "type": "external",
+          "name": "One Blue Cloud in the Grey Sky",
+          "deviser": "Claire Cunin & Nicolas “Niols” Jeannerod",
+          "scddb-id": 19198
+        }
+      ],
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key c \\major\n    \\time 4/4\n\n    c'4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d4 d8 e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    f'4 d8 f e4 c8 e |\n    d4 b8 d c4 c |\n    \\bar \"||\" \\break\n\n    c8 b c d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f'8 d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"||\" \\break\n\n    a'8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    gis e gis a b e,4 e8 |\n    gis e gis a b a gis e |\n    \\bar \"||\" \\break\n\n    a8 gis a b c e,4 e8 |\n    a gis a b c b a g |\n    g fis g a b d,4 d8 |\n    g fis g a b a g f |\n    \\break\n\n    f e f g a c,4 c8 |\n    f e f g a g f e |\n    \\tuplet 3/4 { b4 c8 } \\tuplet 3/4 { d4 c8 } |\n    \\tuplet 3/4 { b4 c8 } b2 |\n    \\bar \"||\" \\break\n\n    c4 c8 d e g,4 g8 |\n    c b c d e d c b |\n    d cis d e f a,4 a8 |\n    d cis d e f e d c |\n    \\break\n\n    c b c d e g,4 g8 |\n    c b c d e d c b |\n    f' d a f' e c g e' |\n    d b g d' c4 c |\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n      a1:m | s | g | s | f | s | e | s |\n      a1:m | s | g | s | f | s | e | s |\n      c1 | s | d:m | s | c | s | d2:m c | g c |\n    }\n  }\n>>\n"
+    },
+    "la-ville-lumiere": {
+      "name": "La Ville Lumière",
+      "author": "Pascaline Latour",
+      "scddb-id": 14533,
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2020",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "la-ville-lumiere"
+        }
+      ],
+      "content": "\\relative a' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, a a d a fis' a, |\n      e' a, a a cis d e cis |\n      \\break\n\n      d8 a a a e' a, fis' a, |\n      g' b, b b a' b, g' b, |\n      fis' a, d a e' b cis a |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 3/4)\n      d a fis' a, d4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 4/4)\n      d8 a b cis d e fis g |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g d d d b d g b |\n      a a, b cis d e fis g |\n      \\break\n\n      fis d d d a d d d |\n      fis d d d b d d d |\n      g e fis d e cis d b |\n    } \\alternative { {\n      cis a b cis d e fis g |\n    } {\n      cis, a b cis d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1 | g | d | a |\n      d1 | g | d2 e4:m a | d2. | d1 |\n\n      d1 | b:m | g | a:7 |\n      d1 | b:m | e4:m d \\move-left 1 a/cis g/b | a1:7 | a2:7 d4\n    }\n  }\n>>\n"
+    },
+    "the-mall-in-st-james-s-park": {
+      "name": "The Mall in St. James's Park",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14826,
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2018-10-19",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "the-mall-in-st-james-s-park"
+        }
+      ],
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      b8. b16 b8 cis d e fis g |\n      a,8. a16 a8 b a4 a |\n      \\break\n\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      \\tuplet 3/2 { b4 d g } \\tuplet 3/2 { a,4 cis e } |\n      d2 d4 d |\n      \\bar \"||\" \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis d e fis g a b cis |\n      \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis8. a16 b8 cis d4 d |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d1 | fis:m/cis | g | a |\n      d1 | fis:m/cis | g2 a | d1 |\n\n      fis1 | b:m | e:m | a |\n      fis1 | b:m | e:m | a2 d |\n    }\n  }\n>>\n"
+    },
+    "the-sober-piper": {
+      "name": "The Sober Piper",
+      "author": "Anne Lanvin",
+      "scddb-id": 14827,
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2021",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "the-reel-of-the-51st-confusion"
+        }
+      ],
+      "content": "\\relative a <<\n  {\n    \\clef treble\n    \\key a' \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e''4 |\n      a,4 a8 cis e4 e8 fis |\n      e8 fis a fis fis4 d |\n      d, d8 fis a4 a8 b |\n      a cis e cis d4 fis |\n      \\break\n\n      a, a8 cis e4 e8 fis\n      e8 fis a fis e4 cis |\n      d e8 fis e fis e d |\n      cis4 a a\n    } \\break\n\n    e' |\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d e8 fis e fis e d |\n    cis4 a a  e' |\n    \\bar \"||\" \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a,4 a8 cis e4 e8 fis |\n    e fis a fis e4 cis |\n    d e8 fis e fis e d |\n    cis4 a a\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | a | d | d | a | a | d | a |\n\n      a1 | a | d | d | a | a | d | a |\n      a1 | a | d | d | fis:m | fis:m | b:m | a2.\n    }\n  }\n>>\n"
+    },
+    "the-translator": {
+      "name": "The Translator",
+      "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 14452,
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2019-03-02",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "drawn-in"
+        }
+      ],
+      "content": "\\relative f <<\n  \\new Voice {\n    \\clef treble\n    \\key b \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        a16 e'8. e fis16 e8. d16 cis8. ais16 |\n        b16 fis'8. fis g16 fis8. e16 d8. cis16 |\n        \\tuplet 3/2 { a8 cis e } fis8 ais, b4 b4 |\n      } \\break\n\n      fis'16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      \\tuplet 3/2 { cis8 fis, d } \\tuplet 3/2 { b'8 fis d } \\tuplet 3/2 { a'8 fis d } \\tuplet 3/2 { b'8 fis d } |\n      \\break\n\n      fis16 b8. b cis16 d8. cis16 b8. a16 |\n      g16 b8. b cis16 d8. cis16 b8. a16 |\n      a16 e'8. e fis16 g8. fis16 e8. d16 |\n      cis16 b a g fis8 ais b4 b |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      b1:m | a2 fis | b1:m | a4 fis b2:m |\n\n      b1:m | g | a | b:m7 |\n      b1:m | g | a | a4 fis b2:m |\n    }\n  }\n>>\n"
+    }
+  },
+  "books": {
+    "the-doonhamers-book": {
+      "title": "The Doonhamers' Book",
+      "summary": "8 Scottish Country Dances written for Rachel Shankland and George Meikle",
+      "scddb-id": 1660,
+      "contents": [
+        {
+          "type": "dance",
+          "slug": "units-2-and-3"
+        },
+        {
+          "type": "dance",
+          "slug": "sunday-early-in-the-morning"
+        },
+        {
+          "type": "dance",
+          "slug": "spot-on"
+        },
+        {
+          "type": "dance",
+          "slug": "in-strathspey-time-george-please"
+        },
+        {
+          "type": "dance",
+          "slug": "a-wee-journey"
+        },
+        {
+          "type": "dance",
+          "slug": "the-waves"
+        },
+        {
+          "type": "dance",
+          "slug": "et-voila"
+        },
+        {
+          "type": "dance",
+          "slug": "the-terrific-twelve"
+        }
+      ]
+    }
+  },
+  "root": "."
+}
