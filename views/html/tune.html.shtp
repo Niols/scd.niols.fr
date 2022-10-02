@@ -36,49 +36,59 @@ if exists composer-details; then
     printf '</blockquote>'
 fi
 
+print_dance_ref () {
+    case $(raw type) in
+
+        'internal')
+            (
+                slug=$(raw slug)
+                url_slug=$(url slug)
+                leave_all
+                enter dances
+                enter "$slug"
+
+                printf '<a href="../dance/%s.html"><span class="dance">%s</span></a>' "$url_slug" "$(text name)"
+                printf ' by <span class="deviser">%s</span>' "$(text short_author_or_author)"
+            )
+            ;;
+
+        'external')
+            printf '<span class="dance">%s</span>' "$(text name)"
+            if exists deviser; then
+                printf ' by <span class="deviser">%s</span>' "$(text deviser)"
+            fi
+            if exists scddb-id; then
+                printf ' [<a href="https://my.strathspey.org/dd/dance/%s/">' \
+                    "$(url scddb-id)"
+                printf 'SCDDB</a>]'
+            fi
+            ;;
+
+        *)
+            die 'Unknown dance type: `%s`' "$(raw type)"
+            ;;
+    esac
+}
+
 if exists dances; then
-    printf '<p>Recommended for:</p><ul>'
+    if [ "$(length dances)" -eq 1 ]; then
+        printf '<p>Recommended for '
+        ## FIXME: the following is very dirty (but it works because there will
+        ## be just one dance).
+        iter dances; while next; do print_dance_ref; done
+        printf '.</p>'
 
-    iter dances
-    while next; do
-        case $(raw type) in
+    else
 
-            'internal')
-                (
-                    slug=$(raw slug)
-                    url_slug=$(url slug)
-                    leave_all
-                    enter dances
-                    enter "$slug"
-
-                    printf '<li>'
-                    printf '<a href="../dance/%s.html"><span class="dance">%s</span></a>' "$url_slug" "$(text name)"
-                    printf ' by <span class="deviser">%s</span>' "$(text short_author_or_author)"
-                    printf '</li>'
-                )
-                ;;
-
-            'external')
-                printf '<li>'
-                printf '<span class="dance">%s</span>' "$(text name)"
-                if exists deviser; then
-                    printf ' by <span class="deviser">%s</span>' "$(text deviser)"
-                fi
-                if exists scddb-id; then
-                    printf ' [<a href="https://my.strathspey.org/dd/dance/%s/">' \
-                        "$(url scddb-id)"
-                    printf 'SCDDB</a>]'
-                fi
-                printf '</li>'
-                ;;
-
-            *)
-                die 'Unknown dance type: `%s`' "$(raw type)"
-                ;;
-        esac
-    done
-
-    printf '</ul>'
+        printf '<p>Recommended for:</p><ul>'
+        iter dances
+        while next; do
+            printf '<li>'
+            print_dance_ref
+            printf '</li>'
+        done
+        printf '</ul>'
+    fi
 fi
 
 printf   '</section>'
