@@ -154,14 +154,18 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 ############################################################
 ## Index of dances
 
-$(website-output)/dances.json: $(addsuffix .raw.json, $(built_dances))
-	printf 'Making `dances.json`...\n'
+$(website-output)/dances.raw.json: $(addsuffix .raw.json, $(built_dances))
+	printf 'Making `dances.raw.json`...\n'
 	if [ -n '$^' ]; then
-	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:.}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built dances.)\n'
-	  jq -n '{dances:[], root:"."}' > $@
+	  jq -n '{dances:[]}' > $@
 	fi
+
+$(website-output)/dances.json: $(website-output)/dances.raw.json
+	printf 'Making `dances.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
@@ -250,14 +254,18 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 ############################################################
 ## Index of tunes
 
-$(website-output)/tunes.json: $(addsuffix .raw.json, $(built_tunes))
-	printf 'Making `tunes.json`...\n'
+$(website-output)/tunes.raw.json: $(addsuffix .raw.json, $(built_tunes))
+	printf 'Making `tunes.raw.json`...\n'
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built tunes.)\n'
 	  jq -n '{tunes:[], root:"."}' > $@
 	fi
+
+$(website-output)/tunes.json: $(website-output)/tunes.raw.json
+	printf 'Making `tunes.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
@@ -304,14 +312,18 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 ############################################################
 ## Index of books
 
-$(website-output)/books.json: $(addsuffix .raw.json, $(built_books))
-	printf 'Making `books.json`...\n'
+$(website-output)/books.raw.json: $(addsuffix .raw.json, $(built_books))
+	printf 'Making `books.raw.json`...\n'
 	if [ -n '$^' ]; then
-	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
+	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:.}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built books.)\n'
-	  jq -n '{books:[], root:"."}' > $@
+	  jq -n '{books:[]}' > $@
 	fi
+
+$(website-output)/books.json: $(website-output)/books.raw.json
+	printf 'Making `books.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`... '
