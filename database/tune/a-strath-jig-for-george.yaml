@@ -1,0 +1,66 @@
+---
+
+name: A Strath— Jig for George
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2022-08-15"
+
+dances:
+  - type: internal
+    slug: in-strathspey-time-george-please
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 6/8
+      \key d \minor
+
+      \partial 8 a8 |
+      \repeat volta 2 {
+        d4 a8 d4 a8 |
+        a'8 g f e f e |
+        d4 a8 d4 c8 |
+        bes4. a8 bes c |
+        \break
+
+        d4 a8 d4 a8 |
+        a'8 g f e f e |
+        d8 e f e f g |
+      } \alternative { {
+        f4. f8 e d |
+      } {
+        f4. f8 e d |
+      } } \break
+
+      \repeat volta 2 {
+        bes4 g8 bes4 d8 |
+        g8 f e d c bes |
+        a8 e e cis' e, e |
+        d'8 e, e e' e, e |
+        \break
+
+        bes'4 g8 bes4 d8 |
+        g8 f e d c bes |
+        bes8 c d c d e |
+      } \alternative { {
+        f4. f8 e d |
+      } {
+        d4. d4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d2.:m | a:7 | d:m | g:m |
+        d2.:m | a:7 | bes4. c:7 | d2.:m | f |
+
+        g2.:m | s | a:7 | s |
+        g2.:m | s | bes4. c:7 | f2. | d2:m
+      }
+    }
+  >>
