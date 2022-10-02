@@ -154,7 +154,7 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 ############################################################
 ## Index of dances
 
-$(website-output)/dances.json: $(addsuffix .json, $(built_dances))
+$(website-output)/dances.json: $(addsuffix .raw.json, $(built_dances))
 	printf 'Making `dances.json`...\n'
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
@@ -250,7 +250,7 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 ############################################################
 ## Index of tunes
 
-$(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
+$(website-output)/tunes.json: $(addsuffix .raw.json, $(built_tunes))
 	printf 'Making `tunes.json`...\n'
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
@@ -304,7 +304,7 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 ############################################################
 ## Index of books
 
-$(website-output)/books.json: $(addsuffix .json, $(built_books))
+$(website-output)/books.json: $(addsuffix .raw.json, $(built_books))
 	printf 'Making `books.json`...\n'
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
