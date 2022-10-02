@@ -339,27 +339,33 @@ $(website-output)/books.html: $(website-output)/books.json
 ############################################################
 ## Index &
 
-$(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/books.json
+$(website-output)/all.raw.json: $(website-output)/dances.raw.json $(website-output)/tunes.raw.json $(website-output)/books.raw.json
+	printf 'Making `all.raw.json`...\n'
+	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books}' $^ > $@
+
+$(website-output)/index.json: $(website-output)/all.raw.json
 	printf 'Making `index.json`...\n'
-	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books, root:"."}' \
-	  $^ \
-	  > $@
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
 	$(shtpen) \
 	  --escape html \
-	  --json $(website-output)/index.json \
+	  --json $< \
 	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/index.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 
-$(website-output)/non-scddb.html: $(website-output)/index.json
+$(website-output)/non-scddb.json: $(website-output)/all.raw.json
+	printf 'Making `non-scddb.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
+
+$(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
 	$(shtpen) \
 	  --escape html \
-	  --json $(website-output)/index.json \
+	  --json $< \
 	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/non-scddb.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
