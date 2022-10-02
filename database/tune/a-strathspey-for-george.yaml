@@ -1,0 +1,51 @@
+---
+
+name: A Strathspey for George
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2022-08-15"
+
+dances:
+  - type: internal
+    slug: in-strathspey-time-george-please
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \minor
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          a16 d8. d a16 a'8. g16 f e8. |
+          a,16 d8. d c16 bes4 a8 g |
+          a16 d8. d a16 a'8. g16 f e8. |
+        } \alternative { {
+          \tuplet 3/2 {d8 e f} \tuplet 3/2 {e8 f g} f4 e8 d |
+        } {
+          \tuplet 3/2 {d8 e f} \tuplet 3/2 {e8 f g} f4 f16 e d c |
+        } } \break
+
+        \repeat volta 2 {
+          bes16 g8. g' f16 e8. d16 c bes8. |
+          a8. e16 cis'8 e, d' e, e' e, |
+          bes'16 g8. g' f16 e8. d16 c bes8. |
+        } \alternative { {
+          \tuplet 3/2 {bes8 c d} \tuplet 3/2 {c8 d e} f4 f16 e d c |
+        } {
+          \tuplet 3/2 {bes8 c d} \tuplet 3/2 {c8 d e} d4 d |
+        } }
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        d2:m a:7 | d2:m g:m | d:m a:7 | bes4 c:7 d2:m | bes4 c:7 f2 |
+        g1:m | a:7 | g:m | bes4 c:7 f2 | bes4 c:7 d2:m |
+      }
+    }
+  >>

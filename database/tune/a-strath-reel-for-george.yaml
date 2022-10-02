@@ -1,0 +1,66 @@
+---
+
+name: A Strath— Reel for George
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2022-08-15"
+
+dances:
+  - type: internal
+    slug: in-strathspey-time-george-please
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \minor
+
+      \partial 4 a4 |
+      \repeat volta 2 {
+        d4 a8 cis d4 a8 cis |
+        a'8 g f e g f e f |
+        d4 a8 cis d4 a8 c |
+        bes4 a8 bes c a bes c |
+        \break
+
+        d4 a8 cis d4 a8 cis |
+        a'8 g f e g f e f |
+        d8 e f d e f g e |
+      } \alternative { {
+        f2 f8 e d c |
+      } {
+        f2 f8 e d c |
+      } } \break
+
+      \repeat volta 2 {
+        bes8 g bes d g bes, d g |
+        g8 f e d c bes a g |
+        a8 e a cis e a, cis e |
+        g8 cis, e g a e a4 |
+        \break
+
+        bes,8 g bes d g bes, d g |
+        g8 f e d c bes a bes |
+        bes8 c d bes c d e c |
+      } \alternative { {
+        f2 f8 e d c |
+      } {
+        d2 d4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        d1:m | a:7 | d:m | g:m |
+        d1:m | a:7 | bes2 c:7 | d1:m | f |
+
+        g1:m | s | a:7 | s |
+        g1:m | s | bes2 c:7 | f1 | d2.:m
+      }
+    }
+  >>
