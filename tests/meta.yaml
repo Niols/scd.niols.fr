@@ -3,6 +3,7 @@
 build-arguments:
   dances:
     - a-wee-journey
+    - drawn-in
     - la-ville-lumiere
   tunes:
     - la-ville-lumiere
@@ -19,6 +20,7 @@ paths:
   - dances.html
   - tunes.html
   - dance/a-wee-journey.html
+  - dance/drawn-in.html
   - dance/la-ville-lumiere.html
   - tune/la-ville-lumiere.html
   - tune/the-translator.html

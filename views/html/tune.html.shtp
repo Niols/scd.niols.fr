@@ -44,10 +44,18 @@ if exists dances; then
         case $(raw type) in
 
             'internal')
-                printf '<li>'
-                printf '<a href="../dance/%s.html">%s</a>' \
-                    "$(url slug)" "$(text slug)" ## FIXME
-                printf '</li>'
+                (
+                    slug=$(raw slug)
+                    url_slug=$(url slug)
+                    leave_all
+                    enter dances
+                    enter "$slug"
+
+                    printf '<li>'
+                    printf '<a href="../dance/%s.html"><span class="dance">%s</span></a>' "$url_slug" "$(text name)"
+                    printf ' by <span class="deviser">%s</span>' "$(text short_author_or_author)"
+                    printf '</li>'
+                )
                 ;;
 
             'external')
