@@ -119,7 +119,7 @@ $(website-output)/dance/%.raw.json: $(database)/dance/%.yaml $(website-output)/d
 $(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `dance/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.dance.name + " | Tune"), root:".."}' \
+	  | jq '. + $$all + {title:(.dance.name + " | Dance"), root:".."}' \
 	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
 	  > $@
 
