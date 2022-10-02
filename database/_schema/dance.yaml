@@ -109,7 +109,7 @@ properties:
   tunes:
     type: array
     description: |
-      A list of tunes. This propertie is currently unused. <-- FIXME
+      A list of tunes. This property is currently unused. <-- FIXME
 
   instructions:
     description: |

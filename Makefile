@@ -108,13 +108,19 @@ $(tests-output): $(output)
 ############################################################
 ## Individual dances
 
-## Generate a JSON file out of a database dance entry.
+## Generate a raw JSON file out of a database dance entry.
 ##
-$(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
+$(website-output)/dance/%.raw.json: $(database)/dance/%.yaml $(website-output)/dance
+	printf 'Making `dance/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{dance:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw dance JSON file.
+##
+$(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `dance/%s.json`...\n' $*
 	cat $< \
-	  | $(yaml2json) \
-	  | jq '{dance:., slug:"$*", title:(.name + " | Dance"), root:".."}' \
+	  | jq '. + $$all + {title:(.dance.name + " | Dance"), root:".."}' \
+	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
 	  > $@
 
 ## Generate a TeX file out of a dance JSON file.
@@ -150,14 +156,18 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 ############################################################
 ## Index of dances
 
-$(website-output)/dances.json: $(addsuffix .json, $(built_dances))
-	printf 'Making `dances.json`...\n'
+$(website-output)/dances.raw.json: $(addsuffix .raw.json, $(built_dances))
+	printf 'Making `dances.raw.json`...\n'
 	if [ -n '$^' ]; then
-	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:., root:"."}' $^ > $@
+	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:.}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built dances.)\n'
-	  jq -n '{dances:[], root:"."}' > $@
+	  jq -n '{dances:[]}' > $@
 	fi
+
+$(website-output)/dances.json: $(website-output)/dances.raw.json
+	printf 'Making `dances.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
@@ -172,13 +182,19 @@ $(website-output)/dances.html: $(website-output)/dances.json
 ############################################################
 ## Individual tunes
 
-## Generate a JSON file out of a database tune entry.
+## Generate a raw JSON file out of a database tune entry.
 ##
-$(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
+$(website-output)/tune/%.raw.json: $(database)/tune/%.yaml $(website-output)/tune
+	printf 'Making `tune/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{tune:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw tune JSON file.
+##
+$(website-output)/tune/%.json: $(website-output)/tune/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `tune/%s.json`...\n' $*
 	cat $< \
-	  | $(yaml2json) \
-	  | jq '{tune:., slug:"$*", title:(.name + " | Tune"), root:".."}' \
+	  | jq '. + $$all + {title:(.tune.name + " | Tune"), root:".."}' \
+	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
 	  > $@
 
 ## Generate a LilyPond file out of a tune JSON file.
@@ -243,14 +259,18 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 ############################################################
 ## Index of tunes
 
-$(website-output)/tunes.json: $(addsuffix .json, $(built_tunes))
-	printf 'Making `tunes.json`...\n'
+$(website-output)/tunes.raw.json: $(addsuffix .raw.json, $(built_tunes))
+	printf 'Making `tunes.raw.json`...\n'
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built tunes.)\n'
 	  jq -n '{tunes:[], root:"."}' > $@
 	fi
+
+$(website-output)/tunes.json: $(website-output)/tunes.raw.json
+	printf 'Making `tunes.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
@@ -265,17 +285,20 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 ############################################################
 ## Individual books
 
-## Generate a JSON file out of a database book entry.
+## Generate a raw JSON file out of a database book entry.
 ##
-$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/book
-	printf 'Making `book/%s.json`... ' $*
+$(website-output)/book/%.raw.json: $(database)/book/%.yaml $(website-output)/book
+	printf 'Making `book/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{book:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw book JSON file.
+##
+$(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/all.raw.json
+	printf 'Making `book/%s.json`...\n' $*
 	cat $< \
-	  | $(yaml2json) \
-	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", title:(.title + " | Book"), root:".."}' \
-	      --argjson dances "$$(cat $(website-output)/dances.json)" \
-	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
+	  | jq '. + $$all + {title:(.book.title + " | Book"), root:".."}' \
+	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a HTML file out of a book JSON file.
 ##
@@ -293,14 +316,18 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 ############################################################
 ## Index of books
 
-$(website-output)/books.json: $(addsuffix .json, $(built_books))
-	printf 'Making `books.json`...\n'
+$(website-output)/books.raw.json: $(addsuffix .raw.json, $(built_books))
+	printf 'Making `books.raw.json`...\n'
 	if [ -n '$^' ]; then
-	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:., root:"."}' $^ > $@
+	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:.}' $^ > $@
 	else
 	  printf '(Generating trivial file because there are no built books.)\n'
-	  jq -n '{books:[], root:"."}' > $@
+	  jq -n '{books:[]}' > $@
 	fi
+
+$(website-output)/books.json: $(website-output)/books.raw.json
+	printf 'Making `books.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`... '
@@ -316,27 +343,33 @@ $(website-output)/books.html: $(website-output)/books.json
 ############################################################
 ## Index &
 
-$(website-output)/index.json: $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/books.json
+$(website-output)/all.raw.json: $(website-output)/dances.raw.json $(website-output)/tunes.raw.json $(website-output)/books.raw.json
+	printf 'Making `all.raw.json`...\n'
+	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books}' $^ > $@
+
+$(website-output)/index.json: $(website-output)/all.raw.json
 	printf 'Making `index.json`...\n'
-	jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books, root:"."}' \
-	  $^ \
-	  > $@
+	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
 	$(shtpen) \
 	  --escape html \
-	  --json $(website-output)/index.json \
+	  --json $< \
 	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/index.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
 	  > $@
 
-$(website-output)/non-scddb.html: $(website-output)/index.json
+$(website-output)/non-scddb.json: $(website-output)/all.raw.json
+	printf 'Making `non-scddb.json`...\n'
+	cat $< | jq '. + {root:"."}' > $@
+
+$(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
 	$(shtpen) \
 	  --escape html \
-	  --json $(website-output)/index.json \
+	  --json $< \
 	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/non-scddb.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
