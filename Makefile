@@ -272,17 +272,21 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 ############################################################
 ## Individual books
 
-## Generate a JSON file out of a database book entry.
+## Generate a raw JSON file out of a database book entry.
 ##
-$(website-output)/book/%.json: $(database)/book/%.yaml $(website-output)/dances.json $(website-output)/tunes.json $(website-output)/book
-	printf 'Making `book/%s.json`... ' $*
+$(website-output)/book/%.raw.json: $(database)/book/%.yaml $(website-output)/book
+	printf 'Making `book/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{book:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw book JSON file.
+##
+$(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/dances.json $(website-output)/tunes.json
+	printf 'Making `book/%s.json`...\n' $*
 	cat $< \
-	  | $(yaml2json) \
-	  | jq '{book:., dances:$$dances.dances, tunes:$$tunes.tunes, slug:"$*", title:(.title + " | Book"), root:".."}' \
+	  | jq '. + {dances:$$dances.dances, tunes:$$tunes.tunes, title:(.book.title + " | Book"), root:".."}' \
 	      --argjson dances "$$(cat $(website-output)/dances.json)" \
 	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
 	  > $@
-	printf 'done.\n'
 
 ## Generate a HTML file out of a book JSON file.
 ##
