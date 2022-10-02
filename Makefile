@@ -172,14 +172,17 @@ $(website-output)/dances.html: $(website-output)/dances.json
 ############################################################
 ## Individual tunes
 
-## Generate a JSON file out of a database tune entry.
+## Generate a raw JSON file out of a database tune entry.
 ##
-$(website-output)/tune/%.json: $(database)/tune/%.yaml $(website-output)/tune
+$(website-output)/tune/%.raw.json: $(database)/tune/%.yaml $(website-output)/tune
+	printf 'Making `tune/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{tune:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw tune JSON file.
+##
+$(website-output)/tune/%.json: $(website-output)/tune/%.raw.json
 	printf 'Making `tune/%s.json`...\n' $*
-	cat $< \
-	  | $(yaml2json) \
-	  | jq '{tune:., slug:"$*", title:(.name + " | Tune"), root:".."}' \
-	  > $@
+	cat $< | jq '. + {title:(.tune.name + " | Tune"), root:".."}' > $@
 
 ## Generate a LilyPond file out of a tune JSON file.
 ##
