@@ -1,5 +1,47 @@
 {
   "tunes": {
+    "a-strath-jig-for-george": {
+      "name": "A Strath— Jig for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key d \\minor\n\n    \\partial 8 a8 |\n    \\repeat volta 2 {\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d4 a8 d4 c8 |\n      bes4. a8 bes c |\n      \\break\n\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d8 e f e f g |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      f4. f8 e d |\n    } } \\break\n\n    \\repeat volta 2 {\n      bes4 g8 bes4 d8 |\n      g8 f e d c bes |\n      a8 e e cis' e, e |\n      d'8 e, e e' e, e |\n      \\break\n\n      bes'4 g8 bes4 d8 |\n      g8 f e d c bes |\n      bes8 c d c d e |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      d4. d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2.:m | a:7 | d:m | g:m |\n      d2.:m | a:7 | bes4. c:7 | d2.:m | f |\n\n      g2.:m | s | a:7 | s |\n      g2.:m | s | bes4. c:7 | f2. | d2:m\n    }\n  }\n>>\n"
+    },
+    "a-strath-reel-for-george": {
+      "name": "A Strath— Reel for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\partial 4 a4 |\n    \\repeat volta 2 {\n      d4 a8 cis d4 a8 cis |\n      a'8 g f e g f e f |\n      d4 a8 cis d4 a8 c |\n      bes4 a8 bes c a bes c |\n      \\break\n\n      d4 a8 cis d4 a8 cis |\n      a'8 g f e g f e f |\n      d8 e f d e f g e |\n    } \\alternative { {\n      f2 f8 e d c |\n    } {\n      f2 f8 e d c |\n    } } \\break\n\n    \\repeat volta 2 {\n      bes8 g bes d g bes, d g |\n      g8 f e d c bes a g |\n      a8 e a cis e a, cis e |\n      g8 cis, e g a e a4 |\n      \\break\n\n      bes,8 g bes d g bes, d g |\n      g8 f e d c bes a bes |\n      bes8 c d bes c d e c |\n    } \\alternative { {\n      f2 f8 e d c |\n    } {\n      d2 d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d1:m | a:7 | d:m | g:m |\n      d1:m | a:7 | bes2 c:7 | d1:m | f |\n\n      g1:m | s | a:7 | s |\n      g1:m | s | bes2 c:7 | f1 | d2.:m\n    }\n  }\n>>\n"
+    },
+    "a-strathspey-for-george": {
+      "name": "A Strathspey for George",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2022-08-15",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "in-strathspey-time-george-please"
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        a16 d8. d a16 a'8. g16 f e8. |\n        a,16 d8. d c16 bes4 a8 g |\n        a16 d8. d a16 a'8. g16 f e8. |\n      } \\alternative { {\n        \\tuplet 3/2 {d8 e f} \\tuplet 3/2 {e8 f g} f4 e8 d |\n      } {\n        \\tuplet 3/2 {d8 e f} \\tuplet 3/2 {e8 f g} f4 f16 e d c |\n      } } \\break\n\n      \\repeat volta 2 {\n        bes16 g8. g' f16 e8. d16 c bes8. |\n        a8. e16 cis'8 e, d' e, e' e, |\n        bes'16 g8. g' f16 e8. d16 c bes8. |\n      } \\alternative { {\n        \\tuplet 3/2 {bes8 c d} \\tuplet 3/2 {c8 d e} f4 f16 e d c |\n      } {\n        \\tuplet 3/2 {bes8 c d} \\tuplet 3/2 {c8 d e} d4 d |\n      } }\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2:m a:7 | d2:m g:m | d:m a:7 | bes4 c:7 d2:m | bes4 c:7 f2 |\n      g1:m | a:7 | g:m | bes4 c:7 f2 | bes4 c:7 d2:m |\n    }\n  }\n>>\n"
+    },
     "forty-bars-of-cloud": {
       "name": "Forty Bars of Clouds",
       "author": "Nicolas “Niols” Jeannerod",

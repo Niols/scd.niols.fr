@@ -1,0 +1,19 @@
+{
+  "tune": {
+    "name": "A Strath— Jig for George",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2022-08-15",
+    "dances": [
+      {
+        "type": "internal",
+        "slug": "in-strathspey-time-george-please"
+      }
+    ],
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key d \\minor\n\n    \\partial 8 a8 |\n    \\repeat volta 2 {\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d4 a8 d4 c8 |\n      bes4. a8 bes c |\n      \\break\n\n      d4 a8 d4 a8 |\n      a'8 g f e f e |\n      d8 e f e f g |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      f4. f8 e d |\n    } } \\break\n\n    \\repeat volta 2 {\n      bes4 g8 bes4 d8 |\n      g8 f e d c bes |\n      a8 e e cis' e, e |\n      d'8 e, e e' e, e |\n      \\break\n\n      bes'4 g8 bes4 d8 |\n      g8 f e d c bes |\n      bes8 c d c d e |\n    } \\alternative { {\n      f4. f8 e d |\n    } {\n      d4. d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2.:m | a:7 | d:m | g:m |\n      d2.:m | a:7 | bes4. c:7 | d2.:m | f |\n\n      g2.:m | s | a:7 | s |\n      g2.:m | s | bes4. c:7 | f2. | d2:m\n    }\n  }\n>>\n"
+  },
+  "slug": "a-strath-jig-for-george",
+  "title": "A Strath— Jig for George | Tune",
+  "root": ".."
+}
