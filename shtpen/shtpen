@@ -95,6 +95,12 @@ iter () {
         --argjson next "$_get")
 }
 
+length () {
+    _get=$(get | jq ".[\"$1\"]")
+    [ "$_get" = null ] && die 'Cannot get length of non-existing field `%s`.' "$1"
+    printf '%s' "$_get" | jq '. | length'
+}
+
 ## `enter` gets into a field of the current object and uses as new current
 ## object. The previous current object is pushed as parent object and there is
 ## no next objects.
