@@ -108,13 +108,17 @@ $(tests-output): $(output)
 ############################################################
 ## Individual dances
 
-## Generate a JSON file out of a database dance entry.
+## Generate a raw JSON file out of a database dance entry.
 ##
-$(website-output)/dance/%.json: $(database)/dance/%.yaml $(website-output)/dance
+$(website-output)/dance/%.raw.json: $(database)/dance/%.yaml $(website-output)/dance
+	printf 'Making `dance/%s.raw.json`...\n' $*
+	cat $< | $(yaml2json) | jq '{dance:., slug:"$*"}' > $@
+
+## Generate a JSON file out of a raw dance JSON file.
+##
+$(website-output)/dance/%.json: $(website-output)/dance/%.raw.json
 	printf 'Making `dance/%s.json`...\n' $*
-	cat $< \
-	  | $(yaml2json) \
-	  | jq '{dance:., slug:"$*", title:(.name + " | Dance"), root:".."}' \
+	cat $< | jq '. + {title:(.dance.name + " | Dance"), root:".."}' \
 	  > $@
 
 ## Generate a TeX file out of a dance JSON file.
