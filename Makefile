@@ -288,12 +288,11 @@ $(website-output)/book/%.raw.json: $(database)/book/%.yaml $(website-output)/boo
 
 ## Generate a JSON file out of a raw book JSON file.
 ##
-$(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/dances.json $(website-output)/tunes.json
+$(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `book/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + {dances:$$dances.dances, tunes:$$tunes.tunes, title:(.book.title + " | Book"), root:".."}' \
-	      --argjson dances "$$(cat $(website-output)/dances.json)" \
-	      --argjson tunes  "$$(cat $(website-output)/tunes.json)" \
+	  | jq '. + $$all + {title:(.book.title + " | Book"), root:".."}' \
+	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
 	  > $@
 
 ## Generate a HTML file out of a book JSON file.
