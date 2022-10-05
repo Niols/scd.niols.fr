@@ -7,7 +7,9 @@
     let pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
         mkDerivation = args:
-          pkgs.stdenv.mkDerivation args;
+          pkgs.stdenv.mkDerivation ({
+            src = self;
+          } // args);
 
         websiteBuildInputs = [
           pkgs.inkscape
@@ -56,8 +58,6 @@
 
       packages.trebuchetms = mkDerivation {
           name = "trebuchetms";
-          src = self;
-
           installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/trebuchetms/*.ttf";
         };
     };
