@@ -57,5 +57,12 @@
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
+
+      packages.trebuchetms = pkgs.stdenv.mkDerivation {
+          name = "trebuchetms";
+          src = self;
+
+          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/trebuchetms/*.ttf";
+        };
     };
 }
