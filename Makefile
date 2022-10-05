@@ -159,8 +159,8 @@ $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/dance.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 ############################################################
 ## Index of dances
@@ -185,8 +185,8 @@ $(website-output)/dances.html: $(website-output)/dances.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/dances.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 ############################################################
 ## Individual tunes
@@ -262,8 +262,8 @@ $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/tune.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 ############################################################
 ## Index of tunes
@@ -288,8 +288,8 @@ $(website-output)/tunes.html: $(website-output)/tunes.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/tunes.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 ############################################################
 ## Individual books
@@ -318,8 +318,8 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/book.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 	printf 'done.\n'
 
 ############################################################
@@ -345,8 +345,8 @@ $(website-output)/books.html: $(website-output)/books.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/books.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 	printf 'done.\n'
 
 ############################################################
@@ -367,8 +367,8 @@ $(website-output)/index.html: $(website-output)/index.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/index.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 	printf 'Making `non-scddb.json`...\n'
@@ -381,8 +381,8 @@ $(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	  --escape html \
 	  --json $< \
 	  --shtp $(views)/html/non-scddb.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
 	  >> $@
+	j2 $(views)/html/footer.html.j2 $< >> $@
 
 ############################################################
 ## All
