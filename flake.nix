@@ -14,7 +14,7 @@
         mkDerivationWithFonts = args:
           mkDerivation ({
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-              self.packages.trebuchetms ]; };
+              pkgs.google-fonts ]; };
           } // args);
 
         websiteBuildInputs = [
