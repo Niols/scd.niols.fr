@@ -11,6 +11,12 @@
             src = self;
           } // args);
 
+        mkDerivationWithFonts = args:
+          mkDerivation ({
+            FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
+              self.packages.trebuchetms ]; };
+          } // args);
+
         websiteBuildInputs = [
           pkgs.inkscape
           pkgs.jq
@@ -37,35 +43,21 @@
 
       packages.default = self.packages.website;
 
-      devShell = mkDerivation {
+      devShell = mkDerivationWithFonts {
         name = "devshell";
-
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
       };
 
-      packages.website = mkDerivation {
+      packages.website = mkDerivationWithFonts {
         name = "website";
-
         buildInputs = websiteBuildInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
-
         buildPhase = "make website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.test-website = mkDerivation {
+      packages.test-website = mkDerivationWithFonts {
         name = "test-website";
-
         buildInputs = websiteBuildInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
-
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
