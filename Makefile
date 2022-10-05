@@ -439,7 +439,7 @@ tests: $(tests-output)
 	    j=$$((jj - 1))
 	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
 	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
-	    printf '  Viewport #%d of %d: `%s` (%d).\n' "$$jj" "$$viewports" "$$name" "$$width"
+	    printf '  Viewport #%d of %d: `%s` (width: %d).\n' "$$jj" "$$viewports" "$$name" "$$width"
 
 	    output_path="$$path"."$$width".png
 
