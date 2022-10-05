@@ -154,13 +154,13 @@ $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 ##
 $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.html`...\n' $*
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/dance.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 ############################################################
 ## Index of dances
@@ -180,13 +180,13 @@ $(website-output)/dances.json: $(website-output)/dances.raw.json
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/dances.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 ############################################################
 ## Individual tunes
@@ -257,13 +257,13 @@ $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 ##
 $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.html`...\n' $*
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/tune.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 ############################################################
 ## Index of tunes
@@ -283,13 +283,13 @@ $(website-output)/tunes.json: $(website-output)/tunes.raw.json
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/tunes.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 ############################################################
 ## Individual books
@@ -313,13 +313,13 @@ $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-outpu
 ##
 $(website-output)/book/%.html: $(website-output)/book/%.json
 	printf 'Making `book/%s.html`... ' $*
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/book.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 	printf 'done.\n'
 
 ############################################################
@@ -340,13 +340,13 @@ $(website-output)/books.json: $(website-output)/books.raw.json
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`... '
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/books.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 	printf 'done.\n'
 
 ############################################################
@@ -362,13 +362,13 @@ $(website-output)/index.json: $(website-output)/all.raw.json
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/index.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 	printf 'Making `non-scddb.json`...\n'
@@ -376,13 +376,13 @@ $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 
 $(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
+	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
 	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
 	  --shtp $(views)/html/non-scddb.html.shtp \
 	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	  >> $@
 
 ############################################################
 ## All
