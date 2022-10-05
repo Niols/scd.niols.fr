@@ -6,6 +6,9 @@
   outputs = { self, nixpkgs }:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
+        mkDerivation = args:
+          pkgs.stdenv.mkDerivation args;
+
         websiteBuildInputs = [
           pkgs.inkscape
           pkgs.jq
@@ -32,7 +35,7 @@
 
       packages.default = self.packages.website;
 
-      devShell = pkgs.stdenv.mkDerivation {
+      devShell = mkDerivation {
         name = "devshell";
         src = self;
 
@@ -42,7 +45,7 @@
           self.packages.trebuchetms ]; };
       };
 
-      packages.website = pkgs.stdenv.mkDerivation {
+      packages.website = mkDerivation {
         name = "website";
         src = self;
 
@@ -55,7 +58,7 @@
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.test-website = pkgs.stdenv.mkDerivation {
+      packages.test-website = mkDerivation {
         name = "test-website";
         src = self;
 
@@ -68,7 +71,7 @@
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.trebuchetms = pkgs.stdenv.mkDerivation {
+      packages.trebuchetms = mkDerivation {
           name = "trebuchetms";
           src = self;
 
