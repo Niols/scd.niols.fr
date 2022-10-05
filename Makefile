@@ -461,6 +461,12 @@ tests: $(tests-output)
 	      continue
 	    fi
 
+	    if ! [ -e $(tests)/outputs/"$$output_path" ]; then
+	      dissimilarities=$$((dissimilarities + 1))
+	      printf '    => \e[31mno reference to compare to\e[0m.\n'
+	      continue
+	    fi
+
 	    diff_path="$$path"."$$width".diff.png
 
 	    compare_output=$$(
