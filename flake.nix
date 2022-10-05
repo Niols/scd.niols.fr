@@ -9,10 +9,6 @@
         mkDerivation = args:
           pkgs.stdenv.mkDerivation ({
             src = self;
-          } // args);
-
-        mkDerivationWithFonts = args:
-          mkDerivation ({
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
               pkgs.google-fonts ]; };
           } // args);
@@ -43,28 +39,23 @@
 
       packages.default = self.packages.website;
 
-      devShell = mkDerivationWithFonts {
+      devShell = mkDerivation {
         name = "devshell";
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
       };
 
-      packages.website = mkDerivationWithFonts {
+      packages.website = mkDerivation {
         name = "website";
         buildInputs = websiteBuildInputs;
         buildPhase = "make website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.test-website = mkDerivationWithFonts {
+      packages.test-website = mkDerivation {
         name = "test-website";
         buildInputs = websiteBuildInputs;
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
-
-      packages.trebuchetms = mkDerivation {
-          name = "trebuchetms";
-          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/trebuchetms/*.ttf";
-        };
     };
 }
