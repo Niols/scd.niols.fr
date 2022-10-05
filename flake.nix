@@ -6,6 +6,17 @@
   outputs = { self, nixpkgs }:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
+        mkDerivation = args:
+          pkgs.stdenv.mkDerivation ({
+            src = self;
+          } // args);
+
+        mkDerivationWithFonts = args:
+          mkDerivation ({
+            FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
+              self.packages.trebuchetms ]; };
+          } // args);
+
         websiteBuildInputs = [
           pkgs.inkscape
           pkgs.jq
@@ -32,47 +43,28 @@
 
       packages.default = self.packages.website;
 
-      devShell = pkgs.stdenv.mkDerivation {
+      devShell = mkDerivationWithFonts {
         name = "devshell";
-        src = self;
-
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
       };
 
-      packages.website = pkgs.stdenv.mkDerivation {
+      packages.website = mkDerivationWithFonts {
         name = "website";
-        src = self;
-
         buildInputs = websiteBuildInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
-
         buildPhase = "make website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.test-website = pkgs.stdenv.mkDerivation {
+      packages.test-website = mkDerivationWithFonts {
         name = "test-website";
-        src = self;
-
         buildInputs = websiteBuildInputs;
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
-          self.packages.trebuchetms ]; };
-
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
 
-      packages.trebuchetms = pkgs.stdenv.mkDerivation {
+      packages.trebuchetms = mkDerivation {
           name = "trebuchetms";
-          src = self;
-
-          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/*.ttf";
+          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/trebuchetms/*.ttf";
         };
     };
 }
