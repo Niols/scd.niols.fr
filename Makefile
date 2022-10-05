@@ -139,7 +139,16 @@ $(website-output)/dance/%.tex: $(website-output)/dance/%.json
 $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 	printf 'Making `dance/%s.pdf`...\n' $*
 	cd $(dir $<)
-	xelatex --interaction=batchmode -halt-on-error $(notdir $<) >/dev/null
+	output=$$(
+	  xelatex -halt-on-error $(notdir $<) 2>&1
+	) && true
+	return_code=$$?
+	if [ $$return_code -ne 0 ]; then
+	  printf '  => \e[1;31munexpected failure while compiling PDF\e[0m.\n'
+	      printf '     Here is the output from XeLaTeX:\n'
+	      printf '\n\e[37m%s\e[0m\n\n' "$$output" | sed 's|^\(.*\)|       \1|'
+	  exit $$return_code
+	fi
 
 ## Generate a HTML file out of a dance JSON file.
 ##
