@@ -72,7 +72,7 @@
           name = "trebuchetms";
           src = self;
 
-          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/*.ttf";
+          installPhase = "install -m444 -Dt $out/share/fonts assets/fonts/trebuchetms/*.ttf";
         };
     };
 }
