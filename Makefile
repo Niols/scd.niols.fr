@@ -277,13 +277,7 @@ $(website-output)/tunes.json: $(website-output)/tunes.raw.json
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/tunes.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/tunes.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual books
