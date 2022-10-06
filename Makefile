@@ -312,8 +312,8 @@ $(website-output)/books.raw.json: $(addsuffix .raw.json, $(built_books))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:.}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built books.)\n'
-	  jq -n '{books:[]}' > $@
+	  printf '  => trivial file because no built books\n'
+	  jq -n '{books:{}}' > $@
 	fi
 
 $(website-output)/books.json: $(website-output)/books.raw.json
