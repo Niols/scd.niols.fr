@@ -21,6 +21,11 @@ printf   '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8
 printf   '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'
 printf   '<link rel="stylesheet" href="%s/style.css">' "$(url root)"
 
+## Fonts
+printf   '<link rel="preconnect" href="https://fonts.googleapis.com">'
+printf   '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+printf   '<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">'
+
 ## DataTables (includes jQuery 3 & Responsive extension)
 printf   '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>'
 printf   '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"/>'

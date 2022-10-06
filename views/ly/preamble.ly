@@ -33,7 +33,7 @@
 
   #(define fonts
     (make-pango-font-tree
-     "Trebuchet MS"
+     "Source Sans Pro"
      "Nimbus Sans"
      "Luxi Mono"
      (/ staff-height pt 20)))
