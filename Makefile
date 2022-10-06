@@ -439,7 +439,7 @@ tests: $(tests-output)
 	    j=$$((jj - 1))
 	    name=$$(yq ".viewports[$$j].name" $(tests)/meta.yaml)
 	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
-	    printf '  Viewport #%d of %d: `%s` (%d).\n' "$$jj" "$$viewports" "$$name" "$$width"
+	    printf '  Viewport #%d of %d: `%s` (width: %d).\n' "$$jj" "$$viewports" "$$name" "$$width"
 
 	    output_path="$$path"."$$width".png
 
@@ -458,6 +458,12 @@ tests: $(tests-output)
 	      printf '    => \e[1;31munexpected failure while taking screenshot\e[0m.\n'
 	      printf '       Here is the output from Firefox:\n'
 	      printf '\n\e[37m%s\e[0m\n\n' "$$firefox_output" | sed 's|^\(.*\)|         \1|'
+	      continue
+	    fi
+
+	    if ! [ -e $(tests)/outputs/"$$output_path" ]; then
+	      dissimilarities=$$((dissimilarities + 1))
+	      printf '    => \e[31mno reference to compare to\e[0m.\n'
 	      continue
 	    fi
 
