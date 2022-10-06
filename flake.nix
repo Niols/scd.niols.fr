@@ -15,9 +15,9 @@
 
         websiteBuildInputs = [
           pkgs.inkscape
+          pkgs.j2cli
           pkgs.jq
           pkgs.lilypond
-          pkgs.python310Packages.j2cli
           pkgs.sassc
           pkgs.texlive.combined.scheme-full
           pkgs.xvfb-run
