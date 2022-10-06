@@ -257,7 +257,7 @@ $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 ##
 $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.html`...\n' $*
-	j2 $(views)/html/tune.html.j2 $< --filters j2utils.py > $@
+	j2 $(views)/html/tune.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of tunes

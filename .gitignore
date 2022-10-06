@@ -3,7 +3,7 @@
 ## Project-specific
 /_build
 /*.log
-/__pycache__
+__pycache__
 
 ## Emacs
 *~
