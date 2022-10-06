@@ -294,7 +294,7 @@ $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-outpu
 ## Generate a HTML file out of a book JSON file.
 ##
 $(website-output)/book/%.html: $(website-output)/book/%.json
-	printf 'Making `book/%s.html`... ' $*
+	printf 'Making `book/%s.html`...\n' $*
 	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
@@ -302,7 +302,6 @@ $(website-output)/book/%.html: $(website-output)/book/%.json
 	  --shtp $(views)/html/book.html.shtp \
 	  >> $@
 	j2 $(views)/html/footer.html.j2 $< >> $@
-	printf 'done.\n'
 
 ############################################################
 ## Index of books
@@ -321,7 +320,7 @@ $(website-output)/books.json: $(website-output)/books.raw.json
 	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/books.html: $(website-output)/books.json
-	printf 'Making `books.html`... '
+	printf 'Making `books.html`...\n'
 	j2 $(views)/html/header.html.j2 $< > $@
 	$(shtpen) \
 	  --escape html \
@@ -329,7 +328,6 @@ $(website-output)/books.html: $(website-output)/books.json
 	  --shtp $(views)/html/books.html.shtp \
 	  >> $@
 	j2 $(views)/html/footer.html.j2 $< >> $@
-	printf 'done.\n'
 
 ############################################################
 ## Index &
