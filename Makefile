@@ -180,13 +180,7 @@ $(website-output)/dances.json: $(website-output)/dances.raw.json
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/dances.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/dances.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual tunes
