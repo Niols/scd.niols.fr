@@ -1,0 +1,100 @@
+{# views/html/index.html.j2 #}
+{% extends "views/html/base.html.j2" %}
+
+{% block body %}
+    <article>
+        <section>
+            <p>
+                Welcome! I am Nicolas “Niols” Jeannerod; you are here on my
+                domain. This website aims at gathering clean descriptions of
+                Scottish country dances and tunes that would not be made easily
+                available otherwise. I give them a stable, nice, warm home. In
+                particular, it will contain all of my unpublished work. Feel free
+                to <a href="mailto:niols+scd@niols.fr">send me</a> your dances
+                and tunes, if you want them “published”.
+            </p>
+            <p>
+                The goal is <em>not</em> to provide a new database. For this, the
+                <a href="https://my.strathspey.org/dd/index/">Scottish Country
+                    Dance Database</a> does the job amazingly well. Therefore, this
+                website will probably remain with very limited indexing
+                capabilities. However, it might very well serve as source of
+                dance descriptions for the SCDDB.
+            </p>
+            <p>
+                Note that the sources of this website are available
+                <a href="https://github.com/Niols/scd.niols.fr">on GitHub</a>
+                and backed up on the
+                <a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/Niols/scd.niols.fr">
+                    Software Heritage archive</a>. The content of the website itself
+                is backed up on the
+                <a href="https://web.archive.org/web/*/https://scd.niols.fr/">
+                    Wayback Machine</a>. This makes this website <em>very</em> public
+                and <em>very</em> stable. (Which, in my opinion, are great
+                things, but heh.)
+            </p>
+            <p>
+                You can go see the <a href="dances.html">index of dances</a> or
+                the <a href="tunes.html">index of the tunes</a>. Otherwise,
+                everything is accessible directly from this page. Enjoy!
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <section>
+            <table class="datatable responsive nowrap">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Kind</th>
+                        <th>Deviser</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for slug, dance in dances.items() %}
+                        <tr>
+                            <td>
+                                <a href="dance/{{ slug }}.html">
+                                    {{ dance.name }}
+                                </a>
+                            </td>
+                            <td>Dance</td>
+                            <td>{{ dance['short-kind'] }}</td>
+                            <td>{{ common.shortAuthorOrAuthor(dance) }}</td>
+                        </tr>
+                    {% endfor %}
+
+                    {% for slug, tune in tunes.items() %}
+                        <tr>
+                            <td>
+                                <a href="tune/{{ slug }}.html">
+                                    {{ tune.name }}
+                                </a>
+                            </td>
+                            <td>Tune</td>
+                            <td>{{ tune['short-kind'] }}</td>
+                            <td>{{ common.shortAuthorOrAuthor(tune) }}</td>
+                        </tr>
+                    {% endfor %}
+
+                    {% for slug, book in books.items() %}
+                        <tr>
+                            <td>
+                                <a href="book/{{ slug }}.html">
+                                    {{ book.title }}
+                                </a>
+                            </td>
+                            <td>Book</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </section>
+    </article>
+{% endblock %}

@@ -344,13 +344,7 @@ $(website-output)/index.json: $(website-output)/all.raw.json
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/index.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/index.html.j2 $< --filters $(views)/j2filters.py > $@
 
 $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 	printf 'Making `non-scddb.json`...\n'
@@ -358,13 +352,7 @@ $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 
 $(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/non-scddb.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/non-scddb.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## All

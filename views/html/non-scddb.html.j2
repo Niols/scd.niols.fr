@@ -1,0 +1,78 @@
+{# views/html/non-sccddb.html.j2 #}
+{% extends "views/html/base.html.j2" %}
+
+{% block body %}
+    <article>
+        <section>
+            <p>
+                This table lists all the objects in <a href="index.html">this
+                collection</a> that are not linked to a page on the
+                <a href="https://my.strathspey.org/dd/index/">Scottish Country
+                    Dance Database</a>.
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <section>
+            <table class="datatable responsive nowrap">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Kind</th>
+                        <th>Deviser</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for slug, dance in dances.items() %}
+                        {% if dance['scddb-id'] is not defined %}
+                            <tr>
+                                <td>
+                                    <a href="dance/{{ slug }}.html">
+                                        {{ dance.name }}
+                                    </a>
+                                </td>
+                                <td>Dance</td>
+                                <td>{{ dance['short-kind'] }}</td>
+                                <td>{{ common.shortAuthorOrAuthor(dance) }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% for slug, tune in tunes.items() %}
+                        {% if tune['scddb-id'] is not defined %}
+                            <tr>
+                                <td>
+                                    <a href="tune/{{ slug }}.html">
+                                        {{ tune.name }}
+                                    </a>
+                                </td>
+                                <td>Tune</td>
+                                <td>{{ tune['short-kind'] }}</td>
+                                <td>{{ common.shortAuthorOrAuthor(tune) }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% for slug, book in books.items() %}
+                        {% if book['scddb-id'] is not defined %}
+                            <tr>
+                                <td>
+                                    <a href="book/{{ slug }}.html">
+                                        {{ book.title }}
+                                    </a>
+                                </td>
+                                <td>Book</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </section>
+    </article>
+{% endblock %}
