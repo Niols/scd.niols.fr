@@ -1,0 +1,85 @@
+{%- macro shortAuthorOrAuthor(tune) -%}
+    {%- if tune['short-author'] is defined -%}
+        {{ tune['short-author'] }}
+    {%- else -%}
+        {{ tune.author }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro fancyDate(tune) -%}
+    {%- if tune['date-format'] is defined -%}
+        {{ tune.date|fancyDate(tune['date-format']) }}
+    {%- else -%}
+        {{ tune.date|fancyDate }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro printDanceRef(danceRef) -%}
+    {%- if danceRef.type == "internal" -%}
+
+        <a href="../dance/{{ danceRef.slug }}.html">{#- -#}
+            <span class="dance">{{ dances[danceRef.slug].name }}</span>{#- -#}
+        </a>
+        by <span class="deviser">{{ shortAuthorOrAuthor(dances[danceRef.slug]) }}</span>
+
+    {%- else -%}
+
+        <span class="dance">{{ danceRef.name }}</span>
+        {%- if danceRef.deviser is defined -%}
+            by <span class="deviser">{{ danceRef.deviser }}</span>
+        {%- endif -%}
+        {%- if danceRef['scddb-id'] -%}
+            [<a href="https://my.strathspey.org/dd/dance/{{ danceRef['scddb-id'] }}/">
+            SCDDB</a>]
+        {%- endif -%}
+
+    {%- endif -%}
+{%- endmacro -%}
+
+<article>
+    <h1>{{ tune.name }}</h1>
+    <h2>{{ tune.kind }}</h2>
+
+    <section>
+        <p><a href="{{ slug }}.pdf">Get the score of the tune as PDF</a>.</p>
+
+        {% if tune['scddb-id'] is defined %}
+            <p><a href="https://my.strathspey.org/dd/tune/{{ tune['scddb-id'] }}/">
+                See this tune in the Scottish Country Dance Database</a>.</p>
+        {% endif %}
+    </section>
+
+    <section class="tune-preview">
+        <img src="{{ slug }}.svg" />
+    </section>
+
+    <section class="tune-description">
+        <p>{#- -#}
+            Composed by {{ tune.author }} {# space #}
+            {%- if tune.date is defined -%}
+                {{ fancyDate(tune) }}
+            {%- endif -%}. {# space #}
+            {%- if tune['editor-details'] is defined -%}
+                {{ tune['editor-details'] }}
+            {%- endif -%}
+        </p>
+        {% if tune['composer-details'] is defined %}
+            <blockquote>
+                {{ tune['composer-details'] }}
+            </blockquote>
+        {% endif %}
+
+        {% if tune.dances is defined %}
+            {% if tune.dances|length == 1 %}
+                <p>Recommended for {{ printDanceRef(tune.dances[0]) }}.</p>
+            {% else %}
+                <p>Recommended for:</p><ul>
+                    {% for danceRef in tune.dances %}
+                    <li>{{ printDanceRef(danceRef) }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
+
+    </section>
+</article>
