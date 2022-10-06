@@ -1,0 +1,15 @@
+{%- macro shortAuthorOrAuthor(tune) -%}
+    {%- if tune['short-author'] is defined -%}
+        {{ tune['short-author'] }}
+    {%- else -%}
+        {{ tune.author }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro fancyDate(tune) -%}
+    {%- if tune['date-format'] is defined -%}
+        {{ tune.date|fancyDate(tune['date-format']) }}
+    {%- else -%}
+        {{ tune.date|fancyDate }}
+    {%- endif -%}
+{%- endmacro -%}

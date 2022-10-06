@@ -1,26 +1,13 @@
-{%- macro shortAuthorOrAuthor(tune) -%}
-    {%- if tune['short-author'] is defined -%}
-        {{ tune['short-author'] }}
-    {%- else -%}
-        {{ tune.author }}
-    {%- endif -%}
-{%- endmacro -%}
+{# views/html/tune.html.j2 #}
+{% extends "views/html/base.html.j2" %}
 
-{%- macro fancyDate(tune) -%}
-    {%- if tune['date-format'] is defined -%}
-        {{ tune.date|fancyDate(tune['date-format']) }}
-    {%- else -%}
-        {{ tune.date|fancyDate }}
-    {%- endif -%}
-{%- endmacro -%}
-
-{%- macro printDanceRef(danceRef) -%}
+{% macro printDanceRef(danceRef) %}
     {%- if danceRef.type == "internal" -%}
 
         <a href="../dance/{{ danceRef.slug }}.html">{#- -#}
             <span class="dance">{{ dances[danceRef.slug].name }}</span>{#- -#}
         </a>
-        by <span class="deviser">{{ shortAuthorOrAuthor(dances[danceRef.slug]) }}</span>
+        by <span class="deviser">{{ common.shortAuthorOrAuthor(dances[danceRef.slug]) }}</span>
 
     {%- else -%}
 
@@ -34,8 +21,9 @@
         {%- endif -%}
 
     {%- endif -%}
-{%- endmacro -%}
+{% endmacro %}
 
+{% block body %}
 <article>
     <h1>{{ tune.name }}</h1>
     <h2>{{ tune.kind }}</h2>
@@ -57,7 +45,7 @@
         <p>{#- -#}
             Composed by {{ tune.author }} {# space #}
             {%- if tune.date is defined -%}
-                {{ fancyDate(tune) }}
+                {{ common.fancyDate(tune) }}
             {%- endif -%}. {# space #}
             {%- if tune['editor-details'] is defined -%}
                 {{ tune['editor-details'] }}
@@ -83,3 +71,4 @@
 
     </section>
 </article>
+{% endblock %}
