@@ -32,11 +32,9 @@
   %% ============================== [ Fonts ] =============================== %%
 
   #(define fonts
-    (make-pango-font-tree
-     "Source Sans Pro"
-     "Nimbus Sans"
-     "Luxi Mono"
-     (/ staff-height pt 20)))
+    (set-global-fonts
+     #:roman "Source Sans Pro"
+     #:sans  "Source Sans Pro"))
 
   %% ============================ [ Distances ] ============================= %%
 
