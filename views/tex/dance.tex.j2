@@ -1,0 +1,104 @@
+{# views/tex/dance.tex.j2 #}
+{%- import "views/macros.j2" as common -%}
+
+{% macro renderInstructionItem(dance, item) %}
+    {# empty line on purpose: #}
+
+    {% if item.type == "note" %}
+        Note: {{ item.content|escapeTeX }}
+
+    {% elif item.type == "kind" %}
+        {{ item.kind|escapeTeX }}
+
+    {% elif item.type == "two chords" %}
+        Two chords.
+        {% if item['couples-cross'] is defined -%}
+            On second chord, {{ item['couples-cross']|escapeTeX }} couples cross.
+        {%- endif %}
+        {% if item.custom is defined -%}
+            {{ item.custom|escapeTeX }}
+        {%- endif %}
+
+    {% elif item.type == "phrase" %}
+        \phrase{ {{- item.starts|escapeTeX -}} }{ {{- item.ends|escapeTeX -}} }{
+          {{ item.content|escapeTeX }}
+          {% if item.instructions is defined %}
+              {# empty lines on purpose: #}
+
+
+              {{ renderInstructionItemsIn(dance, item.instructions) }}
+          {% endif %}
+        }
+
+    {% elif item.type == "repeat" %}
+          {% if item.kind == "from new positions" %}
+              \repeatfromnewpos
+          {% elif item.kind == "having passed a couple" %}
+              \repeathavingpassed
+          {% elif item.kind == "custom" %}
+              {{ item.text|escapeTeX }}
+          {% else %}
+              {{ error("Unknown dance instruction repeat kind: `" ~ item.kind ~ "`") }}
+          {% endif %}
+
+    {% elif item.type == "devised by" %}
+          Devised by \deviser{ {{- dance.author|escapeTeX -}} }
+          {% if dance.date is defined -%}
+              {{ common.fancyDate(dance)|escapeTeX }}
+          {%- endif -%}
+          .
+          {% if dance['editor-details'] is defined %}
+              {{ dance['editor-details']|escapeTeX }}
+          {% endif %}
+          {% if dance['deviser-details'] is defined %}
+              {# empty lines on purpose: #}
+
+
+              {\em {{ dance['deviser-details']|escapeTeX -}} }
+          {% endif %}
+
+    {% elif item.type == "music by" %}
+          Music by \composer{ {{- item.composer|escapeTeX -}} }
+          {%- if item.tune is defined -%}
+              : \tune{ {{- item.tune|escapeTeX -}} }
+          {%- endif -%}
+          .
+          {% if item.more is defined %}
+              {{ item.more|escapeTeX }}
+          {% endif %}
+
+    {% elif item.type == "recommended tune" %}
+          Recommended tune: \tune{ {{- item.tune|escapeTeX -}} }
+          {%- if item.composer is defined -%}
+              , by \composer{ {{- item.composer|escapeTeX -}} }
+          {%- endif -%}
+          .
+          {% if item.more is defined %}
+              {{ item.more|escapeTeX }}
+          {% endif %}
+
+    {% else %}
+          {{ error("Unknown dance instruction item type: `" ~ item.type ~ "`") }}
+    {% endif %}
+    {# empty line on purpose: #}
+
+{% endmacro %}
+
+{% macro renderInstructionItemsIn(dance, items) %}
+    {% for item in items %}
+        {{ renderInstructionItem(dance, item) }}
+    {% endfor %}
+{% endmacro %}
+
+\begin{document}
+  \begin{dance}
+    { {{- dance.name|escapeTeX -}} }
+    { {{- dance['short-kind']|escapeTeX -}} }
+    { {{- dance.kind|escapeTeX -}} }
+
+  {% if dance.instructions is defined %}
+    {{ renderInstructionItemsIn(dance, dance.instructions) }}
+  {% endif %}
+
+  \end{dance}
+\end{document}

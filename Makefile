@@ -127,12 +127,10 @@ $(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-out
 ##
 $(website-output)/dance/%.tex: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.tex`...\n' $*
-	$(shtpen) \
-	  --escape tex \
-	  --json $< \
-	  --raw  $(views)/tex/preamble.tex \
-	  --shtp $(views)/tex/dance.tex.shtp \
-	  > $@
+	{
+	  cat $(views)/tex/preamble.tex
+	  j2 $(views)/tex/dance.tex.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a PDF file out of a dance TeX file.
 ##

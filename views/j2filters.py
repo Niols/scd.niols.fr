@@ -21,3 +21,26 @@ def fancyDate(date, dateFmt="%at-date%"):
             day = int(components[2])
             atDate = "on {} {} {}".format(day, month, year)
     return dateFmt.replace("%year%", year).replace("%at-date%", atDate)
+
+def escapeTeX(s):
+    return str(s).replace(
+        "\\", "\\textbackslash{}"
+    ).replace(
+        "&", "\\&"
+    ).replace(
+        "~", "\\textasciitilde{}"
+    ).replace(
+        "^", "\\textasciicircum{}"
+    ).replace(
+        "%", "\\%"
+    ).replace(
+        "$", "\\$"
+    ).replace(
+        "#", "\\#"
+    ).replace(
+        "_", "\\_"
+    ).replace(
+        "{", "\\{"
+    ).replace(
+        "}", "\\}"
+    )
