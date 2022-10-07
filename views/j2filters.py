@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+def error(message):
+    raise Exception(message)
+
 def fancyDate(date, dateFmt="%at-date%"):
     months = ["", "January", "February", "March", "April", "May", "June",
               "July", "August", "September", "October", "November", "December"]

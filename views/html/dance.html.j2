@@ -74,7 +74,7 @@
             {% endif %}
         </div>
 
-    {% else %}{# FIXME: check that item.type == "recommended tune" #}
+    {% elif item.type == "recommended tune" %}
         <div class="music-by">
             Recommended tune: <span class="tune">{{ item.tune }}</span>
             {%- if item.composer is defined -%}
@@ -85,6 +85,9 @@
                 {{ item.more }}
             {% endif %}
         </div>
+
+    {% else %}
+        {{ error("Unexpected item type: " ~ item.type) }}
     {% endif %}
     {# empty line on purpose: #}
 
