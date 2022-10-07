@@ -1,3 +1,7 @@
+{%- macro error(message) -%}
+    {{ message|error }}
+{%- endmacro -%}
+
 {%- macro shortAuthorOrAuthor(tune) -%}
     {%- if tune['short-author'] is defined -%}
         {{ tune['short-author'] }}

@@ -47,7 +47,7 @@
                                 </tr>
 
                             {% else %}
-                                {{ error("Unexpected item type: " ~ item.type) }}
+                                {{ common.error("Unexpected item type: `" ~ item.type ~ "`") }}
                             {% endif %}
                         {% endfor %}
 

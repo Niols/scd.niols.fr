@@ -43,7 +43,7 @@
             {% elif item.kind == "custom" %}
                 {{ kind.text }}
             {% else %}
-                {{ error("Unexpected item kind: " ~ item.kind) }}
+                {{ common.error("Unexpected item kind: `" ~ item.kind ~ "`") }}
             {% endif %}
         </div>
 
@@ -89,7 +89,7 @@
         </div>
 
     {% else %}
-        {{ error("Unexpected item type: " ~ item.type) }}
+        {{ common.error("Unexpected item type: `" ~ item.type ~ "`") }}
     {% endif %}
     {# empty line on purpose: #}
 
