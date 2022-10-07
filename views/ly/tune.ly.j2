@@ -1,0 +1,19 @@
+{# views/ly/tune.ly.j2 #}
+
+\score {
+  \header {
+    title = "{{ tune.name }}" {# FIXME: LilyPond escape #}
+    composer = "{{ tune.author }}" {# FIXME: LilyPond escape #}
+    kind = "{{ tune.kind }}" {# FIXME: LilyPond escape #}
+  }
+
+  {# NOTE: Not escaped, on purpose. #}
+  {{ tune.content }}
+}
+
+\noPageBreak
+{% if tune.date is defined %}
+  \markup { \copyright #{{ tune.date|dateYear }} "{{ tune.author }}" } {# FIXME: LilyPond escape #}
+{% else %}
+  \markup { \copyrightNoYear "{{ tune.author }}" } {# FIXME: LilyPond escape #}
+{% endif %}

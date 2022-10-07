@@ -198,16 +198,15 @@ $(website-output)/tune/%.json: $(website-output)/tune/%.raw.json $(website-outpu
 ##
 $(website-output)/tune/%.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.ly`...\n' $*
-	$(shtpen) \
-	  --json $< \
-	  --raw  $(views)/ly/version.ly \
-	  --raw  $(views)/ly/repeat-aware.ly \
-	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
-	  --raw  $(views)/ly/beginning-of-line.ly \
-	  --raw  $(views)/ly/repeat-volta-fancy.ly \
-	  --raw  $(views)/ly/preamble.ly \
-	  --shtp $(views)/ly/tune.ly.shtp \
-	  > $@
+	{
+	  cat $(views)/ly/version.ly
+	  cat $(views)/ly/repeat-aware.ly
+	  cat $(views)/ly/bar-number-in-instrument-name-engraver.ly
+	  cat $(views)/ly/beginning-of-line.ly
+	  cat $(views)/ly/repeat-volta-fancy.ly
+	  cat $(views)/ly/preamble.ly
+	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a PDF file out of a tune LilyPond file.
 ##
@@ -220,17 +219,16 @@ $(website-output)/tune/%.pdf: $(website-output)/tune/%.ly
 ##
 $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.short.ly`...\n' $*
-	$(shtpen) \
-	  --json $< \
-	  --raw  $(views)/ly/version.ly \
-	  --raw  $(views)/ly/repeat-aware.ly \
-	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
-	  --raw  $(views)/ly/beginning-of-line.ly \
-	  --raw  $(views)/ly/repeat-volta-fancy.ly \
-	  --raw  $(views)/ly/preamble.ly \
-	  --raw  $(views)/ly/preamble.short.ly \
-	  --shtp $(views)/ly/tune.ly.shtp \
-	  > $@
+	{
+	  cat $(views)/ly/version.ly
+	  cat $(views)/ly/repeat-aware.ly
+	  cat $(views)/ly/bar-number-in-instrument-name-engraver.ly
+	  cat $(views)/ly/beginning-of-line.ly
+	  cat $(views)/ly/repeat-volta-fancy.ly
+	  cat $(views)/ly/preamble.ly
+	  cat $(views)/ly/preamble.short.ly
+	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a SVG file out of a tune short LilyPond file.
 $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly

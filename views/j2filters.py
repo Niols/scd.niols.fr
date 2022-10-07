@@ -3,6 +3,9 @@
 def error(message):
     raise Exception(message)
 
+def dateYear(date):
+    return date.split("-")[0]
+
 def fancyDate(date, dateFmt="%at-date%"):
     months = ["", "January", "February", "March", "April", "May", "June",
               "July", "August", "September", "October", "November", "December"]
