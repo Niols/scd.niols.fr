@@ -154,13 +154,7 @@ $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 ##
 $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.html`...\n' $*
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/dance.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/dance.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of dances
