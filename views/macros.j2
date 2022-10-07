@@ -1,0 +1,64 @@
+{%- macro error(message) -%}
+    {{ message|error }}
+{%- endmacro -%}
+
+{%- macro shortAuthorOrAuthor(tune) -%}
+    {%- if tune['short-author'] is defined -%}
+        {{ tune['short-author'] }}
+    {%- else -%}
+        {{ tune.author }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro fancyDate(tune) -%}
+    {%- if tune['date-format'] is defined -%}
+        {{ tune.date|fancyDate(tune['date-format']) }}
+    {%- else -%}
+        {{ tune.date|fancyDate }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro danceRow(slug, dance, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="dance/{{ slug }}.html">{# no space -#}
+                {{ dance.name }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Dance</td>
+        {%- endif -%}
+        <td>{{ dance['short-kind'] }}</td>
+        <td>{{ shortAuthorOrAuthor(dance) }}</td>
+    </tr>
+{%- endmacro -%}
+
+{%- macro tuneRow(slug, tune, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="tune/{{ slug }}.html">{# no space -#}
+                {{ tune.name }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Tune</td>
+        {%- endif -%}
+        <td>{{ tune['short-kind'] }}</td>
+        <td>{{ shortAuthorOrAuthor(tune) }}</td>
+    </tr>
+{%- endmacro -%}
+
+{%- macro bookRow(slug, book, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="book/{{ slug }}.html">{# no space -#}
+                {{ book.title }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Book</td>
+            <td></td>
+            <td></td>
+        {%- endif %}
+    </tr>
+{%- endmacro -%}

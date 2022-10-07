@@ -1,0 +1,26 @@
+{# views/html/dances.html.j2 #}
+{% extends "views/html/base.html.j2" %}
+
+{% block body %}
+    <article>
+        <h1>All Dances</h1>
+        <section>
+            <table class="datatable responsive nowrap">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Kind</th>
+                        <th>Deviser</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for slug, dance in dances.items() -%}
+                        {{ common.danceRow(slug, dance, false) }}
+                    {%- endfor %}
+
+                </tbody>
+            </table>
+        </section>
+    </article>
+{% endblock %}

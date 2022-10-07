@@ -1,0 +1,59 @@
+{# views/html/book.html.j2 #}
+{% extends "views/html/base.html.j2" %}
+
+{% block body %}
+    <article>
+        <h1>{{ book.title }}</h1>
+        <h2>{{ book.summary }}</h2>
+
+        {% if book['scddb-id'] is defined %}
+            <section>
+                <p><a href="https://my.strathspey.org/dd/publication/{{ book['scddb-id'] }}/">
+                    See this book in the Scottish Country Dance Database</a>.</p>
+            </section>
+        {% endif %}
+
+        {% if book.contents is defined %}
+            <section>
+                <table class='datatable responsive nowrap' data-order='[[1, "asc"]]'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>#</th>
+                            <th>Type</th>
+                            <th>Kind</th>
+                            <th>Deviser</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for item in book.contents %}
+                            {% if item.type == "dance" %}
+                                <tr>
+                                    <td><a href="../dance/{{ item.slug }}.html">{{ dances[item.slug].name }}</a></td>
+                                    <td>{{ loop.index }}</td>
+                                    <td>Dance</td>
+                                    <td>{{ dances[item.slug]['short-kind'] }}</td>
+                                    <td>{{ common.shortAuthorOrAuthor(dances[item.slug]) }}</td>
+                                </tr>
+
+                            {% elif item.type == "tune" %}
+                                <tr>
+                                    <td><a href="../tune/{{ item.slug }}.html">{{ tunes[item.slug] }}</a></td>
+                                    <td>{{ loop.index }}</td>
+                                    <td>Tune</td>
+                                    <td>{{ tunes[item.slug]['short-kind'] }}</td>
+                                    <td>{{ common.shortAuthorOrAuthor(tunes[item.slug]) }}</td>
+                                </tr>
+
+                            {% else %}
+                                {{ common.error("Unexpected item type: `" ~ item.type ~ "`") }}
+                            {% endif %}
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </section>
+        {% endif %}
+    </article>
+{% endblock %}

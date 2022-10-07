@@ -2,6 +2,8 @@
 
 ## Project-specific
 /_build
+/*.log
+__pycache__
 
 ## Emacs
 *~
@@ -12,6 +14,3 @@
 /result
 /.envrc
 /.direnv
-
-## Selenium
-/*.log

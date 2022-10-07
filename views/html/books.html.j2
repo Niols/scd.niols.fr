@@ -1,0 +1,24 @@
+{# views/html/books.html.j2 #}
+{% extends "views/html/base.html.j2" %}
+
+{% block body %}
+    <article>
+        <h1>All Books</h1>
+        <section>
+            <table class="datatable responsive nowrap">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for slug, book in books.items() %}
+                        {{ common.bookRow(slug, book, false) }}
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </section>
+    </article>
+{% endblock %}

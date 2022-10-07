@@ -85,6 +85,7 @@ p, blockquote {
     }
 
     blockquote {
+        margin-top: 1.5rem; //same as margin-top for `> *`
         font-style: italic;
     }
 }

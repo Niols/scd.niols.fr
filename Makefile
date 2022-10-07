@@ -42,7 +42,6 @@ views := ./views
 tests := ./tests
 
 ## Where to find some utilities.
-shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
 inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
@@ -127,12 +126,10 @@ $(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-out
 ##
 $(website-output)/dance/%.tex: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.tex`...\n' $*
-	$(shtpen) \
-	  --escape tex \
-	  --json $< \
-	  --raw  $(views)/tex/preamble.tex \
-	  --shtp $(views)/tex/dance.tex.shtp \
-	  > $@
+	{
+	  cat $(views)/tex/preamble.tex
+	  j2 $(views)/tex/dance.tex.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a PDF file out of a dance TeX file.
 ##
@@ -154,13 +151,7 @@ $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 ##
 $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.html`...\n' $*
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/dance.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/dance.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of dances
@@ -170,7 +161,7 @@ $(website-output)/dances.raw.json: $(addsuffix .raw.json, $(built_dances))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:.}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built dances.)\n'
+	  printf '  => trivial file because no built dances\n'
 	  jq -n '{dances:[]}' > $@
 	fi
 
@@ -180,13 +171,7 @@ $(website-output)/dances.json: $(website-output)/dances.raw.json
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/dances.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/dances.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual tunes
@@ -210,16 +195,15 @@ $(website-output)/tune/%.json: $(website-output)/tune/%.raw.json $(website-outpu
 ##
 $(website-output)/tune/%.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.ly`...\n' $*
-	$(shtpen) \
-	  --json $< \
-	  --raw  $(views)/ly/version.ly \
-	  --raw  $(views)/ly/repeat-aware.ly \
-	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
-	  --raw  $(views)/ly/beginning-of-line.ly \
-	  --raw  $(views)/ly/repeat-volta-fancy.ly \
-	  --raw  $(views)/ly/preamble.ly \
-	  --shtp $(views)/ly/tune.ly.shtp \
-	  > $@
+	{
+	  cat $(views)/ly/version.ly
+	  cat $(views)/ly/repeat-aware.ly
+	  cat $(views)/ly/bar-number-in-instrument-name-engraver.ly
+	  cat $(views)/ly/beginning-of-line.ly
+	  cat $(views)/ly/repeat-volta-fancy.ly
+	  cat $(views)/ly/preamble.ly
+	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a PDF file out of a tune LilyPond file.
 ##
@@ -232,17 +216,16 @@ $(website-output)/tune/%.pdf: $(website-output)/tune/%.ly
 ##
 $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.short.ly`...\n' $*
-	$(shtpen) \
-	  --json $< \
-	  --raw  $(views)/ly/version.ly \
-	  --raw  $(views)/ly/repeat-aware.ly \
-	  --raw  $(views)/ly/bar-number-in-instrument-name-engraver.ly \
-	  --raw  $(views)/ly/beginning-of-line.ly \
-	  --raw  $(views)/ly/repeat-volta-fancy.ly \
-	  --raw  $(views)/ly/preamble.ly \
-	  --raw  $(views)/ly/preamble.short.ly \
-	  --shtp $(views)/ly/tune.ly.shtp \
-	  > $@
+	{
+	  cat $(views)/ly/version.ly
+	  cat $(views)/ly/repeat-aware.ly
+	  cat $(views)/ly/bar-number-in-instrument-name-engraver.ly
+	  cat $(views)/ly/beginning-of-line.ly
+	  cat $(views)/ly/repeat-volta-fancy.ly
+	  cat $(views)/ly/preamble.ly
+	  cat $(views)/ly/preamble.short.ly
+	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	} > $@
 
 ## Generate a SVG file out of a tune short LilyPond file.
 $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
@@ -257,13 +240,7 @@ $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 ##
 $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.html`...\n' $*
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/tune.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/tune.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of tunes
@@ -273,7 +250,7 @@ $(website-output)/tunes.raw.json: $(addsuffix .raw.json, $(built_tunes))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built tunes.)\n'
+	  printf '  => trivial file because no built tunes\n'
 	  jq -n '{tunes:[], root:"."}' > $@
 	fi
 
@@ -283,13 +260,7 @@ $(website-output)/tunes.json: $(website-output)/tunes.raw.json
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/tunes.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/tunes.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual books
@@ -312,15 +283,8 @@ $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-outpu
 ## Generate a HTML file out of a book JSON file.
 ##
 $(website-output)/book/%.html: $(website-output)/book/%.json
-	printf 'Making `book/%s.html`... ' $*
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/book.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
-	printf 'done.\n'
+	printf 'Making `book/%s.html`...\n' $*
+	j2 $(views)/html/book.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of books
@@ -330,8 +294,8 @@ $(website-output)/books.raw.json: $(addsuffix .raw.json, $(built_books))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.book)}) | .+[{}] | add | {books:.}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built books.)\n'
-	  jq -n '{books:[]}' > $@
+	  printf '  => trivial file because no built books\n'
+	  jq -n '{books:{}}' > $@
 	fi
 
 $(website-output)/books.json: $(website-output)/books.raw.json
@@ -339,15 +303,8 @@ $(website-output)/books.json: $(website-output)/books.raw.json
 	cat $< | jq '. + {root:"."}' > $@
 
 $(website-output)/books.html: $(website-output)/books.json
-	printf 'Making `books.html`... '
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/books.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
-	printf 'done.\n'
+	printf 'Making `books.html`...\n'
+	j2 $(views)/html/books.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index &
@@ -362,13 +319,7 @@ $(website-output)/index.json: $(website-output)/all.raw.json
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/index.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/index.html.j2 $< --filters $(views)/j2filters.py > $@
 
 $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 	printf 'Making `non-scddb.json`...\n'
@@ -376,13 +327,7 @@ $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 
 $(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/header.html.shtp \
-	  --shtp $(views)/html/non-scddb.html.shtp \
-	  --shtp $(views)/html/footer.html.shtp \
-	  > $@
+	j2 $(views)/html/non-scddb.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## All

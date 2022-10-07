@@ -15,6 +15,7 @@
 
         websiteBuildInputs = [
           pkgs.inkscape
+          pkgs.j2cli
           pkgs.jq
           pkgs.lilypond
           pkgs.sassc
