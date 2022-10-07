@@ -28,3 +28,18 @@
         <td>{{ shortAuthorOrAuthor(dance) }}</td>
     </tr>
 {%- endmacro -%}
+
+{%- macro tuneRow(slug, tune, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="tune/{{ slug }}.html">{# no space -#}
+                {{ tune.name }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Tune</td>
+        {%- endif -%}
+        <td>{{ tune['short-kind'] }}</td>
+        <td>{{ shortAuthorOrAuthor(tune) }}</td>
+    </tr>
+{%- endmacro -%}

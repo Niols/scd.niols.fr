@@ -58,18 +58,9 @@
                         {{ common.danceRow(slug, dance, true) }}
                     {%- endfor %}
 
-                    {% for slug, tune in tunes.items() %}
-                        <tr>
-                            <td>{# no space -#}
-                                <a href="tune/{{ slug }}.html">{# no space -#}
-                                    {{ tune.name }}{# no space -#}
-                                </a>{# no space -#}
-                            </td>
-                            <td>Tune</td>
-                            <td>{{ tune['short-kind'] }}</td>
-                            <td>{{ common.shortAuthorOrAuthor(tune) }}</td>
-                        </tr>
-                    {% endfor %}
+                    {% for slug, tune in tunes.items() -%}
+                        {{ common.tuneRow(slug, tune, true) }}
+                    {%- endfor %}
 
                     {% for slug, book in books.items() %}
                         <tr>

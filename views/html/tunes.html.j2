@@ -15,17 +15,9 @@
                 </thead>
                 <tbody>
 
-                    {% for slug, tune in tunes.items() %}
-                        <tr>
-                            <td>
-                                <a href="tune/{{ slug }}.html">
-                                    {{ tune.name }}
-                                </a>
-                            </td>
-                            <td>{{ tune['short-kind'] }}</td>
-                            <td>{{ common.shortAuthorOrAuthor(tune) }}</td>
-                        </tr>
-                    {% endfor %}
+                    {% for slug, tune in tunes.items() -%}
+                        {{ common.tuneRow(slug, tune, false) }}
+                    {%- endfor %}
 
                 </tbody>
             </table>

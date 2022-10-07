@@ -32,20 +32,11 @@
                         {% endif %}
                     {% endfor %}
 
-                    {% for slug, tune in tunes.items() %}
+                    {% for slug, tune in tunes.items() -%}
                         {% if tune['scddb-id'] is not defined %}
-                            <tr>
-                                <td>{# no space -#}
-                                    <a href="tune/{{ slug }}.html">{# no space -#}
-                                        {{ tune.name }}{# no space -#}
-                                    </a>{# no space -#}
-                                </td>
-                                <td>Tune</td>
-                                <td>{{ tune['short-kind'] }}</td>
-                                <td>{{ common.shortAuthorOrAuthor(tune) }}</td>
-                            </tr>
+                            {{ common.tuneRow(slug, tune, true) }}
                         {% endif %}
-                    {% endfor %}
+                    {%- endfor %}
 
                     {% for slug, book in books.items() %}
                         {% if book['scddb-id'] is not defined %}
