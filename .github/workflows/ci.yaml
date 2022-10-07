@@ -57,6 +57,10 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v17
 
+      - name: Install Nix Dependencies
+        run: |
+          nix develop --command true
+
       - name: Build Website
         run: |
           nix develop --command make website
@@ -135,6 +139,10 @@ jobs:
 
       - name: Install Nix
         uses: cachix/install-nix-action@v17
+
+      - name: Install Nix Dependencies
+        run: |
+          nix develop --command true
 
       - name: Build Test Website
         run: |
