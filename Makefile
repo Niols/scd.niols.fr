@@ -42,7 +42,6 @@ views := ./views
 tests := ./tests
 
 ## Where to find some utilities.
-shtpen := ./shtpen/shtpen
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
 inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
