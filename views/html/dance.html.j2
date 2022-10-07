@@ -29,7 +29,7 @@
                 {% if item.instructions is defined %}
                     {# empty line on purpose: #}
 
-                    {{ renderInstructionItemsIn(dance, instructions) }}
+                    {{ renderInstructionItemsIn(dance, item.instructions) }}
                 {% endif %}
             </div>
         </div>
@@ -41,7 +41,7 @@
             {% elif item.kind == "having passed a couple" %}
                 Repeat, having passed a couple.
             {% elif item.kind == "custom" %}
-                {{ kind.text }}
+                {{ item.text }}
             {% else %}
                 {{ common.error("Unexpected item kind: `" ~ item.kind ~ "`") }}
             {% endif %}
