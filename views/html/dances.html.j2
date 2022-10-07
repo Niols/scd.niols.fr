@@ -15,17 +15,9 @@
                 </thead>
                 <tbody>
 
-                    {% for slug, dance in dances.items() %}
-                        <tr>
-                            <td>
-                                <a href="dance/{{ slug }}.html">
-                                    {{ dance.name }}
-                                </a>
-                            </td>
-                            <td>{{ dance['short-kind'] }}</td>
-                            <td>{{ common.shortAuthorOrAuthor(dance) }}</td>
-                        </tr>
-                    {% endfor %}
+                    {% for slug, dance in dances.items() -%}
+                        {{ common.danceRow(slug, dance, false) }}
+                    {%- endfor %}
 
                 </tbody>
             </table>
