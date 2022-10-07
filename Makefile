@@ -295,13 +295,7 @@ $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-outpu
 ##
 $(website-output)/book/%.html: $(website-output)/book/%.json
 	printf 'Making `book/%s.html`...\n' $*
-	j2 $(views)/html/header.html.j2 $< > $@
-	$(shtpen) \
-	  --escape html \
-	  --json $< \
-	  --shtp $(views)/html/book.html.shtp \
-	  >> $@
-	j2 $(views)/html/footer.html.j2 $< >> $@
+	j2 $(views)/html/book.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of books
