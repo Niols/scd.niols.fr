@@ -55,12 +55,12 @@
             {% if dance['editor-details'] is defined %}
                 {{  dance['editor-details'] }}
             {% endif %}
-        </div>{# FIXME: this </div> should probably move down #}
-        {% if dance['deviser-details'] is defined %}
-            <blockquote>
-                {{ dance['deviser-details'] }}
-            </blockquote>
-        {% endif %}
+            {% if dance['deviser-details'] is defined %}
+                <blockquote>
+                    {{ dance['deviser-details'] }}
+                </blockquote>
+            {% endif %}
+        </div>
 
     {% elif item.type == "music by" %}
         <div class="music-by">
