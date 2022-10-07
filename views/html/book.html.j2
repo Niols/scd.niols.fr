@@ -37,7 +37,7 @@
                                     <td>{{ common.shortAuthorOrAuthor(dances[item.slug]) }}</td>
                                 </tr>
 
-                            {% else %}{# FIXME: check that item.type == "tune" #}
+                            {% elif item.type == "tune" %}
                                 <tr>
                                     <td><a href="../tune/{{ item.slug }}.html">{{ tunes[item.slug] }}</a></td>
                                     <td>{{ loop.index }}</td>
@@ -45,6 +45,9 @@
                                     <td>{{ tunes[item.slug]['short-kind'] }}</td>
                                     <td>{{ common.shortAuthorOrAuthor(tunes[item.slug]) }}</td>
                                 </tr>
+
+                            {% else %}
+                                {{ error("Unexpected item type: " ~ item.type) }}
                             {% endif %}
                         {% endfor %}
 

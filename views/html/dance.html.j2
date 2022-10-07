@@ -40,8 +40,10 @@
                 Repeat from new positions.
             {% elif item.kind == "having passed a couple" %}
                 Repeat, having passed a couple.
-            {% else %}{# FIXME: check that item.kind == "custom" #}
+            {% elif item.kind == "custom" %}
                 {{ kind.text }}
+            {% else %}
+                {{ error("Unexpected item kind: " ~ item.kind) }}
             {% endif %}
         </div>
 
