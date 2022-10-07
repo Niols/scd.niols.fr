@@ -13,3 +13,18 @@
         {{ tune.date|fancyDate }}
     {%- endif -%}
 {%- endmacro -%}
+
+{%- macro danceRow(slug, dance, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="dance/{{ slug }}.html">{# no space -#}
+                {{ dance.name }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Dance</td>
+        {%- endif -%}
+        <td>{{ dance['short-kind'] }}</td>
+        <td>{{ shortAuthorOrAuthor(dance) }}</td>
+    </tr>
+{%- endmacro -%}

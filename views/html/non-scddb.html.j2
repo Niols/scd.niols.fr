@@ -28,26 +28,17 @@
 
                     {% for slug, dance in dances.items() %}
                         {% if dance['scddb-id'] is not defined %}
-                            <tr>
-                                <td>
-                                    <a href="dance/{{ slug }}.html">
-                                        {{ dance.name }}
-                                    </a>
-                                </td>
-                                <td>Dance</td>
-                                <td>{{ dance['short-kind'] }}</td>
-                                <td>{{ common.shortAuthorOrAuthor(dance) }}</td>
-                            </tr>
+                            {{ common.danceRow(slug, dance, true) }}
                         {% endif %}
                     {% endfor %}
 
                     {% for slug, tune in tunes.items() %}
                         {% if tune['scddb-id'] is not defined %}
                             <tr>
-                                <td>
-                                    <a href="tune/{{ slug }}.html">
-                                        {{ tune.name }}
-                                    </a>
+                                <td>{# no space -#}
+                                    <a href="tune/{{ slug }}.html">{# no space -#}
+                                        {{ tune.name }}{# no space -#}
+                                    </a>{# no space -#}
                                 </td>
                                 <td>Tune</td>
                                 <td>{{ tune['short-kind'] }}</td>
@@ -59,10 +50,10 @@
                     {% for slug, book in books.items() %}
                         {% if book['scddb-id'] is not defined %}
                             <tr>
-                                <td>
-                                    <a href="book/{{ slug }}.html">
-                                        {{ book.title }}
-                                    </a>
+                                <td>{# no space -#}
+                                    <a href="book/{{ slug }}.html">{# no space -#}
+                                        {{ book.title }}{# no space -#}
+                                    </a>{# no space -#}
                                 </td>
                                 <td>Book</td>
                                 <td></td>
