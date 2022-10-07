@@ -170,7 +170,7 @@ $(website-output)/dances.raw.json: $(addsuffix .raw.json, $(built_dances))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:.}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built dances.)\n'
+	  printf '  => trivial file because no built dances\n'
 	  jq -n '{dances:[]}' > $@
 	fi
 
@@ -261,7 +261,7 @@ $(website-output)/tunes.raw.json: $(addsuffix .raw.json, $(built_tunes))
 	if [ -n '$^' ]; then
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	else
-	  printf '(Generating trivial file because there are no built tunes.)\n'
+	  printf '  => trivial file because no built tunes\n'
 	  jq -n '{tunes:[], root:"."}' > $@
 	fi
 
