@@ -63,16 +63,7 @@
                     {%- endfor %}
 
                     {% for slug, book in books.items() %}
-                        <tr>
-                            <td>{# no space -#}
-                                <a href="book/{{ slug }}.html">{# no space -#}
-                                    {{ book.title }}{# no space -#}
-                                </a>{# no space -#}
-                            </td>
-                            <td>Book</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        {{ common.bookRow(slug, book, true) }}
                     {% endfor %}
 
                 </tbody>

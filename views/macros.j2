@@ -43,3 +43,18 @@
         <td>{{ shortAuthorOrAuthor(tune) }}</td>
     </tr>
 {%- endmacro -%}
+
+{%- macro bookRow(slug, book, global=false) -%}
+    <tr>
+        <td>{# no space -#}
+            <a href="book/{{ slug }}.html">{# no space -#}
+                {{ book.title }}{# no space -#}
+            </a>{# no space -#}
+        </td>
+        {%- if global -%}
+            <td>Book</td>
+            <td></td>
+            <td></td>
+        {%- endif %}
+    </tr>
+{%- endmacro -%}
