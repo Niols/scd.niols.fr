@@ -198,39 +198,38 @@ jobs:
           cname: scd.niols.fr
 
   ############################################################################
-  ## Publish Dev Website
+  ## Build Dev Website
 
-  publish-dev-website:
+  build-dev-website:
     runs-on: ubuntu-latest
     needs:
-      - build-website
       - build-documentation
       - test-website
 
-    ## NOTE: We publish even if one of the previous steps failed; hopefully,
-    ## publishing it will then give more debug information. We do not do the
-    ## same for the actual website.
+    ## NOTE: We build even if one of the previous steps failed.
     if: always()
 
     steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
 
-      - name: Download Website from Artifacts
-        if: needs.build-website.result == 'success'
-        uses: actions/download-artifact@v3.0.0
-        with:
-          name: website
-          path: ./website
+      - name: Install Nix
+        uses: cachix/install-nix-action@v17
 
-      - name: Create Website Root if Building Website Failed
-        if: needs.build-website.result != 'success'
-        run: mkdir ./website
+      - name: Install Nix Dependencies
+        run: |
+          nix develop --command true
+
+      - name: Build Website
+        run: |
+          nix develop --command make website devbanner=true pull_request=0
 
       - name: Download Documentation from Artifacts
         if: needs.build-documentation.result == 'success'
         uses: actions/download-artifact@v3.0.0
         with:
           name: documentation
-          path: ./website/_doc/
+          path: ./_build/website/_doc/
 
       - name: Download Tests from Artifacts
         ## NOTE: No need to check for success, because the tests upload their
@@ -238,7 +237,29 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           name: tests
-          path: ./website/_tests/
+          path: ./_build/website/_tests/
+
+      - name: Upload Dev Website as Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: dev-website
+          path: _build/website
+
+  ############################################################################
+  ## Publish Dev Website
+
+  publish-dev-website:
+    runs-on: ubuntu-latest
+    needs:
+      - build-dev-website
+
+    steps:
+
+      - name: Download Dev Website from Artifacts
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: dev-website
+          path: ./dev-website
 
       - name: Prepare Metadata for Publishing the Dev Website
         run: |
@@ -261,7 +282,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           ## Publish `./website` with following commit message...
-          publish_dir: ./website
+          publish_dir: ./dev-website
           full_commit_message: ${{ env.commit_message }}
           ## ...to https://github.com/Niols/dev.scd.niols.fr on branch `pages`
           ## with the right access token...
@@ -286,6 +307,7 @@ jobs:
       - comment-on-pull-request
       - build-website
       - build-documentation
+      - build-dev-website
       - test-schemas
       - test-website
       - publish-website
