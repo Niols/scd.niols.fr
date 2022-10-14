@@ -6,19 +6,21 @@ body {
 
 * { max-width: 100%; }
 
-header, footer {
-    background: whitesmoke;
+header, footer, #devbanner {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+header, footer { background: whitesmoke; }
+#devbanner { background: crimson; }
 
 article, section {
     margin: auto;
     width: 1000px;
 }
 
-header { margin-bottom: 2rem; }
+header, #devbanner { margin-bottom: 2rem; }
 article { margin-top: 3rem; }
 section { margin-top: 2rem; }
 footer { margin-top: 2rem; }

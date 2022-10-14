@@ -36,6 +36,14 @@
         </script>
     </head>
     <body>
+        {% if env.devbanner is defined and env.devbanner == 'true' %}
+            <div id="devbanner">
+                This is the development version of <a href="http://scd.niols.fr/">http://scd.niols.fr/</a>.<br/>
+                Please refer to <a href="https://github.com/Niols/scd.niols.fr/pull/{{ env.pull_request }}">pull request #{{ env.pull_request }}</a>.
+                {# You may want to access <a href="{{ root }}/_doc">the documentation</a> or <a href="{{ root }}/_tests">the tests</a>. #}
+            </div>
+        {% endif %}
+
         <header>
             <h1><a href="{{ root }}/index.html">Niols’s Collection of
                 (Mostly Unpublished) Scottish Country Dances</a></h1>

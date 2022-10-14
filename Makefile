@@ -42,6 +42,7 @@ views := ./views
 tests := ./tests
 
 ## Where to find some utilities.
+j2 := j2 --import-env env
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
 inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
@@ -128,7 +129,7 @@ $(website-output)/dance/%.tex: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.tex`...\n' $*
 	{
 	  cat $(views)/tex/preamble.tex
-	  j2 $(views)/tex/dance.tex.j2 $< --filters $(views)/j2filters.py
+	  $(j2) $(views)/tex/dance.tex.j2 $< --filters $(views)/j2filters.py
 	} > $@
 
 ## Generate a PDF file out of a dance TeX file.
@@ -151,7 +152,7 @@ $(website-output)/dance/%.pdf: $(website-output)/dance/%.tex
 ##
 $(website-output)/dance/%.html: $(website-output)/dance/%.json
 	printf 'Making `dance/%s.html`...\n' $*
-	j2 $(views)/html/dance.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/dance.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of dances
@@ -171,7 +172,7 @@ $(website-output)/dances.json: $(website-output)/dances.raw.json
 
 $(website-output)/dances.html: $(website-output)/dances.json
 	printf 'Making `dances.html`...\n'
-	j2 $(views)/html/dances.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/dances.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual tunes
@@ -202,7 +203,7 @@ $(website-output)/tune/%.ly: $(website-output)/tune/%.json
 	  cat $(views)/ly/beginning-of-line.ly
 	  cat $(views)/ly/repeat-volta-fancy.ly
 	  cat $(views)/ly/preamble.ly
-	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	  $(j2) $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
 	} > $@
 
 ## Generate a PDF file out of a tune LilyPond file.
@@ -224,7 +225,7 @@ $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	  cat $(views)/ly/repeat-volta-fancy.ly
 	  cat $(views)/ly/preamble.ly
 	  cat $(views)/ly/preamble.short.ly
-	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
+	  $(j2) $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
 	} > $@
 
 ## Generate a SVG file out of a tune short LilyPond file.
@@ -240,7 +241,7 @@ $(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
 ##
 $(website-output)/tune/%.html: $(website-output)/tune/%.json
 	printf 'Making `tune/%s.html`...\n' $*
-	j2 $(views)/html/tune.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/tune.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of tunes
@@ -260,7 +261,7 @@ $(website-output)/tunes.json: $(website-output)/tunes.raw.json
 
 $(website-output)/tunes.html: $(website-output)/tunes.json
 	printf 'Making `tunes.html`...\n'
-	j2 $(views)/html/tunes.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/tunes.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Individual books
@@ -284,7 +285,7 @@ $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-outpu
 ##
 $(website-output)/book/%.html: $(website-output)/book/%.json
 	printf 'Making `book/%s.html`...\n' $*
-	j2 $(views)/html/book.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/book.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index of books
@@ -304,7 +305,7 @@ $(website-output)/books.json: $(website-output)/books.raw.json
 
 $(website-output)/books.html: $(website-output)/books.json
 	printf 'Making `books.html`...\n'
-	j2 $(views)/html/books.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/books.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## Index &
@@ -319,7 +320,7 @@ $(website-output)/index.json: $(website-output)/all.raw.json
 
 $(website-output)/index.html: $(website-output)/index.json
 	printf 'Making `index.html`...\n'
-	j2 $(views)/html/index.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/index.html.j2 $< --filters $(views)/j2filters.py > $@
 
 $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 	printf 'Making `non-scddb.json`...\n'
@@ -327,7 +328,7 @@ $(website-output)/non-scddb.json: $(website-output)/all.raw.json
 
 $(website-output)/non-scddb.html: $(website-output)/non-scddb.json
 	printf 'Making `non-scddb.html`...\n'
-	j2 $(views)/html/non-scddb.html.j2 $< --filters $(views)/j2filters.py > $@
+	$(j2) $(views)/html/non-scddb.html.j2 $< --filters $(views)/j2filters.py > $@
 
 ############################################################
 ## All
