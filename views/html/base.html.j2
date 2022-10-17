@@ -30,7 +30,22 @@
              $(".datatable").DataTable({
                  info: false,
                  paging: false,
-                 lengthChange: false
+                 lengthChange: false,
+
+                 {# `columnDefs` allows to define properties of columns in a
+                    flexible manner. Higher definitions take precedence. See:
+
+                        https://datatables.net/reference/option/columnDefs
+
+                    for documentation. In particular, we give a default class of
+                    `min-tablet-l` to all columns, specifying that they should
+                    appear only from landscape tablets (768px) onwards, and a
+                    class of `min-mobile-p` to the very first one, specifying
+                    that it should always appear. #}
+                 columnDefs: [
+                     { className: "min-mobile-p", targets: 0 },
+                     { className: "min-tablet-l", targets: "_all" }
+                 ]
              });
          });
         </script>
