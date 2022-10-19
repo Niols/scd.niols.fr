@@ -3,7 +3,17 @@
 
 {% block body %}
     <article>
-        <h1>All Books</h1>
+        <h1>Index of the Books</h1>
+
+        <section>
+            {{ common.welcomeMessage() }}
+            <p>
+                You are here on the index of the books. You might want to visit
+                the <a href="dances.html">index of the dances</a> or
+                the <a href="tunes.html">index of the tunes</a>.
+            </p>
+        </section>
+
         <section>
             <table class="datatable responsive wrap">
                 <thead>
