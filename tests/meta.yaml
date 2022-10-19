@@ -16,9 +16,9 @@ viewports:
     width: 480
 
 paths:
-  - index.html
   - dances.html
   - tunes.html
+  - books.html
   - dance/a-wee-journey.html
   - dance/drawn-in.html
   - dance/la-ville-lumiere.html
