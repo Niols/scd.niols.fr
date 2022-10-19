@@ -12,7 +12,7 @@
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
               pkgs.google-fonts ]; };
             buildPhase = "true";
-            installPhase = "true";
+            installPhase = "mkdir -p $out/var";
           } // args);
 
         websiteBuildInputs = [
