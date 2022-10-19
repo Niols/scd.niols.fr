@@ -54,14 +54,10 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v3
 
-      - name: Install & Cache Nix
+      - name: Install & Cache Nix Dependencies
         uses: mtoohey31/cache-flake-attrs@v2
         with:
           key: ${{ runner.os }}-nix-${{ hashFiles('./flake.lock', './flake.nix') }}
-
-      - name: Install Nix Dependencies
-        run: |
-          nix develop --command true
 
       - name: Build Website
         run: |
@@ -139,14 +135,10 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v3
 
-      - name: Install & Cache Nix
+      - name: Install & Cache Nix Dependencies
         uses: mtoohey31/cache-flake-attrs@v2
         with:
           key: ${{ runner.os }}-nix-${{ hashFiles('./flake.lock', './flake.nix') }}
-
-      - name: Install Nix Dependencies
-        run: |
-          nix develop --command true
 
       - name: Build Test Website
         run: |
