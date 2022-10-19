@@ -78,7 +78,7 @@ jobs:
 
       - name: Build Website
         run: |
-          nix develop --command make website
+          nix --extra-experimental-features nix-command --extra-experimental-features flakes develop --command make website
 
       - name: Upload Website as Artifact
         uses: actions/upload-artifact@v3.1.0
@@ -161,11 +161,11 @@ jobs:
 
       - name: Build Test Website
         run: |
-          nix develop --command make test-website
+          nix --extra-experimental-features nix-command --extra-experimental-features flakes develop --command make test-website
 
       - name: Run Tests
         run: |
-          nix develop --command make tests
+          nix --extra-experimental-features nix-command --extra-experimental-features flakes develop --command make tests
 
       - name: Upload Tests as Artifact
         if: ${{ always() }}
