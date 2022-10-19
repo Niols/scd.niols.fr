@@ -12,6 +12,7 @@
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
               pkgs.google-fonts ]; };
             buildPhase = "true";
+            installPhase = "true";
           } // args);
 
         websiteBuildInputs = [
