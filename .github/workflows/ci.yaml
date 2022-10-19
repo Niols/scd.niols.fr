@@ -45,10 +45,27 @@ jobs:
             })
 
   ############################################################################
+  ## Install Dependencies
+
+  install-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Install & Cache Nix Dependencies
+        uses: mtoohey31/cache-flake-attrs@v2
+        with:
+          key: ${{ runner.os }}-nix-${{ hashFiles('./flake.lock', './flake.nix') }}
+
+  ############################################################################
   ## Build Website
 
   build-website:
     runs-on: ubuntu-latest
+    needs:
+      - install-dependencies
 
     steps:
       - name: Clone Repository
@@ -130,6 +147,8 @@ jobs:
 
   test-website:
     runs-on: ubuntu-latest
+    needs:
+      - install-dependencies
 
     steps:
       - name: Clone Repository
@@ -280,6 +299,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - comment-on-pull-request
+      - install-dependencies
       - build-website
       - build-documentation
       - test-schemas
