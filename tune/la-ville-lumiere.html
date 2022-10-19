@@ -28,7 +28,13 @@
              $(".datatable").DataTable({
                  info: false,
                  paging: false,
-                 lengthChange: false
+                 lengthChange: false,
+
+                 
+                 columnDefs: [
+                     { className: "min-mobile-p", targets: 0 },
+                     { className: "min-tablet-l", targets: "_all" }
+                 ]
              });
          });
         </script>
