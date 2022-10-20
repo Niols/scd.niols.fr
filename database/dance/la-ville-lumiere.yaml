@@ -10,7 +10,8 @@ short-kind: R32 4/4L
 date: "2019-04"
 
 tunes:
-  - la-ville-lumiere
+  - type: internal
+    slug: la-ville-lumiere
 
 instructions:
 
@@ -57,6 +58,4 @@ instructions:
     kind: from new positions
 
   - type: devised by
-
   - type: music by
-    composer: Pascaline Latour

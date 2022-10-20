@@ -13,6 +13,14 @@ deviser-details: |
   the tempo we wanted. This dance can be danced in your choice of tempo to
   reflect this.
 
+tunes:
+  - type: internal
+    slug: a-strathspey-for-george
+  - type: internal
+    slug: a-strath-jig-for-george
+  - type: internal
+    slug: a-strath-reel-for-george
+
 instructions:
 
   - type: phrase
@@ -60,7 +68,4 @@ instructions:
       move down as they turn. 2nd couple do not need to step up.
 
   - type: devised by
-
   - type: music by
-    tune: A Strathspey for George
-    composer: Nicolas “Niols” Jeannerod
