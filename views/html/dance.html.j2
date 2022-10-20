@@ -6,18 +6,17 @@
 
         <a href="../tune/{{ tuneRef.slug }}.html">{#- -#}
             <span class="tune">{{ tunes[tuneRef.slug].name }}</span>{#- -#}
-        </a>
+        </a>,
         by <span class="composer">{{ common.shortAuthorOrAuthor(tunes[tuneRef.slug]) }}</span>
 
     {%- elif tuneRef.type == "external" -%}
 
         <span class="tune">{{ tuneRef.name }}</span>
         {%- if tuneRef.composer is defined -%}
-            by <span class="composer">{{ tuneRef.composer }}</span>
+            , by <span class="composer">{{ tuneRef.composer }}</span>
         {%- endif -%}
-        {%- if tuneRef['scddb-id'] -%}
-            [<a href="https://my.strathspey.org/dd/tune/{{ tuneRef['scddb-id'] }}/">
-            SCDDB</a>]
+        {%- if tuneRef['scddb-id'] %} {# space -#}
+            [<a href="https://my.strathspey.org/dd/tune/{{ tuneRef['scddb-id'] }}/">SCDDB</a>]
         {%- endif -%}
 
     {%- else -%}
@@ -89,19 +88,21 @@
         </div>
 
     {% elif item.type == "music by" %}
-        {% if dance.tunes is defined %}
-            {% if dance.tunes|length == 1 %}
-                <p>Recommended music: {{ printTuneRef(dance.tunes[0]) }}.</p>
+        <div class="music-by">
+            {% if dance.tunes is defined %}
+                {% if dance.tunes|length == 1 %}
+                    <p>Recommended music: {{ printTuneRef(dance.tunes[0]) }}.</p>
+                {% else %}
+                    <p>Recommended music:</p><ul>
+                        {% for tuneRef in dance.tunes %}
+                            <li>{{ printTuneRef(tuneRef) }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             {% else %}
-                <p>Recommended music:</p><ul>
-                    {% for tuneRef in dance.tunes %}
-                        <li>{{ printTuneRef(tuneRef) }}</li>
-                    {% endfor %}
-                </ul>
+                {{ common.error("Item type `music by` but without tunes") }}
             {% endif %}
-        {% else %}
-            {{ common.error("Item type `music by` but without tunes") }}
-        {% endif %}
+        </div>
 
     {% else %}
         {{ common.error("Unexpected item type: `" ~ item.type ~ "`") }}
