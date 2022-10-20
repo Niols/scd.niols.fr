@@ -10,10 +10,16 @@ build-arguments:
     - the-translator
 
 viewports:
-  - name: Standard Desktop
+  - name: Desktop
     width: 1920
-  - name: Standard Smartphone
+  - name: Big Tablet
+    width: 1024
+  - name: Tablet
+    width: 768
+  - name: Smartphone
     width: 480
+  - name: Small Smartphone
+    width: 320
 
 paths:
   - dances.html
