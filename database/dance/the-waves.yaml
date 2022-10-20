@@ -14,6 +14,12 @@ deviser-details: |
   For Rachel Shankland and George Meikle, with heartfelt thanks for their
   kindness towards and patience with the Units 2/3 class of 2022.
 
+tunes:
+  - type: external
+    name: Highland Whisky
+    composer: Niel Gow
+    scddb-id: 692
+
 instructions:
 
   - type: phrase
@@ -63,7 +69,4 @@ instructions:
     kind: having passed a couple
 
   - type: devised by
-
-  - type: recommended tune
-    tune: Highland Whisky
-    composer: Niel Gow
+  - type: music by

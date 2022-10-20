@@ -12,6 +12,10 @@ editor-details: |
   There exists a three-couple version of this dance, named “One Blue Cloud in
   the Grey Sky”.
 
+tunes:
+  - type: internal
+    slug: forty-bars-of-clouds
+
 instructions:
 
   - type: phrase
@@ -48,7 +52,4 @@ instructions:
     kind: from new positions
 
   - type: devised by
-
   - type: music by
-    composer: Nicolas “Niols” Jeannerod
-    tune: Forty Bars of Clouds

@@ -88,6 +88,19 @@ p, blockquote {
         margin-top: 1.5rem; //same as margin-top for `> *`
         font-style: italic;
     }
+
+    ul {
+        margin-left: 2rem;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+    .tune {
+        font-style: italic;
+    }
+
 }
 
 .tune-preview {

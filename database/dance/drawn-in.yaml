@@ -10,7 +10,8 @@ short-kind: S32 3/4L
 date: "2019-03"
 
 tunes:
-  - the-translator
+  - type: internal
+    slug: the-translator
 
 instructions:
 
@@ -56,7 +57,4 @@ instructions:
     kind: having passed a couple
 
   - type: devised by
-
   - type: music by
-    composer: Nicolas “Niols” Jeannerod
-    tune: The Translator

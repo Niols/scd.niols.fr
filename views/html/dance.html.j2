@@ -1,6 +1,29 @@
 {# views/html/dance.html.j2 #}
 {% extends "views/html/base.html.j2" %}
 
+{% macro printTuneRef(tuneRef) %}
+    {%- if tuneRef.type == "internal" -%}
+
+        <a href="../tune/{{ tuneRef.slug }}.html">{#- -#}
+            <span class="tune">{{ tunes[tuneRef.slug].name }}</span>{#- -#}
+        </a>,
+        by <span class="composer">{{ common.shortAuthorOrAuthor(tunes[tuneRef.slug]) }}</span>
+
+    {%- elif tuneRef.type == "external" -%}
+
+        <span class="tune">{{ tuneRef.name }}</span>
+        {%- if tuneRef.composer is defined -%}
+            , by <span class="composer">{{ tuneRef.composer }}</span>
+        {%- endif -%}
+        {%- if tuneRef['scddb-id'] %} {# space -#}
+            [<a href="https://my.strathspey.org/dd/tune/{{ tuneRef['scddb-id'] }}/">SCDDB</a>]
+        {%- endif -%}
+
+    {%- else -%}
+        {{ common.error("Unexpected tune reference type: `" ~ tuneRef.type ~ "`") }}
+    {%- endif -%}
+{% endmacro %}
+
 {% macro renderInstructionItem(dance, item) %}
     {# empty line on purpose: #}
 
@@ -66,25 +89,18 @@
 
     {% elif item.type == "music by" %}
         <div class="music-by">
-            Music by <span class="composer">{{ item.composer }}</span>
-            {%- if item.tune is defined -%}
-                : <span class="tune">{{ item.tune }}</span>
-            {%- endif -%}
-            .
-            {% if item.more is defined %}
-                {{ item.more }}
-            {% endif %}
-        </div>
-
-    {% elif item.type == "recommended tune" %}
-        <div class="music-by">
-            Recommended tune: <span class="tune">{{ item.tune }}</span>
-            {%- if item.composer is defined -%}
-                , by <span class="composer">{{ item.composer }}</span>
-            {%- endif -%}
-            .
-            {% if item.more is defined %}
-                {{ item.more }}
+            {% if dance.tunes is defined %}
+                {% if dance.tunes|length == 1 %}
+                    <p>Recommended music: {{ printTuneRef(dance.tunes[0]) }}.</p>
+                {% else %}
+                    <p>Recommended music:</p><ul>
+                        {% for tuneRef in dance.tunes %}
+                            <li>{{ printTuneRef(tuneRef) }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% else %}
+                {{ common.error("Item type `music by` but without tunes") }}
             {% endif %}
         </div>
 

@@ -12,7 +12,8 @@ editor-details: |
   This dance is a three-couple version of “Two Blue Clouds in the Grey Sky”.
 
 tunes:
-  - forty-bars-of-clouds
+  - type: internal
+    slug: forty-bars-of-clouds
 
 instructions:
 
@@ -49,7 +50,4 @@ instructions:
     kind: from new positions
 
   - type: devised by
-
   - type: music by
-    composer: Nicolas “Niols” Jeannerod
-    tune: Forty Bars of Clouds
