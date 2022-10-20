@@ -1,6 +1,24 @@
 {# views/tex/dance.tex.j2 #}
 {%- import "views/macros.j2" as common -%}
 
+{% macro printTuneRef(tuneRef) %}
+  {%- if tuneRef.type == "internal" -%}
+
+    \tune{ {{- tunes[tuneRef.slug].name|escapeTeX -}} }
+    by \composer{ {{- common.shortAuthorOrAuthor(tunes[tuneRef.slug])|escapeTeX -}} }
+
+  {%- elif tuneRef.type == "external" -%}
+
+    \tune{ {{- tuneRef.name -}} }
+    {%- if tuneRef.composer is defined -%}
+      by \composer{ {{- tuneRef.composer|escapeTeX -}} }
+    {%- endif -%}
+
+  {%- else -%}
+    {{ common.error("Unexpected tune reference type: `" ~ tuneRef.type ~ "`") }}
+  {%- endif -%}
+{% endmacro %}
+
 {% macro renderInstructionItem(dance, item) %}
     {# empty line on purpose: #}
 
@@ -58,23 +76,19 @@
           {% endif %}
 
     {% elif item.type == "music by" %}
-          Music by \composer{ {{- item.composer|escapeTeX -}} }
-          {%- if item.tune is defined -%}
-              : \tune{ {{- item.tune|escapeTeX -}} }
-          {%- endif -%}
-          .
-          {% if item.more is defined %}
-              {{ item.more|escapeTeX }}
-          {% endif %}
-
-    {% elif item.type == "recommended tune" %}
-          Recommended tune: \tune{ {{- item.tune|escapeTeX -}} }
-          {%- if item.composer is defined -%}
-              , by \composer{ {{- item.composer|escapeTeX -}} }
-          {%- endif -%}
-          .
-          {% if item.more is defined %}
-              {{ item.more|escapeTeX }}
+          {% if dance.tunes is defined %}
+            {% if dance.tunes|length == 1 %}
+              Recommended music: {{ printTuneRef(dance.tunes[0]) }}.
+            {% else %}
+              Recommended music:
+              \begin{itemize}
+              {% for tuneRef in dance.tunes %}
+                \item {{ printTuneRef(tuneRef) }}
+              {% endfor %}
+              \end{itemize}
+            {% endif %}
+          {% else %}
+            {{ common.error("Item type `music by` but without tunes") }}
           {% endif %}
 
     {% else %}
