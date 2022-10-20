@@ -4,14 +4,14 @@
 {% macro printTuneRef(tuneRef) %}
   {%- if tuneRef.type == "internal" -%}
 
-    \tune{ {{- tunes[tuneRef.slug].name|escapeTeX -}} }
+    \tune{ {{- tunes[tuneRef.slug].name|escapeTeX -}} },
     by \composer{ {{- common.shortAuthorOrAuthor(tunes[tuneRef.slug])|escapeTeX -}} }
 
   {%- elif tuneRef.type == "external" -%}
 
     \tune{ {{- tuneRef.name -}} }
-    {%- if tuneRef.composer is defined -%}
-      by \composer{ {{- tuneRef.composer|escapeTeX -}} }
+    {%- if tuneRef.composer is defined %} {# space -#}
+      , by \composer{ {{- tuneRef.composer|escapeTeX -}} }
     {%- endif -%}
 
   {%- else -%}
