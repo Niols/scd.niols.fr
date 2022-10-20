@@ -70,7 +70,10 @@
       "short-kind": "S32 3/4L",
       "date": "2019-03",
       "tunes": [
-        "the-translator"
+        {
+          "type": "internal",
+          "slug": "the-translator"
+        }
       ],
       "instructions": [
         {
@@ -111,9 +114,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "composer": "Nicolas “Niols” Jeannerod",
-          "tune": "The Translator"
+          "type": "music by"
         }
       ]
     },
@@ -175,6 +176,20 @@
       "short-kind": "X32 2/4L",
       "date": "2022-08",
       "deviser-details": "George Meikle played wonderfully for our Units 2 and 3, even if not always in\nthe tempo we wanted. This dance can be danced in your choice of tempo to\nreflect this.\n",
+      "tunes": [
+        {
+          "type": "internal",
+          "slug": "a-strathspey-for-george"
+        },
+        {
+          "type": "internal",
+          "slug": "a-strath-jig-for-george"
+        },
+        {
+          "type": "internal",
+          "slug": "a-strath-reel-for-george"
+        }
+      ],
       "instructions": [
         {
           "type": "phrase",
@@ -218,9 +233,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "tune": "A Strathspey for George",
-          "composer": "Nicolas “Niols” Jeannerod"
+          "type": "music by"
         }
       ]
     },
@@ -232,7 +245,10 @@
       "short-kind": "R32 4/4L",
       "date": "2019-04",
       "tunes": [
-        "la-ville-lumiere"
+        {
+          "type": "internal",
+          "slug": "la-ville-lumiere"
+        }
       ],
       "instructions": [
         {
@@ -273,8 +289,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "composer": "Pascaline Latour"
+          "type": "music by"
         }
       ]
     },
@@ -287,7 +302,10 @@
       "date": "2018-05",
       "editor-details": "This dance is a three-couple version of “Two Blue Clouds in the Grey Sky”.\n",
       "tunes": [
-        "forty-bars-of-clouds"
+        {
+          "type": "internal",
+          "slug": "forty-bars-of-clouds"
+        }
       ],
       "instructions": [
         {
@@ -322,9 +340,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "composer": "Nicolas “Niols” Jeannerod",
-          "tune": "Forty Bars of Clouds"
+          "type": "music by"
         }
       ]
     },
@@ -544,7 +560,10 @@
       "date": "2018",
       "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
       "tunes": [
-        "the-mall-in-st-james-s-park"
+        {
+          "type": "internal",
+          "slug": "the-mall-in-st-james-s-park"
+        }
       ],
       "instructions": [
         {
@@ -579,8 +598,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "composer": "Nicolas “Niols” Jeannerod"
+          "type": "music by"
         }
       ]
     },
@@ -595,10 +613,15 @@
       "editor-details": "This dance is a variation of one of the most popular Scottish country dances,\n“The Reel of the 51st Division”.\n",
       "tunes": [
         {
-          "name": "The Drunken Piper",
-          "author": "Alexander McLeod"
+          "type": "internal",
+          "slug": "the-sober-piper"
         },
-        "the-sober-piper"
+        {
+          "type": "external",
+          "name": "The Drunken Piper",
+          "author": "Alexander McLeod",
+          "scddb-id": 430
+        }
       ],
       "instructions": [
         {
@@ -637,10 +660,7 @@
           "content": "Remember the person that is at the left of your partner from your point of\nview: First, third and fifth times, you will start dancing with your\npartner on your original lines; Second, fourth and sixth times, you will\nstart dancing with that other person on the opposite lines.\n"
         },
         {
-          "type": "music by",
-          "composer": "Anne Lanvin",
-          "tune": "The Sober Piper",
-          "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
+          "type": "music by"
         }
       ]
     },
@@ -708,6 +728,14 @@
       "date": "2022",
       "date-format": "%at-date% and inspired by the waves in the sea around St. Andrews\n",
       "deviser-details": "For Rachel Shankland and George Meikle, with heartfelt thanks for their\nkindness towards and patience with the Units 2/3 class of 2022.\n",
+      "tunes": [
+        {
+          "type": "external",
+          "name": "Highland Whisky",
+          "composer": "Niel Gow",
+          "scddb-id": 692
+        }
+      ],
       "instructions": [
         {
           "type": "phrase",
@@ -753,9 +781,7 @@
           "type": "devised by"
         },
         {
-          "type": "recommended tune",
-          "tune": "Highland Whisky",
-          "composer": "Niel Gow"
+          "type": "music by"
         }
       ]
     },
@@ -767,6 +793,12 @@
       "short-kind": "R40 5/5L",
       "date": "2018-05",
       "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
+      "tunes": [
+        {
+          "type": "internal",
+          "slug": "forty-bars-of-clouds"
+        }
+      ],
       "instructions": [
         {
           "type": "phrase",
@@ -800,9 +832,7 @@
           "type": "devised by"
         },
         {
-          "type": "music by",
-          "composer": "Nicolas “Niols” Jeannerod",
-          "tune": "Forty Bars of Clouds"
+          "type": "music by"
         }
       ]
     },

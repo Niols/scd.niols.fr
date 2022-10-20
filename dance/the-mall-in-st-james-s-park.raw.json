@@ -8,7 +8,10 @@
     "date": "2018",
     "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
     "tunes": [
-      "the-mall-in-st-james-s-park"
+      {
+        "type": "internal",
+        "slug": "the-mall-in-st-james-s-park"
+      }
     ],
     "instructions": [
       {
@@ -43,8 +46,7 @@
         "type": "devised by"
       },
       {
-        "type": "music by",
-        "composer": "Nicolas “Niols” Jeannerod"
+        "type": "music by"
       }
     ]
   },

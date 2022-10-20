@@ -10,10 +10,15 @@
     "editor-details": "This dance is a variation of one of the most popular Scottish country dances,\n“The Reel of the 51st Division”.\n",
     "tunes": [
       {
-        "name": "The Drunken Piper",
-        "author": "Alexander McLeod"
+        "type": "internal",
+        "slug": "the-sober-piper"
       },
-      "the-sober-piper"
+      {
+        "type": "external",
+        "name": "The Drunken Piper",
+        "author": "Alexander McLeod",
+        "scddb-id": 430
+      }
     ],
     "instructions": [
       {
@@ -52,10 +57,7 @@
         "content": "Remember the person that is at the left of your partner from your point of\nview: First, third and fifth times, you will start dancing with your\npartner on your original lines; Second, fourth and sixth times, you will\nstart dancing with that other person on the opposite lines.\n"
       },
       {
-        "type": "music by",
-        "composer": "Anne Lanvin",
-        "tune": "The Sober Piper",
-        "more": "Alternatively, one can use one of the tunes for “The Reel of the 51st\nDivision”: “The Drunken Piper”, by Alex McLeod.\n"
+        "type": "music by"
       }
     ]
   },

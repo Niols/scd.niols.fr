@@ -89,6 +89,15 @@ p, blockquote {
   margin-top: 1.5rem;
   font-style: italic; }
 
+.dance-instructions ul {
+  margin-left: 2rem; }
+
+.dance-instructions li {
+  list-style-type: disc; }
+
+.dance-instructions .tune {
+  font-style: italic; }
+
 .tune-preview > img {
   width: 100%; }
 

@@ -7,6 +7,20 @@
     "short-kind": "X32 2/4L",
     "date": "2022-08",
     "deviser-details": "George Meikle played wonderfully for our Units 2 and 3, even if not always in\nthe tempo we wanted. This dance can be danced in your choice of tempo to\nreflect this.\n",
+    "tunes": [
+      {
+        "type": "internal",
+        "slug": "a-strathspey-for-george"
+      },
+      {
+        "type": "internal",
+        "slug": "a-strath-jig-for-george"
+      },
+      {
+        "type": "internal",
+        "slug": "a-strath-reel-for-george"
+      }
+    ],
     "instructions": [
       {
         "type": "phrase",
@@ -50,9 +64,7 @@
         "type": "devised by"
       },
       {
-        "type": "music by",
-        "tune": "A Strathspey for George",
-        "composer": "Nicolas “Niols” Jeannerod"
+        "type": "music by"
       }
     ]
   },
