@@ -300,70 +300,15 @@ $defs:
     music-by:
       type: object
       description: |
-        FIXME: Get rid of this; merge with recommendation.
+        FIXME: Get rid of this
       required:
         - type
-        - composer
       properties:
         type:
           enum: ["music by"]
-        composer:
-          type: string
-          description: |
-            The composer of the tune.
-        tune:
-          type: string
-          description: |
-            The name of the tune.
-        more:
-          type: string
-          description: |
-            A string to be added after the name of the composer or the name of
-            the tune. It should start with a capital letter.
       additionalProperties: false
       examples:
         - type: music by
-          composer: Pascaline Latour
-        - type: music by
-          composer: Anne Lanvin
-          tune: The Sober Piper
-          more: |
-            Alternatively, one can use one of the tunes for “The Reel of the
-            51st Division”: “The Drunken Piper”, by Alex McLeod.
-
-    recommended-tune:
-      type: object
-      description: |
-        FIXME: Get rid of this. Merge with "music by"
-      required:
-        - type
-        - tune
-      properties:
-        type:
-          enum: ["recommended tune"]
-        composer:
-          type: string
-          description: |
-            The composer of the tune.
-        tune:
-          type: string
-          description: |
-            The name of the tune.
-        more:
-          type: string
-          description: |
-            A string to be added after the name of the composer or the name of
-            the tune. It should start with a capital letter.
-      additionalProperties: false
-      examples:
-        - type: recommended tune
-          tune: La Ville Lumière
-          composer: Pascaline Latour
-        - type: recommended tune
-          tune: The Sober Piper
-          more: |
-            Alternatively, one can use one of the tunes for “The Reel of the
-            51st Division”: “The Drunken Piper”, by Alex McLeod.
 
   tunes:
 
