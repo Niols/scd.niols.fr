@@ -140,7 +140,6 @@ $defs:
         - $ref: "#/$defs/instructions/repeat"
         - $ref: "#/$defs/instructions/devised-by"
         - $ref: "#/$defs/instructions/music-by"
-        - $ref: "#/$defs/instructions/recommended-tune"
 
     note:
       type: object
