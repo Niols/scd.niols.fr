@@ -9,7 +9,7 @@
         </a>
         by <span class="deviser">{{ common.shortAuthorOrAuthor(dances[danceRef.slug]) }}</span>
 
-    {%- else -%}
+    {%- elif danceRef.type == "external" -%}
 
         <span class="dance">{{ danceRef.name }}</span>
         {%- if danceRef.deviser is defined -%}
@@ -20,6 +20,8 @@
             SCDDB</a>]
         {%- endif -%}
 
+    {%- else -%}
+        {{ common.error("Unexpected dance reference type: `" ~ danceRef.type ~ "`") }}
     {%- endif -%}
 {% endmacro %}
 
