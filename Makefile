@@ -389,7 +389,7 @@ tests: $(tests-output)
 	    output_path="$$path"."$$width".png
 
 	    firefox_output=$$(
-	      tests/take-screenshot \
+	      python3 tests/take-screenshot.py \
 	        file://$$PWD/$(website-output)/"$$path" \
 	        $(tests-output)/"$$output_path" \
 	        $$width \
