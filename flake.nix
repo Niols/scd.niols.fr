@@ -49,14 +49,14 @@
         name = "website";
         buildInputs = websiteBuildInputs;
         buildPhase = "make website";
-        installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
+        installPhase = "mkdir $out && cp -R _build/website/* $out/";
       };
 
       packages.test-website = mkDerivation {
         name = "test-website";
         buildInputs = websiteBuildInputs;
         buildPhase = "make test-website";
-        installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
+        installPhase = "mkdir $out && cp -R _build/website/* $out/";
       };
     };
 }
