@@ -21,6 +21,11 @@
 SHELL = sh
 .SHELLFLAGS = -euC -c
 
+## Run sequentially, even if `-j` is specified. This is necessary because of the
+## Inkscape targets that clash with one another.
+##
+.NOTPARALLEL:
+
 ################################################################################
 ##    ___             _            _
 ##   / __|___ _ _  __| |_ __ _ _ _| |_ ___
