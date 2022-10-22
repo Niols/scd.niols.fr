@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (Web2C 2021/NixOS.org) (preloaded format=xelatex 1980.1.1)  21 OCT 2022 10:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (Web2C 2021/NixOS.org) (preloaded format=xelatex 1980.1.1)  22 OCT 2022 07:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1581,7 +1581,7 @@ Package rerunfilecheck Info: Checksums for `a-wee-journey.out':
 Here is how much of TeX's memory you used:
  34003 strings out of 476180
  710501 string characters out of 5785740
- 1059750 words of memory out of 5000000
+ 1059749 words of memory out of 5000000
  54250 multiletter control sequences out of 15000+600000
  469779 words of font info for 49 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
