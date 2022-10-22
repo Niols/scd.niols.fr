@@ -367,6 +367,49 @@ test-website:
 	books=$$(yq --unwrapScalar '.build-arguments.books.[]' $(tests)/meta.yaml)
 	make website dances="$$dances" tunes="$$tunes" books="$$books"
 
+$(tests-output)/%-output.png: $(tests-output)
+	printf 'Making `$@`...\n' $*
+	target=$*
+	fname=$(website-output)/$${target%.*}
+	width=$${target##*.}
+	if ! [ -e $$fname ]; then
+	  printf 'Expected file `%s` does not exist.\nDid you build the website?\n' "$$fname"
+	  exit 7
+	fi
+	output=$$(
+	  python3 tests/take-screenshot.py \
+	    "file://$$PWD/$$fname" $@ $$width \
+	    2>&1
+	) && true
+	if [ -e $@ ]; then
+	      chmod 644 $@
+	else
+	  printf '  => \e[1;31munexpected failure while taking screenshot\e[0m:\n'
+	  printf '\n\e[37m%s\e[0m\n\n' "$$output" | sed 's|^\(.*\)|     \1|'
+	  exit 1
+	fi
+
+$(tests-output)/%-expected.png: $(tests-output)
+	printf 'Making `$@`...\n' $*
+	cp $(tests)/outputs/$*.png $@
+
+%-difference.png: %-output.png %-expected.png
+	printf 'Making `$@`...\n' $*
+	output=$$(
+	  compare -compose src -metric AE -format '' \
+	    $*-expected.png $*-output.png $@ \
+	    2>&1
+	) && true
+	return_code=$$?
+	if [ $$return_code -eq 1 ]; then
+	  printf '  => \e[31mdissimilarity\e[0m.\n'
+	  exit 1
+	elif [ $$return_code -ge 2 ]; then
+	  printf '  => \e[1;31munexpected failure while comparing\e[0m:\n'
+	  printf '\n\e[37m%s\e[0m\n\n' "$$output" | sed 's|^\(.*\)|     \1|'
+	  exit 1
+	fi
+
 .PHONY: tests
 tests: $(tests-output)
 	if ! [ -d $(website-output) ]; then
