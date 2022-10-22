@@ -176,7 +176,7 @@ jobs:
     steps:
 
       - name: Download Website from Artifacts
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3.0.1
         with:
           name: website
           path: ./website
@@ -216,7 +216,7 @@ jobs:
 
       - name: Download Website from Artifacts
         if: needs.build-website.result == 'success'
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3.0.1
         with:
           name: website
           path: ./website
@@ -227,7 +227,7 @@ jobs:
 
       - name: Download Documentation from Artifacts
         if: needs.build-documentation.result == 'success'
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3.0.1
         with:
           name: documentation
           path: ./website/_doc/
@@ -235,7 +235,7 @@ jobs:
       - name: Download Tests from Artifacts
         ## NOTE: No need to check for success, because the tests upload their
         ## archive no matter what happens.
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3.0.1
         with:
           name: tests
           path: ./website/_tests/
