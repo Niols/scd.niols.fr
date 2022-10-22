@@ -92,22 +92,22 @@ clean:
 ##  that the shape already exists.
 
 $(output):
-	mkdir $(output)
+	mkdir -p $(output)
 
 $(website-output): $(output)
-	mkdir $(website-output)
+	mkdir -p $(website-output)
 
 $(website-output)/dance: $(website-output)
-	mkdir $(website-output)/dance
+	mkdir -p $(website-output)/dance
 
 $(website-output)/tune: $(website-output)
-	mkdir $(website-output)/tune
+	mkdir -p $(website-output)/tune
 
 $(website-output)/book: $(website-output)
-	mkdir $(website-output)/book
+	mkdir -p $(website-output)/book
 
 $(tests-output): $(output)
-	mkdir $(tests-output)
+	mkdir -p $(tests-output)
 
 ############################################################
 ## Individual dances
