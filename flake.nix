@@ -36,6 +36,7 @@
       packages.x86_64-linux.default = self.packages.default;
       packages.x86_64-linux.website = self.packages.website;
       packages.x86_64-linux.test-website = self.packages.test-website;
+      packages.x86_64-linux.tests = self.packages.tests;
       devShells.x86_64-linux.default = self.devShell;
 
       packages.default = self.packages.website;
@@ -57,6 +58,13 @@
         buildInputs = websiteBuildInputs;
         buildPhase = "make test-website";
         installPhase = "mkdir $out && cp -R _build/website/* $out/";
+      };
+
+      packages.tests = mkDerivation {
+        name = "tests";
+        buildInputs = websiteBuildInputs ++ websiteTestInputs;
+        buildPhase = "make tests website-output=${self.packages.test-website}/";
+        installPhase = "mkdir $out $$ cp -R _build/tests/* $out/";
       };
     };
 }
