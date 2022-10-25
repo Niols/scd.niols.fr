@@ -67,7 +67,7 @@
           export HOME=$(mktemp -d)
           make tests website-output=${self.packages.test-website}/
         '';
-        installPhase = "mkdir $out $$ cp -R _build/tests/* $out/";
+        installPhase = "mkdir $out && cp -R _build/tests/* $out/";
       };
     };
 }
