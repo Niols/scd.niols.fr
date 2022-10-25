@@ -417,6 +417,9 @@ tests: $(tests-output)
 	  exit 7
 	fi
 
+	## $(website-output) might be relative. Let us make it absolute.
+	website_output=$$(cd $(website-output) && pwd)
+
 	dissimilarities=0
 	unexpected_failures=0
 
@@ -438,7 +441,7 @@ tests: $(tests-output)
 
 	    firefox_output=$$(
 	      python3 tests/take-screenshot.py \
-	        file://$$PWD/$(website-output)/"$$path" \
+	        file://$$website_output/"$$path" \
 	        $(tests-output)/"$$output_path" \
 	        $$width \
 	        2>&1
