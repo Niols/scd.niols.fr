@@ -63,7 +63,10 @@
       packages.tests = mkDerivation {
         name = "tests";
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
-        buildPhase = "make tests website-output=${self.packages.test-website}/";
+        buildPhase = ''
+          export HOME=$(mktemp -d)
+          make tests website-output=${self.packages.test-website}/
+        '';
         installPhase = "mkdir $out $$ cp -R _build/tests/* $out/";
       };
     };
