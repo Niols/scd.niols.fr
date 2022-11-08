@@ -43,6 +43,8 @@
       devShell = mkDerivation {
         name = "devshell";
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
+        buildPhase = "true";
+        installPhase = "mkdir $out";
       };
 
       packages.website = mkDerivation {
