@@ -8,6 +8,12 @@ date: "2019"
 kind: 40-bar jig
 short-kind: J40
 
+dances:
+  - type: external
+    name: The Gruffalo
+    deviser: Luisa Hulsroj
+    scddb-id: 19124
+
 content: |
   <<
     \relative c'' {

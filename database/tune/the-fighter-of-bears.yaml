@@ -8,6 +8,11 @@ date: "2019"
 kind: 32-bar reel
 short-kind: R32
 
+dances:
+  - type: external
+    name: The Good-Natured Gentleman
+    deviser: Luisa Hulsroj
+
 content: |
   <<
     \relative c'' {
