@@ -1,0 +1,18 @@
+{
+  "tune": {
+    "name": "The Fighter of Bears",
+    "author": "Saskia Frisby",
+    "date": "2019",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "dances": [
+      {
+        "type": "external",
+        "name": "The Good-Natured Gentleman",
+        "deviser": "Luisa Hulsroj"
+      }
+    ],
+    "content": "<<\n  \\relative c'' {\n    \\clef treble\n    \\key b \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        \\partial 8 g'8 |\n        fis8 b, b4 d8 b fis' b, |\n        d8 b fis' b, a cis e g |\n        fis8 b, b4 d8 b fis' b, |\n        a8 b cis d cis d e g |\n      } \\break\n\n      fis8 d b fis b fis d' fis, |\n      e'8 a, cis a e' a, g' a, |\n      fis'8 d b a fis g a b |\n      a8 b cis d cis d e g |\n      \\break\n\n      fis8 d b fis b fis d' fis, |\n      e'8 a, cis a e' a, g' a, |\n      fis'8 b, b4 d8 b fis' b, |\n    } \\alternative { {\n      a8 b cis d cis d e g |\n    } {\n      g8 e cis fis, b4.\n    } } \\bar \"|.\"\n  }\n\n  \\chords {\n    s8 |\n    b1:m | b2:m a:7 | b1:m | a2 a:7 |\n\n    b1:m | a2 a:7 | b1:m | a2 a:7 |\n    b1:m | a2 a:7 | b1:m | a2 a:7 | a2:7 b4.:m\n  }\n>>\n"
+  },
+  "slug": "the-fighter-of-bears"
+}

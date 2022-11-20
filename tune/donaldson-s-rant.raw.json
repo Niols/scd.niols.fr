@@ -1,0 +1,19 @@
+{
+  "tune": {
+    "name": "Donaldson's Rant",
+    "author": "Saskia Frisby",
+    "date": "2019",
+    "kind": "40-bar jig",
+    "short-kind": "J40",
+    "dances": [
+      {
+        "type": "external",
+        "name": "The Gruffalo",
+        "deviser": "Luisa Hulsroj",
+        "scddb-id": 19124
+      }
+    ],
+    "content": "<<\n  \\relative c'' {\n    \\clef treble\n    \\key c \\major\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 g8 |\n      c,4 e8 g4 c,8 |\n      f g a g4 c8 |\n      g e c a' g f |\n      e d c d4. |\n      \\break\n\n      e4 a8 g4 c8 |\n      e d c b4. |\n      c8 b a g a g |\n      f e d c4\n    } \\break\n\n    \\repeat volta 2 {\n      a'8 |\n      g b d e c a |\n      g b d g e c |\n      f d b e c a |\n      b c a g4 g8 |\n      \\break\n\n      c,4 g'8 f4 a8 |\n      g4 b8 c4 e8 |\n      c a d b g c |\n      c d b c4.\n    } \\break\n\n    g8 a b c4. |\n    f,8 e d c4. |\n    c'8 b e g,4. |\n    f8 e g d4 g8 |\n    \\break\n\n    c,4 e8 g4 c,8 |\n    f g a g4 e'8 |\n    g,4 c8 e,4 g8 |\n    f e d c4\n    \\bar \"|.\"\n  }\n\n  \\chords {\n    s8 |\n    c2. | f4. c | c f | c g |\n    a4.:m c | c g | c g | g c4\n\n    s8 |\n    g4. c | g c | b:dim c | g g |\n    c4. f | g c | f g | c4 g8 c4. |\n\n    g4. c | f c | c g | f g |\n    c2. | f4. c | g c | g c4\n  }\n>>\n"
+  },
+  "slug": "donaldson-s-rant"
+}
