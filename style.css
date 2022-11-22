@@ -98,7 +98,7 @@ p, blockquote {
 .dance-instructions .tune {
   font-style: italic; }
 
-.tune-preview > img {
+.tune-preview > object {
   width: 100%; }
 
 .tune-description ul {
