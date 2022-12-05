@@ -1,0 +1,82 @@
+---
+
+name: A Jig So Puzzled
+author: Nicolas “Niols” Jeannerod
+scddb-id: 14537
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2020-01-27"
+
+dances:
+  - type: external
+    name: A Jig So Puzzled
+    deviser: Mathias Ferber
+    scddb-id: 20320
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \key d \major
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 a8 |
+        fis4 d8 fis4 a8 |
+        d8 cis b a4 a8 |
+        b8 g b a g fis |
+        e4. a4
+        \bar "|" \break
+
+        a8 |
+        fis4 d8 fis4 a8 |
+        d8 cis b a4 a8 |
+        b8 g b a g fis |
+        e4. d4
+      } \break
+
+      e8 |
+      fis4 d8 fis4 fis8 |
+      g8 fis e fis4 fis8 |
+      g8 fis e fis e d |
+      cis a cis e4
+      \bar "|" \break
+
+      e8 |
+      fis4 d8 fis4 fis8 |
+      g8 fis e fis4 fis8 |
+      g8 fis e fis e d |
+      cis4. b4
+      \bar "||" \break
+
+      e8 |
+      fis4 d8 fis4 fis8 |
+      g8 fis e fis4 fis8 |
+      g8 fis e fis e d |
+      cis a cis e4
+      \bar "|" \break
+
+      e8 |
+      fis4 d8 fis4 a8 |
+      d8 cis b a4 a8 |
+      b8 g b a g fis |
+      e4. d4
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d4. d/cis | b:m a | g d/fis | e:7 a:7 |
+        d4. d/cis | b:m a | g d/fis | a:7 d |
+
+        b2.:m | e4.:m b:m | e:m b:m | a a:7 |
+        b2.:m | e4.:m b:m | e:m b:m | a:7 b:m |
+
+        b2.:m | e4.:m b:m | e:m b:m | a a:7 |
+        d4. d/cis | b:m a | g d/fis | a:7 d4
+      }
+    }
+  >>
