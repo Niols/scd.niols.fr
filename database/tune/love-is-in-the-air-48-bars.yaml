@@ -1,0 +1,64 @@
+---
+
+name: Love is in the Air
+author: Nicolas “Niols” Jeannerod
+scddb-id: 14458
+
+kind: 48-bar reel
+short-kind: R48
+
+date: "2020-02-03"
+
+dances:
+  - type: external
+    name: Love is in the Air
+    deviser: Violaine Eysseric
+    scddb-id: 18383
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \major
+
+      \repeat volta 3 {
+        \partial 4 a4 |
+        d,4 fis8 a b4 a |
+        b8 a b cis d4 d8 cis |
+        b4 d8 fis b a g fis |
+        e d cis b a g fis e |
+        \break
+
+        d4 fis8 a b4 a |
+        b8 a b cis d4 d8 cis |
+        b4 d8 fis b a g fis |
+        e d e fis d4
+        \bar "||" \break
+
+        d8 e |
+        fis4 a8 fis g fis e g |
+        fis d b cis d cis b a |
+        g a b cis d cis b a |
+        a b cis d e fis g a |
+        \break
+
+        fis4 a8 fis g fis e g |
+        fis d b cis d cis b a |
+        g a b cis a b cis e |
+        fis4 d d
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        d2 g | a d | b:m e:m | a2 a:7 |
+        d2 g | a d | b:m e:m | a2:7 d4
+
+        s4 |
+        d2 e:m | b1:m | g | a2 a:7 |
+        d2 e:m | b1:m | g2 a:7 | d2.
+      }
+    }
+  >>
