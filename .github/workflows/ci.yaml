@@ -209,10 +209,10 @@ jobs:
           ## Publish `./website` with following commit message...
           publish_dir: ./website
           full_commit_message: |
-            Bump to ${{ github.sha }}: ${{ github.event.head.message }}
+            Bump to ${{ github.sha }}: ${{ github.event.head_commit.message }}
           ## ...to branch `pages` with the right access token...
           publish_branch: pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAGES_TOKEN }}
           ## ...as the GitHub Actions bot...
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
