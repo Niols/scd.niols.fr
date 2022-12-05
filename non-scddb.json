@@ -168,6 +168,46 @@
         }
       ]
     },
+    "hello-goodb": {
+      "name": "Hello, Goodb",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "24-bar reel for three couples in a four-couple longwise set",
+      "short-kind": "R24 3/4L",
+      "date": "2022-11-08",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 6,
+          "content": "1st couple cross by the right, cast off one place and turn by the left to\nfinish facing first corners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 7,
+          "ends": 12,
+          "content": "1st couple set to first corner, set to each other, set to second corner,\nand finish man between the 2nd couple facing down and woman between the\n3rd couple facing up.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 13,
+          "ends": 18,
+          "content": "1st man with 2nd couple and 1st woman with 3rd couple advance for two\nbars, retire for two bars. 1st couple turn three quarters by the right to\nown sides.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 19,
+          "ends": 24,
+          "content": "2nd, 1st and 3rd couples dance six hands round and back.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "having passed a couple"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
     "in-strathspey-time-george-please": {
       "name": "In Strathspey Time, George, Please!",
       "author": "Shona Holmes",

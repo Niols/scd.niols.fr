@@ -2,8 +2,8 @@ This is XeTeX, Version 3.141592653-2.6-0.999993 (Web2C 2021/NixOS.org) (preloade
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**a-wee-journey.tex
-(./a-wee-journey.tex
+**hello-goodb.tex
+(./hello-goodb.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/nix/store/1m4rhd60j1fh2n9xl9irp07a2zigx4h6-texlive-combined-full-2021-final/s
@@ -1345,8 +1345,8 @@ hare/texmf/tex/latex/wrapfig/wrapfig.sty
 \WF@everypar=\toks45
 Package: wrapfig 2003/01/31  v 3.6
 )
-No file a-wee-journey.aux.
-\openout1 = `a-wee-journey.aux'.
+No file hello-goodb.aux.
+\openout1 = `hello-goodb.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 246.
 LaTeX Font Info:    ... okay on input line 246.
@@ -1507,7 +1507,7 @@ LaTeX Info: Redefining \ref on input line 246.
 LaTeX Info: Redefining \pageref on input line 246.
 LaTeX Info: Redefining \nameref on input line 246.
 \@outlinefile=\write5
-\openout5 = `a-wee-journey.out'.
+\openout5 = `hello-goodb.out'.
 
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
@@ -1530,61 +1530,49 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
 (Font)              scaled to size 19.51016pt on input line 250.
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 310--310
-[]\TU/SourceSansPro(0)/m/n/10.95 14  
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 281--281
+[]\TU/SourceSansPro(0)/m/n/10.95 12  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 326--326
- []\TU/SourceSansPro(0)/m/n/10.95 15
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 298--298
+ []\TU/SourceSansPro(0)/m/n/10.95 13
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 326--326
-[]\TU/SourceSansPro(0)/m/n/10.95 16  
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 298--298
+[]\TU/SourceSansPro(0)/m/n/10.95 18  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 344--344
- []\TU/SourceSansPro(0)/m/n/10.95 17
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 313--313
+ []\TU/SourceSansPro(0)/m/n/10.95 19
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 344--344
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 313--313
 []\TU/SourceSansPro(0)/m/n/10.95 24  
  []
 
-
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 362--362
- []\TU/SourceSansPro(0)/m/n/10.95 25
- []
-
-
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 362--362
-[]\TU/SourceSansPro(0)/m/n/10.95 32  
- []
-
-LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
-(Font)              scaled to size 9.71072pt on input line 408.
 [1
 
-] (./a-wee-journey.aux)
+] (./hello-goodb.aux)
 
-Package rerunfilecheck Warning: File `a-wee-journey.out' has changed.
+Package rerunfilecheck Warning: File `hello-goodb.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `a-wee-journey.out':
+Package rerunfilecheck Info: Checksums for `hello-goodb.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34003 strings out of 476180
- 710501 string characters out of 5785740
- 1059750 words of memory out of 5000000
- 54250 multiletter control sequences out of 15000+600000
- 469779 words of font info for 49 fonts, out of 8000000 for 9000
+ 34001 strings out of 476180
+ 710380 string characters out of 5785740
+ 1049748 words of memory out of 5000000
+ 54249 multiletter control sequences out of 15000+600000
+ 469771 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,11n,119p,480b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,11n,119p,478b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on a-wee-journey.pdf (1 page).
+Output written on hello-goodb.pdf (1 page).
