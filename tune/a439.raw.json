@@ -1,0 +1,20 @@
+{
+  "tune": {
+    "name": "A439",
+    "author": "Nicolas “Niols” Jeannerod",
+    "scddb-id": 14005,
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2018-03-28",
+    "dances": [
+      {
+        "type": "external",
+        "name": "So Far Yet So Close",
+        "deviser": "Claire Cunin",
+        "scddb-id": 19188
+      }
+    ],
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        a16 a8. g a16 b4 c8. b16 |\n        a4 f8. e16 d4 d8. e16 |\n        f4 f8. g16 e8 c4 e8 |\n        d2. \\parenthesize a'4 |\n      } \\break\n\n      a16 d8. d c16 d8. e16 f8. a,16 |\n      a16 d8. d c16 d8. c16 a4 |\n      a16 d8. d c16 d8. e16 f8. g16 |\n      a16 a8. f8. c16 a'4 a, |\n      \\break\n\n      a16 d8. d c16 d8. e16 f8. a,16 |\n      a16 d8. d c16 d8. c16 a4 |\n      a16 d8. d c16 d8. e16 f8. g16 |\n      e16 c8. <e g>8. <c e>16 d2 |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2:m g | d1:m | f2 c | d1:m |\n      d1:m | d2:m a:m | d1:m | f |\n      d1:m | d2:m a:m | d1:m | c2 d:m |\n    }\n  }\n>>\n"
+  },
+  "slug": "a439"
+}
