@@ -6,6 +6,11 @@
 
       let pkgs = import nixpkgs { inherit system; };
 
+          ## Reads a directory and returns a list of file names.
+          readDir = path: with builtins; attrNames (readDir path);
+          readDirSubset = path: suffix: with builtins; with pkgs.lib;
+            map (removeSuffix suffix) (filter (hasSuffix suffix) (readDir path));
+
           mkDerivation = name: args:
             pkgs.stdenv.mkDerivation ({
               src = self;
