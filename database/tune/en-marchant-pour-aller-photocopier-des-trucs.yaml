@@ -1,0 +1,82 @@
+---
+
+name: En marchant pour aller photocopier des trucs
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2019-08"
+
+dances:
+  - type: internal
+    slug: on-the-way-to-the-printing-shop
+
+composer-details: |
+  I wrote this tune during Summer School 2019. It was an assignment given by Ian
+  Muir as part of the course for class musicians. The week was very busy and the
+  only time I found to compose the tune while I was on my way to the centre of
+  St. Andrews to go print music sets.
+
+content: |
+  \transpose a, d {
+    \relative g' <<
+      {
+        \clef treble
+        \key a \major
+        \time 6/8
+
+        \repeat volta 2 {
+          \partial 8 b8 |
+          cis8 a a a a gis |
+          fis d d d d cis |
+          b d fis gis fis e |
+          e fis gis a b cis |
+          \break
+
+          cis a a a a gis |
+          fis d d d d cis |
+          b d fis e gis b |
+          a4. a4
+        } \break
+
+        gis8 |
+        fis cis cis cis b cis |
+        fis d d d cis d |
+        e b b b a b |
+        cis d e fis gis a |
+        \break
+
+        fis cis cis cis b cis |
+        fis d d d cis d |
+        e b b b a gis |
+        fis4. fis4 fis8 |
+        \bar "||" \break
+
+        fis' cis cis cis b cis |
+        fis d d d cis d |
+        e b b b a b |
+        cis d e fis4 d'8 |
+        \break
+
+        cis a a a a gis fis d d d d cis |
+        b d fis e gis b |
+        a4. a4
+        \bar "|."
+      }
+
+      \new ChordNames {
+        \chordmode {
+          s8 |
+          a2. | d | b:m | e:7 |
+          a2. | d | b4.:m e:7 | a2. |
+
+          fis2.:m/cis | d | e | cis4.:m fis:m |
+          fis2.:m/cis | d | e | fis:m |
+
+          fis2.:m/cis | d | e | cis4.:m d/fis |
+          a2. | d | b4.:m e:7 | a4. s4
+        }
+      }
+    >>
+  }
