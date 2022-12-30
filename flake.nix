@@ -6,61 +6,42 @@
 
       let pkgs = import nixpkgs { inherit system; };
 
-          mkDerivation = args:
+          mkDerivation = name: args:
             pkgs.stdenv.mkDerivation ({
               src = self;
+              inherit name;
+
               FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
                 pkgs.google-fonts ]; };
+
+              buildInputs = with pkgs; [
+                inkscape j2cli jq lilypond sassc
+                texlive.combined.scheme-full xvfb-run yq-go
+
+                ## Only used for tests:
+                firefox imagemagick python310Packages.selenium #implies python310
+              ];
             } // args);
-
-          websiteBuildInputs = [
-            pkgs.inkscape
-            pkgs.j2cli
-            pkgs.jq
-            pkgs.lilypond
-            pkgs.sassc
-            pkgs.texlive.combined.scheme-full
-            pkgs.xvfb-run
-            pkgs.yq-go
-          ];
-
-          websiteTestInputs = [
-            pkgs.firefox
-            pkgs.imagemagick
-            #pkgs.python310 ## is implied by:
-            pkgs.python310Packages.selenium
-          ];
       in
 
         {
           packages.default = self.packages.${system}.website;
 
-          devShells.default = mkDerivation {
-            name = "devshell";
-            buildInputs = websiteBuildInputs ++ websiteTestInputs;
-          };
-
-          packages.website = mkDerivation {
-            name = "website";
-            buildInputs = websiteBuildInputs;
+          packages.website = mkDerivation "website" {
             buildPhase = "make website";
             installPhase = "mkdir $out && cp -R _build/website/* $out/";
           };
 
-          packages.test-website = mkDerivation {
-            name = "test-website";
-            buildInputs = websiteBuildInputs;
+          packages.test-website = mkDerivation "test-website" {
             buildPhase = "make test-website";
             installPhase = "mkdir $out && cp -R _build/website/* $out/";
           };
 
-          packages.tests = mkDerivation {
-            name = "tests";
-            buildInputs = websiteBuildInputs ++ websiteTestInputs;
+          packages.tests = mkDerivation "tests" {
             buildPhase = ''
-          export HOME=$(mktemp -d)
-          make tests website-output=${self.packages.test-website}/
-        '';
+              export HOME=$(mktemp -d)
+              make tests website-output=${self.packages.test-website}/
+            '';
             installPhase = "mkdir $out && cp -R _build/tests/* $out/";
           };
         }
