@@ -27,28 +27,26 @@
                 firefox imagemagick python310Packages.selenium #implies python310
               ];
             } // args);
-      in
+      in {
+        packages.default = self.packages.${system}.website;
 
-        {
-          packages.default = self.packages.${system}.website;
+        packages.website = mkDerivation "website" {
+          buildPhase = "make website";
+          installPhase = "mkdir $out && cp -R _build/website/* $out/";
+        };
 
-          packages.website = mkDerivation "website" {
-            buildPhase = "make website";
-            installPhase = "mkdir $out && cp -R _build/website/* $out/";
-          };
+        packages.test-website = mkDerivation "test-website" {
+          buildPhase = "make test-website";
+          installPhase = "mkdir $out && cp -R _build/website/* $out/";
+        };
 
-          packages.test-website = mkDerivation "test-website" {
-            buildPhase = "make test-website";
-            installPhase = "mkdir $out && cp -R _build/website/* $out/";
-          };
-
-          packages.tests = mkDerivation "tests" {
-            buildPhase = ''
+        packages.tests = mkDerivation "tests" {
+          buildPhase = ''
               export HOME=$(mktemp -d)
               make tests website-output=${self.packages.test-website}/
             '';
-            installPhase = "mkdir $out && cp -R _build/tests/* $out/";
-          };
-        }
+          installPhase = "mkdir $out && cp -R _build/tests/* $out/";
+        };
+      }
     );
 }
