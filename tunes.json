@@ -92,6 +92,21 @@
       ],
       "content": "<<\n  \\relative c'' {\n    \\clef treble\n    \\key c \\major\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 g8 |\n      c,4 e8 g4 c,8 |\n      f g a g4 c8 |\n      g e c a' g f |\n      e d c d4. |\n      \\break\n\n      e4 a8 g4 c8 |\n      e d c b4. |\n      c8 b a g a g |\n      f e d c4\n    } \\break\n\n    \\repeat volta 2 {\n      a'8 |\n      g b d e c a |\n      g b d g e c |\n      f d b e c a |\n      b c a g4 g8 |\n      \\break\n\n      c,4 g'8 f4 a8 |\n      g4 b8 c4 e8 |\n      c a d b g c |\n      c d b c4.\n    } \\break\n\n    g8 a b c4. |\n    f,8 e d c4. |\n    c'8 b e g,4. |\n    f8 e g d4 g8 |\n    \\break\n\n    c,4 e8 g4 c,8 |\n    f g a g4 e'8 |\n    g,4 c8 e,4 g8 |\n    f e d c4\n    \\bar \"|.\"\n  }\n\n  \\chords {\n    s8 |\n    c2. | f4. c | c f | c g |\n    a4.:m c | c g | c g | g c4\n\n    s8 |\n    g4. c | g c | b:dim c | g g |\n    c4. f | g c | f g | c4 g8 c4. |\n\n    g4. c | f c | c g | f g |\n    c2. | f4. c | g c | g c4\n  }\n>>\n"
     },
+    "en-marchant-pour-aller-photocopier-des-trucs": {
+      "name": "En marchant pour aller photocopier des trucs",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2019-08",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "on-the-way-to-the-printing-shop"
+        }
+      ],
+      "composer-details": "I wrote this tune during Summer School 2019. It was an assignment given by Ian\nMuir as part of the course for class musicians. The week was very busy and the\nonly time I found to compose the tune while I was on my way to the centre of\nSt. Andrews to go print music sets.\n",
+      "content": "\\transpose a, d {\n  \\relative g' <<\n    {\n      \\clef treble\n      \\key a \\major\n      \\time 6/8\n\n      \\repeat volta 2 {\n        \\partial 8 b8 |\n        cis8 a a a a gis |\n        fis d d d d cis |\n        b d fis gis fis e |\n        e fis gis a b cis |\n        \\break\n\n        cis a a a a gis |\n        fis d d d d cis |\n        b d fis e gis b |\n        a4. a4\n      } \\break\n\n      gis8 |\n      fis cis cis cis b cis |\n      fis d d d cis d |\n      e b b b a b |\n      cis d e fis gis a |\n      \\break\n\n      fis cis cis cis b cis |\n      fis d d d cis d |\n      e b b b a gis |\n      fis4. fis4 fis8 |\n      \\bar \"||\" \\break\n\n      fis' cis cis cis b cis |\n      fis d d d cis d |\n      e b b b a b |\n      cis d e fis4 d'8 |\n      \\break\n\n      cis a a a a gis fis d d d d cis |\n      b d fis e gis b |\n      a4. a4\n      \\bar \"|.\"\n    }\n\n    \\new ChordNames {\n      \\chordmode {\n        s8 |\n        a2. | d | b:m | e:7 |\n        a2. | d | b4.:m e:7 | a2. |\n\n        fis2.:m/cis | d | e | cis4.:m fis:m |\n        fis2.:m/cis | d | e | fis:m |\n\n        fis2.:m/cis | d | e | cis4.:m d/fis |\n        a2. | d | b4.:m e:7 | a4. s4\n      }\n    }\n  >>\n}\n"
+    },
     "forty-bars-of-clouds": {
       "name": "Forty Bars of Clouds",
       "author": "Nicolas “Niols” Jeannerod",

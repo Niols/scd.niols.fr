@@ -1,0 +1,53 @@
+{
+  "dance": {
+    "name": "On The Way To The Printing Shop",
+    "author": "Giulio Dujany, Pascaline Latour and Nicolas “Niols” Jeannerod",
+    "kind": "32-bar jig for three couples in a four-couple longwise set",
+    "short-kind": "J32 3/4L",
+    "date": "2019-08",
+    "tunes": [
+      {
+        "type": "internal",
+        "slug": "en-marchant-pour-aller-photocopier-des-trucs"
+      }
+    ],
+    "deviser-details": "During Summer School 2019, we talked over lunch about the story of Niols\nwriting his tune “En marchant pour aller composer des trucs”. This led to us\ndevising this dance together to go along with it.\n",
+    "instructions": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 8,
+        "content": "1st couple lead down and up, finishing in 1st place in promenade hold. 2nd\nand 3rd join in the middle of the set in promenade hold.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "content": "1st, 2nd and 3rd couples dance a progressive promenade, finishing with 2nd\ncouple in first place and 1st couple in second place in the middle of the\nset facing their first corners.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 24,
+        "content": "2nd, 1st and 3rd couples dance corners pass and turn, finishing in order\n2, 1, 3 on own sides.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "content": "2nd, 1st and 3rd couples dance six hands round and back.\n"
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by"
+      },
+      {
+        "type": "music by"
+      }
+    ]
+  },
+  "slug": "on-the-way-to-the-printing-shop"
+}
