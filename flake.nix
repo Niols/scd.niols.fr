@@ -11,6 +11,11 @@
           readDirSubset = path: suffix: with builtins; with pkgs.lib;
             map (removeSuffix suffix) (filter (hasSuffix suffix) (readDir path));
 
+          mapToAttrs = f: list: builtins.listToAttrs (map f list);
+          mapToAttrs' = f: mapToAttrs (name: { inherit name; value = f name; });
+
+          inherit (builtins) mapAttrs concatStringsSep trace;
+
           mkDerivation = name: args:
             pkgs.stdenv.mkDerivation ({
               src = self;
@@ -27,26 +32,294 @@
                 firefox imagemagick python310Packages.selenium #implies python310
               ];
             } // args);
-      in {
-        packages.default = self.packages.${system}.website;
 
-        packages.website = mkDerivation "website" {
-          buildPhase = "make website";
-          installPhase = "mkdir $out && cp -R _build/website/* $out/";
-        };
+          singleFileInDerivation = der:
+            let files = readDir "${der}/"; in
+            if builtins.length files == 1 then
+              builtins.head files
+            else
+              builtins.throw "derivation is not single-file";
 
-        packages.test-website = mkDerivation "test-website" {
-          buildPhase = "make test-website";
-          installPhase = "mkdir $out && cp -R _build/website/* $out/";
-        };
+          yaml2json = "yq --output-format json";
+          lilypond = "lilypond --loglevel=warning -dno-point-and-click";
+          inkscape = "HOME=$(mktemp -d) xvfb-run inkscape";
 
-        packages.tests = mkDerivation "tests" {
-          buildPhase = ''
-              export HOME=$(mktemp -d)
-              make tests website-output=${self.packages.test-website}/
+          ## ============== [ One Item's Raw Json ] =============== ##
+
+          mkDerivationItemRawJson = kind: slug:
+            mkDerivation (kind + "-" + slug + "-raw-json") {
+              ## A bit dirty; it should be buildPhase+installPhase.
+              installPhase = ''
+                cat database/${kind}/${slug}.yaml      \
+                    | ${yaml2json}                   \
+                    | jq '{${kind}:., slug:"${slug}"}' \
+                    > $out/${slug}.raw.json
+              '';
+            };
+          mkDerivationDanceRawJson = mkDerivationItemRawJson "dance";
+          mkDerivationTuneRawJson = mkDerivationItemRawJson "tune";
+          mkDerivationBookRawJson = mkDerivationItemRawJson "book";
+
+          ## ================ [ One Item's Json ] ================= ##
+
+          mkDerivationItemJson = kind: prettyKind: slug: derivationAllRawJson: derivationRawJson:
+            mkDerivation (kind + "-" + slug + "-json") {
+              installPhase = ''
+                cat ${derivationRawJson}/${slug}.raw.json \
+                    | jq '. + $all + {title:(.${kind}.name + " | ${prettyKind}"), root:".."}' \
+                          --argjson all "$(cat ${derivationAllRawJson}/all.raw.json)" \
+                    > $out/${slug}.json
+              '';
+            };
+          mkDerivationDanceJson = mkDerivationItemJson "dance" "Dance";
+          mkDerivationTuneJson = mkDerivationItemJson "tune" "Tune";
+          mkDerivationBookJson = mkDerivationItemJson "book" "Book";
+
+          ## ================== [ Dance's PDF ] =================== ##
+
+          mkDerivationDancePdf = slug: derivationDanceJson:
+            mkDerivation ("dance-" + slug + "-pdf") {
+              buildPhase = ''
+                mkdir _build
+                {
+                  cat views/tex/preamble.tex
+                  j2 views/tex/dance.tex.j2 ${derivationDanceJson}/${slug}.json \
+                      --filters views/j2filters.py
+                } > _build/${slug}.tex
+                {
+                  cd _build
+                  xelatex -halt-on-error ${slug}
+                }
+              '';
+              installPhase = ''
+                cp ${slug}.pdf $out/
+              '';
+            };
+
+          ## ================ [ One Item's HTML ] ================= ##
+
+          mkDerivationItemHtml = kind: slug: derivationItemJson:
+            mkDerivation (kind + "-" + slug + "-html") {
+              installPhase = ''
+                j2 views/html/${kind}.html.j2 \
+                    ${derivationItemJson}/${slug}.json \
+                    --filters views/j2filters.py \
+                    > $out/${slug}.html
+              '';
+            };
+          mkDerivationDanceHtml = mkDerivationItemHtml "dance";
+          mkDerivationTuneHtml = mkDerivationItemHtml "tune";
+          mkDerivationBookHtml = mkDerivationItemHtml "book";
+
+          ## =================== [ Tune's PDF ] =================== ##
+
+          mkDerivationTunePdf = slug: derivationTuneJson:
+            mkDerivation ("tune-" + slug + "-pdf") {
+              buildPhase = ''
+                mkdir _build
+                {
+                  cat views/ly/version.ly
+                  cat views/ly/repeat-aware.ly
+                  cat views/ly/bar-number-in-instrument-name-engraver.ly
+                  cat views/ly/beginning-of-line.ly
+                  cat views/ly/repeat-volta-fancy.ly
+                  cat views/ly/preamble.ly
+                  j2 views/ly/tune.ly.j2 \
+                      ${derivationTuneJson}/${slug}.json \
+                      --filters views/j2filters.py
+                } > _build/${slug}.ly
+                {
+                  cd _build
+                  ${lilypond} ${slug}
+                }
+              '';
+              installPhase = ''
+                cp ${slug}.pdf $out/
+              '';
+            };
+
+          ## =================== [ Tune's SVG ] =================== ##
+
+          mkDerivationTuneSvg = slug: derivationTuneJson:
+            mkDerivation ("tune-" + slug + "-svg") {
+              buildPhase = ''
+                mkdir _build
+                {
+                  cat views/ly/version.ly
+                  cat views/ly/repeat-aware.ly
+                  cat views/ly/bar-number-in-instrument-name-engraver.ly
+                  cat views/ly/beginning-of-line.ly
+                  cat views/ly/repeat-volta-fancy.ly
+                  cat views/ly/preamble.ly
+                  cat views/ly/preamble.short.ly
+                  j2 views/ly/tune.ly.j2 ${derivationTuneJson}/${slug}.json \
+                      --filters views/j2filters.py
+                } > _build/${slug}.short.ly
+                {
+                  cd _build
+                  ${lilypond} -dbackend=svg ${slug}.short.ly
+                  ${inkscape} --batch-process --export-area-drawing --export-plain-svg \
+                    --export-filename=${slug}.svg ${slug}.short.svg
+                }
+              '';
+              installPhase = ''
+                cp ${slug}.svg $out/
+              '';
+            };
+
+          ## ====================== [ ... ] ======================= ##
+
+          mkDerivationItemsRawJson = kind: derivationsItemRawJson:
+            mkDerivation (kind + "s-raw-json") {
+              installPhase =
+                if derivationsItemRawJson != [] then
+                  ''
+                    jq -s 'map({(.slug): (.${kind})}) | .+[{}] | add | {${kind}s:.}' \
+                        ${concatStringsSep " " (map singleFileInDerivation derivationsItemRawJson)} \
+                        > $out/${kind}s.raw.json
+                  ''
+                else
+                  ''
+                    echo 'trivial file because no built ${kind}s'
+                    jq -n '{${kind}s:[]}' > $out/${kind}s.raw.json
+                  '';
+            };
+          mkDerivationDancesRawJson = mkDerivationItemsRawJson "dance";
+          mkDerivationTunesRawJson = mkDerivationItemsRawJson "tune";
+          mkDerivationBooksRawJson = mkDerivationItemsRawJson "book";
+
+          ## ====================== [ ... ] ======================= ##
+
+          mkDerivationItemsJson = kind: derivationItemsRawJson:
+            mkDerivation (kind + "s-json") {
+              installPhase = ''
+                cat ${derivationItemsRawJson}/${kind}s.raw.json \
+                    | jq '. + {root:"."}' \
+                    > $out/${kind}s.json
+              '';
+            };
+          mkDerivationDancesJson = mkDerivationItemsJson "dance";
+          mkDerivationTunesJson = mkDerivationItemsJson "tune";
+          mkDerivationBooksJson = mkDerivationItemsJson "book";
+
+          ## ====================== [ ... ] ======================= ##
+
+          mkDerivationItemsHtml = kind: derivationItemsJson:
+            mkDerivation "${kind}s-html" {
+              installPhase = ''
+                j2 views/html/${kind}s.html.j2 \
+                    ${derivationItemsJson}/${kind}s.json \
+                    --filters views/j2filters.py \
+                    > $out/${kind}s.html
+              '';
+            };
+          mkDerivationDancesHtml = mkDerivationItemsHtml "dance";
+          mkDerivationTunesHtml = mkDerivationItemsHtml "tune";
+          mkDerivationBooksHtml = mkDerivationItemsHtml "book";
+
+          ## ================== [ All.Raw.Json ] ================== ##
+
+          mkDerivationAllRawJson = derivationDancesRawJson: derivationTunesRawJson: derivationBooksRawJson:
+            mkDerivation "all-raw-json" {
+              installPhase = ''
+                jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books}' \
+                    ${derivationDancesRawJson}/dances.raw.json \
+                    ${derivationTunesRawJson}/tunes.raw.json \
+                    ${derivationBooksRawJson}/books.raw.json \
+                    > $out/all.raw.json
+              '';
+            };
+
+          ## =================== [ Index.Json ] =================== ##
+
+          mkDerivationIndexAndNonScddbJson = kind: derivationAllRawJson:
+            mkDerivation (kind + "-json") {
+              installPhase = ''
+                cat ${derivationAllRawJson}/all.raw.json \
+                    | jq '. + {root:"."}' \
+                    > $out/${kind}.json
+              '';
+            };
+          mkDerivationIndexJson = mkDerivationIndexAndNonScddbJson "index";
+          mkDerivationNonScddbJson = mkDerivationIndexAndNonScddbJson "non-scddb";
+
+          ## =================== [ Index.Html ] =================== ##
+
+          mkDerivationIndexAndNonScddbHtml = kind: derivationIndexOrNonScddbJson:
+            mkDerivation (kind + "-html") {
+              installPhase = ''
+                j2 views/html/${kind}.html.j2 \
+                    ${derivationIndexOrNonScddbJson}/*.json \
+                    --filters views/j2filters.py \
+                    > $out/${kind}.html
+              '';
+            };
+          mkDerivationIndexHtml = mkDerivationIndexAndNonScddbHtml "index";
+          mkDerivationNonScddbHtml = mkDerivationIndexAndNonScddbHtml "non-scddb";
+
+          ## ====================== [ ... ] ======================= ##
+
+          derivationStyleCss = mkDerivation "style-css" {
+            installPhase = ''
+              mkdir $out
+              sassc views/css/style.scss $out/style.css
             '';
-          installPhase = "mkdir $out && cp -R _build/tests/* $out/";
-        };
+          };
+
+          derivationStatic = mkDerivation "static" {
+            installPhase = ''
+              mkdir $out
+              cp views/css/reset.css $out
+              cp ${derivationStyleCss}/style.css $out
+              cp -R views/static/* $out
+            '';
+          };
+
+          derivationWebsite =
+            let danceSlugs = readDirSubset ./database/dance ".yaml";
+                tuneSlugs = readDirSubset ./database/tune ".yaml";
+                bookSlugs = readDirSubset ./database/book ".yaml";
+
+                danceRawJsons = mapToAttrs' (slug: mkDerivationDanceRawJson slug) danceSlugs;
+                tuneRawJsons = mapToAttrs' (slug: mkDerivationTuneRawJson slug) tuneSlugs;
+                bookRawJsons = mapToAttrs' (slug: mkDerivationBookRawJson slug) bookSlugs;
+
+                dancesRawJson = mkDerivationDancesRawJson danceRawJsons;
+                tunesRawJson = mkDerivationTunesRawJson tuneRawJsons;
+                booksRawJson = mkDerivationBooksRawJson bookRawJsons;
+
+                allRawJson = mkDerivationAllRawJson dancesRawJson tunesRawJson booksRawJson;
+
+                danceJsons = mapAttrs (_: mkDerivationDanceJson allRawJson) danceRawJsons;
+                tuneJsons = mapAttrs (_: mkDerivationTuneJson allRawJson) tuneRawJsons;
+                bookJsons = mapAttrs (_: mkDerivationBookJson allRawJson) bookRawJsons;
+
+                dancePdfs = mapAttrs mkDerivationDancePdf danceJsons;
+                danceHtmls = mapAttrs mkDerivationDanceHtml danceJsons;
+
+                tunePdfs = mapAttrs mkDerivationTunePdf tuneJsons;
+                tuneSvgs = mapAttrs mkDerivationTuneSvg tuneJsons;
+                tuneHtmls = mapAttrs mkDerivationTuneHtml tuneJsons;
+
+                bookHtmls = mapAttrs mkDerivationBookHtml bookJsons;
+
+                indexJson = mkDerivationIndexJson allRawJson;
+                nonScddbJson = mkDerivationNonScddbJson allRawJson;
+
+                indexHtml = mkDerivationIndexHtml indexJson;
+                nonScddbHtml = mkDerivationNonScddbHtml nonScddbJson;
+
+            in mkDerivation "website" {
+              installPhase = ''
+                mkdir $out
+                cp ${derivationStatic}/* $out
+                cp ${indexHtml}/* ${nonScddbHtml}/* $out
+                mkdir dance tune book
+              '' + concatStringsSep "\n" (map (danceHtml: "cp ${danceHtml}/* dance/") danceHtmls)
+              ;
+            };
+      in {
+        packages.default = derivationWebsite;
       }
     );
 }
