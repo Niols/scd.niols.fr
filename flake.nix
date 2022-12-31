@@ -52,6 +52,7 @@
             mkDerivation (kind + "-" + slug + "-raw-json") {
               ## A bit dirty; it should be buildPhase+installPhase.
               installPhase = ''
+                mkdir $out
                 cat database/${kind}/${slug}.yaml      \
                     | ${yaml2json}                   \
                     | jq '{${kind}:., slug:"${slug}"}' \
@@ -67,6 +68,7 @@
           mkDerivationItemJson = kind: prettyKind: slug: derivationAllRawJson: derivationRawJson:
             mkDerivation (kind + "-" + slug + "-json") {
               installPhase = ''
+                mkdir $out
                 cat ${derivationRawJson}/${slug}.raw.json \
                     | jq '. + $all + {title:(.${kind}.name + " | ${prettyKind}"), root:".."}' \
                           --argjson all "$(cat ${derivationAllRawJson}/all.raw.json)" \
@@ -94,7 +96,7 @@
                 }
               '';
               installPhase = ''
-                cp ${slug}.pdf $out/
+                install -t $out ${slug}.pdf
               '';
             };
 
@@ -103,6 +105,7 @@
           mkDerivationItemHtml = kind: slug: derivationItemJson:
             mkDerivation (kind + "-" + slug + "-html") {
               installPhase = ''
+                mkdir $out
                 j2 views/html/${kind}.html.j2 \
                     ${derivationItemJson}/${slug}.json \
                     --filters views/j2filters.py \
@@ -136,7 +139,7 @@
                 }
               '';
               installPhase = ''
-                cp ${slug}.pdf $out/
+                install -t $out ${slug}.pdf
               '';
             };
 
@@ -167,7 +170,7 @@
                 }
               '';
               installPhase = ''
-                cp ${slug}.svg $out/
+                install -t $out ${slug}.svg
               '';
             };
 
@@ -178,12 +181,14 @@
               installPhase =
                 if derivationsItemRawJson != [] then
                   ''
+                    mkdir $out
                     jq -s 'map({(.slug): (.${kind})}) | .+[{}] | add | {${kind}s:.}' \
                         ${concatStringsSep " " (mapAttrsAsList singleFileInDerivation derivationsItemRawJson)} \
                         > $out/${kind}s.raw.json
                   ''
                 else
                   ''
+                    mkdir $out
                     echo 'trivial file because no built ${kind}s'
                     jq -n '{${kind}s:[]}' > $out/${kind}s.raw.json
                   '';
@@ -197,6 +202,7 @@
           mkDerivationItemsJson = kind: derivationItemsRawJson:
             mkDerivation (kind + "s-json") {
               installPhase = ''
+                mkdir $out
                 cat ${derivationItemsRawJson}/${kind}s.raw.json \
                     | jq '. + {root:"."}' \
                     > $out/${kind}s.json
@@ -211,6 +217,7 @@
           mkDerivationItemsHtml = kind: derivationItemsJson:
             mkDerivation "${kind}s-html" {
               installPhase = ''
+                mkdir $out
                 j2 views/html/${kind}s.html.j2 \
                     ${derivationItemsJson}/${kind}s.json \
                     --filters views/j2filters.py \
@@ -226,6 +233,7 @@
           mkDerivationAllRawJson = derivationDancesRawJson: derivationTunesRawJson: derivationBooksRawJson:
             mkDerivation "all-raw-json" {
               installPhase = ''
+                mkdir $out
                 jq -s '{dances:.[0].dances, tunes:.[1].tunes, books:.[2].books}' \
                     ${derivationDancesRawJson}/dances.raw.json \
                     ${derivationTunesRawJson}/tunes.raw.json \
@@ -239,6 +247,7 @@
           mkDerivationIndexAndNonScddbJson = kind: derivationAllRawJson:
             mkDerivation (kind + "-json") {
               installPhase = ''
+                mkdir $out
                 cat ${derivationAllRawJson}/all.raw.json \
                     | jq '. + {root:"."}' \
                     > $out/${kind}.json
@@ -252,6 +261,7 @@
           mkDerivationIndexAndNonScddbHtml = kind: derivationIndexOrNonScddbJson:
             mkDerivation (kind + "-html") {
               installPhase = ''
+                mkdir $out
                 j2 views/html/${kind}.html.j2 \
                     ${derivationIndexOrNonScddbJson}/*.json \
                     --filters views/j2filters.py \
@@ -319,7 +329,7 @@
                 cp ${derivationStatic}/* $out
                 cp ${indexHtml}/* ${nonScddbHtml}/* $out
                 mkdir dance tune book
-              '' + concatStringsSep "\n" (map (danceHtml: "cp ${danceHtml}/* dance/") danceHtmls)
+              '' + concatStringsSep "\n" (mapAttrsAsList (danceHtml: "cp ${danceHtml}/* dance/") danceHtmls)
               ;
             };
       in {
