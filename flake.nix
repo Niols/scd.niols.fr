@@ -14,6 +14,8 @@
           mapToAttrs = f: list: builtins.listToAttrs (map f list);
           mapToAttrs' = f: mapToAttrs (name: { inherit name; value = f name; });
 
+          mapAttrsAsList = f: set: map f (builtins.attrValues set);
+
           inherit (builtins) mapAttrs concatStringsSep trace;
 
           mkDerivation = name: args:
@@ -31,6 +33,8 @@
                 ## Only used for tests:
                 firefox imagemagick python310Packages.selenium #implies python310
               ];
+
+              buildPhase = "true";
             } // args);
 
           singleFileInDerivation = der:
@@ -41,8 +45,6 @@
               builtins.throw "derivation is not single-file";
 
           yaml2json = "yq --output-format json";
-          lilypond = "lilypond --loglevel=warning -dno-point-and-click";
-          inkscape = "HOME=$(mktemp -d) xvfb-run inkscape";
 
           ## ============== [ One Item's Raw Json ] =============== ##
 
@@ -130,7 +132,7 @@
                 } > _build/${slug}.ly
                 {
                   cd _build
-                  ${lilypond} ${slug}
+                  lilypond --loglevel=warning -dno-point-and-click ${slug}
                 }
               '';
               installPhase = ''
@@ -157,9 +159,11 @@
                 } > _build/${slug}.short.ly
                 {
                   cd _build
-                  ${lilypond} -dbackend=svg ${slug}.short.ly
-                  ${inkscape} --batch-process --export-area-drawing --export-plain-svg \
-                    --export-filename=${slug}.svg ${slug}.short.svg
+                  lilypond --loglevel=warning -dno-point-and-click \
+                      -dbackend=svg ${slug}.short.ly
+                  HOME=$(mktemp -d) xvfb-run inkscape \
+                      --batch-process --export-area-drawing --export-plain-svg \
+                      --export-filename=${slug}.svg ${slug}.short.svg
                 }
               '';
               installPhase = ''
@@ -175,7 +179,7 @@
                 if derivationsItemRawJson != [] then
                   ''
                     jq -s 'map({(.slug): (.${kind})}) | .+[{}] | add | {${kind}s:.}' \
-                        ${concatStringsSep " " (map singleFileInDerivation derivationsItemRawJson)} \
+                        ${concatStringsSep " " (mapAttrsAsList singleFileInDerivation derivationsItemRawJson)} \
                         > $out/${kind}s.raw.json
                   ''
                 else
