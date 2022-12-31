@@ -16,7 +16,7 @@
 
           mapAttrsAsList = f: set: map f (builtins.attrValues set);
 
-          inherit (builtins) mapAttrs concatStringsSep trace;
+          inherit (builtins) mapAttrs concatStringsSep;
 
           mkDerivation = name: args:
             pkgs.stdenv.mkDerivation ({
@@ -294,9 +294,9 @@
                 tuneSlugs = readDirSubset ./database/tune ".yaml";
                 bookSlugs = readDirSubset ./database/book ".yaml";
 
-                danceRawJsons = mapToAttrs' (slug: mkDerivationDanceRawJson slug) danceSlugs;
-                tuneRawJsons = mapToAttrs' (slug: mkDerivationTuneRawJson slug) tuneSlugs;
-                bookRawJsons = mapToAttrs' (slug: mkDerivationBookRawJson slug) bookSlugs;
+                danceRawJsons = mapToAttrs' mkDerivationDanceRawJson danceSlugs;
+                tuneRawJsons = mapToAttrs' mkDerivationTuneRawJson tuneSlugs;
+                bookRawJsons = mapToAttrs' mkDerivationBookRawJson bookSlugs;
 
                 dancesRawJson = mkDerivationDancesRawJson danceRawJsons;
                 tunesRawJson = mkDerivationTunesRawJson tuneRawJsons;
@@ -304,9 +304,9 @@
 
                 allRawJson = mkDerivationAllRawJson dancesRawJson tunesRawJson booksRawJson;
 
-                danceJsons = mapAttrs (_: mkDerivationDanceJson allRawJson) danceRawJsons;
-                tuneJsons = mapAttrs (_: mkDerivationTuneJson allRawJson) tuneRawJsons;
-                bookJsons = mapAttrs (_: mkDerivationBookJson allRawJson) bookRawJsons;
+                danceJsons = mapAttrs (slug: mkDerivationDanceJson slug allRawJson) danceRawJsons;
+                tuneJsons = mapAttrs (slug: mkDerivationTuneJson slug allRawJson) tuneRawJsons;
+                bookJsons = mapAttrs (slug: mkDerivationBookJson slug allRawJson) bookRawJsons;
 
                 dancePdfs = mapAttrs mkDerivationDancePdf danceJsons;
                 danceHtmls = mapAttrs mkDerivationDanceHtml danceJsons;
