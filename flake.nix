@@ -7,9 +7,9 @@
       let pkgs = import nixpkgs { inherit system; };
 
           ## Reads a directory and returns a list of file names.
-          readDir = path: with builtins; attrNames (readDir path);
+          readDir' = path: with builtins; attrNames (readDir path);
           readDirSubset = path: suffix: with builtins; with pkgs.lib;
-            map (removeSuffix suffix) (filter (hasSuffix suffix) (readDir path));
+            map (removeSuffix suffix) (filter (hasSuffix suffix) (readDir' path));
 
           mapToAttrs = f: list: builtins.listToAttrs (map f list);
           mapToAttrs' = f: mapToAttrs (name: { inherit name; value = f name; });
@@ -34,7 +34,7 @@
             } // args);
 
           singleFileInDerivation = der:
-            let files = readDir "${der}/"; in
+            let files = readDir' "${der}/"; in
             if builtins.length files == 1 then
               builtins.head files
             else
