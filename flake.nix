@@ -298,18 +298,18 @@
           defaultTuneSlugs = readDirSubset ./database/tune ".yaml";
           defaultBookSlugs = readDirSubset ./database/book ".yaml";
 
-          defaultDanceSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultDanceSlugs;
-          defaultTuneSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultTuneSlugs;
-          defaultBookSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultBookSlugs;
-
           derivationWebsite = {
-            danceSlugs ? defaultDanceSlugs'
-            , tuneSlugs ? defaultTuneSlugs'
-            , bookSlugs ? defaultBookSlugs'
+            danceSlugs ? defaultDanceSlugs
+            , tuneSlugs ? defaultTuneSlugs
+            , bookSlugs ? defaultBookSlugs
           }:
-            let danceRawJsons = mapAttrs (slug: _: mkDerivationDanceRawJson slug) danceSlugs;
-                tuneRawJsons = mapAttrs (slug: _: mkDerivationTuneRawJson slug) tuneSlugs;
-                bookRawJsons = mapAttrs (slug: _: mkDerivationBookRawJson slug) bookSlugs;
+            let danceSlugs' = mapToAttrs (slug: { name = slug; value = null; }) danceSlugs;
+                tuneSlugs' = mapToAttrs (slug: { name = slug; value = null; }) tuneSlugs;
+                bookSlugs' = mapToAttrs (slug: { name = slug; value = null; }) bookSlugs;
+
+                danceRawJsons = mapAttrs (slug: _: mkDerivationDanceRawJson slug) danceSlugs';
+                tuneRawJsons = mapAttrs (slug: _: mkDerivationTuneRawJson slug) tuneSlugs';
+                bookRawJsons = mapAttrs (slug: _: mkDerivationBookRawJson slug) bookSlugs';
 
                 dancesRawJson = mkDerivationDancesRawJson danceRawJsons;
                 tunesRawJson = mkDerivationTunesRawJson tuneRawJsons;
