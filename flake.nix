@@ -299,9 +299,13 @@
                 tuneSlugs = readDirSubset ./database/tune ".yaml";
                 bookSlugs = readDirSubset ./database/book ".yaml";
 
-                danceRawJsons = mapToAttrs' mkDerivationDanceRawJson danceSlugs;
-                tuneRawJsons = mapToAttrs' mkDerivationTuneRawJson tuneSlugs;
-                bookRawJsons = mapToAttrs' mkDerivationBookRawJson bookSlugs;
+                danceSlugs' = mapToAttrs (slug: { name = slug; value = null; }) danceSlugs;
+                tuneSlugs' = mapToAttrs (slug: { name = slug; value = null; }) tuneSlugs;
+                bookSlugs' = mapToAttrs (slug: { name = slug; value = null; }) bookSlugs;
+
+                danceRawJsons = mapAttrs (slug: _: mkDerivationDanceRawJson slug) danceSlugs';
+                tuneRawJsons = mapAttrs (slug: _: mkDerivationTuneRawJson slug) tuneSlugs';
+                bookRawJsons = mapAttrs (slug: _: mkDerivationBookRawJson slug) bookSlugs';
 
                 dancesRawJson = mkDerivationDancesRawJson danceRawJsons;
                 tunesRawJson = mkDerivationTunesRawJson tuneRawJsons;
@@ -321,8 +325,6 @@
                 tuneHtmls = mapAttrs mkDerivationTuneHtml tuneJsons;
 
                 bookHtmls = mapAttrs mkDerivationBookHtml bookJsons;
-
-                ## Indexes
 
                 dancesJson = mkDerivationDancesJson dancesRawJson;
                 tunesJson = mkDerivationTunesJson tunesRawJson;
