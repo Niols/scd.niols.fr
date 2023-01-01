@@ -294,18 +294,22 @@
             '';
           };
 
-          derivationWebsite =
-            let danceSlugs = readDirSubset ./database/dance ".yaml";
-                tuneSlugs = readDirSubset ./database/tune ".yaml";
-                bookSlugs = readDirSubset ./database/book ".yaml";
+          defaultDanceSlugs = readDirSubset ./database/dance ".yaml";
+          defaultTuneSlugs = readDirSubset ./database/tune ".yaml";
+          defaultBookSlugs = readDirSubset ./database/book ".yaml";
 
-                danceSlugs' = mapToAttrs (slug: { name = slug; value = null; }) danceSlugs;
-                tuneSlugs' = mapToAttrs (slug: { name = slug; value = null; }) tuneSlugs;
-                bookSlugs' = mapToAttrs (slug: { name = slug; value = null; }) bookSlugs;
+          defaultDanceSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultDanceSlugs;
+          defaultTuneSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultTuneSlugs;
+          defaultBookSlugs' = mapToAttrs (slug: { name = slug; value = null; }) defaultBookSlugs;
 
-                danceRawJsons = mapAttrs (slug: _: mkDerivationDanceRawJson slug) danceSlugs';
-                tuneRawJsons = mapAttrs (slug: _: mkDerivationTuneRawJson slug) tuneSlugs';
-                bookRawJsons = mapAttrs (slug: _: mkDerivationBookRawJson slug) bookSlugs';
+          derivationWebsite = {
+            danceSlugs ? defaultDanceSlugs'
+            , tuneSlugs ? defaultTuneSlugs'
+            , bookSlugs ? defaultBookSlugs'
+          }:
+            let danceRawJsons = mapAttrs (slug: _: mkDerivationDanceRawJson slug) danceSlugs;
+                tuneRawJsons = mapAttrs (slug: _: mkDerivationTuneRawJson slug) tuneSlugs;
+                bookRawJsons = mapAttrs (slug: _: mkDerivationBookRawJson slug) bookSlugs;
 
                 dancesRawJson = mkDerivationDancesRawJson danceRawJsons;
                 tunesRawJson = mkDerivationTunesRawJson tuneRawJsons;
@@ -356,7 +360,7 @@
               ;
             };
       in {
-        packages.default = derivationWebsite;
+        packages.default = derivationWebsite {};
       }
     );
 }
