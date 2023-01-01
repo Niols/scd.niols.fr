@@ -322,6 +322,16 @@
 
                 bookHtmls = mapAttrs mkDerivationBookHtml bookJsons;
 
+                ## Indexes
+
+                dancesJson = mkDerivationDancesJson dancesRawJson;
+                tunesJson = mkDerivationTunesJson tunesRawJson;
+                booksJson = mkDerivationBooksJson booksRawJson;
+
+                dancesHtml = mkDerivationDancesHtml dancesJson;
+                tunesHtml = mkDerivationTunesHtml tunesJson;
+                booksHtml = mkDerivationBooksHtml booksJson;
+
                 indexJson = mkDerivationIndexJson allRawJson;
                 nonScddbJson = mkDerivationNonScddbJson allRawJson;
 
@@ -333,8 +343,11 @@
                 mkdir $out
                 cp -R ${derivationStatic}/* $out
                 cp ${indexHtml}/* ${nonScddbHtml}/* $out
-                mkdir dance tune book
-              '' + concatStringsSep "\n" (mapAttrsAsList (danceHtml: "cp ${danceHtml}/* dance/") danceHtmls)
+                cp ${dancesHtml}/* ${tunesHtml}/* ${booksHtml}/* $out
+                mkdir $out/dance $out/tune $out/book
+              ''     + concatStringsSep "\n" (mapAttrsAsList (danceHtml: "cp ${danceHtml}/* $out/dance/") danceHtmls)
+              + "\n" + concatStringsSep "\n" (mapAttrsAsList (tuneHtml: "cp ${tuneHtml}/* $out/tune/") tuneHtmls)
+              + "\n" + concatStringsSep "\n" (mapAttrsAsList (bookHtml: "cp ${bookHtml}/* $out/book/") bookHtmls)
               ;
             };
       in {
