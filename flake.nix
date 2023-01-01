@@ -348,7 +348,10 @@
                 cp ${dancesHtml}/* ${tunesHtml}/* ${booksHtml}/* $out
                 mkdir $out/dance $out/tune $out/book
               ''     + concatStringsSep "\n" (mapAttrsAsList (danceHtml: "cp ${danceHtml}/* $out/dance/") danceHtmls)
+              + "\n" + concatStringsSep "\n" (mapAttrsAsList (dancePdf: "cp ${dancePdf}/* $out/dance/") dancePdfs)
               + "\n" + concatStringsSep "\n" (mapAttrsAsList (tuneHtml: "cp ${tuneHtml}/* $out/tune/") tuneHtmls)
+              + "\n" + concatStringsSep "\n" (mapAttrsAsList (tuneSvg: "cp ${tuneSvg}/* $out/tune/") tuneSvgs)
+              + "\n" + concatStringsSep "\n" (mapAttrsAsList (tunePdf: "cp ${tunePdf}/* $out/tune/") tunePdfs)
               + "\n" + concatStringsSep "\n" (mapAttrsAsList (bookHtml: "cp ${bookHtml}/* $out/book/") bookHtmls)
               ;
             };
