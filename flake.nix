@@ -34,6 +34,7 @@
                 firefox imagemagick python310Packages.selenium #implies python310
               ];
 
+              ## Default build phase is to do nothing, not to do `make`.
               buildPhase = "true";
 
               ## Do not look this derivation up in substitutes, because it is
