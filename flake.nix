@@ -35,6 +35,10 @@
               ];
 
               buildPhase = "true";
+
+              ## Do not look this derivation up in substitutes, because it is
+              ## never going to be there.
+              allowSubstitutes = false;
             } // args);
 
           singleFileInDerivation = der:
