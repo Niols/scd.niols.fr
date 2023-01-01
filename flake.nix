@@ -101,7 +101,7 @@
                 }
               '';
               installPhase = ''
-                install -t $out ${slug}.pdf
+                install -Dt $out ${slug}.pdf
               '';
             };
 
@@ -144,7 +144,7 @@
                 }
               '';
               installPhase = ''
-                install -t $out ${slug}.pdf
+                install -Dt $out ${slug}.pdf
               '';
             };
 
@@ -175,7 +175,7 @@
                 }
               '';
               installPhase = ''
-                install -t $out ${slug}.svg
+                install -Dt $out ${slug}.svg
               '';
             };
 
