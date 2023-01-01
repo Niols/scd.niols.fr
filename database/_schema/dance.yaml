@@ -327,9 +327,10 @@ $defs:
           description: |
             The slug of the tune, that is the name of the database YAML file,
             without extension.
-        examples:
-          - type: internal
-            slug: la-ville-lumiere
+      additionalProperties: false
+      examples:
+        - type: internal
+          slug: la-ville-lumiere
 
     external:
       type: object
@@ -356,8 +357,9 @@ $defs:
           description: |
             The identifier in the SCDDB. That is the number at the end of the
             SCDDB URL of the tune.
-        examples:
-          - type: external
-            name: The Drunken Piper
-            deviser: Alexander McLeod
-            scddb-id: 430
+      additionalProperties: false
+      examples:
+        - type: external
+          name: The Drunken Piper
+          composer: Alexander McLeod
+          scddb-id: 430
