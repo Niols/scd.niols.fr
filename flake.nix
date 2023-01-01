@@ -45,7 +45,7 @@
           singleFileInDerivation = der:
             let files = readDir' "${der}/"; in
             if builtins.length files == 1 then
-              builtins.head files
+              "${der}/" + builtins.head files
             else
               builtins.throw "derivation is not single-file";
 
