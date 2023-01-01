@@ -331,7 +331,7 @@
             in mkDerivation "website" {
               installPhase = ''
                 mkdir $out
-                cp ${derivationStatic}/* $out
+                cp -R ${derivationStatic}/* $out
                 cp ${indexHtml}/* ${nonScddbHtml}/* $out
                 mkdir dance tune book
               '' + concatStringsSep "\n" (mapAttrsAsList (danceHtml: "cp ${danceHtml}/* dance/") danceHtmls)
