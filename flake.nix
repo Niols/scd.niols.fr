@@ -340,7 +340,7 @@
                 indexHtml = mkDerivationIndexHtml indexJson;
                 nonScddbHtml = mkDerivationNonScddbHtml nonScddbJson;
 
-            in mkDerivation "website" {
+            in mkDerivation "scd-niols-fr" {
               installPhase = ''
                 mkdir $out
                 cp -R ${derivationStatic}/* $out
