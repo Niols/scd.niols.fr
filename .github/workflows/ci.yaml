@@ -83,7 +83,7 @@ jobs:
               --command make website
 
       - name: Upload Website as Artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: website
           path: _build/website
@@ -108,7 +108,7 @@ jobs:
           generate-schema-doc 'database/_schema/*.yaml' _build/doc/schema
 
       - name: Upload Documentation as Artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: documentation
           path: _build/doc
@@ -179,7 +179,7 @@ jobs:
         ## NOTE: The tests are productive even when they fail. Therefore, it
         ## can be useful to upload the archive no matter what. In worst case,
         ## it will be empty.
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: tests
           path: _build/tests
