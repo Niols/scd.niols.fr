@@ -1,6 +1,4 @@
 {
-  description = "Flake for building and developing scd.niols.fr";
-
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-22.05;
 
   outputs = { self, nixpkgs }:
@@ -11,6 +9,9 @@
             src = self;
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
               pkgs.google-fonts ]; };
+            ## Do not look this derivation up in substitutes, because it is
+            ## never going to be there.
+            allowSubstitutes = false;
           } // args);
 
         websiteBuildInputs = [

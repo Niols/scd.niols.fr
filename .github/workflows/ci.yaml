@@ -83,7 +83,7 @@ jobs:
               --command make website
 
       - name: Upload Website as Artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: website
           path: _build/website
@@ -108,7 +108,7 @@ jobs:
           generate-schema-doc 'database/_schema/*.yaml' _build/doc/schema
 
       - name: Upload Documentation as Artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: documentation
           path: _build/doc
@@ -179,7 +179,7 @@ jobs:
         ## NOTE: The tests are productive even when they fail. Therefore, it
         ## can be useful to upload the archive no matter what. In worst case,
         ## it will be empty.
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: tests
           path: _build/tests
@@ -198,13 +198,13 @@ jobs:
     steps:
 
       - name: Download Website from Artifacts
-        uses: actions/download-artifact@v3.0.1
+        uses: actions/download-artifact@v3.0.2
         with:
           name: website
           path: ./website
 
       - name: Publish Website to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.9.0
+        uses: peaceiris/actions-gh-pages@v3.9.2
         with:
           ## Publish `./website` with following commit message...
           publish_dir: ./website
@@ -238,7 +238,7 @@ jobs:
 
       - name: Download Website from Artifacts
         if: needs.build-website.result == 'success'
-        uses: actions/download-artifact@v3.0.1
+        uses: actions/download-artifact@v3.0.2
         with:
           name: website
           path: ./website
@@ -249,7 +249,7 @@ jobs:
 
       - name: Download Documentation from Artifacts
         if: needs.build-documentation.result == 'success'
-        uses: actions/download-artifact@v3.0.1
+        uses: actions/download-artifact@v3.0.2
         with:
           name: documentation
           path: ./website/_doc/
@@ -257,7 +257,7 @@ jobs:
       - name: Download Tests from Artifacts
         ## NOTE: No need to check for success, because the tests upload their
         ## archive no matter what happens.
-        uses: actions/download-artifact@v3.0.1
+        uses: actions/download-artifact@v3.0.2
         with:
           name: tests
           path: ./website/_tests/
@@ -280,7 +280,7 @@ jobs:
           echo "commit_message=$msg" >> $GITHUB_ENV
 
       - name: Publish Dev Website to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.9.0
+        uses: peaceiris/actions-gh-pages@v3.9.2
         with:
           ## Publish `./website` with following commit message...
           publish_dir: ./website
