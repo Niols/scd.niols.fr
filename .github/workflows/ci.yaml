@@ -171,6 +171,26 @@ jobs:
           path: _build/tests
 
   ############################################################################
+  ## Run Flake Checks
+
+  test-flake-checks:
+    runs-on: ubuntu-latest
+    needs: setup-dependencies
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Nix
+        uses: ./.github/composites/setup-nix
+        with:
+          githubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+          cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+
+      - name: Run Flake Checks
+        run: nix flake check --print-build-logs
+
+  ############################################################################
   ## Publish Website
 
   publish-website:
@@ -178,6 +198,7 @@ jobs:
     needs:
       - build-website
       - test-website
+      - test-flake-checks
 
     if: ${{ github.ref == 'refs/heads/main' }}
 
@@ -294,6 +315,7 @@ jobs:
       - build-documentation
       - test-schemas
       - test-website
+      - test-flake-checks
       - publish-website
       - publish-dev-website
 
