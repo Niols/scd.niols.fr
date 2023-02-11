@@ -30,7 +30,7 @@ jobs:
             Hey! I will publish the pages for this pull request here:
 
             - Repository: https://github.com/Niols/dev.scd.niols.fr/
-            - Rendering: http://dev.scd.niols.fr/pr/${{ github.event.number }}
+            - Rendering: http://dev.scd.niols.fr/pr/${{ github.event.number }}/
 
             For each push, you will see something like:
 
