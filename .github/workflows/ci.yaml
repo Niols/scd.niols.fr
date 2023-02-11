@@ -25,12 +25,12 @@ jobs:
       - name: Give Link to GitHub Pages for this Pull Request
         uses: peter-evans/create-or-update-comment@v2.1.1
         with:
-          issue-number: ${{ context.issue.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             Hey! I will publish the pages for this pull request here:
 
             - Repository: https://github.com/Niols/dev.scd.niols.fr/
-            - Rendering: http://dev.scd.niols.fr/pr/${{ context.issue.number }}
+            - Rendering: http://dev.scd.niols.fr/pr/${{ github.event.issue.number }}
 
             For each push, you will see something like:
 
