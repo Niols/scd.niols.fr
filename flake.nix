@@ -4,19 +4,13 @@
 
   outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [ ./.nix/lib.nix ];
+
       systems = [ "x86_64-linux" ];
 
       perSystem = { self', pkgs, ... }:
         let
-          mkDerivation = args:
-            pkgs.stdenv.mkDerivation ({
-              src = self;
-              FONTCONFIG_FILE =
-                pkgs.makeFontsConf { fontDirectories = [ pkgs.google-fonts ]; };
-              ## Do not look this derivation up in substitutes, because it is
-              ## never going to be there.
-              allowSubstitutes = false;
-            } // args);
+          mkDerivation = self.lib.mkDerivationFor pkgs;
 
           websiteBuildInputs = [
             pkgs.inkscape
