@@ -1,5 +1,4 @@
 ---
-
 name: Spot on
 author: Shona Holmes
 scddb-id: 21106
@@ -15,7 +14,6 @@ deviser-details: |
   and 17-20 create perfect spots. Thank you Rachel!
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 4

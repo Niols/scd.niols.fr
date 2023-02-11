@@ -1,5 +1,4 @@
 ---
-
 name: In Strathspey Time, George, Please!
 author: Shona Holmes
 scddb-id: 21105
@@ -22,7 +21,6 @@ tunes:
     slug: a-strath-reel-for-george
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8

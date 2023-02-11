@@ -1,5 +1,4 @@
 ---
-
 name: The Mall in St. James’s Park
 author: Nicolas “Niols” Jeannerod
 scddb-id: 20991
@@ -17,7 +16,6 @@ tunes:
     slug: the-mall-in-st-james-s-park
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8

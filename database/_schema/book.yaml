@@ -1,5 +1,4 @@
 ---
-
 $schema: https://json-schema.org/draft/2020-12/schema
 
 $id: book
@@ -15,7 +14,6 @@ required:
   - summary
 
 properties:
-
   title:
     type: string
     description: |
@@ -45,7 +43,6 @@ properties:
 additionalProperties: false
 
 $defs:
-
   contents:
     title: Toplevel Book Contents
     description: |

@@ -1,5 +1,4 @@
 ---
-
 name: A Wee Journey
 author: Nicolas “Niols” Jeannerod
 scddb-id: 20990
@@ -15,7 +14,6 @@ deviser-details: |
   demands for Unit 2.
 
 instructions:
-
   - type: two chords
     couples-cross: "4th, 5th and 6th"
 

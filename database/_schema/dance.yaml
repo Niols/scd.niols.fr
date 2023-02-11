@@ -1,5 +1,4 @@
 ---
-
 $schema: https://json-schema.org/draft/2020-12/schema
 
 $id: dance
@@ -17,7 +16,6 @@ required:
   - short-kind
 
 properties:
-
   name:
     type: string
     description: |
@@ -128,9 +126,7 @@ properties:
 additionalProperties: false
 
 $defs:
-
   instructions:
-
     item:
       oneOf:
         - $ref: "#/$defs/instructions/note"
@@ -310,7 +306,6 @@ $defs:
         - type: music by
 
   tunes:
-
     internal:
       type: object
       description: |

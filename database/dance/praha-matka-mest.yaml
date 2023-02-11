@@ -1,5 +1,4 @@
 ---
-
 name: Praha Matka Měst
 author: Nicolas “Niols” Jeannerod
 scddb-id: 20992
@@ -16,7 +15,6 @@ editor-details: |
   to protect the independence and prosperity of the Czecho-Slovakian state.
 
 instructions:
-
   - type: two chords
     couples-cross: "2nd and 3rd"
 

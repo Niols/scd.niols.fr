@@ -14,3 +14,4 @@ __pycache__
 /result
 /.envrc
 /.direnv
+/.pre-commit-config.yaml

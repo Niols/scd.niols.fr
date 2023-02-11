@@ -1,5 +1,4 @@
 ---
-
 name: On The Way To The Printing Shop
 author: Giulio Dujany, Pascaline Latour and Nicolas “Niols” Jeannerod
 short-author: Giulio Dujany et al.
@@ -19,7 +18,6 @@ deviser-details: |
   us devising this dance together to go along with it.
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8

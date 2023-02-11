@@ -1,5 +1,4 @@
 ---
-
 name: Units 2 and 3
 author: David Osgarby
 scddb-id: 21108
@@ -23,7 +22,6 @@ deviser-details: |
   lack thereof)!
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 4

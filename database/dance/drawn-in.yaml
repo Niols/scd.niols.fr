@@ -1,5 +1,4 @@
 ---
-
 name: Drawn in
 author: Shannon Kiernan
 scddb-id: 20314
@@ -14,7 +13,6 @@ tunes:
     slug: the-translator
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8
