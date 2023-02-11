@@ -9,7 +9,6 @@
         inputs.pre-commit-hooks.flakeModule
         ./.nix/lib.nix
         ./.nix/pre-commit-settings.nix
-        ./.nix/nix-config.nix
       ];
 
       systems = [ "x86_64-linux" ];
@@ -69,4 +68,11 @@
           };
         };
     };
+
+  nixConfig = {
+    extra-trusted-substituters = [ "https://scd-niols-fr.cachix.org/" ];
+    extra-trusted-public-keys = [
+      "scd-niols-fr.cachix.org-1:7NP/UmPtYppVv3Qq7C6MNLL6jVL8x8bcPB96NckZpDw="
+    ];
+  };
 }
