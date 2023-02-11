@@ -9,6 +9,7 @@
         inputs.pre-commit-hooks.flakeModule
         ./.nix/lib.nix
         ./.nix/pre-commit-settings.nix
+        ./.nix/nix-config.nix
       ];
 
       systems = [ "x86_64-linux" ];
