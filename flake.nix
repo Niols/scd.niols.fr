@@ -1,14 +1,19 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
   inputs.flake-parts.url = "github:hercules-ci/flake-parts";
+  inputs.pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
 
   outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ ./.nix/lib.nix ];
+      imports = [
+        inputs.pre-commit-hooks.flakeModule
+        ./.nix/lib.nix
+        ./.nix/pre-commit-settings.nix
+      ];
 
       systems = [ "x86_64-linux" ];
 
-      perSystem = { self', pkgs, ... }:
+      perSystem = { self', config, pkgs, ... }:
         let
           mkDerivation = self.lib.mkDerivationFor pkgs;
 
@@ -38,6 +43,7 @@
             buildInputs = websiteBuildInputs ++ websiteTestInputs;
             buildPhase = "true";
             installPhase = "mkdir $out";
+            shellHook = config.pre-commit.installationScript;
           };
 
           packages.website = mkDerivation {
