@@ -22,27 +22,20 @@ jobs:
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
-        uses: actions/github-script@v6.4.0
+        uses: peter-evans/create-or-update-comment@v2.1.1
         with:
-          ## For the following, `secrets.GITHUB_TOKEN` would not be sufficient
-          ## because it would not work for dependabot.
-          github-token: ${{ secrets.PR_COMMENT_TOKEN }}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Hey! I will publish the pages for this pull request here:\n'
-                  + '\n'
-                  + '- Repository: https://github.com/Niols/dev.scd.niols.fr/\n'
-                  + '- Rendering: http://dev.scd.niols.fr/pr/'+ context.issue.number + '/\n'
-                  + '\n'
-                  + 'For each push, you will see something like:\n'
-                  + '\n'
-                  + '![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)\n'
-                  + '\n'
-                  + 'Just wait for the deployment indicated by the green check mark and you are good to go!'
-            })
+          issue-number: ${{ context.issue.number }}
+          body: |
+            Hey! I will publish the pages for this pull request here:
+
+            - Repository: https://github.com/Niols/dev.scd.niols.fr/
+            - Rendering: http://dev.scd.niols.fr/pr/${{ context.issue.number }}
+
+            For each push, you will see something like:
+
+            ![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)
+
+            Just wait for the deployment indicated by the green check mark and you are good to go!
 
   ############################################################################
   ## Setup Dependencies
