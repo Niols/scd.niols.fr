@@ -20,7 +20,7 @@
 
           customTexlive = pkgs.texlive.combine {
             inherit (pkgs.texlive)
-              scheme-medium ifoddpage tikzpagenodes xifthen;
+              scheme-medium enumitem ifoddpage tikzpagenodes xifthen;
           };
 
           websiteBuildInputs = [
