@@ -18,13 +18,18 @@
         let
           mkDerivation = self.lib.mkDerivationFor pkgs;
 
+          customTexlive = pkgs.texlive.combine {
+            inherit (pkgs.texlive)
+              scheme-medium ifoddpage tikzpagenodes xifthen;
+          };
+
           websiteBuildInputs = [
             pkgs.inkscape
             pkgs.j2cli
             pkgs.jq
             pkgs.lilypond
             pkgs.sassc
-            pkgs.texlive.combined.scheme-basic
+            customTexlive
             pkgs.xvfb-run
             pkgs.yq-go
           ];
