@@ -17,8 +17,9 @@ jobs:
 
   comment-on-pull-request:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request'
-            && github.event.action == 'opened' }}
+    # if: ${{ github.event_name == 'pull_request'
+    #         && github.event.action == 'opened' }}
+    if: ${{ github.event_name == 'pull_request' }}
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
