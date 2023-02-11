@@ -1,10 +1,14 @@
 {
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-22.05;
+  inputs.flake-parts.url = github:hercules-ci/flake-parts;
 
-  outputs = { self, nixpkgs }:
-    let pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  outputs = inputs@{ self, flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = ["x86_64-linux"];
 
-        mkDerivation = args:
+      perSystem = { self', pkgs, ... }:
+
+    let mkDerivation = args:
           pkgs.stdenv.mkDerivation ({
             src = self;
             FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [
@@ -34,14 +38,9 @@
     in
 
     {
-      packages.x86_64-linux.default = self.packages.default;
-      packages.x86_64-linux.website = self.packages.website;
-      packages.x86_64-linux.test-website = self.packages.test-website;
-      devShells.x86_64-linux.default = self.devShell;
+      packages.default = self'.packages.website;
 
-      packages.default = self.packages.website;
-
-      devShell = mkDerivation {
+      devShells.default = mkDerivation {
         name = "devshell";
         buildInputs = websiteBuildInputs ++ websiteTestInputs;
         buildPhase = "true";
@@ -61,5 +60,6 @@
         buildPhase = "make test-website";
         installPhase = "mkdir -p $out/var && cp -R _build/website $out/var/www";
       };
+    };
     };
 }
