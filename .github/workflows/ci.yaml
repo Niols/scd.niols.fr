@@ -37,6 +37,7 @@ jobs:
             ![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)
 
             Just wait for the deployment indicated by the green check mark and you are good to go!
+          token: ${{ secrets.PR_COMMENT_TOKEN }}
 
   ############################################################################
   ## Setup Dependencies
