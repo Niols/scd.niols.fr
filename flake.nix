@@ -24,7 +24,7 @@
             pkgs.jq
             pkgs.lilypond
             pkgs.sassc
-            pkgs.texlive.combined.scheme-full
+            pkgs.texlive.combined.scheme-medium
             pkgs.xvfb-run
             pkgs.yq-go
           ];
