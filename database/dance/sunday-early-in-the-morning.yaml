@@ -1,5 +1,4 @@
 ---
-
 name: Sunday, Early in the Morning
 author: Marie-Laure Barret
 scddb-id: 20996
@@ -15,7 +14,6 @@ deviser-details: |
   at 6.30am, I started devising this dance.
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 4

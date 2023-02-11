@@ -1,5 +1,4 @@
 ---
-
 name: Hello, Goodb
 author: Nicolas “Niols” Jeannerod
 
@@ -9,7 +8,6 @@ short-kind: R24 3/4L
 date: "2022-11-08"
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 6

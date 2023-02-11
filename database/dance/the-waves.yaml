@@ -1,5 +1,4 @@
 ---
-
 name: The Waves
 author: Saskia Frisby
 scddb-id: 20994
@@ -21,7 +20,6 @@ tunes:
     scddb-id: 692
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 2

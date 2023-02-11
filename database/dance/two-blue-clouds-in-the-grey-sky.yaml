@@ -1,5 +1,4 @@
 ---
-
 name: Two Blue Clouds in the Grey Sky
 author: Claire Cunin and Nicolas “Niols” Jeannerod
 scddb-id: 19197
@@ -17,7 +16,6 @@ tunes:
     slug: forty-bars-of-clouds
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8

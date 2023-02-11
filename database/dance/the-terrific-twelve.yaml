@@ -1,5 +1,4 @@
 ---
-
 name: The Terrific Twelve
 author: Kristian Vestli
 scddb-id: 21107
@@ -17,7 +16,6 @@ deviser-details: |
   Meikle.
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 4

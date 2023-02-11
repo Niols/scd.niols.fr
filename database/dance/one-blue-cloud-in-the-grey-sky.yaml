@@ -1,5 +1,4 @@
 ---
-
 name: One Blue Cloud in the Grey Sky
 author: Claire Cunin and Nicolas “Niols” Jeannerod
 scddb-id: 19198
@@ -16,7 +15,6 @@ tunes:
     slug: forty-bars-of-clouds
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 8

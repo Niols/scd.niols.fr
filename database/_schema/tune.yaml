@@ -1,5 +1,4 @@
 ---
-
 $schema: https://json-schema.org/draft/2020-12/schema
 
 $id: tune
@@ -17,7 +16,6 @@ required:
   - short-kind
 
 properties:
-
   name:
     type: string
     description: |
@@ -124,9 +122,7 @@ properties:
 additionalProperties: false
 
 $defs:
-
   dances:
-
     internal:
       type: object
       description: |

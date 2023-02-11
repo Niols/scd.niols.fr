@@ -1,5 +1,4 @@
 ---
-
 name: La Ville Lumière
 author: Nicolas “Niols” Jeannerod
 scddb-id: 20315
@@ -14,7 +13,6 @@ tunes:
     slug: la-ville-lumiere
 
 instructions:
-
   - type: phrase
     starts: 1
     ends: 4

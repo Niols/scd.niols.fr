@@ -1,5 +1,4 @@
 ---
-
 name: CI
 
 on:
@@ -7,18 +6,17 @@ on:
     branches:
       - main
     tags:
-      - '*'
+      - "*"
   pull_request:
 
 jobs:
-
   ############################################################################
   ## Comment on Pull Request
 
   comment-on-pull-request:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request'
-            && github.event.action == 'opened' }}
+      && github.event.action == 'opened' }}
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
@@ -184,7 +182,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
 
     steps:
-
       - name: Download Website from Artifacts
         uses: actions/download-artifact@v3.0.2
         with:
@@ -202,8 +199,8 @@ jobs:
           publish_branch: pages
           github_token: ${{ secrets.PAGES_TOKEN }}
           ## ...as the GitHub Actions bot...
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
           ## ...serving `scd.niols.fr`.
           cname: scd.niols.fr
 
@@ -223,7 +220,6 @@ jobs:
     if: always()
 
     steps:
-
       - name: Download Website from Artifacts
         if: needs.build-website.result == 'success'
         uses: actions/download-artifact@v3.0.2
@@ -279,8 +275,8 @@ jobs:
           publish_branch: pages
           personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
           ## ...as the GitHub Actions bot...
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
           ## ...in its own sub-directory while keeping the rest intact...
           destination_dir: ${{ env.destination_dir }}
           keep_files: true
