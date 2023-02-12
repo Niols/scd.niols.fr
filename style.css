@@ -6,13 +6,15 @@ body {
 * {
   max-width: 100%; }
 
-header, footer {
+header,
+footer {
   background: whitesmoke;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-article, section {
+article,
+section {
   margin: auto;
   width: 1000px; }
 
@@ -28,7 +30,8 @@ section {
 footer {
   margin-top: 2rem; }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center; }
 
 h1 {
@@ -44,17 +47,22 @@ header h1 {
   margin: 0;
   line-height: 120%; }
 
-a, a:visited {
+a,
+a:visited {
   color: black; }
 
 header a {
   text-decoration: none; }
 
-p, blockquote {
+p,
+blockquote {
   margin-top: 1rem; }
 
 @media only screen and (max-width: 767px) {
-  p, ul, h1, h2 {
+  p,
+  ul,
+  h1,
+  h2 {
     margin-left: 1rem;
     margin-right: 1rem; } }
 
