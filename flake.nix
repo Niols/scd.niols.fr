@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.flake-parts.url = "github:hercules-ci/flake-parts";
   inputs.pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
 
