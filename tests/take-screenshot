@@ -24,7 +24,7 @@ driver.get(source)
 ## Maximize the window, set its size and give time for the page to stabilise.
 driver.maximize_window()
 driver.set_window_size(width, 8000)
-time.sleep(1)
+time.sleep(10)
 
 ## Save a screenshot and leave.
 driver.find_element_by_tag_name('body').screenshot(target)
