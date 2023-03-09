@@ -10,5 +10,13 @@
         ## REVIEW: Should change if we introduce Cachix.
         allowSubstitutes = false;
       } // args);
+
+    ## Reads a directory and returns a list of file names.
+    readDirAsList = path: builtins.attrNames (builtins.readDir path);
+
+    readDirSubsetAsList = pkgs: path: suffix:
+      builtins.map (pkgs.lib.removeSuffix suffix)
+      (builtins.filter (pkgs.lib.hasSuffix suffix)
+        (self.lib.readDirAsList path));
   };
 }
