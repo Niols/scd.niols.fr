@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Give Link to GitHub Pages for this Pull Request
-        uses: peter-evans/create-or-update-comment@v2.1.1
+        uses: peter-evans/create-or-update-comment@v3.0.1
         with:
           issue-number: ${{ github.event.number }}
           body: |
