@@ -1,0 +1,58 @@
+---
+name: Cleansing Tea
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2021"
+
+content: |
+  \relative f'' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key a \mixolydian
+
+      \repeat volta 2 {
+        cis8 b cis a b cis a b |
+        <a g'>4. <a fis'>8 ~ <a fis'>4 <a fis'>4 |
+        cis8 b cis a b cis a b |
+        <a e'>4 <a d> <a cis> <a b> |
+        \break
+
+        cis8 b cis a b cis a b |
+        <a g'>4. <a fis'>8 ~ <a fis'>4 <a fis'>4 |
+        fis'8 g a b a fis d e |
+      } \alternative { {
+        <d fis>4. <cis e>8 ~ <cis e>4 <cis e>4 |
+      } {
+        <d fis>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |
+      } } \break
+
+      \repeat volta 2 {
+        g8 fis g d e g d e |
+        g4 fis e d |
+        fis8 e fis d e fis d e |
+        <d fis>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |
+        \break
+
+        g8 fis g d e g d e |
+        g4 fis e d |
+        <d fis>4 <d fis>8 <d fis>8 ~ <d fis>4 <d fis>4 |
+      } \alternative { {
+        <cis e>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |
+      } {
+        <a, cis e>2 <a cis e a>2 |
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        a1 | g | a | a:7 |
+        a1 | g | d | d2 a:7 | d a:7 |
+        g1 | s | d | d2 a:7 |
+        g1 | s | d | a:7 | a2 a:7 |
+      }
+    }
+  >>
