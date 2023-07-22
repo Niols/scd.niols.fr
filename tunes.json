@@ -76,6 +76,14 @@
       ],
       "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        a16 a8. g a16 b4 c8. b16 |\n        a4 f8. e16 d4 d8. e16 |\n        f4 f8. g16 e8 c4 e8 |\n        d2. \\parenthesize a'4 |\n      } \\break\n\n      a16 d8. d c16 d8. e16 f8. a,16 |\n      a16 d8. d c16 d8. c16 a4 |\n      a16 d8. d c16 d8. e16 f8. g16 |\n      a16 a8. f8. c16 a'4 a, |\n      \\break\n\n      a16 d8. d c16 d8. e16 f8. a,16 |\n      a16 d8. d c16 d8. c16 a4 |\n      a16 d8. d c16 d8. e16 f8. g16 |\n      e16 c8. <e g>8. <c e>16 d2 |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2:m g | d1:m | f2 c | d1:m |\n      d1:m | d2:m a:m | d1:m | f |\n      d1:m | d2:m a:m | d1:m | c2 d:m |\n    }\n  }\n>>\n"
     },
+    "cleansing-tea": {
+      "name": "Cleansing Tea",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2021",
+      "content": "\\relative f'' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key a \\mixolydian\n\n    \\repeat volta 2 {\n      cis8 b cis a b cis a b |\n      <a g'>4. <a fis'>8 ~ <a fis'>4 <a fis'>4 |\n      cis8 b cis a b cis a b |\n      <a e'>4 <a d> <a cis> <a b> |\n      \\break\n\n      cis8 b cis a b cis a b |\n      <a g'>4. <a fis'>8 ~ <a fis'>4 <a fis'>4 |\n      fis'8 g a b a fis d e |\n    } \\alternative { {\n      <d fis>4. <cis e>8 ~ <cis e>4 <cis e>4 |\n    } {\n      <d fis>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |\n    } } \\break\n\n    \\repeat volta 2 {\n      g8 fis g d e g d e |\n      g4 fis e d |\n      fis8 e fis d e fis d e |\n      <d fis>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |\n      \\break\n\n      g8 fis g d e g d e |\n      g4 fis e d |\n      <d fis>4 <d fis>8 <d fis>8 ~ <d fis>4 <d fis>4 |\n    } \\alternative { {\n      <cis e>4. <cis e>8 ~ <cis e>4 <cis e>8 fis |\n    } {\n      <a, cis e>2 <a cis e a>2 |\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a1 | g | a | a:7 |\n      a1 | g | d | d2 a:7 | d a:7 |\n      g1 | s | d | d2 a:7 |\n      g1 | s | d | a:7 | a2 a:7 |\n    }\n  }\n>>\n"
+    },
     "donaldson-s-rant": {
       "name": "Donaldson's Rant",
       "author": "Saskia Frisby",
