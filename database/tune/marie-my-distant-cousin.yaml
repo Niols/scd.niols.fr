@@ -1,0 +1,61 @@
+---
+name: Marie, my distant cousin
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2022"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key e \minor
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 b8 |
+        e8 d b g a b |
+        b,8 e e e fis g |
+        fis8 d d a' d, d |
+        b'8 a g fis g a |
+        \break
+
+        b8 e, e g a b |
+        c8 a a a b c |
+        b8 c b b a fis |
+        g8 e e e4
+      } \break
+
+      \repeat volta 2 {
+        fis8 |
+        g8 a b d cis b |
+        d8 a a fis g a |
+        e8 fis g a g e |
+        fis8 a a a bes c |
+        \break
+
+        g8 a bes d cis bes |
+        d8 a a fis g a |
+      } \alternative { {
+        g8 a bes a g e |
+        f8 d d d4 s8 |
+      } {
+        g8 a bes a b cis |
+        d4. ~ d4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        e2.:m | e4.:m a:7 | d2. | d4. b/dis |
+        e2.:m | a:m | b4. b/dis | e:m s4
+
+        s8 |
+        g4. gis:dim | d2. | e4. a:7/cis | d d/fis |
+        g4.:m f:dim/gis | d/fis b | g:m a:7 | d2.:m | g4.:m a:7 | d s4
+      }
+    }
+  >>
