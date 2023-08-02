@@ -1,0 +1,56 @@
+---
+name: Summerschool Reel
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2017"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key d \major
+      \time 4/4
+
+      \repeat volta 2 {
+        fis4 d a' fis |
+        b8 a g fis e4. d8 |
+        cis4 a e'8 fis g cis, |
+        d8 e fis g a4 a, |
+        \break
+
+        fis'4 d a' fis |
+        b8 a g fis e4. d8 |
+        cis8 d e fis g e cis e |
+        d4. fis8 d4. a'8 |
+      } \break
+
+      \repeat volta 2 {
+        b4 g d' b |
+        a8 g fis g a4 g8 fis |
+        e4 cis g' fis8 e |
+        d8 cis d e fis d fis a |
+        \break
+
+        b4 g d' b |
+        a8 g fis e dis cis' b a |
+        g8 fis e d cis d e cis |
+      } \alternative { {
+        d4 fis d a' |
+      } {
+        d,4 fis d
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        d2 d/fis | g e:7 | a a/cis | d a |
+        d2 d/fis | g e:7/gis | a a:7/cis | d1 |
+
+        g2 g/b | d d/fis | a:7 a/cis | d d/fis |
+        g2 gis:dim | d/a b:7 | e:m a | d1 | d2.
+      }
+    }
+  >>
