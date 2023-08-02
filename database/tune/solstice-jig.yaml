@@ -1,0 +1,68 @@
+---
+name: Solstice Jig
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2023"
+
+dances:
+  - type: external
+    name: The Solstice
+    deviser: Vladimir Garbuzov
+    scddb-id: 21477
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 6/8
+      \key a \major
+
+      \partial 8 e8 |
+      \repeat volta 2 {
+        a4 a8 a gis fis |
+        e fis e cis d e |
+        fis4 fis8 d e fis |
+        e4. cis4 e8 |
+        \break
+
+        d4 d8 b cis d |
+        cis4 e8 a4 gis8 |
+      } \alternative { {
+        fis4 fis8 fis gis a |
+        b4. e,4 gis8 |
+      } {
+        fis4 fis8 gis a b |
+        a4. ~ a4 gis8 |
+      } } \break
+
+      \repeat volta 2 {
+        fis4 fis8 b gis fis |
+        e8 fis e a4 e8 |
+        d4 d8 gis e d |
+        cis8 d dis e4 a8 |
+        \break
+
+        fis4 fis8 b gis fis |
+        e8 fis gis a4 e8 |
+        d8 e fis e fis gis |
+      } \alternative { {
+        a4. a4 g8 |
+      } {
+        a4. a4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        a4. d | e a | d e:7 | a a/cis |
+        b4.:m b:m/gis | a a/cis | b b:7/dis | e2. | b4. e | a2. |
+
+        d4. e | a/cis fis | b:m e | a a/cis |
+        d4. e | a/cis fis:m | d e | a a:7 | a
+      }
+    }
+  >>
