@@ -190,6 +190,22 @@
       "date": "2020-12-17",
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key g \\major\n\n    \\repeat volta 2 {\n      \\partial 4 \\tuplet 3/2 {d'8 e fis} |\n      g4 g8 fis e4 e |\n      d8 e d c b g g4 |\n      g'4 g8 fis e fis g4 |\n      a4. fis16 e d4 \\tuplet 3/2 {d8 e fis} |\n      \\break\n\n      g4 g8 fis e4 e |\n      d8 e d c b g g4 |\n      g8 fis g e' d c b a |\n      b4 g g\n    } \\break\n\n    \\repeat volta 2 {\n      g4 |\n      a4 \\tuplet 3/2 { a8 b c } d8 c b a |\n      g8 b a g e4 e |\n      a4 \\tuplet 3/2 { a8 b c } d8 c d e |\n      g4. fis16 e d4 d |\n      \\break\n\n      a4 \\tuplet 3/2 { a8 b c } d8 c b a |\n      g8 b a g e4 d8 e |\n      g8 fis g e' d c b a |\n      b4 g g\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      g2 c | d:7 g | g c | a:7 d4 d:7 |\n      g2 c | d:7 g | g d:7 | g2.\n\n      s4 |\n      a2:m d:7 | g e:m7 | a:m d:7 | a:7 d4 d:7 |\n      a2:m d:7 | g e:m7 | g d:7 | g2.\n    }\n  }\n>>\n"
     },
+    "solstice-jig": {
+      "name": "Solstice Jig",
+      "author": "Mikael Georgii",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2023",
+      "dances": [
+        {
+          "type": "external",
+          "name": "The Solstice",
+          "deviser": "Vladimir Garbuzov",
+          "scddb-id": 21477
+        }
+      ],
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key a \\major\n\n    \\partial 8 e8 |\n    \\repeat volta 2 {\n      a4 a8 a gis fis |\n      e fis e cis d e |\n      fis4 fis8 d e fis |\n      e4. cis4 e8 |\n      \\break\n\n      d4 d8 b cis d |\n      cis4 e8 a4 gis8 |\n    } \\alternative { {\n      fis4 fis8 fis gis a |\n      b4. e,4 gis8 |\n    } {\n      fis4 fis8 gis a b |\n      a4. ~ a4 gis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis4 fis8 b gis fis |\n      e8 fis e a4 e8 |\n      d4 d8 gis e d |\n      cis8 d dis e4 a8 |\n      \\break\n\n      fis4 fis8 b gis fis |\n      e8 fis gis a4 e8 |\n      d8 e fis e fis gis |\n    } \\alternative { {\n      a4. a4 g8 |\n    } {\n      a4. a4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      a4. d | e a | d e:7 | a a/cis |\n      b4.:m e/gis | a a/cis | b b:7/dis | e2. | b4. e | a2. |\n\n      d4. e | a/cis fis:m | b:m e | a a/cis |\n      d4. e | a/cis fis:m | d e | a a:7 | a\n    }\n  }\n>>\n"
+    },
     "the-fighter-of-bears": {
       "name": "The Fighter of Bears",
       "author": "Saskia Frisby",

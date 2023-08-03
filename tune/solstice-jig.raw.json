@@ -1,0 +1,19 @@
+{
+  "tune": {
+    "name": "Solstice Jig",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2023",
+    "dances": [
+      {
+        "type": "external",
+        "name": "The Solstice",
+        "deviser": "Vladimir Garbuzov",
+        "scddb-id": 21477
+      }
+    ],
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key a \\major\n\n    \\partial 8 e8 |\n    \\repeat volta 2 {\n      a4 a8 a gis fis |\n      e fis e cis d e |\n      fis4 fis8 d e fis |\n      e4. cis4 e8 |\n      \\break\n\n      d4 d8 b cis d |\n      cis4 e8 a4 gis8 |\n    } \\alternative { {\n      fis4 fis8 fis gis a |\n      b4. e,4 gis8 |\n    } {\n      fis4 fis8 gis a b |\n      a4. ~ a4 gis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis4 fis8 b gis fis |\n      e8 fis e a4 e8 |\n      d4 d8 gis e d |\n      cis8 d dis e4 a8 |\n      \\break\n\n      fis4 fis8 b gis fis |\n      e8 fis gis a4 e8 |\n      d8 e fis e fis gis |\n    } \\alternative { {\n      a4. a4 g8 |\n    } {\n      a4. a4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      a4. d | e a | d e:7 | a a/cis |\n      b4.:m e/gis | a a/cis | b b:7/dis | e2. | b4. e | a2. |\n\n      d4. e | a/cis fis:m | b:m e | a a/cis |\n      d4. e | a/cis fis:m | d e | a a:7 | a\n    }\n  }\n>>\n"
+  },
+  "slug": "solstice-jig"
+}
