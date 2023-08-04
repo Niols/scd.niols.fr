@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Catherine Williamson of Anstruther",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2015",
+    "content": "\\relative f <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 6/8\n\n    \\partial 8 b8 |\n    \\repeat volta 2 {\n      e8 b g' fis e dis |\n      e8 b g' fis e dis |\n      e8 fis g c b a |\n      g8 fis e dis e fis |\n      \\break\n\n      e8 b g' fis e dis |\n      e8 b g' fis e dis |\n      e8 fis g a b c |\n    } \\alternative { {\n      b8 a fis e4 b8 |\n    } {\n      b'8 a fis e g b |\n    } } \\break\n\n    \\repeat volta 2 {\n      e8 e, b' c a c |\n      d8 c a b b, b' |\n      c8 b g a a, a' |\n      g8 fis e dis fis b |\n      \\break\n\n      e8 e, b' c a c |\n      d8 c a b b, b' |\n      c8 b a g fis e |\n    } \\alternative { {\n      dis8 e fis e g b |\n    } {\n      dis,8 e fis e4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      e4.:m b:7 | e:m b:7 | e:m a:m | bes:dim b:7 |\n      e4.:m b:7 | e:m b:7 | e:m a:m/c | b:7 e:m | b:7 e:m |\n\n      e4.:m a:m | d g | c a:m | bes:dim b:7 |\n      e4.:m a:m | d g | a:m bes:dim | b:7 e:m | b:7 e4:m\n    }\n  }\n>>\n"
+  },
+  "slug": "catherine-williamson-of-anstruther"
+}
