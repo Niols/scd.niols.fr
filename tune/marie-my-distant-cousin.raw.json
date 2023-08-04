@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Marie, my distant cousin",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2022",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 b8 |\n      e8 d b g a b |\n      b,8 e e e fis g |\n      fis8 d d a' d, d |\n      b'8 a g fis g a |\n      \\break\n\n      b8 e, e g a b |\n      c8 a a a b c |\n      b8 c b b a fis |\n      g8 e e e4\n    } \\break\n\n    \\repeat volta 2 {\n      fis8 |\n      g8 a b d cis b |\n      d8 a a fis g a |\n      e8 fis g a g e |\n      fis8 a a a bes c |\n      \\break\n\n      g8 a bes d cis bes |\n      d8 a a fis g a |\n    } \\alternative { {\n      g8 a bes a g e |\n      f8 d d d4 s8 |\n    } {\n      g8 a bes a b cis |\n      d4. ~ d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      e2.:m | e4.:m a:7 | d2. | d4. b/dis |\n      e2.:m | a:m | b4. b/dis | e:m s4\n\n      s8 |\n      g4. gis:dim | d2. | e4. a:7/cis | d d/fis |\n      g4.:m f:dim/gis | d/fis b | g:m a:7 | d2.:m | g4.:m a:7 | d s4\n    }\n  }\n>>\n"
+  },
+  "slug": "marie-my-distant-cousin"
+}

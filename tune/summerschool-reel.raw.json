@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Summerschool Reel",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2017",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      fis4 d a' fis |\n      b8 a g fis e4. d8 |\n      cis4 a e'8 fis g cis, |\n      d8 e fis g a4 a, |\n      \\break\n\n      fis'4 d a' fis |\n      b8 a g fis e4. d8 |\n      cis8 d e fis g e cis e |\n      d4. fis8 d4. a'8 |\n    } \\break\n\n    \\repeat volta 2 {\n      b4 g d' b |\n      a8 g fis g a4 g8 fis |\n      e4 cis g' fis8 e |\n      d8 cis d e fis d fis a |\n      \\break\n\n      b4 g d' b |\n      a8 g fis e dis cis' b a |\n      g8 fis e d cis d e cis |\n    } \\alternative { {\n      d4 fis d a' |\n    } {\n      d,4 fis d\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2 d/fis | g e:7 | a a/cis | d a |\n      d2 d/fis | g e:7/gis | a a:7/cis | d1 |\n\n      g2 g/b | d d/fis | a:7 a/cis | d d/fis |\n      g2 gis:dim | d/a b:7 | e:m a | d1 | d2.\n    }\n  }\n>>\n"
+  },
+  "slug": "summerschool-reel"
+}

@@ -1164,6 +1164,14 @@
       ],
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 3 {\n      \\partial 4 a4 |\n      d,4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d cis b a g fis e |\n      \\break\n\n      d4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d e fis d4\n      \\bar \"||\" \\break\n\n      d8 e |\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis d cis b a |\n      a b cis d e fis g a |\n      \\break\n\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis a b cis e |\n      fis4 d d\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d2 g | a d | b:m e:m | a2 a:7 |\n      d2 g | a d | b:m e:m | a2:7 d4\n\n      s4 |\n      d2 e:m | b1:m | g | a2 a:7 |\n      d2 e:m | b1:m | g2 a:7 | d2.\n    }\n  }\n>>\n"
     },
+    "marie-my-distant-cousin": {
+      "name": "Marie, my distant cousin",
+      "author": "Mikael Georgii",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2022",
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 b8 |\n      e8 d b g a b |\n      b,8 e e e fis g |\n      fis8 d d a' d, d |\n      b'8 a g fis g a |\n      \\break\n\n      b8 e, e g a b |\n      c8 a a a b c |\n      b8 c b b a fis |\n      g8 e e e4\n    } \\break\n\n    \\repeat volta 2 {\n      fis8 |\n      g8 a b d cis b |\n      d8 a a fis g a |\n      e8 fis g a g e |\n      fis8 a a a bes c |\n      \\break\n\n      g8 a bes d cis bes |\n      d8 a a fis g a |\n    } \\alternative { {\n      g8 a bes a g e |\n      f8 d d d4 s8 |\n    } {\n      g8 a bes a b cis |\n      d4. ~ d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      e2.:m | e4.:m a:7 | d2. | d4. b/dis |\n      e2.:m | a:m | b4. b/dis | e:m s4\n\n      s8 |\n      g4. gis:dim | d2. | e4. a:7/cis | d d/fis |\n      g4.:m f:dim/gis | d/fis b | g:m a:7 | d2.:m | g4.:m a:7 | d s4\n    }\n  }\n>>\n"
+    },
     "out-of-tune": {
       "name": "Out of Tune",
       "author": "Aymeric Fromherz",
@@ -1203,6 +1211,14 @@
         }
       ],
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key a \\major\n\n    \\partial 8 e8 |\n    \\repeat volta 2 {\n      a4 a8 a gis fis |\n      e fis e cis d e |\n      fis4 fis8 d e fis |\n      e4. cis4 e8 |\n      \\break\n\n      d4 d8 b cis d |\n      cis4 e8 a4 gis8 |\n    } \\alternative { {\n      fis4 fis8 fis gis a |\n      b4. e,4 gis8 |\n    } {\n      fis4 fis8 gis a b |\n      a4. ~ a4 gis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis4 fis8 b gis fis |\n      e8 fis e a4 e8 |\n      d4 d8 gis e d |\n      cis8 d dis e4 a8 |\n      \\break\n\n      fis4 fis8 b gis fis |\n      e8 fis gis a4 e8 |\n      d8 e fis e fis gis |\n    } \\alternative { {\n      a4. a4 g8 |\n    } {\n      a4. a4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      a4. d | e a | d e:7 | a a/cis |\n      b4.:m e/gis | a a/cis | b b:7/dis | e2. | b4. e | a2. |\n\n      d4. e | a/cis fis:m | b:m e | a a/cis |\n      d4. e | a/cis fis:m | d e | a a:7 | a\n    }\n  }\n>>\n"
+    },
+    "summerschool-reel": {
+      "name": "Summerschool Reel",
+      "author": "Mikael Georgii",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2017",
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      fis4 d a' fis |\n      b8 a g fis e4. d8 |\n      cis4 a e'8 fis g cis, |\n      d8 e fis g a4 a, |\n      \\break\n\n      fis'4 d a' fis |\n      b8 a g fis e4. d8 |\n      cis8 d e fis g e cis e |\n      d4. fis8 d4. a'8 |\n    } \\break\n\n    \\repeat volta 2 {\n      b4 g d' b |\n      a8 g fis g a4 g8 fis |\n      e4 cis g' fis8 e |\n      d8 cis d e fis d fis a |\n      \\break\n\n      b4 g d' b |\n      a8 g fis e dis cis' b a |\n      g8 fis e d cis d e cis |\n    } \\alternative { {\n      d4 fis d a' |\n    } {\n      d,4 fis d\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2 d/fis | g e:7 | a a/cis | d a |\n      d2 d/fis | g e:7/gis | a a:7/cis | d1 |\n\n      g2 g/b | d d/fis | a:7 a/cis | d d/fis |\n      g2 gis:dim | d/a b:7 | e:m a | d1 | d2.\n    }\n  }\n>>\n"
     },
     "the-fighter-of-bears": {
       "name": "The Fighter of Bears",
