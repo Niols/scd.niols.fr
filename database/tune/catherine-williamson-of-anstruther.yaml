@@ -1,0 +1,61 @@
+---
+name: Catherine Williamson of Anstruther
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2015"
+
+content: |
+  \relative f <<
+    {
+      \clef treble
+      \key e \minor
+      \time 6/8
+
+      \partial 8 b8 |
+      \repeat volta 2 {
+        e8 b g' fis e dis |
+        e8 b g' fis e dis |
+        e8 fis g c b a |
+        g8 fis e dis e fis |
+        \break
+
+        e8 b g' fis e dis |
+        e8 b g' fis e dis |
+        e8 fis g a b c |
+      } \alternative { {
+        b8 a fis e4 b8 |
+      } {
+        b'8 a fis e g b |
+      } } \break
+
+      \repeat volta 2 {
+        e8 e, b' c a c |
+        d8 c a b b, b' |
+        c8 b g a a, a' |
+        g8 fis e dis fis b |
+        \break
+
+        e8 e, b' c a c |
+        d8 c a b b, b' |
+        c8 b a g fis e |
+      } \alternative { {
+        dis8 e fis e g b |
+      } {
+        dis,8 e fis e4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        e4.:m b:7 | e:m b:7 | e:m a:m | bes:dim b:7 |
+        e4.:m b:7 | e:m b:7 | e:m a:m/c | b:7 e:m | b:7 e:m |
+
+        e4.:m a:m | d g | c a:m | bes:dim b:7 |
+        e4.:m a:m | d g | a:m bes:dim | b:7 e:m | b:7 e4:m
+      }
+    }
+  >>
