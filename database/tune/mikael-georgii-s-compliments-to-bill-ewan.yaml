@@ -1,0 +1,57 @@
+---
+name: Mikael Georgii's Compliments to Bill Ewan
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2018"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key d \minor
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 a8 |
+        d8 a' g f e d |
+        cis8 d e bes a g |
+        f8 e d f e d |
+        cis8 e a a bes cis |
+        \break
+
+        d8 a' g f e d |
+        cis8 d e bes a g |
+        f8 e d e d cis |
+        d8 f e d4
+      } \break
+
+      \repeat volta 2 {
+        e8 |
+        f8 a d f e d |
+        e8 d bes g4 f8 |
+        e8 g bes e d c |
+        d8 c a f4 e8 |
+        \break
+
+        d8 g bes d e f |
+        a8 f e d4 bes8 |
+        a8 g f e d cis |
+        d8 f e d4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d2.:m | a4.:7/e cis:dim | d:m aes:dim | a2. |
+        d2.:m | a4.:7/e cis:dim | d:m a:7 | d:m s4
+
+        s8 |
+        d2.:m | g4.:m6 g:m/bes | c:7 c:7/e | f2. |
+        g4.:m g:m/bes | d2.:m | d4.:m/a a:7 | d:m s4
+      }
+    }
+  >>
