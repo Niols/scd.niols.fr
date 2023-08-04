@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Gillian Stevenson's Reel",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2018",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\partial 4 e8 d |\n    \\repeat volta 2 {\n      cis8 e a e fis d b a |\n      gis8 b e, gis a e cis e |\n      d8 fis a d, cis e a cis, |\n      b8 dis fis a gis e fis gis |\n      \\break\n\n      a8 cis e a fis d b a |\n      \\tuplet 3/2 { gis8 a b } e,8 gis a e cis e |\n      d8 fis a fis e a cis e |\n    } \\alternative { {\n      d8 b gis b a4 cis8 b |\n    } {\n      d8 b gis b a4\n    } } \\break\n\n    \\repeat volta 2 {\n      gis4 |\n      fis8 a d fis e cis a fis' |\n      e8 d gis, fis' e cis a gis |\n      fis8 a d fis e cis a cis |\n      b8 dis fis a gis e fis gis |\n      \\break\n\n      a8 e cis e fis d b a |\n      \\tuplet 3/2 { gis8 a b } e,8 gis a e cis e |\n      d8 fis a fis e gis b d |\n      \\tuplet 3/2 { cis8 d e } e,8 gis a4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 d | e a | d a/cis | b e |\n      a2 d | e a | d a/cis | e a | e a4\n\n      s4 |\n      d2 a/cis | e:7/b a | d a | b e |\n      a2 d | e a | d e | a4 e:7 a\n    }\n  }\n>>\n"
+  },
+  "slug": "gillian-stevenson-s-reel"
+}
