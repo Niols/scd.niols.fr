@@ -190,6 +190,14 @@
       "date": "2022",
       "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 b8 |\n      e8 d b g a b |\n      b,8 e e e fis g |\n      fis8 d d a' d, d |\n      b'8 a g fis g a |\n      \\break\n\n      b8 e, e g a b |\n      c8 a a a b c |\n      b8 c b b a fis |\n      g8 e e e4\n    } \\break\n\n    \\repeat volta 2 {\n      fis8 |\n      g8 a b d cis b |\n      d8 a a fis g a |\n      e8 fis g a g e |\n      fis8 a a a bes c |\n      \\break\n\n      g8 a bes d cis bes |\n      d8 a a fis g a |\n    } \\alternative { {\n      g8 a bes a g e |\n      f8 d d d4 s8 |\n    } {\n      g8 a bes a b cis |\n      d4. ~ d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      e2.:m | e4.:m a:7 | d2. | d4. b/dis |\n      e2.:m | a:m | b4. b/dis | e:m s4\n\n      s8 |\n      g4. gis:dim | d2. | e4. a:7/cis | d d/fis |\n      g4.:m f:dim/gis | d/fis b | g:m a:7 | d2.:m | g4.:m a:7 | d s4\n    }\n  }\n>>\n"
     },
+    "marion-turnock-s-strathspey": {
+      "name": "Marion Turnock's Strathspey",
+      "author": "Mikael Georgii",
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2017",
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e4 |\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e2 |\n      fis4. a8 fis e d cis |\n      cis8 b a cis b e fis gis |\n      \\break\n\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e g fis e |\n      d8 b4 fis'8 e fis gis e |\n      a2.\n    } \\break\n\n    \\repeat volta 2 {\n      e4 |\n      fis4. a8 gis fis e d |\n      cis8 a4 b8 cis4 d8 e |\n      d4. fis8 e a cis a |\n      b8 fis gis a b4 e, |\n      \\break\n\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e4 fis8 g |\n      fis8 d e fis gis a b gis |\n      a2.\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 d | a a:7/cis | d a/cis | b:7 e |\n      a2 d | a4. g8:7 fis2:7 | b:m7 e | a2.\n\n      s4 |\n      d2 e | a a:7/cis | d a:7/cis | b/dis e |\n      a2 d | a4. b8:m a2:7/cis | d2 e | a2.\n    }\n  }\n>>\n"
+    },
     "out-of-tune": {
       "name": "Out of Tune",
       "author": "Aymeric Fromherz",
