@@ -46,7 +46,7 @@ content: |
     \new ChordNames {
       \chordmode {
         s8 |
-        d2.:m | a4.:7/e cis:dim | d:m aes:dim | a2. |
+        d2.:m | a4.:7/e cis:dim | d:m gis:dim | a2. |
         d2.:m | a4.:7/e cis:dim | d:m a:7 | d:m s4
 
         s8 |
