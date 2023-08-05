@@ -1196,6 +1196,14 @@
       "date": "2017",
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e4 |\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e2 |\n      fis4. a8 fis e d cis |\n      cis8 b a cis b e fis gis |\n      \\break\n\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e g fis e |\n      d8 b4 fis'8 e fis gis e |\n      a2.\n    } \\break\n\n    \\repeat volta 2 {\n      e4 |\n      fis4. a8 gis fis e d |\n      cis8 a4 b8 cis4 d8 e |\n      d4. fis8 e a cis a |\n      b8 fis gis a b4 e, |\n      \\break\n\n      a4. cis8 b a gis fis |\n      e8 cis4 d8 e4 fis8 g |\n      fis8 d e fis gis a b gis |\n      a2.\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 d | a a:7/cis | d a/cis | b:7 e |\n      a2 d | a4. g8:7 fis2:7 | b:m7 e | a2.\n\n      s4 |\n      d2 e | a a:7/cis | d a:7/cis | b/dis e |\n      a2 d | a4. b8:m a2:7/cis | d2 e | a2.\n    }\n  }\n>>\n"
     },
+    "mikael-georgii-s-compliments-to-bill-ewan": {
+      "name": "Mikael Georgii's Compliments to Bill Ewan",
+      "author": "Mikael Georgii",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2019",
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\minor\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 a8 |\n      d8 a' g f e d |\n      cis8 d e bes a g |\n      f8 e d f e d |\n      cis8 e a a bes cis |\n      \\break\n\n      d8 a' g f e d |\n      cis8 d e bes a g |\n      f8 e d e d cis |\n      d8 f e d4\n    } \\break\n\n    \\repeat volta 2 {\n      e8 |\n      f8 a d f e d |\n      e8 d bes g4 f8 |\n      e8 g bes e d c |\n      d8 c a f4 e8 |\n      \\break\n\n      d8 g bes d e f |\n      a8 f e d4 bes8 |\n      a8 g f e d cis |\n      d8 f e d4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2.:m | a4.:7/e cis:dim | d:m gis:dim | a2. |\n      d2.:m | a4.:7/e cis:dim | d:m a:7 | d:m s4\n\n      s8 |\n      d2.:m | g4.:m6 g:m/bes | c:7 c:7/e | f2. |\n      g4.:m g:m/bes | d2.:m | a4.:7 a:7/cis | d:m s4\n    }\n  }\n>>\n"
+    },
     "out-of-tune": {
       "name": "Out of Tune",
       "author": "Aymeric Fromherz",

@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Bill Ewan",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2019",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\minor\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 a8 |\n      d8 a' g f e d |\n      cis8 d e bes a g |\n      f8 e d f e d |\n      cis8 e a a bes cis |\n      \\break\n\n      d8 a' g f e d |\n      cis8 d e bes a g |\n      f8 e d e d cis |\n      d8 f e d4\n    } \\break\n\n    \\repeat volta 2 {\n      e8 |\n      f8 a d f e d |\n      e8 d bes g4 f8 |\n      e8 g bes e d c |\n      d8 c a f4 e8 |\n      \\break\n\n      d8 g bes d e f |\n      a8 f e d4 bes8 |\n      a8 g f e d cis |\n      d8 f e d4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2.:m | a4.:7/e cis:dim | d:m gis:dim | a2. |\n      d2.:m | a4.:7/e cis:dim | d:m a:7 | d:m s4\n\n      s8 |\n      d2.:m | g4.:m6 g:m/bes | c:7 c:7/e | f2. |\n      g4.:m g:m/bes | d2.:m | a4.:7 a:7/cis | d:m s4\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-bill-ewan"
+}
