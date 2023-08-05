@@ -1,0 +1,57 @@
+---
+name: Marion Turnock's Strathspey
+author: Mikael Georgii
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2017"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \repeat volta 2 {
+        \partial 4 e4 |
+        a4. cis8 b a gis fis |
+        e8 cis4 d8 e2 |
+        fis4. a8 fis e d cis |
+        cis8 b a cis b e fis gis |
+        \break
+
+        a4. cis8 b a gis fis |
+        e8 cis4 d8 e g fis e |
+        d8 b4 fis'8 e fis gis e |
+        a2.
+      } \break
+
+      \repeat volta 2 {
+        e4 |
+        fis4. a8 gis fis e d |
+        cis8 a4 b8 cis4 d8 e |
+        d4. fis8 e a cis a |
+        b8 fis gis a b4 e, |
+        \break
+
+        a4. cis8 b a gis fis |
+        e8 cis4 d8 e4 fis8 g |
+        fis8 d e fis gis a b gis |
+        a2.
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a2 d | a a:7/cis | d a/cis | b:7 e |
+        a2 d | a4. g8:7 fis2:7 | b:m7 e | a2.
+
+        s4 |
+        d2 e | a a:7/cis | d a:7/cis | b/dis e |
+        a2 d | a4. b8:m a2:7/cis | d2 e | a2.
+      }
+    }
+  >>

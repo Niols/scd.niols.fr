@@ -1,0 +1,60 @@
+---
+name: Gillian Stevenson's Reel
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2018"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \partial 4 e8 d |
+      \repeat volta 2 {
+        cis8 e a e fis d b a |
+        gis8 b e, gis a e cis e |
+        d8 fis a d, cis e a cis, |
+        b8 dis fis a gis e fis gis |
+        \break
+
+        a8 cis e a fis d b a |
+        \tuplet 3/2 { gis8 a b } e,8 gis a e cis e |
+        d8 fis a fis e a cis e |
+      } \alternative { {
+        d8 b gis b a4 cis8 b |
+      } {
+        d8 b gis b a4
+      } } \break
+
+      \repeat volta 2 {
+        gis4 |
+        fis8 a d fis e cis a fis' |
+        e8 d gis, fis' e cis a gis |
+        fis8 a d fis e cis a cis |
+        b8 dis fis a gis e fis gis |
+        \break
+
+        a8 e cis e fis d b a |
+        \tuplet 3/2 { gis8 a b } e,8 gis a e cis e |
+        d8 fis a fis e gis b d |
+        \tuplet 3/2 { cis8 d e } e,8 gis a4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a2 d | e a | d a/cis | b e |
+        a2 d | e a | d a/cis | e a | e a4
+
+        s4 |
+        d2 a/cis | e:7/b a | d a | b e |
+        a2 d | e a | d e | a4 e:7 a
+      }
+    }
+  >>
