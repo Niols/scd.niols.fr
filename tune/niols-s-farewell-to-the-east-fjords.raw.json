@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Niols's Farewell to the East Fjords",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar Strathspey",
+    "short-kind": "S32",
+    "date": "2023-05-21",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n\n    \\key f \\major\n\n    \\partial 4 c4 |\n    c'4 a bes c8 d |\n    c4. a8 f2 |\n    g4 bes8 g e4 d8 e |\n    c2. c4 |\n    \\break\n\n    c'4 a bes c8 d |\n    c4. a8 f4 \\tuplet 3/2 { e8 f e } |\n    d4 bes' g e8 a |\n    f2.\n    \\bar \"||\" \\break\n\n    c4 |\n    c'4 a bes c8 d |\n    c4. a8 f2 |\n    d4 g8 c bes4 a |\n    g2. c,4 |\n    \\break\n\n    c'4 a bes c8 d |\n    c4. a8 f4 e |\n    d4 bes'8 g c,4 e |\n    f2.\n    \\bar \"||\" \\break\n\n    \\key f \\minor\n\n    c4 |\n    aes'4. f8 bes8. aes16 g8 f |\n    aes4 f c c |\n    aes'4 g8 aes bes4 \\tuplet 3/2 { g8 aes bes } |\n    c4 bes8 aes g4 c, |\n    \\break\n\n    aes'4. f8 bes8. aes16 g8 f |\n    aes4 f c2 |\n    e4 f8 g aes8. f16 c8 aes' |\n    g8. e16 c8 g' f4\n    \\bar \"||\" \\break\n\n    \\key f \\major\n\n    c4 |\n    c'4 a bes c8 d |\n    c4. a8 f2 |\n    g4 bes8 g e4 d8 e |\n    c2. c4 |\n    \\break\n\n    c'4 a bes c8 d |\n    c4. a8 f4 \\tuplet 3/2 { e8 f e } |\n    d4 bes' g e8 a |\n    f2.\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      f2 g:m | f1 | g2:m c:7 | f/c c:7 |\n      f2 g:m | f1 | g2:m c:7 | bes/f f4\n\n      s4 |\n      f2 g:m | f1 | g2:m bes | g:m c:7 |\n      f2 g:m | f1 | g2:m c:7 | bes/f f4\n\n      s4 |\n      f2:m g:m | f1:m | f2:m g:m | c1:7 |\n      f2:m g:m | f1:m | c2 f:m/c | c:7 f4:m\n\n      s4 |\n      f2 g:m | f1 | g2:m c:7 | f/c c:7 |\n      f2 g:m | f1 | g2:m c:7 | bes/f f4\n    }\n  }\n>>\n"
+  },
+  "slug": "niols-s-farewell-to-the-east-fjords"
+}
