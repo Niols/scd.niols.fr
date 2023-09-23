@@ -44,7 +44,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Nix
         uses: ./.github/composites/setup-nix
@@ -64,7 +64,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Nix
         uses: ./.github/composites/setup-nix
@@ -89,7 +89,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install JSON Schema Documentation Generator
         run: |
@@ -114,7 +114,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install YAML to JSON Converter and JSON Schema Validator
         run: |
@@ -146,7 +146,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Nix
         uses: ./.github/composites/setup-nix
@@ -179,7 +179,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Nix
         uses: ./.github/composites/setup-nix
