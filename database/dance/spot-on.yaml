@@ -39,7 +39,7 @@ instructions:
     starts: 13
     ends: 16
     content: |
-      All turn partners by the left one and a half times to finish with men in
+      All turn new partners by the left one and a half times to finish with men in
       the centre facing out and women on the outside facing in.
 
   - type: phrase
@@ -54,7 +54,7 @@ instructions:
     starts: 21
     ends: 24
     content: |
-      All dance dosido with their partners.
+      All dance dosido with their original partners.
 
   - type: phrase
     starts: 25
@@ -66,7 +66,7 @@ instructions:
     starts: 29
     ends: 32
     content: |
-      All take promenade hold with partners and dance round the circle
+      All take promenade hold with original partners and dance round the circle
       anti-clockwise.
 
   - type: repeat
