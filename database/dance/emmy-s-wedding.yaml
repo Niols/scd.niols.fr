@@ -6,7 +6,8 @@ kind: 40-bar reel for four couples in a four-couple longwise set
 short-kind: R40 4/4L
 
 tunes:
-  - emmy-s-wedding
+  - type: internal
+    slug: emmy-s-wedding
 
 instructions:
   - type: phrase
@@ -70,6 +71,4 @@ instructions:
     kind: from new positions
 
   - type: devised by
-
   - type: music by
-    composer: Nicolas “Niols” Jeannerod
