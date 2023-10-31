@@ -1,0 +1,52 @@
+---
+name: Sir Database of the Stagger Inn
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2023-07"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key a \minor
+      \time 4/4
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          a8 a'4 g8 e d c b |
+          c8 d c b a4 b8 g |
+          a8 a'4 g8 e d c b |
+        } \alternative { {
+          c8 d c b a e f g |
+        } {
+          c8 d c b a g a b |
+        } } \bar "||" \break
+
+        c8 a e' a, c g e' g, |
+        c8 f, e' f, c' d c b |
+        c8 a e' a, c g e' g, |
+        c8 d c b a g a b |
+        \break
+
+        c8 a e' a, c g e' g, |
+        c8 f, e' f, c' d c b |
+        a8 b c d e g,4 g8 |
+      } \alternative { {
+        c8 d c b a e f g |
+      } {
+        c8 d c b a4 a |
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        a2:m c | f4 g a:m e:7 | a2:m c | f4 g a:m e:7 | f4 g a:m e:7 |
+
+        a2:m c/g | f a4:m/e e/gis | a2:m c/g | f4 e a:m e:7 |
+        a2:m c/g | f a4:m/e e/gis | a2:m c/g | f4 e a:m e:7 | f e:7 a2:m |
+      }
+    }
+  >>
