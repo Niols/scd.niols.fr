@@ -1,0 +1,54 @@
+---
+name: Winter in Australia
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2018-07-23"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key c \major
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 g8 |
+        g c e g, c e |
+        a, c e a, c e |
+        a, d f a, d f |
+        g f e d c b |
+        \break
+
+        g c e g, c e |
+        a, c e a, c e |
+        a, d f a, d f |
+        g f e d c b |
+        \bar "||" \break
+
+        g'4 g8 e4 e8 |
+        gis4 gis8 e4 e8 |
+        a g f a g f |
+        a g f a g f |
+        \break
+
+        g4 g8 e4 e8 |
+        gis4 gis8 e4 e8 |
+        a g f g f e |
+        d c b c4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        c2. | a:m | d:m | c4. g |
+        c2. | a:m | d:m | c4. g |
+
+        c2. | e | d:m | d:m |
+        c2. | e | d4.:m c | g c4
+      }
+    }
+  >>
