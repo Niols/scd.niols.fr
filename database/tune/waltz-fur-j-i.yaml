@@ -1,0 +1,78 @@
+---
+name: Waltz for J. I
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar waltz
+short-kind: W32
+
+date: "2019-11-12"
+
+content: |
+  \transpose a, d {
+    \relative f' {
+      <<
+        {
+          \clef treble
+          \key a \major
+          \time 3/4
+
+          \partial 2 e4 d |
+          cis4. b8 a4 |
+          a b cis |
+          b cis d |
+          b2 b8 a |
+          gis4. fis8 e4 |
+          gis a b |
+          b cis dis |
+          e
+          \bar "||" \break
+
+          e4 d |
+          cis4. b8 a4 |
+          a b cis |
+          b cis d |
+          b2 b8 a |
+          gis4. fis8 e4 |
+          cis' cis b |
+          a2. |
+          a4
+          \bar "||" \break
+
+          a4 gis |
+          fis a cis |
+          fis cis fis |
+          d2 cis4 |
+          b2 b4 |
+          b d fis |
+          b fis b |
+          gis2 fis4 |
+          e4
+          \bar "||" \break
+
+          fis4 gis |
+          a4. b8 a4 |
+          gis4. a8 gis4 |
+          fis gis a |
+          e2 d4 |
+          cis4. b8 a4 |
+          cis cis b |
+          a2. a4
+          \bar "|."
+        }
+
+        \new ChordNames {
+          \chordmode {
+            s2 |
+            a2. | a/e | b:m | b:m/fis | e | e/gis | b:7 | e4:7
+            s2 |
+            a2. | a/e | b:m | b:m/fis | e | e:7 | d/a | a4
+
+            s4 cis:m/gis |
+            fis2.:m | fis:m/cis | b:m | b:m/fis | b:m | b:m/fis | e:7 | e4:7
+            s2 |
+            a2. | e | d | a/cis | a | e:7 | d/a | a4
+          }
+        }
+      >>
+    }
+  }
