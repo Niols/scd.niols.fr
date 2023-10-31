@@ -1,0 +1,83 @@
+---
+name: Debbie Roxburgh
+author: Nicolas “Niols” Jeannerod
+
+kind: 48-bar reel
+short-kind: R48
+
+date: "2023-07"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \partial 4 e4 |
+      \repeat volta 2 {
+        a4. e8 cis4 a |
+        d8 e fis gis a2 |
+        a4 gis8 fis e4 d8 cis |
+      } \alternative { {
+        d4. b8 g4 b |
+      } {
+        d4 b a8 b cis d |
+      } } \break
+
+      \repeat volta 2 {
+        e4 d8 cis e4 d8 cis |
+        e4 d8 cis e4 d8 cis |
+        d4 b8 g d'4 b8 g |
+        d'4 b8 g d'4 b8 d |
+        \break
+
+        e4 d8 cis e4 d8 cis |
+        e4 d8 cis e4 d8 cis |
+        d4 b g b |
+      } \alternative { {
+        a2 a8 b cis d |
+      } {
+        a2 d8 e fis gis |
+      } } \break
+
+      \repeat volta 2 {
+        a4 a e e |
+        cis4 cis a a' |
+        g4 g d d |
+        b4 b g g' |
+        \break
+
+        a4 a e e |
+        cis4 cis a a' |
+        g8 fis e d cis4 b |
+        a2 d8 e fis gis |
+      } \break
+
+      \repeat volta 2 {
+        a4. e8 cis4 a |
+        d8 e fis gis a2 |
+        a4 gis8 fis e4 d8 cis |
+      } \alternative { {
+        d4. b8 g4 b |
+      } {
+        d4 b a2 |
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a1 | d2 a | a1 | g | g2
+
+        e2:7 |
+        a1 | s | g | s |
+        a1 | s | g | a2 e:7 | a e:7 |
+
+        a1 | s | g | s |
+        a1 | s | g | a2 e:7 |
+
+        a1 | d2 a | a1 | g | g2 a |
+      }
+    }
+  >>
