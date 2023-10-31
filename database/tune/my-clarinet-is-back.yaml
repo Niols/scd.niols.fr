@@ -1,0 +1,56 @@
+---
+name: My Clarinet is Back!
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2022-10"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 6/8
+      \key b \minor
+
+      \repeat volta 2 {
+        \partial 4 r8 fis |
+        b4 fis8 b4 fis8 |
+        d'8 cis b cis b a |
+        b4 fis8 b4 fis8 |
+        d'8 cis b cis4 fis,8 |
+        \break
+
+        b4 fis8 b4 fis8 |
+        d'8 cis b cis b a |
+        g8 fis e fis4 cis'8 |
+        b4. b8
+      } \break
+
+      \repeat volta 2 {
+        d8 e |
+        fis4 d8 d cis d |
+        fis4 d8 d cis d |
+        g8 fis e fis e d |
+        cis4. cis8 d e |
+        \break
+
+        fis4 d8 d cis d |
+        fis4 d8 d cis d |
+        cis8 b a fis4 cis'8 |
+        b4. b8
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        b2.:m | b4.:m a | b2.:m | b4.:m a |
+        b2.:m | b4.:m a | g fis:7 | b2.:m |
+
+        d2. | d2. | g4. d | a2.:7 |
+        d2. | d2. | a4. fis:7 | b4.:m
+      }
+    }
+  >>
