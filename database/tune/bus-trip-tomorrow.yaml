@@ -1,0 +1,55 @@
+---
+name: Bus Trip Tomorrow
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2023-08-03"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \minor
+
+      \repeat volta 2 {
+        d4 f8. d16 a' d,8. bes'16 d,8. |
+        e8. c16 f8 c g' c, a' cis, |
+        d4 f8. d16 a' d,8. bes'8 c |
+        d8 c bes16 a g f e4 cis |
+        \break
+
+        d4 f8. d16 a' d,8. bes'16 d,8. |
+        e8. c16 f8 c g' c, a' cis, |
+        d4 f8. d16 a' d,8. bes'8 c |
+        d8 c bes16 a g f e4 d |
+        \bar "||" \break
+
+        d'16 a8. a'8 g f8. e16 d c8. |
+        bes8. a16 g f8. e4 f8 e |
+        d'16 a8. d'8 c bes8. a16 g f8. |
+        e8. f16 g f8. e8 a, b cis |
+        \break
+
+        d16 a8. a'8 g f8. e16 d c8. |
+        bes8. a16 g f8. e4 f8 e |
+        d8. e16 f d8. g8 a bes r |
+      } \alternative { {
+        bes16 a g f e4 d8 cis~ cis4 |
+      } {
+        bes'16 a g f e4 d8 cis d4 |
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        d2:m d4:m/a bes | c4 f/c c a:7 | d2:m d4:m/a g:m | bes2 c4 a:7 |
+        d2:m d4:m/a bes | c4 f/c c a:7 | d2:m d4:m/a g:m | bes2 c4 d:m |
+
+        d2:m f | bes c | d:m bes | c a:7 |
+        d2:m f | bes c | d:m g:m | bes4 c a2:7 | bes4 c a:7 d:m |
+      }
+    }
+  >>
