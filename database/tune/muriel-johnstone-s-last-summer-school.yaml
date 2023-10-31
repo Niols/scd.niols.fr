@@ -1,0 +1,56 @@
+---
+name: Muriel Johnstone's Last Summer School
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2023-07"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \repeat volta 2 {
+        \partial 4 a8 b |
+        cis4 b16 a8. cis4 b16 a8. |
+        b8. cis16 b a8. fis4 \tuplet 3/2 { e8 fis gis } |
+        a8. b16 cis fis8. e cis16 b a8. |
+        cis4 b b a8 b |
+        \break
+
+        cis4 b16 a8. cis4 b16 a8. |
+        b8. cis16 b a8. fis4 \tuplet 3/2 { e8 fis gis } |
+        a8. b16 cis fis8. e cis16 b a8. |
+        cis4 b a
+        \bar "||" \break
+
+        a8 b |
+        cis16 e8. e4 a8. gis16 fis e8. |
+        fis4. e8 cis4 cis8 d |
+        e4 e cis'8. b16 a gis8. |
+        a4 gis8 a fis4 \tuplet 3/2 { e8 fis gis } |
+        \break
+
+        a8. gis16 fis e8. fis8. d16 a fis'8. |
+        e8. cis16 b gis8. fis4. gis8 |
+        a8. b16 cis fis8. e cis16 b a8. |
+        cis4 b a
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a2 fis:m7 | e d4 e:7 | a2 e/b | a/cis e:7 |
+        a2 fis:m7 | e d4 e:7 | a2 e/b | a4/cis e:7 a
+
+        s4 |
+        cis2:m a | d a | cis:m a | d e4 e:7 |
+        a2 d | cis:m d | a e/b | a4/cis e:7 a
+      }
+    }
+  >>
