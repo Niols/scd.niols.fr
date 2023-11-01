@@ -7,6 +7,10 @@ short-kind: R40
 
 date: "2022-05-23"
 
+dances:
+  - type: internal
+    slug: emmy-and-matt-s-wedding
+
 content: |
   \relative f' <<
     \new Voice {
@@ -71,3 +75,11 @@ content: |
       }
     }
   >>
+
+composer-details: |
+  I initially wrote “Matt's Wedding” as a wedding march-like strathspey for both
+  Emmy and Matt, and “Emmy's Wedding” as the companion reel for their medley
+  dance. At that point, the tunes were both named “Emmy and Matt's Wedding”.
+  Emmy and Matt later decided to refer to the strathspey and reel parts of the
+  medley as standalone dances and that is how the tunes got their independant
+  names.

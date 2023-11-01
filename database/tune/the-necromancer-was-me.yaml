@@ -1,0 +1,50 @@
+---
+name: The Necromancer Was Me
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2021-04-12"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \major
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          \partial 8 e8 |
+          fis4 g16 a8. g fis16 e g8. |
+          fis4 g16 a8. b4. e,8 |
+          fis4 g16 a8. g fis16 e g8. |
+          fis8. e16 d cis8. d4.
+        } \break
+
+        fis8 |
+        d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |
+        \tuplet 3/2 { d'8 cis b } a8. g16 fis4. fis8 |
+        d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |
+        \tuplet 3/2 { g8 a b } a8. cis16 d4. fis,8 |
+        \break
+
+        d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |
+        \tuplet 3/2 { d'8 cis b } a8. g16 fis4. fis8 |
+        \tuplet 3/2 { g8 a b } \tuplet 3/2 { a8 b cis } \tuplet 3/2 { d8 a fis } d8. d'16 |
+        \tuplet 3/2 { d8 cis b } \tuplet 3/2 { a8 b cis } d4.
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d2 g | d g | d g | d4 a:7 d4.
+
+        s8 |
+        b2:m d/a | g fis:7 | b:m d/a | g4 a d2 |
+        b2:m d/a | g fis:7 | g4 a d2 | d4 a:7 d4.
+      }
+    }
+  >>

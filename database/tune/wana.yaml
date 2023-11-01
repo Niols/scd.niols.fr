@@ -1,0 +1,46 @@
+---
+name: W.A.N.A
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2019-11-24"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \time 4/4
+      \key bes \major
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          bes16 f8. f f16 \tuplet 3/2 { ees8 f g } f8 ees |
+          bes'16 f8. f f16 g4. f8 |
+          bes16 f8. f f16 \tuplet 3/2 { ees8 f g } f8 ees |
+          f8. ees16 c16 d8. bes4 bes |
+        } \break
+
+        d'8. c16 bes a8. bes a16 g f8. |
+        \tuplet 3/2 { ees8 f g } f8 ees c4 c |
+        a'8. g16 f ees8. g f16 ees d8. |
+        c8 bes a g f4 f |
+        \break
+
+        d''8. c16 bes a8. bes8. a16 g f8. |
+        \tuplet 3/2 { ees8 f g } f8 ees c4 c |
+        a'8. g16 f ees8. f8. ees16 d c8. |
+        bes4 bes bes \parenthesize f' |
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        bes2 ees | bes ees | bes ees | f:7 bes |
+
+        bes2 g:m | ees c:m | f c:m | c:m f:7 |
+        bes2 g:m | ees c:m | f f:7 | bes1 |
+      }
+    }
+  >>

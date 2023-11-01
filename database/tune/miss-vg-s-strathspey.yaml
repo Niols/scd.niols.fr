@@ -1,0 +1,52 @@
+---
+name: "Miss V.G.'s Strathspey"
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2020-06-30"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \repeat volta 2 {
+        cis16 e8. e cis16 b8. a16 fis a8. |
+        e8. gis16 a b8. cis4 cis |
+        cis16 e8. e cis16 fis8. e16 d cis8. |
+        b16 e,8. e gis16 a8 b cis d |
+        \break
+
+        cis16 e8. e cis16 b8. a16 fis a8. |
+        e8. gis16 a b8. cis4 \tuplet 3/2 { cis8 d cis } |
+        b16 fis'8. fis e16 \tuplet 3/2 { d8 e d } cis8. b16 |
+        cis16 e,8. e16 fis8. a4 a8 gis |
+        \bar "||" \break
+
+        fis16 a8. a b16 cis b a gis fis8 e |
+        fis16 a8. a b16 cis4 cis |
+        e,16 gis8. gis a16 b a gis fis e8 d |
+        e16 gis8. gis a16 \tuplet 3/2 { b4 a gis } |
+        \break
+
+        fis16 a8. a b16 cis b a gis fis8 e |
+        fis16 a8. a b16 cis4 \tuplet 3/2 { cis8 d cis } |
+        b16 fis'8. fis e16 \tuplet 3/2 { d8 e d } cis8. b16 |
+        cis16 e,8. e16 fis8. a4 a |
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        a2 e4:7/gis d/fis | e2:7 a | a d | e e:7 |
+        a2 e4:7/gis d/fis | e2:7 a | b:m d | e4:7 d a \parenthesize a/gis |
+
+        fis1:m | s | e:7 | s |
+        fis1:m | s | b2:m d | e4:7 d a2 |
+      }
+    }
+  >>

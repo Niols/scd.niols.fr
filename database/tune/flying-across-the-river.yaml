@@ -1,0 +1,56 @@
+---
+name: Flying Across the River
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2019-11-10"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key e \minor
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 fis8 |
+        g fis e b4 b8 |
+        c d e fis4 fis8 |
+        g fis e b' g d |
+        c d e fis4 fis8 |
+        \break
+
+        g fis e b4 b8 |
+        c d e fis4 fis8 |
+        g fis e d e fis |
+        e4. e4
+      } \break
+
+      \repeat volta 2 {
+        d8 |
+        d g b c b a |
+        g fis e d4 fis8 |
+        e g b e d c |
+        b a g fis4 fis8 |
+        \break
+
+        g fis e fis e d |
+        e fis g d4 d8 |
+        e fis g fis e d |
+        e4. e4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        e2.:m | c4. d | e:m g/d | c b:7 |
+        e2.:m | c4. d | e:m d | e2.:m |
+
+        g4. a:m | c d | e:m a:m/e | e:m b:7/dis |
+        e4.:m d | c g/b | c d | e:m s4
+      }
+    }
+  >>

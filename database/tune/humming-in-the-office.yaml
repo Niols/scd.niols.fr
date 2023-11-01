@@ -1,0 +1,62 @@
+---
+name: Humming in the Office
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2020-09-08"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \key d \major
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 g8 |
+        fis8 a a e a a |
+        fis8 a a b cis d |
+        fis,8 a a e a a |
+        a fis d e4
+        \bar "|" \break
+
+        g8 |
+        fis8 a a e a a |
+        fis8 a a b cis d |
+        d8 fis d e cis a |
+        b4. d4
+      } \break
+
+      \repeat volta 2 {
+        b8 |
+        d8 a a cis a a |
+        b8 g b a4 a8 |
+        b8 g b a g fis |
+        fis4. e4
+        \bar "|" \break
+
+        b'8 |
+        d8 a a cis a a |
+        b8 g b a4 a8 |
+        b8 g b a b cis |
+      } \alternative { {
+        b4. d4 s8 |
+      } {
+        d8 a fis d4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        \parenthesize g8 |
+        d4. a | d g | d a | d:7 a4:7 g8 |
+        d4. a | d g | d a | g d4
+
+        g8 |
+        d4. a | g a | g d | d:7 a4:7 g8 |
+        d4. a | g a | g a | g d | d2
+      }
+    }
+  >>

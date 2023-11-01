@@ -1,0 +1,81 @@
+---
+name: Waltz for J. III
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar waltz
+short-kind: W32
+
+date: "2020-09-08"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key e \minor
+      \time 3/4
+
+      \partial 2 e4 fis |
+      g4. fis8 e4 |
+      fis4 e d |
+      e2 d4 |
+      b4 e fis |
+      g4. fis8 g4 |
+      a4 g a |
+      b2.~ |
+      b4
+      \bar "||" \break
+
+      c4 d |
+      e4. d8 c4 |
+      d4 c b |
+      c2 b4 |
+      a4 g fis |
+      g4. fis8 g4 |
+      a4 g fis |
+      e2.~ |
+      e4
+      \bar "||" \break
+
+      e4 fis |
+      g4. d8 b4 |
+      c4 d fis |
+      g4. d8 b4 |
+      g4 e' fis |
+      g4. d8 b4 |
+      c4 d fis |
+      g2.~ |
+      g4
+      \bar "||" \break
+
+      a4 b |
+      c4. d8 e4 |
+      d4 c b~ |
+      b2.~ |
+      b4 e c |
+      b4. a8 g4 |
+      fis4 g a |
+      g2.~ |
+      g4
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s2 |
+        e2.:m | d | c | b:7 |
+        e2.:m | d2 c4 | b2.:7 | s4
+
+        s2 |
+        c2. | g | a:m | d/a |
+        e2.:m | d2 b4:7/dis | a2.:m/e | e4:m
+
+        s2 |
+        g2. | c2 d4 | g2. | g |
+        e2.:m | a2:m d4 | g2. | s4
+
+        s2 |
+        c2. | d | b/dis | e:m |
+        g2. | d2 d4:7/a | c2./g | g4
+      }
+    }
+  >>
