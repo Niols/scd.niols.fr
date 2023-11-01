@@ -1,0 +1,45 @@
+---
+name: The Necromancer Got Me My Mojo Back
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2021-04-12"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key a \minor
+
+      \repeat volta 2 {
+        \repeat volta 2 {
+          \partial 8 r8 |
+          e4 fis16 a8. g fis16 g a8. |
+          e4 fis16 a8. b4. b8 |
+          e,4 fis16 a8. g fis16 g a8. |
+          e8. d16 c b8. a4.
+        } \break
+
+        \repeat volta 2 {
+          e'8 |
+          c'8. d16 e c8. a16 c8. b8 a |
+          c8. d16 e c8. a4. e8 |
+          c'8. d16 e c8. a16 c8. b8 a |
+          e8. d16 c b8. a4.
+        }
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        a2:m g | a:m g | a:m g | e:m7 a4.:m
+
+        s8 |
+        c2 a:m | c a:m | c a:m | e:m7 a4.:m
+      }
+    }
+  >>

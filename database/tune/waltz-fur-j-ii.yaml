@@ -1,0 +1,88 @@
+---
+name: Waltz for J. II
+author: Nicolas “Niols” Jeannerod
+
+kind: 32-bar waltz
+short-kind: W32
+
+date: "2019-11-12"
+
+content: |
+  \transpose a, d  {
+    \relative f <<
+      {
+        \clef treble
+        \key a \minor
+        \time 3/4
+
+        \partial 2 a4 b |
+        c4. b8 a4 |
+        b a g |
+        a2 b4 |
+        c2 d4 |
+        e4. g8 e4 |
+        d2 c4 |
+        b2. |
+        g4
+        \bar "||" \break
+
+        a4 b |
+        c4. b8 a4 |
+        b a g |
+        a2 b4 |
+        c2 d4 |
+        e4. d8 c4 |
+        b2 g4 |
+        a2. |
+        a4
+        \bar "||" \break
+
+        a4 b |
+        c4. e8 g4 |
+        a g e |
+        g2. |
+        e2 d4 |
+        c4. e8 g4 |
+        a g e |
+        g2. |
+        g4
+        \bar "||" \break
+
+        a4 b |
+        c4. d8 c4 |
+        b4. c8 b4 |
+        a4. b8 a4 |
+        g2 f4 |
+        e4. d8 c4 |
+        <<
+          {
+            b2 g4 |
+            a2. |
+            a4
+            \bar "|."
+          }
+          \new Staff {
+            \once \omit Staff.TimeSignature
+            e'4 e d |
+            c4 e g |
+            c
+            \bar "|."
+          }
+          \new ChordNames {
+            \chordmode {
+              g2.:7 | c | c4
+            }
+          }
+        >>
+      }
+
+      \new ChordNames {
+        \chordmode {
+          s2 | a2.:m | g | a:m | f | c | g | e:m | g4:7
+          s2 | a2.:m | g | a:m | f | c | g | d:m/a | a4:m
+          s2 | c2. | f | g | c | c | f | c/g | g4
+          s2 | a2.:m | g | f | e:m | c | g:7 | d:m/a | a4:m
+        }
+      }
+    >>
+  }
