@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "My Clarinet is Back!",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2022-10",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key b \\minor\n\n    \\repeat volta 2 {\n      \\partial 4 r8 fis |\n      b4 fis8 b4 fis8 |\n      d'8 cis b cis b a |\n      b4 fis8 b4 fis8 |\n      d'8 cis b cis4 fis,8 |\n      \\break\n\n      b4 fis8 b4 fis8 |\n      d'8 cis b cis b a |\n      g8 fis e fis4 cis'8 |\n      b4. b8\n    } \\break\n\n    \\repeat volta 2 {\n      d8 e |\n      fis4 d8 d cis d |\n      fis4 d8 d cis d |\n      g8 fis e fis e d |\n      cis4. cis8 d e |\n      \\break\n\n      fis4 d8 d cis d |\n      fis4 d8 d cis d |\n      cis8 b a fis4 cis'8 |\n      b4. b8\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      b2.:m | b4.:m a | b2.:m | b4.:m a |\n      b2.:m | b4.:m a | g fis:7 | b2.:m |\n\n      d2. | d2. | g4. d | a2.:7 |\n      d2. | d2. | a4. fis:7 | b4.:m\n    }\n  }\n>>\n"
+  },
+  "slug": "my-clarinet-is-back"
+}

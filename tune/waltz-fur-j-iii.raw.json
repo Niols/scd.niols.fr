@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Waltz for J. III",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar waltz",
+    "short-kind": "W32",
+    "date": "2020-09-08",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 3/4\n\n    \\partial 2 e4 fis |\n    g4. fis8 e4 |\n    fis4 e d |\n    e2 d4 |\n    b4 e fis |\n    g4. fis8 g4 |\n    a4 g a |\n    b2.~ |\n    b4\n    \\bar \"||\" \\break\n\n    c4 d |\n    e4. d8 c4 |\n    d4 c b |\n    c2 b4 |\n    a4 g fis |\n    g4. fis8 g4 |\n    a4 g fis |\n    e2.~ |\n    e4\n    \\bar \"||\" \\break\n\n    e4 fis |\n    g4. d8 b4 |\n    c4 d fis |\n    g4. d8 b4 |\n    g4 e' fis |\n    g4. d8 b4 |\n    c4 d fis |\n    g2.~ |\n    g4\n    \\bar \"||\" \\break\n\n    a4 b |\n    c4. d8 e4 |\n    d4 c b~ |\n    b2.~ |\n    b4 e c |\n    b4. a8 g4 |\n    fis4 g a |\n    g2.~ |\n    g4\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s2 |\n      e2.:m | d | c | b:7 |\n      e2.:m | d2 c4 | b2.:7 | s4\n\n      s2 |\n      c2. | g | a:m | d/a |\n      e2.:m | d2 b4:7/dis | a2.:m/e | e4:m\n\n      s2 |\n      g2. | c2 d4 | g2. | g |\n      e2.:m | a2:m d4 | g2. | s4\n\n      s2 |\n      c2. | d | b/dis | e:m |\n      g2. | d2 d4:7/a | c2./g | g4\n    }\n  }\n>>\n"
+  },
+  "slug": "waltz-fur-j-iii"
+}

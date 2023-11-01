@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Waltz for J. I",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar waltz",
+    "short-kind": "W32",
+    "date": "2019-11-12",
+    "content": "\\transpose a, d {\n  \\relative f' {\n    <<\n      {\n        \\clef treble\n        \\key a \\major\n        \\time 3/4\n\n        \\partial 2 e4 d |\n        cis4. b8 a4 |\n        a b cis |\n        b cis d |\n        b2 b8 a |\n        gis4. fis8 e4 |\n        gis a b |\n        b cis dis |\n        e\n        \\bar \"||\" \\break\n\n        e4 d |\n        cis4. b8 a4 |\n        a b cis |\n        b cis d |\n        b2 b8 a |\n        gis4. fis8 e4 |\n        cis' cis b |\n        a2. |\n        a4\n        \\bar \"||\" \\break\n\n        a4 gis |\n        fis a cis |\n        fis cis fis |\n        d2 cis4 |\n        b2 b4 |\n        b d fis |\n        b fis b |\n        gis2 fis4 |\n        e4\n        \\bar \"||\" \\break\n\n        fis4 gis |\n        a4. b8 a4 |\n        gis4. a8 gis4 |\n        fis gis a |\n        e2 d4 |\n        cis4. b8 a4 |\n        cis cis b |\n        a2. a4\n        \\bar \"|.\"\n      }\n\n      \\new ChordNames {\n        \\chordmode {\n          s2 |\n          a2. | a/e | b:m | b:m/fis | e | e/gis | b:7 | e4:7\n          s2 |\n          a2. | a/e | b:m | b:m/fis | e | e:7 | d/a | a4\n\n          s4 cis:m/gis |\n          fis2.:m | fis:m/cis | b:m | b:m/fis | b:m | b:m/fis | e:7 | e4:7\n          s2 |\n          a2. | e | d | a/cis | a | e:7 | d/a | a4\n        }\n      }\n    >>\n  }\n}\n"
+  },
+  "slug": "waltz-fur-j-i"
+}

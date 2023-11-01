@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Muriel Johnstone's Last Summer School",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2023-07",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 a8 b |\n      cis4 b16 a8. cis4 b16 a8. |\n      b8. cis16 b a8. fis4 \\tuplet 3/2 { e8 fis gis } |\n      a8. b16 cis fis8. e cis16 b a8. |\n      cis4 b b a8 b |\n      \\break\n\n      cis4 b16 a8. cis4 b16 a8. |\n      b8. cis16 b a8. fis4 \\tuplet 3/2 { e8 fis gis } |\n      a8. b16 cis fis8. e cis16 b a8. |\n      cis4 b a\n      \\bar \"||\" \\break\n\n      a8 b |\n      cis16 e8. e4 a8. gis16 fis e8. |\n      fis4. e8 cis4 cis8 d |\n      e4 e cis'8. b16 a gis8. |\n      a4 gis8 a fis4 \\tuplet 3/2 { e8 fis gis } |\n      \\break\n\n      a8. gis16 fis e8. fis8. d16 a fis'8. |\n      e8. cis16 b gis8. fis4. gis8 |\n      a8. b16 cis fis8. e cis16 b a8. |\n      cis4 b a\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 fis:m7 | e d4 e:7 | a2 e/b | a/cis e:7 |\n      a2 fis:m7 | e d4 e:7 | a2 e/b | a4/cis e:7 a\n\n      s4 |\n      cis2:m a | d a | cis:m a | d e4 e:7 |\n      a2 d | cis:m d | a e/b | a4/cis e:7 a\n    }\n  }\n>>\n"
+  },
+  "slug": "muriel-johnstone-s-last-summer-school"
+}

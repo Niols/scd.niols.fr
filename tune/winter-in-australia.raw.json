@@ -1,0 +1,12 @@
+{
+  "tune": {
+    "name": "Winter in Australia",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2018-07-23",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key c \\major\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 g8 |\n      g c e g, c e |\n      a, c e a, c e |\n      a, d f a, d f |\n      g f e d c b |\n      \\break\n\n      g c e g, c e |\n      a, c e a, c e |\n      a, d f a, d f |\n      g f e d c b |\n      \\bar \"||\" \\break\n\n      g'4 g8 e4 e8 |\n      gis4 gis8 e4 e8 |\n      a g f a g f |\n      a g f a g f |\n      \\break\n\n      g4 g8 e4 e8 |\n      gis4 gis8 e4 e8 |\n      a g f g f e |\n      d c b c4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      c2. | a:m | d:m | c4. g |\n      c2. | a:m | d:m | c4. g |\n\n      c2. | e | d:m | d:m |\n      c2. | e | d4.:m c | g c4\n    }\n  }\n>>\n",
+    "composer-details": "This tune is heavily inspired by “Christmas in Belgium” by my dear friend\nAymeric Fromherz.\n"
+  },
+  "slug": "winter-in-australia"
+}

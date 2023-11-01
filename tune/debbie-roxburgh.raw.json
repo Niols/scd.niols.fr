@@ -1,0 +1,12 @@
+{
+  "tune": {
+    "name": "Debbie Roxburgh",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "48-bar reel",
+    "short-kind": "R48",
+    "date": "2023-07",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\partial 4 e4 |\n    \\repeat volta 2 {\n      a4. e8 cis4 a |\n      d8 e fis gis a2 |\n      a4 gis8 fis e4 d8 cis |\n    } \\alternative { {\n      d4. b8 g4 b |\n    } {\n      d4 b a8 b cis d |\n    } } \\break\n\n    \\repeat volta 2 {\n      e4 d8 cis e4 d8 cis |\n      e4 d8 cis e4 d8 cis |\n      d4 b8 g d'4 b8 g |\n      d'4 b8 g d'4 b8 d |\n      \\break\n\n      e4 d8 cis e4 d8 cis |\n      e4 d8 cis e4 d8 cis |\n      d4 b g b |\n    } \\alternative { {\n      a2 a8 b cis d |\n    } {\n      a2 d8 e fis gis |\n    } } \\break\n\n    \\repeat volta 2 {\n      a4 a e e |\n      cis4 cis a a' |\n      g4 g d d |\n      b4 b g g' |\n      \\break\n\n      a4 a e e |\n      cis4 cis a a' |\n      g8 fis e d cis4 b |\n      a2 d8 e fis gis |\n    } \\break\n\n    \\repeat volta 2 {\n      a4. e8 cis4 a |\n      d8 e fis gis a2 |\n      a4 gis8 fis e4 d8 cis |\n    } \\alternative { {\n      d4. b8 g4 b |\n    } {\n      d4 b a2 |\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | d2 a | a1 | g | g2\n\n      e2:7 |\n      a1 | s | g | s |\n      a1 | s | g | a2 e:7 | a e:7 |\n\n      a1 | s | g | s |\n      a1 | s | g | a2 e:7 |\n\n      a1 | d2 a | a1 | g | g2 a |\n    }\n  }\n>>\n",
+    "composer-details": "I wrote this tune during the RSCDS Summer School 2023. I was playing for\nDebbie Roxburgh and wanted a tune to match her specific 48-bars warm-up, and\nhere it is!\n"
+  },
+  "slug": "debbie-roxburgh"
+}

@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Sir Database of the Stagger Inn",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2023-07",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key a \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        a8 a'4 g8 e d c b |\n        c8 d c b a4 b8 g |\n        a8 a'4 g8 e d c b |\n      } \\alternative { {\n        c8 d c b a e f g |\n      } {\n        c8 d c b a g a b |\n      } } \\bar \"||\" \\break\n\n      c8 a e' a, c g e' g, |\n      c8 f, e' f, c' d c b |\n      c8 a e' a, c g e' g, |\n      c8 d c b a g a b |\n      \\break\n\n      c8 a e' a, c g e' g, |\n      c8 f, e' f, c' d c b |\n      a8 b c d e g,4 g8 |\n    } \\alternative { {\n      c8 d c b a e f g |\n    } {\n      c8 d c b a4 a |\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a2:m c | f4 g a:m e:7 | a2:m c | f4 g a:m e:7 | f4 g a:m e:7 |\n\n      a2:m c/g | f a4:m/e e/gis | a2:m c/g | f4 e a:m e:7 |\n      a2:m c/g | f a4:m/e e/gis | a2:m c/g | f4 e a:m e:7 | f e:7 a2:m |\n    }\n  }\n>>\n"
+  },
+  "slug": "sir-database-of-the-stagger-inn"
+}

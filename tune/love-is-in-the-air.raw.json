@@ -1,0 +1,13 @@
+{
+  "tune": {
+    "name": "Love is in the Air (32-bar Version)",
+    "author": "Nicolas “Niols” Jeannerod",
+    "scddb-id": 14458,
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2020-02-03",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d,4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d cis b a g fis e |\n      \\break\n\n      d4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d e fis d4\n    } \\break\n\n    \\repeat volta 2 {\n      d8 e |\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis d cis b a |\n      a b cis d e fis g a |\n      \\break\n\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis a b cis e |\n      fis4 d d\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d2 g | a d | b:m e:m | a2 a:7 |\n      d2 g | a d | b:m e:m | a2:7 d |\n\n      d2 e:m | b1:m | g | a2 a:7 |\n      d2 e:m | b1:m | g2 a:7 | d2.\n    }\n  }\n>>\n",
+    "composer-details": "This is how I initially composed as an AABB 32-bar reel, before I presented it\nto Violaine Eysseric who liked it and asked to use it for her dance “Love is\nin the Air”. For her dance, I play this tune as ABABAB for 48 bars.\n"
+  },
+  "slug": "love-is-in-the-air"
+}

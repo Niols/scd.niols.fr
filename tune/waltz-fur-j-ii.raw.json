@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Waltz for J. II",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar waltz",
+    "short-kind": "W32",
+    "date": "2019-11-12",
+    "content": "\\transpose a, d  {\n  \\relative f <<\n    {\n      \\clef treble\n      \\key a \\minor\n      \\time 3/4\n\n      \\partial 2 a4 b |\n      c4. b8 a4 |\n      b a g |\n      a2 b4 |\n      c2 d4 |\n      e4. g8 e4 |\n      d2 c4 |\n      b2. |\n      g4\n      \\bar \"||\" \\break\n\n      a4 b |\n      c4. b8 a4 |\n      b a g |\n      a2 b4 |\n      c2 d4 |\n      e4. d8 c4 |\n      b2 g4 |\n      a2. |\n      a4\n      \\bar \"||\" \\break\n\n      a4 b |\n      c4. e8 g4 |\n      a g e |\n      g2. |\n      e2 d4 |\n      c4. e8 g4 |\n      a g e |\n      g2. |\n      g4\n      \\bar \"||\" \\break\n\n      a4 b |\n      c4. d8 c4 |\n      b4. c8 b4 |\n      a4. b8 a4 |\n      g2 f4 |\n      e4. d8 c4 |\n      <<\n        {\n          b2 g4 |\n          a2. |\n          a4\n          \\bar \"|.\"\n        }\n        \\new Staff {\n          \\once \\omit Staff.TimeSignature\n          e'4 e d |\n          c4 e g |\n          c\n          \\bar \"|.\"\n        }\n        \\new ChordNames {\n          \\chordmode {\n            g2.:7 | c | c4\n          }\n        }\n      >>\n    }\n\n    \\new ChordNames {\n      \\chordmode {\n        s2 | a2.:m | g | a:m | f | c | g | e:m | g4:7\n        s2 | a2.:m | g | a:m | f | c | g | d:m/a | a4:m\n        s2 | c2. | f | g | c | c | f | c/g | g4\n        s2 | a2.:m | g | f | e:m | c | g:7 | d:m/a | a4:m\n      }\n    }\n  >>\n}\n"
+  },
+  "slug": "waltz-fur-j-ii"
+}

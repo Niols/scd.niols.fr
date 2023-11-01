@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Bus Trip Tomorrow",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2023-08-03",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\repeat volta 2 {\n      d4 f8. d16 a' d,8. bes'16 d,8. |\n      e8. c16 f8 c g' c, a' cis, |\n      d4 f8. d16 a' d,8. bes'8 c |\n      d8 c bes16 a g f e4 cis |\n      \\break\n\n      d4 f8. d16 a' d,8. bes'16 d,8. |\n      e8. c16 f8 c g' c, a' cis, |\n      d4 f8. d16 a' d,8. bes'8 c |\n      d8 c bes16 a g f e4 d |\n      \\bar \"||\" \\break\n\n      d'16 a8. a'8 g f8. e16 d c8. |\n      bes8. a16 g f8. e4 f8 e |\n      d'16 a8. d'8 c bes8. a16 g f8. |\n      e8. f16 g f8. e8 a, b cis |\n      \\break\n\n      d16 a8. a'8 g f8. e16 d c8. |\n      bes8. a16 g f8. e4 f8 e |\n      d8. e16 f d8. g8 a bes r |\n    } \\alternative { {\n      bes16 a g f e4 d8 cis~ cis4 |\n    } {\n      bes'16 a g f e4 d8 cis d4 |\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d2:m d4:m/a bes | c4 f/c c a:7 | d2:m d4:m/a g:m | bes2 c4 a:7 |\n      d2:m d4:m/a bes | c4 f/c c a:7 | d2:m d4:m/a g:m | bes2 c4 d:m |\n\n      d2:m f | bes c | d:m bes | c a:7 |\n      d2:m f | bes c | d:m g:m | bes4 c a2:7 | bes4 c a:7 d:m |\n    }\n  }\n>>\n"
+  },
+  "slug": "bus-trip-tomorrow"
+}

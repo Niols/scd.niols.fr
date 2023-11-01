@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Miss V.G.'s Strathspey",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2020-06-30",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      cis16 e8. e cis16 b8. a16 fis a8. |\n      e8. gis16 a b8. cis4 cis |\n      cis16 e8. e cis16 fis8. e16 d cis8. |\n      b16 e,8. e gis16 a8 b cis d |\n      \\break\n\n      cis16 e8. e cis16 b8. a16 fis a8. |\n      e8. gis16 a b8. cis4 \\tuplet 3/2 { cis8 d cis } |\n      b16 fis'8. fis e16 \\tuplet 3/2 { d8 e d } cis8. b16 |\n      cis16 e,8. e16 fis8. a4 a8 gis |\n      \\bar \"||\" \\break\n\n      fis16 a8. a b16 cis b a gis fis8 e |\n      fis16 a8. a b16 cis4 cis |\n      e,16 gis8. gis a16 b a gis fis e8 d |\n      e16 gis8. gis a16 \\tuplet 3/2 { b4 a gis } |\n      \\break\n\n      fis16 a8. a b16 cis b a gis fis8 e |\n      fis16 a8. a b16 cis4 \\tuplet 3/2 { cis8 d cis } |\n      b16 fis'8. fis e16 \\tuplet 3/2 { d8 e d } cis8. b16 |\n      cis16 e,8. e16 fis8. a4 a |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a2 e4:7/gis d/fis | e2:7 a | a d | e e:7 |\n      a2 e4:7/gis d/fis | e2:7 a | b:m d | e4:7 d a \\parenthesize a/gis |\n\n      fis1:m | s | e:7 | s |\n      fis1:m | s | b2:m d | e4:7 d a2 |\n    }\n  }\n>>\n"
+  },
+  "slug": "miss-vg-s-strathspey"
+}

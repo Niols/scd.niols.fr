@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "The Necromancer Was Me",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2021-04-12",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        \\partial 8 e8 |\n        fis4 g16 a8. g fis16 e g8. |\n        fis4 g16 a8. b4. e,8 |\n        fis4 g16 a8. g fis16 e g8. |\n        fis8. e16 d cis8. d4.\n      } \\break\n\n      fis8 |\n      d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |\n      \\tuplet 3/2 { d'8 cis b } a8. g16 fis4. fis8 |\n      d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |\n      \\tuplet 3/2 { g8 a b } a8. cis16 d4. fis,8 |\n      \\break\n\n      d'16 fis,8. fis fis16 cis'16 fis,8. fis fis16 |\n      \\tuplet 3/2 { d'8 cis b } a8. g16 fis4. fis8 |\n      \\tuplet 3/2 { g8 a b } \\tuplet 3/2 { a8 b cis } \\tuplet 3/2 { d8 a fis } d8. d'16 |\n      \\tuplet 3/2 { d8 cis b } \\tuplet 3/2 { a8 b cis } d4.\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d2 g | d g | d g | d4 a:7 d4.\n\n      s8 |\n      b2:m d/a | g fis:7 | b:m d/a | g4 a d2 |\n      b2:m d/a | g fis:7 | g4 a d2 | d4 a:7 d4.\n    }\n  }\n>>\n"
+  },
+  "slug": "the-necromancer-was-me"
+}

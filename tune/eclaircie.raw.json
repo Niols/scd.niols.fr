@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Éclaircie",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2019-06-07",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key g \\minor\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        g8. bes16 d,8. g16 f8. a16 c8. f,16 |\n        ees8. g16 bes8. ees16 d4 d |\n        g,8. bes16 d8. bes16 c16 bes a g f4 |\n      } \\alternative { {\n        ees8. g16 f16 ees8. d4 d |\n      } {\n        ees8. g16 fis16 d8. g4 g8 a |\n      } } \\bar \"||\" \\break\n\n      bes8. d16 f8. d16 c16 d ees f g4 |\n      f16 g8. a4 f16 g8. a4 |\n      bes8. g16 d g8. a8. f16 c f8. |\n      fis8. d16 a d8. ees8 d c4 |\n      \\break\n\n      bes8. d16 f8. d16 c16 d ees f g4 |\n      f16 g8. a4 f16 g8. a4 |\n      bes8. g16 d g8. ees8. c16 g c8. |\n      a8. fis16 d fis8. g8 g, g4 |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      g2:m f | ees d:7 | g:m f | ees4 f d2:7 | ees4 d:7/fis g2:m |\n      bes2 c:m | f/c d:m | g2:m f | d1:7 |\n      bes2 c:m | f/c d:m | g2:m c:m | d:7 g:m |\n    }\n  }\n>>\n"
+  },
+  "slug": "eclaircie"
+}

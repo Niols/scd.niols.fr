@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "...and Guess What?",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2021-04-12",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key a \\major\n\n    \\repeat volta 2 {\n      cis4 d16 e8. fis e16 fis a8. |\n      gis8. fis16 e gis8. a4. b8 |\n      cis8. d16 e cis8. b a16 gis fis8. |\n      e8. d16 cis b8. a2 |\n      \\break\n\n      cis4 d16 e8. fis e16 fis a8. |\n      gis8. fis16 e gis8. a4. cis8 |\n      \\tuplet 3/2 { d8 e fis } \\tuplet 3/2 { e8 d cis } \\tuplet 3/2 { d8 cis b } a8. d16 |\n      \\tuplet 3/2 { cis8 b a } \\tuplet 3/2 { gis8 a b } cis16 a8. a8\n      \\bar \"||\" \\break\n\n      e'8 |\n      a16 e8. e e16 gis e8. e e16 |\n      fis16 d8. d fis16 e4. e8 |\n      fis16 d8. d fis16 e4 e8 cis |\n      d8. cis16 b a8. b4. e8 |\n      \\break\n\n      a16 e8. e e16 gis e8. e e16 |\n      fis16 d8. d fis16 e4. cis8 |\n      \\tuplet 3/2 { d8 e fis } \\tuplet 3/2 { e8 d cis } \\tuplet 3/2 { d8 cis b } a8. d16 |\n      \\tuplet 3/2 { cis8 b a } \\tuplet 3/2 { gis8 a b } cis16 a8. a4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a2 d | e a | a e | e:7 a |\n      a2 d | e a | d4 a/cis b:m a | a e:7 a4.\n\n      s8 |\n      a2 e | d a | b:m a | d e:7 |\n      a2 e | d a | d4 a/cis b:m a | a e:7 a2 |\n    }\n  }\n>>\n"
+  },
+  "slug": "and-guess-what"
+}

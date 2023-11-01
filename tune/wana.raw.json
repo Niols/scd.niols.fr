@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "W.A.N.A",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2019-11-24",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\time 4/4\n    \\key bes \\major\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        bes16 f8. f f16 \\tuplet 3/2 { ees8 f g } f8 ees |\n        bes'16 f8. f f16 g4. f8 |\n        bes16 f8. f f16 \\tuplet 3/2 { ees8 f g } f8 ees |\n        f8. ees16 c16 d8. bes4 bes |\n      } \\break\n\n      d'8. c16 bes a8. bes a16 g f8. |\n      \\tuplet 3/2 { ees8 f g } f8 ees c4 c |\n      a'8. g16 f ees8. g f16 ees d8. |\n      c8 bes a g f4 f |\n      \\break\n\n      d''8. c16 bes a8. bes8. a16 g f8. |\n      \\tuplet 3/2 { ees8 f g } f8 ees c4 c |\n      a'8. g16 f ees8. f8. ees16 d c8. |\n      bes4 bes bes \\parenthesize f' |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      bes2 ees | bes ees | bes ees | f:7 bes |\n\n      bes2 g:m | ees c:m | f c:m | c:m f:7 |\n      bes2 g:m | ees c:m | f f:7 | bes1 |\n    }\n  }\n>>\n"
+  },
+  "slug": "wana"
+}

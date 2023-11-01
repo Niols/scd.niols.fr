@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Humming in the Office",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2020-09-08",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\key d \\major\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 g8 |\n      fis8 a a e a a |\n      fis8 a a b cis d |\n      fis,8 a a e a a |\n      a fis d e4\n      \\bar \"|\" \\break\n\n      g8 |\n      fis8 a a e a a |\n      fis8 a a b cis d |\n      d8 fis d e cis a |\n      b4. d4\n    } \\break\n\n    \\repeat volta 2 {\n      b8 |\n      d8 a a cis a a |\n      b8 g b a4 a8 |\n      b8 g b a g fis |\n      fis4. e4\n      \\bar \"|\" \\break\n\n      b'8 |\n      d8 a a cis a a |\n      b8 g b a4 a8 |\n      b8 g b a b cis |\n    } \\alternative { {\n      b4. d4 s8 |\n    } {\n      d8 a fis d4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      \\parenthesize g8 |\n      d4. a | d g | d a | d:7 a4:7 g8 |\n      d4. a | d g | d a | g d4\n\n      g8 |\n      d4. a | g a | g d | d:7 a4:7 g8 |\n      d4. a | g a | g a | g d | d2\n    }\n  }\n>>\n"
+  },
+  "slug": "humming-in-the-office"
+}
