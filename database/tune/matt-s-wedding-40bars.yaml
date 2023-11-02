@@ -9,7 +9,7 @@ date: "2022-03-23"
 
 dances:
   - type: internal
-    name: emmy-and-matt-s-wedding
+    slug: emmy-and-matt-s-wedding
 
 content: |
   \relative f' <<
