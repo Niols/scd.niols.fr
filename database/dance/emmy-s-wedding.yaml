@@ -29,7 +29,6 @@ instructions:
     ends: 20
     content: |
       1st couple turn both hands one and a half times in four bars.
-      »Balade dans les bois de Ronquerolles«:
 
   - type: phrase
     starts: 21
@@ -42,7 +41,7 @@ instructions:
     starts: 25
     ends: 32
     content: |
-      1st couple dance figure of love around the 3rd and 4th couples:
+      1st couple dance a figure of love around the 3rd and 4th couples:
     instructions:
       - type: phrase
         starts: 25
@@ -57,7 +56,7 @@ instructions:
         content: |
           1st couple pull back left shoulder and cast, woman down and man up;
           1st woman dances up between 4th couple while 1st man dances down
-          between 3rd couple; both finish on in third place on own sides facing
+          between 3rd couple; both finish in third place on own sides facing
           out.
 
   - type: phrase
