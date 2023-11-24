@@ -1,0 +1,58 @@
+---
+name: Ryans Reel
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2022"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key d \minor
+
+      \partial 8 a8 |
+      \repeat volta 2 {
+        d8 a' g a f e d cis |
+        d8 c a g f e d c |
+        bes4. a8 g a bes c |
+        d8 e f d c a' bes cis |
+        \break
+
+        d8 a' g a f e d cis |
+        d8 c a g f g a c |
+        bes8 a g a bes c d f |
+        a8 g e f d4. a8 |
+      } \break
+
+      \repeat volta 2 {
+        f'8 d cis d a f' e f |
+        d4. c8 d c a c |
+        d8 c bes a bes a g f |
+        e8 f g bes a cis d e |
+        \break
+
+        f8 d cis d a f' e f |
+        d4. c8 d c a c |
+        bes8 a g a bes c d f |
+      } \alternative { {
+        a8 g e f d4. a8 |
+      } {
+        a'8 g e f d4.
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d1:m | s | g:m | d2:m a:7 |
+        d1:m | s | g:m | d:7 |
+
+        d1:m | s | g:m | g2:m6 a:7 |
+        d1:m | s | g:m | a:7 | a2:7 s4.
+      }
+    }
+  >>
