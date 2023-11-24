@@ -1,0 +1,63 @@
+---
+name: The Moth
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2016"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key g \minor
+
+      \repeat volta 2 {
+        \partial 4 d4 |
+        d'8 c bes a g a bes c |
+        d8 g, ees' g, d' c bes c |
+        d8 c bes a g fis g bes |
+        a8 d, bes' d, c' a fis a |
+        \break
+
+        d8 c bes a g a bes c |
+        d8 g, ees' g, d' c bes c |
+        d8 c bes a g fis g bes |
+      } \alternative { {
+        \set Timing.measureLength = #(ly:make-moment 3/4)
+        a8 d, e fis g4 |
+      } {
+        \set Timing.measureLength = #(ly:make-moment 4/4)
+        a8 d, e fis g4 a4 |
+      } } \break
+
+      \repeat volta 2 {
+        g8 d g a bes d, a' d, |
+        g8 d g a bes d, a' d, |
+        g8 d g a bes a bes c |
+        d8 cis d ees d c bes a |
+        \break
+
+        g8 d g a bes d, a' d, |
+        g8 d g a bes d, a' d, |
+        g8 a bes c d ees d c |
+      } \alternative { {
+        bes8 a g fis g4 d |
+      } {
+        bes'8 a g fis g4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        g1:m | g2:m d:7 | g1:m | d:7 |
+        g1:m | s | d2:7 g:m | d:7 g4:m | d2:7 g:m |
+
+        g2:m d:7 | g:m d:7 | g1:m | d2:7 g:7/fis |
+        g2:m d:7 | g:m d:7 | g:m c:m7 | d:7 g:m | d:7 g4:m
+      }
+    }
+  >>
