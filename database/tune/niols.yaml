@@ -1,0 +1,58 @@
+---
+name: Niols
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2023"
+
+content: |
+  \relative f'' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key g \minor
+
+      \partial 4 d4 |
+      \repeat volta 2 {
+        g8 f d c bes a g f |
+        d8 g g f d c bes c |
+        d8 g g f g a bes c |
+        d8 ees d cis d ees f fis |
+        \break
+
+        g8 f d c bes a g f |
+        d8 c bes c d g a a |
+        g8 a bes c d g fis g |
+        d8 ees cis d g, d' ees fis |
+      } \break
+
+      \repeat volta 2 {
+        g4 ees8 c f, a c ees |
+        f8 ees d c bes a bes d |
+        ees4 c8 bes a bes c ees |
+        d8 c bes a g bes d f |
+        \break
+
+        g4 ees8 c f, a c g' |
+        f8 ees d c bes c d f |
+        ees8 d c bes a bes c ees |
+      } \alternative { {
+        d8 ees cis d g, b d f |
+      } {
+        d8 e f fis g4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        g1:m | s | g:m | d2:7/a d:7/fis |
+        g1:m | s | g:m | d2:7 g:m |
+
+        c2:m f | d:m g:m | c:m d:7 | g1:m |
+        c2:m f:7 | d:m bes | c:m cis:dim | d:7 g:7 | d:7 g4:m
+      }
+    }
+  >>
