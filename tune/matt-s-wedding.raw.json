@@ -7,9 +7,8 @@
     "date": "2022-03-23",
     "dances": [
       {
-        "type": "external",
-        "name": "Matt's Wedding",
-        "deviser": "Emmy Wilkinson and Matthew Stuart Dunn"
+        "type": "internal",
+        "slug": "emmy-and-matt-s-wedding"
       }
     ],
     "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key f \\major\n\n    \\repeat volta 2 {\n      \\partial 4 f4 |\n      c4 f8. c16 a'8. c,16 bes' c,8. |\n      e8. f16 g e8. bes'4 ~ \\tuplet 3/2 { bes8 a g } |\n      f8( f') e d c bes a g |\n      g8. a16 g a8. g4 ~ g16 f e d |\n      \\break\n\n      c4 f8. c16 a'8. c,16 bes' c,8. |\n      e8. f16 g e8. bes'4 ~ \\tuplet 3/2 { bes8 a g } |\n      f8( f') e d c bes a g |\n      g8. a16 g a8. f2 |\n      \\break \\bar \"||\"\n\n      f8 f' <a a,>4 <g g,> <e e,> |\n      <d d,>4 <f f,> <e e,> <c c,> |\n      <bes bes,>8 d c bes a g f e |\n      e8. f16 g e8. bes'4 ~ \\tuplet 3/2 { bes8 a g }\n      \\break\n\n      f8 f' <a a,>4 <g g,> <e e,> |\n      <d d,>4 <f f,> <e e,> <c c,> |\n      <bes bes,>8 d c bes a g f e |\n      f4 f f\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      f1 | c2 c:7 | f1 | c2 c:7 |\n      f1 | c2 c:7 | f1 | c2:7 f2 |\n\n      f2 c:7 | d:m a:m | g:m f | e:dim c:7 |\n      f2 c:7 | d:m a:m | bes c:7 | f2.\n    }\n  }\n>>\n",
