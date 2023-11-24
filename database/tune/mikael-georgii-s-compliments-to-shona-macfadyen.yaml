@@ -1,0 +1,61 @@
+---
+name: Mikael Georgii's Compliments to Shona MacFadyen
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2014"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key e \minor
+      \time 4/4
+
+      \partial 4 b4 |
+      \repeat volta 2 {
+        e4 b8 g e g b d |
+        c8 b a g fis4 e8 dis |
+        e8 fis e dis e fis g a |
+        b8 ais b c b4 cis8 dis |
+        \break
+
+        e4 b8 g e g b d |
+        c8 b a g fis4 e8 dis |
+        e8 fis g a b a g fis |
+      } \alternative { {
+        e4 e8 dis e4 cis'8 dis |
+      } {
+        e,4 e8 dis e4 fis8 e |
+      } } \break
+
+      \repeat volta 2 {
+        dis8 e fis g a c b a |
+        g8 fis g a b4 cis8 b |
+        ais8 b cis dis e g fis e |
+        dis8 c b ais b4 cis8 dis |
+        \break
+
+        e4 b8 g e g b d |
+        c8 b a g fis4 e8 dis |
+        e8 fis g a b a g fis |
+      } \alternative { {
+        e4 e8 dis e4 fis8 e |
+      } {
+        e4 e8 dis e4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        e1:m | a2:m b | e c:7 | b1 |
+        e1:m | a2:m b | e:m b | e1:m | e:m |
+
+        b1 | e2:m e:m/b | fis1 | b |
+        e1:m | a2:m b | e:m b | e1:m | e2.:m
+      }
+    }
+  >>
