@@ -1,0 +1,57 @@
+---
+name: Tony Simpson's Reel
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2019"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key g \major
+
+      \repeat volta 2 {
+        \partial 4 d4 |
+        g8 b d g b g d c |
+        b8 c b a g fis g b |
+        a8 b c b a g fis e |
+        d8 fis a cis d c b a |
+        \break
+
+        g8 b d g b g d cis |
+        b8 c d c b a g b |
+        a8 g fis e d e fis g |
+        g8 b a fis g4
+      } \break
+
+      \repeat volta 2 {
+        a8 g |
+        fis8 e d e fis d e fis |
+        g8 fis g a b d cis b |
+        a8 gis a b cis a b cis |
+        d8 cis d e fis d e fis |
+        \break
+
+        g8 b, d g b g d b |
+        c8 b c d e g fis e |
+        d8 cis d e fis e cis a |
+        g8 b a fis g4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        d4:7 |
+        g2 b:m/fis | e:m g/d | a:m a:m/e | d d/fis |
+        g2 b:m/fis | e:m g/b | a:m d | g4 fis g
+
+        a4:7 |
+        d2 d/fis | g1 | a2 a:7/cis | d2 d:7/fis |
+        g2 g:7 | c cis:dim | g/d a:m7/e | g4 d:7 g
+      }
+    }
+  >>
