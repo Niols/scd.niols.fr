@@ -1,0 +1,63 @@
+---
+name: Mikael Georgii's Compliments to Mo
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2002"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key bes \major
+      \time 6/8
+
+      \repeat volta 2 {
+        \partial 8 f8 |
+        d8 bes bes bes f bes |
+        g8 ees ees ees4 g8 |
+        f8 bes bes d c bes |
+        a8 c c c f ees |
+        \break
+
+        d8 bes bes bes f bes |
+        g8 ees ees ees f g |
+        f8 bes bes a bes c |
+      } \alternative { {
+        \set Timing.measureLength = #(ly:make-moment 5/8)
+        d8 bes bes bes4
+      } {
+        \set Timing.measureLength = #(ly:make-moment 6/8)
+        d8 bes bes bes d ees |
+      } } \break
+
+      \repeat volta 2 {
+        f8 d bes bes bes' f |
+        g8 ees ees c d ees |
+        f8 d bes bes a bes |
+        g8 a bes c d ees |
+        \break
+
+        f8 d bes bes bes' f |
+        g8 ees ees c d ees |
+        f8 d bes a bes c |
+      } \alternative { {
+        d8 bes bes bes d ees |
+      } {
+        d8 bes bes bes4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        bes4. bes/d | ees c:m7 | bes/d g:m | c:m7 f:7 |
+        bes4. bes/d | ees c:m7 | bes/d f:7/c | bes4 ees8 bes4 | ees4./b bes/d |
+
+        bes4. bes/d | ees c:m7 | bes/d g:m | c:7 f:7 |
+        bes4./aes bes/d | ees f:7 | bes/d f:7/c | bes4 ees8 bes4. | bes4 ees8 bes4
+      }
+    }
+  >>
