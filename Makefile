@@ -162,7 +162,8 @@ $(website-output)/dances.raw.json: $(addsuffix .raw.json, $(built_dances))
 	  jq -s 'map({(.slug): (.dance)}) | .+[{}] | add | {dances:.}' $^ > $@
 	else
 	  printf '  => trivial file because no built dances\n'
-	  jq -n '{dances:[]}' > $@
+		mkdir -p $$(dirname $@) ## FIXME: this is a bit dirty
+	  jq -n '{dances:{}}' > $@
 	fi
 
 $(website-output)/dances.json: $(website-output)/dances.raw.json
@@ -251,7 +252,8 @@ $(website-output)/tunes.raw.json: $(addsuffix .raw.json, $(built_tunes))
 	  jq -s 'map({(.slug): (.tune)}) | .+[{}] | add | {tunes:., root:"."}' $^ > $@
 	else
 	  printf '  => trivial file because no built tunes\n'
-	  jq -n '{tunes:[], root:"."}' > $@
+	  mkdir -p $$(dirname $@) ## FIXME: this is a bit dirty
+	  jq -n '{tunes:{}, root:"."}' > $@
 	fi
 
 $(website-output)/tunes.json: $(website-output)/tunes.raw.json
