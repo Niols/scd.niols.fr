@@ -1,0 +1,72 @@
+---
+name: Mikael Georgii's Compliments to Muriel and Robert
+author: Mikael Georgii
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "1996"
+
+content: |
+  \relative f <<
+    {
+      \clef treble
+      \key ees \major
+      \time 4/4
+
+      \partial 4 bes4 |
+      \repeat volta 2 {
+        ees8. f16 g8. aes16 bes g8. ees' d16 |
+        c8. ees16 b8. ees16 bes g8. c bes16 |
+        aes16 f8. bes aes16 g ees8. aes g16 |
+        f8. a16 c8. des16 d bes8. aes f16 |
+        \break
+
+        ees8. f16 g8. aes16 bes g8. ees'8. d16 |
+        c8. d16 f ees d c bes g8. c bes16 |
+        aes16 f8. bes aes16 g bes8. ees, g16 |
+      } \alternative { {
+        f16 bes,8. c d16 ees8. f16 g8. f16 |
+      } {
+        f16 bes,8. c d16 ees8. f16 g8. aes16 |
+      } } \break
+
+      g8. b16 c8. d16 ees c8. ees f16 |
+      g8. aes16 f8. g16 ees c8. d c16 |
+      f,8. a16 bes8. c16 d bes8. d ees16 |
+      f8. g16 ees8. f16 d bes8. aes f16 |
+      \break
+
+      ees8. f16 g8. aes16 bes g8. ees'8. d16 |
+      c8. d16 f ees d c bes g8. c bes16 |
+      aes16 f8. bes aes16 g bes8. ees, g16 |
+      f16 bes,8. c d16 ees8. f16 g8. aes16 |
+      \bar "||" \break
+
+      g8. b16 c8. d16 ees c8. ees f16 |
+      g8. aes16 f8. g16 ees c8. d c16 |
+      f,8. a16 bes8. c16 d bes8. d ees16 |
+      f8. g16 ees8. f16 d bes8. aes f16 |
+      \break
+
+      ees8. f16 g8. aes16 bes g8. ees'8. d16 |
+      c8. d16 f ees d c bes g8. c bes16 |
+      aes8. c16 d8. f16 g ees8. bes g16 |
+      f16 ees8. g f16 ees4
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        ees2 ees/g | aes:m g4:m c:7 | f:m bes/d ees2 | f bes |
+        ees2 ees/g | f:m/aes c:7/g | f4:m bes/d ees2 | bes ees4 bes | bes2 ees |
+
+        g2:7 c:m | g:7 c4:m f:7 | bes2 bes/d | f:7 b |
+        ees2 ees/g | f:m/aes g4:m c:7 | f:m bes/d ees2 | bes ees |
+
+        g2:7 c:m | g:7 c4:m f:7 | bes2 bes/d | f:7 b |
+        ees2 ees/g | f:m/aes g4:m c:7 | bes2 ees | bes4 bes:7 ees
+      }
+    }
+  >>
