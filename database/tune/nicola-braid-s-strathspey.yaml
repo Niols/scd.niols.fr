@@ -1,0 +1,57 @@
+---
+name: Nicola Braid's Strathspey
+author: Mikael Georgii
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2020"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \repeat volta 2 {
+        \partial 4 e4 |
+        a8. cis16 b8. a16 b8. a16 fis16 a8. |
+        e8. fis16 e cis8. e4 fis8. gis16 |
+        a8. b16 cis a8. fis'8. e16 d cis8. |
+        b8. cis16 b fis8. b4 e, |
+        \break
+
+        a8. cis16 b8. a16 b8. a16 fis a8. |
+        e8. fis16 e cis8. e4 fis8. gis16 |
+        a8. b16 cis a8. fis' e16 d cis8. |
+        b8. a16 b cis8. a4
+      } \break
+
+      \repeat volta 2 {
+        b4 |
+        cis8. b16 a cis8. b a16 gis f8. |
+        fis8. gis16 a8. b16 cis4. cis8 |
+        d8. cis16 b d8. cis8. b16 a cis8. |
+        b8. a16 gis fis8. f4 cis |
+        \break
+
+        a'8. gis16 fis a8. gis fis16 f gis8. |
+        fis8. gis16 a8. b16 cis4. cis8 |
+        d8. cis16 b d8. cis8. b16 a cis8. |
+        b8. a16 b cis8. a4
+      }
+     }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a2 d | e a | fis:m d | b/dis e |
+        a2 d | e a | a/cis d4 fis:m/b | e2:7 a4
+
+        s4 |
+        fis2:m cis:7 | fis:m fis:m/cis | b:m fis:m/a | c:dim cis |
+        fis2:m cis:7/gis | fis:m/a fis:7 | b4:m e a fis:m | b:m/d e a
+      }
+    }
+  >>
