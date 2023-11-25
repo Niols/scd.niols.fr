@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Michael Taylor's Jig",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2019",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key bes \\major\n\n    \\partial 8 f8 |\n    d8 bes c d ees e |\n    f8 g a bes c d |\n    c8 g d' c g d' |\n    c4. c8 bes g |\n    \\break\n\n    a8 f bes a f bes |\n    a8 g f ees d c |\n    bes8 c d g d g |\n    f4. ~ f8 ees c |\n    \\bar \"||\" \\break\n\n    d8 bes c d ees e |\n    f8 g a bes c d |\n    c8 g d' c g d' |\n    c4. c8 bes g |\n    \\break\n\n    a8 f bes a f bes |\n    a8 g f ees d c |\n    bes8 c d c bes a |\n    bes4. r8 c bes |\n    \\break\n\n    \\repeat volta 2 {\n      a8 f g a bes b |\n      c8 b c d c a |\n      bes8 c d f d g |\n      f8 d ees f g bes |\n      \\break\n\n      bes8 g bes c g cis |\n      d8 bes f d ees f |\n      g8 ees g a f a |\n    } \\alternative { {\n      bes4. bes8 c, bes |\n    } {\n      bes'4. ~ bes4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      bes4. bes/f | bes bes/d | c:m7/ees g:7/d | c:m c:7/e |\n      f4.:7 f:7/c | f f:7/a | bes g:7/b | f f:7/a |\n\n      bes4. bes/f | bes bes/d | c:m/ees g:7/d | c:m c:7/e |\n      f4.:7 f:7/c | f:7 f:7/a | c:m f:7 | bes s8 c4:7 |\n\n      f4. f/c | f2. | bes | bes/d |\n      c4.:m/ees e:dim | bes/d g:7 | c:m7 f:7 | bes c:7 | bes\n    }\n  }\n>>\n"
+  },
+  "slug": "michael-taylor-s-jig"
+}
