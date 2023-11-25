@@ -1,0 +1,75 @@
+---
+name: The Warmup March
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2017"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key a \major
+
+      \partial 4 e4 |
+      \repeat volta 2 {
+        cis'4. b8 a4. b8 |
+        cis4 e e d8 e |
+        fis4 d d cis |
+        b2 b4 a |
+        \break
+
+        gis4. fis8 e4. fis8 |
+        gis4 b b cis |
+      } \alternative { {
+        d4 fis e d |
+        cis2 cis4 e, |
+      } {
+        d'4 fis e cis |
+        a2.
+      } } \bar "||" \break
+
+      a4 |
+      fis'4. e8 d4. e8 |
+      fis4 a a fis |
+      e4. d8 cis4. d8 |
+      e4 a a e |
+      \break
+
+      dis4. cis8 b4. cis8 |
+      d4 a' a fis |
+      gis4. a8 gis4. fis8 |
+      e4 d cis b |
+      \bar "||" \break
+
+      cis4. b8 a4. b8 |
+      cis4 e e d8 e |
+      fis4 d d cis |
+      b2 b4 a |
+      \break
+
+      gis4. fis8 e4. fis8 |
+      gis4 b b cis |
+      d4 fis e cis |
+      a2.
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        e4 |
+        a1 | a2 a/cis | d1 | b2:m/d b:7 |
+        e1 | s | b2:m e | a4 <gis> <fis> <e> | b2:m e | a2.
+
+        s4 |
+        d1 | s | a | s |
+        b1 | b:7 | e | e4 <f> <fis> <gis> |
+
+        a1 | a2 a/cis | d a/cis | b1:m/d |
+        e1 | s | d | a2.
+      }
+    }
+  >>
