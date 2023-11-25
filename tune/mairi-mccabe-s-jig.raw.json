@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mairi McCabe's Jig",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2017",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 6/8\n\n    \\partial 8 a8 |\n    \\repeat volta 2 {\n      fis8 e d b' g b |\n      a8 fis fis fis g a |\n      b8 g b cis b cis |\n      d8 a a a d cis |\n      \\break\n\n      d8 b d d cis b |\n      a8 fis fis fis g a |\n      b8 a g fis e d |\n    } \\alternative { {\n      cis8 e e e4 a8 |\n    } {\n      cis,8 d e d4 cis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      b8 d fis b fis b |\n      g8 e e e fis g |\n      fis8 cis fis e cis e |\n      d8 b b b4 cis8 |\n      \\break\n\n      b8 d fis b fis b |\n      g8 e e e fis g |\n      fis8 g fis e d cis |\n    } \\alternative { {\n      b8 d cis b4 fis'8 |\n    } {\n      b,8 d cis b4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d4. g | d d/fis | g a | d d/fis |\n      g4. gis:dim | d/a b:7 | e:m e:7/gis | a2.:7 | a4. d |\n\n      b4. b:m/d | e:m e:m/g | fis:7 fis/ais | b:m b:m/fis |\n      b4.:m b:7/dis | e:m e:m/g | fis:7 fis/ais | b2.:m | b4.:m s4\n    }\n  }\n>>\n"
+  },
+  "slug": "mairi-mccabe-s-jig"
+}

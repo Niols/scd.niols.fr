@@ -1544,6 +1544,14 @@
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\major\n\n    \\repeat volta 2 {\n      \\partial 4 a4 |\n      d,4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d cis b a g fis e |\n      \\break\n\n      d4 fis8 a b4 a |\n      b8 a b cis d4 d8 cis |\n      b4 d8 fis b a g fis |\n      e d e fis d4\n    } \\break\n\n    \\repeat volta 2 {\n      d8 e |\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis d cis b a |\n      a b cis d e fis g a |\n      \\break\n\n      fis4 a8 fis g fis e g |\n      fis d b cis d cis b a |\n      g a b cis a b cis e |\n      fis4 d d\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      d2 g | a d | b:m e:m | a2 a:7 |\n      d2 g | a d | b:m e:m | a2:7 d |\n\n      d2 e:m | b1:m | g | a2 a:7 |\n      d2 e:m | b1:m | g2 a:7 | d2.\n    }\n  }\n>>\n",
       "composer-details": "This is how I initially composed as an AABB 32-bar reel, before I presented it\nto Violaine Eysseric who liked it and asked to use it for her dance “Love is\nin the Air”. For her dance, I play this tune as ABABAB for 48 bars.\n"
     },
+    "mairi-mccabe-s-jig": {
+      "name": "Mairi McCabe's Jig",
+      "author": "Mikael Georgii",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2017",
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 6/8\n\n    \\partial 8 a8 |\n    \\repeat volta 2 {\n      fis8 e d b' g b |\n      a8 fis fis fis g a |\n      b8 g b cis b cis |\n      d8 a a a d cis |\n      \\break\n\n      d8 b d d cis b |\n      a8 fis fis fis g a |\n      b8 a g fis e d |\n    } \\alternative { {\n      cis8 e e e4 a8 |\n    } {\n      cis,8 d e d4 cis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      b8 d fis b fis b |\n      g8 e e e fis g |\n      fis8 cis fis e cis e |\n      d8 b b b4 cis8 |\n      \\break\n\n      b8 d fis b fis b |\n      g8 e e e fis g |\n      fis8 g fis e d cis |\n    } \\alternative { {\n      b8 d cis b4 fis'8 |\n    } {\n      b,8 d cis b4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d4. g | d d/fis | g a | d d/fis |\n      g4. gis:dim | d/a b:7 | e:m e:7/gis | a2.:7 | a4. d |\n\n      b4. b:m/d | e:m e:m/g | fis:7 fis/ais | b:m b:m/fis |\n      b4.:m b:7/dis | e:m e:m/g | fis:7 fis/ais | b2.:m | b4.:m s4\n    }\n  }\n>>\n"
+    },
     "marie-my-distant-cousin": {
       "name": "Marie, my distant cousin",
       "author": "Mikael Georgii",
