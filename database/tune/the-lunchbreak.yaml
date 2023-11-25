@@ -1,0 +1,57 @@
+---
+name: The Lunchbreak
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2016"
+
+content: |
+  \relative f <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key ees \major
+
+      \repeat volta 2 {
+        \partial 4 bes4 |
+        bes'8 a c bes ~ bes g f ees |
+        f4 f8 ees d c bes d |
+        ees8 f g bes ~ bes g f ees |
+        f8 ees f g f4 bes,4 |
+        \break
+
+        bes'8 a c bes ~ bes g f ees |
+        f4 f8 ees d c bes d |
+        ees8 f g bes ~ bes g f ees |
+        d8 ees f d ees4
+      } \break
+
+      \repeat volta 2 {
+        d4 |
+        c4 c8 d ees d ees f |
+        g8 aes g f ees f g ees |
+        f8 ees d f ~ f ees d f |
+        ees8 f g aes bes g f ees |
+        \break
+
+        c4 c8 d ees d ees f |
+        g8 f ees g ~ g f ees g |
+        f8 g aes f ~ f ees d ees |
+        d8 ees f d ees4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        ees2 c:m7 | f bes | ees c:m7 | f:7 bes |
+        ees2 c:m7 | f bes | ees c:m7 | b ees4
+
+        s4 |
+        aes1 | ees | bes | ees2 ees/des |
+        aes2 f:7/a | ees/bes c:m | f1:m | bes2 ees4
+      }
+    }
+  >>
