@@ -22,9 +22,9 @@ content: |
         e'8 g fis d e a, cis e |
         \break
 
-        fis8 d b d a d fis a |
+        fis8 d cis d a d fis a |
         g a, cis g' fis d cis d |
-        e8 a, fis' a, g' e b d |
+        e8 a, fis' a, g' e cis d |
         e8 fis d cis d4
       } \break
 
@@ -51,7 +51,7 @@ content: |
 
         \parenthesize e4:7 |
         a2:7/cis a | a a/cis | d d/fis | d4 a/e d2/fis |
-        a2:7/e a | a4 b a2/cis | d d/fis | a d4
+        a2:7/e a | a4 b:m a2/cis | d d/fis | a d4
       }
     }
   >>
