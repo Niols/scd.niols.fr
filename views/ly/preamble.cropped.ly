@@ -7,10 +7,10 @@
   %% Make the page as big as its content
   page-breaking = #ly:one-page-breaking
 
-  %% Remove horizontal margins
+  %% Remove horizontal margins; keep 1cm on the left for bar numbers
   two-sided = #f
   left-margin = 0
-  right-margin = 0
+  right-margin = 1\cm
 
   %% Remove all vertical margins
   top-margin = 0
