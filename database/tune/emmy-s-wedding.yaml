@@ -8,9 +8,8 @@ short-kind: R32
 date: "2022-05-23"
 
 dances:
-  - type: external
-    name: Emmy's Wedding
-    deviser: Emmy Wilkinson and Matthew Stuart Dunn
+  - type: internal
+    slug: emmy-and-matt-s-wedding
 
 content: |
   \relative f' <<
