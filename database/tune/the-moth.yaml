@@ -14,8 +14,8 @@ content: |
       \time 4/4
       \key g \minor
 
-      \partial 4 d4 |
       \repeat volta 2 {
+        \partial 4 d4 |
         d'8 c bes a g a bes c |
         d8 g, ees' g, d' c bes c |
         d8 c bes a g fis g bes |
@@ -26,8 +26,10 @@ content: |
         d8 g, ees' g, d' c bes c |
         d8 c bes a g fis g bes |
       } \alternative { {
-        a8 d, e fis g4 d |
+        \set Timing.measureLength = #(ly:make-moment 3/4)
+        a8 d, e fis g4 |
       } {
+        \set Timing.measureLength = #(ly:make-moment 4/4)
         a'8 d, e fis g4 a4 |
       } } \break
 
@@ -52,7 +54,7 @@ content: |
       \chordmode {
         s4 |
         g1:m | g2:m d:7 | g1:m | d:7 |
-        g1:m | s | d2:7 g:m | d:7 g:m | d:7 g:m |
+        g1:m | s | d2:7 g:m | d:7 g4:m | d2:7 g:m |
 
         g2:m d:7 | g:m d:7 | g1:m | d2:7 g:7/fis |
         g2:m d:7 | g:m d:7 | g:m c:m7 | d:7 g:m | d:7 g4:m
