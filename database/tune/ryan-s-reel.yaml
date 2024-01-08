@@ -1,5 +1,5 @@
 ---
-name: Ryans Reel
+name: Ryan's Reel
 author: Mikael Georgii
 
 kind: 32-bar reel
@@ -51,7 +51,7 @@ content: |
 
         s8 |
         d1:m | s | g:m | g2:m6 a:7 |
-        d1:m | s | g:m | a2:7 s4.
+        d1:m | s | g:m | a2:7 d4.:m
       }
     }
   >>
