@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Ian R. Muir",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2015",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key b \\minor\n\n    \\repeat volta 2 {\n      \\partial 4 fis4 |\n      b8 fis fis b a fis e fis |\n      b,8 b d e fis4 b8 cis |\n      d8 b b cis d b e d |\n      cis8 gis ais b cis4 fis, |\n      \\break\n\n      b8 fis fis b a fis e fis |\n      b,8 b d e fis4 b8 cis |\n      d8 cis b d cis b ais cis |\n      cis8 b b ais b4\n    } \\break\n\n    \\repeat volta 2 {\n      cis4 |\n      d8 b b d cis b a g |\n      fis8 a b fis a4 b8 a |\n      e8 a b g a4 b8 a |\n      fis8 a b fis a4 b8 cis |\n      \\break\n\n      d8 b b d cis b a g |\n      fis8 a b fis a4 b8 a |\n      e8 a b g fis d e cis |\n      d8 d fis a d4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      b2:m fis:m | b:m fis | b:m e:m | cis:7/f fis |\n      b2:m fis:m | b b/fis | g fis | b:m s4\n\n      s4 |\n      g2 a | d d/fis | a:7/e a:7/cis | d d/fis |\n      g2 a | d d/fis | a:7/e a:7 | d s4\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-ian-r-muir"
+}
