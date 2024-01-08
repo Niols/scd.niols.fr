@@ -1,0 +1,18 @@
+{
+  "tune": {
+    "name": "Tiramisu",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2023",
+    "dances": [
+      {
+        "type": "external",
+        "name": "Tiramisu",
+        "deviser": "Vladimir Garbuzov"
+      }
+    ],
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key a \\major\n\n    \\partial 4 e4 |\n    a8 gis a b a gis fis e |\n    fis4 e8 cis a cis e cis |\n    fis4 e8 cis a cis e cis |\n    d4 b b4. e8 |\n    \\break\n\n    gis8 a b a gis a gis fis |\n    gis8 a gis fis e4 e8 fis |\n    gis8 a gis fis e d b d |\n    fis4 e8 d cis4 e |\n    \\bar \"||\" \\break\n\n    a8 gis a b a gis fis e |\n    fis4 e8 cis a cis e cis |\n    fis4 e8 cis a cis e a |\n    gis4 fis fis4. f8 |\n    \\break\n\n    fis8 gis a gis b a gis fis |\n    fis4 e8 cis a cis e a |\n    gis8 a gis fis e fis gis b |\n    a4 e8 cis a e' fis gis |\n    \\bar \"||\" \\break\n\n    a8 gis a b cis b a gis |\n    a8 b cis b a4 a8 b |\n    cis8 b cis e d cis b a |\n    gis4 fis fis fis8 a |\n    \\break\n\n    gis8 a b d b a gis a |\n    b8 d b a gis4 gis8 a |\n    b8 a gis fis e d cis d |\n    fis4 e8 d cis e fis gis |\n    \\bar \"||\" \\break\n\n    a8 gis a b cis b a gis |\n    a8 b cis b a4 a8 b |\n    cis8 b cis e d cis b a |\n    gis4 fis fis fis8 a |\n    \\break\n\n    gis8 a b d b a gis a |\n    gis8 a gis fis e4 e8 fis |\n    gis8 a b d cis b a gis |\n    b4 a a\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | s | a | e2:7/b e |\n      e1 | s | e | a2 a/cis |\n\n      a1 | s | a | d |\n      d2 dis:dim | a/e a/fis | e1 | a |\n\n      a2 a/cis | a a/cis | a a/cis | d1 |\n      e2 e/b | e e/b | b:m e | a a/cis |\n\n      a2 a/cis | a a/cis | a a/cis | d1 |\n      e2 e/b | e e:7 | e1 | a2.\n    }\n  }\n>>\n"
+  },
+  "slug": "tiramisu"
+}
