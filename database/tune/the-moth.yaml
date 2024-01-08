@@ -52,7 +52,7 @@ content: |
       \chordmode {
         s4 |
         g1:m | g2:m d:7 | g1:m | d:7 |
-        g1:m | s | d:7 | g4 d:7 s2 | g4 d:7 s2 |
+        g1:m | s | d2:7 g:m | d:7 g:m | d:7 g:m |
 
         g2:m d:7 | g:m d:7 | g1:m | d2:7 g:7/fis |
         g2:m d:7 | g:m d:7 | g:m c:m7 | d:7 g:m | d:7 g4:m
