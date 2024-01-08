@@ -1,0 +1,61 @@
+---
+name: Mairi McCabe's Jig
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2017"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key d \major
+      \time 6/8
+
+      \partial 8 a8 |
+      \repeat volta 2 {
+        fis8 e d b' g b |
+        a8 fis fis fis g a |
+        b8 g b cis b cis |
+        d8 a a a d cis |
+        \break
+
+        d8 b d d cis b |
+        a8 fis fis fis g a |
+        b8 a g fis e d |
+      } \alternative { {
+        cis8 e e e4 a8 |
+      } {
+        cis,8 d e d4 cis8 |
+      } } \break
+
+      \repeat volta 2 {
+        b8 d fis b fis b |
+        g8 e e e fis g |
+        fis8 cis fis e cis e |
+        d8 b b b4 cis8 |
+        \break
+
+        b8 d fis b fis b |
+        g8 e e e fis g |
+        fis8 g fis e d cis |
+      } \alternative { {
+        b8 d cis b4 fis'8 |
+      } {
+        b,8 d cis b4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        d4. g | d d/fis | g a | d d/fis |
+        g4. gis:dim | d/a b:7 | e:m e:7/gis | a2.:7 | a4. d |
+
+        b4. b:m/d | e:m e:m/g | fis:7 fis/ais | b:m b:m/fis |
+        b4.:m b:7/dis | e:m e:m/g | fis:7 fis/ais | b2.:m | b4.:m s4
+      }
+    }
+  >>

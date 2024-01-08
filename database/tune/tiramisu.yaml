@@ -1,0 +1,88 @@
+---
+name: Tiramisu
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2023"
+
+dances:
+  - type: external
+    name: Tiramisu
+    deviser: Vladimir Garbuzov
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key a \major
+
+      \partial 4 e4 |
+      a8 gis a b a gis fis e |
+      fis4 e8 cis a cis e cis |
+      fis4 e8 cis a cis e cis |
+      d4 b b4. e8 |
+      \break
+
+      gis8 a b a gis a gis fis |
+      gis8 a gis fis e4 e8 fis |
+      gis8 a gis fis e d b d |
+      fis4 e8 d cis4 e |
+      \bar "||" \break
+
+      a8 gis a b a gis fis e |
+      fis4 e8 cis a cis e cis |
+      fis4 e8 cis a cis e a |
+      gis4 fis fis4. f8 |
+      \break
+
+      fis8 gis a gis b a gis fis |
+      fis4 e8 cis a cis e a |
+      gis8 a gis fis e fis gis b |
+      a4 e8 cis a e' fis gis |
+      \bar "||" \break
+
+      a8 gis a b cis b a gis |
+      a8 b cis b a4 a8 b |
+      cis8 b cis e d cis b a |
+      gis4 fis fis fis8 a |
+      \break
+
+      gis8 a b d b a gis a |
+      b8 d b a gis4 gis8 a |
+      b8 a gis fis e d cis d |
+      fis4 e8 d cis e fis gis |
+      \bar "||" \break
+
+      a8 gis a b cis b a gis |
+      a8 b cis b a4 a8 b |
+      cis8 b cis e d cis b a |
+      gis4 fis fis fis8 a |
+      \break
+
+      gis8 a b d b a gis a |
+      gis8 a gis fis e4 e8 fis |
+      gis8 a b d cis b a gis |
+      b4 a a
+      \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a1 | s | a | e2:7/b e |
+        e1 | s | e | a2 a/cis |
+
+        a1 | s | a | d |
+        d2 dis:dim | a/e a/fis | e1 | a |
+
+        a2 a/cis | a a/cis | a a/cis | d1 |
+        e2 e/b | e e/b | b:m e | a a/cis |
+
+        a2 a/cis | a a/cis | a a/cis | d1 |
+        e2 e/b | e e:7 | e1 | a2.
+      }
+    }
+  >>
