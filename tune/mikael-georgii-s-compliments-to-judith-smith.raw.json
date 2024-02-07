@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Judith Smith",
+    "author": "Mikael Georgii",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2016",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e4 |\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. gis16 a8. gis16 fis e8. d16 cis8. |\n      d8. cis16 b a8. b4 e |\n      \\break\n\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. gis16 a8. fis16 e8. d16 cis b8. |\n      cis4 a a\n    } \\break\n\n    \\repeat volta 2 {\n      cis4 |\n      b8. cis16 d8. e16 fis8. e16 fis gis8. |\n      a8. b16 a8. e16 cis8. d16 e cis8. |\n      fis8. f16 fis8. d16 b8. cis16 d b8. |\n      cis8. e16 dis fis8. e8. f16 fis8. gis16 |\n      \\break\n\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. e16 d8. fis16 e8. d16 cis b8. |\n      cis4 a a\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 e/gis | fis:m a/e | d a/cis | b:m e |\n      a2 e/gis | fis:m e4:m a:7 | d2 e | a4 d a\n\n      s4 |\n      b2:m e:7 | a a/fis | d e | a4 b e \\parenthesize b:m6 |\n      a2 e/gis | fis:m a/e | d e | a4 d a\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-judith-smith"
+}

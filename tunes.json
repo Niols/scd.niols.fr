@@ -357,6 +357,14 @@
       "date": "2015",
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key b \\minor\n\n    \\repeat volta 2 {\n      \\partial 4 fis4 |\n      b8 fis fis b a fis e fis |\n      b,8 b d e fis4 b8 cis |\n      d8 b b cis d b e d |\n      cis8 gis ais b cis4 fis, |\n      \\break\n\n      b8 fis fis b a fis e fis |\n      b,8 b d e fis4 b8 cis |\n      d8 cis b d cis b ais cis |\n      cis8 b b ais b4\n    } \\break\n\n    \\repeat volta 2 {\n      cis4 |\n      d8 b b d cis b a g |\n      fis8 a b fis a4 b8 a |\n      e8 a b g a4 b8 a |\n      fis8 a b fis a4 b8 cis |\n      \\break\n\n      d8 b b d cis b a g |\n      fis8 a b fis a4 b8 a |\n      e8 a b g fis d e cis |\n      d8 d fis a d4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      b2:m fis:m | b:m fis | b:m e:m | cis:7/f fis |\n      b2:m fis:m | b b/fis | g fis | b:m s4\n\n      s4 |\n      g2 a | d d/fis | a:7/e a:7/cis | d d/fis |\n      g2 a | d d/fis | a:7/e a:7 | d s4\n    }\n  }\n>>\n"
     },
+    "mikael-georgii-s-compliments-to-judith-smith": {
+      "name": "Mikael Georgii's Compliments to Judith Smith",
+      "author": "Mikael Georgii",
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2016",
+      "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e4 |\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. gis16 a8. gis16 fis e8. d16 cis8. |\n      d8. cis16 b a8. b4 e |\n      \\break\n\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. gis16 a8. fis16 e8. d16 cis b8. |\n      cis4 a a\n    } \\break\n\n    \\repeat volta 2 {\n      cis4 |\n      b8. cis16 d8. e16 fis8. e16 fis gis8. |\n      a8. b16 a8. e16 cis8. d16 e cis8. |\n      fis8. f16 fis8. d16 b8. cis16 d b8. |\n      cis8. e16 dis fis8. e8. f16 fis8. gis16 |\n      \\break\n\n      a8. cis16 e8. fis16 e8. d16 cis b8. |\n      a8. b16 cis8. b16 a8. gis16 fis e8. |\n      fis8. e16 d8. fis16 e8. d16 cis b8. |\n      cis4 a a\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 e/gis | fis:m a/e | d a/cis | b:m e |\n      a2 e/gis | fis:m e4:m a:7 | d2 e | a4 d a\n\n      s4 |\n      b2:m e:7 | a a/fis | d e | a4 b e \\parenthesize b:m6 |\n      a2 e/gis | fis:m a/e | d e | a4 d a\n    }\n  }\n>>\n"
+    },
     "mikael-georgii-s-compliments-to-shona-macfadyen": {
       "name": "Mikael Georgii's Compliments to Shona MacFadyen",
       "author": "Mikael Georgii",
