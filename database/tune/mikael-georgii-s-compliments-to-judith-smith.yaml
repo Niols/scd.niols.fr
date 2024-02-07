@@ -1,0 +1,57 @@
+---
+name: Mikael Georgii's Compliments to Judith Smith
+author: Mikael Georgii
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2016"
+
+content: |
+  \relative f' <<
+    {
+      \clef treble
+      \key a \major
+      \time 4/4
+
+      \repeat volta 2 {
+        \partial 4 e4 |
+        a8. cis16 e8. fis16 e8. d16 cis b8. |
+        a8. b16 cis8. b16 a8. gis16 fis e8. |
+        fis8. gis16 a8. gis16 fis e8. d16 cis8. |
+        d8. cis16 b a8. b4 e |
+        \break
+
+        a8. cis16 e8. fis16 e8. d16 cis b8. |
+        a8. b16 cis8. b16 a8. gis16 fis e8. |
+        fis8. gis16 a8. fis16 e8. d16 cis b8. |
+        cis4 a a
+      } \break
+
+      \repeat volta 2 {
+        cis4 |
+        b8. cis16 d8. e16 fis8. e16 fis gis8. |
+        a8. b16 a8. e16 cis8. d16 e cis8. |
+        fis8. f16 fis8. d16 b8. cis16 d b8. |
+        cis8. e16 dis fis8. e8. f16 fis8. gis16 |
+        \break
+
+        a8. cis16 e8. fis16 e8. d16 cis b8. |
+        a8. b16 cis8. b16 a8. gis16 fis e8. |
+        fis8. e16 d8. fis16 e8. d16 cis b8. |
+        cis4 a a
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        a2 e/gis | fis:m a/e | d a/cis | b:m e |
+        a2 e/gis | fis:m e4:m a:7 | d2 e | a4 d a
+
+        s4 |
+        b2:m e:7 | a a/fis | d e | a4 b e \parenthesize b:m6 |
+        a2 e/gis | fis:m a/e | d e | a4 d a
+      }
+    }
+  >>
