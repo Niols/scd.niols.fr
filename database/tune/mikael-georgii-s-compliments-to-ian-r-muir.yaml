@@ -1,0 +1,57 @@
+---
+name: Mikael Georgii's Compliments to Ian R. Muir
+author: Mikael Georgii
+
+kind: 32-bar reel
+short-kind: R32
+
+date: "2015"
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key b \minor
+
+      \repeat volta 2 {
+        \partial 4 fis4 |
+        b8 fis fis b a fis e fis |
+        b,8 b d e fis4 b8 cis |
+        d8 b b cis d b e d |
+        cis8 gis ais b cis4 fis, |
+        \break
+
+        b8 fis fis b a fis e fis |
+        b,8 b d e fis4 b8 cis |
+        d8 cis b d cis b ais cis |
+        cis8 b b ais b4
+      } \break
+
+      \repeat volta 2 {
+        cis4 |
+        d8 b b d cis b a g |
+        fis8 a b fis a4 b8 a |
+        e8 a b g a4 b8 a |
+        fis8 a b fis a4 b8 cis |
+        \break
+
+        d8 b b d cis b a g |
+        fis8 a b fis a4 b8 a |
+        e8 a b g fis d e cis |
+        d8 d fis a d4
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s4 |
+        b2:m fis:m | b:m fis | b:m e:m | cis:7/f fis |
+        b2:m fis:m | b b/fis | g fis | b:m s4
+
+        s4 |
+        g2 a | d d/fis | a:7/e a:7/cis | d d/fis |
+        g2 a | d d/fis | a:7/e a:7 | d s4
+      }
+    }
+  >>
