@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Shona MacFadyen",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2014",
+    "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key e \\minor\n    \\time 4/4\n\n    \\partial 4 b4 |\n    \\repeat volta 2 {\n      e4 b8 g e g b d |\n      c8 b a g fis4 e8 dis |\n      e8 fis e dis e fis g a |\n      b8 ais b c b4 cis8 dis |\n      \\break\n\n      e4 b8 g e g b d |\n      c8 b a g fis4 e8 dis |\n      e8 fis g a b a g fis |\n    } \\alternative { {\n      e4 e8 dis e4 cis'8 dis |\n    } {\n      e,4 e8 dis e4 fis8 e |\n    } } \\break\n\n    \\repeat volta 2 {\n      dis8 e fis g a c b a |\n      g8 fis g a b4 cis8 b |\n      ais8 b cis dis e g fis e |\n      dis8 c b ais b4 cis8 dis |\n      \\break\n\n      e4 b8 g e g b d |\n      c8 b a g fis4 e8 dis |\n      e8 fis g a b a g fis |\n    } \\alternative { {\n      e4 e8 dis e4 fis8 e |\n    } {\n      e4 e8 dis e4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      e1:m | a2:m b | e c:7 | b1 |\n      e1:m | a2:m b | e:m b | e1:m | e:m |\n\n      b1 | e2:m e:m/b | fis1 | b |\n      e1:m | a2:m b | e:m b | e1:m | e2.:m\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-shona-macfadyen"
+}
