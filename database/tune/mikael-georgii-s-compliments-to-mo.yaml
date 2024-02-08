@@ -54,10 +54,10 @@ content: |
       \chordmode {
         s8 |
         bes4. bes/d | ees c:m7 | bes/d g:m | c:m7 f:7 |
-        bes4. bes/d | ees c:m7 | bes/d f:7/c | ees/b bes4 | ees4./b bes/d |
+        bes4. bes/d | ees c:m7 | bes/d f:7/c | bes4 ees8 bes4 | ees4./b bes/d |
 
         bes4. bes/d | ees c:m7 | bes/d g:m | c:7 f:7 |
-        bes4. bes/d | ees f:7 | bes/d f:7/c | ees/bes s | ees/bes bes4
+        bes4. bes/d | ees f:7 | bes/d f:7/c | bes4 ees8 bes4. | bes4. s4
       }
     }
   >>
