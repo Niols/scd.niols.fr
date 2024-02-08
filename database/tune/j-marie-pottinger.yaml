@@ -38,7 +38,7 @@ content: |
         e8 c c c d e |
         \break
 
-        f8 e f f, a d |
+        f8 e f f, a c |
         d8 bes bes d, g bes |
         c,8 e g bes a g |
       } \alternative { {
@@ -55,7 +55,7 @@ content: |
         f4. a:7 | d:m f:7/c | bes c:7 | f c:7 | f b:dim |
 
         c4.:7 c:7/e | f f/a | g/b g:7 | c c:7/e |
-        f4. ees | g:m/d g:m/bes | c:7 c:7/e | f b:dim | f
+        f4. f:7/ees | g:m/d g:m/bes | c:7 c:7/e | f b:dim | f
       }
     }
   >>
