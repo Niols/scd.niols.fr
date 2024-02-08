@@ -1,0 +1,76 @@
+---
+name: Jim Stott's Jig
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2018"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key g \major
+      \time 6/8
+
+      \partial 8 fis8 |
+      g8 g, fis' e4 dis8 |
+      e8 d b d4 b8 |
+      g8 a b d b dis |
+      e8 d b c4 gis'8 |
+      \break
+
+      a8 a, g' fis4 e8 |
+      fis8 e b c4 b8 |
+      a8 b c e a, fis' |
+      e8 d cis d e fis |
+      \bar "||" \break
+
+      g8 g, fis' e4 d8 |
+      e8 d b d b a |
+      g8 a b d g, dis' |
+      e4. e4 b'8 |
+      \break
+
+      c8 e, b' a4 a8 |
+      a8 a, g' fis4 e8 |
+      d8 e d d e fis |
+      g4. g4
+      \break
+
+      \repeat volta 2 {
+        a8 |
+        b8 fis a g4 ais8 |
+        b8 fis a g4 a8 |
+        b8 fis a g b, e |
+        d8 c b c4 gis'8 |
+        \break
+
+        a8 a, g' fis4 e8 |
+        fis8 e b c4 b8 |
+        a8 b c d e fis
+      } \alternative { {
+        \set Timing.measureLength = #(ly:make-moment 5/8)
+        e8 d cis d4 |
+      } {
+        \set Timing.measureLength = #(ly:make-moment 6/8)
+        g4. g4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        g4. g/b | g2. | g | a:m7 |
+        a2.:m7 | a:m7 | d:7 | bes4.:dim d:7/a |
+
+        g2. | g | g | c4.:6 a:m |
+        a2.:m/c | a:7/cis | d:7 | g4. s4
+
+        s8 |
+        g2. | s | g | gis4.:dim a:m |
+        a2.:m | s | d:7 | bes4.:dim d4:7 | g4. g4
+      }
+    }
+  >>
