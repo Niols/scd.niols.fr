@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (Web2C 2021/NixOS.org) (preloaded format=xelatex 1980.1.1)  4 MAR 2024 23:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (Web2C 2021/NixOS.org) (preloaded format=xelatex 1980.1.1)  4 MAR 2024 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1540,6 +1540,8 @@ Overfull \hbox (0.85155pt too wide) in paragraph at lines 313--313
 []\TU/SourceSansPro(0)/m/n/10.95 24  
  []
 
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
+(Font)              scaled to size 9.71072pt on input line 353.
 [1
 
 ] (./hello-goodb.aux)
@@ -1553,11 +1555,11 @@ Package rerunfilecheck Info: Checksums for `hello-goodb.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34001 strings out of 477697
- 705903 string characters out of 5835142
- 1045751 words of memory out of 5000000
- 54159 multiletter control sequences out of 15000+600000
- 469771 words of font info for 48 fonts, out of 8000000 for 9000
+ 34003 strings out of 477697
+ 706002 string characters out of 5835142
+ 1046751 words of memory out of 5000000
+ 54160 multiletter control sequences out of 15000+600000
+ 469779 words of font info for 49 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  88i,11n,119p,478b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 

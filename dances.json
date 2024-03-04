@@ -366,6 +366,12 @@
       "kind": "24-bar reel for three couples in a four-couple longwise set",
       "short-kind": "R24 3/4L",
       "date": "2022-11-08",
+      "tunes": [
+        {
+          "type": "internal",
+          "slug": "hello-goodb"
+        }
+      ],
       "instructions": [
         {
           "type": "phrase",
@@ -397,6 +403,9 @@
         },
         {
           "type": "devised by"
+        },
+        {
+          "type": "music by"
         }
       ]
     },

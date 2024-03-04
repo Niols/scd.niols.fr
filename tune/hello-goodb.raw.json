@@ -1,0 +1,17 @@
+{
+  "tune": {
+    "name": "Hello, Goodb",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "24-bar reel",
+    "short-kind": "R24",
+    "date": "2024-02-02",
+    "dances": [
+      {
+        "type": "internal",
+        "slug": "hello-goodb"
+      }
+    ],
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 d8 cis |\n      d4 cis8 d e4 fis8 g |\n      fis4 e d d8 cis |\n      b8 cis d b cis d e cis |\n      a2 a4 d8 cis |\n      d4 cis8 d e4 cis |\n      d2 d4\n    } \\break\n\n    d8 cis |\n    b4 fis8 b b4 fis8 b |\n    b4 g8 b b4 g8 b |\n    cis4 a8 cis cis4 a8 cis |\n    cis4 ais8 cis cis4 ais8 cis |\n    d4 b8 d d4 b8 d |\n    e2.\n    \\bar \"||\" \\break\n\n    d8 cis |\n    b4 fis8 b b4 fis8 b |\n    b4 g8 b b4 g8 b |\n    cis4 a8 cis cis4 a8 cis |\n    cis4 ais8 cis cis4 ais8 cis |\n    d4 cis8 d e4 cis |\n    d2 d4\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a4:7 |\n      d2 a | d1 | g2 a | d a | d a:7 | d2.\n\n      fis4:7 |\n      b1:m | g | a | fis | b:m | a2.:7\n\n      fis4:7 |\n      b1:m | g | a | fis | d2 a:7 | d2.\n    }\n  }\n>>\n"
+  },
+  "slug": "hello-goodb"
+}

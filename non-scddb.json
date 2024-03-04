@@ -366,6 +366,12 @@
       "kind": "24-bar reel for three couples in a four-couple longwise set",
       "short-kind": "R24 3/4L",
       "date": "2022-11-08",
+      "tunes": [
+        {
+          "type": "internal",
+          "slug": "hello-goodb"
+        }
+      ],
       "instructions": [
         {
           "type": "phrase",
@@ -397,6 +403,9 @@
         },
         {
           "type": "devised by"
+        },
+        {
+          "type": "music by"
         }
       ]
     },
@@ -1493,6 +1502,20 @@
       "short-kind": "R32",
       "date": "2018",
       "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key a \\major\n    \\time 4/4\n\n    \\partial 4 e8 d |\n    \\repeat volta 2 {\n      cis8 e a e fis d b a |\n      gis8 b e, gis a e cis e |\n      d8 fis a d, cis e a cis, |\n      b8 dis fis a gis e fis gis |\n      \\break\n\n      a8 cis e a fis d b a |\n      \\tuplet 3/2 { gis8 a b } e,8 gis a e cis e |\n      d8 fis a fis e a cis e |\n    } \\alternative { {\n      d8 b gis b a4 cis8 b |\n    } {\n      d8 b gis b a4\n    } } \\break\n\n    \\repeat volta 2 {\n      gis4 |\n      fis8 a d fis e cis a fis' |\n      e8 d gis, fis' e cis a gis |\n      fis8 a d fis e cis a cis |\n      b8 dis fis a gis e fis gis |\n      \\break\n\n      a8 e cis e fis d b a |\n      \\tuplet 3/2 { gis8 a b } e,8 gis a e cis e |\n      d8 fis a fis e gis b d |\n      \\tuplet 3/2 { cis8 d e } e,8 gis a4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 d | e a | d a/cis | b e |\n      a2 d | e a | d a/cis | e a | e a4\n\n      s4 |\n      d2 a/cis | e:7/b a | d a | b e |\n      a2 d | e a | d e | a4 e:7 a\n    }\n  }\n>>\n"
+    },
+    "hello-goodb": {
+      "name": "Hello, Goodb",
+      "author": "Nicolas “Niols” Jeannerod",
+      "kind": "24-bar reel",
+      "short-kind": "R24",
+      "date": "2024-02-02",
+      "dances": [
+        {
+          "type": "internal",
+          "slug": "hello-goodb"
+        }
+      ],
+      "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 d8 cis |\n      d4 cis8 d e4 fis8 g |\n      fis4 e d d8 cis |\n      b8 cis d b cis d e cis |\n      a2 a4 d8 cis |\n      d4 cis8 d e4 cis |\n      d2 d4\n    } \\break\n\n    d8 cis |\n    b4 fis8 b b4 fis8 b |\n    b4 g8 b b4 g8 b |\n    cis4 a8 cis cis4 a8 cis |\n    cis4 ais8 cis cis4 ais8 cis |\n    d4 b8 d d4 b8 d |\n    e2.\n    \\bar \"||\" \\break\n\n    d8 cis |\n    b4 fis8 b b4 fis8 b |\n    b4 g8 b b4 g8 b |\n    cis4 a8 cis cis4 a8 cis |\n    cis4 ais8 cis cis4 ais8 cis |\n    d4 cis8 d e4 cis |\n    d2 d4\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      a4:7 |\n      d2 a | d1 | g2 a | d a | d a:7 | d2.\n\n      fis4:7 |\n      b1:m | g | a | fis | b:m | a2.:7\n\n      fis4:7 |\n      b1:m | g | a | fis | d2 a:7 | d2.\n    }\n  }\n>>\n"
     },
     "humming-in-the-office": {
       "name": "Humming in the Office",
