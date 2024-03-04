@@ -118,8 +118,8 @@ $(website-output)/dance/%.raw.json: $(database)/dance/%.yaml $(website-output)/d
 $(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `dance/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.dance.name + " | Dance"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.dance.name + " | Dance"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a TeX file out of a dance JSON file.
@@ -188,8 +188,8 @@ $(website-output)/tune/%.raw.json: $(database)/tune/%.yaml $(website-output)/tun
 $(website-output)/tune/%.json: $(website-output)/tune/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `tune/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.tune.name + " | Tune"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.tune.name + " | Tune"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a LilyPond file out of a tune JSON file.
@@ -278,8 +278,8 @@ $(website-output)/book/%.raw.json: $(database)/book/%.yaml $(website-output)/boo
 $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `book/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.book.title + " | Book"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.book.title + " | Book"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a HTML file out of a book JSON file.
