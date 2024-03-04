@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "J. Marie Pottinger",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2002",
+    "content": "\\relative f'' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key f \\major\n\n    \\partial 8 c8 |\n    \\repeat volta 2 {\n      a8 bes c bes a g |\n      a8 f f f e f |\n      d e f g a f |\n      e8 g g g c bes |\n      \\break\n\n      a8 bes c bes a g |\n      a8 f f f e f |\n      d8 e f e a g |\n    } \\alternative { {\n      f4. f8 c' bes\n    } {\n      f4. f8 e f |\n    } } \\break\n\n    \\repeat volta 2 {\n      g8 e c bes' a g |\n      a8 f f f e f |\n      g8 a b g f' d |\n      e8 c c c d e |\n      \\break\n\n      f8 e f f, a c |\n      d8 bes bes d, g bes |\n      c,8 e g bes a g |\n    } \\alternative { {\n      a8 f f f e f |\n    } {\n      a8 f f f4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      f4. c:7 | f a | bes g/b | c:7 c:7/e |\n      f4. a:7 | d:m f:7/c | bes c:7 | f c:7 | f b:dim |\n\n      c4.:7 c:7/e | f f/a | g/b g:7 | c c:7/e |\n      f4. f:7/ees | g:m/d g:m/bes | c:7 c:7/e | f b:dim | f\n    }\n  }\n>>\n"
+  },
+  "slug": "j-marie-pottinger"
+}
