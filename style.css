@@ -107,7 +107,9 @@ blockquote {
   font-style: italic; }
 
 .tune-preview > object {
-  width: 100%; }
+  max-width: none;
+  width: 105%;
+  margin-left: -5%; }
 
 .tune-description ul {
   margin-left: 2rem; }
