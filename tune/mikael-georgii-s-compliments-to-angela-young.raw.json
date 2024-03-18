@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Angela Young",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2007",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key f \\minor\n    \\time 6/8\n\n    \\partial 8 c8 |\n    \\repeat unfold 2 {\n      aes8 c c f, c' c |\n      bes8 c c g c c |\n      c8 des c c e g |\n      f4. f4 ees8 |\n      \\break\n\n      des8 f f bes, c des |\n      c8 f f aes, bes c |\n    } \\alternative { {\n      b8 c des g, b g' |\n      c,4 c8 bes aes g |\n      \\bar \"||\" \\break\n    } {\n      c8 des c c des e |\n      f4. f4 ees8 |\n      \\bar \"||\" \\break\n    } }\n\n    des8 f f bes, f' f |\n    c8 f f aes, f' f |\n    c8 des c g aes bes |\n    c4. c4 f8 |\n    \\break\n\n    des8 f f bes, f' f |\n    c8 f f aes, f' f |\n    b,8 c des g, b g' |\n    c,4 c8 bes aes g |\n    \\bar \"||\" \\break\n\n    aes8 c c f, c' c |\n    bes8 c c g c c |\n    c8 des c c e g |\n    f4. f4 ees8 |\n    \\break\n\n    des8 f f bes, c des |\n    c8 f f aes, bes c |\n    c8 des c c des e |\n    f4. f4\n    \\bar \"|.\"\n   }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |\n      bes4.:m bes:m/g | f:m/aes f:m | g g/b | c:7 c:7/e |\n\n      f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |\n      bes4.:m bes:m/g | f:m/aes f:m | c2.:7 | f:m |\n\n      bes2.:m | f4.:m/aes f:m | | c2. | f4.:m f/a |\n      bes4.:m g:dim | f:m/aes f:m | g g:7 | c c:7 |\n\n      f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |\n      bes4.:m bes:m/g | f:m/aes f:m | c:7 c:7/e | f:m\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-angela-young"
+}
