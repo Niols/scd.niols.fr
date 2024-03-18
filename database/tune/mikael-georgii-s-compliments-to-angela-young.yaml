@@ -1,0 +1,78 @@
+---
+name: Mikael Georgii's Compliments to Angela Young
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2007"
+
+content: |
+  \relative f'' <<
+    {
+      \clef treble
+      \key f \minor
+      \time 6/8
+
+      \partial 8 c8 |
+      \repeat unfold 2 {
+        aes8 c c f, c' c |
+        bes8 c c g c c |
+        c8 des c c e g |
+        f4. f4 ees8 |
+        \break
+
+        des8 f f bes, c des |
+        c8 f f aes, bes c |
+      } \alternative { {
+        b8 c des g, b g' |
+        c,4 c8 bes aes g |
+        \bar "||" \break
+      } {
+        c8 des c c des e |
+        f4. f4 ees8 |
+        \bar "||" \break
+      } }
+
+      des8 f f bes, f' f |
+      c8 f f aes, f' f |
+      c8 des c g aes bes |
+      c4. c4 f8 |
+      \break
+
+      des8 f f bes, f' f |
+      c8 f f aes, f' f |
+      b,8 c des g, b g' |
+      c,4 c8 bes aes g |
+      \bar "||" \break
+
+      aes8 c c f, c' c |
+      bes8 c c g c c |
+      c8 des c c e g |
+      f4. f4 ees8 |
+      \break
+
+      des8 f f bes, c des |
+      c8 f f aes, bes c |
+      c8 des c c des e |
+      f4. f4
+      \bar "|."
+     }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |
+        bes4.:m bes:m/g | f:m/aes f:m | g g/b | c:7 c:7/e |
+
+        f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |
+        bes4.:m bes:m/g | f:m/aes f:m | c2.:7 | f:m |
+
+        bes2.:m | f4.:m/aes f:m | | c2. | f4.:m f/a |
+        bes4.:m g:dim | f:m/aes f:m | g g:7 | c c:7 |
+
+        f2.:m | c4.:7/g c:7/e | c:7 c:7/e | f:m f:m/aes |
+        bes4.:m bes:m/g | f:m/aes f:m | c:7 c:7/e | f:m
+      }
+    }
+  >>
