@@ -585,6 +585,15 @@
       ],
       "content": "\\relative a <<\n  {\n    \\clef treble\n    \\key a' \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\partial 4 e''4 |\n      a,4 a8 cis e4 e8 fis |\n      e8 fis a fis fis4 d |\n      d, d8 fis a4 a8 b |\n      a cis e cis d4 fis |\n      \\break\n\n      a, a8 cis e4 e8 fis\n      e8 fis a fis e4 cis |\n      d e8 fis e fis e d |\n      cis4 a a\n    } \\break\n\n    e' |\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d e8 fis e fis e d |\n    cis4 a a  e' |\n    \\bar \"||\" \\break\n\n    a4. cis,8 e4 a, |\n    d8 cis b cis a4 cis4 |\n    d,4 d8 fis a4 b |\n    a8 cis e cis d4 fis |\n    \\break\n\n    a,4 a8 cis e4 e8 fis |\n    e fis a fis e4 cis |\n    d e8 fis e fis e d |\n    cis4 a a\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a1 | a | d | d | a | a | d | a |\n\n      a1 | a | d | d | a | a | d | a |\n      a1 | a | d | d | fis:m | fis:m | b:m | a2.\n    }\n  }\n>>\n"
     },
+    "the-three-maestros-in-the-partyroom": {
+      "name": "The Three Maestros in the Partyroom",
+      "author": "Mikael Georgii",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2005",
+      "content": "\\relative f'' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key g \\minor\n\n    \\repeat volta 2 {\n      \\partial 4 d4 |\n      g,8 a bes c d4 g,8 a |\n      bes8 c d4 g,8 a bes d |\n      ees8 aes, c ees aes c, ees aes |\n      a8 g fis ees d c bes a |\n      \\break\n\n      g8 a bes c d4 g,8 a |\n      bes8 c d4 g,8 a bes d |\n      ees8 aes, c ees aes c, ees aes |\n      fis8 d c a g4\n    } \\break\n\n    \\repeat volta 2 {\n      d'8 c |\n      bes8 c bes a g4 g8 a |\n      bes8 c d c bes a g bes |\n      a8 bes a g f4 f8 g |\n      a8 f a c f c a f |\n      \\break\n\n      bes8 c bes a g4 g8 a |\n      bes8 g bes d g f ees d |\n      fis8 ees d c bes a g f |\n      g4 g g\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d4:7 |\n      g2:m g:m/d | g:m bes:m/d | aes aes/c | d d:7/fis |\n      g2:m g:m/d | g:m g:m/bes | aes aes/c | d:7 g4:m\n\n      s4 |\n      g2:m g:m/d | g:m c:7 | f f/a | f f/a |\n      g2:m g:m/d | g:m g:m/bes | d:7/a d:7 | g2.:m\n    }\n  }\n>>\n",
+      "editor-details": "Revised in 2015.\n"
+    },
     "the-translator": {
       "name": "The Translator",
       "author": "Nicolas “Niols” Jeannerod",
