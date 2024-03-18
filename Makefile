@@ -44,7 +44,6 @@ tests := ./tests
 ## Where to find some utilities.
 yaml2json := yq --output-format json
 lilypond := lilypond --loglevel=warning -dno-point-and-click
-inkscape := HOME=$$(mktemp -d) xvfb-run inkscape
 
 ## The list of dances in the database and their target names in $(website-output).
 dances := $(notdir $(basename $(wildcard $(database)/dance/*.yaml)))
@@ -118,8 +117,8 @@ $(website-output)/dance/%.raw.json: $(database)/dance/%.yaml $(website-output)/d
 $(website-output)/dance/%.json: $(website-output)/dance/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `dance/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.dance.name + " | Dance"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.dance.name + " | Dance"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a TeX file out of a dance JSON file.
@@ -188,8 +187,8 @@ $(website-output)/tune/%.raw.json: $(database)/tune/%.yaml $(website-output)/tun
 $(website-output)/tune/%.json: $(website-output)/tune/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `tune/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.tune.name + " | Tune"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.tune.name + " | Tune"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a LilyPond file out of a tune JSON file.
@@ -213,10 +212,10 @@ $(website-output)/tune/%.pdf: $(website-output)/tune/%.ly
 	cd $(dir $<)
 	$(lilypond) $*
 
-## Generate a short LilyPond file out of a tune JSON file.
+## Generate a cropped LilyPond file out of a tune JSON file.
 ##
-$(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
-	printf 'Making `tune/%s.short.ly`...\n' $*
+$(website-output)/tune/%.cropped.ly: $(website-output)/tune/%.json
+	printf 'Making `tune/%s.cropped.ly`...\n' $*
 	{
 	  cat $(views)/ly/version.ly
 	  cat $(views)/ly/repeat-aware.ly
@@ -224,18 +223,16 @@ $(website-output)/tune/%.short.ly: $(website-output)/tune/%.json
 	  cat $(views)/ly/beginning-of-line.ly
 	  cat $(views)/ly/repeat-volta-fancy.ly
 	  cat $(views)/ly/preamble.ly
-	  cat $(views)/ly/preamble.short.ly
+	  cat $(views)/ly/preamble.cropped.ly
 	  j2 $(views)/ly/tune.ly.j2 $< --filters $(views)/j2filters.py
 	} > $@
 
-## Generate a SVG file out of a tune short LilyPond file.
-$(website-output)/tune/%.svg: $(website-output)/tune/%.short.ly
+## Generate a SVG file out of a tune cropped LilyPond file.
+$(website-output)/tune/%.svg: $(website-output)/tune/%.cropped.ly
 	printf 'Making `tune/%s.svg`...\n' $*
 	cd $(dir $<)
-	$(lilypond) -dbackend=svg $*.short.ly
-	$(inkscape) --batch-process --export-area-drawing --export-plain-svg \
-	  --export-filename=$*.svg $*.short.svg 2>/dev/null
-	rm $*.short.svg
+	$(lilypond) -dbackend=svg $*.cropped.ly
+	mv $*.cropped.svg $*.svg
 
 ## Generate a HTML file out of a tune JSON file.
 ##
@@ -278,8 +275,8 @@ $(website-output)/book/%.raw.json: $(database)/book/%.yaml $(website-output)/boo
 $(website-output)/book/%.json: $(website-output)/book/%.raw.json $(website-output)/all.raw.json
 	printf 'Making `book/%s.json`...\n' $*
 	cat $< \
-	  | jq '. + $$all + {title:(.book.title + " | Book"), root:".."}' \
-	      --argjson all "$$(cat $(website-output)/all.raw.json)" \
+	  | jq '. + $$all[0] + {title:(.book.title + " | Book"), root:".."}' \
+	      --slurpfile all $(website-output)/all.raw.json \
 	  > $@
 
 ## Generate a HTML file out of a book JSON file.
