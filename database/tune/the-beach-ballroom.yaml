@@ -1,0 +1,63 @@
+---
+name: The Beach Ballroom
+author: Mikael Georgii
+
+kind: 32-bar strathspey
+short-kind: S32
+
+date: "2023"
+
+dances:
+  - type: external
+    name: The Beach Ballroom
+    deviser: Vladimir Garbuzov
+    scddb-id: 20699
+
+content: |
+  \relative f' <<
+    \new Voice {
+      \clef treble
+      \time 4/4
+      \key e \major
+
+      \repeat volta 2 {
+        \partial 16 b16 |
+        e8. cis16 b8. cis16 b gis8. fis gis16 |
+        e8. cis16 b8. cis16 e4 e8. gis16 |
+        a8. gis16 fis a8. gis fis16 e gis8. |
+        fis16 gis8. cis, e16 fis4 fis8. b16 |
+        \break
+
+        e8. cis16 b8. cis16 b gis8. fis gis16 |
+        e8. cis16 b8. cis16 e4 e8. gis16 |
+        a8. gis16 fis8. a16 gis b8. e, gis16 |
+        fis16 gis8. b, cis16 e4 e8.
+      } \break
+
+      \repeat volta 2 {
+        b'16 |
+        cis8. b16 a8. cis16 gis b8. e, gis16 |
+        a8. gis16 fis8. a16 gis4 gis8. a16 |
+        gis8. fis16 e8. cis16 dis fis8. b,8. dis16 |
+        fis8. gis16 ais8. cis16 b4 b8. cis16 |
+        \break
+
+        e8. cis16 b8. cis16 b gis8. fis gis16 |
+        e8. cis16 b8. cis16 e4 e8. gis16 |
+        a8. b16 cis8. e16 cis b8. gis e16 |
+        fis16 gis8. b, cis16 e4 e8.
+      }
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s16 |
+        e2 e/gis | a e/gis | a e/gis | fis:m b |
+        e2 e/gis | a e/gis | fis4:m b/dis e cis:m | fis:m b:7 e s8.
+
+        s16 |
+        a2 e/gis | fis4:m b gis2/c | cis4:m fis:7 b gis:m | fis2:7 b |
+        e2 e/gis | fis4:m b e2/gis | a2 e/gis | fis4:m b e s8.
+      }
+    }
+  >>
