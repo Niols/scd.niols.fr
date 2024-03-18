@@ -484,6 +484,14 @@
       ],
       "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key a \\major\n\n    \\partial 8 e8 |\n    \\repeat volta 2 {\n      a4 a8 a gis fis |\n      e fis e cis d e |\n      fis4 fis8 d e fis |\n      e4. cis4 e8 |\n      \\break\n\n      d4 d8 b cis d |\n      cis4 e8 a4 gis8 |\n    } \\alternative { {\n      fis4 fis8 fis gis a |\n      b4. e,4 gis8 |\n    } {\n      fis4 fis8 gis a b |\n      a4. ~ a4 gis8 |\n    } } \\break\n\n    \\repeat volta 2 {\n      fis4 fis8 b gis fis |\n      e8 fis e a4 e8 |\n      d4 d8 gis e d |\n      cis8 d dis e4 a8 |\n      \\break\n\n      fis4 fis8 b gis fis |\n      e8 fis gis a4 e8 |\n      d8 e fis e fis gis |\n    } \\alternative { {\n      a4. a4 g8 |\n    } {\n      a4. a4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      a4. d | e a | d e:7 | a a/cis |\n      b4.:m e/gis | a a/cis | b b:7/dis | e2. | b4. e | a2. |\n\n      d4. e | a/cis fis:m | b:m e | a a/cis |\n      d4. e | a/cis fis:m | d e | a a:7 | a\n    }\n  }\n>>\n"
     },
+    "stockholm-branch-ruby-jubilee": {
+      "name": "Stockholm Branch Ruby Jubilee",
+      "author": "Mikael Georgii",
+      "kind": "32-bar jig",
+      "short-kind": "J32",
+      "date": "2016",
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key f \\major\n\n    \\repeat volta 2 {\n      \\partial 8 c8 |\n      f8 f' d c a f |\n      g8 a bes c, d e |\n      f8 a d c a f |\n      g8 a bes c d e |\n      \\break\n\n      f8 f, f' d c a |\n      g8 a bes c, d e |\n      f8 a d c a f |\n      c8 d e f4\n    } \\break\n\n    \\repeat volta 2 {\n      e8 |\n      d8 e f g f d |\n      c8 d e f g a |\n      g8 a bes c bes g |\n      a8 bes b c d e |\n      \\break\n\n      f8 e f g f d |\n      c8 e f c a f |\n      g8 bes d c a f |\n      c8 d e f4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      f4. d:m | g:m c:7 | f d:m | g c:7 |\n      f2. | g4.:m c:7 | f f/a | c s4\n\n      s8 |\n      bes4. c | f d:m | g:m c:7 | f f:7 |\n      bes4. bes/d | f/a d:m | g:m f/a | c:7 f4\n    }\n  }\n>>\n"
+    },
     "summerschool-reel": {
       "name": "Summerschool Reel",
       "author": "Mikael Georgii",

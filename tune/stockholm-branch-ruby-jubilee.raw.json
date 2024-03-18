@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Stockholm Branch Ruby Jubilee",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2016",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key f \\major\n\n    \\repeat volta 2 {\n      \\partial 8 c8 |\n      f8 f' d c a f |\n      g8 a bes c, d e |\n      f8 a d c a f |\n      g8 a bes c d e |\n      \\break\n\n      f8 f, f' d c a |\n      g8 a bes c, d e |\n      f8 a d c a f |\n      c8 d e f4\n    } \\break\n\n    \\repeat volta 2 {\n      e8 |\n      d8 e f g f d |\n      c8 d e f g a |\n      g8 a bes c bes g |\n      a8 bes b c d e |\n      \\break\n\n      f8 e f g f d |\n      c8 e f c a f |\n      g8 bes d c a f |\n      c8 d e f4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      f4. d:m | g:m c:7 | f d:m | g c:7 |\n      f2. | g4.:m c:7 | f f/a | c s4\n\n      s8 |\n      bes4. c | f d:m | g:m c:7 | f f:7 |\n      bes4. bes/d | f/a d:m | g:m f/a | c:7 f4\n    }\n  }\n>>\n"
+  },
+  "slug": "stockholm-branch-ruby-jubilee"
+}
