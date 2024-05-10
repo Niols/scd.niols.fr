@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Sybille Spaegele",
+    "author": "Mikael Georgii",
+    "kind": "32-bar strathspey",
+    "short-kind": "S32",
+    "date": "2015",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key e \\major\n\n    \\repeat volta 2 {\n      \\partial 4 b4 |\n      e4 dis16 e8. cis e16 dis8. cis16 |\n      b8. gis16 fis8. gis16 e8. fis16 e b8. |\n      cis4 cis'8. b16 cis8. b16 gis b8. |\n      a8. gis16 fis e8. fis8. b16 cis8. dis16 |\n      \\break\n\n      e4 dis8. e16 cis8. e16 dis8. cis16 |\n      b8. gis16 fis gis8. e8. fis16 e b8. |\n      cis4 cis'8. b16 gis8. fis16 e b8. |\n      cis8. e16 dis fis8. e4\n    } \\break\n\n    \\repeat volta 2 {\n      b'4 |\n      cis8. b16 cis b8. gis a16 b e,8. |\n      fis8. e16 e8. fis16 gis8. a16 b e8. |\n      cis8. b16 cis8. b16 gis8. a16 b e,8. |\n      fis8. gis16 ais cis8. b16 c8. cis dis16 |\n      \\break\n\n      e4 dis8. e16 cis e8. dis cis16 |\n      b8. gis16 fis gis8. e fis16 e b8. |\n      cis4 cis'8. b16 gis8. fis16 e b8. |\n      cis8. e16 dis8. fis16 e4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      e2 a4 b | gis2:m e/gis | a2 gis4:m e | fis2:m b |\n      e2 a | gis:m e/gis | a e/gis | a4 b e\n\n      s4 |\n      a4 b e2 | fis2/a e | a1 | fis2 b:7 |\n      e2 a | gis1:m | a2 e/gis | a4 b e\n    }\n  }\n>>\n"
+  },
+  "slug": "sybille-spaegele"
+}
