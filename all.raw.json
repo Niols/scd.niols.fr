@@ -1813,6 +1813,14 @@
       ],
       "content": "<<\n  \\relative c'' {\n    \\clef treble\n    \\key b \\minor\n    \\time 4/4\n\n    \\repeat volta 2 {\n      \\repeat volta 2 {\n        \\partial 8 g'8 |\n        fis8 b, b4 d8 b fis' b, |\n        d8 b fis' b, a cis e g |\n        fis8 b, b4 d8 b fis' b, |\n        a8 b cis d cis d e g |\n      } \\break\n\n      fis8 d b fis b fis d' fis, |\n      e'8 a, cis a e' a, g' a, |\n      fis'8 d b a fis g a b |\n      a8 b cis d cis d e g |\n      \\break\n\n      fis8 d b fis b fis d' fis, |\n      e'8 a, cis a e' a, g' a, |\n      fis'8 b, b4 d8 b fis' b, |\n    } \\alternative { {\n      a8 b cis d cis d e g |\n    } {\n      g8 e cis fis, b4.\n    } } \\bar \"|.\"\n  }\n\n  \\chords {\n    s8 |\n    b1:m | b2:m a:7 | b1:m | a2 a:7 |\n\n    b1:m | a2 a:7 | b1:m | a2 a:7 |\n    b1:m | a2 a:7 | b1:m | a2 a:7 | a2:7 b4.:m\n  }\n>>\n"
     },
+    "the-kindergarten-strathspey": {
+      "name": "The Kindergarten Strathspey",
+      "author": "Mikael Georgii",
+      "kind": "32-bar strathspey",
+      "short-kind": "S32",
+      "date": "2016",
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key a \\major\n\n    \\repeat volta 2 {\n      \\partial 4 e4 |\n      a4. cis8 b8. gis16 cis8. b16 |\n      a8. fis16 d fis8. e4. g8 |\n      fis4. d8 e8. a16 cis a8. |\n      b8. fis16 gis8. a16 b4. e,8 |\n      \\break\n\n      a4. cis8 b8. gis16 cis8. b16 |\n      a8. fis16 d8. fis16 e4. g8 |\n      fis4. a8 e8. a16 cis e8. |\n      d8. b16 gis b8. a4\n    } \\break\n\n    gis4 |\n    \\repeat volta 2 {\n      fis4. a8 gis8. cis,16 f8. gis16 |\n      cis8. b16 a gis8. a4 b8. cis16 |\n      d8. cis16 b8. a16 b8. a16 gis8. fis16 |\n      f8. cis16 f16 gis8. cis8. b16 a8. gis16 |\n      \\break\n\n      fis4. a8 gis8. cis,16 f8. gis16 |\n      cis8. b16 a8. gis16 a4 b8. cis16 |\n      d8. cis16 b8. a16 gis8. fis16 f gis8. |\n    } \\alternative { {\n      fis4 fis fis f |\n    } {\n      fis4 fis fis\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      a2 e4 cis/f | d2/fis a4 a:7 | d2 a/cis | b e:7 |\n      a2 e4 cis/f | d2 a4 a:7 | d2 a | b4:m e a\n\n      cis4:7 |\n      fis2:m cis | c/f fis:m | b:m c:dim | cis cis:7/f |\n      fis2:m c | cis/f e4:m7 a:7 | d2 cis | fis4 b/fis fis cis:7 | fis:m b:m/fis fis:m\n    }\n  }\n>>\n"
+    },
     "the-mall-in-st-james-s-park": {
       "name": "The Mall in St. James's Park",
       "author": "Nicolas “Niols” Jeannerod",
