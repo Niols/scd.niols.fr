@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Jim Stott's Jig",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2018",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key g \\major\n    \\time 6/8\n\n    \\partial 8 fis8 |\n    g8 g, fis' e4 dis8 |\n    e8 d b d4 b8 |\n    g8 a b d b dis |\n    e8 d b c4 gis'8 |\n    \\break\n\n    a8 a, g' fis4 e8 |\n    fis8 e b c4 b8 |\n    a8 b c e a, fis' |\n    e8 d cis d e fis |\n    \\bar \"||\" \\break\n\n    g8 g, fis' e4 d8 |\n    e8 d b d b a |\n    g8 a b d g, dis' |\n    e4. e4 b'8 |\n    \\break\n\n    c8 e, b' a4 a8 |\n    a8 a, g' fis4 e8 |\n    d8 e d d e fis |\n    g4. g4\n    \\break\n\n    \\repeat volta 2 {\n      a8 |\n      b8 fis a g4 ais8 |\n      b8 fis a g4 a8 |\n      b8 fis a g b, e |\n      d8 c b c4 gis'8 |\n      \\break\n\n      a8 a, g' fis4 e8 |\n      fis8 e b c4 b8 |\n      a8 b c d e fis\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 5/8)\n      e8 d cis d4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 6/8)\n      g4. g4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      g4. g/b | g2. | g | a:m7 |\n      a2.:m7 | a:m7 | d:7 | bes4.:dim d:7/a |\n\n      g2. | g | g | c4.:6 a:m |\n      a2.:m/c | a:7/cis | d:7 | g4. s4\n\n      s8 |\n      g2. | s | g | gis4.:dim a:m |\n      a2.:m | s | d:7 | bes4.:dim d4:7 | g4. g4\n    }\n  }\n>>\n"
+  },
+  "slug": "jim-stott-s-jig"
+}
