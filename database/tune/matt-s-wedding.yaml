@@ -8,9 +8,8 @@ short-kind: S32
 date: "2022-03-23"
 
 dances:
-  - type: external
-    name: Matt's Wedding
-    deviser: Emmy Wilkinson and Matthew Stuart Dunn
+  - type: internal
+    slug: emmy-and-matt-s-wedding
 
 content: |
   \relative f' <<

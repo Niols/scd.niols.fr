@@ -65,8 +65,8 @@ content: |
 
       f e f g a c,4 c8 |
       f e f g a g f e |
-      \tuplet 3/4 { b4 c8 } \tuplet 3/4 { d4 c8 } |
-      \tuplet 3/4 { b4 c8 } b2 |
+      b4. c8 d4. c8 |
+      b4. c8 b2 |
       \bar "||" \break
 
       c4 c8 d e g,4 g8 |
