@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Ewan Galloway's Jig",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2019",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 6/8\n    \\key g \\minor\n\n    \\partial 8 a8 |\n    g8 d a' bes d, c' |\n    d8 ees d d c bes |\n    bes8 c d d c bes |\n    bes8 a g a4 g8 |\n    \\break\n\n    fis8 d fis a fis a |\n    c d c c bes a |\n    a bes c c d ees |\n    ees d c d4\n    \\bar \"||\" \\break\n\n    a8 |\n    g8 d a' bes d, c' |\n    d8 ees d d c bes |\n    bes8 c d d ees f |\n    aes8 g f g4 f8 |\n    \\break\n\n    ees8 f g g f ees |\n    ees8 d c d c bes |\n    a8 bes c fis,8 d fis |\n    g4. g4\n    \\bar \"||\" \\break\n\n    c8 |\n    d8 g, d' ees d c |\n    d8 g, d' ees d c |\n    bes8 c d bes c d |\n    d8 c bes a4 bes8 |\n    \\break\n\n    c8 d, c' d d, c' |\n    c8 d, c' d d, c' |\n    a8 bes c c d ees |\n    ees d c d4\n    \\bar \"||\" \\break\n\n    c8 |\n    d8 g, d' ees d c |\n    d8 g, d' ees d c |\n    bes8 c d d ees f |\n    aes8 g f g4 f8 |\n    \\break\n\n    ees8 f g g f ees |\n    ees8 d c d c bes |\n    a8 bes c fis,8 d fis |\n    g4. g4\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      g4.:m g:m/bes | g2.:m | g:m | a4.:7 d:7 |\n      d2. | d:7 | d | g4.:m s4\n\n      s8 |\n      g4.:m g:m/bes | g2.:m | g4.:m g:7 | c:m c:m/ees |\n      c4.:m c:m6/a | g2.:m | c4.:m6/a d | g:m s4\n\n      s8 |\n      g2.:m | s | g:m | c4.:m6 d:7 |\n      d2.:7 | s | d4. d/fis | g:m s4\n\n      s8 |\n      g2.:m | s | g4.:m g:7 | c:m c:m/ees |\n      c4.:m c:m6/a | g2.:m | c4.:m6/a d | g:m s4\n    }\n  }\n>>\n"
+  },
+  "slug": "ewan-galloway-s-jig"
+}
