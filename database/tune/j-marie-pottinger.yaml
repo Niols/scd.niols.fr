@@ -1,0 +1,61 @@
+---
+name: J. Marie Pottinger
+author: Mikael Georgii
+
+kind: 32-bar jig
+short-kind: J32
+
+date: "2002"
+
+content: |
+  \relative f'' <<
+    \new Voice {
+      \clef treble
+      \time 6/8
+      \key f \major
+
+      \partial 8 c8 |
+      \repeat volta 2 {
+        a8 bes c bes a g |
+        a8 f f f e f |
+        d e f g a f |
+        e8 g g g c bes |
+        \break
+
+        a8 bes c bes a g |
+        a8 f f f e f |
+        d8 e f e a g |
+      } \alternative { {
+        f4. f8 c' bes
+      } {
+        f4. f8 e f |
+      } } \break
+
+      \repeat volta 2 {
+        g8 e c bes' a g |
+        a8 f f f e f |
+        g8 a b g f' d |
+        e8 c c c d e |
+        \break
+
+        f8 e f f, a c |
+        d8 bes bes d, g bes |
+        c,8 e g bes a g |
+      } \alternative { {
+        a8 f f f e f |
+      } {
+        a8 f f f4
+      } } \bar "|."
+    }
+
+    \new ChordNames {
+      \chordmode {
+        s8 |
+        f4. c:7 | f a | bes g/b | c:7 c:7/e |
+        f4. a:7 | d:m f:7/c | bes c:7 | f c:7 | f b:dim |
+
+        c4.:7 c:7/e | f f/a | g/b g:7 | c c:7/e |
+        f4. f:7/ees | g:m/d g:m/bes | c:7 c:7/e | f b:dim | f
+      }
+    }
+  >>

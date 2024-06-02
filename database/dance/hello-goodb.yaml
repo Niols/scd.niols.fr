@@ -7,6 +7,10 @@ short-kind: R24 3/4L
 
 date: "2022-11-08"
 
+tunes:
+  - type: internal
+    slug: hello-goodb
+
 instructions:
   - type: phrase
     starts: 1
@@ -41,3 +45,4 @@ instructions:
     kind: having passed a couple
 
   - type: devised by
+  - type: music by
