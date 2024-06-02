@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Ryan's Reel",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2022",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key d \\minor\n\n    \\repeat volta 2 {\n      \\partial 8 a8 |\n      d8 a' g a f e d cis |\n      d8 c a g f e d c |\n      bes4. a8 g a bes c |\n      d8 e f d cis a' b cis |\n      \\break\n\n      d8 a' g a f e d cis |\n      d8 c a g f g a c |\n      bes8 a g a bes c d f |\n      a8 g e f d4.\n    } \\break\n\n    \\repeat volta 2 {\n      a8 |\n      f'8 d cis d a f' e f |\n      d4. c8 d c a c |\n      d8 c bes a bes a g f |\n      e8 f g bes a cis d e |\n      \\break\n\n      f8 d cis d a f' e f |\n      d4. c8 d c a c |\n      bes8 a g a bes c d f |\n      a8 g e f d4.\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      d1:m | s | g:m | d2:m a:7 |\n      d1:m | s | g:m | d2:7 s4.\n\n      s8 |\n      d1:m | s | g:m | g2:m6 a:7 |\n      d1:m | s | g:m | a2:7 d4.:m\n    }\n  }\n>>\n"
+  },
+  "slug": "ryan-s-reel"
+}
