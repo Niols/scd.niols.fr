@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "The Lunchbreak",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2016",
+    "content": "\\relative f <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key ees \\major\n\n    \\repeat volta 2 {\n      \\partial 4 bes4 |\n      bes'8 a c bes ~ bes g f ees |\n      f4 f8 ees d c bes d |\n      ees8 f g bes ~ bes g f ees |\n      f8 ees f g f4 bes,4 |\n      \\break\n\n      bes'8 a c bes ~ bes g f ees |\n      f4 f8 ees d c bes d |\n      ees8 f g bes ~ bes g f ees |\n      d8 ees f d ees4\n    } \\break\n\n    \\repeat volta 2 {\n      d4 |\n      c4 c8 d ees d ees f |\n      g8 aes g f ees f g ees |\n      f8 ees d f ~ f ees d f |\n      ees8 f g aes bes g f ees |\n      \\break\n\n      c4 c8 d ees d ees f |\n      g8 f ees g ~ g f ees g |\n      f8 g aes f ~ f ees d ees |\n      d8 ees f d ees4\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      ees2 c:m7 | f bes | ees c:m7 | f:7 bes |\n      ees2 c:m7 | f bes | ees c:m7 | b ees4\n\n      s4 |\n      aes1 | ees | bes | ees2 ees/des |\n      aes2 f:7/a | ees/bes c:m | f1:m | bes2 ees4\n    }\n  }\n>>\n"
+  },
+  "slug": "the-lunchbreak"
+}
