@@ -1868,6 +1868,14 @@
       ],
       "content": "\\relative f' <<\n  {\n    \\clef treble\n    \\key d \\major\n    \\time 4/4\n\n    \\repeat volta 2 {\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      b8. b16 b8 cis d e fis g |\n      a,8. a16 a8 b a4 a |\n      \\break\n\n      a16 a8. a'8 a, fis'16 d8. d4 |\n      cis8. cis16 cis8 d cis4 cis |\n      \\tuplet 3/2 { b4 d g } \\tuplet 3/2 { a,4 cis e } |\n      d2 d4 d |\n      \\bar \"||\" \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis d e fis g a b cis |\n      \\break\n\n      fis,16 fis8. fis'8 fis, ais cis fis fis, |\n      fis16 fis8. fis'8 fis, b d fis fis, |\n      e'16 e8. g8 e \\tuplet 3/2 { e b g } e d |\n      cis8. a16 b8 cis d4 d |\n    }\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      d1 | fis:m/cis | g | a |\n      d1 | fis:m/cis | g2 a | d1 |\n\n      fis1 | b:m | e:m | a |\n      fis1 | b:m | e:m | a2 d |\n    }\n  }\n>>\n"
     },
+    "the-moth": {
+      "name": "The Moth",
+      "author": "Mikael Georgii",
+      "kind": "32-bar reel",
+      "short-kind": "R32",
+      "date": "2016",
+      "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key g \\minor\n\n    \\repeat volta 2 {\n      \\partial 4 d4 |\n      d'8 c bes a g a bes c |\n      d8 g, ees' g, d' c bes c |\n      d8 c bes a g fis g bes |\n      a8 d, bes' d, c' a fis a |\n      \\break\n\n      d8 c bes a g a bes c |\n      d8 g, ees' g, d' c bes c |\n      d8 c bes a g fis g bes |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 3/4)\n      a8 d, e fis g4 |\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 4/4)\n      a8 d, e fis g4 a4 |\n    } } \\break\n\n    \\repeat volta 2 {\n      g8 d g a bes d, a' d, |\n      g8 d g a bes d, a' d, |\n      g8 d g a bes a bes c |\n      d8 cis d ees d c bes a |\n      \\break\n\n      g8 d g a bes d, a' d, |\n      g8 d g a bes d, a' d, |\n      g8 a bes c d ees d c |\n    } \\alternative { {\n      bes8 a g fis g4 d |\n    } {\n      bes'8 a g fis g4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      g1:m | g2:m d:7 | g1:m | d:7 |\n      g1:m | s | d2:7 g:m | d:7 g4:m | d2:7 g:m |\n\n      g2:m d:7 | g:m d:7 | g1:m | d2:7 g:7/fis |\n      g2:m d:7 | g:m d:7 | g:m c:m7 | d:7 g:m | d:7 g4:m\n    }\n  }\n>>\n"
+    },
     "the-necromancer-got-me-my-mojo-back": {
       "name": "The Necromancer Got Me My Mojo Back",
       "author": "Nicolas “Niols” Jeannerod",
