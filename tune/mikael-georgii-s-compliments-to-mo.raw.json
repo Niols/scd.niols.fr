@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Mikael Georgii's Compliments to Mo",
+    "author": "Mikael Georgii",
+    "kind": "32-bar jig",
+    "short-kind": "J32",
+    "date": "2002",
+    "content": "\\relative f'' <<\n  {\n    \\clef treble\n    \\key bes \\major\n    \\time 6/8\n\n    \\repeat volta 2 {\n      \\partial 8 f8 |\n      d8 bes bes bes f bes |\n      g8 ees ees ees4 g8 |\n      f8 bes bes d c bes |\n      a8 c c c f ees |\n      \\break\n\n      d8 bes bes bes f bes |\n      g8 ees ees ees f g |\n      f8 bes bes a bes c |\n    } \\alternative { {\n      \\set Timing.measureLength = #(ly:make-moment 5/8)\n      d8 bes bes bes4\n    } {\n      \\set Timing.measureLength = #(ly:make-moment 6/8)\n      d8 bes bes bes d ees |\n    } } \\break\n\n    \\repeat volta 2 {\n      f8 d bes bes bes' f |\n      g8 ees ees c d ees |\n      f8 d bes bes a bes |\n      g8 a bes c d ees |\n      \\break\n\n      f8 d bes bes bes' f |\n      g8 ees ees c d ees |\n      f8 d bes a bes c |\n    } \\alternative { {\n      d8 bes bes bes d ees |\n    } {\n      d8 bes bes bes4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s8 |\n      bes4. bes/d | ees c:m7 | bes/d g:m | c:m7 f:7 |\n      bes4. bes/d | ees c:m7 | bes/d f:7/c | bes4 ees8 bes4 | ees4./b bes/d |\n\n      bes4. bes/d | ees c:m7 | bes/d g:m | c:7 f:7 |\n      bes4./aes bes/d | ees f:7 | bes/d f:7/c | bes4 ees8 bes4. | bes4 ees8 bes4\n    }\n  }\n>>\n"
+  },
+  "slug": "mikael-georgii-s-compliments-to-mo"
+}
