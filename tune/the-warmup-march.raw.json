@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "The Warmup March",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2017",
+    "content": "\\relative f' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key a \\major\n\n    \\partial 4 e4 |\n    \\repeat volta 2 {\n      cis'4. b8 a4. b8 |\n      cis4 e e d8 e |\n      fis4 d d cis |\n      b2 b4 a |\n      \\break\n\n      gis4. fis8 e4. fis8 |\n      gis4 b b cis |\n    } \\alternative { {\n      d4 fis e d |\n      cis2 cis4 e, |\n    } {\n      d'4 fis e cis |\n      a2.\n    } } \\bar \"||\" \\break\n\n    a4 |\n    fis'4. e8 d4. e8 |\n    fis4 a a fis |\n    e4. d8 cis4. d8 |\n    e4 a a e |\n    \\break\n\n    dis4. cis8 b4. cis8 |\n    d4 a' a fis |\n    gis4. a8 gis4. fis8 |\n    e4 d cis b |\n    \\bar \"||\" \\break\n\n    cis4. b8 a4. b8 |\n    cis4 e e d8 e |\n    fis4 d d cis |\n    b2 b4 a |\n    \\break\n\n    gis4. fis8 e4. fis8 |\n    gis4 b b cis |\n    d4 fis e cis |\n    a2.\n    \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      e4 |\n      a1 | a2 a/cis | d1 | b2:m/d b:7 |\n      e1 | s | b2:m e | a4 <gis> <fis> <e> | b2:m e | a2.\n\n      s4 |\n      d1 | s | a | s |\n      b1 | b:7 | e | e4 <f> <fis> <gis> |\n\n      a1 | a2 a/cis | d a/cis | b1:m/d |\n      e1 | s | d | a2.\n    }\n  }\n>>\n"
+  },
+  "slug": "the-warmup-march"
+}
