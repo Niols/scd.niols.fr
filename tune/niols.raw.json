@@ -1,0 +1,11 @@
+{
+  "tune": {
+    "name": "Niols",
+    "author": "Mikael Georgii",
+    "kind": "32-bar reel",
+    "short-kind": "R32",
+    "date": "2023",
+    "content": "\\relative f'' <<\n  \\new Voice {\n    \\clef treble\n    \\time 4/4\n    \\key g \\minor\n\n    \\partial 4 d4 |\n    \\repeat volta 2 {\n      g8 f d c bes a g f |\n      d8 g g f d c bes c |\n      d8 g g f g a bes c |\n      d8 ees d cis d ees f fis |\n      \\break\n\n      g8 f d c bes a g f |\n      d8 c bes c d g a a |\n      g8 a bes c d g fis g |\n      d8 ees cis d g, d' ees fis |\n    } \\break\n\n    \\repeat volta 2 {\n      g4 ees8 c f, a c ees |\n      f8 ees d c bes a bes d |\n      ees4 c8 bes a bes c ees |\n      d8 c bes a g bes d f |\n      \\break\n\n      g4 ees8 c f, a c g' |\n      f8 ees d c bes c d f |\n      ees8 d c bes a bes c ees |\n    } \\alternative { {\n      d8 ees cis d g, b d f |\n    } {\n      d8 e f fis g4\n    } } \\bar \"|.\"\n  }\n\n  \\new ChordNames {\n    \\chordmode {\n      s4 |\n      g1:m | s | g:m | d2:7/a d:7/fis |\n      g1:m | s | g:m | d2:7 g:m |\n\n      c2:m f | d:m g:m | c:m d:7 | g1:m |\n      c2:m f:7 | d:m bes | c:m cis:dim | d:7 g:7 | d:7 g4:m\n    }\n  }\n>>\n"
+  },
+  "slug": "niols"
+}
