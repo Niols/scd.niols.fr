@@ -1,0 +1,53 @@
+---
+name: Butter, but Salted
+author: Aymeric Fromherz and Nicolas “Niols” Jeannerod
+
+kind: 32-bar reel for three couples in a three-couple longwise set
+short-kind: 32R 3/3L
+
+date: "2025-03"
+
+instructions:
+  - type: phrase
+    starts: 1
+    ends: 4
+    content: |
+      1st and 2nd couples set, and dance right hands across halfway round. 1st
+      woman finishes facing out.
+
+  - type: phrase
+    starts: 5
+    ends: 8
+    content: |
+      1st woman and 3rd man, giving left hand, cross. All, giving right hand,
+      cross.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    content: |
+      All set, and dance la baratte with the person across them.
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    content: |
+      All chase clockwise halfway. All, giving left hand, turn one and a half
+      times, finishing in the middle facing up in promenade hold.
+
+  - type: phrase
+    starts: 25
+    ends: 32
+    content: |
+      All dance a promenade for three couples, finish with 1st man in second
+      woman position, 1st woman in first man position, 3rd man in second man
+      position, 3rd woman in first man position, and 2nd couple in third place,
+      on opposite sides.
+
+  - type: repeat
+    kind: custom
+    text: |
+      Repeat from new positions. After six times through, all dancers should be
+      back to original places.
+
+  - type: devised by
