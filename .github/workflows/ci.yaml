@@ -22,6 +22,7 @@ jobs:
       - name: Give Link to GitHub Pages for this Pull Request
         uses: peter-evans/create-or-update-comment@v4.0.0
         with:
+          token: ${{ secrets.PR_COMMENT_TOKEN }}
           issue-number: ${{ github.event.number }}
           body: |
             Hey! I will publish the pages for this pull request here:
@@ -34,7 +35,6 @@ jobs:
             ![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)
 
             Just wait for the deployment indicated by the green check mark and you are good to go!
-          token: ${{ secrets.PR_COMMENT_TOKEN }}
 
   ############################################################################
   ## Setup Dependencies
