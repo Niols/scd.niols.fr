@@ -1,0 +1,78 @@
+---
+
+name: Hallo, Hallo
+author: Aymeric Fromherz
+
+kind: 32-bar reel for three couples in a four-couple longwise set
+short-kind: R32 3/4L
+
+date: "2025-03"
+
+instructions:
+
+  - type: phrase
+    starts: 1
+    ends: 8
+    content: |
+      1st couple set advancing to the middle; lead down into 2nd place, remaining in the middle of the dance (2s move up).
+      1st couple set to each other, with 1st woman setting under the man's right arm; 1st couple dance a three quarters turn
+      right hand to finish facing first corners.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    content: |
+        1st couple dance a "hello-hello setting" with 1st corners:
+    instructions:
+      - type: phrase
+        starts: 9
+        ends: 10
+        content: |
+          1st couple set to their 1st corners, and to the left to finish
+          on opposite lines.
+      - type: phrase
+        starts: 11
+        ends: 12
+        content: |
+          1st set advancing toward each other, pulling back right shoulder to face 1st corners
+      - type: phrase
+        starts: 13
+        ends: 16
+        content: |
+          1st dance a turn right hand with their 1st corner, and pass each other right shoulder
+          in the middle to finish facing 2nd corners.
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    content: |
+        1st couple dance a "hello-hello setting" with 2nd corners:
+    instructions:
+      - type: phrase
+        starts: 17
+        ends: 18
+        content: |
+          1st couple set to their 2nd corners, and to the left to finish
+          on up qnd down, man facing down, woman facing up.
+      - type: phrase
+        starts: 19
+        ends: 20
+        content: |
+          1st set advancing toward each other, pulling back right shoulder to face second corners
+      - type: phrase
+        starts: 21
+        ends: 24
+        content: |
+          1st dance a turn right hand with their 2nd corner, and finish in second position on opposite lines.
+
+  - type: phrase
+    starts: 25
+    end: 32
+    content: |
+      The three couples dance six hands round and back.
+
+  - type: repeat
+    kind: custom
+    description: |
+      The dance repeats from new positions, with 1st man and woman inverted.
+
