@@ -1,7 +1,9 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
-  inputs.flake-parts.url = "github:hercules-ci/flake-parts";
-  inputs.pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    pre-commit-hooks.url = "github:cachix/git-hooks.nix";
+  };
 
   outputs = inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
