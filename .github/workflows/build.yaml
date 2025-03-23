@@ -1,5 +1,5 @@
 ---
-name: CI
+name: Build and test
 
 on:
   push:
@@ -10,32 +10,6 @@ on:
   pull_request:
 
 jobs:
-  ############################################################################
-  ## Comment on Pull Request
-
-  comment-on-pull-request:
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request'
-      && github.event.action == 'opened' }}
-
-    steps:
-      - name: Give Link to GitHub Pages for this Pull Request
-        uses: peter-evans/create-or-update-comment@v4.0.0
-        with:
-          token: ${{ secrets.PR_COMMENT_TOKEN }}
-          issue-number: ${{ github.event.number }}
-          body: |
-            Hey! I will publish the pages for this pull request here:
-
-            - Repository: https://github.com/Niols/dev.scd.niols.fr/
-            - Rendering: http://dev.scd.niols.fr/pr/${{ github.event.number }}/
-
-            For each push, you will see something like:
-
-            ![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)
-
-            Just wait for the deployment indicated by the green check mark and you are good to go!
-
   ############################################################################
   ## Setup Dependencies
 
