@@ -15,7 +15,7 @@ width  = sys.argv[3]
 
 ## Get a driver for a headless Firefox.
 options = FirefoxOptions()
-options.headless = True
+options.add_argument("--headless")
 driver = webdriver.Firefox(options=options)
 
 ## Get the requested page.
@@ -27,5 +27,5 @@ driver.set_window_size(width, 8000)
 time.sleep(1)
 
 ## Save a screenshot and leave.
-driver.find_element_by_tag_name('body').screenshot(target)
+driver.find_element(By.TAG_NAME, 'body').screenshot(target)
 driver.quit()

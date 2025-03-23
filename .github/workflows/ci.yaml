@@ -22,6 +22,7 @@ jobs:
       - name: Give Link to GitHub Pages for this Pull Request
         uses: peter-evans/create-or-update-comment@v4.0.0
         with:
+          token: ${{ secrets.PR_COMMENT_TOKEN }}
           issue-number: ${{ github.event.number }}
           body: |
             Hey! I will publish the pages for this pull request here:
@@ -34,7 +35,6 @@ jobs:
             ![](https://dev.scd.niols.fr/github-actions-commit-link-example.png)
 
             Just wait for the deployment indicated by the green check mark and you are good to go!
-          token: ${{ secrets.PR_COMMENT_TOKEN }}
 
   ############################################################################
   ## Setup Dependencies
@@ -53,7 +53,7 @@ jobs:
           cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - name: Build environment
-        run: nix develop --command true
+        run: nix develop --accept-flake-config --command true
 
   ############################################################################
   ## Build Website
@@ -73,7 +73,7 @@ jobs:
           cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - name: Build Website
-        run: nix develop --command make website
+        run: nix develop --accept-flake-config --command make website
 
       - name: Upload Website as Artifact
         uses: actions/upload-artifact@v4.4.0
@@ -155,10 +155,10 @@ jobs:
           cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - name: Build Test Website
-        run: nix develop --command make test-website
+        run: nix develop --accept-flake-config --command make test-website
 
       - name: Run Tests
-        run: nix develop --command make tests
+        run: nix develop --accept-flake-config --command make tests
 
       - name: Upload Tests as Artifact
         if: ${{ always() }}
@@ -188,7 +188,7 @@ jobs:
           cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - name: Run Flake Checks
-        run: nix flake check --print-build-logs
+        run: nix flake check --print-build-logs --accept-flake-config
 
   ############################################################################
   ## Publish Website

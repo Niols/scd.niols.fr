@@ -19,6 +19,9 @@
         buildPhase = "true";
         installPhase = "mkdir $out";
         shellHook = config.pre-commit.installationScript;
+
+        FONTCONFIG_FILE =
+          pkgs.makeFontsConf { fontDirectories = [ pkgs.source-sans-pro ]; };
       };
     };
 }

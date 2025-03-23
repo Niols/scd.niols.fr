@@ -1,7 +1,7 @@
 { ... }: {
   perSystem = { ... }: {
     pre-commit.settings.hooks = {
-      nixfmt.enable = true;
+      nixfmt-classic.enable = true;
       deadnix.enable = true;
       prettier.enable = true;
     };

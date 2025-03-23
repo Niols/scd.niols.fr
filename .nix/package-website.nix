@@ -1,21 +1,11 @@
 { self, ... }: {
-  perSystem = { self', pkgs, ... }:
+  perSystem = { self', inputs', pkgs, ... }:
     let
       mkDerivation = self.lib.mkDerivationFor pkgs;
 
-      customTexlive = pkgs.texlive.combine {
-        inherit (pkgs.texlive)
-          scheme-small enumitem ifoddpage tikzpagenodes wrapfig xifthen;
-      };
-
-      websiteBuildInputs = [
-        pkgs.j2cli
-        pkgs.jq
-        pkgs.lilypond
-        pkgs.sassc
-        customTexlive
-        pkgs.yq-go
-      ];
+      websiteBuildInputs =
+        (with pkgs; [ j2cli jq sassc texlive.combined.scheme-full yq-go ])
+        ++ [ inputs'.nixpkgs2205.legacyPackages.lilypond ];
 
     in {
       packages.default = self'.packages.website;
