@@ -1089,7 +1089,7 @@ c-13 0 -23 11 -23 25z" fill="currentColor"/>
 <g transform="translate(72.3448, 28.9912)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="3.5403 -0.0100 3.5403 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g transform="translate(82.2053, 28.1275)">
+<g transform="translate(82.2053, 28.1276)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="1.1250 -0.1463 1.1250 0.2537 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
 <g transform="translate(79.2453, 28.8012)">
@@ -1125,7 +1125,7 @@ c-13 0 -23 11 -23 25z" fill="currentColor"/>
 <g transform="translate(19.9246, 28.9912)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="3.5403 -0.0100 3.5403 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g transform="translate(29.7851, 30.1275)">
+<g transform="translate(29.7851, 30.1276)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="1.1250 -0.1463 1.1250 0.2537 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
 <g transform="translate(26.8251, 30.8012)">
@@ -1565,7 +1565,7 @@ c-13 0 -23 11 -23 25z" fill="currentColor"/>
 <g transform="translate(65.2879, 40.9312)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.3815 -0.8200 5.3815 -0.4200 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g transform="translate(75.1324, 38.4660)">
+<g transform="translate(75.1324, 38.4661)">
 <g>
 <path transform="scale(0.0025, -0.0025)" d="M191 487c21 0 42 14 49 14c8 0 15 -10 15 -21v-353c0 -52 32 -99 80 -99c9 0 13 -7 13 -14s-4 -14 -13 -14c-48 0 -96 13 -144 13s-95 -13 -143 -13c-9 0 -14 7 -14 14s5 14 14 14c48 0 79 47 79 99v220c0 15 -10 22 -19 22c-5 0 -10 -1 -12 -6l-65 -129
 c-3 -7 -9 -9 -15 -9c-9 0 -18 7 -18 17c0 3 1 5 2 8l127 250c7 13 35 -13 64 -13z" fill="currentColor"/>

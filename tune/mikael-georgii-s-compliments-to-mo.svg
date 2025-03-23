@@ -1038,12 +1038,12 @@ c-13 0 -23 11 -23 25z" fill="currentColor"/>
 <g transform="translate(42.3237, 29.5504)">
 <rect x="-0.0650" y="-2.3139" width="0.1300" height="3.5086" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(2.9834, 29.0969)">
+<g transform="translate(2.9834, 29.0970)">
 <text font-family="Source Sans Pro" font-size="1.7461" text-anchor="start" fill="currentColor">
 <tspan>17</tspan>
 </text>
 </g>
-<g transform="translate(2.9834, 31.0969)">
+<g transform="translate(2.9834, 31.0970)">
 <text font-family="Source Sans Pro" font-size="1.7461" text-anchor="start" fill="currentColor">
 <tspan>25</tspan>
 </text>

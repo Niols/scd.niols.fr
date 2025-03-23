@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="210.00mm" height="70.04mm" viewBox="0 0 119.5016 39.8579">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="210.00mm" height="70.04mm" viewBox="0 0 119.5016 39.8580">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
@@ -957,12 +957,12 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(88.5001, 32.5938)">
 <rect x="-0.0650" y="-2.1885" width="0.1300" height="2.5024" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(87.2609, 38.8687)">
+<g transform="translate(87.2609, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
-<g transform="translate(88.6950, 38.8687)">
+<g transform="translate(88.6950, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>m</tspan>
 </text>
@@ -979,7 +979,7 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(81.9533, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3762" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(81.8883, 38.8687)">
+<g transform="translate(81.8883, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>E</tspan>
 </text>
@@ -990,7 +990,7 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(100.4280, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.1269" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(100.3630, 38.8687)">
+<g transform="translate(100.3630, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>F</tspan>
 </text>
@@ -1007,12 +1007,12 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(93.8728, 32.5938)">
 <rect x="-0.0650" y="-2.0638" width="0.1300" height="3.3777" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(92.6336, 38.8687)">
+<g transform="translate(92.6336, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>E</tspan>
 </text>
 </g>
-<g transform="translate(93.9993, 37.6795)">
+<g transform="translate(93.9993, 37.6796)">
 <text font-family="Source Sans Pro" font-size="1.8500" text-anchor="start" fill="currentColor">
 <tspan>7</tspan>
 </text>
@@ -1026,17 +1026,17 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(89.9473, 34.5938)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
-<g transform="translate(66.5116, 38.8687)">
+<g transform="translate(66.5116, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>C</tspan>
 </text>
 </g>
-<g transform="translate(68.0139, 38.8687)">
+<g transform="translate(68.0139, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>/</tspan>
 </text>
 </g>
-<g transform="translate(68.9358, 38.8687)">
+<g transform="translate(68.9358, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>G</tspan>
 </text>
@@ -1077,7 +1077,7 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(76.5807, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.1269" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(76.5157, 38.8687)">
+<g transform="translate(76.5157, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>F</tspan>
 </text>
@@ -1088,7 +1088,7 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(74.2376, 30.1338)">
 <path transform="scale(0.0040, -0.0040)" d="M0 0v-250h-16v250h16zM0 0c0 -197 207 -336 207 -533c0 -71 -15 -141 -41 -207c-5 -8 -13 -12 -20 -12c-13 0 -26 11 -23 27c26 61 42 126 42 192c0 103 -94 208 -165 283v250z" fill="currentColor"/>
 </g>
-<g transform="translate(76.3800, 27.9386)">
+<g transform="translate(76.3800, 27.9387)">
 <g>
 <path transform="scale(0.0025, -0.0025)" d="M191 487c21 0 42 14 49 14c8 0 15 -10 15 -21v-353c0 -52 32 -99 80 -99c9 0 13 -7 13 -14s-4 -14 -13 -14c-48 0 -96 13 -144 13s-95 -13 -143 -13c-9 0 -14 7 -14 14s5 14 14 14c48 0 79 47 79 99v220c0 15 -10 22 -19 22c-5 0 -10 -1 -12 -6l-65 -129
 c-3 -7 -9 -9 -15 -9c-9 0 -18 7 -18 17c0 3 1 5 2 8l127 250c7 13 35 -13 64 -13z" fill="currentColor"/>
@@ -1132,12 +1132,12 @@ c-3 -7 -9 -9 -15 -9c-9 0 -18 7 -18 17c0 3 1 5 2 8l127 250c7 13 35 -13 64 -13z" f
 <g transform="translate(105.8006, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3762" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(105.7356, 38.8687)">
+<g transform="translate(105.7356, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>E</tspan>
 </text>
 </g>
-<g transform="translate(107.1014, 37.6795)">
+<g transform="translate(107.1014, 37.6796)">
 <text font-family="Source Sans Pro" font-size="1.8500" text-anchor="start" fill="currentColor">
 <tspan>7</tspan>
 </text>
@@ -1160,12 +1160,12 @@ c-3 -7 -9 -9 -15 -9c-9 0 -18 7 -18 17c0 3 1 5 2 8l127 250c7 13 35 -13 64 -13z" f
 <g transform="translate(112.3475, 32.5938)">
 <rect x="-0.0650" y="-3.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(111.1083, 38.8687)">
+<g transform="translate(111.1083, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
-<g transform="translate(112.5423, 38.8687)">
+<g transform="translate(112.5423, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>m</tspan>
 </text>
@@ -1191,7 +1191,7 @@ c-3 -7 -9 -9 -15 -9c-9 0 -18 7 -18 17c0 3 1 5 2 8l127 250c7 13 35 -13 64 -13z" f
 <g transform="translate(30.2948, 33.5938)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
-<g transform="translate(33.6297, 38.8687)">
+<g transform="translate(33.6297, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>F</tspan>
 </text>
@@ -1232,12 +1232,12 @@ c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 
 <g transform="translate(11.5556, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(11.4906, 38.8687)">
+<g transform="translate(11.4906, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
-<g transform="translate(12.9246, 38.8687)">
+<g transform="translate(12.9246, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>m</tspan>
 </text>
@@ -1272,17 +1272,17 @@ c0 -145 -138 -157 -236 -208h10c86 0 112 -61 170 -61c50 0 39 42 59 42c7 0 14 -6 1
 <tspan>29</tspan>
 </text>
 </g>
-<g transform="translate(22.2358, 38.8687)">
+<g transform="translate(22.2358, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>C</tspan>
 </text>
 </g>
-<g transform="translate(23.7381, 38.8687)">
+<g transform="translate(23.7381, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>/</tspan>
 </text>
 </g>
-<g transform="translate(24.6600, 38.8687)">
+<g transform="translate(24.6600, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>G</tspan>
 </text>
@@ -1311,12 +1311,12 @@ c0 -145 -138 -157 -236 -208h10c86 0 112 -61 170 -61c50 0 39 42 59 42c7 0 14 -6 1
 <g transform="translate(14.1769, 33.0938)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
-<g transform="translate(55.7663, 38.8687)">
+<g transform="translate(55.7663, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
-<g transform="translate(57.2003, 38.8687)">
+<g transform="translate(57.2003, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>m</tspan>
 </text>
@@ -1333,22 +1333,22 @@ c0 -145 -138 -157 -236 -208h10c86 0 112 -61 170 -61c50 0 39 42 59 42c7 0 14 -6 1
 <g transform="translate(55.8313, 32.5938)">
 <rect x="-0.0650" y="0.6861" width="0.1300" height="2.3075" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(49.7477, 38.8687)">
+<g transform="translate(49.7477, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>E</tspan>
 </text>
 </g>
-<g transform="translate(51.1134, 38.8687)">
+<g transform="translate(51.1134, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>/</tspan>
 </text>
 </g>
-<g transform="translate(52.0353, 38.8687)">
+<g transform="translate(52.0353, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>G</tspan>
 </text>
 </g>
-<g transform="translate(53.6400, 38.2687)">
+<g transform="translate(53.6400, 38.2688)">
 <path transform="scale(0.0042, -0.0042)" d="M216 -312c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 15 13 18l46 17v158
 c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17v-158zM96 65v-160l83 30v160z" fill="currentColor"/>
 </g>
@@ -1370,22 +1370,22 @@ c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l3
 <g transform="translate(49.8127, 32.5938)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3762" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(44.3750, 38.8687)">
+<g transform="translate(44.3750, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
-<g transform="translate(45.8090, 38.8687)">
+<g transform="translate(45.8090, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>m</tspan>
 </text>
 </g>
-<g transform="translate(47.9942, 38.8687)">
+<g transform="translate(47.9942, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>/</tspan>
 </text>
 </g>
-<g transform="translate(48.9161, 38.8687)">
+<g transform="translate(48.9161, 38.8688)">
 <text font-family="Source Sans Pro" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>E</tspan>
 </text>
