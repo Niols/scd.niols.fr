@@ -1,16 +1,11 @@
 { self, ... }: {
-  perSystem = { self', pkgs, ... }:
+  perSystem = { self', inputs', pkgs, ... }:
     let
       mkDerivation = self.lib.mkDerivationFor pkgs;
 
-      websiteBuildInputs = with pkgs; [
-        j2cli
-        jq
-        lilypond
-        sassc
-        texlive.combined.scheme-full
-        yq-go
-      ];
+      websiteBuildInputs =
+        (with pkgs; [ j2cli jq sassc texlive.combined.scheme-full yq-go ])
+        ++ [ inputs'.nixpkgs2205.legacyPackages.lilypond ];
 
     in {
       packages.default = self'.packages.website;
