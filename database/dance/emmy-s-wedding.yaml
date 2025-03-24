@@ -13,52 +13,47 @@ tunes:
 instructions:
   - type: phrase
     starts: 1
+    ends: 4
+    content: |
+      1st couple cast off one place while 4th couple cast up one place. 2nd
+      couple step up and 3rd couple step down on bars 3-4.
+
+  - type: phrase
+    starts: 5
     ends: 8
     content: |
-      1st and 4th couples cast in four bars. 2nd couple step up and 3rd couple
-      step down on bars 3-4. 1st and 4th couples dance a half figure of eight
-      around 2nd and 3rd couples.
+      1st couple dance a half figure of eight round 2nd couple while 4th couple
+      dance a half figure of eight round 3rd couple.
 
   - type: phrase
     starts: 9
     ends: 16
     content: |
-      1st and 4th couples in second and third places dance set and rotate.
+      1st and 4th couples set and rotate.
 
   - type: phrase
     starts: 17
     ends: 20
     content: |
-      1st couple turn both hands one and a half times in four bars.
+      1st couple, giving both hands, turn one and a half times.
 
   - type: phrase
     starts: 21
     ends: 24
     content: |
-      4th couple cross down to fourth place while 3rd couple cast up to second
-      place.
+      4th couple, without giving hands, cross down to fourth place while 3rd couple
+      cast up to second place, to finish in the order 2, 3, 1, 4.
 
   - type: phrase
     starts: 25
     ends: 32
     content: |
-      1st couple dance a figure of love around the 3rd and 4th couples:
-    instructions:
-      - type: phrase
-        starts: 25
-        ends: 28
-        content: |
-          1st couple dance a half figure of eight, woman up between 3rd couple,
-          man down between 4th couple, finishing by meeting in the centre of the
-          dance and briefly touching both hands.
-      - type: phrase
-        starts: 29
-        ends: 32
-        content: |
-          1st couple pull back left shoulder and cast, woman down and man up;
-          1st woman dances up between 4th couple while 1st man dances down
-          between 3rd couple; both finish in third place on own sides facing
-          out.
+      1st couple dance the »figure of love«: 1st woman dances up between 3rd
+      couple and casts off round 3rd man, while 1st man dances down between 4th
+      couple and casts up round 4th woman. 1st couple meet in the middle of the
+      set, touch both hands, then, pulling back left shoulders, 1st woman casts
+      off round 4th man, while 1st man casts up round 3rd woman. 1st couple
+      finish in third place on own sides facing out.
 
   - type: phrase
     starts: 33
