@@ -12,7 +12,7 @@ jobs:
     name: Comment on pull request
     runs-on: ubuntu-latest
 
-    # if: ${{ github.event.action == 'opened' }}
+    if: ${{ github.event.action == 'opened' }}
 
     steps:
       - name: Give link to GitHub pages for this pull request
