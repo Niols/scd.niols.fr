@@ -79,108 +79,125 @@ jobs:
           echo "destination_dir=$dir"
           echo "commit_message=$msg"
 
-  # ############################################################################
-  # ## Publish Website
+############################################################################
+## Publish Website
 
-  # publish-website:
-  #   runs-on: ubuntu-latest
+publish-website:
+  runs-on: ubuntu-latest
 
-  #   if: ${{ github.ref == 'refs/heads/main' }}
+  if: ${{ github.event.workflow_run.event == 'push'
+    && github.event.workflow_run.head_branch = 'main' }}
 
-  #   steps:
-  #     - name: Download Website from Artifacts
-  #       uses: actions/download-artifact@v4.1.8
-  #       with:
-  #         name: website
-  #         path: ./website
+  steps:
+    - name: Download Website from Artifacts
+      uses: actions/download-artifact@v4.1.8
+      with:
+        name: website
+        path: ./website
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        run-id: ${{ github.event.workflow_run.id }}
 
-  #     - name: Publish Website to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v4.0.0
-  #       with:
-  #         ## Publish `./website` with following commit message...
-  #         publish_dir: ./website
-  #         full_commit_message: |
-  #           Bump to ${{ github.sha }}: ${{ github.event.head_commit.message }}
-  #         ## ...to branch `pages` with the right access token...
-  #         publish_branch: pages
-  #         github_token: ${{ secrets.PAGES_TOKEN }}
-  #         ## ...as the GitHub Actions bot...
-  #         user_name: "github-actions[bot]"
-  #         user_email: "github-actions[bot]@users.noreply.github.com"
-  #         ## ...serving `scd.niols.fr`.
-  #         cname: scd.niols.fr
+    - name: Publish Website to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4.0.0
+      with:
+        ## Publish `./website` with following commit message...
+        publish_dir: ./website
+        full_commit_message: |
+          Bump to ${{ github.sha }}: ${{ github.event.head_commit.message }}
+        ## ...to branch `pages` with the right access token...
+        publish_branch: pages
+        github_token: ${{ secrets.PAGES_TOKEN }}
+        ## ...as the GitHub Actions bot...
+        user_name: "github-actions[bot]"
+        user_email: "github-actions[bot]@users.noreply.github.com"
+        ## ...serving `scd.niols.fr`.
+        cname: scd.niols.fr
 
-  # ############################################################################
-  # ## Publish Dev Website
+############################################################################
+## Publish Dev Website
 
-  # publish-dev-website:
-  #   runs-on: ubuntu-latest
+publish-dev-website:
+  runs-on: ubuntu-latest
 
-  #   ## NOTE: We publish even if one of the previous steps failed; hopefully,
-  #   ## publishing it will then give more debug information. We do not do the
-  #   ## same for the actual website.
-  #   if: always()
+  ## NOTE: We publish even if one of the previous steps failed; hopefully,
+  ## publishing it will then give more debug information. We do not do the
+  ## same for the actual website.
+  if: always()
 
-  #   steps:
-  #     - name: Download Website from Artifacts
-  #       if: needs.build-website.result == 'success'
-  #       uses: actions/download-artifact@v4.1.8
-  #       with:
-  #         name: website
-  #         path: ./website
+  steps:
+    - run: ls -lah
 
-  #     - name: Create Website Root if Building Website Failed
-  #       if: needs.build-website.result != 'success'
-  #       run: mkdir ./website
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4.1.8
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        run-id: ${{ github.event.workflow_run.id }}
 
-  #     - name: Download Documentation from Artifacts
-  #       if: needs.build-documentation.result == 'success'
-  #       uses: actions/download-artifact@v4.1.8
-  #       with:
-  #         name: documentation
-  #         path: ./website/_doc/
+    - run: ls -lah
 
-  #     - name: Download Tests from Artifacts
-  #       ## NOTE: No need to check for success, because the tests upload their
-  #       ## archive no matter what happens.
-  #       uses: actions/download-artifact@v4.1.8
-  #       with:
-  #         name: tests
-  #         path: ./website/_tests/
+    # - name: Create website root even if building the website failed
+    #   run: mkdir -p ./website
 
-  #     - name: Prepare Metadata for Publishing the Dev Website
-  #       run: |
-  #         if [ -n "$GITHUB_HEAD_REF" ]; then
-  #           ## If it is a pull request...
-  #           pr=${GITHUB_REF_NAME%/merge}
-  #           dir=pr/$pr
-  #           ptr="$GITHUB_REPOSITORY#$pr"
-  #         else
-  #           ## Otherwise, if it is a branch or a tag...
-  #           dir=$GITHUB_REF_TYPE/$GITHUB_REF_NAME
-  #           ptr="$GITHUB_REPOSITORY@$GITHUB_SHA"
-  #         fi
-  #         ## In any case, similar messages:
-  #         msg="Bump \`$dir\` to follow $ptr"
-  #         echo "destination_dir=$dir" >> $GITHUB_ENV
-  #         echo "commit_message=$msg" >> $GITHUB_ENV
+    # - name: Download documentation from artifacts
+    #   if: needs.build-documentation.result == 'success'
+    #   uses: actions/download-artifact@v4.1.8
+    #   with:
+    #     name: documentation
+    #     path: ./website/_doc/
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
+    #     run-id: ${{ github.event.workflow_run.id }}
 
-  #     - name: Publish Dev Website to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v4.0.0
-  #       with:
-  #         ## Publish `./website` with following commit message...
-  #         publish_dir: ./website
-  #         full_commit_message: ${{ env.commit_message }}
-  #         ## ...to https://github.com/Niols/dev.scd.niols.fr on branch `pages`
-  #         ## with the right access token...
-  #         external_repository: niols/dev.scd.niols.fr
-  #         publish_branch: pages
-  #         deploy_key: ${{ secrets.DEV_PAGES_KEY }}
-  #         ## ...as the GitHub Actions bot...
-  #         user_name: "github-actions[bot]"
-  #         user_email: "github-actions[bot]@users.noreply.github.com"
-  #         ## ...in its own sub-directory while keeping the rest intact...
-  #         destination_dir: ${{ env.destination_dir }}
-  #         keep_files: true
-  #         ## ...serving `dev.scd.niols.fr`.
-  #         cname: dev.scd.niols.fr
+    # - name: Download tests from artifacts
+    #   ## NOTE: No need to check for success, because the tests upload their
+    #   ## archive no matter what happens.
+    #   uses: actions/download-artifact@v4.1.8
+    #   with:
+    #     name: tests
+    #     path: ./website/_tests/
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
+    #     run-id: ${{ github.event.workflow_run.id }}
+
+    - name: Prepare metadata for publishing the development website
+      run: |
+        case ${{ github.event.workflow_run.event }} in
+          pull_request)
+            ## If it is a pull request...
+            pr=${GITHUB_REF_NAME%/merge}
+            dir=pr/$pr
+            ptr="$GITHUB_REPOSITORY#$pr"
+            ;;
+          push)
+            ## If it is a push of a branch...
+            dir=branch/${{ github.event.workflow_run.head_branch }}
+            ptr="$GITHUB_REPOSITORY@${{ github.event.workflow_run.head_sha }}"
+            ;;
+          *)
+            echo Unexpected event type.
+            exit 2
+        fi
+        ## In any case, similar messages:
+        msg="Bump \`$dir\` to follow $ptr"
+        echo "destination_dir=$dir"
+        echo "commit_message=$msg"
+        echo "destination_dir=$dir" >> $GITHUB_ENV
+        echo "commit_message=$msg" >> $GITHUB_ENV
+
+    # - name: Publish development website to GitHub pages
+    #   uses: peaceiris/actions-gh-pages@v4.0.0
+    #   with:
+    #     ## Publish `./website` with following commit message...
+    #     publish_dir: ./website
+    #     full_commit_message: ${{ env.commit_message }}
+    #     ## ...to https://github.com/Niols/dev.scd.niols.fr on branch `pages`
+    #     ## with the right access token...
+    #     external_repository: niols/dev.scd.niols.fr
+    #     publish_branch: pages
+    #     deploy_key: ${{ secrets.DEV_PAGES_KEY }}
+    #     ## ...as the GitHub Actions bot...
+    #     user_name: "github-actions[bot]"
+    #     user_email: "github-actions[bot]@users.noreply.github.com"
+    #     ## ...in its own sub-directory while keeping the rest intact...
+    #     destination_dir: ${{ env.destination_dir }}
+    #     keep_files: true
+    #     ## ...serving `dev.scd.niols.fr`.
+    #     cname: dev.scd.niols.fr
