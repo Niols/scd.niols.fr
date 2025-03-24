@@ -39,10 +39,11 @@ jobs:
           echo previous_attempt_url: ${{ github.event.workflow_run.previous_attempt_url }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests[0] }}
-          echo pull_requests: ${{ github.event.workflow_run.pull_requests[0] }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests[0].id }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[0].number }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests[1] }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests[1].id }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[1].number }}
 
           echo referenced_workflows: ${{ github.event.workflow_run.referenced_workflows }}
           echo repository: ${{ github.event.workflow_run.repository }}
@@ -152,21 +153,17 @@ jobs:
         run: |
           case ${{ github.event.workflow_run.event }} in
             pull_request)
-              ## If it is a pull request...
-              pr=${GITHUB_REF_NAME%/merge}
-              dir=pr/$pr
-              ptr="${{ github.event.workflow_run.repository }}#$pr"
+              dir=pr/${{ github.event.workflow_run.pull_requests[0].number }}
+              ptr="${{ github.repository }}#$pr"
               ;;
             push)
-              ## If it is a push of a branch...
               dir=branch/${{ github.event.workflow_run.head_branch }}
-              ptr="${{ github.event.workflow_run.repository }}@${{ github.event.workflow_run.head_sha }}"
+              ptr="${{ github.repository }}@${{ github.event.workflow_run.head_sha }}"
               ;;
             *)
               echo Unexpected event type.
               exit 2
           esac
-          ## In any case, similar messages:
           msg="Bump \`$dir\` to follow $ptr"
           echo "destination_dir=$dir"
           echo "commit_message=$msg"
