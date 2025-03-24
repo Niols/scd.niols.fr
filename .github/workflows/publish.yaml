@@ -83,6 +83,7 @@ jobs:
   ## Publish Website
 
   publish-website:
+    name: Publish the website
     runs-on: ubuntu-latest
 
     if: ${{ github.event.workflow_run.event == 'push'
@@ -117,6 +118,7 @@ jobs:
   ## Publish Dev Website
 
   publish-dev-website:
+    name: Publish the development website
     runs-on: ubuntu-latest
 
     ## NOTE: We publish even if one of the previous steps failed; hopefully,
