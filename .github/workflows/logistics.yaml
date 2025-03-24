@@ -1,5 +1,5 @@
 ---
-name: Comment on pull request
+name: Logistics
 
 on:
   pull_request_target:
