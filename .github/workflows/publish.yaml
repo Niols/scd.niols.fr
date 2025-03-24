@@ -99,7 +99,7 @@ jobs:
           ## with the right access token...
           external_repository: niols/dev.scd.niols.fr
           publish_branch: pages
-          deploy_key: ${{ secrets.DEV_PAGES_KEY }}
+          personal_token: ${{ secrets.DEV_PAGES_TOKEN }}
           ## ...as the GitHub Actions bot...
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
