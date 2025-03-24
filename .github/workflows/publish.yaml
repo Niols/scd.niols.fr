@@ -21,7 +21,8 @@ jobs:
     runs-on: ubuntu-latest
 
     if: ${{ github.event.workflow_run.event == 'push'
-      && github.event.workflow_run.head_branch == 'main' }}
+      && github.event.workflow_run.head_branch == 'main'
+      && github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Download Website from Artifacts
@@ -55,6 +56,9 @@ jobs:
     name: Publish the development website
     runs-on: ubuntu-latest
 
+    if: ${{ github.event.workflow_run.conclusion == 'success'
+      || github.event.workflow_run.conclusion == 'failure' }}
+
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4.2.1
@@ -70,23 +74,25 @@ jobs:
 
       - name: Prepare metadata for publishing the development website
         run: |
-          case ${{ github.event.workflow_run.event }} in
+          case $(cat meta/event_name) in
             pull_request)
-              pr=${{ github.event.workflow_run.pull_requests[0].number }}
+              pr=$(cat meta/event/number)
+              if [ -z "$pr" ]; then
+                echo Could not acquire a PR number.
+                exit 2
+              fi
               dir=pr/$pr
-              ptr="${{ github.repository }}#$pr"
+              ptr="$(cat meta/repository)#$pr"
               ;;
             push)
-              dir=branch/${{ github.event.workflow_run.head_branch }}
-              ptr="${{ github.repository }}@${{ github.event.workflow_run.head_sha }}"
+              dir="$(cat meta/ref_type)/$(cat meta/ref_name)"
+              ptr="$(cat meta/repository)@$(cat meta/sha)"
               ;;
             *)
               echo Unexpected event type.
               exit 2
           esac
           msg="Bump \`$dir\` to follow $ptr"
-          echo "destination_dir=$dir"
-          echo "commit_message=$msg"
           echo "destination_dir=$dir" >> $GITHUB_ENV
           echo "commit_message=$msg" >> $GITHUB_ENV
 

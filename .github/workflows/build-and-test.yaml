@@ -11,6 +11,33 @@ on:
 
 jobs:
   ############################################################################
+  ## Save metadata
+
+  ## The Publish workflow needs some information to craft the right commit
+  ## message, etc., so we extract them here and save them as an artifact.
+
+  save-metadata:
+    name: Save metadata
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Compute necessary metadata
+        run: |
+          mkdir -p meta/event
+          echo ${{ github.event_name }} > meta/event_name
+          echo ${{ github.event.number }} > meta/event/number
+          echo ${{ github.repository }} > meta/repository
+          echo ${{ github.ref_type }} > meta/ref_type
+          echo ${{ github.ref_name }} > meta/ref_name
+          echo ${{ github.sha }} > meta/sha
+
+      - name: Upload them as artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: meta
+          path: meta
+
+  ############################################################################
   ## Setup Dependencies
 
   setup-dependencies:
