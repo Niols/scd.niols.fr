@@ -4,18 +4,20 @@ name: Pull request logistics
 on:
   pull_request_target:
 
+permissions:
+  pull-requests: write
+
 jobs:
   comment-on-pull-request:
     name: Comment on pull request
     runs-on: ubuntu-latest
 
-    if: ${{ github.event.action == 'opened' }}
+    # if: ${{ github.event.action == 'opened' }}
 
     steps:
       - name: Give link to GitHub pages for this pull request
         uses: peter-evans/create-or-update-comment@v4.0.0
         with:
-          token: ${{ secrets.PR_COMMENT_TOKEN }}
           issue-number: ${{ github.event.number }}
           body: |
             Hey! I will publish the pages for this pull request here:
