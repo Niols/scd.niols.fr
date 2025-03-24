@@ -73,6 +73,10 @@ jobs:
           case ${{ github.event.workflow_run.event }} in
             pull_request)
               pr=${{ github.event.workflow_run.pull_requests[0].number }}
+              if [ -z "$pr" ]; then
+                echo Could not acquire a PR number.
+                exit 2
+              fi
               dir=pr/$pr
               ptr="${{ github.repository }}#$pr"
               ;;
