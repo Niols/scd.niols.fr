@@ -17,11 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo name: ${{ github.event.workflow_run.name }}
-          echo head_repository.name: ${{ github.event.workflow_run.head_repository.name }}
-          echo head_repository.full_name: ${{ github.event.workflow_run.head_repository.full_name }}
-          echo pull_requests: ${{ github.event.workflow_run.pull_requests }}
-          echo pull_requests[0]: ${{ github.event.workflow_run.pull_requests[0] }}
+          echo ${{ toJSON(github) }}
 
   ############################################################################
   ## Publish Website
