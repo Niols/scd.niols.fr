@@ -6,6 +6,11 @@ on:
     workflows: [Build and test]
     types: [completed]
 
+## We specify a concurrency group that spans over all publications, so as to
+## avoid different runs clashing together.
+concurrency:
+  group: publish
+
 jobs:
   meta:
     runs-on: ubuntu-latest
