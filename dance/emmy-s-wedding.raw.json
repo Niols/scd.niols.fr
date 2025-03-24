@@ -15,46 +15,38 @@
       {
         "type": "phrase",
         "starts": 1,
+        "ends": 4,
+        "content": "1st couple cast off one place while 4th couple cast up one place. 2nd\ncouple step up and 3rd couple step down on bars 3-4.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 5,
         "ends": 8,
-        "content": "1st and 4th couples cast in four bars. 2nd couple step up and 3rd couple\nstep down on bars 3-4. 1st and 4th couples dance a half figure of eight\naround 2nd and 3rd couples.\n"
+        "content": "1st couple dance a half figure of eight round 2nd couple while 4th couple\ndance a half figure of eight round 3rd couple.\n"
       },
       {
         "type": "phrase",
         "starts": 9,
         "ends": 16,
-        "content": "1st and 4th couples in second and third places dance set and rotate.\n"
+        "content": "1st and 4th couples set and rotate.\n"
       },
       {
         "type": "phrase",
         "starts": 17,
         "ends": 20,
-        "content": "1st couple turn both hands one and a half times in four bars.\n"
+        "content": "1st couple, giving both hands, turn one and a half times.\n"
       },
       {
         "type": "phrase",
         "starts": 21,
         "ends": 24,
-        "content": "4th couple cross down to fourth place while 3rd couple cast up to second\nplace.\n"
+        "content": "4th couple, without giving hands, cross down to fourth place while 3rd couple\ncast up to second place, to finish in the order 2, 3, 1, 4.\n"
       },
       {
         "type": "phrase",
         "starts": 25,
         "ends": 32,
-        "content": "1st couple dance a figure of love around the 3rd and 4th couples:\n",
-        "instructions": [
-          {
-            "type": "phrase",
-            "starts": 25,
-            "ends": 28,
-            "content": "1st couple dance a half figure of eight, woman up between 3rd couple,\nman down between 4th couple, finishing by meeting in the centre of the\ndance and briefly touching both hands.\n"
-          },
-          {
-            "type": "phrase",
-            "starts": 29,
-            "ends": 32,
-            "content": "1st couple pull back left shoulder and cast, woman down and man up;\n1st woman dances up between 4th couple while 1st man dances down\nbetween 3rd couple; both finish in third place on own sides facing\nout.\n"
-          }
-        ]
+        "content": "1st couple dance the »figure of love«: 1st woman dances up between 3rd\ncouple and casts off round 3rd man, while 1st man dances down between 4th\ncouple and casts up round 4th woman. 1st couple meet in the middle of the\nset, touch both hands, then, pulling back left shoulders, 1st woman casts\noff round 4th man, while 1st man casts up round 3rd woman. 1st couple\nfinish in third place on own sides facing out.\n"
       },
       {
         "type": "phrase",

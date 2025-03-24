@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/nixos.org) (preloaded format=xelatex 1980.1.1)  24 MAR 2025 15:07
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/nixos.org) (preloaded format=xelatex 1980.1.1)  24 MAR 2025 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1506,107 +1506,87 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
 (Font)              scaled to size 19.51016pt on input line 250.
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 291--291
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 306--306
 []\TU/SourceSansPro(0)/m/n/10.95 16  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 306--306
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 321--321
  []\TU/SourceSansPro(0)/m/n/10.95 17
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 306--306
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 321--321
 []\TU/SourceSansPro(0)/m/n/10.95 20  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 322--322
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 337--337
  []\TU/SourceSansPro(0)/m/n/10.95 21
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 322--322
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 337--337
 []\TU/SourceSansPro(0)/m/n/10.95 24  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 337--337
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 352--352
  []\TU/SourceSansPro(0)/m/n/10.95 25
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 337--337
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 352--352
 []\TU/SourceSansPro(0)/m/n/10.95 32  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 405--405
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 383--383
  []\TU/SourceSansPro(0)/m/n/10.95 33
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 405--405
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 383--383
 []\TU/SourceSansPro(0)/m/n/10.95 40  
  []
 
 
-Overfull \hbox (1.73169pt too wide) in paragraph at lines 405--405
- []\TU/SourceSansPro(0)/m/n/10.95 33
- []
-
-
-Overfull \hbox (1.73169pt too wide) in paragraph at lines 405--405
-[]\TU/SourceSansPro(0)/m/n/10.95 36  
- []
-
-
-Overfull \hbox (1.73169pt too wide) in paragraph at lines 405--405
- []\TU/SourceSansPro(0)/m/n/10.95 37
- []
-
-
-Overfull \hbox (1.73169pt too wide) in paragraph at lines 405--405
-[]\TU/SourceSansPro(0)/m/n/10.95 40  
- []
-
-
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 422--422
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 400--400
  []\TU/SourceSansPro(0)/m/n/10.95 41
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 422--422
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 400--400
 []\TU/SourceSansPro(0)/m/n/10.95 48  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 439--439
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 417--417
  []\TU/SourceSansPro(0)/m/n/10.95 49
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 439--439
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 417--417
 []\TU/SourceSansPro(0)/m/n/10.95 52  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 456--456
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 434--434
  []\TU/SourceSansPro(0)/m/n/10.95 53
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 456--456
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 434--434
 []\TU/SourceSansPro(0)/m/n/10.95 56  
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 473--473
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 451--451
  []\TU/SourceSansPro(0)/m/n/10.95 57
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 473--473
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 451--451
 []\TU/SourceSansPro(0)/m/n/10.95 60  
  []
 
@@ -1618,17 +1598,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [1
 
 ]
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 489--489
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 467--467
  []\TU/SourceSansPro(0)/m/n/10.95 61
  []
 
 
-Overfull \hbox (0.85155pt too wide) in paragraph at lines 489--489
+Overfull \hbox (0.85155pt too wide) in paragraph at lines 467--467
 []\TU/SourceSansPro(0)/m/n/10.95 64  
  []
 
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
-(Font)              scaled to size 9.71072pt on input line 532.
+(Font)              scaled to size 9.71072pt on input line 510.
 
 
 [2] (./emmy-and-matt-s-wedding.aux)
@@ -1650,7 +1630,7 @@ Package rerunfilecheck Info: Checksums for `emmy-and-matt-s-wedding.out':
 Here is how much of TeX's memory you used:
  34595 strings out of 474233
  722970 string characters out of 5717734
- 1149971 words of memory out of 5000000
+ 1148971 words of memory out of 5000000
  56779 multiletter control sequences out of 15000+600000
  558589 words of font info for 57 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
