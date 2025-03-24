@@ -38,6 +38,12 @@ jobs:
           echo path: ${{ github.event.workflow_run.path }}
           echo previous_attempt_url: ${{ github.event.workflow_run.previous_attempt_url }}
           echo pull_requests: ${{ github.event.workflow_run.pull_requests }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[0] }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[0] }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[0].id }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[1] }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests[1].id }}
+
           echo referenced_workflows: ${{ github.event.workflow_run.referenced_workflows }}
           echo repository: ${{ github.event.workflow_run.repository }}
           echo rerun_url: ${{ github.event.workflow_run.rerun_url }}
@@ -51,6 +57,9 @@ jobs:
           echo workflow_id: ${{ github.event.workflow_run.workflow_id }}
           echo workflow_url: ${{ github.event.workflow_run.workflow_url }}
           echo display_title: ${{ github.event.workflow_run.display_title }}
+
+          echo
+          echo
 
           echo ref ${{ github.ref }}
           echo sha ${{ github.sha }}
@@ -127,37 +136,17 @@ jobs:
     if: always()
 
     steps:
-      - run: ls -lah
-
       - name: Download all artifacts
         uses: actions/download-artifact@v4.1.8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
 
-      - run: ls -lah
-
-      # - name: Create website root even if building the website failed
-      #   run: mkdir -p ./website
-
-      # - name: Download documentation from artifacts
-      #   if: needs.build-documentation.result == 'success'
-      #   uses: actions/download-artifact@v4.1.8
-      #   with:
-      #     name: documentation
-      #     path: ./website/_doc/
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     run-id: ${{ github.event.workflow_run.id }}
-
-      # - name: Download tests from artifacts
-      #   ## NOTE: No need to check for success, because the tests upload their
-      #   ## archive no matter what happens.
-      #   uses: actions/download-artifact@v4.1.8
-      #   with:
-      #     name: tests
-      #     path: ./website/_tests/
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     run-id: ${{ github.event.workflow_run.id }}
+      - name: Consolidate artifacts into a website
+        run: |
+          mkdir -p ./website
+          [ -e ./documentation ] && mv ./documentation ./website/_doc
+          [ -e ./tests ] && mv ./tests ./website/_tests
 
       - name: Prepare metadata for publishing the development website
         run: |
@@ -166,17 +155,17 @@ jobs:
               ## If it is a pull request...
               pr=${GITHUB_REF_NAME%/merge}
               dir=pr/$pr
-              ptr="$GITHUB_REPOSITORY#$pr"
+              ptr="${{ github.event.workflow_run.repository }}#$pr"
               ;;
             push)
               ## If it is a push of a branch...
               dir=branch/${{ github.event.workflow_run.head_branch }}
-              ptr="$GITHUB_REPOSITORY@${{ github.event.workflow_run.head_sha }}"
+              ptr="${{ github.event.workflow_run.repository }}@${{ github.event.workflow_run.head_sha }}"
               ;;
             *)
               echo Unexpected event type.
               exit 2
-          fi
+          esac
           ## In any case, similar messages:
           msg="Bump \`$dir\` to follow $ptr"
           echo "destination_dir=$dir"
