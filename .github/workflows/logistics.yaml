@@ -10,9 +10,6 @@ jobs:
     # if: ${{ github.event.action == 'opened' }}
 
     steps:
-      - run: |
-          echo action: ${{ github.event.action }}
-
       - name: Give Link to GitHub Pages for this Pull Request
         uses: peter-evans/create-or-update-comment@v4.0.0
         with:

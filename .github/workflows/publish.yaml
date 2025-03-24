@@ -16,6 +16,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo actor: ${{ github.event.workflow_run.actor }}
+          echo artifacts_url: ${{ github.event.workflow_run.artifacts_url }}
+          echo cancel_url: ${{ github.event.workflow_run.cancel_url }}
+          echo check_suite_id: ${{ github.event.workflow_run.check_suite_id }}
+          echo check_suite_node_id: ${{ github.event.workflow_run.check_suite_node_id }}
+          echo check_suite_url: ${{ github.event.workflow_run.check_suite_url }}
+          echo conclusion: ${{ github.event.workflow_run.conclusion }}
+          echo created_at: ${{ github.event.workflow_run.created_at }}
+          echo event: ${{ github.event.workflow_run.event }}
+          echo head_branch: ${{ github.event.workflow_run.head_branch }}
+          echo head_commit: ${{ github.event.workflow_run.head_commit }}
+          echo head_repository: ${{ github.event.workflow_run.head_repository }}
+          echo head_sha: ${{ github.event.workflow_run.head_sha }}
+          echo html_url: ${{ github.event.workflow_run.html_url }}
+          echo id: ${{ github.event.workflow_run.id }}
+          echo jobs_url: ${{ github.event.workflow_run.jobs_url }}
+          echo logs_url: ${{ github.event.workflow_run.logs_url }}
+          echo name: ${{ github.event.workflow_run.name }}
+          echo node_id: ${{ github.event.workflow_run.node_id }}
+          echo path: ${{ github.event.workflow_run.path }}
+          echo previous_attempt_url: ${{ github.event.workflow_run.previous_attempt_url }}
+          echo pull_requests: ${{ github.event.workflow_run.pull_requests }}
+          echo referenced_workflows: ${{ github.event.workflow_run.referenced_workflows }}
+          echo repository: ${{ github.event.workflow_run.repository }}
+          echo rerun_url: ${{ github.event.workflow_run.rerun_url }}
+          echo run_attempt: ${{ github.event.workflow_run.run_attempt }}
+          echo run_number: ${{ github.event.workflow_run.run_number }}
+          echo run_started_at: ${{ github.event.workflow_run.run_started_at }}
+          echo status: ${{ github.event.workflow_run.status }}
+          echo triggering_actor: ${{ github.event.workflow_run.triggering_actor }}
+          echo updated_at: ${{ github.event.workflow_run.updated_at }}
+          echo url: ${{ github.event.workflow_run.url }}
+          echo workflow_id: ${{ github.event.workflow_run.workflow_id }}
+          echo workflow_url: ${{ github.event.workflow_run.workflow_url }}
+          echo display_title: ${{ github.event.workflow_run.display_title }}
+
           echo ref ${{ github.ref }}
           echo sha ${{ github.sha }}
           echo msg ${{ github.event.head_commit.message }}
