@@ -39,10 +39,8 @@ jobs:
           publish_dir: ./website
           full_commit_message: |
             Bump to ${{ github.event.workflow_run.head_sha }}: ${{ github.event.workflow_run.head_commit.message }}
-          ## ...to branch `pages` with the right access token...
+          ## ...to branch `pages`as the GitHub Actions bot...
           publish_branch: pages
-          github_token: ${{ secrets.PAGES_TOKEN }}
-          ## ...as the GitHub Actions bot...
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           ## ...serving `scd.niols.fr`.
