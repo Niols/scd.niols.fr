@@ -1,0 +1,50 @@
+{
+  "dance": {
+    "name": "Butter, but Salted",
+    "author": "Aymeric Fromherz and Nicolas “Niols” Jeannerod",
+    "kind": "32-bar reel for three couples in a three-couple longwise set",
+    "short-kind": "32R 3/3L",
+    "date": "2025-03",
+    "instructions": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 4,
+        "content": "1st and 2nd couples set, and dance right hands across halfway round. 1st\nwoman finishes facing out.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 5,
+        "ends": 8,
+        "content": "1st woman and 3rd man, giving left hand, cross. All, giving right hand,\ncross.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "content": "All set, and dance la baratte with the person across them.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 24,
+        "content": "All chase clockwise halfway. All, giving left hand, turn one and a half\ntimes, finishing in the middle facing up in promenade hold.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "content": "All dance a promenade for three couples, finish with 1st man in second\nwoman position, 1st woman in first man position, 3rd man in second man\nposition, 3rd woman in first man position, and 2nd couple in third place,\non opposite sides.\n"
+      },
+      {
+        "type": "repeat",
+        "kind": "custom",
+        "text": "Repeat from new positions. After six times through, all dancers should be\nback to original places.\n"
+      },
+      {
+        "type": "devised by"
+      }
+    ]
+  },
+  "slug": "butter-but-salted"
+}

@@ -62,6 +62,53 @@
         }
       ]
     },
+    "butter-but-salted": {
+      "name": "Butter, but Salted",
+      "author": "Aymeric Fromherz and Nicolas “Niols” Jeannerod",
+      "kind": "32-bar reel for three couples in a three-couple longwise set",
+      "short-kind": "32R 3/3L",
+      "date": "2025-03",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 4,
+          "content": "1st and 2nd couples set, and dance right hands across halfway round. 1st\nwoman finishes facing out.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 5,
+          "ends": 8,
+          "content": "1st woman and 3rd man, giving left hand, cross. All, giving right hand,\ncross.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "All set, and dance la baratte with the person across them.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "All chase clockwise halfway. All, giving left hand, turn one and a half\ntimes, finishing in the middle facing up in promenade hold.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "All dance a promenade for three couples, finish with 1st man in second\nwoman position, 1st woman in first man position, 3rd man in second man\nposition, 3rd woman in first man position, and 2nd couple in third place,\non opposite sides.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "custom",
+          "text": "Repeat from new positions. After six times through, all dancers should be\nback to original places.\n"
+        },
+        {
+          "type": "devised by"
+        }
+      ]
+    },
     "drawn-in": {
       "name": "Drawn in",
       "author": "Shannon Kiernan",
@@ -343,6 +390,88 @@
           "type": "devised by"
         }
       ]
+    },
+    "hallo-hallo": {
+      "name": "Hallo, Hallo",
+      "author": "Aymeric Fromherz",
+      "kind": "32-bar reel for three couples in a four-couple longwise set",
+      "short-kind": "R32 3/4L",
+      "date": "2025-03",
+      "instructions": [
+        {
+          "type": "phrase",
+          "starts": 1,
+          "ends": 8,
+          "content": "1st couple set advancing to the middle, lead down into second place, and\nremains in the middle of the dance. 2nd couple move up on bars 3-4. 1st\ncouple, giving right hand, woman under the man's arm, set. 1st couple,\ngiving right hand, turn three quarters to face first corners.\n"
+        },
+        {
+          "type": "phrase",
+          "starts": 9,
+          "ends": 16,
+          "content": "1st couple dance a «hello-hello setting» with first corners:\n",
+          "instructions": [
+            {
+              "type": "phrase",
+              "starts": 9,
+              "ends": 10,
+              "content": "1st couple set to their first corners, and to the left to finish on\nopposite sides.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 11,
+              "ends": 12,
+              "content": "1st couple set advancing toward each other, pulling back right\nshoulder to face first corners.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 13,
+              "ends": 16,
+              "content": "1st couple, giving right hand to their first corner, turn. 1st couple\npass by the right shoulder in the middle to finish facing second\ncorners.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 17,
+          "ends": 24,
+          "content": "1st couple dance a «hello-hello setting» with second corners:\n",
+          "instructions": [
+            {
+              "type": "phrase",
+              "starts": 17,
+              "ends": 18,
+              "content": "1st couple set to their second corners, and to the left to finish up\nand down the dance, man facing down, woman facing up.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 19,
+              "ends": 20,
+              "content": "1st couple set advancing, pull back right shoulder to face second\ncorners.\n"
+            },
+            {
+              "type": "phrase",
+              "starts": 21,
+              "ends": 24,
+              "content": "1st couple, giving right hand to their second corner, turn, finishing\nin second place on opposite sides.\n"
+            }
+          ]
+        },
+        {
+          "type": "phrase",
+          "starts": 25,
+          "ends": 32,
+          "content": "All dance six hands round and back.\n"
+        },
+        {
+          "type": "repeat",
+          "kind": "custom",
+          "text": "Repeat from new positions, with 1st couple inverted.\n"
+        },
+        {
+          "type": "devised by"
+        }
+      ],
+      "deviser-details": "The name has been suggested by Angelika Schmidkonz; thank you!\n"
     },
     "hello-goodb": {
       "name": "Hello, Goodb",
@@ -948,7 +1077,7 @@
     "the-reel-of-the-51st-confusion": {
       "name": "The Reel of the 51st Confusion",
       "author": "Anne Lanvin, Corentin Lefèvre, Isabelle Herlant, Louise Baltera, Nicolas “Niols” Jeannerod and Victor Lanvin",
-      "short-author": "Anne Lanvin et al",
+      "short-author": "Anne Lanvin et al.",
       "scddb-id": 20993,
       "kind": "32-bar reel for three couples in a three-couple longwise set",
       "short-kind": "R32 3/3L",
