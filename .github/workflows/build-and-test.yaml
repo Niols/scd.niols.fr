@@ -18,8 +18,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: |
-          echo ${{ toJSON(github) }}
+      - name: Compute metadata
+        run: |
+          cat <<\EOF > meta.json
+          ${{ toJSON(github) }}
+          EOF
+
+      - name: Upload them as artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: meta
+          path: meta.json
 
   ############################################################################
   ## Setup Dependencies

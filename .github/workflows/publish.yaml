@@ -13,12 +13,6 @@ concurrency:
   group: publish
 
 jobs:
-  meta:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo ${{ toJSON(github) }}
-
   ############################################################################
   ## Publish Website
 
@@ -67,6 +61,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
+
+      - run: ls -lah
+      - run: cat meta.json
 
       - name: Consolidate artifacts into a website
         run: |
