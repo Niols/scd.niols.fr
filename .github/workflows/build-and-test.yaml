@@ -11,6 +11,17 @@ on:
 
 jobs:
   ############################################################################
+  ## Save metadata
+
+  save-metadata:
+    name: Save metadata
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo ${{ toJSON(github) }}
+
+  ############################################################################
   ## Setup Dependencies
 
   setup-dependencies:
