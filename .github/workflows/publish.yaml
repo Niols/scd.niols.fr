@@ -66,10 +66,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
 
-      - run: ls -lah
-      - run: ls -lah meta/
-      - run: cat meta/meta.json
-
       - name: Consolidate artifacts into a website
         run: |
           mkdir -p ./website
