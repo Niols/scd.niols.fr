@@ -8,8 +8,8 @@
       websiteTestInputs = [
         pkgs.firefox
         pkgs.imagemagick
-        #pkgs.python310 ## is implied by:
-        pkgs.python310Packages.selenium
+        pkgs.python3
+        pkgs.python3Packages.selenium
       ];
 
     in {
