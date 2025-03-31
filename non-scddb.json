@@ -65,6 +65,7 @@
     "butter-but-salted": {
       "name": "Butter, but Salted",
       "author": "Aymeric Fromherz and Nicolas “Niols” Jeannerod",
+      "scddb-id": 22757,
       "kind": "32-bar reel for three couples in a three-couple longwise set",
       "short-kind": "32R 3/3L",
       "date": "2025-03",
@@ -394,6 +395,7 @@
     "hallo-hallo": {
       "name": "Hallo, Hallo",
       "author": "Aymeric Fromherz",
+      "scddb-id": 22758,
       "kind": "32-bar reel for three couples in a four-couple longwise set",
       "short-kind": "R32 3/4L",
       "date": "2025-03",
@@ -480,6 +482,7 @@
     "hello-goodb": {
       "name": "Hello, Goodb",
       "author": "Nicolas “Niols” Jeannerod",
+      "scddb-id": 21911,
       "kind": "24-bar reel for three couples in a four-couple longwise set",
       "short-kind": "R24 3/4L",
       "date": "2022-11-08",
@@ -722,6 +725,7 @@
       "name": "On The Way To The Printing Shop",
       "author": "Giulio Dujany, Pascaline Latour and Nicolas “Niols” Jeannerod",
       "short-author": "Giulio Dujany et al.",
+      "scddb-id": 22384,
       "kind": "32-bar jig for three couples in a four-couple longwise set",
       "short-kind": "J32 3/4L",
       "date": "2019-08",
