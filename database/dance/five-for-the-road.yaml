@@ -1,0 +1,100 @@
+---
+
+name: Five For The Road
+author: Nicolas “Niols” Jeannerod
+
+kind: 48-bar jig for five couples in a five-couple longwise set
+short-kind: J48 5/5L
+
+date: "2022-09-03"
+
+instructions:
+
+  - type: phrase
+    starts: 1
+    ends: 4
+    content: |
+      1st, 3rd and 5th couples set advancing to join nearer hands in a line up
+      and down the set, women with partners on their left. 1st, 3rd and 5th
+      couples set.
+
+  - type: phrase
+    starts: 5
+    ends: 8
+    content: |
+      1st, 3rd and 5th couples, retaining right hands, turn halfway. 1st woman
+      and 5th man cast behind their lines to third place on own sides. In the
+      meantime, 1st man with 3rd woman and 3rd man with 5th woman, taking left
+      hands, turn halfway, finishing 1st man and 5th woman in the middle of the
+      set facing their partners, 3rd woman at the top of the set, and 3rd man at
+      the bottom of the set.
+
+  - type: phrase
+    starts: 9
+    ends: 16
+    content: |
+      1st and 5th couples in third place give their partners left shoulder for a
+      reel of four across. In the meantime, 3rd woman with the 2nd couple and
+      3rd man with the 4th couple dance left hands across and right hands across
+      back. On bar 15-16, 1st and 3rd men curve round to their left while 3rd
+      and 5th women pivot on themselves, finishing 1st man with 3rd woman in
+      promenade hold facing up and 3rd man with 5th woman in promenade hold
+      facing down.
+
+  - type: phrase
+    starts: 17
+    ends: 24
+    content: |
+      1st man with 3rd woman and 3rd man with 5th woman, in promenade hold,
+      dance a figure of eight around the first and fifth couple positions,
+      giving left shoulder to first man and fifth woman positions. On bars
+      17-18, 5th man and 1st woman dance in to first and fifth places on their
+      own sides, while 2nd woman and 4th man dance in to first and fifth places
+      on own sides, and 2nd man and 4th woman cast to third place on own sides.
+      1st man and 3rd woman and 3rd man and 5th woman separate to finish in the
+      middle of the set in second and fourth positions, 1st man facing third
+      woman position, 3rd woman facing first man position, 3rd man facing fifth
+      woman position, and 5th woman facing third man position.
+
+  - type: phrase
+    starts: 25
+    ends: 28
+    content: |
+      1st man and 3rd with 4th woman and 5th man and 3rd man and 5th woman with
+      1st woman and 2nd man dance a half reel of four. 1st man and 3rd woman and
+      3rd man and 5th woman pass by the right to finish facing 2nd woman, 1st
+      woman, 5th man and 4th man respectively.
+
+  - type: phrase
+    starts: 29
+    ends: 32
+    content: |
+      1st man and 3rd with 2nd and 1st woman and 3rd man and 5th woman with 5th
+      and 4th men dance a half reel of four. 1st man and 3rd woman and 3rd man
+      and 5th woman slow down to finish in second and fourth places on opposite
+      sides.
+
+  - type: phrase
+    starts: 33
+    ends: 36
+    content: |
+      All dance clockwise four places, finishing on own sides facing their
+      partners in order 5, 2, 3, 4, 1.
+
+  - type: phrase
+    starts: 37
+    ends: 40
+    content: |
+      5th man cast while 5th woman dance down to fourth place. 2nd, 3rd and 4th
+      couples step up on 39-40.
+
+  - type: phrase
+    starts: 41
+    ends: 48
+    content: |
+      All dance ten hands round to the left and back.
+
+  - type: repeat
+    kind: from new positions
+
+  - type: devised by
