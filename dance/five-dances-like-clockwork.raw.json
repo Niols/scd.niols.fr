@@ -1,0 +1,81 @@
+{
+  "dance": {
+    "name": "Five Dances Like Clockwork",
+    "author": "Nicolas “Niols” Jeannerod",
+    "kind": "32-bar strathspey for two couples in a four-couple longwise set",
+    "short-kind": "S32 2/4L",
+    "date": "2025-12",
+    "deviser-details": "I was one of Mervyn Short's musicians during Summer School 2025. As a trainee\nteacher, I was very impressed by the precision of his teaching: he invariably\ntook the class through five dances each morning, finishing perfectly on time.\nI wrote the tune \"Five Dances Like Clockwork\" during one of these classes, and\nthe dance followed naturally. Both are dedicated to Mervyn, whose example I\nhope to learn from.\n",
+    "tunes": [
+      {
+        "type": "external",
+        "name": "Five Dances Like Clockwork",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "lio6-5ufl-nbjn"
+      }
+    ],
+    "instructions": [
+      {
+        "type": "phrase",
+        "starts": 1,
+        "ends": 8,
+        "content": "1st couple dance down for two bars, giving both hands, turn in four bars,\nthen dance up back to original places, 1st man facing out.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 9,
+        "ends": 16,
+        "content": "All dance a chain in the diagonal of the 1st woman:\n",
+        "instructions": [
+          {
+            "type": "phrase",
+            "starts": 9,
+            "ends": 10,
+            "content": "Giving right hand, 1st woman and 2nd man change places, curving\nslightly round each other. At the same time, curving out to their\nright, 1st man and 2nd woman dance towards the others' places.\n"
+          },
+          {
+            "type": "phrase",
+            "starts": 11,
+            "ends": 12,
+            "content": "Giving left hands, 1st woman and 2nd man turn their partners,\nfinishing diagonally opposite their starting place, their partners\nfinishing where they started, facing out.\n"
+          },
+          {
+            "type": "phrase",
+            "starts": 13,
+            "ends": 14,
+            "content": "Repeat bars 9 and 10.\n"
+          },
+          {
+            "type": "phrase",
+            "starts": 15,
+            "ends": 16,
+            "content": "Giving left hands, 1st woman turns 2nd woman and 1st man turns 2nd man\nfor three quarters, finishing in a line across the dance between first\nand second places, 1st couple facing down and 2nd couple facing up.\n"
+          }
+        ]
+      },
+      {
+        "type": "phrase",
+        "starts": 17,
+        "ends": 24,
+        "content": "All dance the targe, starting with 1st woman turning 2nd man by the right\nin the middle. On bars 23-24, men together and women together turn all\nround, finishing in a line across the dance between first and second\nplaces, 1st woman and 2nd man back to back in the middle, facing 2nd woman\nand 1st man respectively.\n"
+      },
+      {
+        "type": "phrase",
+        "starts": 25,
+        "ends": 32,
+        "content": "Men together and women together dance a Highland Schottische poussette\nacross the dance. On bars 31-32, they turn for three-quarters to finish\nback on own lines, in order 2, 1.\n"
+      },
+      {
+        "type": "repeat",
+        "kind": "from new positions"
+      },
+      {
+        "type": "devised by"
+      },
+      {
+        "type": "music by"
+      }
+    ]
+  },
+  "slug": "five-dances-like-clockwork"
+}
