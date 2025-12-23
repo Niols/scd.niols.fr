@@ -16,6 +16,7 @@ width  = sys.argv[3]
 ## Get a driver for a headless Firefox.
 options = FirefoxOptions()
 options.add_argument("--headless")
+options.add_argument(f"--window-size={width},8000")
 driver = webdriver.Firefox(options=options)
 
 ## Get the requested page.
