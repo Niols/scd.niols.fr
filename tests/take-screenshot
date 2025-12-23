@@ -16,15 +16,12 @@ width  = sys.argv[3]
 ## Get a driver for a headless Firefox.
 options = FirefoxOptions()
 options.add_argument("--headless")
+options.add_argument(f"--window-size={width},8000")
 driver = webdriver.Firefox(options=options)
 
-## Get the requested page.
+## Get the requested page and give time for the page to stabilise.
 driver.get(source)
-
-## Maximize the window, set its size and give time for the page to stabilise.
-driver.maximize_window()
-driver.set_window_size(width, 8000)
-time.sleep(1)
+time.sleep(10)
 
 ## Save a screenshot and leave.
 driver.find_element(By.TAG_NAME, 'body').screenshot(target)
