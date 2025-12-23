@@ -347,6 +347,11 @@ $defs:
           type: string
           description: |
             The composer of the tune (short).
+        dancelor-id:
+          type: string
+          description: |
+            The identifier in Dancelor. This can be any object; in particular,
+            it can point to a specific Dancelor version or a Dancelor tune.
         scddb-id:
           type: integer
           description: |
@@ -357,4 +362,5 @@ $defs:
         - type: external
           name: The Drunken Piper
           composer: Alexander McLeod
+          dancelor-id: lnov-x94g-91cx
           scddb-id: 430

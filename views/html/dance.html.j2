@@ -15,7 +15,10 @@
         {%- if tuneRef.composer is defined -%}
             , by <span class="composer">{{ tuneRef.composer }}</span>
         {%- endif -%}
-        {%- if tuneRef['scddb-id'] %} {# space -#}
+        {%- if tuneRef['dancelor-id'] is defined %} {# space -#}
+            [<a href="https://dancelor.org/{{ tuneRef['dancelor-id'] }}/">Dancelor</a>]
+        {%- endif -%}
+        {%- if tuneRef['scddb-id'] is defined %} {# space -#}
             [<a href="https://my.strathspey.org/dd/tune/{{ tuneRef['scddb-id'] }}/">SCDDB</a>]
         {%- endif -%}
 
