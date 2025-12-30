@@ -9,8 +9,10 @@
     "editor-details": "The name was suggested by Christophe Schuwey in reference to the painting of\nthe same name by Thomas Gainsborough.\n",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "the-mall-in-st-james-s-park"
+        "type": "external",
+        "name": "The Mall in St. James’s Park",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "zzw0-yi62-6cqa"
       }
     ],
     "instructions": [

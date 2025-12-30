@@ -10,13 +10,16 @@
     "editor-details": "This dance is a variation of one of the most popular Scottish country dances,\n“The Reel of the 51st Division”.\n",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "the-sober-piper"
+        "type": "external",
+        "name": "The Sober Piper",
+        "composer": "Anne Lanvin",
+        "dancelor-id": "kwk6-0q6i-45vc"
       },
       {
         "type": "external",
         "name": "The Drunken Piper",
         "composer": "Alexander McLeod",
+        "dancelor-id": "lnov-x94g-91cx",
         "scddb-id": 430
       }
     ],

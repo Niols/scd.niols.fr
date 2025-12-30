@@ -9,8 +9,10 @@
     "editor-details": "There exists a three-couple version of this dance, named “One Blue Cloud in\nthe Grey Sky”.\n",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "forty-bars-of-clouds"
+        "type": "external",
+        "name": "Forty Bars of Clouds",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "vndo-hypi-7l21"
       }
     ],
     "instructions": [

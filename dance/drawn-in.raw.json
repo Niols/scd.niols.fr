@@ -8,8 +8,10 @@
     "date": "2019-03",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "the-translator"
+        "type": "external",
+        "name": "The Translator",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "288i-vb6o-o9il"
       }
     ],
     "instructions": [

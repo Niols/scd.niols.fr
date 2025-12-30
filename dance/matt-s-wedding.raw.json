@@ -7,8 +7,10 @@
     "short-kind": "S40 4/4L",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "matt-s-wedding-40bars"
+        "type": "external",
+        "name": "Matt's Wedding",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "eymz-cr5l-uber"
       }
     ],
     "instructions": [

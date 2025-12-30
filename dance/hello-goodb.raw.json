@@ -8,8 +8,10 @@
     "date": "2022-11-08",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "hello-goodb"
+        "type": "external",
+        "name": "Hello, Goodb",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "r0e0-02kb-hj6s"
       }
     ],
     "instructions": [

@@ -9,8 +9,10 @@
     "date": "2019-08",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "en-marchant-pour-aller-photocopier-des-trucs"
+        "type": "external",
+        "name": "En marchant pour aller photocopier des trucs",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "fn4e-3oak-42j6"
       }
     ],
     "deviser-details": "During Summer School 2019, we talked over lunch about the story of Niols\nwriting his tune “En marchant pour aller photocopier des trucs”. This led to\nus devising this dance together to go along with it.\n",

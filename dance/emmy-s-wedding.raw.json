@@ -7,8 +7,10 @@
     "short-kind": "R40 4/4L",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "emmy-s-wedding-40bars"
+        "type": "external",
+        "name": "Emmy's Wedding",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "e93x-vqxj-fdmy"
       }
     ],
     "instructions": [

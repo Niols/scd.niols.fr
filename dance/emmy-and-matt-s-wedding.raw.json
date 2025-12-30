@@ -7,12 +7,16 @@
     "short-kind": "M64 4/4L",
     "tunes": [
       {
-        "type": "internal",
-        "slug": "matt-s-wedding"
+        "type": "external",
+        "name": "Matt's Wedding",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "eymz-cr5l-uber"
       },
       {
-        "type": "internal",
-        "slug": "emmy-s-wedding"
+        "type": "external",
+        "name": "Emmy's Wedding",
+        "composer": "Nicolas “Niols” Jeannerod",
+        "dancelor-id": "e93x-vqxj-fdmy"
       }
     ],
     "instructions": [
