@@ -13,12 +13,10 @@ editor-details: |
   “The Reel of the 51st Division”.
 
 tunes:
-  - type: external
-    name: The Sober Piper
+  - name: The Sober Piper
     composer: Anne Lanvin
     dancelor-id: kwk6-0q6i-45vc
-  - type: external
-    name: The Drunken Piper
+  - name: The Drunken Piper
     composer: Alexander McLeod
     dancelor-id: lnov-x94g-91cx
     scddb-id: 430

@@ -9,8 +9,7 @@ short-kind: S32 3/4L
 date: "2019-03"
 
 tunes:
-  - type: external
-    name: The Translator
+  - name: The Translator
     composer: Nicolas “Niols” Jeannerod
     dancelor-id: 288i-vb6o-o9il
 

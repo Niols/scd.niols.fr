@@ -7,8 +7,7 @@ kind: 40-bar strathspey for four couples in a four-couple longwise set
 short-kind: S40 4/4L
 
 tunes:
-  - type: external
-    name: Matt's Wedding
+  - name: Matt's Wedding
     composer: Nicolas “Niols” Jeannerod
     dancelor-id: eymz-cr5l-uber
 

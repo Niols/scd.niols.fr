@@ -9,8 +9,7 @@ short-kind: R32 4/4L
 date: "2019-04"
 
 tunes:
-  - type: external
-    name: La Ville Lumière
+  - name: La Ville Lumière
     composer: Pascaline Latour
     dancelor-id: gfju-wkq4-hxbt
     scddb-id: 14533

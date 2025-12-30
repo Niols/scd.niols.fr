@@ -15,8 +15,7 @@ deviser-details: |
   hope to learn from.
 
 tunes:
-  - type: external
-    name: Five Dances Like Clockwork
+  - name: Five Dances Like Clockwork
     composer: Nicolas “Niols” Jeannerod
     dancelor-id: lio6-5ufl-nbjn
 

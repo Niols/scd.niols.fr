@@ -110,9 +110,7 @@ properties:
       The tunes to which this dance is associated.
     minItems: 1
     items:
-      oneOf:
-        - $ref: "#/$defs/tunes/internal"
-        - $ref: "#/$defs/tunes/external"
+      $ref: "#/$defs/tunes"
 
   instructions:
     description: |
@@ -306,61 +304,37 @@ $defs:
         - type: music by
 
   tunes:
-    internal:
-      type: object
-      description: |
-        An internal tune, that is a tune whose description can be found in
-        this very database. For such tunes, only the "slug" is required.
-      required:
-        - type
-        - slug
-      properties:
-        type:
-          enum: [internal]
-        slug:
-          type: string
-          description: |
-            The slug of the tune, that is the name of the database YAML file,
-            without extension.
-      additionalProperties: false
-      examples:
-        - type: internal
-          slug: la-ville-lumiere
-
-    external:
-      type: object
-      description: |
-        An external tune, that is a tune whose description cannot be found in
-        this database. For such tunes, one must give a name and can
-        additionally give a composer and an SCDDB id.
-      required:
-        - type
-        - name
-      properties:
-        type:
-          enum: [external]
-        name:
-          type: string
-          description: |
-            The name of the tune.
-        composer:
-          type: string
-          description: |
-            The composer of the tune (short).
-        dancelor-id:
-          type: string
-          description: |
-            The identifier in Dancelor. This can be any object; in particular,
-            it can point to a specific Dancelor version or a Dancelor tune.
-        scddb-id:
-          type: integer
-          description: |
-            The identifier in the SCDDB. That is the number at the end of the
-            SCDDB URL of the tune.
-      additionalProperties: false
-      examples:
-        - type: external
-          name: The Drunken Piper
-          composer: Alexander McLeod
-          dancelor-id: lnov-x94g-91cx
-          scddb-id: 430
+    type: object
+    description: |
+      An external tune, that is a tune whose description cannot be found in
+      this database. For such tunes, one must give a name and can
+      additionally give a composer and an SCDDB id.
+    required:
+      - name
+      - dancelor-id
+    properties:
+      name:
+        type: string
+        description: |
+          The name of the tune.
+      composer:
+        type: string
+        description: |
+          The composer of the tune (short).
+      dancelor-id:
+        type: string
+        description: |
+          The identifier in Dancelor. This can be any object; in particular,
+          it can point to a specific Dancelor version or a Dancelor tune.
+      scddb-id:
+        type: integer
+        description: |
+          The identifier in the SCDDB. That is the number at the end of the
+          SCDDB URL of the tune.
+    additionalProperties: false
+    examples:
+      - type: external
+        name: The Drunken Piper
+        composer: Alexander McLeod
+        dancelor-id: lnov-x94g-91cx
+        scddb-id: 430

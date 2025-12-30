@@ -1,21 +1,10 @@
 {# views/tex/dance.tex.j2 #}
 {%- import "views/macros.j2" as common -%}
 
-{% macro printTuneRef(tuneRef) %}
-  {%- if tuneRef.type == "internal" -%}
-
-    \tune{ {{- tunes[tuneRef.slug].name|escapeTeX -}} },
-    by \composer{ {{- common.shortAuthorOrAuthor(tunes[tuneRef.slug])|escapeTeX -}} }
-
-  {%- elif tuneRef.type == "external" -%}
-
-    \tune{ {{- tuneRef.name -}} }
-    {%- if tuneRef.composer is defined %} {# space -#}
-      , by \composer{ {{- tuneRef.composer|escapeTeX -}} }
-    {%- endif -%}
-
-  {%- else -%}
-    {{ common.error("Unexpected tune reference type: `" ~ tuneRef.type ~ "`") }}
+{% macro printTune(tune) %}
+  \tune{ {{- tune.name -}} }
+  {%- if tune.composer is defined %} {# space -#}
+    , by \composer{ {{- tune.composer|escapeTeX -}} }
   {%- endif -%}
 {% endmacro %}
 
@@ -78,12 +67,12 @@
     {% elif item.type == "music by" %}
           {% if dance.tunes is defined %}
             {% if dance.tunes|length == 1 %}
-              Recommended music: {{ printTuneRef(dance.tunes[0]) }}.
+              Recommended music: {{ printTune(dance.tunes[0]) }}.
             {% else %}
               Recommended music:
               \begin{itemize}
-              {% for tuneRef in dance.tunes %}
-                \item {{ printTuneRef(tuneRef) }}
+              {% for tune in dance.tunes %}
+                \item {{ printTune(tune) }}
               {% endfor %}
               \end{itemize}
             {% endif %}

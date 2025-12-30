@@ -12,8 +12,7 @@ editor-details: |
   the Grey Sky”.
 
 tunes:
-  - type: external
-    name: Forty Bars of Clouds
+  - name: Forty Bars of Clouds
     composer: Nicolas “Niols” Jeannerod
     dancelor-id: vndo-hypi-7l21
 

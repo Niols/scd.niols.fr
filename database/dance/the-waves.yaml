@@ -14,8 +14,7 @@ deviser-details: |
   kindness towards and patience with the Units 2/3 class of 2022.
 
 tunes:
-  - type: external
-    name: Highland Whisky
+  - name: Highland Whisky
     composer: Niel Gow
     dancelor-id: hxzw-v3x9-5nal
     scddb-id: 692
