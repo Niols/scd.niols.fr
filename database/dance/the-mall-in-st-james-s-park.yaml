@@ -12,8 +12,10 @@ editor-details: |
   the same name by Thomas Gainsborough.
 
 tunes:
-  - type: internal
-    slug: the-mall-in-st-james-s-park
+  - type: external
+    name: The Mall in St. James’s Park
+    composer: Nicolas “Niols” Jeannerod
+    dancelor-id: zzw0-yi62-6cqa
 
 instructions:
   - type: phrase

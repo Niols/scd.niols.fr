@@ -10,8 +10,10 @@ short-kind: J32 3/4L
 date: "2019-08"
 
 tunes:
-  - type: internal
-    slug: en-marchant-pour-aller-photocopier-des-trucs
+  - type: external
+    name: En marchant pour aller photocopier des trucs
+    composer: Nicolas “Niols” Jeannerod
+    dancelor-id: fn4e-3oak-42j6
 
 deviser-details: |
   During Summer School 2019, we talked over lunch about the story of Niols
