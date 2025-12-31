@@ -31,7 +31,9 @@ instructions:
     starts: 9
     ends: 16
     content: |
-      All dance a chain in the diagonal of the 1st woman:
+      All dance a right-hand chain in the diagonal of the 1st woman. (This is
+      similar to a ladies chain, with 1st woman and 2nd man in the roles of the
+      ladies.)
     instructions:
       - type: phrase
         starts: 9
