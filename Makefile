@@ -385,7 +385,13 @@ tests: $(tests-output)
 	    width=$$(yq ".viewports[$$j].width" $(tests)/meta.yaml)
 	    printf '  Viewport #%d of %d: `%s` (width: %d).\n' "$$jj" "$$viewports" "$$name" "$$width"
 
-	    output_path="$$path"."$$width".png
+	    expected_path="$$path"."$$width".1-expected.png
+	    output_path="$$path"."$$width".2-actual.png
+	    diff_path="$$path"."$$width".3-difference.png
+
+	    if [ -e $(tests)/outputs/"$$path"."$$width".png ]; then
+		  cp $(tests)/outputs/"$$path"."$$width".png $(tests-output)/"$$expected_path"
+	    fi
 
 	    firefox_output=$$(
 	      tests/take-screenshot \
@@ -405,17 +411,16 @@ tests: $(tests-output)
 	      continue
 	    fi
 
-	    if ! [ -e $(tests)/outputs/"$$output_path" ]; then
+	    if ! [ -e $(tests-output)/"$$expected_path" ]; then
 	      dissimilarities=$$((dissimilarities + 1))
 	      printf '    => \e[31mno reference to compare to\e[0m.\n'
 	      continue
 	    fi
 
-	    diff_path="$$path"."$$width".diff.png
-
 	    compare_output=$$(
 	      compare -compose src -metric AE -format '' \
-	        $(tests)/outputs/"$$output_path" $(tests-output)/"$$output_path" \
+	        $(tests-output)/"$$expected_path" \
+			$(tests-output)/"$$output_path" \
 	        $(tests-output)/"$$diff_path" \
 	        2>&1
 	    ) && true
