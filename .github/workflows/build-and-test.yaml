@@ -32,7 +32,7 @@ jobs:
           echo ${{ github.sha }} > meta/sha
 
       - name: Upload them as artifact
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v6
         with:
           name: meta
           path: meta
@@ -79,7 +79,7 @@ jobs:
         run: nix develop --accept-flake-config --command make website
 
       - name: Upload the website as artifact
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v6
         with:
           name: website
           path: _build/website
@@ -105,7 +105,7 @@ jobs:
           generate-schema-doc 'database/_schema/*.yaml' _build/doc/schema
 
       - name: Upload the documentation as artifact
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v6
         with:
           name: documentation
           path: _build/doc
@@ -171,7 +171,7 @@ jobs:
         ## NOTE: The tests are productive even when they fail. Therefore, it
         ## can be useful to upload the archive no matter what. In worst case,
         ## it will be empty.
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v6
         with:
           name: tests
           path: _build/tests
