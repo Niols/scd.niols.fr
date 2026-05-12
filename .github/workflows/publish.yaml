@@ -33,7 +33,7 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Publish Website to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           ## Publish `./website` with following commit message...
           publish_dir: ./website
@@ -96,7 +96,7 @@ jobs:
           echo "commit_message=$msg" >> $GITHUB_ENV
 
       - name: Publish development website to GitHub pages
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           ## Publish `./website` with following commit message...
           publish_dir: ./website
